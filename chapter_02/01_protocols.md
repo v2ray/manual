@@ -3,7 +3,7 @@
 本小节包含下列协议：
 * [Blackhole](#blackhole)
 * [Dokodemo-door](#dokodemo-door)
-* [Freedom (Outbound)](#freedom)
+* [Freedom](#freedom)
 * [HTTP](#http)
 * [Shadowsocks](#shadowsocks)
 * [Socks](#socks)
@@ -37,7 +37,7 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
 * network：指定服务器的网络协议类型，目前仅支持 TCP。
 * timeout：传入数据的时间限制（秒），0 表示无限制。
 
-## Freedom (Outbound)
+## Freedom
 Freedom 是一个传出数据协议，可以用来向任意网络发送（正常的） TCP 或 UDP 数据。
 
 * 名称：freedom
