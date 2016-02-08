@@ -1,4 +1,6 @@
-# 本小节包含下列协议：
+# V2Ray 协议列表
+
+本小节包含下列协议：
 * [Blackhole](#blackhole)
 * [Dokodemo-door](#dokodemo-door)
 * [Freedom (Outbound)](#freedom)
@@ -7,7 +9,7 @@
 * [Socks](#socks)
 * [VMess](#vmess)
 
-# Blackhole
+## Blackhole
 Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的传出，配合[[路由（Routing）|路由配置]]一起使用，可以达到禁止访问某些网站的效果。
 
 * 名称：blackhole
@@ -15,7 +17,7 @@ Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的�
 * 配置：空
 
 
-# Dokodemo-door
+## Dokodemo-door
 Dokodemo door（任意门）是一个传入数据协议，它可以监听一个本地端口，并把所有进入此端口的数据发送至指定服务器的一个端口，从而达到端口映射的效果。
 
 * 名称：dokodemo-door
@@ -42,14 +44,14 @@ Freedom 是一个传出数据协议，可以用来向任意网络发送（正常
 * 类型：Outbound
 * 配置：空
 
-# HTTP
+## HTTP
 HTTP 是一个传入数据协议，兼容 HTTP 1.x 代理。
 
 * 名称：http
 * 类型：Inbound
 * 配置：空
 
-# Shadowsocks
+## Shadowsocks
 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，与原版 Shadowsocks 兼容性：
 * 支持 TCP 和 UDP 数据包转发，UDP 可选择性关闭；
 * 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
@@ -76,7 +78,7 @@ HTTP 是一个传入数据协议，兼容 HTTP 1.x 代理。
 * udp: true / false，是否开启 UDP 转发，默认值为 false。
 * level (V2Ray 1.7+): 用户等级，默认值为 0。如果是自用的 VPS，可以设成 1。详见 VMess 中的 level 选项。
 
-# Socks
+## Socks
 Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol) 和 [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)，暂不支持 Socks 4a。
 
 * 名称：socks
@@ -100,7 +102,7 @@ Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packa
 * ip: 当开启 UDP 时，V2Ray 需要知道本机的 IP 地址。默认值为 127.0.0.1。
 * timeout: 从 Socks 客户端读取数据的超时设置（秒），0 表示不限时。默认值为 0。
 
-# VMess (Inbound / Outbound)
+## VMess (Inbound / Outbound)
 [[VMess]] 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
 
 * 名称：vmess

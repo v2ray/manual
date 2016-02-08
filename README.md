@@ -26,21 +26,3 @@ V2Ray 在以下平台中可用：
 * 聊天室：[https://gitter.im/v2ray/v2ray-core](https://gitter.im/v2ray/v2ray-core)
 * Twitter：[https://twitter.com/projectv2ray](https://twitter.com/projectv2ray)
 * 私下联系：love@v2ray.com [PGP 公钥](https://github.com/v2ray/v2ray.github.io/blob/master/content/pgp.md)
-
-## 新手上路
-* V2Ray 的[[工作机制]]
-* [[下载并运行 V2Ray|初次使用]]
-* [[配置 V2Ray 客户端|客户端配置]]
-* [[常见错误信息]]
-* [[常用配置列表]]
-* [[网友经验]]
-
-## 进阶使用
-* [[配置文件]]
-* [[协议列表]]
-* [[Effective V2Ray]]
-
-## 开发相关
-* [[开发计划]]
-* [[开发指引]]
-* [[核心设计]]
