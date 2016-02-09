@@ -16,7 +16,7 @@ v2ray-core 内部分为三层：应用层、代理层和传输层。每一层内
 
 重要模式列表：
 * Packet Dispatcher: 用于把传入代理所接收到的数据，传送给传出代理；
-* Router: 内置路由，详见[[路由配置]]；
+* Router: 内置路由，详见[路由配置](../chapter_02/03_routing.md)；
 * DNS: 内置的 DNS 缓存；
 * Inbound Handler Manager: 传入代理的管理器；
 

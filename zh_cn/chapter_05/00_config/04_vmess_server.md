@@ -11,7 +11,7 @@
     "loglevel": "warning"                  // 错误日志等级，可选 debug / info / warning / error
   },
   "inbound": {
-    "protocol": "vmess",    // 主传入协议，参见[[协议列表]]。
+    "protocol": "vmess",    // 主传入协议，参见[协议列表](../chapter_02/02_protocols.md)。
     "settings": {
       "clients": [
         {
@@ -22,7 +22,7 @@
     }
   },
   "outbound": {
-    "protocol": "freedom",  // 主传出协议，参见[[协议列表]]。
+    "protocol": "freedom",  // 主传出协议，参见[协议列表](../chapter_02/02_protocols.md)。
     "settings": {}
   },
   "inboundDetour": [
@@ -41,7 +41,7 @@
   ],
   "outboundDetour": [
     {
-      "protocol": "blackhole",  // 额外的传出协议，参见[[协议列表]]。
+      "protocol": "blackhole",  // 额外的传出协议，参见[协议列表](../chapter_02/02_protocols.md)。
       "settings": {},
       "tag": "blocked"
     }

@@ -45,7 +45,7 @@ Git
 ## 开发流程
 
 ### 写代码之前
-发现任何问题，或对项目有任何想法，请立即[[创建 Issue|Issue 指引]] 讨论之，以减少重复劳动和消耗在代码上的时间。
+发现任何问题，或对项目有任何想法，请立即[创建 Issue](../chapter_01/05_issue.md) 讨论之，以减少重复劳动和消耗在代码上的时间。
 
 ### 修改代码
 * Golang
@@ -91,7 +91,7 @@ v2ray-core
 ├── app        // 应用模块
 │   ├── router // 路由
 ├── common     // 公用代码
-├── proxy      // 通讯协议，参见[[协议列表]]
+├── proxy      // 通讯协议，参见[协议列表](../chapter_02/02_protocols.md)
 │   ├── blackhole
 │   ├── dokodemo-door
 │   ├── freedom

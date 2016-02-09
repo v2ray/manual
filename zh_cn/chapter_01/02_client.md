@@ -1,6 +1,6 @@
 # 客户端配置
 
-本文仅描述 Windows 和 Mac OS X 中的 V2Ray 客户端配置，如果你在 Linux 桌面系统上使用 V2Ray，请参考 [[服务器配置]]。
+本文仅描述 Windows 和 Mac OS X 中的 V2Ray 客户端配置，如果你在 Linux 桌面系统上使用 V2Ray，请参考 [服务器配置](03_server.md)。
 
 ## 修改配置文件
 ### 文件位置：
@@ -57,4 +57,4 @@ curl -v --socks5-hostname 127.0.0.1:1080 https://www.google.com/
 
 ## 调试
 
-使用过程中遇到任何问题，请参考[[常见错误信息]]。
+使用过程中遇到任何问题，请参考[常见错误信息](04_errors.md)。

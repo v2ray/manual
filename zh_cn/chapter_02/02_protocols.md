@@ -10,7 +10,7 @@
 * [VMess](#vmess)
 
 ## Blackhole
-Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的传出，配合[[路由（Routing）|路由配置]]一起使用，可以达到禁止访问某些网站的效果。
+Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的传出，配合[路由（Routing）](03_routing.md)一起使用，可以达到禁止访问某些网站的效果。
 
 * 名称：blackhole
 * 类型：Outbound
@@ -103,7 +103,7 @@ Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packa
 * timeout: 从 Socks 客户端读取数据的超时设置（秒），0 表示不限时。默认值为 0。
 
 ## VMess (Inbound / Outbound)
-[[VMess]] 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
+[VMess](../chapter_04/03_vmess.md) 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
 
 * 名称：vmess
 * 类型：Inbound / Outbound
@@ -161,4 +161,4 @@ Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packa
   * alterId (V2Ray 1.3+): 同 Inbound。
 * features (V2Ray 1.5+): VMess 的特性配置：
   * detour: 转向 outboundDetour
-    * to: 一个 outboundDetour 的 tag，详见[[配置文件]]
+    * to: 一个 outboundDetour 的 tag，详见[配置文件](02_protocols.md)

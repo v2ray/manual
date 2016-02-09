@@ -31,7 +31,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 
 其中"rules"对应一个数组，数组中每个一个元素是一个规则。对于每一个 TCP/UDP 连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接按此规则的设置进行转发。
 
-每一个规则都有两个必须的属性： type 和 outboundTag。type 表示此规则的类型，目前支持的类型有：field、chinaip 和 chinasites；outboundTag 对应一个[[额外传出连接配置|配置文件]]的标识。
+每一个规则都有两个必须的属性： type 和 outboundTag。type 表示此规则的类型，目前支持的类型有：field、chinaip 和 chinasites；outboundTag 对应一个[额外传出连接配置](02_protocols.md)的标识。
 
 三种类型的详细格式如下：
 

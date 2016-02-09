@@ -1,6 +1,6 @@
 # 下载安装
 
-V2Ray 对于常见操作系统发布了一系列的预编译程序，直接下载即可使用，无须从源代码重新编译。预编译程序发布于 [Release](https://github.com/v2ray/v2ray-core/releases) 中，每周更新，[[更新周期见此|开发计划]]。
+V2Ray 对于常见操作系统发布了一系列的预编译程序，直接下载即可使用，无须从源代码重新编译。预编译程序发布于 [Release](https://github.com/v2ray/v2ray-core/releases) 中，每周更新。
 
 支持的平台如下：
 * Windows: Vista 及之后版本，32 位和 64 位；
