@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "4.1"
+
+script: bash ./deploy.sh
+
+env:
+  global:
+    secure: "RfHncUtCpa2UtIM0qUMAlNDxTR+e0s7nv99YXl/StgVxWrAvLZM1kARgxNmitooHNjyKFtmScpkdptr25n/KmSOg0eCTxI+lH7hQbhBj+0D6jFWEuppfk9WROxMgcT6pho9f73Bwc7XNRdb0h91N+VhjKl3qrdSElBYPpICIf6dcEvG8BMo57celrRK1d7uGgzrhHC+gcnr/35zJZDc9jUA/IuVbJy+cPqHsQkHyWxPWzldVcgg0NNZjEFZeB6y0uTtFAdoFCo4xOF9mm28ykxtfiyQh7hTsFnFB6AuoRauQiII3T5CmAEQeuTvzJcYTJsbZXHlrwC9zi9KJn1ns/djeCO9u6PhMu01MHz4zezwcSGwrGEtN5xpj3SR9n3r3kxBob77o9kvkUwKnFLwVygegOc44dYinnjJ/jiR+mxgn6r8bQnW8M4/f2vWe5yfnk58QB9nke7GF8XiBadp9ejvHBbnPeD1TNcNUIyWINNCEAJZydxW2n/vrtfdd7OM+LgYdbyLw5QFl8tA/25hMxnmlePL3insYD9HVs4v73v1+3Wv29e3GJaY8dgJmGDqRB2jl6kFLrWWYYw+g/QVfzQXvwAT/YU1UC+l9ULOc4uiR14TB2rtQz9ES7munb/qKEkcX/YL88I7pvJ50XKJrLC9h9b5sbt5QkJV+73087g4="
