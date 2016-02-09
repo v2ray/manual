@@ -3,6 +3,8 @@
 * [介绍](README.md)
 * [欢迎使用 V2Ray](chapter_00/README.md)
   * [关于 V2Ray](chapter_00/00_about.md)
+  * [版本更新历史](chapter_00/01_versions.md)
+  * [捐助本项目](chapter_00/02_donate.md)
 * [新手入门](chapter_01/README.md)
   * [工作机制](chapter_01/00_workflow.md)
   * [下载安装](chapter_01/01_install.md)
