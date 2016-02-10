@@ -8,7 +8,7 @@
 
 ## 2016.02.01 v1.6
 * 服务器端支持 Shadowsocks；
-  * [协议详情](../chapter_02/protocols.md#shadowsocks)
+  * [协议详情](../chapter_02/02_protocols.md#shadowsocks)
   * [配置示例](../chapter_05/00_config/06_shadowsocks.md)
 
 ## 2016.01.25 v1.5
