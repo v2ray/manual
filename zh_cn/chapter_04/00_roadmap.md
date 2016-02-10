@@ -6,4 +6,6 @@ V2Ray 的版本号形如 X.Y.Z，其中 X 表示 Milestone，Y 表示 Release，
 ## 周期
 V2Ray 将在每周一发布一个 [Release](https://github.com/v2ray/v2ray-core/releases)，每 12 周左右完成一个 Milestone。
 
+## 详细的开发计划
+
 <https://docs.google.com/spreadsheets/d/1CmnPzUU8Z0cPOXUQcZRDuaZGii3bOTNv63W4gcwoBF8/pubhtml>
