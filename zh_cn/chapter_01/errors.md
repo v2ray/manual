@@ -2,9 +2,9 @@
 
 ## VMess 认证失败
 ### 错误信息
-Invalid authentication
-VMessOut: Failed to read VMess response (0 bytes): EOF
-VMessOut: Failed to read VMess response (0 bytes): wsarecv: An existing connection was forcibly closed by the remote host.
+* Invalid authentication
+* VMessOut: Failed to read VMess response (0 bytes): EOF
+* VMessOut: Failed to read VMess response (0 bytes): wsarecv: An existing connection was forcibly closed by the remote host.
 
 ### 原因
 1. 客户端和服务器端的用户 ID 不匹配；
