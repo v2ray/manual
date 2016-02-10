@@ -1,13 +1,21 @@
 # 常见错误信息
 
-## Invalid authentication
-原因：客户端使用了错误的用户 ID。
+## VMess 认证失败
+### 错误信息
+Invalid authentication
+VMessOut: Failed to read VMess response (0 bytes): EOF
+VMessOut: Failed to read VMess response (0 bytes): wsarecv: An existing connection was forcibly closed by the remote host.
 
-解决：
-* 如果客户端无法正常连接服务器，请检查配置文件中的用户 ID 设置；
-* 如果客户端可以正常连接，只是偶尔出现此错误，则说明你的服务器受到流量重放攻击。
+### 原因
+1. 客户端和服务器端的用户 ID 不匹配；
+1. 客户端和服务器端的用户 alterId 不匹配；
+1. 客户端与服务器的时间不匹配，误差不能超过两分钟；
+1. 偶然因素，可忽略；
 
-## VMessOut: Failed to read VMess response (0 bytes): EOF
-原因：
-* 客户端使用错误的用户 ID；
-* 浏览器使用了 AdBlock 之类拦截广告的插件（在这种情况下，可以忽略上述错误）
+## Shadowsocks 认证失败
+### 错误信息
+Shadowsocks: Unknown address type: xxx
+
+### 原因
+1. Shadowsocks 协议的加密方式或是密码不匹配；
+

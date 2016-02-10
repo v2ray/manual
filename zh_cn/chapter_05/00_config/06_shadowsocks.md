@@ -13,7 +13,7 @@ V2Ray 在服务器端支持 Shadowsocks 协议，如果你同时在使用 V2Ray 
     "loglevel": "warning"                  // 错误日志等级，可选 debug / info / warning / error
   },
   "inbound": {
-    "protocol": "vmess",    // 主传入协议，参见[协议列表](../chapter_02/02_protocols.md)。
+    "protocol": "vmess",    // 主传入协议，参见协议列表
     "settings": {
       "clients": [
         {
@@ -24,7 +24,7 @@ V2Ray 在服务器端支持 Shadowsocks 协议，如果你同时在使用 V2Ray 
     }
   },
   "outbound": {
-    "protocol": "freedom",  // 主传出协议，参见[协议列表](../chapter_02/02_protocols.md)。
+    "protocol": "freedom",  // 主传出协议，参见协议列表
     "settings": {}
   },
   "inboundDetour": [
@@ -49,7 +49,7 @@ V2Ray 在服务器端支持 Shadowsocks 协议，如果你同时在使用 V2Ray 
   ],
   "outboundDetour": [
     {
-      "protocol": "blackhole",  // 额外的传出协议，参见[协议列表](../chapter_02/02_protocols.md)。
+      "protocol": "blackhole",  // 额外的传出协议，参见协议列表
       "settings": {},
       "tag": "blocked"
     }

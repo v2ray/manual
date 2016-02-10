@@ -11,7 +11,7 @@
     "loglevel": "warning"                  // 错误日志等级，可选 debug / info / warning / error
   },
   "inbound": {
-    "protocol": "vmess",    // 主传入协议，参见[协议列表](../chapter_02/02_protocols.md)。
+    "protocol": "vmess",    // 主传入协议，参见协议列表
     "settings": {
       "clients": [
         {
@@ -22,7 +22,7 @@
     }
   },
   "outbound": {
-    "protocol": "freedom",  // 主传出协议，参见[协议列表](../chapter_02/02_protocols.md)。
+    "protocol": "freedom",  // 主传出协议，参见协议列表
     "settings": {}
   },
   "inboundDetour": [

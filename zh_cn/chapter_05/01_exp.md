@@ -1,6 +1,6 @@
 # 网友经验
 
-本页面收录了一下来自网友的经验和教程，感谢各位帮忙推广 V2Ray。
+本页面收录了以下来自网友们的经验和教程，感谢各位帮忙推广 V2Ray。
 
 * 2016.02.05 [Ubuntu环境下V2Ray配置教程](http://luluseu.moe/?p=365)
 * 2016.02.01 [V2Ray 完全使用教程](https://yuan.ga/v2raywan-quan-shi-yong-jiao-cheng/)
