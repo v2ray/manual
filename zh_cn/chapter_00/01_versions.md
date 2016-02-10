@@ -8,17 +8,17 @@
 
 ## 2016.02.01 v1.6
 * 服务器端支持 Shadowsocks；
-  * [协议详情](https://github.com/v2ray/v2ray.github.io/wiki/%E5%8D%8F%E8%AE%AE%E5%88%97%E8%A1%A8#shadowsocks-inbound-v2ray-16)
-  * [配置示例](https://github.com/v2ray/v2ray.github.io/wiki/%E9%85%8D%E7%BD%AE%E6%A0%B7%E4%BE%8B%EF%BC%9AShadowsocks-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF)
+  * [协议详情](../chapter_02/protocols.md#shadowsocks)
+  * [配置示例](../chapter_05/00_config/06_shadowsocks.md)
 
 ## 2016.01.25 v1.5
 * 修复了一个 VMess 中的安全性问题，导致了 1.5 和之前版本不兼容，请同时升级你的客户端和服务器端；
 * 修复了一个路由不能正常工作的问题； 
-* [动态端口](https://github.com/v2ray/v2ray.github.io/wiki/%E5%8A%A8%E6%80%81%E7%AB%AF%E5%8F%A3)；
+* [动态端口](../chapter_03/00_dynport.md)；
 * 略微提升了性能；
 
 ## 2016.01.18 v1.4
-* 更新了[安装脚本](https://github.com/v2ray/v2ray.github.io/wiki/%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F:-%E9%A2%84%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
+* 更新了[安装脚本](../chapter_01/install.md)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
 
 * 修复了一个 VMess 的内存使用问题；
 
@@ -26,8 +26,8 @@
 * Wiki 中更新了一些英语页面（感谢 chenxiaoqino）；
 * Docker 配置文件（感谢 adoot）；
 * HTTP 代理（感谢 adoot）；
-* 路由中内置了常见的[国内网站域名](https://github.com/v2ray/v2ray.github.io/wiki/%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE#chinasites-v2ray-13)；
-* VMess 配置中新增了 [alterId 选项](https://github.com/v2ray/v2ray.github.io/wiki/%E5%8D%8F%E8%AE%AE%E5%88%97%E8%A1%A8#vmess-inbound--outbound)；
+* 路由中内置了常见的[国内网站域名](../chapter_02/03_routing.md)；
+* VMess 配置中新增了 [alterId 选项](../chapter_02/02_protocols.md)；
 * 修复了若干小问题；
 
 ## 2015.12.14 v1.2
