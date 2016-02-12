@@ -24,7 +24,7 @@ bash <(curl -L -s https://raw.githubusercontent.com/v2ray/v2ray-core/master/rele
 * /usr/bin/v2ray/v2ray：V2Ray 程序；
 * /etc/v2ray/config.json：配置文件；
 
-此脚本会配置自动运行脚本。自动运行脚本目前仅适用于 SysV 模式，不支持 Debian 7 的 systemd。
+此脚本会配置自动运行脚本。自动运行脚本会在系统重启之后，自动运行 V2Ray。目前自动运行脚本只支持带有 Systemd 的系统，以及 Debian / Ubuntu 全系列。
 
 脚本运行完成后，你需要：
 
