@@ -6,8 +6,10 @@ V2Ray 是一个非营利项目，它的所有代码均公开，软件可以自�
 V2Ray 支持以下资助方式，收到捐赠之后您的昵称将会显示在页面下方。更改昵称请联系 donate@v2ray.com 。
 
 ### 礼品卡
-请发送礼品卡编码至  donate@v2ray.com
-* [Amazon Gift Card](https://www.amazon.com/gp/product/B004LLIKVU/gcrnsts?ie=UTF8&qid=1443538350&ref_=lp_2238192011_1_1&s=gift-cards&sr=1-1)
+请发送 Amazon Gift Card 编码至  donate@v2ray.com
+* [从美亚官网购买](https://www.amazon.com/gp/product/B004LLIKVU/gcrnsts?ie=UTF8&qid=1443538350&ref_=lp_2238192011_1_1&s=gift-cards&sr=1-1)，支持各种信用卡；
+* [从 Gyft.com 购买](https://www.gyft.com/buy-gift-cards/amazon-com/)，支持信用卡、Paypal、比特币；
+* [从淘宝购买](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2453035200.3.9kuOxr&id=13282934840)；
 
 ### 信用卡
 通过以下链接可以购买到最新版本的 V2Ray 程序。它们和[公开下载的版本](../chapter_01/install.md)，在功能上没有区别。
