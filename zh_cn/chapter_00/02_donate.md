@@ -19,7 +19,7 @@ V2Ray 支持以下资助方式，收到捐赠之后您的昵称将会显示在�
 * Mac OS X: [购买 $39.9](https://sellfy.com/p/oty6/)
 
 ### 比特币
-18JHGxM9ZNHBfb9qhpfqYzt8QtyrU1fc7w
+[18JHGxM9ZNHBfb9qhpfqYzt8QtyrU1fc7w](https://blockchain.info/address/18JHGxM9ZNHBfb9qhpfqYzt8QtyrU1fc7w)
 
 ## 感谢您的帮助
 
