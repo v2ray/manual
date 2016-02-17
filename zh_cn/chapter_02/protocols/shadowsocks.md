@@ -1,11 +1,12 @@
 ## Shadowsocks
-[Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，与原版 Shadowsocks 兼容性：
-* 支持 TCP 和 UDP 数据包转发，UDP 可选择性关闭；
-* 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
+兼容原版 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议。此协议是一个传入协议，只适用于服务器端。客户端版本请使用 Shadowsocks [官方推荐](https://shadowsocks.org/en/download/clients.html)的工具。
+
+与官方版本的兼容性：
+* 支持 TCP 和 UDP 数据包转发，其中 UDP 可选择性关闭；
+* 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)，如果客户端发来的数据包指定了 OTA，服务器端会自动验证 OTA，无需配置；
 * 加密方式：aes-256-cfb / aes-128-cfb；
 
-此协议是一个传入协议，只适用于服务器端。客户端版本请使用 Shadowsocks [官方推荐](https://shadowsocks.org/en/download/clients.html)的工具。
-
+协议描述：
 * 名称：shadowsocks
 * 版本：V2Ray 1.6+
 * 类型：Inbound
