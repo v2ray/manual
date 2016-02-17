@@ -102,7 +102,7 @@ Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packa
 * ip: 当开启 UDP 时，V2Ray 需要知道本机的 IP 地址。默认值为 127.0.0.1。
 * timeout: 从 Socks 客户端读取数据的超时设置（秒），0 表示不限时。默认值为 0。
 
-## VMess (Inbound / Outbound)
+## VMess
 [VMess](../chapter_04/03_vmess.md) 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
 
 * 名称：vmess
