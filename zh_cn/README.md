@@ -8,6 +8,7 @@ V2Ray 1.7
 ## 联系方式
 * 聊天室：[https://gitter.im/v2ray/v2ray-core](https://gitter.im/v2ray/v2ray-core)
 * Twitter：[https://twitter.com/projectv2ray](https://twitter.com/projectv2ray)
+* Google+: [https://plus.google.com/communities/118329549804626583700](https://plus.google.com/communities/118329549804626583700)
 * 私下联系：love@v2ray.com [PGP 公钥](chapter_00/pgp.md)
 
 ## 更新本站点
