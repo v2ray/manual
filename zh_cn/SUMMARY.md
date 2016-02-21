@@ -13,6 +13,7 @@
   * [命令行参数](chapter_01/flags.md)
   * [常见错误信息](chapter_01/errors.md)
   * [Issue 指引](chapter_01/issue.md)
+  * [硬件要求](chapter_01/hardware.md)
 * [配置文件](chapter_02/README.md)
   * [JSON](chapter_02/00_json.md)
   * [文件格式](chapter_02/01_overview.md)
