@@ -1,5 +1,12 @@
 # 更新日志
 
+## 2016.02.22 v1.8
+* 更新了安装脚本 install-release.sh （感谢 netcookies@)：
+  * 现在可以自动停止 V2Ray 进程，并在更新完成后自动运行 V2Ray；
+  * install-release.sh 接受 --proxy 参数并从指定的代理下载 V2Ray；
+* 使用 Go 1.6 编译，提升了 AES 加密的性能；
+* 一些小修小补；
+
 ## 2016.02.08 v1.7
 * 提升了 UDP 转发的性能；
 * 提升了 Shadowsocks 的安全性；
