@@ -2,6 +2,7 @@
 
 本页面收录了以下来自网友们的经验和教程，感谢各位帮忙推广 V2Ray。
 
+* 2016.02.24 [V2Ray for Windows Client and Debian Server](http://dcamero.azurewebsites.net/v2ray-windows-client-debian-server.html)
 * 2016.02.05 [Ubuntu环境下V2Ray配置教程](http://luluseu.moe/?p=365)
 * 2016.02.01 [V2Ray 完全使用教程](https://yuan.ga/v2raywan-quan-shi-yong-jiao-cheng/)
 * 2016.01.26 [简易配置VPS V2Ray 服务端、客户端](http://ntgeralt.blogspot.ch/2016/01/vps-v2ray.html)
