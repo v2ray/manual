@@ -4,7 +4,11 @@
 与官方版本的兼容性：
 * 支持 TCP 和 UDP 数据包转发，其中 UDP 可选择性关闭；
 * 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)，如果客户端发来的数据包指定了 OTA，服务器端会自动验证 OTA，无需配置；
-* 加密方式：aes-256-cfb / aes-128-cfb；
+* 加密方式：
+  * aes-256-cfb
+  * aes-128-cfb
+  * chacha20 (V2Ray 1.9+)
+  * chacha20-ietf (V2Ray 1.9+)
 
 协议描述：
 * 名称：shadowsocks
@@ -21,7 +25,11 @@
 ```
 
 其中：
-* method: 加密方式，可选的值有"aes-256-cfb"和"aes-128-cfb"，没有默认值。
+* method: 加密方式，没有默认值。可选的值有：
+  * aes-256-cfb
+  * aes-128-cfb
+  * chacha20
+  * chacha20-ietf
 * password: 密码，任意字符串。Shadowsocks 协议并不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 * udp: true / false，是否开启 UDP 转发，默认值为 false。
 * level (V2Ray 1.7+): 用户等级，默认值为 0。如果是自用的 VPS，可以设成 1。详见 VMess 中的 level 选项。
