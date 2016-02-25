@@ -14,13 +14,10 @@
   "port": "10000-20000", // 端口范围
   "tag": "detour",       // 此传入协议的标签，在第二部分中会用到
   "settings": {
-    "clients": [         // clients 部分和原有的配置的一样
-      {
-        "id": "33d41456-039b-4496-beae-37b26eba22a0",
-        "alterId": 100,
-        "level": 1
-      }
-    ]
+    "default": {
+      "level": 1,
+      "alterId": 32
+    }
   },
   "allocate": {            // 分配模式
     "strategy": "random",  // 随机开启
@@ -42,7 +39,8 @@
       {
         "id": "d17a1af7-efa5-42ca-b7e9-6a35282d737f",
         "level": 1,
-        "alterId": 10
+        "alterId": 10,
+        "email": "love@v2ray.com"
       }
     ],
     "features": {        // 特性设置
@@ -55,3 +53,5 @@
 ```
 
 配置的具体细节参见[协议列表](../chapter_02/02_protocols.md)。
+
+在约定绕路的端口时，服务器会根据当前用户的 Email 地址，在绕路协议中以同一个 Email 地址创建新的用户，以便区分不同用户的流量。若绕路协议中已经配置了同一个 Email 的用户，则使用该用户；否则自动创建一个新用户。

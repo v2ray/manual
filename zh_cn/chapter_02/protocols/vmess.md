@@ -27,7 +27,7 @@
   * port：服务器端口号。
   * users：一组服务器认可的用户，其中每一个用户：
     * id：VMess 用户的主 ID。
-    * alterId (V2Ray 1.3): 为了进一步防止被探测，一个用户可以在主 ID 的基础上，再额外生成多个 ID。这里只需要指定额外的 ID 的数量，推荐值为 100。不指定的话，默认值是 0。最大值 65535。这个值必须和服务器端所指定的值相同。
+    * alterId: 为了进一步防止被探测，一个用户可以在主 ID 的基础上，再额外生成多个 ID。这里只需要指定额外的 ID 的数量，推荐值为 100。不指定的话，默认值是 0。最大值 65535。这个值必须和服务器端所指定的值相同。
 
 
 * VMess 传入协议配置：
@@ -37,9 +37,14 @@
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100
+      "alterId": 100,
+      "email": "love@v2ray.com"
     }
   ],
+  "default": {
+    "level": 0,
+    "alterId": 32
+  },
   "features": {
     "detour": {
       "to": "tag_to_detour"
@@ -49,12 +54,17 @@
 ```
 
 其中：
-* clients：一组服务器认可的用户，其中每一个用户：
-  * id：VMess 的用户 ID。
-  * level：用户等级
-    * 当 level 为 0 时，此用户不被信任，V2Ray 将对此用户进行严格的安全限制；
-    * 当 level 大于 0 时，此用户被信任，V2Ray 将放宽对此用户的限制；
-  * alterId (V2Ray 1.3+): 同 Inbound。
-* features (V2Ray 1.5+): VMess 的特性配置：
+* clients：一组服务器认可的用户。clients 可以为空。当此配置用作动态端口时，V2Ray 会自动创建用户。
+  * 其中每一个用户：
+    * id：VMess 的用户 ID。
+    * level：用户等级
+      * 当 level 为 0 时，此用户不被信任，V2Ray 将对此用户进行严格的安全限制；
+      * 当 level 大于 0 时，此用户被信任，V2Ray 将放宽对此用户的限制。
+    * alterId: 同 Inbound。
+    * email: 用户邮箱地址，用于区分不同用户的流量。
+* features: VMess 的特性配置：
   * detour: 转向 outboundDetour
     * to: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
+* default (V2Ray 1.9+): 可选，clients 的默认配置
+  * level: 用户等级，意义同上
+  * alterId: 同 Inbound。  
