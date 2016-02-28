@@ -45,7 +45,7 @@
       "protocol": "freedom",
       "tag": "direct",
       "settings": {}
-    },
+    }
   ],
   "routing": {
     "strategy": "rules",
@@ -59,7 +59,7 @@
           "type": "field",  // 对于一些常见的网站，也使用直连模式
           "domain": [
             "qq.com",
-            "baidu.com",
+            "baidu.com"
           ],
           "outboundTag": "direct"
         },
