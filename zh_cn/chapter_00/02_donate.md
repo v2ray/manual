@@ -11,13 +11,6 @@ V2Ray 支持以下资助方式，收到捐赠之后您的昵称将会显示在�
 * [从 Gyft.com 购买](https://www.gyft.com/buy-gift-cards/amazon-com/)，支持信用卡、Paypal、比特币；
 * [从淘宝购买](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2453035200.3.9kuOxr&id=13282934840)；
 
-### 信用卡
-通过以下链接可以购买到最新版本的 V2Ray 程序。它们和[公开下载的版本](../chapter_01/install.md)，在功能上没有区别。
-
-* Linux: [购买 $0.9](https://sellfy.com/p/6LBg/)
-* Windows: [购买 $9.9](https://sellfy.com/p/kW9b/)
-* Mac OS X: [购买 $39.9](https://sellfy.com/p/oty6/)
-
 ### 比特币
 [1wYbCx61yyyCRBqV91NnfZfDEmc8doqSx](https://blockchain.info/address/1wYbCx61yyyCRBqV91NnfZfDEmc8doqSx)
 
