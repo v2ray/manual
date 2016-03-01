@@ -3,7 +3,7 @@
 Welcome to V2Ray. If you have trouble visiting some websites in the world, V2Ray might be useful to you.
 
 ## Latest Version
-V2Ray 1.7
+V2Ray 1.9.1
 
 ## Contact
 * Chatroom: https://gitter.im/v2ray/v2ray-core
