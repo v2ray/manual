@@ -10,4 +10,4 @@
 * 2016.01.08 [使用 V2Ray 科学上网](http://k162.space/across_the_gfw_with_v2ray/)
 * 2016.01.08 [V2Ray 科学上网](http://www.gonewto.com/?post/gweuy4)
 * 2015.12.12 [V2Ray – Shadowsocks的代替品](https://us-somesky.rhcloud.com/gfw/v2ray.html)
-* 2015.12.12 [小巧工具V2Ray](http://bpplpp.cn/v2ray.html)
+* 2015.12.12 [小巧工具V2Ray](http://bpplpp.com/1994.html)
