@@ -1,5 +1,8 @@
 # Version History
 
+## 2016.04.18 v1.11
+* Try to fix the memory usage issue.
+
 ## 2016.03.07 v1.10
 * Fix an performance issue when dynamic ports refreshes.
 
