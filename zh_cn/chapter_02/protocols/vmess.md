@@ -45,10 +45,8 @@
     "level": 0,
     "alterId": 32
   },
-  "features": {
-    "detour": {
-      "to": "tag_to_detour"
-    }
+  "detour": {
+    "to": "tag_to_detour"
   }
 }
 ```
@@ -62,9 +60,8 @@
       * 当 level 大于 0 时，此用户被信任，V2Ray 将放宽对此用户的限制。
     * alterId: 同 Inbound。
     * email: 用户邮箱地址，用于区分不同用户的流量。
-* features: VMess 的特性配置：
-  * detour: 转向 outboundDetour
-    * to: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
+* detour: 转向 outboundDetour
+  * to: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
 * default (V2Ray 1.9+): 可选，clients 的默认配置
   * level: 用户等级，意义同上
   * alterId: 同 Inbound。  
