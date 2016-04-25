@@ -3,7 +3,7 @@
 Welcome to V2Ray. If you have trouble visiting some websites in the world, V2Ray might be useful to you.
 
 ## Latest Version
-V2Ray 1.9.1
+V2Ray 1.11
 
 ## Contact
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
