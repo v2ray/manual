@@ -6,6 +6,7 @@
 [V2Ray 1.11](https://github.com/v2ray/v2ray-core/releases/latest)
 
 ## 联系方式
+* Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
 * 聊天室：[https://gitter.im/v2ray/v2ray-core](https://gitter.im/v2ray/v2ray-core)
 * Twitter：[https://twitter.com/projectv2ray](https://twitter.com/projectv2ray)
 * Google+: [https://plus.google.com/communities/118329549804626583700](https://plus.google.com/communities/118329549804626583700)
