@@ -6,6 +6,7 @@ Welcome to V2Ray. If you have trouble visiting some websites in the world, V2Ray
 V2Ray 1.9.1
 
 ## Contact
+* Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
 * Chatroom: https://gitter.im/v2ray/v2ray-core
 * Twitter: https://twitter.com/projectv2ray
 * Email: love@v2ray.com [PGP](chapter_00/pgp.md)
