@@ -1,5 +1,13 @@
 # Version History
 
+## 2016.05.01 v1.12.1
+* Fix a bug in VMess.
+
+## 2016.05.01 v1.12
+* Second try to fix the memory usage issue;
+* Improve Shadowsocks performance;
+* New option "none" in loglevel;
+
 ## 2016.04.18 v1.11
 * Try to fix the memory usage issue.
 
@@ -15,7 +23,6 @@
 * Dynamic ports now automatically create an account.
 
 ## 2016.02.22 v1.8
-
 * Update installation script install-release.sh (thanks, @netcookies):
   * You can now automatically stop the V2Ray process and update automatically 
 after the completion of V2Ray;
