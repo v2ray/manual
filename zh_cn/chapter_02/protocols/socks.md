@@ -8,7 +8,10 @@ Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packa
 {
   "auth": "noauth",
   "accounts": [  // 当 auth 为 "password" 时有效
-    {"user": "my-username", "pass", "my-password"}
+    {
+      "user": "my-username",
+      "pass": "my-password"
+    }
   ],
   "udp": false,
   "ip": "127.0.0.1",
