@@ -26,6 +26,7 @@
     * [SOCKS](chapter_02/protocols/socks.md)
     * [VMess](chapter_02/protocols/vmess.md)
   * [路由配置](chapter_02/03_routing.md)
+  * [DNS 配置](chapter_02/04_dns.md)
 * [进阶使用](chapter_03/README.md)
   * [动态端口](chapter_03/00_dynport.md)
   * [Effective V2Ray](chapter_03/01_effective.md)
