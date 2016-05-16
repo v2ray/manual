@@ -6,6 +6,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 
 ```javascript
 {
+  "domainStrategy": "AsIs",
   "rules": [
     {
       "type": "field",
@@ -29,13 +30,17 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 }
 ```
 
-其中"rules"对应一个数组，数组中每个一个元素是一个规则。对于每一个 TCP/UDP 连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接按此规则的设置进行转发。
+其中：
+* domainStrategy: 域名解析策略，可选的值有：
+  * "AsIs": 只使用域名进行路由选择。默认值。
+  * "IPIfNonMatch": 当域名没有匹配任何规则时，将域名解析成 IP（A 记录）再次进行匹配；当一个域名有多个 A 记录时，会尝试匹配所有的 A 记录，直到其中一个与某个规则匹配为止。
+* rules: 对应一个数组，数组中每个一个元素是一个规则。对于每一个 TCP/UDP 连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接按此规则的设置进行转发。
 
 每一个规则都有两个必须的属性： type 和 outboundTag。type 表示此规则的类型，目前支持的类型有：field、chinaip 和 chinasites；outboundTag 对应一个[额外传出连接配置](02_protocols.md)的标识。
 
 三种类型的详细格式如下：
 
-### field (V2Ray 1.1+)
+### field
 ```javascript
 {
   "type": "field",
@@ -69,7 +74,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 * 当一个网络连接指定了域名，而一个规则中只有 IP 规则，没有域名规则，则这个规则永远不会生效，反之亦然。
 
 
-### chinaip (V2Ray 1.2+)
+### chinaip
 此规则配置如下，没有额外属性。
 ```javascript
 {
@@ -80,7 +85,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 
 chinaip 会匹配所有中国境内的 IP，目前只包含 IPv4 数据。IP 段信息由 [ChinaDNS](https://github.com/shadowsocks/ChinaDNS) 中给出的脚本生成。
 
-### chinasites (V2Ray 1.3+)
+### chinasites
 此规则配置如下，没有额外属性。
 ```javascript
 {
