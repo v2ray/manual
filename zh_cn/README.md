@@ -3,7 +3,7 @@
 欢迎来到 V2Ray 的世界，如果访问某些网站对你来说有点困难，那么 V2Ray 会成为你的好助手。
 
 ## 最新版本
-[V2Ray 1.12](https://github.com/v2ray/v2ray-core/releases/latest)
+[V2Ray 1.13](https://github.com/v2ray/v2ray-core/releases/latest)
 
 ## 联系方式
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
