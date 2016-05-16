@@ -1,5 +1,9 @@
 # Version History
 
+## 2016.05.16 v1.13
+* Internal DNS server, to provide better routing results combined with chinasites and chinaip;
+* Fix an issue in UDP relay;
+
 ## 2016.05.01 v1.12.1
 * Fix a bug in VMess.
 
