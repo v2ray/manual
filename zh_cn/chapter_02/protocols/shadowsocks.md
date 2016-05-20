@@ -7,12 +7,11 @@
 * 加密方式：
   * aes-256-cfb
   * aes-128-cfb
-  * chacha20 (V2Ray 1.9+)
-  * chacha20-ietf (V2Ray 1.9+)
+  * chacha20
+  * chacha20-ietf
 
 协议描述：
 * 名称：shadowsocks
-* 版本：V2Ray 1.6+
 * 类型：Inbound
 * 配置：
 ```javascript
@@ -32,4 +31,4 @@
   * chacha20-ietf
 * password: 密码，任意字符串。Shadowsocks 协议并不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 * udp: true / false，是否开启 UDP 转发，默认值为 false。
-* level (V2Ray 1.7+): 用户等级，默认值为 0。如果是自用的 VPS，可以设成 1。详见 VMess 中的 level 选项。
+* level: 用户等级，默认值为 0。如果是自用的 VPS，可以设成 1。详见 VMess 中的 level 选项。
