@@ -5,6 +5,7 @@
   * [版本更新历史](chapter_00/01_versions.md)
   * [捐助 V2Ray](chapter_00/02_donate.md)
   * [加密通讯](chapter_00/pgp.md)
+  * [常见问题](chapter_00/faq.md)
 * [新手入门](chapter_01/README.md)
   * [工作机制](chapter_01/workflow.md)
   * [下载安装](chapter_01/install.md)
