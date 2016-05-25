@@ -3,11 +3,11 @@
 欢迎来到 V2Ray 的世界，如果访问某些网站对你来说有点困难，那么 V2Ray 会成为你的好助手。
 
 ## 最新版本
-[V2Ray 1.13](https://github.com/v2ray/v2ray-core/releases/latest)
+V2Ray 1.13: [Github Release](https://github.com/v2ray/v2ray-core/releases/latest) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
 
 ## 联系方式
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
-* 聊天室：[https://gitter.im/v2ray/v2ray-core](https://gitter.im/v2ray/v2ray-core)
+* Gitter：[https://gitter.im/v2ray/v2ray-core](https://gitter.im/v2ray/v2ray-core)
 * Twitter：[https://twitter.com/projectv2ray](https://twitter.com/projectv2ray)
 * Google+: [https://plus.google.com/communities/118329549804626583700](https://plus.google.com/communities/118329549804626583700)
 * 私下联系：love@v2ray.com [PGP 公钥](chapter_00/pgp.md)
