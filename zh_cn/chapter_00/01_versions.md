@@ -4,6 +4,7 @@
 * 修复了 HTTP 代理中一个可能导致崩溃的问题；
 * [安装脚本](../chapter_01/install.md)中增加了一些功能；
 * [DNS](../chapter_02/04_dns.md) 中增加了[静态路由](../chapter_05/00_config/08_static_hosts.md)功能；
+* 官方服务器地址变动；
 
 ## 2016.05.16 v1.13
 * 内置 DNS 服务，可搭配 chinasites 和 chinaip 进行更为精准的路由判断；
