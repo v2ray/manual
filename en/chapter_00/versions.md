@@ -1,5 +1,11 @@
 # Version History
 
+## 2016.05.29 v1.14
+* Fix a panic issue in http proxy;
+* More functionalies in install script;
+* Static route in DNS;
+* Official server address change;
+
 ## 2016.05.16 v1.13
 * Internal DNS server, to provide better routing results combined with chinasites and chinaip;
 * Fix an issue in UDP relay;
