@@ -1,5 +1,11 @@
 # Version History
 
+## 2016.06.05 v1.15
+* Optionally reuse TCP connection for better performance;
+* Allow listening on a specific IP address;
+* Allow sending data through a specific IP address;
+* Fix an issue in HTTP proxy that may exhaust memory;
+
 ## 2016.05.29 v1.14
 * Fix a panic issue in http proxy;
 * More functionalies in install script;
