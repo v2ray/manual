@@ -163,6 +163,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 {
   "connectionReuse": false
 }
+```
 
 其中：
 * connectionReuse: 是否重用 TCP 连接，默认值为 false。
