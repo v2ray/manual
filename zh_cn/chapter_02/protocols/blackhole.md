@@ -3,4 +3,18 @@ Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的�
 
 * 名称：blackhole
 * 类型：Outbound
-* 配置：空
+* 配置：
+
+```javascript
+{
+  "response": {
+    "type": "none"
+  }
+}
+```
+
+其中：
+* response (V2Ray 1.16+): 配置黑洞的响应数据
+  * type: 数据类型，可选的值有：
+    * "none": 默认值，不返回任何数据直接关闭连接；
+    * "http": 返回一个简单的 HTTP 403 响应；
