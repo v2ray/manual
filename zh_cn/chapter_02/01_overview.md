@@ -161,11 +161,11 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 用于配置 V2Ray 如何与其它服务器建立和使用网络连接。
 ```javascript
 {
-  "connectionReuse": false
+  "connectionReuse": true
 }
 ```
 
 其中：
-* connectionReuse: 是否重用 TCP 连接，默认值为 false。
+* connectionReuse: 是否重用 TCP 连接，默认值为 true。
   * 目前只对 VMess 起作用；
   * 当值为 true 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
