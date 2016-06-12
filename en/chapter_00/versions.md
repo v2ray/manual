@@ -1,5 +1,10 @@
 # Version History
 
+## 2016.06.12 v1.16
+* TCP connection reuse is now enabled by default;
+* Dokodemo-door is able to recognize TCP connection redirected by iptables;
+* Blackhole is able to send back HTTP forbidden data;
+
 ## 2016.06.05 v1.15
 * Optionally reuse TCP connection for better performance;
 * Allow listening on a specific IP address;
