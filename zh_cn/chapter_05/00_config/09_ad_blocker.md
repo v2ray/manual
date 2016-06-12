@@ -8,7 +8,7 @@
       "protocol": "blackhole",
       "tag": "adblock",
       "settings": {
-        "response": "http"
+        "response": "http"  // 自动回复 HTTP 403
       }
     }
   ],
@@ -19,7 +19,7 @@
         {
           "type": "field",
           "domain": [
-            "msg.71.am",
+            "msg.71.am",  // 要拦截的域名
             "17un.co"
           ],
           "outboundTag": "adblock"
