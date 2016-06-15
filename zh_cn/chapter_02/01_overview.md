@@ -90,15 +90,21 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "port": 1080,
   "listen": "127.0.0.1",
   "protocol": "协议名称",
-  "settings": {}
+  "settings": {},
+  "streamSettings": {
+    "network": "tcp"
+  }
 }
 ```
 
 其中：
-* port: 端口
+* port: 端口。
 * listen: 监听地址，只允许 IP 地址，默认值为 0.0.0.0。
 * protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * settings: 具体的配置内容，视协议不同而不同。
+* streamSettings (V2Ray 1.17+): 流式传输协议配置：
+  * network: 数据流所使用的网络，可选的值为 "tcp" 或 "kcp"，默认值为 "tcp"；
+    * 目前仅有 VMess 协议支持 kcp，其它协议在 kcp 上会传输失败。
 
 ## 主传出连接配置（outbound）
 主传出连接用于向远程网站或下一级代理服务器发送数据，可用的协议请见[[协议列表]]。
@@ -107,7 +113,10 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 {
   "sendThrough": "0.0.0.0",
   "protocol": "协议名称",
-  "settings": {}
+  "settings": {},
+  "streamSettings": {
+    "network": "tcp"
+  }
 }
 ```
 
@@ -115,6 +124,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * sendThrough: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为 0.0.0.0。
 * protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * settings: 具体的配置内容，视协议不同而不同。
+* streamSettings: 流式传输协议配置（见“主传入连接配置”） 。
 
 ## 额外的传入连接配置（inbound detour）
 此项是一个数组，可包含多个连接配置，每一个配置形如：
@@ -123,12 +133,16 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "protocol": "协议名称",
   "port": "端口",
   "tag": "标识",
+  "listen": "127.0.0.1",
   "allocate": {
     "strategy": "always",
     "refresh": 5,
     "concurrency": 3
   },
-  "settings": {}
+  "settings": {},
+  "streamSettings": {
+    "network": "tcp"
+  }
 }
 ```
 
@@ -136,36 +150,52 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * port: 端口号，可以是一个数值，或者字符串形式的数值范围，比如 "5-10" 表示端口 5 到端口 10 这 6 个端口。
 * tag (V2Ray 1.5+): 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
+* listen: 监听地址，只允许 IP 地址，默认值为 0.0.0.0。
 * allocate (V2Ray 1.5+): 分配设置：
   * strategy: 分配策略，可选的值有 always 和 random 两个。always 表示总是分配所有已指定的端口，port 是指定了多少个端口，V2Ray 就会监听这些端口。random 表示随机开放端口，每隔 refresh 分钟在 port 范围中随机选取 concurrency 个端口来监听。
   * refresh: 随机端口刷新间隔，单位为分钟。最小值为 2，建议值为 5。这个属性仅当 strategy = random 时有效。
   * concurrency: 随机端口数量。最小值为 1，最大值为 port 范围的一半。建议值为 3。
 * settings: 具体的配置内容，视协议不同而不同。
+* streamSettings: 流式传输协议配置（见“主传入连接配置”） 。
 
 ### 额外的传出连接配置（outbound detour）
 此项是一个数组，可包含多个连接配置，每一个配置形如：
 ```javascript
 {
   "protocol": "协议名称",
+  "sendThrough": "0.0.0.0",
   "tag": "标识",
-  "settings": {}
+  "settings": {},
+  "streamSettings": {
+    "network": "tcp"
+  }
 }
 ```
 
 其中：
 * protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)；
+* sendThrough: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为 0.0.0.0。
 * tag: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
 * settings: 具体的配置内容，视协议不同而不同。
+* streamSettings: 流式传输协议配置（见“主传入连接配置”） 。
 
 ## 底层传输配置（transport）
 用于配置 V2Ray 如何与其它服务器建立和使用网络连接。
 ```javascript
 {
-  "connectionReuse": true
+  "tcpSettings": {
+    "connectionReuse": true
+  },
+  "kcpSettings": {
+    "mtu": 1350
+  }
 }
 ```
 
 其中：
-* connectionReuse: 是否重用 TCP 连接，默认值为 true。
-  * 目前只对 VMess 起作用；
-  * 当值为 true 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
+* tcpSettings (V2Ray 1.17+): 针对 TCP 连接的配置：
+  * connectionReuse: 是否重用 TCP 连接，默认值为 true。
+    * 目前只对 VMess 起作用；
+    * 当值为 true 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
+* kcpSettings (V2Ray 1.17+): 针对 KCP 连接的配置：
+  * mtu: 最大传输单元（maximum transmission unit），请选择一个介于 576 - 1460 之间的值。默认值为 1350。
