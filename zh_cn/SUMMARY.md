@@ -31,6 +31,7 @@
 * [进阶使用](chapter_03/README.md)
   * [动态端口](chapter_03/00_dynport.md)
   * [Effective V2Ray](chapter_03/01_effective.md)
+  * [KCP/UDP](chapter_03/kcp.md)
 * [代码细节](chapter_04/README.md)
   * [开发计划](chapter_04/00_roadmap.md)
   * [开发指引](chapter_04/01_guide.md)
