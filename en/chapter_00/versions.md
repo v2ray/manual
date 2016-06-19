@@ -1,5 +1,9 @@
 # Version History
 
+## 2016.06.19 v1.17
+* KCP now is integrated into V2Ray. (Special thanks to [xiaokangwang](https://github.com/xiaokangwang), [xtaci](https://github.com/xtaci) and [skywind3000](https://github.com/skywind3000))
+* Minor bug fixes
+
 ## 2016.06.12 v1.16
 * TCP connection reuse is now enabled by default;
 * Dokodemo-door is able to recognize TCP connection redirected by iptables;
