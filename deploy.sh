@@ -1,6 +1,8 @@
 #!/bin/bash
 
 npm install gitbook-cli -g
+npm install --save gitbook-plugin-anchors
+
 gitbook init
 gitbook build
 
