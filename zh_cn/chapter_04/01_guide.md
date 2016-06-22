@@ -113,9 +113,12 @@ v2ray-core
   * 对缩写不强制小写，即 HTML 不必写成 Html；
 * 公开成员变量也使用 Pascal 命名法；
 * 私有成员变量使用[小驼峰式命名法](https://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB)，如 privateAttribute；
+* 为了方便重构，方法建议全部使用 Pascal 命名法；
+  * 尽管 Golang 中的以大小写区分公开和私有方法，但在实际操作中并不方便。
+  * 完全私有的类型放入 internal。
 
 #### 内容组织
-* 一个文件包含一个主要类型，及其相关的私用函数等；
+* 一个文件包含一个主要类型，及其相关的私有函数等；
 * 测试相关的文件，如 Mock 等工具类，放入 testing 子目录；
 
 #### 与 Golang 官方建议冲突的地方
