@@ -37,14 +37,14 @@ Connecting to host [远程IP], port [端口]
 * 在 V2Ray 客户端的配置文件中添加一个 dokodemo-door 的入口，如下：
 ```javascript
 "inboundDetour": [
-   "protocol": "dokodemo-door",
-   "port": 8888,
-   "settings": {
-     "address": "[远程主机IP]",
-     "port": 5201,
-     "network": "tcp,udp"
-    }
-  }]
+  "protocol": "dokodemo-door",
+  "port": 8888,
+  "settings": {
+    "address": "[远程主机IP]",
+    "port": 5201,
+    "network": "tcp,udp"
+   }
+ }]
 ```
 
 * 在服务器端启动 iPerf，命令和上面一样
