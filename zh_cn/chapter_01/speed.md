@@ -3,7 +3,7 @@
 这里介绍一种基于 iPerf 的速度测试方法。
 
 ## 安装 iPerf
-[iPerf](https://iperf.fr/) 是一个免费软件，支持 Windows、macOS、Linux 等操作系统，可进行两台主机之间的速度测试。在[下载页面]可以下载到各个平台的预编译软件包，解压即可使用。
+[iPerf](https://iperf.fr/) 是一个免费软件，支持 Windows、macOS、Linux 等操作系统，可进行两台主机之间的速度测试。在[下载页面](https://iperf.fr/iperf-download.php)可以下载到各个平台的预编译软件包，解压即可使用。
 
 ## 测试主机之间正常 TCP 连接的速度
 * 开启服务器端 ```/usr/bin/iperf3 -s```
