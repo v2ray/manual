@@ -1,5 +1,10 @@
 # Version History
 
+## 2016.07.04 v1.18
+* Fix a "too many open files" issue in KCP;
+* KCP now uses fewer CPU;
+* Other bug fixes;
+
 ## 2016.06.19 v1.17
 * KCP now is integrated into V2Ray. (Special thanks to [xiaokangwang](https://github.com/xiaokangwang), [xtaci](https://github.com/xtaci) and [skywind3000](https://github.com/skywind3000))
 * Minor bug fixes
