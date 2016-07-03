@@ -197,15 +197,18 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 ```
 
 其中：
-* tcpSettings (V2Ray 1.17+): 针对 TCP 连接的配置：
+* tcpSettings: 针对 TCP 连接的配置：
   * connectionReuse: 是否重用 TCP 连接，默认值为 true。
     * 目前只对 VMess 起作用；
     * 当值为 true 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
-* kcpSettings (V2Ray 1.17+): 针对 KCP 连接的配置：
+* kcpSettings: 针对 KCP 连接的配置：
   * mtu: 最大传输单元（maximum transmission unit），请选择一个介于 576 - 1460 之间的值。默认值为 1350。
-  * tti (V2Ray 1.17.1+): 传输时间间隔（transmission time interval），单位毫秒（ms），KCP 将以这个时间频率发送数据。请选译一个介于 10 - 100 之间的值，默认值为 20。
-  * uplinkCapacity (V2Ray 1.17.1+): 上行链路容量，即主机发出数据所用的最大带宽，单位 MB，默认值 5。
-    * 注意是 Byte 而非 bit。
-  * downlinkCapacity (V2Ray 1.17.1+): 下行链路容量，即主机接收数据所用的最大带宽，单位 MB，默认值 20。
-    * 注意是 Byte 而非 bit。
-  * congestion (V2Ray 1.17.1+): 是否启用拥塞控制，默认值为 false。
+  * tti: 传输时间间隔（transmission time interval），单位毫秒（ms），KCP 将以这个时间频率发送数据。请选译一个介于 10 - 100 之间的值，默认值为 20。
+  * uplinkCapacity: 上行链路容量，即主机发出数据所用的最大带宽，单位 MB，默认值 5。
+    * 注意是 Byte 而非 bit；
+    * 可以设置为 0，表示一个非常小的带宽；
+  * downlinkCapacity: 下行链路容量，即主机接收数据所用的最大带宽，单位 MB，默认值 20。
+    * 注意是 Byte 而非 bit；
+    * 可以设置为 0，表示一个非常小的带宽；
+  * congestion: 是否启用拥塞控制，默认值为 false。
+    * 开启拥塞控制之后，V2Ray 会自动监测网络质量，当丢包严重时，会自动降低吞吐量；当网络畅通时，也会适当增加吞吐量。
