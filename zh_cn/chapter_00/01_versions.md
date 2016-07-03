@@ -1,5 +1,10 @@
 # 更新日志
 
+## 2016.07.04 v1.18
+* 修复了 KCP 中连接多过的问题；
+* 降低了 KCP 对 CPU 的使用；
+* 修复了一些其它的问题；
+
 ## 2016.06.19 v1.17
 * 整合了 KCP（感谢 [xiaokangwang](https://github.com/xiaokangwang)、[xtaci](https://github.com/xtaci)、[skywind3000](https://github.com/skywind3000)）
 * 修复了一些小问题
