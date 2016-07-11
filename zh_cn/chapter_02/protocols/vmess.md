@@ -62,6 +62,6 @@
     * email: 用户邮箱地址，用于区分不同用户的流量。
 * detour: 转向 outboundDetour
   * to: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
-* default (V2Ray 1.9+): 可选，clients 的默认配置
+* default: 可选，clients 的默认配置
   * level: 用户等级，意义同上
   * alterId: 同 Inbound。  
