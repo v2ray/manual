@@ -1,5 +1,10 @@
 # Version History
 
+## 2016.07.11 v1.19
+* Enable TLS option for all proxies;
+* Fix a performance issue in KCP;
+* Fix an issue in KCP that could cause EOF response;
+
 ## 2016.07.04 v1.18
 * Fix a "too many open files" issue in KCP;
 * KCP now uses fewer CPU;
