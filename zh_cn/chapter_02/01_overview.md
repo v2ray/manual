@@ -91,9 +91,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "listen": "127.0.0.1",
   "protocol": "协议名称",
   "settings": {},
-  "streamSettings": {
-    "network": "tcp"
-  }
+  "streamSettings": {}
 }
 ```
 
@@ -102,9 +100,8 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * listen: 监听地址，只允许 IP 地址，默认值为 0.0.0.0。
 * protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * settings: 具体的配置内容，视协议不同而不同。
-* streamSettings (V2Ray 1.17+): 流式传输协议配置：
-  * network: 数据流所使用的网络，可选的值为 "tcp" 或 "kcp"，默认值为 "tcp"；
-    * 目前仅有 VMess 协议支持 kcp，其它协议在 kcp 上会传输失败。
+* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
+
 
 ## 主传出连接配置（outbound）
 主传出连接用于向远程网站或下一级代理服务器发送数据，可用的协议请见[[协议列表]]。
@@ -114,9 +111,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "sendThrough": "0.0.0.0",
   "protocol": "协议名称",
   "settings": {},
-  "streamSettings": {
-    "network": "tcp"
-  }
+  "streamSettings": {}
 }
 ```
 
@@ -124,7 +119,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * sendThrough: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为 0.0.0.0。
 * protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * settings: 具体的配置内容，视协议不同而不同。
-* streamSettings: 流式传输协议配置（见“主传入连接配置”） 。
+* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
 
 ## 额外的传入连接配置（inbound detour）
 此项是一个数组，可包含多个连接配置，每一个配置形如：
@@ -140,9 +135,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
     "concurrency": 3
   },
   "settings": {},
-  "streamSettings": {
-    "network": "tcp"
-  }
+  "streamSettings": {}
 }
 ```
 
@@ -156,7 +149,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   * refresh: 随机端口刷新间隔，单位为分钟。最小值为 2，建议值为 5。这个属性仅当 strategy = random 时有效。
   * concurrency: 随机端口数量。最小值为 1，最大值为 port 范围的一半。建议值为 3。
 * settings: 具体的配置内容，视协议不同而不同。
-* streamSettings: 流式传输协议配置（见“主传入连接配置”） 。
+* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
 
 ### 额外的传出连接配置（outbound detour）
 此项是一个数组，可包含多个连接配置，每一个配置形如：
@@ -166,9 +159,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "sendThrough": "0.0.0.0",
   "tag": "标识",
   "settings": {},
-  "streamSettings": {
-    "network": "tcp"
-  }
+  "streamSettings": {}
 }
 ```
 
@@ -177,38 +168,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * sendThrough: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为 0.0.0.0。
 * tag: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
 * settings: 具体的配置内容，视协议不同而不同。
-* streamSettings: 流式传输协议配置（见“主传入连接配置”） 。
+* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
 
 ## 底层传输配置（transport）
-用于配置 V2Ray 如何与其它服务器建立和使用网络连接。
-```javascript
-{
-  "tcpSettings": {
-    "connectionReuse": true
-  },
-  "kcpSettings": {
-    "mtu": 1350,
-    "tti": 20,
-    "uplinkCapacity": 5,
-    "downlinkCapacity": 20,
-    "congestion": false
-  }
-}
-```
-
-其中：
-* tcpSettings: 针对 TCP 连接的配置：
-  * connectionReuse: 是否重用 TCP 连接，默认值为 true。
-    * 目前只对 VMess 起作用；
-    * 当值为 true 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
-* kcpSettings: 针对 KCP 连接的配置：
-  * mtu: 最大传输单元（maximum transmission unit），请选择一个介于 576 - 1460 之间的值。默认值为 1350。
-  * tti: 传输时间间隔（transmission time interval），单位毫秒（ms），KCP 将以这个时间频率发送数据。请选译一个介于 10 - 100 之间的值，默认值为 20。
-  * uplinkCapacity: 上行链路容量，即主机发出数据所用的最大带宽，单位 MB，默认值 5。
-    * 注意是 Byte 而非 bit；
-    * 可以设置为 0，表示一个非常小的带宽；
-  * downlinkCapacity: 下行链路容量，即主机接收数据所用的最大带宽，单位 MB，默认值 20。
-    * 注意是 Byte 而非 bit；
-    * 可以设置为 0，表示一个非常小的带宽；
-  * congestion: 是否启用拥塞控制，默认值为 false。
-    * 开启拥塞控制之后，V2Ray 会自动监测网络质量，当丢包严重时，会自动降低吞吐量；当网络畅通时，也会适当增加吞吐量。
+用于配置 V2Ray 如何与其它服务器建立和使用网络连接。详见[底层传输配置](05_transport.md)。
