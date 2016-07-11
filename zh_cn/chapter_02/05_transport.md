@@ -55,12 +55,13 @@
   }
 }
 ```
-* streamSettings (V2Ray 1.17+): 流式传输协议配置：
-  * network: 数据流所使用的网络，可选的值为 "tcp" 或 "kcp"，默认值为 "tcp"；
-    * 目前仅有 VMess 协议支持 kcp，其它协议在 kcp 上会传输失败。
-  * security: 是否启入传输层加密，支持的选项有 "none" 表示不加密（默认值），"tls" 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
-  * tlsSettings: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 Chacha 加密方式，不支持 DTLS。
-    * allowInsecure: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
-    * certificates: 证书列表（用于服务器端），其中每一项表示一个证书：
-      * certificateFile: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
-      * keyFile: 密钥文件，如使用 OpenSSL 生成，后缀名为 .key。目前暂不支持需要密码的 key 文件。
+
+其中：
+* network: 数据流所使用的网络，可选的值为 "tcp" 或 "kcp"，默认值为 "tcp"；
+  * 目前仅有 VMess 协议支持 kcp，其它协议在 kcp 上会传输失败。
+* security: 是否启入传输层加密，支持的选项有 "none" 表示不加密（默认值），"tls" 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
+* tlsSettings: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 Chacha 加密方式，不支持 DTLS。
+  * allowInsecure: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
+  * certificates: 证书列表（用于服务器端），其中每一项表示一个证书：
+    * certificateFile: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
+    * keyFile: 密钥文件，如使用 OpenSSL 生成，后缀名为 .key。目前暂不支持需要密码的 key 文件。
