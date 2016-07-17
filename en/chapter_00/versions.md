@@ -1,5 +1,9 @@
 # Version History
 
+## 2016.07.18 v1.20
+* New KCP options: readBufferSize and writeBufferSize;
+* Bug fixes;
+
 ## 2016.07.11 v1.19
 * Enable TLS option for all proxies;
 * Fix a performance issue in KCP;
