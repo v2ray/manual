@@ -1,5 +1,9 @@
 # 更新日志
 
+## 2016.07.18 v1.20
+* KCP 中新增了 readBufferSize 和 writeBufferSize 选项；
+* 修复了一些问题；
+
 ## 2016.07.11 v1.19
 * 新增了 [TLS 选项](../chapter_02/05_transport.md#分连接配置)，平台支持的所有协议都可以开启 TLS；
 * 修复了 KCP 的性能问题；
