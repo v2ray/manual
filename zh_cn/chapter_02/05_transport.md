@@ -15,7 +15,9 @@
     "tti": 20,
     "uplinkCapacity": 5,
     "downlinkCapacity": 20,
-    "congestion": false
+    "congestion": false,
+    "readBufferSize": 1,
+    "writeBufferSize": 1
   }
 }
 ```
@@ -36,6 +38,8 @@
     * 可以设置为 0，表示一个非常小的带宽；
   * congestion: 是否启用拥塞控制，默认值为 false。
     * 开启拥塞控制之后，V2Ray 会自动监测网络质量，当丢包严重时，会自动降低吞吐量；当网络畅通时，也会适当增加吞吐量。
+  * readBufferSize: 单个连接的读取缓冲区大小，单位是 MB。默认值为 1。
+  * writeBufferSize: 单个连接的写入缓冲区大小，单位是 MB。默认值为 1。
 
 ## 分连接配置
 每一个传入、传出连接都可以配置不同的传输配置，在 inbound、inboundDetour、outbound、outboundDetour 的每一项中，都可以设置 streamSettings 来进行一些传输的配置。
