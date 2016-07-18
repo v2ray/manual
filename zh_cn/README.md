@@ -1,6 +1,6 @@
 # V2Ray 用户手册
 
-欢迎来到 V2Ray 的世界，如果访问某些网站对你来说有点困难，那么 V2Ray 会成为你的好助手。
+欢迎来到 V2Ray 的世界，如果你所处的网络限制了你的自由，V2Ray 可以帮你绕过那些限制。
 
 ## 最新版本
 V2Ray 1.20: [Github Release](https://github.com/v2ray/v2ray-core/releases/latest) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
