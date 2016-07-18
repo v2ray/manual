@@ -27,9 +27,9 @@
   * connectionReuse: 是否重用 TCP 连接，默认值为 true。
     * 目前只对 VMess 起作用；
     * 当值为 true 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
-* kcpSettings: 针对 KCP 连接的配置：
+* kcpSettings: 针对 [mKCP](../chapter_03/kcp.md) 连接的配置：
   * mtu: 最大传输单元（maximum transmission unit），请选择一个介于 576 - 1460 之间的值。默认值为 1350。
-  * tti: 传输时间间隔（transmission time interval），单位毫秒（ms），KCP 将以这个时间频率发送数据。请选译一个介于 10 - 100 之间的值，默认值为 20。
+  * tti: 传输时间间隔（transmission time interval），单位毫秒（ms），mKCP 将以这个时间频率发送数据。请选译一个介于 10 - 100 之间的值，默认值为 20。
   * uplinkCapacity: 上行链路容量，即主机发出数据所用的最大带宽，单位 MB，默认值 5。
     * 注意是 Byte 而非 bit；
     * 可以设置为 0，表示一个非常小的带宽；
@@ -40,6 +40,10 @@
     * 开启拥塞控制之后，V2Ray 会自动监测网络质量，当丢包严重时，会自动降低吞吐量；当网络畅通时，也会适当增加吞吐量。
   * readBufferSize: 单个连接的读取缓冲区大小，单位是 MB。默认值为 1。
   * writeBufferSize: 单个连接的写入缓冲区大小，单位是 MB。默认值为 1。
+
+### 配置建议
+* uplinkCapacity 和 downlinkCapacity 决定了 mKCP 的传输速度。以客户端发送数据为例，客户端的 uplinkCapacity 指定了发送数据的速度，而服务器端的 downlinkCapacity 指定了接收数据的速度。两者的值以较小的一个为准。推荐把 downlinkCapacity 设置为一个较大的值，比如 100，而 uplinkCapacity 设为实际的网络速度。当速度不够时，可以逐渐增加 uplinkCapacity 的值，直到带宽的两倍左右。
+* readBufferSize 和 writeBufferSize 指定了单个连接所使用的内存大小。在需要高速传输时，指定较大的 readBufferSize 和 writeBufferSize 会在一定程度上提高速度，但也会使用更多的内存。在网速不超过 20MB/s 时，默认值 1MB 可以满足需求；超过之后，可以适当增加 readBufferSize 和 writeBufferSize 的值，然后手动平衡速度和内存的关系。
 
 ## 分连接配置
 每一个传入、传出连接都可以配置不同的传输配置，在 inbound、inboundDetour、outbound、outboundDetour 的每一项中，都可以设置 streamSettings 来进行一些传输的配置。
