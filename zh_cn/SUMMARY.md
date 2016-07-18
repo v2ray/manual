@@ -16,6 +16,7 @@
   * [Issue 指引](chapter_01/issue.md)
   * [硬件要求](chapter_01/hardware.md)
   * [速度测试](chapter_01/speed.md)
+  * [第三方客户端](chapter_01/3rd_party.md)
 * [配置文件](chapter_02/README.md)
   * [JSON](chapter_02/00_json.md)
   * [文件格式](chapter_02/01_overview.md)
