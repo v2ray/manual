@@ -39,7 +39,7 @@ VMess 连接两端的 Inbound 和 Outbound 需要同时设置 kcp，否则无法
 }
 ```
 
-* （可选）配置 KCP 选项，详见[配置文件格式](../chapter_02/01_overview.md)。
+* （可选）配置 KCP 选项，详见[底层传输配置](../chapter_02/05_transport.md)。
 
 ## 调试建议
 以下内容介绍了客户端从服务器下载数据的场景，上传的场景正好相反。
