@@ -8,7 +8,9 @@
       "protocol": "blackhole",
       "tag": "adblock",
       "settings": {
-        "response": "http"  // 自动回复 HTTP 403
+        "response": {
+          "type": "http"  // 自动回复 HTTP 403
+        }
       }
     }
   ],
