@@ -6,6 +6,11 @@
   font-weight: 400;
 }
 
+.markdown-section {
+  font-size: 14px;
+}
+
 .markdown-section code {
   font-family: "Source Code Pro", Inconsolata, Consolas, "Droid Sans Mono", "Courier New", monospace;
+  font-size: 12px;
 }
