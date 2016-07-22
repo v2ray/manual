@@ -1,5 +1,9 @@
-.book.font-family-1 {
-  font-family: 'Noto Sans CJK SC', 'Noto Sans S Chinese', 'Noto Sans SC', 'source-han-sans-simplified-c', 'Source Han Sans SC', 'PingFangSC', 'Microsoft YaHei';
+.book {
+  font-family:
+      'Noto Sans CJK SC', 'Noto Sans S Chinese',
+      'Noto Sans SC', 'source-han-sans-simplified-c',
+      'Source Han Sans SC', 'PingFangSC', 'Microsoft YaHei';
+  font-weight: 400;
 }
 
 .markdown-section code {
