@@ -7,7 +7,7 @@
   font-weight: 400;
 }
 
-.markdown-section {
+.markdown-section * {
   font-size: 16px;
 }
 
