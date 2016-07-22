@@ -1,0 +1,7 @@
+.book.font-family-1 {
+  font-family: 'Noto Sans CJK SC', 'Noto Sans S Chinese', 'Noto Sans SC', 'source-han-sans-simplified-c', 'Source Han Sans SC', 'PingFangSC', 'Microsoft YaHei';
+}
+
+.markdown-section code {
+  font-family: "Source Code Pro", Inconsolata, Consolas, "Droid Sans Mono", "Courier New", monospace;
+}
