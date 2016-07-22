@@ -7,8 +7,8 @@ V2Ray 1.20: [Github Release](https://github.com/v2ray/v2ray-core/releases/latest
 
 ## 联系方式
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
-* Gitter：[https://gitter.im/v2ray/v2ray-core](https://gitter.im/v2ray/v2ray-core)
 * Twitter：[https://twitter.com/projectv2ray](https://twitter.com/projectv2ray)
+* Gitter：[https://gitter.im/v2ray/v2ray-core](https://gitter.im/v2ray/v2ray-core)
 * Google+: [https://plus.google.com/communities/118329549804626583700](https://plus.google.com/communities/118329549804626583700)
 * 私下联系：love@v2ray.com [PGP 公钥](chapter_00/pgp.md)
 
