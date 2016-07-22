@@ -7,10 +7,10 @@
 }
 
 .markdown-section {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .markdown-section code {
   font-family: "Source Code Pro", Inconsolata, Consolas, "Droid Sans Mono", "Courier New", monospace;
-  font-size: 12px;
+  font-size: 14px;
 }
