@@ -1,5 +1,9 @@
 # 更新日志
 
+## 2016.07.25 v1.21
+* 提升了 Chacha20 的性能（感谢 aead@）；
+* 修复了一些问题；
+
 ## 2016.07.18 v1.20
 * KCP 中新增了 readBufferSize 和 writeBufferSize 选项；
 * 修复了一些问题；
