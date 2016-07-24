@@ -1,5 +1,9 @@
 # Version History
 
+## 2016.07.25 v1.21
+* High performance Chacha20 (Thanks to aead@);
+* Bug fixes;
+
 ## 2016.07.18 v1.20
 * New KCP options: readBufferSize and writeBufferSize;
 * Bug fixes;
