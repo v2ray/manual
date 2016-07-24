@@ -14,6 +14,7 @@ rm -rf ${TARGET_DIR}/*
 cp -r _book/* ${TARGET_DIR}/
 cp favicon.png ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
+cp robots.txt ${TARGET_DIR}/
 
 cd ${TARGET_DIR}
 
