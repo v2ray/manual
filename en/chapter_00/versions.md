@@ -1,5 +1,9 @@
 # Version History
 
+## 2016.08.01 v1.22
+* Fix a memory leak in mKCP;
+* Add FreeBSD release;
+
 ## 2016.07.25 v1.21
 * High performance Chacha20 (Thanks to aead@);
 * Bug fixes;
