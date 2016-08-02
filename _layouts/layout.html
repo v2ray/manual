@@ -5,8 +5,6 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="{% block description %}{% endblock %}">
-        <meta name="generator" content="GitBook {{ gitbook.version }}">
         {% if config.author %}<meta name="author" content="{{ config.author }}">{% endif %}
         {% if config.isbn %}<meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">{% endif %}
         {% block style %}
