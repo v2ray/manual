@@ -12,7 +12,6 @@ git clone "https://github.com/v2ray/v2ray.github.io.git" ${TARGET_DIR}
 
 rm -rf ${TARGET_DIR}/*
 cp -r _book/* ${TARGET_DIR}/
-cp favicon.png ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
 
