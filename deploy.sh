@@ -4,15 +4,15 @@ npm install gitbook-cli -g
 npm install --save gitbook-plugin-anchors
 
 pushd zh_cn
-rsync -v ../_layouts/ ./_layouts/
-rsync -v ../resources/ ./resources/
+rsync -rv ../_layouts/ ./_layouts/
+rsync -rv ../resources/ ./resources/
 gitbook init
 gitbook build
 popd
 
 pushd en
-rsync -v ../_layouts/ ./_layouts/
-rsync -v ../resources/ ./resources/
+rsync -rv ../_layouts/ ./_layouts/
+rsync -rv ../resources/ ./resources/
 gitbook init
 gitbook build
 popd
