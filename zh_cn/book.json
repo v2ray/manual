@@ -1,0 +1,8 @@
+{
+  "language": "zh"
+  "plugins" : [
+    "-fontsettings",
+    
+    "anchors"
+  ]
+}
