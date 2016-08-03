@@ -4,13 +4,15 @@ npm install gitbook-cli -g
 npm install --save gitbook-plugin-anchors
 
 pushd zh_cn
-ln -s ../_layouts/ ./_layouts
+mkdir _layouts
+cp -r ../_layouts/* ./_layouts/
 gitbook init
 gitbook build
 popd
 
 pushd en
-ln -s ../_layouts/ ./_layouts
+mkdir _layouts
+cp -r ../_layouts/* ./_layouts/
 gitbook init
 gitbook build
 popd
@@ -21,6 +23,8 @@ git clone "https://github.com/v2ray/v2ray.github.io.git" ${TARGET_DIR}
 
 rm -rf ${TARGET_DIR}/*
 cp -r ./zh_cn/_book/* ${TARGET_DIR}/
+mkdir ${TARGET_DIR}/zh_cn/
+cp -r ./zh_cn/_book/* ${TARGET_DIR}/zh_cn/
 mkdir ${TARGET_DIR}/en/
 cp -r ./en/_book/* ${TARGET_DIR}/en/
 cp CNAME ${TARGET_DIR}/
