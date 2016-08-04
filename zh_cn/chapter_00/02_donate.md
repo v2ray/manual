@@ -2,14 +2,12 @@
 
 V2Ray 是一个非营利项目，它的所有代码均公开，软件可以自由使用，不受限制。如果您喜爱本项目，可以通过下面的方式请作者喝一杯咖啡。
 
-## 资助方式
-V2Ray 支持以下资助方式，收到捐赠之后您的昵称将会显示在页面下方。更改昵称请联系 donate@v2ray.com 。
-
 * Paypal: [Paypal.me/ProjectV2Ray](https://www.paypal.me/ProjectV2Ray/25)
 * 美亚礼品卡: 请发送 [Amazon Gift Cards](https://www.amazon.com/Amazon-Amazon-com-eGift-Cards/dp/BT00DC6QU4) 至 donate@v2ray.com
 * 比特币: [1wYbCx61yyyCRBqV91NnfZfDEmc8doqSx](https://blockchain.info/address/1wYbCx61yyyCRBqV91NnfZfDEmc8doqSx)
 
 ## 感谢您的帮助
+所有的捐赠都会列在下面，修改昵称请联系 donate@v2ray.com。
 
 时间       |　　昵称                         |　金额   |备注
 :---------:|:--------------------------------|--------:|-----
