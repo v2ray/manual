@@ -9,8 +9,8 @@ V2Ray 团队支持中文和英文，请选择你所熟悉的语言来提问，�
 所有官方认可的聊天室和群组都可以用于汇报问题，包括 Github 的 Issue。由于工作量的原因，不同的渠道有响应速度不同。优先级如下：
 
 1. [Github Issue](https://github.com/v2ray/v2ray-core/issues);
-2. [Gitter 聊天室](gitter.im/v2ray/v2ray-core)
-3. [Telegram 群组](https://telegram.me/projectv2ray)
+2. [Telegram 群组](https://telegram.me/projectv2ray)
+3. [Gitter 聊天室](gitter.im/v2ray/v2ray-core)
 4. 其它
 
 ## 问题的组织
