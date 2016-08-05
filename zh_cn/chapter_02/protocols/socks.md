@@ -7,7 +7,7 @@ Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packa
 ```javascript
 {
   "auth": "noauth",
-  "accounts": [  // 
+  "accounts": [
     {
       "user": "my-username",
       "pass": "my-password"
