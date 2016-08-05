@@ -4,6 +4,7 @@ Socks 是一个传入数据协议，兼容 [Socks 4](http://ftp.icm.edu.pl/packa
 * 名称：socks
 * 类型：Inbound
 * 配置：
+
 ```javascript
 {
   "auth": "noauth",
