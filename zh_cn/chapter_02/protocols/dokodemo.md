@@ -4,6 +4,7 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
 * 名称：dokodemo-door
 * 类型：Inbound
 * 配置：
+
 ```javascript
 {
   "address": "8.8.8.8",
