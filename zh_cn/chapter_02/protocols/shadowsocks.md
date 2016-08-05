@@ -14,6 +14,7 @@
 * 名称：shadowsocks
 * 类型：Inbound
 * 配置：
+
 ```javascript
 {
   "method": "加密方式",
