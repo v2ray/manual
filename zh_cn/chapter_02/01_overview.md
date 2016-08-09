@@ -15,15 +15,15 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 ```
 
 其中：
-* port: V2Ray 进程的主端口，它的取值是一个正整数，可以根据实际情况选取；
-* log: 日志配置，见下文；
-* dns: DNS 配置，见下文；
-* routing: 路由配置，见下文；
-* inbound: 传入连接配置，见下文；
-* outbound: 传出连接配置，见下文；
-* inboundDetour: 额外的传入连接配置，见下文；
-* outboundDetour: 额外的传出连接配置，见下文；
-* transport: 底层传输配置，见下文。
+* `port`: V2Ray 进程的主端口，它的取值是一个正整数，可以根据实际情况选取；
+* `log`: 日志配置，见下文；
+* `dns`: DNS 配置，见下文；
+* `routing`: 路由配置，见下文；
+* `inbound`: 传入连接配置，见下文；
+* `outbound`: 传出连接配置，见下文；
+* `inboundDetour`: 额外的传入连接配置，见下文；
+* `outboundDetour`: 额外的传出连接配置，见下文；
+* `transport`: 底层传输配置，见下文。
  
 ## 日志配置（log）
 ```javascript
@@ -35,16 +35,16 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 ```
 
 其中：
-* access: 访问日志的文件地址，其值可以是：
+* `access`: 访问日志的文件地址，其值可以是：
   * 一个合法的文件地址，如 /tmp/v2ray\_access.log （Linux）或者 C:\Temp\v2ray\_access.log（Windows）；
   * 或者留空表示不记录访问日志。
-* error: 错误日志的文件地址，其值可以是：
+* `error`: 错误日志的文件地址，其值可以是：
   * 一个合法的文件地址，如 /tmp/v2ray\_error.log （Linux）或者 C:\Temp\v2ray\_error.log（Windows）；
   * 或者留空表示不记录错误日志。
-* loglevel: 错误日志的级别，可选的值为 debug、info、warning、error 和 none：
-  * 其中 debug 记录的数据最多，error 记录的最少；
-  * none 表示不记录任何内容 （V2Ray 1.13+）；
-  * 默认值为 warning。
+* `loglevel`: 错误日志的级别，可选的值为`"debug"`、`"info"`、`"warning"`、`"error"` 和 `"none"`：
+  * 其中`"debug"`记录的数据最多，`"error"`记录的最少；
+  * `"none"`表示不记录任何内容；
+  * 默认值为`"warning"`。
 
 ## DNS 配置（dns）
 内置的 DNS 服务器，若此项不存在，则默认使用本机的 DNS 设置。详见[DNS 配置](04_dns.md)
@@ -78,8 +78,8 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 }
 ```
 其中：
-* strategy: 路由模式，目前只有"rules"一个值；
-* settings: 具体内容详见[路由配置](03_routing.md)；
+* `strategy`: 路由模式，目前只有`"rules"`一个值；
+* `settings`: 具体内容详见[路由配置](03_routing.md)；
 
 
 ## 主传入连接配置（inbound）
@@ -96,11 +96,11 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 ```
 
 其中：
-* port: 端口。
-* listen: 监听地址，只允许 IP 地址，默认值为 0.0.0.0。
-* protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* settings: 具体的配置内容，视协议不同而不同。
-* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
+* `port`: 端口。
+* `listen`: 监听地址，只允许 IP 地址，默认值为`"0.0.0.0"`。
+* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
+* `settings`: 具体的配置内容，视协议不同而不同。
+* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 
 
 ## 主传出连接配置（outbound）
@@ -116,10 +116,10 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 ```
 
 其中：
-* sendThrough: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为 0.0.0.0。
-* protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* settings: 具体的配置内容，视协议不同而不同。
-* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
+* `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
+* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
+* `settings`: 具体的配置内容，视协议不同而不同。
+* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 
 ## 额外的传入连接配置（inbound detour）
 此项是一个数组，可包含多个连接配置，每一个配置形如：
@@ -141,16 +141,16 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 ```
 
 其中：
-* protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* port: 端口号，可以是一个数值，或者字符串形式的数值范围，比如 "5-10" 表示端口 5 到端口 10 这 6 个端口。
-* tag (V2Ray 1.5+): 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* listen: 监听地址，只允许 IP 地址，默认值为 0.0.0.0。
-* allocate (V2Ray 1.5+): 分配设置：
-  * strategy: 分配策略，可选的值有 always 和 random 两个。always 表示总是分配所有已指定的端口，port 是指定了多少个端口，V2Ray 就会监听这些端口。random 表示随机开放端口，每隔 refresh 分钟在 port 范围中随机选取 concurrency 个端口来监听。
-  * refresh: 随机端口刷新间隔，单位为分钟。最小值为 2，建议值为 5。这个属性仅当 strategy = random 时有效。
-  * concurrency: 随机端口数量。最小值为 1，最大值为 port 范围的一半。建议值为 3。
-* settings: 具体的配置内容，视协议不同而不同。
-* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
+* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
+* `port`: 端口号，可以是一个数值，或者字符串形式的数值范围，比如`"5-10"`表示端口 5 到端口 10 这 6 个端口。
+* `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
+* `listen`: 监听地址，只允许 IP 地址，默认值为 0.0.0.0。
+* `allocate`: 分配设置：
+  * `strategy`: 分配策略，可选的值有`"always"`和`"random"`两个。`"always"`表示总是分配所有已指定的端口，port 是指定了多少个端口，V2Ray 就会监听这些端口。random 表示随机开放端口，每隔 refresh 分钟在 port 范围中随机选取 concurrency 个端口来监听。
+  * `refresh`: 随机端口刷新间隔，单位为分钟。最小值为 2，建议值为 5。这个属性仅当 strategy = random 时有效。
+  * `concurrency`: 随机端口数量。最小值为 1，最大值为 port 范围的一半。建议值为 3。
+* `settings`: 具体的配置内容，视协议不同而不同。
+* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 
 ### 额外的传出连接配置（outbound detour）
 此项是一个数组，可包含多个连接配置，每一个配置形如：
