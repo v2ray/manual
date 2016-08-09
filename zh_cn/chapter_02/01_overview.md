@@ -147,7 +147,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `listen`: 监听地址，只允许 IP 地址，默认值为 0.0.0.0。
 * `allocate`: 分配设置：
   * `strategy`: 分配策略，可选的值有`"always"`和`"random"`两个。`"always"`表示总是分配所有已指定的端口，port 是指定了多少个端口，V2Ray 就会监听这些端口。random 表示随机开放端口，每隔 refresh 分钟在 port 范围中随机选取 concurrency 个端口来监听。
-  * `refresh`: 随机端口刷新间隔，单位为分钟。最小值为 2，建议值为 5。这个属性仅当 strategy = random 时有效。
+  * `refresh`: 随机端口刷新间隔，单位为分钟。最小值为`2`，建议值为`5`。这个属性仅当 strategy = random 时有效。
   * `concurrency`: 随机端口数量。最小值为 1，最大值为 port 范围的一半。建议值为 3。
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
@@ -166,11 +166,11 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 ```
 
 其中：
-* protocol: 连接协议名称，可选的值见[协议列表](02_protocols.md)；
-* sendThrough: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为 0.0.0.0。
-* tag: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
-* settings: 具体的配置内容，视协议不同而不同。
-* streamSettings: [底层传输配置](05_transport.md#分连接配置)。
+* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)；
+* `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
+* `tag`: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
+* `settings`: 具体的配置内容，视协议不同而不同。
+* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 
 ## 底层传输配置（transport）
 用于配置 V2Ray 如何与其它服务器建立和使用网络连接。详见[底层传输配置](05_transport.md)。
