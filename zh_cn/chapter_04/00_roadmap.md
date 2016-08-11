@@ -14,8 +14,10 @@ V2Ray 项目使用 Trello 进行项目管理，欢迎任何想参与开发的朋
 
 ### Board
 一个 board 用于一个小项目，或者一个大项目的其中一个 milestone。每一个 board 中建议分为四个 list：
+
 * New: 新的任务，待分配，任何成员都可以挑选并完成之；
 * Assigned: 已分配的任务，任务的所有者正在计划此任务；
 * In Progress: 正在进行中的任务；
 * Done: 已完成的任务；
+
 当一个 board 中所有任务都完成时，表示此 board 已结束，将被收藏（archive）。
