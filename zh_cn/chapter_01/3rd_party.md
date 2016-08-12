@@ -65,6 +65,18 @@
   * 预编译程序：?
   * 应用商店：?
 
+### V2Ray-Android
+* 平台：Android
+* 链接：https://github.com/RayFantasyStudio/V2Ray-Android
+* 功能：
+  * 使用 V2Ray 内核：&#10004;
+  * 兼容 VMess 协议：&#10004;
+  * 兼容 Shadowsocks 协议：&#10008;
+* 分发方式：
+  * 开源：&#10004;
+  * 预编译程序：?
+  * 应用商店：&#10008;
+
 ## 为 V2Ray 开发客户端
 V2Ray 欢迎所有个人或组织开发兼容 V2Ray 的软件。兼容 V2Ray 的软件须遵循以下协议：
 
