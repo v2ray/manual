@@ -1,30 +1,21 @@
 #!/bin/bash
 
+function build_dir {
+  DIR="$1"
+  pushd $DIR
+  rsync -rv ../_layouts/ ./_layouts/
+  rsync -rv ../resources/ ./resources/
+  gitbook init
+  gitbook install
+  gitbook build
+  popd  
+}
+
 npm install gitbook-cli -g
 
-pushd zh_cn
-rsync -rv ../_layouts/ ./_layouts/
-rsync -rv ../resources/ ./resources/
-gitbook init
-gitbook install
-gitbook build
-popd
-
-pushd en
-rsync -rv ../_layouts/ ./_layouts/
-rsync -rv ../resources/ ./resources/
-gitbook init
-gitbook install
-gitbook build
-popd
-
-pushd blog
-rsync -rv ../_layouts/ ./_layouts/
-rsync -rv ../resources/ ./resources/
-gitbook init
-gitbook install
-gitbook build
-popd
+build_dir zh_cn
+build_dir en
+build_dir blog
 
 TARGET_DIR=_v2ray_com
 
