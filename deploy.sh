@@ -23,6 +23,7 @@ npm install --save gitbook-plugin-anchors
 rsync -rv ../_layouts/ ./_layouts/
 rsync -rv ../resources/ ./resources/
 gitbook init
+gitbook install
 gitbook build
 popd
 
