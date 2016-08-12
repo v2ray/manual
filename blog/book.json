@@ -5,7 +5,7 @@
     
     "anchors",
     "disqus"
-  ]
+  ],
   "pluginsConfig": {
     "disqus": {
       "shortName": "v2ray"
