@@ -3,6 +3,12 @@
   "plugins" : [
     "-fontsettings",
     
-    "anchors"
+    "anchors",
+    "disqus"
   ]
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "v2ray"
+    }
+  }
 }
