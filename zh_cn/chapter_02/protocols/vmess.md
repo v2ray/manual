@@ -63,5 +63,5 @@
 * `detour`: 转向 outboundDetour
   * `to`: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
 * `default`: 可选，clients 的默认配置
-  * `level`: 用户等级，意义同上
-  * `alterId`: 同 Inbound。  
+  * `level`: 用户等级，意义同上。默认值为`0`。
+  * `alterId`: 同 Inbound，默认值为`64`。
