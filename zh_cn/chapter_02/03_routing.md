@@ -31,14 +31,14 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 ```
 
 其中：
-* domainStrategy (V2Ray 1.13+): 域名解析策略，可选的值有：
-  * "AsIs": 只使用域名进行路由选择。默认值。
-  * "IPIfNonMatch": 当域名没有匹配任何规则时，将域名解析成 IP（A 记录）再次进行匹配；
+* `domainStrategy`: 域名解析策略，可选的值有：
+  * `"AsIs"`: 只使用域名进行路由选择。默认值。
+  * `"IPIfNonMatch"`: 当域名没有匹配任何规则时，将域名解析成 IP（A 记录）再次进行匹配；
     * 当一个域名有多个 A 记录时，会尝试匹配所有的 A 记录，直到其中一个与某个规则匹配为止；
     * 解析后的 IP 仅在路由选择时起作用，转发的数据包中依然使用原始域名；
-* rules: 对应一个数组，数组中每个一个元素是一个规则。对于每一个 TCP/UDP 连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接按此规则的设置进行转发。
+* `rules`: 对应一个数组，数组中每个一个元素是一个规则。对于每一个 TCP/UDP 连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接按此规则的设置进行转发。
 
-每一个规则都有两个必须的属性： type 和 outboundTag。type 表示此规则的类型，目前支持的类型有：field、chinaip 和 chinasites；outboundTag 对应一个[额外传出连接配置](02_protocols.md)的标识。
+每一个规则都有两个必须的属性： `type`和`outboundTag`。`type`表示此规则的类型，目前支持的类型有：`"field"`、`"chinaip"`和`"chinasites"`；`outboundTag` 对应一个[额外传出连接配置](02_protocols.md)的标识。
 
 三种类型的详细格式如下：
 
@@ -62,13 +62,13 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 }
 ```
 其中：
-* domain: 一个数组，数组每一项是一个域名的匹配。有两种形式：
+* `domain`: 一个数组，数组每一项是一个域名的匹配。有两种形式：
   * 纯字符串: 当此字符串匹配目标域名中任意部分，该规则生效。比如"sina.com"可以匹配"sina.com"、"sina.com.cn"和"www.sina.com"，但不匹配"sina.cn"。
-  * 正则表达式: 由"regexp:"，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如"regexp:\\\\.goo.*\\\\.com$"匹配"www.google.com"、"fonts.googleapis.com"，但不匹配"google.com"。
-* ip：一个数组，数组内每一个元素是一个 [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)。当某一元素匹配目标 IP 时，此规则生效。
+  * 正则表达式: 由"regexp:"开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如"regexp:\\\\.goo.*\\\\.com$"匹配"www.google.com"、"fonts.googleapis.com"，但不匹配"google.com"。
+* `ip`：一个数组，数组内每一个元素是一个 [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)。当某一元素匹配目标 IP 时，此规则生效。
 * port：端口范围，有两种形式：
-  * "a-b": a 和 b 均为正整数，且小于 65536。这个范围是一个前后闭合区间，当目标端口落在此范围内时，此规则生效。
-  * a: a 为正整数，且小于 65536。当目标端口为 a 时，此规则生效。
+  * `"a-b"`: a 和 b 均为正整数，且小于 65536。这个范围是一个前后闭合区间，当目标端口落在此范围内时，此规则生效。
+  * `a`: a 为正整数，且小于 65536。当目标端口为 a 时，此规则生效。
 * network: 可选的值有"tcp"、"udp"或"tcp,udp"，当连接方式是指定的方式时，此规则生效。
 
 一些特殊情况：

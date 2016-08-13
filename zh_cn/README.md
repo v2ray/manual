@@ -1,12 +1,12 @@
 # V2Ray 用户手册
 
-欢迎来到 V2Ray 的世界。你将访问到完整的、自由的互联网。
+欢迎使用 V2Ray 来连接世界的另一端。
 
 ## 其它语言
 [English](https://www.v2ray.com/en/)
 
 ## 最新版本
-V2Ray 1.22: [Github Release](https://github.com/v2ray/v2ray-core/releases/latest) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
+V2Ray 1.23: [Github Release](https://github.com/v2ray/v2ray-core/releases/latest) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
 
 ## 联系方式
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)

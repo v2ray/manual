@@ -1,12 +1,12 @@
 # V2Ray User Manual
 
-Welcome to V2Ray. You will get access to a compelete internet with freedom.
+Welcome to V2Ray. You will get connected to the rest of world.
 
 ## Other Languages
 [中文](https://www.v2ray.com/)
 
 ## Latest Version
-[V2Ray 1.22](https://github.com/v2ray/v2ray-core/releases) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
+[V2Ray 1.23](https://github.com/v2ray/v2ray-core/releases) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
 
 ## Contact
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)

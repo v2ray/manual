@@ -1,0 +1,13 @@
+{
+  "language": "zh",
+  "plugins" : [
+    "-fontsettings",
+    
+    "disqus"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "v2ray"
+    }
+  }
+}
