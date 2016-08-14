@@ -43,10 +43,11 @@
     * 开启拥塞控制之后，V2Ray 会自动监测网络质量，当丢包严重时，会自动降低吞吐量；当网络畅通时，也会适当增加吞吐量。
   * `readBufferSize`: 单个连接的读取缓冲区大小，单位是 MB。默认值为 `1`。
   * `writeBufferSize`: 单个连接的写入缓冲区大小，单位是 MB。默认值为 `1`。
-  * `header` (V2Ray 1.23+): 数据包头部伪装设置：
+  * `header`: 数据包头部伪装设置：
     * `type`: 伪装类型，可选的值有： 
       * `"none"`: 默认值，不进行伪装，发送的数据是没有特征的数据包；
       * `"srtp"`: 伪装成 SRTP 数据包，会被识别为视频通话数据。
+      * `"utp"` (V2Ray 1.24+): 伪装成 uTP 数据包，会被识别为 BT 下载数据。
 
 ### 配置建议
 * `uplinkCapacity` 和 `downlinkCapacity` 决定了 mKCP 的传输速度。以客户端发送数据为例，客户端的 `uplinkCapacity` 指定了发送数据的速度，而服务器端的 `downlinkCapacity` 指定了接收数据的速度。两者的值以较小的一个为准。推荐把 `downlinkCapacity` 设置为一个较大的值，比如 100，而 `uplinkCapacity` 设为实际的网络速度。当速度不够时，可以逐渐增加 `uplinkCapacity` 的值，直到带宽的两倍左右。
