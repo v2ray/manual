@@ -1,5 +1,9 @@
 # Version History
 
+## 2016.08.15 v1.24
+* New mKCP header: utp;
+* New option in inbound connection config "allowPassive" to allow passive connection;
+
 ## 2016.08.08 v1.23
 * Optimize mKCP packet format. This version of mKCP is NOT compatible with previous ones;
 * mKCP can now be configured to disguise as video data.
