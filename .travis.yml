@@ -5,6 +5,10 @@ node_js:
 git:
   depth: 3
 
+branches:
+  only:
+  - master
+
 script: bash ./deploy.sh
 
 env:
