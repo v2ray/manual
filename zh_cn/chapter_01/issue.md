@@ -10,7 +10,7 @@ V2Ray 团队支持中文和英文，请选择你所熟悉的语言来提问，�
 
 1. [Github Issue](https://github.com/v2ray/v2ray-core/issues);
 2. [Telegram 群组](https://telegram.me/projectv2ray)
-3. [Gitter 聊天室](gitter.im/v2ray/v2ray-core)
+3. [Gitter 聊天室](https://gitter.im/v2ray/v2ray-core)
 4. 其它
 
 ## 问题的组织
