@@ -6,7 +6,7 @@
 [English](https://www.v2ray.com/en/)
 
 ## 最新版本
-V2Ray 1.24: [Github Release](https://github.com/v2ray/v2ray-core/releases/latest) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
+GitHub: [![GitHub release](/resources/github-release.png)](https://github.com/v2ray/v2ray-core/releases/latest) | [BT Sync](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
 
 ## 联系方式
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
