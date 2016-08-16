@@ -1,7 +1,7 @@
 # Summary
 
 * [欢迎使用 V2Ray](README.md)
-  * [版本更新历史](chapter_00/01_versions.md)
+  * [版本历史](chapter_00/01_versions.md)
   * [捐助 V2Ray](chapter_00/02_donate.md)
   * [加密通讯](chapter_00/pgp.md)
   * [常见问题](chapter_00/faq.md)
