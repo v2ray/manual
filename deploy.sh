@@ -11,6 +11,8 @@ function build_dir {
   popd  
 }
 
+curl -o "./resources/github-release.png" "https://img.shields.io/github/release/v2ray/v2ray-core.png"
+
 npm install gitbook-cli -g
 
 build_dir zh_cn
