@@ -2,8 +2,8 @@
 
 Welcome to V2Ray. You will get connected to the rest of world.
 
-* Language: [![Chinese](/resources/chinese.png)](https://www.v2ray.com/) [![English](/resources/english.png)](https://www.v2ray.com/en/)
-* Download: [![GitHub release](/resources/github-release.png)](https://github.com/v2ray/v2ray-core/releases/latest) [![BT Sync](/resources/btsync.png)](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
+* Language: [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![English](resources/english.svg)](https://www.v2ray.com/en/)
+* Download: [![GitHub release](resources/github-release.svg)](https://github.com/v2ray/v2ray-core/releases/latest) [![BT Sync](resources/btsync.svg)](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
 
 ## Contact
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)

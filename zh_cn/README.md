@@ -2,8 +2,8 @@
 
 欢迎使用 V2Ray 来连接世界的另一端。
 
-* 语言: [![Chinese](/resources/chinese.png)](https://www.v2ray.com/) [![English](/resources/english.png)](https://www.v2ray.com/en/)
-* 下载: [![GitHub release](/resources/github-release.png)](https://github.com/v2ray/v2ray-core/releases/latest) [![BT Sync](/resources/btsync.png)](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
+* 语言: [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![English](resources/english.svg)](https://www.v2ray.com/en/)
+* 下载: [![GitHub release](resources/github-release.svg)](https://github.com/v2ray/v2ray-core/releases/latest) [![BT Sync](/resources/btsync.svg)](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
 
 ## 联系方式
 * Telegram：[https://telegram.me/projectv2ray](https://telegram.me/projectv2ray)
