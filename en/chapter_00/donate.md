@@ -1,6 +1,6 @@
 # Donation
 
-[![Chinese](../resources/chinese.svg)]((../../zh_cn/chapter_00/02_donate.md)) ![English](../resources/english.svg)
+[![Chinese](../resources/chinese.svg)]((https://www.v2ray/chapter_00/02_donate.html)) ![English](../resources/english.svg)
 
 V2Ray is a nonprofit project. The source code and program can be used freely under MIT licence. If you like this project, you may buy us a cup of coffee through the following ways:
 
