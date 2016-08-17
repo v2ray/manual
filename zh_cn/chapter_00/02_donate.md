@@ -8,4 +8,4 @@ V2Ray 是一个非营利项目，它的所有代码均公开，软件可以自�
 
 ## 感谢您的帮助
 
-{% include "../../donor.md" %}
+{% include "../donor.md" %}

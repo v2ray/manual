@@ -8,4 +8,4 @@ V2Ray is a nonprofit project. The source code and program can be used freely und
 
 ## Thank you for your donation
 
-{% include "../../donor.md" %}
+{% include "../donor.md" %}

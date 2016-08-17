@@ -5,6 +5,7 @@ function build_dir {
   pushd $DIR
   rsync -rv ../_layouts/ ./_layouts/
   rsync -rv ../resources/ ./resources/
+  copy ../donor.md ./donor.md
   gitbook init
   gitbook install
   gitbook build
