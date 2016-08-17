@@ -1,5 +1,7 @@
 # Encrypted Communication
 
+[![Chinese](../resources/chinese.svg)]((../../zh_cn/chapter_00/pgp.md)) ![English](../resources/english.svg)
+
 If you'd like to contact V2Ray team securely, please considering using the PGP public key below.
 
 ```

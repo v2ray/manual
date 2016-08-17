@@ -1,5 +1,7 @@
 # 加密通讯
 
+![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](../../en/chapter_00/pgp.md)
+
 如果你想联系 V2Ray 的开发人员，并且对通讯安全有顾虑，可以使用下面的 PGP 公钥对通讯内容加密，以防被其他人窃取。
 
 ```
