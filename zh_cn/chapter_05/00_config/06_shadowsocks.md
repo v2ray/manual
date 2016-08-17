@@ -6,13 +6,13 @@ V2Ray 在服务器端支持 Shadowsocks 协议，如果你同时在使用 V2Ray 
 
 ```javascript
 {
-  "port": 37192, // 主端口
   "log" : {
     "access": "/var/log/v2ray/access.log", // 访问日志文件
     "error": "/var/log/v2ray/error.log",   // 错误日志文件
     "loglevel": "warning"                  // 错误日志等级，可选 debug / info / warning / error
   },
   "inbound": {
+    "port": 37192, // 主端口
     "protocol": "vmess",    // 主传入协议，参见协议列表
     "settings": {
       "clients": [

@@ -6,13 +6,13 @@ V2Ray 提供了[动态开启和关闭端口](../../chapter_02/03_routing.md)的�
 
 ```javascript
 {
-  "port": 37192,
   "log" : {
     "access": "/var/log/v2ray/access.log",
     "error": "/var/log/v2ray/error.log",
     "loglevel": "warning"
   },
   "inbound": {
+    "port": 37192,
     "protocol": "vmess",
     "settings": {
       "clients": [   // clients 部分和原有的配置的一样

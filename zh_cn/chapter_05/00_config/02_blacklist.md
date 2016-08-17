@@ -4,11 +4,11 @@
 
 ```javascript
 {
-  "port": 1080,
   "log": {
     "access": ""
   },
   "inbound": {
+    "port": 1080,
     "protocol": "socks",
     "settings": {
       "auth": "noauth",

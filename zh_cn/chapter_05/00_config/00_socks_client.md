@@ -2,8 +2,8 @@
 
 ```javascript
 {
-  "port": 1080, // 监听端口
   "inbound": {
+    "port": 1080, // 监听端口
     "protocol": "socks", // 入口协议为 SOCKS 5
     "settings": {
       "auth": "noauth",  // 不认证

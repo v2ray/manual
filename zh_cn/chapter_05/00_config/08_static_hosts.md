@@ -6,8 +6,8 @@
 
 ```javascript
 {
-  "port": 1080,
   "inbound": {
+    "port": 1080,
     "protocol": "socks",
     "settings": {
       "auth": "noauth",

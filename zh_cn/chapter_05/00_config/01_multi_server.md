@@ -4,8 +4,8 @@ V2Ray 的客户端可以配置多个服务器，这种情况下，每次发送�
 
 ```javascript
 {
-  "port": 1080,
   "inbound": {
+    "port": 1080,
     "protocol": "socks",  // 入口协议 SOCKS
     "settings": {
       "auth": "noauth",

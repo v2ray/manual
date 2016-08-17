@@ -3,7 +3,7 @@
 使用 V2Ray 的路由和黑洞协议配合，可以做到简单的广告拦截效果。
 
 ```javascript
-"outboundDetour": [
+  "outboundDetour": [
     {
       "protocol": "blackhole",
       "tag": "adblock",

@@ -4,13 +4,13 @@
 
 ```javascript
 {
-  "port": 37192,
   "log" : {
     "access": "/var/log/v2ray/access.log",
     "error": "/var/log/v2ray/error.log",
     "loglevel": "warning"
   },
   "inbound": {
+    "port": 37192,
     "protocol": "vmess",
     "settings": {
       "clients": [

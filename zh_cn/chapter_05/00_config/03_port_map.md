@@ -4,8 +4,8 @@ V2Ray 提供了一种端口映射机制，可以将要访问的主机的某个�
 
 ```javascript
 {
-  "port": 1080,
   "inbound": {  // 为了不影响正常使用，主入口协议依然使用 SOCKS。
+    "port": 1080,
     "protocol": "socks",
     "settings": {
       "auth": "noauth",
