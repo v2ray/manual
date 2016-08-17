@@ -1,5 +1,7 @@
 # Version History
 
+[![Chinese](resources/chinese.svg)]((../../zh_cn/chapter_00/01_versions.md)) ![English](resources/english.svg)
+
 ## 2016.08.15 v1.24
 * New mKCP header: utp;
 * New option in inbound connection config "allowPassive" to allow passive connection;

@@ -1,5 +1,7 @@
 # 更新日志
 
+![Chinese](resources/chinese.svg) [![English](resources/english.svg)](../../en/chapter_00/versions.md)
+
 ## 2016.08.15 v1.24
 * mKCP 新增了 BT 数据包伪装。
 * 传入连接现在可以设置 allowPassive 来允许被动连接，如 IMAP。
