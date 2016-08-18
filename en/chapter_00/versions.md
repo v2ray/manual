@@ -1,6 +1,6 @@
 # Version History
 
-[![Chinese](../resources/chinese.svg)]((https://www.v2ray.com/chapter_00/01_versions.html)) ![English](../resources/english.svg)
+![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
 ## 2016.08.15 v1.24
 * New mKCP header: utp;
