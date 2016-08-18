@@ -12,6 +12,7 @@
 * 运行客户端 ```./iperf3 -c [服务器IP地址]```
 
 运行完成之后可以看到类似如下的输出：
+
 ```
 Connecting to host [远程IP], port [端口]
 [  4] local [本机IP] port [端口] connected to [远程IP] port [端口]
@@ -35,6 +36,7 @@ Connecting to host [远程IP], port [端口]
 
 ## 测试 V2Ray 的连接速度
 * 在 V2Ray 客户端的配置文件中添加一个 dokodemo-door 的入口，如下：
+
 ```javascript
 "inboundDetour": [
  {
@@ -52,6 +54,7 @@ Connecting to host [远程IP], port [端口]
 * 在客户端启动 iPerf，并指向本地的 dokodemo-door：```./iperf3 -c 127.0.0.1 -p 8888```
 
 可以看到类似这样的输出，注意 IP 地址：
+
 ```
 Connecting to host 127.0.0.1, port 8888
 [  4] local 127.0.0.1 port 51715 connected to 127.0.0.1 port 8888
