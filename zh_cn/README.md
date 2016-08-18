@@ -22,6 +22,7 @@ V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 ### 多平台支持
 V2Ray 在以下平台中可用：
+
 * Windows Vista 及之后版本（x86 / amd64）；
 * Mac OS X 10.7 及之后版本（amd64）；
 * Linux 2.6.23 及之后版本（x86 / amd64 / arm / arm64 / mips64）；
