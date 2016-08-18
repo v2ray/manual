@@ -5,18 +5,6 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        {% if config.author %}<meta name="author" content="{{ config.author }}">{% endif %}
-        {% if config.isbn %}<meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">{% endif %}
-        {% if config.language == 'zh' %}
-        <script src="https://global.localizecdn.com/localize.js"></script>
-        <script>!function(a){if(!a.Localize){a.Localize={};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","detectLanguage","getAvailableLanguages","untranslatePage","bootstrap","prefetch","on","off"],t=0;t<e.length;t++)a.Localize[e[t]]=function(){}}}(window);</script>
-
-        <script>
-        Localize.initialize({
-          key: 'Exu6QTYKHqfEl',
-          rememberLanguage: true
-        });
-        </script>
         {% endif %}
         {% block style %}
             {% for resource in plugins.resources.css %}
