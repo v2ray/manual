@@ -4,7 +4,7 @@
 你需要至少两个 V2Ray Server（设为 A、B）才可以正常穿墙。以网页浏览为例，你的浏览器和 A 以 Socks 5 协议通信，
 B 和目标网站之间以 HTTP 协议通信，A 和 B 之间使用 V2Ray 的自有协议 [VMess](../chapter_04/03_vmess.md) 通信，如下图：
 
-![](../resources/v2ray.png)
+![](../resources/direct.svg)
 
 通常 Server A 运行在你自己的电脑，Server B 运行在一台海外的 VPS 中。
 
