@@ -22,6 +22,7 @@ V2Ray has an internal router, which can be configured to proxy traffic, or send 
 
 ### Multiple platforms
 V2Ray runs on the following platforms：
+
 * Windows Vista and later (x86 / amd64);
 * Mac OS X 10.7 and later (amd64);
 * Linux 2.6.23 and later (x86 / amd64 / arm / arm64 / mips64);
