@@ -7,7 +7,7 @@ Welcome to V2Ray. You will get connected to the rest of world.
 * Chat: [![Telegram](resources/telegram.svg)](https://telegram.me/projectv2ray) [![Twitter](resources/twitter.svg)](https://twitter.com/projectv2ray) [![Gitter](resources/gitter.svg)](https://gitter.im/v2ray/v2ray-core) [![Google+](resources/gplus.svg)](https://plus.google.com/communities/118329549804626583700)
 * Email: [![Email](resources/email.svg)](mailto:love@v2ray.com) [![PGP 公钥](resources/pgp.svg)](chapter_00/pgp.md)
 
-## Feature
+## Features
 ### Multiple proxy support
 V2Ray support Socks, HTTP, Shadowsocks and VMess protocol.
 
