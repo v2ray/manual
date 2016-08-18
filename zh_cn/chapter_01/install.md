@@ -28,10 +28,16 @@ bash <(curl -L -s https://install.direct/go.sh)
 ```
  
 此脚本会自动安装以下文件：
-* /usr/bin/v2ray/v2ray：V2Ray 程序；
-* /etc/v2ray/config.json：配置文件；
+
+* `/usr/bin/v2ray/v2ray`：V2Ray 程序；
+* `/etc/v2ray/config.json`：配置文件；
 
 此脚本会配置自动运行脚本。自动运行脚本会在系统重启之后，自动运行 V2Ray。目前自动运行脚本只支持带有 Systemd 的系统，以及 Debian / Ubuntu 全系列。
+
+运行脚本位于系统的以下位置：
+
+* `/lib/systemd/system/v2ray.service`: Systemd
+* `/etc/init.d/v2ray`: SysV
 
 脚本运行完成后，你需要：
 
