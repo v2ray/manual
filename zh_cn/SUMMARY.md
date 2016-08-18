@@ -10,7 +10,6 @@
   * [下载安装](chapter_01/install.md)
   * [客户端配置](chapter_01/client.md)
   * [服务器配置](chapter_01/server.md)
-  * [命令行参数](chapter_01/flags.md)
   * [常见错误信息](chapter_01/errors.md)
   * [Issue 指引](chapter_01/issue.md)
   * [硬件要求](chapter_01/hardware.md)
