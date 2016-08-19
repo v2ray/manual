@@ -4,6 +4,7 @@
 * 名称：vmess
 * 类型：Inbound / Outbound
 * VMess 传出协议配置：
+
 ```javascript
 {
   "vnext": [
@@ -31,6 +32,7 @@
 
 
 * VMess 传入协议配置：
+
 ```javascript
 {
   "clients": [
