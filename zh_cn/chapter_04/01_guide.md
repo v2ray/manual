@@ -27,8 +27,8 @@ Git
 ### 修改代码
 * Golang
   * 请参考 [Effective Go](https://golang.org/doc/effective_go.html)；
-  * 每一次 commit 之前请运行： gofmt -w github.com/v2ray/v2ray-core/
-  * 每一次 commit 之前请确保测试通过： go test -tags json github.com/v2ray/v2ray-core/...
+  * 每一次 commit 之前请运行： gofmt -w v2ray.com/core/
+  * 每一次 commit 之前请确保测试通过： go test -tags json v2ray.com/core/...
   * 提交 PR 之前请确保新增代码有超过 70% 的代码覆盖率（code coverage）。
 * 其它
   * 请注意代码的可读性
@@ -38,11 +38,11 @@ Git
 * 一个 PR 只做一件事，如有对多个 bug 的修复，请对每一个 bug 提交一个 PR；
 * 由于 Golang 的特殊需求（Package path），Go 项目的 PR 流程和其它项目有所不同：
   1. 先 Fork 本项目，创建你自己的 github.com/your/v2ray-core；
-  2. 在你的 Go workspace 中运行：`go get -u github.com/v2ray/v2ray-core/...`；
+  2. 在你的 Go workspace 中运行：`go get -u v2ray.com/core/...`；
   3. 在 go get 创建的 v2ray-core 目录中运行：`git remote add fork https://github.com/you/cooltool.git`；
   4. 然后你可以在 v2ray-core 中修改代码，由于这是一个 v2ray 的 clone，import path 不受影响；
   5. 修改完成之后，运行：`git push fork`；
-  6. 然后去你的 fork（就是 github.com/your/v2ray-core）中发一个 PR 即可；
+  6. 然后去你的 fork（就是 v2ray.com/core）中发一个 PR 即可；
   7. 以上内容修改自[这篇文章](http://blog.campoy.cat/2014/03/github-and-go-forking-pull-requests-and.html)。
 
 ### 对代码的修改
