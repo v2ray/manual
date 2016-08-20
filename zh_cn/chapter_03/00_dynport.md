@@ -43,13 +43,11 @@
         "email": "love@v2ray.com"
       }
     ],
-    "features": {        // 特性设置
-      "detour": {        // 绕路设置
-        "to": "detour"   // 指定绕路协议的标签，要和“一”中的标签一样
-      }
+    "detour": {        // 绕路设置
+      "to": "detour"   // 指定绕路协议的标签，要和“一”中的标签一样
     }
   }
-},
+}
 ```
 
 配置的具体细节参见[协议列表](../chapter_02/02_protocols.md)。
