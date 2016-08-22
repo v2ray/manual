@@ -9,7 +9,7 @@ Welcome to V2Ray. You will get connected to the rest of world.
 
 ## Features
 ### Multiple proxy support
-V2Ray support Socks, HTTP, Shadowsocks and VMess protocol.
+V2Ray supports Socks, HTTP, Shadowsocks and VMess protocol.
 
 * One V2Ray process can use different protocols on different ports at the same time;
 * By combining different inbound and outbound proxies, one can change traffic format dynamically.
