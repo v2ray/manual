@@ -63,11 +63,12 @@
 * 分发方式：
   * 开源：&#10004;
   * 预编译程序：?
-  * 应用商店：?
+  * 应用商店：&#10004;
+    * https://play.google.com/store/apps/details?id=org.kkdev.v2raygo
 
-### V2Ray-Android
+### Actinium
 * 平台：Android
-* 链接：https://github.com/RayFantasyStudio/V2Ray-Android
+* 链接：https://github.com/V2Ray-Android/Actinium
 * 功能：
   * 使用 V2Ray 内核：&#10004;
   * 兼容 VMess 协议：&#10004;
@@ -75,7 +76,8 @@
 * 分发方式：
   * 开源：&#10004;
   * 预编译程序：&#10004;
-  * 应用商店：&#10008;
+  * 应用商店：&#10004;
+    * https://play.google.com/store/apps/details?id=com.v2ray.actinium
 
 ## 为 V2Ray 开发客户端
 V2Ray 欢迎所有个人或组织开发兼容 V2Ray 的软件。兼容 V2Ray 的软件须遵循以下协议：
