@@ -33,6 +33,7 @@
 
 ```javascript
 "inbound": {
+  "port": 8888,
   "protocol": "vmess",
   "settings": {
     "clients": [         // clients 部分和原有配置一样
