@@ -101,7 +101,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `allowPassive` (V2Ray 1.24+): 允许被动连接，默认值为`false`。
+* `allowPassive`: 允许被动连接，默认值为`false`。
   * 某些协议（如 IMAP）在建立连接时期待服务器端先发送数据，当`allowPassive`为`false`，这一类连接会被阻止。
   * 客户端和服务器需同时开启才会生效。
   * 打开这一选项会产生性能问题，建议只在必要时设为`true`。
@@ -156,7 +156,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   * `concurrency`: 随机端口数量。最小值为`1`，最大值为 port 范围的一半。建议值为`3`。
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `allowPassive` (V2Ray 1.24+): 允许被动连接，默认值为`false`。
+* `allowPassive`: 允许被动连接，默认值为`false`。
   * 某些协议（如 IMAP）在建立连接时期待服务器端先发送数据，当`allowPassive`为`false`，这一类连接会被阻止。
   * 客户端和服务器需同时开启才会生效。
   * 打开这一选项会产生性能问题，建议只在必要时设为`true`。
