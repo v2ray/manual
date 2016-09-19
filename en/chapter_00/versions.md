@@ -2,6 +2,12 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.09.19 v2.1
+* mKCP performance improvement;
+
+## 2016.08.20 v2.0
+* One year;
+
 ## 2016.08.15 v1.24
 * New mKCP header: utp;
 * New option in inbound connection config "allowPassive" to allow passive connection;

@@ -2,6 +2,12 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.09.19 v2.1
+* mKCP 性能提升；
+
+## 2016.08.20 v2.0
+* 一周年
+
 ## 2016.08.15 v1.24
 * mKCP 新增了 BT 数据包伪装。
 * 传入连接现在可以设置 allowPassive 来允许被动连接，如 IMAP。
