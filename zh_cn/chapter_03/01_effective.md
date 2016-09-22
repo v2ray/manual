@@ -28,7 +28,10 @@ V2Ray 只支持 TCP 和 UDP 协议，任何基于 TCP 或 UDP 的协议都可以
 ### 加密方式
 VMess 默认（并强制）使用 AES-128-CFB 加密。在没有理论证明这种加密方式可以被“轻易”破解之前，我们可以认为它是安全的。这里的“轻易”是指在一个可行的时间内，比如 30 分钟。理论上只要有足够的计算资源，任何加密方式都可以被暴力破解，关键问题是破解成本和所截获内容的价值。如果你访问的网络资源非常重要（比如 email），请在 V2Ray 的基础上使用 HTTPS。
 
-简单来说 VMess 协议的数据可以分为两部分，头部是 V2Ray 客户端和服务器端沟通的数据，剩下的数据是用户发出的实际数据。这两部分数据被分别加密，所使用的密钥不同。这样做的原因是，1) 减少通讯特征；2) [Defense in depth](https://en.wikipedia.org/wiki/Defense_in_depth_\(computing\))，例如 [ShadowSocks协议的弱点分析和改进](https://github.com/breakwa11/shadowsocks-rss/issues/38)。
+简单来说 VMess 协议的数据可以分为两部分，头部是 V2Ray 客户端和服务器端沟通的数据，剩下的数据是用户发出的实际数据。这两部分数据被分别加密，所使用的密钥不同。这样做的原因是，1) 减少通讯特征；2) [Defense in depth][1]，例如 [ShadowSocks协议的弱点分析和改进][2]。
+
+[1]: https://en.wikipedia.org/wiki/Defense_in_depth_(computing)
+[2]: https://github.com/breakwa11/shadowsocks-rss/issues/38
 
 VMess 服务器端发回的数据所使用的加密密钥，和客户端的请求也不一样，原因同上。
 
