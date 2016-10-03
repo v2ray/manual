@@ -21,6 +21,10 @@
     "header": {
       "type": "none"
     }
+  },
+  "wsSettings": {
+    "connectionReuse": true,
+    "path": "",
   }
 }
 ```
@@ -50,6 +54,9 @@
       * `"none"`: 默认值，不进行伪装，发送的数据是没有特征的数据包；
       * `"srtp"`: 伪装成 SRTP 数据包，会被识别为视频通话数据。
       * `"utp"`: 伪装成 uTP 数据包，会被识别为 BT 下载数据。
+* `wsSettings` (V2Ray 2.2+): 针对 WebSocket 连接的配置：
+  * `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
+  * `path`: WebSocket 所使用的 HTTP 协议路径，默认值为 `""`。
 
 ### 配置建议
 * `uplinkCapacity` 和 `downlinkCapacity` 决定了 mKCP 的传输速度。以客户端发送数据为例，客户端的 `uplinkCapacity` 指定了发送数据的速度，而服务器端的 `downlinkCapacity` 指定了接收数据的速度。两者的值以较小的一个为准。推荐把 `downlinkCapacity` 设置为一个较大的值，比如 100，而 `uplinkCapacity` 设为实际的网络速度。当速度不够时，可以逐渐增加 `uplinkCapacity` 的值，直到带宽的两倍左右。
@@ -75,8 +82,9 @@
 ```
 
 其中：
-* `network`: 数据流所使用的网络，可选的值为 `"tcp"` 或 `"kcp"`，默认值为 `"tcp"`；
+* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"` 或 `"ws"` (V2Ray 2.2+)，默认值为 `"tcp"`；
   * 目前仅有 VMess 协议支持 kcp，其它协议在 kcp 上会传输失败。
+  * WebSocket (ws) 目前处于测试阶段，使用前请确认你知道该怎么配置。
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 Chacha 加密方式，不支持 DTLS。
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
