@@ -2,6 +2,9 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.09.19 v2.2
+* New transport: WebSocket (Thanks to [@xiaokangwang](https://github.com/xiaokangwang));
+
 ## 2016.09.19 v2.1
 * mKCP performance improvement;
 

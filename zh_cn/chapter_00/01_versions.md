@@ -2,6 +2,9 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.09.19 v2.2
+* 新增了 WebSocket 的载体（感谢 [@xiaokangwang](https://github.com/xiaokangwang)）；
+
 ## 2016.09.19 v2.1
 * mKCP 性能提升；
 
