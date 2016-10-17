@@ -10,14 +10,19 @@ V2Ray 的核心组件是一个命令行程序，它可以运行在多个平台�
 V2Ray 的程序文件的命令行参数如下：
 
 ```
-v2ray [-version] [-test] [-config=config.json]
+v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
 其中：
 
 * `-version`: 只输出当前版本然后退出，不运行 V2Ray 主程序。
 * `-test`: 测试配置文件有效性，如果有问题则输出错误信息，不运行 V2Ray 主程序。
-* `-config`: 配置文件位置，默认值是 config.json。
+* `-config`: 
+  * 默认格式为配置文件的路径，默认值是 config.json；
+  * 当值为`stdin:`时，将从标准输入读取配置文件内容，调用者必须在输入完毕后关闭标准输入流。
+* `-format`: 配置文件格式，可选的值有：
+  * `json`: JSON 格式；
+  * `pb` 或 `protobuf`: Protobuf 格式；
 
 ## Linux 安装脚本
 V2Ray 提供了一个在 Linux 中的自动化安装脚本。这个脚本会自动检测有没有安装过 V2Ray，如果没有，则进行完整的安装和配置；如果之前安装过 V2Ray，则只更新 V2Ray 二进制程序而不更新配置。
