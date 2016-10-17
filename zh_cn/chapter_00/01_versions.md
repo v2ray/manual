@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.10.17 v2.3
+* 重构了配置文件相关的代码，引入了基于 Protobuf 的新格式；
+* 增加了 OpenBSD 的二进程文件；
+* 小修小补；
+
 ## 2016.09.19 v2.2
 * 新增了 WebSocket 的载体（感谢 [@xiaokangwang](https://github.com/xiaokangwang)）；
 
