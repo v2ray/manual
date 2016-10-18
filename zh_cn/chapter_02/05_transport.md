@@ -54,7 +54,7 @@
       * `"none"`: 默认值，不进行伪装，发送的数据是没有特征的数据包；
       * `"srtp"`: 伪装成 SRTP 数据包，会被识别为视频通话数据。
       * `"utp"`: 伪装成 uTP 数据包，会被识别为 BT 下载数据。
-* `wsSettings` (V2Ray 2.2+): 针对 WebSocket 连接的配置：
+* `wsSettings`: 针对 WebSocket 连接的配置：
   * `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
   * `path`: WebSocket 所使用的 HTTP 协议路径，默认值为 `""`。
 
@@ -77,7 +77,10 @@
         "keyFile": "/path/to/key.key"
       }
     ]
-  }
+  },
+  "tcpSettings": {},
+  "kcpSettings": {},
+  "wsSettings": {}
 }
 ```
 
@@ -91,3 +94,6 @@
   * `certificates`: 证书列表（用于服务器端），其中每一项表示一个证书：
     * `certificateFile`: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
     * `keyFile`: 密钥文件，如使用 OpenSSL 生成，后缀名为 .key。目前暂不支持需要密码的 key 文件。
+* `tcpSettings` (V2Ray 2.4+): 当前连接的 TCP 配置，仅当此连接使用 TCP 时有效。配置内容与上面的全局配置相同。
+* `kcpSettings` (V2Ray 2.4+): 当前连接的 KCP 配置，仅当此连接使用 KCP 时有效。配置内容与上面的全局配置相同。
+* `wsSettings` (V2Ray 2.4+): 当前连接的 WebSocket 配置，仅当此连接使用 WebSocket 时有效。配置内容与上面的全局配置相同。
