@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.10.24 v2.4
+* TCP / mKCP / WebSocket can be configured per outbound;
+* Routing can be done on source IP;
+
 ## 2016.10.17 v2.3
 * Introduce new Protobuf-based configuration;
 * OpenBSD binaries;

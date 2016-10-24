@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.10.24 v2.4
+* 每个传出协议可以配置各自的 TCP / mKCP / WebSocket 设置了；
+* 路由现可以跟据来源 IP 进行转发；
+
 ## 2016.10.17 v2.3
 * 重构了配置文件相关的代码，引入了基于 Protobuf 的新格式；
 * 增加了 OpenBSD 的二进程文件；
