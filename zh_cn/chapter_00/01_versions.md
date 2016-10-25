@@ -3,7 +3,7 @@
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
 ## 2016.10.24 v2.4
-* 每个传出协议可以配置各自的 TCP / mKCP / WebSocket 设置了；
+* 每个传入传出协议可以配置各自的 TCP / mKCP / WebSocket 设置了；
 * 路由现可以跟据来源 IP 进行转发；
 
 ## 2016.10.17 v2.3
