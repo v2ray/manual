@@ -4,34 +4,36 @@
 ```javascript
 {
   "log": {
-    "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log",
+    "access": "/var/log/v2ray/access.log",  //访问日志路径自行修改
+    "error": "/var/log/v2ray/error.log",    //错误日志路径自行修改
     "loglevel": "warning"
   },
+  
   "inbound": {
-    "port": 28000,
+    "port": 28000,       //kcp (udp) 监听端口
     "protocol": "vmess",
     "settings": {
       "clients": [
         {
-          "id": "xx--xx-xx-xx",
-          "level": 1,
-          "alterId": 100
+          "id": "xx--xx-xx-xx",  //替换你的UUID不能重复，客户端记得对应
+          "level": 1,            //客户端记得对应
+          "alterId": 100            //客户端记得对应
         }
       ]
     },
     "streamSettings": {
-      "network": "kcp"
+      "network": "kcp"  //启用kcp
     }
   },
-  "inboundDetour": [
+  
+  "inboundDetour": [               //举例如果只想使用KCP一种inboundDetour的整个段就可以全部删除^_^
     {
-      "port": 28000,
+      "port": 28000,       //tcp (tcp) 监听端口
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "xx--xx-xx-xx",
+            "id": "xx--xx-xx-xx",  //替换你的UUID不能重复
             "level": 1,
             "alterId": 100
           }
@@ -39,12 +41,12 @@
       }
     },
     {
-      "port": 28001,
+      "port": 28001,       //kcp (udp) 动态端口主监听端口
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "xx--xx-xx-xx",
+            "id": "xx--xx-xx-xx",  //替换你的UUID不能重复
             "level": 1,
             "alterId": 100
           }
@@ -58,12 +60,12 @@
       }
     },
     {
-      "port": 28001,
+      "port": 28001,       //tcp (tcp) 动态端口主监听端口
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "xx--xx-xx-xx",
+            "id": "xx--xx-xx-xx",  //替换你的UUID不能重复
             "level": 1,
             "alterId": 100
           }
@@ -75,13 +77,13 @@
     },
     {
       "protocol": "vmess",
-      "port": "50001-50100",
+      "port": "50001-50100",   //kcp (udp)动态端口监听范围 
       "tag": "detour-kcp",
       "settings": {},
       "allocate": {
-        "strategy": "random",
-        "concurrency": 2,
-        "refresh": 5
+        "strategy": "random", //随机
+        "concurrency": 2,     //开放2个端口
+        "refresh": 5          //5分钟刷新一次
       },
       "streamSettings": {
         "network": "kcp"
@@ -89,7 +91,7 @@
     },
     {
       "protocol": "vmess",
-      "port": "50001-50100",
+      "port": "50001-50100",   //tcp (tcp)动态端口监听范围 
       "tag": "detour-tcp",
       "settings": {},
       "allocate": {
@@ -99,10 +101,12 @@
       }
     }
   ],
+  
   "outbound": {
     "protocol": "freedom",
     "settings": {}
   },
+  
   "outboundDetour": [
     {
       "protocol": "blackhole",
@@ -110,6 +114,7 @@
       "tag": "blocked"
     }
   ],
+  
   "routing": {
     "strategy": "rules",
     "settings": {
@@ -137,6 +142,7 @@
       ]
     }
   },
+  
   "transport": {
     "tcpSettings": {
       "connectionReuse": true
