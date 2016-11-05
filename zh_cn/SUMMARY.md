@@ -43,6 +43,7 @@
   * [常用配置](chapter_05/00_config/README.md)
     * [SOCKS 客户端](chapter_05/00_config/00_socks_client.md)
     * [连接多服务器](chapter_05/00_config/01_multi_server.md)
+    * [KCP,TCP+动态端口](chapter_05/00_config/10_multi_mode.md)
     * [黑名单模式](chapter_05/00_config/02_blacklist.md)
     * [端口映射](chapter_05/00_config/03_port_map.md)
     * [VMess 服务器端](chapter_05/00_config/04_vmess_server.md)
