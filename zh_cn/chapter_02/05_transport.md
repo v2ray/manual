@@ -8,7 +8,10 @@
 ```javascript
 {
   "tcpSettings": {
-    "connectionReuse": true
+    "connectionReuse": true,
+    "header": {
+      "type": "none"
+    }
   },
   "kcpSettings": {
     "mtu": 1350,
@@ -34,6 +37,10 @@
   * `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
     * 目前只对 VMess 起作用；
     * 当值为 `true` 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
+  * `header` (V2Ray 2.5+): 数据包头部伪装设置：
+    * `type`: 伪装类型，可选的值有：
+      * `"none"`: 默认值，不进行伪装；
+      * `"http"`: 伪装成 HTTP 数据流，具体配置见下。
 * `kcpSettings`: 针对 [mKCP](../chapter_03/kcp.md) 连接的配置：
   * `mtu`: 最大传输单元（maximum transmission unit），请选择一个介于 `576` - `1460` 之间的值。默认值为 `1350`。
   * `tti`: 传输时间间隔（transmission time interval），单位毫秒（ms），mKCP 将以这个时间频率发送数据。请选译一个介于 `10` - `100` 之间的值。
@@ -61,6 +68,43 @@
 ### 配置建议
 * `uplinkCapacity` 和 `downlinkCapacity` 决定了 mKCP 的传输速度。以客户端发送数据为例，客户端的 `uplinkCapacity` 指定了发送数据的速度，而服务器端的 `downlinkCapacity` 指定了接收数据的速度。两者的值以较小的一个为准。推荐把 `downlinkCapacity` 设置为一个较大的值，比如 100，而 `uplinkCapacity` 设为实际的网络速度。当速度不够时，可以逐渐增加 `uplinkCapacity` 的值，直到带宽的两倍左右。
 * `readBufferSize` 和 `writeBufferSize` 指定了单个连接所使用的内存大小。在需要高速传输时，指定较大的 `readBufferSize` 和 `writeBufferSize` 会在一定程度上提高速度，但也会使用更多的内存。在网速不超过 20MB/s 时，默认值 1MB 可以满足需求；超过之后，可以适当增加 `readBufferSize` 和 `writeBufferSize` 的值，然后手动平衡速度和内存的关系。
+
+### HTTP 伪装配置
+```javascript
+{
+  "type": "http"
+  "request": {
+    "version": "1.1",
+    "method": "GET",
+    "path": ["/"],
+    "headers": {
+      "Host": ["www.baidu.com", "www.bing.com"]
+    }
+  },
+  "response": {
+    "version": "1.1",
+    "status": "200",
+    "reason": "OK",
+    "headers": {
+      "Content-Type": ["application/octet-stream", "video/mpeg"],
+      "Transfer-Encoding": ["chunked"]
+    }
+  }
+}
+```
+
+其中：
+  * `type`: 和 `tcpSettings` 中的 `type` 是同一项。
+  * `request`: HTTP 请求
+    * `version`: HTTP 版本，默认值为`"1.1"`。
+    * `method`: HTTP 方法，默认值为`"GET"`。
+    * `path`: 路径，一个字符串数组。默认值为`"/"`。当有多个值时，每次请求随机选择一个值。
+    * `headers`: HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是一个数组。每次请求会附上所有的键，并随机选择一个对应的值。默认值见样例。
+  * `response`: HTTP 响应，可以设成如下选项，或一个字符串`"disabled"`，表示不发送 HTTP 响应头，此选项兼容 SSR 的 http_simple 和 http_post 混淆。
+    * `version`: HTTP 版本，默认值为`"1.1"`。
+    * `status`: HTTP 状态，默认值为`"200"`。
+    * `reason`: HTTP 状态说明，默认值为`"OK"`。
+    * `headers`: HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是一个数组。每次请求会附上所有的键，并随机选择一个对应的值。默认值见样例。
 
 ## 分连接配置
 每一个传入、传出连接都可以配置不同的传输配置，在 inbound、inboundDetour、outbound、outboundDetour 的每一项中，都可以设置 streamSettings 来进行一些传输的配置。

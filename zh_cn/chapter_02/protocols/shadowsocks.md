@@ -1,19 +1,23 @@
 ## Shadowsocks
-兼容原版 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议。此协议是一个传入协议，只适用于服务器端。客户端版本请使用 Shadowsocks [官方推荐](https://shadowsocks.org/en/download/clients.html)的工具。
+[Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含传入和传出两部分，兼容大部分其它版本的实现。
 
 与官方版本的兼容性：
 * 支持 TCP 和 UDP 数据包转发，其中 UDP 可选择性关闭；
-* 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)，如果客户端发来的数据包指定了 OTA，服务器端会自动验证 OTA，无需配置；
+* 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
+  * 可选择性关闭 (V2Ray 2.5+)；
 * 加密方式：
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
 
+与 SSR 兼容性：
+* 支持 http_simple 和 http_post 混淆（见底层传输配置中的 http 伪装）；
+
 协议描述：
 * 名称：shadowsocks
-* 类型：Inbound
-* 配置：
+* 类型：Inbound / Outbound
+* 传入协议配置：
 
 ```javascript
 {
@@ -33,3 +37,25 @@
 * `password`: 密码，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 * `udp`: `true` / `false`，是否开启 UDP 转发，默认值为 `false`。
 * `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见 VMess 中的 level 选项。
+
+* 传出协议配置 (V2Ray 2.5+)
+```javascript
+{
+  "servers": [
+    {
+      "method": "加密方式",
+      "password": "密码",
+      "ota": false
+    }
+  ]
+}
+```
+
+其中：
+* `method`: 加密方式，没有默认值。可选的值有：
+  * `"aes-256-cfb"`
+  * `"aes-128-cfb"`
+  * `"chacha20"`
+  * `"chacha20-ietf"`
+* `password`: 密码，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
+* `ota`: 是否开启 Shadowsocks 的一次验证（One time auth）。
