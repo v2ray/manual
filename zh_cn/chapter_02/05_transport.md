@@ -80,7 +80,11 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
     "method": "GET",
     "path": ["/"],
     "headers": {
-      "Host": ["www.baidu.com", "www.bing.com"]
+      "Host": ["www.baidu.com", "www.bing.com"],
+      "User-Agent": [
+        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/53.0.2785.109 Mobile/14A456 Safari/601.1.46"
+      ]
     }
   },
   "response": {
