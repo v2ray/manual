@@ -17,7 +17,8 @@
 协议描述：
 * 名称：shadowsocks
 * 类型：Inbound / Outbound
-* 传入协议配置：
+
+### 传入协议配置：
 
 ```javascript
 {
@@ -38,7 +39,7 @@
 * `udp`: `true` / `false`，是否开启 UDP 转发，默认值为 `false`。
 * `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见 VMess 中的 level 选项。
 
-* 传出协议配置 (V2Ray 2.5+)
+### 传出协议配置 (V2Ray 2.5+)
 ```javascript
 {
   "servers": [
