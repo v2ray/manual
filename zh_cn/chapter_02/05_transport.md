@@ -70,7 +70,7 @@
 * `readBufferSize` 和 `writeBufferSize` 指定了单个连接所使用的内存大小。在需要高速传输时，指定较大的 `readBufferSize` 和 `writeBufferSize` 会在一定程度上提高速度，但也会使用更多的内存。在网速不超过 20MB/s 时，默认值 1MB 可以满足需求；超过之后，可以适当增加 `readBufferSize` 和 `writeBufferSize` 的值，然后手动平衡速度和内存的关系。
 
 ### HTTP 伪装配置
-HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。
+HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。经过适当配置后，此选项兼容 SSR 的 http\_simple 和 http\_post 混淆。
 
 ```javascript
 {
@@ -106,7 +106,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
     * `method`: HTTP 方法，默认值为`"GET"`。
     * `path`: 路径，一个字符串数组。默认值为`"/"`。当有多个值时，每次请求随机选择一个值。
     * `headers`: HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是一个数组。每次请求会附上所有的键，并随机选择一个对应的值。默认值见样例。
-  * `response`: HTTP 响应，可以此项不出现时，兼容 SSR 的 http_simple 和 http_post 混淆。
+  * `response`: HTTP 响应
     * `version`: HTTP 版本，默认值为`"1.1"`。
     * `status`: HTTP 状态，默认值为`"200"`。
     * `reason`: HTTP 状态说明，默认值为`"OK"`。
