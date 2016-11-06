@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.11.07 v2.5
+* New Shadowsocks outbound;
+* New TCP header: HTTP;
+
 ## 2016.10.24 v2.4
 * TCP / mKCP / WebSocket can be configured per inbound / outbound;
 * Routing can be done on source IP;
