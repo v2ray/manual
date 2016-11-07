@@ -74,7 +74,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
 
 ```javascript
 {
-  "type": "http"
+  "type": "http",
   "request": {
     "version": "1.1",
     "method": "GET",
