@@ -5,7 +5,7 @@
   * [捐助支持](chapter_00/02_donate.md)
   * [加密通讯](chapter_00/pgp.md)
   * [常见问题](chapter_00/faq.md)
-* [新手入门](chapter_01/README.md)
+* 新手入门
   * [使用方式](chapter_01/workflow.md)
   * [安装运行](chapter_01/install.md)
   * [工作原理](chapter_01/internal.md)
