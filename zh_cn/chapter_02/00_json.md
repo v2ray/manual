@@ -1,5 +1,7 @@
 ## JSON 格式
 
+![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/json.html)
+
 V2Ray 的配置文件为 JSON 格式，如果你已经熟悉 JSON 格式，可以跳过这一段。
 
 JSON，全称 [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON)，简而言之是 Javascript 

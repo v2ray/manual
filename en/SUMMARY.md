@@ -7,3 +7,5 @@
 * Get Started
   * [Workflow](get_started/workflow.md)
   * [Issue](get_started/issue.md)
+* Configuration
+  * [JSON](configuration/json.md)
