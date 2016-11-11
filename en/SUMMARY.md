@@ -6,3 +6,4 @@
   * [Entryped Communication](chapter_00/pgp.md)
 * Get Started
   * [Workflow](get_started/workflow.md)
+  * [Issue](get_started/issue.md)
