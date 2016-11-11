@@ -1,5 +1,7 @@
 # 工作机制
 
+![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/get_started/workflow.html)
+
 ## 个人使用
 和其它的翻墙工具一样，你需要在一台墙外的 VPS 中配置 V2Ray 服务器，然后在需要翻墙的设备上安装 V2Ray 客户端，然后即可流畅地访问互联网。
 
