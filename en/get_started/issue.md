@@ -11,8 +11,8 @@ V2Ray team support Chinese and English, please choose your familiar language to 
 
 ## Channels
 All officially recognized chat rooms and groups can be used to report problems, including Github's Issue.  Due to the workload of the reasons, different channels have different response speed.  The priority is as follows:
-1. [Github Issue] (https://github.com/v2ray/v2ray-core/issues);
-2. [Telegram Group] (https://telegram.me/projectv2ray)
+1. [Github Issue](https://github.com/v2ray/v2ray-core/issues);
+2. [Telegram Group](https://telegram.me/projectv2ray)
 3. Others
 
 ## The organization of the problem
@@ -28,8 +28,8 @@ The contents of the problem, please include the following aspects to facilitate 
 Please describe the problem as accurately as possible, please do not contain any ambiguous adjectives.
 
 Some examples of valid questions:
-* [# 138] (https://github.com/v2ray/v2ray-core/issues/138)
-* [# 132] (https://github.com/v2ray/v2ray-core/issues/132)
+* [#138](https://github.com/v2ray/v2ray-core/issues/138)
+* [#132](https://github.com/v2ray/v2ray-core/issues/132)
 
 The following unclear questions will be ignored:
 * "V2Ray takes up a lot of memory"
