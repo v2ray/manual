@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.11.14 v2.6
+* 可将一个传出协议发出的数据转发至另一传出协议；
+* 路由可根据传入协议的标识来进行判断了；
+
 ## 2016.11.07 v2.5
 * 新增 Shadowsocks 传出协议；
 * 新增 TCP 连接中的 HTTP 头部伪装；
