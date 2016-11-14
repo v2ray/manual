@@ -113,4 +113,4 @@ chinaip 会匹配所有中国境内的 IP，目前只包含 IPv4 数据。IP 段
 }
 ```
 
-chinasites 内置了一些[常见的国内网站域名](https://github.com/v2ray/v2ray-core/blob/master/tools/conf/router_chinasites.go)，如果目标域名为这些域名其中之一时，此规则生效。
+chinasites 内置了一些[常见的国内网站域名](https://www.v2ray.com/links/chinasites/)，如果目标域名为这些域名其中之一时，此规则生效。
