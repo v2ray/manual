@@ -43,6 +43,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 三种类型的详细格式如下：
 
 ### field
+
 ```javascript
 {
   "type": "field",
@@ -64,19 +65,25 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
   "user": [
     "love@v2ray.com"
   ],
+  "inboundTag": [
+    "tag-vmess"
+  ],
   "outboundTag": "direct"
 }
 ```
+
 其中：
 * `domain`: 一个数组，数组每一项是一个域名的匹配。有两种形式：
   * 纯字符串: 当此字符串匹配目标域名中任意部分，该规则生效。比如"sina.com"可以匹配"sina.com"、"sina.com.cn"和"www.sina.com"，但不匹配"sina.cn"。
   * 正则表达式: 由"regexp:"开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如"regexp:\\\\.goo.*\\\\.com$"匹配"www.google.com"、"fonts.googleapis.com"，但不匹配"google.com"。
 * `ip`：一个数组，数组内每一个元素是一个 IP 或 [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)。当某一元素匹配目标 IP 时，此规则生效。
-* port：端口范围，有两种形式：
+* `port`：端口范围，有两种形式：
   * `"a-b"`: a 和 b 均为正整数，且小于 65536。这个范围是一个前后闭合区间，当目标端口落在此范围内时，此规则生效。
   * `a`: a 为正整数，且小于 65536。当目标端口为 a 时，此规则生效。
-* network: 可选的值有"tcp"、"udp"或"tcp,udp"，当连接方式是指定的方式时，此规则生效。
-* source (V2Ray 2.4+): 一个数组，数组内每一个元素是一个 IP 或 CIDR。当某一元素匹配来源 IP 时，此规则生效。
+* `network`: 可选的值有"tcp"、"udp"或"tcp,udp"，当连接方式是指定的方式时，此规则生效。
+* `source`: 一个数组，数组内每一个元素是一个 IP 或 CIDR。当某一元素匹配来源 IP 时，此规则生效。
+* `user` (V2Ray 2.6+): 一个数组，数组内每一个元素是一个邮箱地址。当某一元素匹配来源用户时，此规则生效。当前 Shadowsocks 和 VMess 支持此规则。
+* `inboundTag` (V2Ray 2.6+): 一个数组，数组内每一个元素是一个标识。当某一元素匹配传入协议的标识时，此规则生效。
 
 一些特殊情况：
 * 当多个属性同时指定时，这些属性需要同时满足，才可以使当前规则生效；
@@ -86,6 +93,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 
 ### chinaip
 此规则配置如下，没有额外属性。
+
 ```javascript
 {
   "type": "chinaip",
@@ -97,6 +105,7 @@ chinaip 会匹配所有中国境内的 IP，目前只包含 IPv4 数据。IP 段
 
 ### chinasites
 此规则配置如下，没有额外属性。
+
 ```javascript
 {
   "type": "chinasites",
@@ -104,4 +113,4 @@ chinaip 会匹配所有中国境内的 IP，目前只包含 IPv4 数据。IP 段
 }
 ```
 
-chinasites 内置了一些[常见的国内网站域名](https://github.com/v2ray/v2ray-core/blob/master/app/router/rules/chinasites.go)，如果目标域名为这些域名其中之一时，此规则生效。
+chinasites 内置了一些[常见的国内网站域名](https://www.v2ray.com/links/chinasites/)，如果目标域名为这些域名其中之一时，此规则生效。
