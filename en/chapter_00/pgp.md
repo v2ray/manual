@@ -1,8 +1,15 @@
-# Encrypted Communication
+# Private Communication
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](.https://www.v2ray.com/chapter_00/pgp.html)
 
-If you'd like to contact V2Ray team securely, please considering using the PGP public key below.
+Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
+
+1. love@v2ray.com
+1. v2ray@protonmail.com
+
+\#1 is based on Gmail. If you concern the privacy of email content, please consider using the PGP public key below.
+
+Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For questions regarding the usage of V2Ray, please [discuss it with our community](../get_started/issue.md) for quick response.
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----

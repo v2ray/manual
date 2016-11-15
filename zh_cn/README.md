@@ -5,7 +5,7 @@
 * 语言: ![Chinese](resources/chinese.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/)
 * 下载: [![GitHub release](resources/github-release.svg)](https://github.com/v2ray/v2ray-core/releases/latest) [![BT Sync](/resources/btsync.svg)](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
 * 聊天: [![Telegram](resources/telegram.svg)](https://telegram.me/projectv2ray) [![Twitter](resources/twitter.svg)](https://twitter.com/projectv2ray)
-* 联系: [![Email](resources/email.svg)](mailto:love@v2ray.com) [![PGP 公钥](resources/pgp.svg)](chapter_00/pgp.md)
+* 联系: [![Email](resources/email.svg)](chapter_00/pgp.md)
 
 ## 主要特性
 ### 多协议支持

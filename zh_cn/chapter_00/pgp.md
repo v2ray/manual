@@ -1,8 +1,15 @@
-# 加密通讯
+# 私下联系
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/pgp.html)
 
-如果你想联系 V2Ray 的开发人员，并且对通讯安全有顾虑，可以使用下面的 PGP 公钥对通讯内容加密，以防被其他人窃取。
+如果你想和 V2Ray 的开发人员私下讨论一些问题，可以通过下列的邮箱联系。
+
+1. love@v2ray.com
+1. v2ray@protonmail.com
+
+\#1 基于 Gmail，如果你对通讯安全有顾虑，可以使用下面的 PGP 公钥对通讯内容加密，以防被其他人窃取。
+
+由于工作繁忙，不能保证每封邮件都回复，请见谅。对于 V2Ray 的使用问题，可以发到[讨论组](../chapter_01/issue.md)，以得到更快速的社区响应。
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
