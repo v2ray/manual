@@ -116,7 +116,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "protocol": "协议名称",
   "settings": {},
   "streamSettings": {},
-  "proxy": {
+  "proxySettings": {
     "tag": "another-outbound-tag"
   }
 }
@@ -127,7 +127,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `proxy`: 传出代理配置。
+* `proxySettings`: 传出代理配置。
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
 
 ## 额外的传入连接配置（inbound detour）
@@ -176,7 +176,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "tag": "标识",
   "settings": {},
   "streamSettings": {},
-  "proxy": {
+  "proxySettings": {
     "tag": "another-outbound-tag"
   }
 }
@@ -188,7 +188,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `tag`: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `proxy`: 传出代理配置。
+* `proxySettings`: 传出代理配置。
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
 
 ## 底层传输配置（transport）
