@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.11.21 v2.7
+* 现在可以给主传入传出连接设置标识了；
+* 一些小修小补；
+
 ## 2016.11.14 v2.6
 * 可将一个传出协议发出的数据转发至另一传出协议；
 * 路由可根据传入协议的标识来进行判断了；

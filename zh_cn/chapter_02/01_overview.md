@@ -91,7 +91,8 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "protocol": "协议名称",
   "settings": {},
   "streamSettings": {},
-  "allowPassive": false
+  "allowPassive": false,
+  "tag": "标识"
 }
 ```
 
@@ -105,6 +106,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   * 某些协议（如 IMAP）在建立连接时期待服务器端先发送数据，当`allowPassive`为`false`，这一类连接会被阻止。
   * 客户端和服务器需同时开启才会生效。
   * 打开这一选项会产生性能问题，建议只在必要时设为`true`。
+* `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
 
 
 ## 主传出连接配置（outbound）
@@ -115,6 +117,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "sendThrough": "0.0.0.0",
   "protocol": "协议名称",
   "settings": {},
+  "tag": "标识",
   "streamSettings": {},
   "proxySettings": {
     "tag": "another-outbound-tag"
@@ -126,6 +129,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
 * `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
 * `settings`: 具体的配置内容，视协议不同而不同。
+* `tag`: 此传出连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 * `proxySettings`: 传出代理配置。
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。

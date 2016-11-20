@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.11.21 v2.7
+* Main inbound and outbound connection handler can be tagged now.
+* Bug fixes.
+
 ## 2016.11.14 v2.6
 * Data sent by one outbound can be proxied to another outbound.
 * Routing can be based on inbound tag.
