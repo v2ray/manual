@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.11.28 v2.8
+* Shadowsocks 服务器端现接受 OTA 设置，可强制开启或关闭 OTA 验证；
+* 小修小补；
+
 ## 2016.11.21 v2.7
 * 现在可以给主传入传出连接设置标识了；
 * 一些小修小补；

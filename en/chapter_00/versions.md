@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.11.28 v2.8
+* Shadowsocks server now accepts OTA settings.
+* Bug fixes.
+
 ## 2016.11.21 v2.7
 * Main inbound and outbound connection handler can be tagged now.
 * Bug fixes.
