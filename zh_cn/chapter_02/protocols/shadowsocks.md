@@ -1,10 +1,12 @@
 ## Shadowsocks
+
 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含传入和传出两部分，兼容大部分其它版本的实现。
 
 与官方版本的兼容性：
+
 * 支持 TCP 和 UDP 数据包转发，其中 UDP 可选择性关闭；
 * 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
-  * 可选择性关闭 (V2Ray 2.5+)；
+  * 可选择性关闭；
 * 加密方式：
   * aes-256-cfb
   * aes-128-cfb
@@ -12,9 +14,11 @@
   * chacha20-ietf
 
 与 SSR 兼容性：
-* 支持 http_simple 和 http_post 混淆（见底层传输配置中的 http 伪装）；
+
+* 支持 http\_simple 和 http\_post 混淆（见底层传输配置中的 http 伪装）；
 
 协议描述：
+
 * 名称：shadowsocks
 * 类型：Inbound / Outbound
 
@@ -31,6 +35,7 @@
 ```
 
 其中：
+
 * `method`: 加密方式，没有默认值。可选的值有：
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
@@ -41,7 +46,8 @@
 * `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见 VMess 中的 level 选项。
 * `ota` (V2Ray 2.8): `true` / `false`，是否强制 OTA，默认模式为自动，当指定了 `true` / `false` 时，则为强制不启用或启用。
 
-### 传出协议配置 (V2Ray 2.5+)
+### 传出协议配置
+
 ```javascript
 {
   "servers": [
@@ -57,6 +63,7 @@
 ```
 
 其中：
+
 * `address`: Shadowsocks 服务器地址，支持 IPv4、IPv6 和域名。
 * `port`: 服务器端口。
 * `method`: 加密方式，没有默认值。可选的值有：

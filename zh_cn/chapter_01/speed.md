@@ -3,9 +3,11 @@
 这里介绍一种基于 iPerf 的速度测试方法。
 
 ## 安装 iPerf
+
 [iPerf](https://iperf.fr/) 是一个免费软件，支持 Windows、macOS、Linux 等操作系统，可进行两台主机之间的速度测试。在[下载页面](https://iperf.fr/iperf-download.php)可以下载到各个平台的预编译软件包，解压即可使用。
 
 ## 测试主机之间正常 TCP 连接的速度
+
 * 开启服务器端 ```/usr/bin/iperf3 -s```
   * 默认端口为 5201，可使用 -p 参数修改
   * 默认为前台运行，使用 -D 后台运行
@@ -13,7 +15,7 @@
 
 运行完成之后可以看到类似如下的输出：
 
-```
+```plain
 Connecting to host [远程IP], port [端口]
 [  4] local [本机IP] port [端口] connected to [远程IP] port [端口]
 [ ID] Interval           Transfer     Bandwidth
@@ -32,9 +34,11 @@ Connecting to host [远程IP], port [端口]
 [  4]   0.00-10.00  sec   220 MBytes   184 Mbits/sec                  sender
 [  4]   0.00-10.00  sec   210 MBytes   176 Mbits/sec                  receiver
 ```
+
 上述输出表示连接速度大约在 20MB 或 150 - 200 Mb 之间。
 
 ## 测试 V2Ray 的连接速度
+
 * 在 V2Ray 客户端的配置文件中添加一个 dokodemo-door 的入口，如下：
 
 ```javascript
@@ -55,7 +59,7 @@ Connecting to host [远程IP], port [端口]
 
 可以看到类似这样的输出，注意 IP 地址：
 
-```
+```plain
 Connecting to host 127.0.0.1, port 8888
 [  4] local 127.0.0.1 port 51715 connected to 127.0.0.1 port 8888
 [ ID] Interval           Transfer     Bandwidth
@@ -76,5 +80,6 @@ Connecting to host 127.0.0.1, port 8888
 ```
 
 ## 总结
+
 * iPerf 只适用于固定连接数、短时间的速度测试；
 * iPerf 得出的结果要比网站类的速度测试更精确；

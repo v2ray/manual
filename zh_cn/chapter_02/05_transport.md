@@ -3,6 +3,7 @@
 底层传输（transport）配置指定了 V2Ray 如何使用 TCP、UDP 等基础网络协议。配置分为两部分，一是全局设置，二是分连接配置。
 
 ## 全局配置
+
 全局配置位于配置文件的 "transport" 项。
 
 ```javascript
@@ -33,6 +34,7 @@
 ```
 
 其中：
+
 * `tcpSettings`: 针对 TCP 连接的配置：
   * `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
     * 目前只对 VMess 起作用；
@@ -70,10 +72,12 @@
   * `path`: WebSocket 所使用的 HTTP 协议路径，默认值为 `""`。
 
 ### 配置建议
+
 * `uplinkCapacity` 和 `downlinkCapacity` 决定了 mKCP 的传输速度。以客户端发送数据为例，客户端的 `uplinkCapacity` 指定了发送数据的速度，而服务器端的 `downlinkCapacity` 指定了接收数据的速度。两者的值以较小的一个为准。推荐把 `downlinkCapacity` 设置为一个较大的值，比如 100，而 `uplinkCapacity` 设为实际的网络速度。当速度不够时，可以逐渐增加 `uplinkCapacity` 的值，直到带宽的两倍左右。
 * `readBufferSize` 和 `writeBufferSize` 指定了单个连接所使用的内存大小。在需要高速传输时，指定较大的 `readBufferSize` 和 `writeBufferSize` 会在一定程度上提高速度，但也会使用更多的内存。在网速不超过 20MB/s 时，默认值 1MB 可以满足需求；超过之后，可以适当增加 `readBufferSize` 和 `writeBufferSize` 的值，然后手动平衡速度和内存的关系。
 
 ### HTTP 伪装配置
+
 HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。经过适当配置后，此选项兼容 SSR 的 http\_simple 和 http\_post 混淆。
 
 ```javascript
@@ -87,7 +91,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
       "Host": ["www.baidu.com", "www.bing.com"],
       "User-Agent": [
         "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
-				"Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/53.0.2785.109 Mobile/14A456 Safari/601.1.46"
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/53.0.2785.109 Mobile/14A456 Safari/601.1.46"
       ],
       "Accept-Encoding": ["gzip, deflate"],
       "Connection": ["keep-alive"],
@@ -109,6 +113,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
 ```
 
 其中：
+
   * `type`: 和 `tcpSettings` 中的 `type` 是同一项。
   * `request`: HTTP 请求
     * `version`: HTTP 版本，默认值为`"1.1"`。
@@ -122,6 +127,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
     * `headers`: HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是一个数组。每次请求会附上所有的键，并随机选择一个对应的值。默认值见样例。
 
 ## 分连接配置
+
 每一个传入、传出连接都可以配置不同的传输配置，在 inbound、inboundDetour、outbound、outboundDetour 的每一项中，都可以设置 streamSettings 来进行一些传输的配置。
 
 ```javascript
@@ -144,6 +150,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
 ```
 
 其中：
+
 * `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"` 或 `"ws"` (V2Ray 2.2+)，默认值为 `"tcp"`；
   * 目前仅有 VMess 协议支持 kcp，其它协议在 kcp 上会传输失败。
   * WebSocket (ws) 目前处于测试阶段，使用前请确认你知道该怎么配置。

@@ -1,4 +1,5 @@
 # Dokodemo-door
+
 Dokodemo door（任意门）是一个传入数据协议，它可以监听一个本地端口，并把所有进入此端口的数据发送至指定服务器的一个端口，从而达到端口映射的效果。
 
 * 名称：dokodemo-door
@@ -16,6 +17,7 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
 ```
 
 其中：
+
 * `address`: 指定服务器的地址，可以是一个 IPv4、IPv6 或者域名，字符串类型。
   * 当 `followRedirect`（见下文）为 `true` 时，`address` 可为空。
 * `port`: 指定服务器的端口，数值类型。
