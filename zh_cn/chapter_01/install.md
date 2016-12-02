@@ -7,9 +7,10 @@ V2Ray 的核心组件是一个命令行程序，它可以运行在多个平台�
 **V2Ray 的部分功能依赖于系统时间，请确保使用 V2Ray 的系统 UTC 时间误差在两分钟之内，时区无关。**
 
 ## 命令行参数
+
 V2Ray 的程序文件的命令行参数如下：
 
-```
+```shell
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
@@ -25,15 +26,17 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
   * `pb` 或 `protobuf`: Protobuf 格式；
 
 ## Linux 安装脚本
+
 V2Ray 提供了一个在 Linux 中的自动化安装脚本。这个脚本会自动检测有没有安装过 V2Ray，如果没有，则进行完整的安装和配置；如果之前安装过 V2Ray，则只更新 V2Ray 二进制程序而不更新配置。
 
 以下指令假设已在 su 环境下，如果不是，请先运行 sudo su。
 
 运行下面的指令下载并安装 V2Ray。当 yum 或 apt-get 可用的情况下，此脚本会自动安装 unzip 和 daemon。这两个组件是安装 V2Ray 的必要组件。如果你使用的系统不支持 yum 或 apt-get，请自行安装 unzip 和 daemon
-```bash
+
+```shell
 bash <(curl -L -s https://install.direct/go.sh)
 ```
- 
+
 此脚本会自动安装以下文件：
 
 * `/usr/bin/v2ray/v2ray`：V2Ray 程序；
@@ -53,6 +56,7 @@ bash <(curl -L -s https://install.direct/go.sh)
 1. 之后可以使用 service v2ray start|stop|status|reload|restart|force-reload 控制 V2Ray 的运行。
 
 ### go.sh 参数
+
 go.sh 支持如下参数，可在手动安装时根据实际情况调整：
 
 * `-p` 或 `--proxy`: 使用代理服务器来下载 V2Ray 的文件，格式与 curl 接受的参数一致，比如 `"socks5://127.0.0.1:1080"` 或  `"http://127.0.0.1:3128"`。
@@ -64,3 +68,15 @@ go.sh 支持如下参数，可在手动安装时根据实际情况调整：
 
 * 使用地址为 127.0.0.1:1080 的 SOCKS 代理下载并安装最新版本：```./go.sh -p socks5://127.0.0.1:1080```
 * 安装本地的 v1.13 版本：```./go.sh --version v1.13 --local /path/to/v2ray.zip```
+
+## Docker
+
+V2Ray 提供了两个预编译的 Docker image：
+
+* v2ray/official: 包含最新发布的版本，每周跟随新版本更新；
+* v2ray/dev: 包含由最新的代码编译而成的程序文件，随代码库更新；
+
+两个 image 的文件结构相同：
+
+* /etc/v2ray/config.json: 配置文件
+* /usr/bin/v2ray/v2ray: V2Ray 主程序
