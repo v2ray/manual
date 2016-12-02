@@ -18,7 +18,7 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 
 * `-version`: 只输出当前版本然后退出，不运行 V2Ray 主程序。
 * `-test`: 测试配置文件有效性，如果有问题则输出错误信息，不运行 V2Ray 主程序。
-* `-config`: 
+* `-config`:
   * 默认格式为配置文件的路径，默认值是 config.json；
   * 当值为`stdin:`时，将从标准输入读取配置文件内容，调用者必须在输入完毕后关闭标准输入流。
 * `-format`: 配置文件格式，可选的值有：
@@ -73,8 +73,8 @@ go.sh 支持如下参数，可在手动安装时根据实际情况调整：
 
 V2Ray 提供了两个预编译的 Docker image：
 
-* v2ray/official: 包含最新发布的版本，每周跟随新版本更新；
-* v2ray/dev: 包含由最新的代码编译而成的程序文件，随代码库更新；
+* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): 包含最新发布的版本，每周跟随新版本更新；
+* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): 包含由最新的代码编译而成的程序文件，随代码库更新；
 
 两个 image 的文件结构相同：
 
