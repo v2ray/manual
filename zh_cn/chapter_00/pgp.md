@@ -13,7 +13,7 @@
 
 由于工作繁忙，不能保证每封邮件都回复，请见谅。对于 V2Ray 的使用问题，可以发到[讨论组](../chapter_01/issue.md)，以得到更快速的社区响应。
 
-```
+```plain
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: GPGTools - https://gpgtools.org
 
