@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.12.05 v2.9
+
+* 修复了与 Alpine Linux 的兼容性；
+
 ## 2016.11.28 v2.8
 
 * Shadowsocks 服务器端现接受 OTA 设置，可强制开启或关闭 OTA 验证；
