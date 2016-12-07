@@ -32,6 +32,7 @@
   * [动态端口](chapter_03/00_dynport.md)
   * [Effective V2Ray](chapter_03/01_effective.md)
   * [mKCP](chapter_03/kcp.md)
+  * [传出代理](chapter_03/outboundproxy.md)
 * [代码细节](chapter_04/README.md)
   * [开发计划](chapter_04/00_roadmap.md)
   * [开发指引](chapter_04/01_guide.md)
