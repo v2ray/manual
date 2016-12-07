@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.12.12 v2.10
+
+* VMess now supports AES-GCM and ChaCha20-Poly1305 encryption methods.
+
 ## 2016.12.05 v2.9
 
 * Fix compatiblity with Alpine Linux.

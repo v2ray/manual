@@ -39,7 +39,6 @@
       * `"chacha20-poly1305"`：推荐在手机端使用
       * `"none"`: 不加密
 
-
 ## VMess 传入协议配置：
 
 ```javascript

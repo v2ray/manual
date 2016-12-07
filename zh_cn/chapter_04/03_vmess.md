@@ -77,7 +77,7 @@ VMess 使用非对称格式，即客户端发出的请求和服务器端的响�
   * 0x00：AES-128-CFB；
   * 0x01：不加密；
   * 0x02：AES-128-GCM；
-  * 0x03：Chacha20-Poly1305；
+  * 0x03：ChaCha20-Poly1305；
 * 指令 Cmd：
   * 0x01：TCP 数据；
   * 0x02：UDP 数据；
@@ -128,7 +128,7 @@ VMess 使用非对称格式，即客户端发出的请求和服务器端的响�
 * AES-128-GCM：Key 为指令部分的 Key，IV = count (2 字节) + IV (10 字节)。count 从 0 开始递增，每个数据包加 1；IV 为 指令部分 IV 的第 3 至第 12 字节。
   * L - 16 字节：实际数据；
   * 16 字节：GCM 认值信息
-* Chacha20-Poly1305：Key = MD5(指令部分 Key) + MD5(MD5(指令部分 Key))，IV = count (2 字节) + IV (10 字节)。count 从 0 开始递增，每个数据包加 1；IV 为 指令部分 IV 的第 3 至第 12 字节。
+* ChaCha20-Poly1305：Key = MD5(指令部分 Key) + MD5(MD5(指令部分 Key))，IV = count (2 字节) + IV (10 字节)。count 从 0 开始递增，每个数据包加 1；IV 为 指令部分 IV 的第 3 至第 12 字节。
   * L - 16 字节：实际数据；
   * 16 字节：Poly1305 认值信息
 
