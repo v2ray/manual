@@ -1,4 +1,4 @@
-## Shadowsocks
+# Shadowsocks
 
 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含传入和传出两部分，兼容大部分其它版本的实现。
 
@@ -22,7 +22,7 @@
 * 名称：shadowsocks
 * 类型：Inbound / Outbound
 
-### 传入协议配置：
+## 传入协议配置：
 
 ```javascript
 {
@@ -46,7 +46,7 @@
 * `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见 VMess 中的 level 选项。
 * `ota` (V2Ray 2.8): `true` / `false`，是否强制 OTA，默认模式为自动，当指定了 `true` / `false` 时，则为强制不启用或启用。
 
-### 传出协议配置
+## 传出协议配置
 
 ```javascript
 {
