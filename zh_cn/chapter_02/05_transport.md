@@ -39,7 +39,7 @@
   * `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
     * 目前只对 VMess 起作用；
     * 当值为 `true` 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
-  * `header` (V2Ray 2.5+): 数据包头部伪装设置：
+  * `header`: 数据包头部伪装设置：
     * `type`: 伪装类型，可选的值有：
       * `"none"`: 默认值，不进行伪装；
       * `"http"`: 伪装成 HTTP 数据流，具体配置见下。
@@ -135,6 +135,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
   "network": "tcp",
   "security": "none",
   "tlsSettings": {
+    "serverName": "v2ray.com",
     "allowInsecure": false,
     "certificates": [
       {
@@ -151,15 +152,16 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
 
 其中：
 
-* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"` 或 `"ws"` (V2Ray 2.2+)，默认值为 `"tcp"`；
+* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"` 或 `"ws"`，默认值为 `"tcp"`；
   * 目前仅有 VMess 协议支持 kcp，其它协议在 kcp 上会传输失败。
   * WebSocket (ws) 目前处于测试阶段，使用前请确认你知道该怎么配置。
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 ChaCha 加密方式，不支持 DTLS。
+  * `serverName` (V2Ray 2.11+): 指定服务器端证书的域名，在连接由 IP 建立时有用。
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
   * `certificates`: 证书列表（用于服务器端），其中每一项表示一个证书：
     * `certificateFile`: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
     * `keyFile`: 密钥文件，如使用 OpenSSL 生成，后缀名为 .key。目前暂不支持需要密码的 key 文件。
-* `tcpSettings` (V2Ray 2.4+): 当前连接的 TCP 配置，仅当此连接使用 TCP 时有效。配置内容与上面的全局配置相同。
-* `kcpSettings` (V2Ray 2.4+): 当前连接的 KCP 配置，仅当此连接使用 KCP 时有效。配置内容与上面的全局配置相同。
-* `wsSettings` (V2Ray 2.4+): 当前连接的 WebSocket 配置，仅当此连接使用 WebSocket 时有效。配置内容与上面的全局配置相同。
+* `tcpSettings`: 当前连接的 TCP 配置，仅当此连接使用 TCP 时有效。配置内容与上面的全局配置相同。
+* `kcpSettings`: 当前连接的 KCP 配置，仅当此连接使用 KCP 时有效。配置内容与上面的全局配置相同。
+* `wsSettings`: 当前连接的 WebSocket 配置，仅当此连接使用 WebSocket 时有效。配置内容与上面的全局配置相同。
