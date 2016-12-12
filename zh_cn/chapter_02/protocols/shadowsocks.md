@@ -46,7 +46,7 @@
 * `password`: 密码，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 * `udp`: `true` / `false`，是否开启 UDP 转发，默认值为 `false`。
 * `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见 VMess 中的 level 选项。
-* `ota` (V2Ray 2.8): `true` / `false`，是否强制 OTA，默认模式为自动，当指定了 `true` / `false` 时，则为强制不启用或启用。
+* `ota`: `true` / `false`，是否强制 OTA，默认模式为自动，当指定了 `true` / `false` 时，则为强制不启用或启用。
 
 ## 传出协议配置
 

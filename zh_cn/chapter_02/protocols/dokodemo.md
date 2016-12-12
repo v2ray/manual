@@ -26,4 +26,4 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
 * `followRedirect`: 当值为 `true` 时，dokodemo-door 会识别出由 iptables 转发而来的数据，并转发到相应的目标地址。
   * 目前只支持 Linux。
   * 支持 TCP/IPv4 连接。
-  * (V2Ray 1.24.2+) 支持 UDP/IPv4 连接，需要 root (CAP_NET_ADMIN) 权限。
+  * 支持 UDP/IPv4 连接，需要 root (CAP\_NET\_ADMIN) 权限。
