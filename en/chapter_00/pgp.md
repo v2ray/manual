@@ -13,7 +13,7 @@ Please send a message to one of the address below, if you'd like to talk to V2Ra
 
 Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For questions regarding the usage of V2Ray, please [discuss it with our community](../get_started/issue.md) for quick response.
 
-```
+```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: GPGTools - https://gpgtools.org
 
@@ -67,4 +67,3 @@ PeRpd1GUXXeoGCw=
 =To5T
 -----END PGP PUBLIC KEY BLOCK-----
 ```
-
