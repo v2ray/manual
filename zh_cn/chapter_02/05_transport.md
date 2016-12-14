@@ -28,7 +28,7 @@
   },
   "wsSettings": {
     "connectionReuse": true,
-    "path": "",
+    "path": ""
   }
 }
 ```
