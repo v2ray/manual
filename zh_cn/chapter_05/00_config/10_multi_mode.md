@@ -28,7 +28,7 @@
   
   "inboundDetour": [               //举例如果只想使用KCP一种inboundDetour的整个段就可以全部删除^_^
     {
-      "port": 28000,       //tcp (tcp) 监听端口
+      "port": 29000,       //tcp (tcp) 监听端口
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -60,7 +60,7 @@
       }
     },
     {
-      "port": 28001,       //tcp (tcp) 动态端口主监听端口
+      "port": 29001,       //tcp (tcp) 动态端口主监听端口
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -91,7 +91,7 @@
     },
     {
       "protocol": "vmess",
-      "port": "50001-50100",   //tcp (tcp)动态端口监听范围 
+      "port": "51001-51100",   //tcp (tcp)动态端口监听范围 
       "tag": "detour-tcp",
       "settings": {},
       "allocate": {
