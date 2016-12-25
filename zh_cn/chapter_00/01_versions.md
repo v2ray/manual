@@ -2,6 +2,14 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2016.12.26 v2.12
+
+* 修复了一些问题。
+
+## 2016.12.19 v2.11
+
+* JSON 配置文件可以写注释了。
+
 ## 2016.12.12 v2.10
 
 * VMess 中增加了 AES-GCM 和 Chacha20-Poly1305 加密方式；

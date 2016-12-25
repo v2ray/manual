@@ -2,6 +2,14 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2016.12.26 v2.12
+
+* Bug fixes.
+
+## 2016.12.19 v2.11
+
+* JSON config file now supports comment.
+
 ## 2016.12.12 v2.10
 
 * VMess now supports AES-GCM and ChaCha20-Poly1305 encryption methods.
