@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.01.02 v2.13
+
+* Bug fixes.
+
 ## 2016.12.26 v2.12
 
 * Bug fixes.

@@ -1,4 +1,6 @@
-This is the source code for building https://www.v2ray.com/ .
+# V2Ray.com
+
+This is the source code for building [v2ray.com](https://www.v2ray.com/).
 
 [![Build Status](https://travis-ci.org/v2ray/manual.svg?branch=master)](https://travis-ci.org/v2ray/manual)
 
