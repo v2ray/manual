@@ -2,6 +2,7 @@
 
 本页面收录了以下来自网友们的经验和教程，感谢各位帮忙推广 V2Ray。
 
+* 2016.12.20 [V2Ray 配置指南](https://toutyrater.github.io/v2ray-guide-pages/)
 * 2016.09.15 [V2Ray – 性能优异的模块化代理软件](https://blog.kuoruan.com/112.html)
 * 2016.05.03 [V2Ray 安装与使用](https://ralf.ren/717)
 * 2016.04.15 [V2Ray环境搭建，支持V2Ray协议和Shadowsocks协议](http://www.jianshu.com/p/b59150fd8f47)
