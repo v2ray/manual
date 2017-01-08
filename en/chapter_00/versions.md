@@ -2,6 +2,11 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.01.09 v2.14
+
+* Socks 5 outbound.
+* Bug fixes.
+
 ## 2017.01.02 v2.13
 
 * Bug fixes.
