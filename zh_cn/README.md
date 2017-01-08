@@ -7,20 +7,27 @@
 * 聊天: [![Telegram](resources/telegram.svg)](https://telegram.me/projectv2ray) [![Twitter](resources/twitter.svg)](https://twitter.com/projectv2ray)
 * 联系: [![Email](resources/email.svg)](chapter_00/pgp.md)
 
+[白话文版上手教程](https://toutyrater.github.io/v2ray-guide-pages/)
+
 ## 主要特性
+
 ### 多协议支持
+
 V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 * 在一个进程中可以配置不同的端口使用不同的协议进行通讯。
 * 通过不同的传入和传出协议组合，灵活转换通讯格式。
 
 ### 可变传输载体
+
 上述协议均可使用 TLS、TCP、mKCP 等传输方式进行传输。
 
 ### 灵活的路由
+
 通过内置的路由功能，V2Ray 可以灵活地实现选择性转发、直连或是阻止部分连接。
 
 ### 多平台支持
+
 V2Ray 在以下平台中可用：
 
 * Windows Vista 及之后版本（x86 / amd64）；
@@ -30,4 +37,5 @@ V2Ray 在以下平台中可用：
 * FreeBSD (x86 / amd64)；
 
 ## 更新本站点
+
 本站点由 GitBook 生成，并托管于 GitHub。如需修改本站的内容，请向[这个 Repo](https://github.com/v2ray/manual) 提交 Pull Request。
