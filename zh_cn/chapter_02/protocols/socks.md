@@ -13,7 +13,10 @@
     "address": "127.0.0.1",
     "port": 1234,
     "users": [
-      {"user": "test user", "pass": "test pass"}
+      {
+        "user": "test user",
+        "pass": "test pass"
+      }
     ]
   }]
 }
