@@ -64,9 +64,10 @@
     * 2.9 之后版本，默认值为 `2`。
   * `header`: 数据包头部伪装设置：
     * `type`: 伪装类型，可选的值有：
-      * `"none"`: 默认值，不进行伪装，发送的数据是没有特征的数据包；
-      * `"srtp"`: 伪装成 SRTP 数据包，会被识别为视频通话数据。
+      * `"none"`: 默认值，不进行伪装，发送的数据是没有特征的数据包。
+      * `"srtp"`: 伪装成 SRTP 数据包，会被识别为视频通话数据（如 FaceTime）。
       * `"utp"`: 伪装成 uTP 数据包，会被识别为 BT 下载数据。
+      * `"wechat-video"` (V2Ray 2.14+): 伪装成微信视频通话的数据包。
 * `wsSettings`: 针对 WebSocket 连接的配置：
   * `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
   * `path`: WebSocket 所使用的 HTTP 协议路径，默认值为 `""`。
