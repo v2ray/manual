@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2017.01.16 v2.15
+
+* mKCP 和 WebSocket 现已适用于所有的传出（传入）协议。
+
 ## 2017.01.09 v2.14
 
 * Socks 5 传出协议。
