@@ -56,7 +56,7 @@
 其中：
 
 * `auth`: Socks 协议的认证方式，支持`"noauth"`匿名方式和`"password"`用户密码方式。默认值为`"noauth"`。
-* `acounts`: 一个数组，数组中每个元素为一个用户帐号，用户名由`user`指定，密码由`pass`指定。默认值为空。
+* `accounts`: 一个数组，数组中每个元素为一个用户帐号，用户名由`user`指定，密码由`pass`指定。默认值为空。
   * 当 `auth` 为 `password` 时有效。
 * `udp`: 是否开启 UDP 协议的支持，`true` / `false`。默认值为 `false`。
 * `ip`: 当开启 UDP 时，V2Ray 需要知道本机的 IP 地址。默认值为 127.0.0.1。
