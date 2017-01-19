@@ -34,7 +34,7 @@ Git
 * Golang
   * 请参考 [Effective Go](https://golang.org/doc/effective_go.html)；
   * 每一次 commit 之前请运行： gofmt -w v2ray.com/core/
-  * 每一次 commit 之前请确保测试通过： go test -tags json v2ray.com/core/...
+  * 每一次 commit 之前请确保测试通过： go test v2ray.com/core/...
   * 提交 PR 之前请确保新增代码有超过 70% 的代码覆盖率（code coverage）。
 * 其它
   * 请注意代码的可读性
@@ -88,8 +88,6 @@ v2ray-core
 │   ├── freedom
 │   ├── socks
 │   ├── vmess
-├── shell      // 控制模块
-│   ├── point
 ├── transport  // 传输模块
 ```
 
