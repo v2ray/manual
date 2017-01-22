@@ -69,7 +69,7 @@
     * `level`：用户等级
       * 当 `level` 为 `0` 时，此用户不被信任，V2Ray 将对此用户进行严格的安全限制；
       * 当 `level` 大于 `0` 时，此用户被信任，V2Ray 将放宽对此用户的限制。
-    * `alterId`: 同 Inbound。
+    * `alterId`: 与上文传出协议中的含义相同。
     * `email`: 用户邮箱地址，用于区分不同用户的流量。
 * `detour`: 转向 outboundDetour
   * `to`: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
