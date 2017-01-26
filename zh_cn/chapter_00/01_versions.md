@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2017.01.30 v2.16
+
+* Freedom 中可以指定一个重定向地址，将所有数据发往这个地址。此选项可用于适配 Shadowsocks Obfs 或 KCPTun 等工具。
+* VMess 的“不加密”选项性能优化，与之前版本不兼容。
+
 ## 2017.01.16 v2.15
 
 * mKCP 和 WebSocket 现已适用于所有的传出（传入）协议。
