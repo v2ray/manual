@@ -13,10 +13,6 @@
   * chacha20
   * chacha20-ietf
 
-与 SSR 兼容性：
-
-* 支持 http\_simple 和 http\_post 混淆（见底层传输配置中的 http 伪装）；
-
 协议描述：
 
 * 名称：shadowsocks
@@ -27,7 +23,7 @@
 ```javascript
 {
   "email": "love@v2ray.com",
-  "method": "加密方式",
+  "method": "aes-128-cfb",
   "password": "密码",
   "udp": false,
   "level": 0,
