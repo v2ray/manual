@@ -67,7 +67,7 @@
       * `"none"`: 默认值，不进行伪装，发送的数据是没有特征的数据包。
       * `"srtp"`: 伪装成 SRTP 数据包，会被识别为视频通话数据（如 FaceTime）。
       * `"utp"`: 伪装成 uTP 数据包，会被识别为 BT 下载数据。
-      * `"wechat-video"` (V2Ray 2.14+): 伪装成微信视频通话的数据包。
+      * `"wechat-video"`: 伪装成微信视频通话的数据包。
 * `wsSettings`: 针对 WebSocket 连接的配置：
   * `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
   * `path`: WebSocket 所使用的 HTTP 协议路径，默认值为 `""`。
@@ -79,7 +79,7 @@
 
 ### HTTP 伪装配置
 
-HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。经过适当配置后，此选项兼容 SSR 的 http\_simple 和 http\_post 混淆。
+HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。
 
 ```javascript
 {
@@ -158,7 +158,7 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
   * WebSocket (ws) 目前处于测试阶段，使用前请确认你知道该怎么配置。
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 ChaCha 加密方式，不支持 DTLS。
-  * `serverName` (V2Ray 2.11+): 指定服务器端证书的域名，在连接由 IP 建立时有用。
+  * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
   * `certificates`: 证书列表（用于服务器端），其中每一项表示一个证书：
     * `certificateFile`: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
