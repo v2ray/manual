@@ -2,6 +2,16 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.02.11 v2.18
+
+* Cleanup WebSocket code.
+* Remove allowPassive settings. Now passive connections are always allowed.
+* Bug fixes
+
+## 2017.02.04 v2.17
+
+* Bug fixes.
+
 ## 2017.01.28 v2.16
 
 * New 'redirect' option in freedom. It can be used to adapt tools like Shadowsocks Obfs.

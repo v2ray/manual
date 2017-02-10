@@ -2,6 +2,16 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2017.02.11 v2.18
+
+* 清理了 WebSocket 相关的代码。
+* 移除了 allowPassive 设置。现在的行为相当于 allowPassive = true。
+* Bug 修复。
+
+## 2017.02.04 v2.17
+
+* Bug 修复。
+
 ## 2017.01.28 v2.16
 
 * Freedom 中可以指定一个重定向地址，将所有数据发往这个地址。此选项可用于适配 Shadowsocks Obfs 或 KCPTun 等工具。
