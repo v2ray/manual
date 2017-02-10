@@ -116,4 +116,4 @@ v2ray-core
 #### 与 Golang 官方建议冲突的地方
 
 * Golang 不建议使用 this、self 等变量名作为 Receiver Name；V2Ray 中不作强制，可用可不用。
-* Golang 不建议使用单元测试（Unit Test）库，比如其它语言中常见的 assertEquals() 函数等；V2Ray 中为了节省时间，制作了一些常用函数来简化单元测试的开发，参见 v2ray-core/testing/assert 包。
+* Golang 不建议使用单元测试（Unit Test）库，比如其它语言中常见的 assertEquals() 函数等；V2Ray 中为了节省时间，制作了一些常用函数来简化单元测试的开发，参见 [assert](https://godoc.org/v2ray.com/core/testing/assert) 包。
