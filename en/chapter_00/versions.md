@@ -5,7 +5,7 @@
 ## 2017.02.11 v2.18
 
 * Cleanup WebSocket code.
-* Remove allowPassive settings. Now passive connections are always allowed.
+* Remove allowPassive option. Now passive connections are always allowed.
 * Bug fixes
 
 ## 2017.02.04 v2.17
