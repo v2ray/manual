@@ -4,7 +4,7 @@
 
 ## 目标
 * V2Ray 内核提供了一个平台，支持必要的网络代理功能，在其之上可以进二次开发，以提供更好的用户体验；
-* v2ray-core 以跨平台为首要原则，以减少二次开发的成本；
+* 以跨平台为首要原则，以减少二次开发的成本；
 
 ## 架构
 ![](../resources/arch.svg)
@@ -27,7 +27,7 @@
 * 实现 [proxy.Inbound](https://github.com/v2ray/v2ray-core/blob/master/proxy/proxy.go#L14) 接口；
 
 ### 传出代理
-* 实现 [proxy.OutboundConnectionHandler](https://github.com/v2ray/v2ray-core/blob/master/proxy/proxy.go#L21) 接口；
+* 实现 [proxy.Outbound](https://github.com/v2ray/v2ray-core/blob/master/proxy/proxy.go#L21) 接口；
 
 ## 传输层
 传输层提供一些网络数据传输相关的工具模块。
