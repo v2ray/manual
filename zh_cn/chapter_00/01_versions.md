@@ -2,6 +2,15 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2017.02.18 v2.19
+
+* 服务器端强制开启防重放攻击（Anti replay attack）机制。
+  * 不会影响任何现有客户端。
+* VMess AES-128-GCM / Chacha20-Poly1305 / None 加密方式升级。
+  * 如正在使用其中任何一个加密方式，请同时升级客户端和服务器。
+  * AES-128-CFB 不受影响。
+
+
 ## 2017.02.11 v2.18
 
 * 清理了 WebSocket 相关的代码。

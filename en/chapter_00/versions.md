@@ -2,6 +2,14 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.02.18 v2.19
+
+* A new mechanism for anti reply attack is now enforced on server side.
+  * No impact to existing clients.
+* Upgrade of VMess AES-128-GCM / Chacha20-Poly1305 / None encryption methods.
+  * Please upgrade client and server at once.
+  * AES-128-CFB is not affected.
+
 ## 2017.02.11 v2.18
 
 * Cleanup WebSocket code.
