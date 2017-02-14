@@ -31,7 +31,7 @@ ID 等价于 [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
     * M：消息，任意长度的 byte 数组
 * Shake: [SHA3-Shake128 函数](https://en.wikipedia.org/wiki/SHA-3)
   * 输入参数为任意长度的字符串
-  * 输入为任意长度的字符串
+  * 输出为任意长度的字符串
 
 ## 通讯过程
 
