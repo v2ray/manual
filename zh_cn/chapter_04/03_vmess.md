@@ -165,7 +165,7 @@ VMess 使用非对称格式，即客户端发出的请求和服务器端的响�
 * 实际应答数据：
   * 如果请求中的 Opt(S) 开启，则使用标准格式，否则使用基本格式。
   * 格式均和请求数据相同。
-    * 当 Opt(M) 开启时，长度 L 的值 = 真实值 xor Mask。Mask = (ResponseMask.NextByte() << 8) + RequestMask.NextByte()；
+    * 当 Opt(M) 开启时，长度 L 的值 = 真实值 xor Mask。Mask = (ResponseMask.NextByte() << 8) + ResponseMask.NextByte()；
 
 ### 动态端口指令
 
