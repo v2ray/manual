@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
 
+## 2017.02.25 v2.20
+
+* 安装包中可执行文件附带了 gpg 签名。
+
 ## 2017.02.18 v2.19
 
 * 服务器端强制开启防重放攻击（Anti replay attack）机制。

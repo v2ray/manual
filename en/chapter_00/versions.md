@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.02.25 v2.20
+
+* GPG signature is added to download package.
+
 ## 2017.02.18 v2.19
 
 * A new mechanism for anti reply attack is now enforced on server side.
