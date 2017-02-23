@@ -6,6 +6,13 @@ V2Ray 的核心组件是一个命令行程序，它可以运行在多个平台�
 
 **V2Ray 的部分功能依赖于系统时间，请确保使用 V2Ray 的系统 UTC 时间误差在两分钟之内，时区无关。**
 
+## 验证安装包
+
+V2Ray 提供两种验证方式：
+
+1. 安装包 zip 文件的 SHA1 摘要，在下载页面的 metadata.txt 文件中可以找到。
+2. 可运行程序（v2ray 或 v2ray.exe）的 gpg 签名，文件位于安装包中的 v2ray.sig 或 v2ray.exe.sig。签名公钥可以[在代码库中](https://raw.githubusercontent.com/v2ray/v2ray-core/master/tools/release/verify/official_release.asc)找到。
+
 ## 命令行参数
 
 V2Ray 的程序文件的命令行参数如下：
