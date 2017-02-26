@@ -5,6 +5,11 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script type="text/javascript">
+        if (location.protocol !== 'https:') {
+            location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+        </script>
         {% block style %}
             {% for resource in plugins.resources.css %}
                 {% if resource.url %}
