@@ -5,6 +5,7 @@
 ## 2017.02.25 v2.20
 
 * GPG signature is added to download package.
+* New binary wv2ray.exe is added to Windows package, which runs as a background application.
 
 ## 2017.02.18 v2.19
 
