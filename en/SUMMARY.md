@@ -7,7 +7,7 @@
 * Get Started
   * [Workflow](get_started/workflow.md)
   * [Installation](get_started/install.md)
-  * [Principle](chapter01/internal.md)
+  * [Principle](get_started/internal.md)
   * [Error messages](get_started/errors.md)
   * [Issues](get_started/issue.md)
   * [Hardware Requirements](get_started/hardware.md)
