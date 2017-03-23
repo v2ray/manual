@@ -1,6 +1,6 @@
 # Issues
 
-![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/get_started/issue.html)
+![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_01/issue.html)
 
 In order to improve the efficiency and quality of questions, please read the content below before report a question.
 
@@ -13,8 +13,8 @@ V2Ray Team supports Chinese and English language, please use the language that y
 Any channels that recognized by us can be used to report issues. The priority order is listed below:
 
 1. [Github Issue](https://github.com/v2ray/v2ray-core/issues);
-2. [Telegram Group](https://telegram.me/projectv2ray)
-3. Other
+1. [Telegram Group](https://telegram.me/projectv2ray)
+1. Other
 
 ## Content in the issue
 
