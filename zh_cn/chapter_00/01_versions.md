@@ -1,6 +1,6 @@
 # 更新日志
 
-![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/chapter_00/versions.html)
+![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
 ## 2017.02.25 v2.20
 
