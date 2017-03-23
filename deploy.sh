@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -x
+
+curl -sL https://deb.nodesource.com/setup_7.x | bash -
+apt-get update
+apt-get -y install jq git file npm nodejs build-essential
+
 function build_dir {
   DIR="$1"
   pushd $DIR
@@ -11,6 +17,15 @@ function build_dir {
   gitbook build
   popd  
 }
+
+function getattr() {
+  curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/$2/attributes/$1
+}
+
+GITHUB_TOKEN=$(getattr "github_token" "project")
+
+git clone https://github.com/v2ray/manual.git
+cd manual
 
 curl -o "./resources/github-release.svg" "https://img.shields.io/github/release/v2ray/v2ray-core.svg"
 
@@ -40,5 +55,5 @@ git config user.email "admin@v2ray.com"
 
 git add -A
 git commit -m 'update'
-git push "https://${GIT_KEY}@github.com/v2ray/v2ray.github.io.git" master
+git push "https://${GITHUB_TOKEN}@github.com/v2ray/v2ray.github.io.git" master
 popd
