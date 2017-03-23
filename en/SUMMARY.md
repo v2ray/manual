@@ -11,5 +11,6 @@
   * [Error messages](get_started/errors.md)
   * [Issues](get_started/issue.md)
   * [Hardware Requirements](get_started/hardware.md)
+  * [Clients](get_started/3rd_party.md)
 * Configuration
   * [JSON](configuration/json.md)

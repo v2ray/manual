@@ -1,5 +1,7 @@
 # Installation
 
+![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_01/workflow.html)
+
 The core of V2Ray is a command-line program, it can work in different platforms using the same configuration file. Pre-compiled core program can be found in [Release](https://github.com/v2ray/v2ray-core/releases).
 
 If you need a GUI, please use [third-party clients](3rd_party.md).
@@ -9,8 +11,10 @@ If you need a GUI, please use [third-party clients](3rd_party.md).
 ## Verify
 
 V2Ray provides 2 ways of verfication.
+
 1. There is a metadata.txt file which provides the ZIP file's SHA1 hash, it can be found in the download page.
-2. Verify the PGP signature of v2ray.exe, the signature file(v2ray.exe.sig) can be found in the ZIP file which contains V2Ray core. Public key can be found in [the repo](https://raw.githubusercontent.com/v2ray/v2ray-core/master/tools/release/verify/official_release.asc).
+1. Verify the PGP signature of v2ray.exe, the signature file(v2ray.exe.sig) can be found in the ZIP file which contains V2Ray core. Public key can be found in [the repo](https://raw.githubusercontent.com/v2ray/v2ray-core/master/tools/release/verify/official_release.asc).
+
 ## Command-line parameters
 
 List of parameters that in V2Ray core.
