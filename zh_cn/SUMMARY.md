@@ -37,6 +37,7 @@
   * [mKCP](chapter_03/kcp.md)
   * [传出代理](chapter_03/outboundproxy.md)
 * [代码细节](chapter_04/README.md)
+  * [加入组织](chapter_04/org.md)
   * [开发计划](chapter_04/00_roadmap.md)
   * [开发指引](chapter_04/01_guide.md)
   * [核心设计](chapter_04/02_design.md)
