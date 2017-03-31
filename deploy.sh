@@ -4,7 +4,7 @@ set -x
 
 curl -sL https://deb.nodesource.com/setup_7.x | bash -
 apt-get update
-apt-get -y install jq git file npm nodejs build-essential
+apt-get -y install jq git file nodejs build-essential
 
 function build_dir {
   DIR="$1"
