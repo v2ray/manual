@@ -2,7 +2,7 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
-## 2017.04.04 v2.22
+## 2017.04.07 v2.22
 
 * Mux.Cool 协议
 
