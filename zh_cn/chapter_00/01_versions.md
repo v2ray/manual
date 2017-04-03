@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.04.04 v2.22
+
+* Mux.Cool 协议
+
 ## 2017.02.25 v2.20
 
 * 安装包中可执行文件附带了 gpg 签名。

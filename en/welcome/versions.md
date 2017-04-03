@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.04.04 v2.22
+
+* Mux.Cool protocol.
+
 ## 2017.02.25 v2.20
 
 * GPG signature is added to download package.
