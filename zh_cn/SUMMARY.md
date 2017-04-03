@@ -27,6 +27,7 @@
     * [VMess](chapter_02/protocols/vmess.md)
   * [路由配置](chapter_02/03_routing.md)
   * [DNS 配置](chapter_02/04_dns.md)
+  * [Mux 配置](chapter_02/mux.md)
   * [传输配置](chapter_02/05_transport.md)
     * [TCP](chapter_02/transport/tcp.md)
     * [mKCP](chapter_02/transport/mkcp.md)
