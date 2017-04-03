@@ -43,6 +43,7 @@
   * [核心设计](chapter_04/02_design.md)
   * [VMess 协议](chapter_04/03_vmess.md)
   * [mKCP 协议](chapter_04/mkcp.md)
+  * [Mux.Cool](chapter_04/muxcool.md)
   * [编译源文件](chapter_04/04_compile.md)
 * [参考](chapter_05/README.md)
   * [常用配置](chapter_05/00_config/README.md)
