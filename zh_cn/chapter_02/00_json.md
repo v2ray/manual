@@ -25,4 +25,3 @@ JSON，全称 [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON)�
 需要注意的是：
 
 1. 通常一个键值对的后面需要有一个逗号","，但如果这个键值对后面紧跟一个大括号"｝"的话，则一定不能有逗号。
-
