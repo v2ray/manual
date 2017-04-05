@@ -99,8 +99,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "protocol": "协议名称",
   "settings": {},
   "streamSettings": {},
-  "tag": "标识",
-  "mux": {}
+  "tag": "标识"
 }
 ```
 
@@ -112,7 +111,6 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 * `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
 
 ## 主传出连接配置（outbound）
 
@@ -127,7 +125,8 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "streamSettings": {},
   "proxySettings": {
     "tag": "another-outbound-tag"
-  }
+  },
+  "mux": {}
 }
 ```
 
@@ -140,6 +139,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 * `proxySettings`: 传出代理配置。
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
+* `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
 
 ## 额外的传入连接配置（inbound detour）
 
@@ -157,8 +157,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
     "concurrency": 3
   },
   "settings": {},
-  "streamSettings": {},
-  "mux": {}
+  "streamSettings": {}
 }
 ```
 
@@ -174,7 +173,6 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   * `concurrency`: 随机端口数量。最小值为`1`，最大值为 port 范围的一半。建议值为`3`。
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
 
 ### 额外的传出连接配置（outbound detour）
 
@@ -189,7 +187,8 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "streamSettings": {},
   "proxySettings": {
     "tag": "another-outbound-tag"
-  }
+  },
+  "mux": {}
 }
 ```
 
@@ -202,6 +201,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 * `proxySettings`: 传出代理配置。
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
+* `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
 
 ## 底层传输配置（transport）
 
