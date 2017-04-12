@@ -2,6 +2,12 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.04.15 v2.23
+
+* Performance improvement in Mux.
+* Max number of connections can be configured in Mux now.
+* Performance improvement in HTTP inbound.
+
 ## 2017.04.08 v2.22
 
 * Mux.Cool protocol.
@@ -33,7 +39,7 @@
 ## 2017.01.28 v2.16
 
 * New 'redirect' option in freedom. It can be used to adapt tools like Shadowsocks Obfs.
-* Performance improves in VMess non-encryption mode. Not compatible with previous versions.
+* Performance improvement in VMess non-encryption mode. Not compatible with previous versions.
 * Happy New Year!
 
 ## 2017.01.16 v2.15
