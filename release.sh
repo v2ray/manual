@@ -8,6 +8,6 @@ RAND="$(openssl rand -hex 5)"
 gcloud compute instances create "v2raycom-${RAND}" \
     --machine-type=n1-highcpu-2 \
     --metadata-from-file=startup-script=${DIR}/deploy.sh \
-    --zone=us-west1-a \
+    --zone=us-central1-c \
     --preemptible \
     --project ${PROJECT}
