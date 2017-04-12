@@ -7,6 +7,7 @@
 * Performance improvement in Mux.
 * Max number of connections can be configured in Mux now.
 * Performance improvement in HTTP inbound.
+* connectionReuse setting is removed in favor of Mux.
 
 ## 2017.04.08 v2.22
 
