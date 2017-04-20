@@ -2,6 +2,11 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.04.21 v2.24
+
+* Stablize Mux.
+* Improves memory effeciency.
+
 ## 2017.04.15 v2.23
 
 * Performance improvement in Mux.

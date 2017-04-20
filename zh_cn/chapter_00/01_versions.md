@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.04.21 v2.24
+
+* 修复了 Mux 的稳定性问题。
+* 提升了总体的内存使用效率。
+
 ## 2017.04.15 v2.23
 
 * 提升了 Mux 的性能。
