@@ -2,7 +2,7 @@
 
 ## 版本号
 
-V2Ray Core 的版本号形如 X.Y.Z，其中 X 表示 Milestone，Y 表示 Release，如 2.3 表示第二个 Milestone 的第三个 Release；Z 仅作为修复紧急 Bug 之后的发布使用。
+V2Ray Core 的版本号形如 X.Y.Z，其中 X 表示 Milestone，Y 表示 Release，如 2.3 表示第二个 Milestone 的第三个 Release；Z 表示测试版本。
 
 ## 周期
 
