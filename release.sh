@@ -12,7 +12,6 @@ gcloud compute instances create "v2raycom-${RAND}" \
     --machine-type=n1-highcpu-2 \
     --metadata-from-file=startup-script=${DIR}/deploy.sh \
     --zone=${zone} \
-    --preemptible \
     --project ${PROJECT}
 if [ $? -eq 0 ]; then
   exit 0
