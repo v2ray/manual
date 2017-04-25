@@ -99,7 +99,8 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "protocol": "协议名称",
   "settings": {},
   "streamSettings": {},
-  "tag": "标识"
+  "tag": "标识",
+  "domainOverride": ["http", "tls"]
 }
 ```
 
@@ -111,6 +112,9 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
 * `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
+* `domainOverride`: 识别相应协议的流量，并根据流量内容重置所请求的目标。
+  * 接受一个字符串数组，默认值为空。
+  * 可选值为 `"http"` 和 `"tls"`。
 
 ## 主传出连接配置（outbound）
 
@@ -157,7 +161,8 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
     "concurrency": 3
   },
   "settings": {},
-  "streamSettings": {}
+  "streamSettings": {},
+  "domainOverride": ["http", "tls"]
 }
 ```
 
@@ -173,6 +178,9 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   * `concurrency`: 随机端口数量。最小值为`1`，最大值为 port 范围的一半。建议值为`3`。
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
+* `domainOverride`: 识别相应协议的流量，并根据流量内容重置所请求的目标。
+  * 接受一个字符串数组，默认值为空。
+  * 可选值为 `"http"` 和 `"tls"`。
 
 ### 额外的传出连接配置（outbound detour）
 

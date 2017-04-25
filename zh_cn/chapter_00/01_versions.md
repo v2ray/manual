@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.04.28 v2.25
+
+* 可以简单地探测 HTTP 和 HTTPS 流量并根据其内容进行转发。
+
 ## 2017.04.15 v2.23
 
 * 提升了 Mux 的性能。
