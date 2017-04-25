@@ -16,6 +16,7 @@
 6. V2Ray 程序及配置文件会被放在 `$GOPATH/bin/v2ray-XXX` 文件夹下（XXX 视平台不同而不同）
 
 ### Arch Linux
+
 1. 安装 Git： `sudo pacman -S git`
 2. 安装 golang：`sudo pacman -S go`
    1. `export GOPATH=$HOME/work`

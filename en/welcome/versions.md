@@ -6,6 +6,11 @@
 
 * Simple sniffing on HTTP and TLS traffic for the actual domain on request.
 
+## 2017.04.21 v2.24
+
+* Stablize Mux.
+* Improves memory effeciency.
+
 ## 2017.04.15 v2.23
 
 * Performance improvement in Mux.
