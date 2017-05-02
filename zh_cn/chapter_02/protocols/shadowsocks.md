@@ -50,7 +50,6 @@
 {
   "servers": [
     {
-      "email": "love@v2ray.com",
       "address": "127.0.0.1",
       "port": 1234,
       "method": "加密方式",
@@ -63,7 +62,6 @@
 
 其中：
 
-* `email`: 邮箱地址，用于标识用户；
 * `address`: Shadowsocks 服务器地址，支持 IPv4、IPv6 和域名。
 * `port`: 服务器端口。
 * `method`: 加密方式，没有默认值。可选的值有：
