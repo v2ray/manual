@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.05.02 v2.26
+
+* 各种稳定性修复。
+
 ## 2017.04.28 v2.25
 
 * 可以简单地探测 HTTP 和 HTTPS 流量并根据其内容进行转发。
