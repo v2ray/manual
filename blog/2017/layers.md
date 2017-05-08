@@ -20,7 +20,9 @@
 
 这也就是 ShadowsocksR 最近的几个协议推荐使用不加密的原因。
 
-ShadowsocksR 对于 Shadowsocks 的改进，本质上来说是扩充了协议要素（单端口多用户多种加密方式），加强了传输要素（伪装和其它的加密方式）。而 Shadowsocks 最近也加强了传输要素，即 obfs plugin。两者在要素这一层面相差无几，这也是为什么很多人不认为 ShadowsocksR 之于 Shadowsocks 有很大改进的原因。
+ShadowsocksR 本质上是对 Shadowsocks 进行了一层封装，即 Shadowsocks + X。这个 X 包含了对协议要素的扩（单端口多用户多种加密方式），加强了传输要素（伪装和其它的加密方式）。和 Shadowsocks + KcpTun 同理，Shadowsocks 本身的传输要素就显得不那么重要了。
+
+而 Shadowsocks 最近也加强了传输要素，即 obfs plugin。两者在要素这一层面相差无几，这也是为什么很多人不认为 ShadowsocksR 之于 Shadowsocks 有很大改进的原因。
 
 顺便整理一下常用协议所具备的要素，仅供参考：
 
