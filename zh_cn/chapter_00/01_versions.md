@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.05.12 v2.27
+
+* 路由中新增了“域名”匹配选项。
+
 ## 2017.05.02 v2.26
 
 * 各种稳定性修复。

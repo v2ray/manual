@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.05.12 v2.27
+
+* New domain mode in router.
+
 ## 2017.05.05 v2.26
 
 * Stability fixes.
