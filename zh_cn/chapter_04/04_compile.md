@@ -15,7 +15,7 @@
 5. 编译 V2Ray：`$GOPATH/bin/build`
 6. V2Ray 程序及配置文件会被放在 `$GOPATH/bin/v2ray-XXX` 文件夹下（XXX 视平台不同而不同）
 
-### Arch Linux
+## Arch Linux
 
 1. 安装 Git： `sudo pacman -S git`
 2. 安装 golang：`sudo pacman -S go`
@@ -24,7 +24,7 @@
 4. `go install v2ray.com/core/tools/build`
 5. `$GOPATH/bin/build`
 
-### Debian / Ubuntu
+## Debian / Ubuntu
 
 `bash <(curl -s https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/install.sh)`
 

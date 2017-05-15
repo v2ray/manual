@@ -19,16 +19,16 @@
 Connecting to host [远程IP], port [端口]
 [  4] local [本机IP] port [端口] connected to [远程IP] port [端口]
 [ ID] Interval           Transfer     Bandwidth
-[  4]   0.00-1.00   sec  27.3 MBytes   228 Mbits/sec                  
-[  4]   1.00-2.00   sec  26.0 MBytes   218 Mbits/sec                  
-[  4]   2.00-3.00   sec  19.2 MBytes   161 Mbits/sec                  
-[  4]   3.00-4.00   sec  20.2 MBytes   169 Mbits/sec                  
-[  4]   4.00-5.00   sec  19.0 MBytes   159 Mbits/sec                  
-[  4]   5.00-6.00   sec  18.7 MBytes   157 Mbits/sec                  
-[  4]   6.00-7.00   sec  21.9 MBytes   184 Mbits/sec                  
-[  4]   7.00-8.00   sec  22.2 MBytes   186 Mbits/sec                  
-[  4]   8.00-9.00   sec  21.2 MBytes   178 Mbits/sec                  
-[  4]   9.00-10.00  sec  23.9 MBytes   201 Mbits/sec                  
+[  4]   0.00-1.00   sec  27.3 MBytes   228 Mbits/sec
+[  4]   1.00-2.00   sec  26.0 MBytes   218 Mbits/sec
+[  4]   2.00-3.00   sec  19.2 MBytes   161 Mbits/sec
+[  4]   3.00-4.00   sec  20.2 MBytes   169 Mbits/sec
+[  4]   4.00-5.00   sec  19.0 MBytes   159 Mbits/sec
+[  4]   5.00-6.00   sec  18.7 MBytes   157 Mbits/sec
+[  4]   6.00-7.00   sec  21.9 MBytes   184 Mbits/sec
+[  4]   7.00-8.00   sec  22.2 MBytes   186 Mbits/sec
+[  4]   8.00-9.00   sec  21.2 MBytes   178 Mbits/sec
+[  4]   9.00-10.00  sec  23.9 MBytes   201 Mbits/sec
 - - - - - - - - - - - - - - - - - - - - - - - - -
 [ ID] Interval           Transfer     Bandwidth
 [  4]   0.00-10.00  sec   220 MBytes   184 Mbits/sec                  sender
@@ -63,16 +63,16 @@ Connecting to host [远程IP], port [端口]
 Connecting to host 127.0.0.1, port 8888
 [  4] local 127.0.0.1 port 51715 connected to 127.0.0.1 port 8888
 [ ID] Interval           Transfer     Bandwidth
-[  4]   0.00-1.00   sec  25.3 MBytes   212 Mbits/sec                  
-[  4]   1.00-2.00   sec  24.6 MBytes   206 Mbits/sec                  
-[  4]   2.00-3.00   sec  24.4 MBytes   205 Mbits/sec                  
-[  4]   3.00-4.00   sec  23.0 MBytes   193 Mbits/sec                  
-[  4]   4.00-5.00   sec  19.4 MBytes   163 Mbits/sec                  
-[  4]   5.00-6.00   sec  15.7 MBytes   132 Mbits/sec                  
-[  4]   6.00-7.00   sec  15.6 MBytes   131 Mbits/sec                  
-[  4]   7.00-8.00   sec  19.0 MBytes   159 Mbits/sec                  
-[  4]   8.00-9.00   sec  19.4 MBytes   162 Mbits/sec                  
-[  4]   9.00-10.00  sec  15.5 MBytes   130 Mbits/sec                  
+[  4]   0.00-1.00   sec  25.3 MBytes   212 Mbits/sec
+[  4]   1.00-2.00   sec  24.6 MBytes   206 Mbits/sec
+[  4]   2.00-3.00   sec  24.4 MBytes   205 Mbits/sec
+[  4]   3.00-4.00   sec  23.0 MBytes   193 Mbits/sec
+[  4]   4.00-5.00   sec  19.4 MBytes   163 Mbits/sec
+[  4]   5.00-6.00   sec  15.7 MBytes   132 Mbits/sec
+[  4]   6.00-7.00   sec  15.6 MBytes   131 Mbits/sec
+[  4]   7.00-8.00   sec  19.0 MBytes   159 Mbits/sec
+[  4]   8.00-9.00   sec  19.4 MBytes   162 Mbits/sec
+[  4]   9.00-10.00  sec  15.5 MBytes   130 Mbits/sec
 - - - - - - - - - - - - - - - - - - - - - - - - -
 [ ID] Interval           Transfer     Bandwidth
 [  4]   0.00-10.00  sec   202 MBytes   169 Mbits/sec                  sender

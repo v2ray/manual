@@ -24,4 +24,3 @@ Shadowsocks: Unknown address type: xxx
 ### 原因
 
 1. Shadowsocks 协议的加密方式或是密码不匹配；
-
