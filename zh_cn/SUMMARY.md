@@ -32,6 +32,7 @@
     * [TCP](chapter_02/transport/tcp.md)
     * [mKCP](chapter_02/transport/mkcp.md)
     * [WebSocket](chapter_02/transport/websocket.md)
+  * [环境变量](chapter_02/env.md)
 * [进阶使用](chapter_03/README.md)
   * [动态端口](chapter_03/00_dynport.md)
   * [Effective V2Ray](chapter_03/01_effective.md)
