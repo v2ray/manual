@@ -6,7 +6,8 @@ V2Ray 是一个非营利项目，它的所有代码均公开，软件可以自�
 
 * Paypal: [Paypal.me/ProjectV2Ray](https://www.paypal.me/ProjectV2Ray/25) 或直接发送给 love@v2ray.com
 * 礼品卡: 请发送 [Amazon Gift Cards](https://www.amazon.com/Amazon-Amazon-com-eGift-Cards/dp/BT00DC6QU4) 至 love@v2ray.com
-* 比特币: [1wYbCx61yyyCRBqV91NnfZfDEmc8doqSx](https://blockchain.info/address/1wYbCx61yyyCRBqV91NnfZfDEmc8doqSx)
+* 比特币 (BTC): [15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo](https://blockchain.info/address/15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo)
+* 以太坊 (ETH): [0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b](https://etherscan.io/address/0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b)
 
 ## 感谢您的帮助
 
