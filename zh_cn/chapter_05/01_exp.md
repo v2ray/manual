@@ -5,7 +5,6 @@
 * 2017.04.25 [Vultr VPS主机安装 V2Ray 代理服务器手记](https://www.daehub.com/archives/8491.html)
 * 2017.03.11 [用 Nginx 转发 V2Ray 的 WebSocket 连接](https://oing9179.github.io/blog/2017/03/v2ray-as-WebSocket-Proxy-behind-Nginx/)
 * 2017.02.16 [在 Arukas 设置 V2Ray](https://www.oixxu.com/setup-v2ray-on-arukas/)
-* 2017.01.06 [V2Ray一键安装包达成√](https://blog.ipatrick.cn/2017/01/04/286.html)
 * 2016.12.20 [V2Ray 配置指南](https://toutyrater.github.io/v2ray-guide-pages/)
 * 2016.09.15 [V2Ray – 性能优异的模块化代理软件](https://blog.kuoruan.com/112.html)
 * 2016.05.03 [V2Ray 安装与使用](https://ralf.ren/717)
