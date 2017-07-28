@@ -46,7 +46,7 @@ V2Ray 团队支持中文和英文，请选择你所熟悉的语言来提问，�
 
 由于讨论人数众多，目前 V2Ray 开放了三个群以便分类不同的讨论内容：
 
-  / | [开发群](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ) | [主群](https://t.me/projectv2ray) | [水群](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg)
+  / | [Pure Tech](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ) | [使用及开发](https://t.me/projectv2ray) | [日常](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg)
 -------:|:-------:|:----:|:----:
 算法相关 | &#10004;|&#10004;|&#10004;
 计算机网络|&#10004;|&#10004;|&#10004;
