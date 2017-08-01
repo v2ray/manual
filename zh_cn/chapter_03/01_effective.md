@@ -63,16 +63,14 @@ VMess 服务器端会保留一个认证信息的缓存，用于快速验证用�
 
 ```javascript
 "settings": {
-  "clients": [
-  {
+  "clients": [{
     "id": "3b129dec-72a3-4d28-aeee-028a0fe86e22",
     "alterId": 100
   },
   {
     "id": "8f62a287-e80a-441f-9f28-affc9fb6c572",
     "alterId": 1000
-  }
-  ]
+  }]
 }
 ```
 
