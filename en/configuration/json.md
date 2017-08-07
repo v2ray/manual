@@ -26,4 +26,4 @@ Object Example:
 have to be aware of is:
 
 1. Usually a key value behind the need for a comma ",", but if the key followed by a pair of brackets "}", then it must not be a comma.
-1. Javascript comments "//" and "/\* \*/"can not be used in the JSON file.
+2. V2Ray(v2.11 or later) JSON config file supports comments like Javascript comments "//" and "/\* \*/".
