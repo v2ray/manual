@@ -1,7 +1,8 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
+  #Archives: /archives
+  English: https://www.v2ray.com/en/
 rss: /atom.xml
 
 # Content
