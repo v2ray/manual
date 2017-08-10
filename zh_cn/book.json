@@ -1,9 +1,0 @@
-{
-  "language": "zh",
-  "title": "V2Ray 官方网站",
-  "plugins" : [
-    "-fontsettings",
-    
-    "anchors"
-  ]
-}
