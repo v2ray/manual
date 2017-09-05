@@ -1,57 +1,54 @@
 # VMess 服务器端
 
-本配置文件是一个典型的服务器端配置。
+V2Ray 既可以作为服务端，也可以作为客户端。
+
+作为服务端时，我们习惯于使用 VMess 传入协议（或其他传入协议），然后将数据传输至互联网。
+
+下面是 V2Ray 默认服务端配置。
 
 ```javascript
 {
-  "log" : {
-    "access": "/var/log/v2ray/access.log", // 访问日志文件
-    "error": "/var/log/v2ray/error.log",   // 错误日志文件
-    "loglevel": "warning"                  // 错误日志等级，可选 debug / info / warning / error
+  "log" : {                                 // [日志](../chapter_02/01_overview.md)
+    "access": "/var/log/v2ray/access.log",  // 访问日志文件
+    "error": "/var/log/v2ray/error.log",    // 错误日志文件
+    "loglevel": "warning"                   // 错误日志等级
   },
-  "inbound": {
-    "port": 37192, // 主端口
-    "protocol": "vmess",    // 主传入协议，参见协议列表
+  "inbound": {              // 主传入协议
+    "port": 12345,          // 主端口
+    "protocol": "vmess",    // 在这里使用 [VMess 协议](../chapter_02/protocols/vmess.md)
     "settings": {
       "clients": [
         {
-          "id": "3b129dec-72a3-4d28-aeee-028a0fe86e22",  // 用户 ID，客户端须使用相同的 ID 才可以中转流量
-          "level": 1  // 用户等级，自用 VPS 可设为 1；共享 VPS 请设为 0。
+          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // UUID
+          "level": 1,       // 用户等级
+          "alterId": 64     // 额外ID
+        }
+        // 在这里添加更多用户，注意UUID不能重复
+        ,{
+          "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy", // UUID
+          "level": 0,       // 用户等级
+          "alterId": 32     // 额外ID
         }
       ]
     }
   },
-  "outbound": {
-    "protocol": "freedom",  // 主传出协议，参见协议列表
+  "outbound": {             // 主传出协议
+    "protocol": "freedom",  // 在这里使用“直接传出至互联网”
     "settings": {}
   },
-  "inboundDetour": [
+  "outboundDetour": [       // 额外传出协议
     {
-      "protocol": "vmess",   // 可选，开启多个 VMess 端口
-      "port": "30001-30010", // 开放 30001 到 30010 这 10 个端口
-      "settings": {
-        "clients": [  // VMess 配置，和主传入协议类似
-          {
-            "id": "3b129dec-72a3-4d28-aeee-028a0fe86e22",
-            "level": 1
-          }
-        ]
-      }
-    }
-  ],
-  "outboundDetour": [
-    {
-      "protocol": "blackhole",  // 额外的传出协议，参见[协议列表](../chapter_02/02_protocols.md)。
+      "protocol": "blackhole",
       "settings": {},
       "tag": "blocked"
     }
   ],
-  "routing": {
+  "routing": {                  // 路由设置
     "strategy": "rules",
     "settings": {
       "rules": [
         {
-          "type": "field",  // 路由设置，默认将屏蔽所有局域网流量，以提升安全性。
+          "type": "field",      // 不允许客户端访问服务端的局域网地址，以提升安全性
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
@@ -75,5 +72,4 @@
     }
   }
 }
-
 ```
