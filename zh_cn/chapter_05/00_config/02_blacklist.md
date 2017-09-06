@@ -19,7 +19,7 @@
     }
   },
   "outbound": {
-    "protocol": "freedom", // 默认直连，只有路由匹配的域名或IP才转发
+    "protocol": "freedom",  // 默认直连，只有路由匹配的域名或IP才转发
     "settings": {}
   },
   "outboundDetour": {
@@ -83,7 +83,7 @@
             "wikipedia.com",
             "wikipedia.org"
           ],
-          "outboundTag": "proxy_please" // 额外传出协议的标签一致，所以匹配上述域名的请求将被中转
+          "outboundTag": "proxy_please" // 与额外传出协议的标签一致，所以匹配上述域名的请求将被中转
         },
         {
           "type": "field",
@@ -100,4 +100,4 @@
 }
 ```
 
-同理，我们不难发现，[默认配置](00_socks_client.md)中的配置含义是“默认所有请求都走中转，只有特定域名或IP（例如，内网地址）才直连”。
+同理，我们不难发现，[默认配置](00_socks_client.md)中的配置含义是“默认所有请求都走中转，只有特定域名或IP（例如，内网地址和国内地址）才直连”。
