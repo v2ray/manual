@@ -1,44 +1,53 @@
 # Shadowsocks 服务器端
 
-V2Ray 在服务器端支持 Shadowsocks 协议，如果你同时在使用 V2Ray 和 Shadowsocks，那么服务器端可以同时开启两种协议，以减少维护成本。
+V2Ray 在服务器端支持 Shadowsocks 协议。服务器端可以同时开启 V2Ray 和 Shadowsocks 两种协议，以减少维护成本。
 
 下面是一个以 VMess 为主，同时开放 Shadowsocks 端口的配置：
 
 ```javascript
 {
-  "log" : {
-    "access": "/var/log/v2ray/access.log", // 访问日志文件
-    "error": "/var/log/v2ray/error.log",   // 错误日志文件
-    "loglevel": "warning"                  // 错误日志等级，可选 debug / info / warning / error
+  "log" : {                                 // [日志](../chapter_02/01_overview.md)
+    "access": "/var/log/v2ray/access.log",  // 访问日志文件
+    "error": "/var/log/v2ray/error.log",    // 错误日志文件
+    "loglevel": "warning"                   // 错误日志等级
   },
-  "inbound": {
-    "port": 37192, // 主端口
-    "protocol": "vmess",    // 主传入协议，参见协议列表
+  "inbound": {              // 主传入协议
+    "port": 12345,          // 主端口
+    "protocol": "vmess",    // 在这里使用 [VMess 协议](../chapter_02/protocols/vmess.md)
     "settings": {
       "clients": [
         {
-          "id": "3b129dec-72a3-4d28-aeee-028a0fe86e22",  // 用户 ID，客户端须使用相同的 ID 才可以中转流量
-          "level": 1  // 用户等级，自用 VPS 可设为 1；共享 VPS 请设为 0。
+          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // UUID
+          "level": 1,       // 用户等级
+          "alterId": 64     // 额外ID
+        }
+        // 在这里添加更多用户，注意UUID不能重复
+        ,{
+          "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy", // UUID
+          "level": 0,       // 用户等级
+          "alterId": 32     // 额外ID
         }
       ]
     }
   },
-  "outbound": {
-    "protocol": "freedom",  // 主传出协议，参见协议列表
+  "outbound": {             // 主传出协议
+    "protocol": "freedom",  // 在这里使用“直接传出至互联网”
     "settings": {}
   },
+  // ========== BEGIN ==========
+  // 增加传入绕路，开启 Shadowsocks 协议
   "inboundDetour": [
     {
-      "protocol": "shadowsocks",   // 开启 Shadowsocks
-      "port": 30001, // 监听 30001 端口
+      "protocol": "shadowsocks",    // 开启 Shadowsocks 协议支持
+      "port": 30001,                // 监听 30001 端口
       "settings": {
         "method": "aes-256-cfb", // 加密方式，支持 aes-256-cfb 和 aes-128-cfb
-        "password": "v2ray",     // 密码，必须和客户端相同
+        "password": "v2ray",     // 密码，客户端必须与此相同
         "udp": false             // 是否开启 UDP 转发
       }
     },
     {
-      "protocol": "shadowsocks",   // 开启 Shadowsocks
+      "protocol": "shadowsocks",   // 开启 Shadowsocks 协议支持
       "port": 30002, // 监听 30002 端口，由于 Shadowsocks 的限制，多用户的时候只能开多个端口
       "settings": {  // 配置和上述类似
         "method": "aes-256-cfb",
@@ -47,19 +56,20 @@ V2Ray 在服务器端支持 Shadowsocks 协议，如果你同时在使用 V2Ray 
       }
     }
   ],
-  "outboundDetour": [
+  // ========== END ==========
+  "outboundDetour": [       // 额外传出协议
     {
-      "protocol": "blackhole",  // 额外的传出协议，参见协议列表
+      "protocol": "blackhole",
       "settings": {},
       "tag": "blocked"
     }
   ],
-  "routing": {
+  "routing": {                  // 路由设置
     "strategy": "rules",
     "settings": {
       "rules": [
         {
-          "type": "field",  // 路由设置，默认将屏蔽所有局域网流量，以提升安全性。
+          "type": "field",      // 不允许客户端访问服务端的局域网地址，以提升安全性
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
@@ -84,3 +94,5 @@ V2Ray 在服务器端支持 Shadowsocks 协议，如果你同时在使用 V2Ray 
   }
 }
 ```
+
+配置完毕后，请在防火墙中做相应配置，以保证端口的可用性。
