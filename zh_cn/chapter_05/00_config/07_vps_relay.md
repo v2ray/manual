@@ -4,67 +4,83 @@
 
 ```javascript
 {
-  "log" : {
-    "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log",
-    "loglevel": "warning"
+  "log" : {                                 // [日志](../chapter_02/01_overview.md)
+    "access": "/var/log/v2ray/access.log",  // 访问日志文件
+    "error": "/var/log/v2ray/error.log",    // 错误日志文件
+    "loglevel": "warning"                   // 错误日志等级
   },
-  "inbound": {
-    "port": 37192,
-    "protocol": "vmess",
+  "inbound": {              // 主传入协议
+    "port": 12345,          // 主端口
+    "protocol": "vmess",    // 在这里使用 [VMess 协议](../chapter_02/protocols/vmess.md)
     "settings": {
       "clients": [
         {
-          "id": "3b129dec-72a3-4d28-aeee-028a0fe86e22",
-          "level": 1
+          "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // UUID
+          "level": 1,       // 用户等级
+          "alterId": 64     // 额外ID
+        }
+        // 在这里添加更多用户，注意UUID不能重复
+        ,{
+          "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy", // UUID
+          "level": 0,       // 用户等级
+          "alterId": 32     // 额外ID
         }
       ]
     }
   },
+  // ========== BEGIN STEP 1 ==========
+  // 国内服务器当作国外服务器的“客户端”
+  // 国际流量发往国外服务器上
   "outbound": {
-    "protocol": "vmess", // 出口协议
+    "protocol": "vmess",        // 出口协议
     "settings": {
       "vnext": [
         {
-          "address": "8.8.8.8", // 服务器 IP 地址
-          "port": 17173,  // 服务器端口
+          "address": "1.2.3.4", // 国外服务器地址
+          "port": 23456,        // 国外服务器端口
           "users": [
-            {"id": "d17a1af7-efa5-42ca-b7e9-6a35282d737f"} // 用户 ID，须与服务器端配置相同
+            {"id": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"} // 用户 ID，须与国外服务器端配置相同
           ]
         }
       ]
     }
   },
-  "outboundDetour": [
+  // ========== END STEP 1 ==========
+  "outboundDetour": [       // 额外传出协议
     {
       "protocol": "blackhole",
       "settings": {},
       "tag": "blocked"
-    },
-    {
+    }
+    // ========== BEGIN STEP 2 ==========
+    // 增加freedom传出绕路，国内流量直接放行
+    ,{
       "protocol": "freedom",
       "tag": "direct",
       "settings": {}
     }
+    // ========== END STEP 2 ==========
   ],
-  "routing": {
+  "routing": {                  // 路由设置
     "strategy": "rules",
     "settings": {
       "rules": [
-        {
-          "type": "chinaip", // 对于所有国内的 IP，都采用直连模式
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",  // 对于一些常见的网站，也使用直连模式
-          "domain": [
-            "qq.com",
-            "baidu.com"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-          "type": "field",  // 禁止访问局域网
+          // ========== BEGIN STEP 3 ==========
+          // 配置国内网站和IP直连规则
+          {
+            "type": "chinaip", // 对于所有国内的 IP，都采用直连模式
+            "outboundTag": "direct"
+          },
+          {
+            "type": "field",  // 对于一些常见的网站，也使用直连模式
+            "domain": [
+              "qq.com",
+              "baidu.com"
+            ],
+            "outboundTag": "direct"
+          },
+          // ========== END STEP 3 ==========
+          "type": "field",      // 不允许客户端访问服务端的局域网地址，以提升安全性
           "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
