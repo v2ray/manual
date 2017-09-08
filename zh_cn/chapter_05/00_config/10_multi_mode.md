@@ -1,6 +1,7 @@
 # 同时开启KCP,TCP+动态端口四种
-* 使用时记得去掉json里//开头的注释
-* UUID 生成网站: https://www.uuidgenerator.net
+
+下面是一个同时开始KCP、TCP和动态端口的配置示例。请自行替换配置中的[UUID](https://www.uuidgenerator.net)。
+
 ```javascript
 {
   "log": {
@@ -8,7 +9,7 @@
     "error": "/var/log/v2ray/error.log",    //错误日志路径自行修改
     "loglevel": "warning"
   },
-  
+
   "inbound": {
     "port": 28000,       //kcp (udp) 监听端口
     "protocol": "vmess",
@@ -25,7 +26,7 @@
       "network": "kcp"  //启用kcp
     }
   },
-  
+
   "inboundDetour": [               //举例如果只想使用KCP一种inboundDetour的整个段就可以全部删除^_^
     {
       "port": 29000,       //tcp (tcp) 监听端口
@@ -77,7 +78,7 @@
     },
     {
       "protocol": "vmess",
-      "port": "50001-50100",   //kcp (udp)动态端口监听范围 
+      "port": "50001-50100",   //kcp (udp)动态端口监听范围
       "tag": "detour-kcp",
       "settings": {},
       "allocate": {
@@ -91,7 +92,7 @@
     },
     {
       "protocol": "vmess",
-      "port": "51001-51100",   //tcp (tcp)动态端口监听范围 
+      "port": "51001-51100",   //tcp (tcp)动态端口监听范围
       "tag": "detour-tcp",
       "settings": {},
       "allocate": {
@@ -101,12 +102,12 @@
       }
     }
   ],
-  
+
   "outbound": {
     "protocol": "freedom",
     "settings": {}
   },
-  
+
   "outboundDetour": [
     {
       "protocol": "blackhole",
@@ -114,7 +115,7 @@
       "tag": "blocked"
     }
   ],
-  
+
   "routing": {
     "strategy": "rules",
     "settings": {
@@ -142,7 +143,7 @@
       ]
     }
   },
-  
+
   "transport": {
     "tcpSettings": {
       "connectionReuse": true
