@@ -7,7 +7,7 @@
 * 聊天: [![Telegram](resources/telegram.svg)](https://telegram.me/projectv2ray) [![Twitter](resources/twitter.svg)](https://twitter.com/projectv2ray)
 * 联系: [![Email](resources/email.svg)](chapter_00/pgp.md)
 
-[白话文版上手教程](https://toutyrater.github.io/v2ray-guide-pages/)
+[白话文版上手教程](https://toutyrater.github.io)
 
 ## 主要特性
 

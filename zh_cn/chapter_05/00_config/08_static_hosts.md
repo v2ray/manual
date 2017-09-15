@@ -1,63 +1,80 @@
 # 静态路由
 
-由于可用的 IP 越来越少，使用 Hosts 翻墙已变得越来越难。但是如果你能找到可以直连的 IP，V2Ray 可以帮你加速访问这些网站。
-
-示例配置如下
+V2Ray 内置了一个 DNS 服务器。在已知某些网站真实IP的情况下，我们手动在V2Ray里配置Hosts。
 
 ```javascript
 {
+  "log": {
+    "error": "/var/log/v2ray/error.log",
+    "loglevel": "warning"
+  },
   "inbound": {
-    "port": 1080,
-    "protocol": "socks",
+    "port": 1080,           // 本地监听端口
+    "listen": "127.0.0.1",
+    "protocol": "socks",    // 使用 Socks(5) 传入协议
     "settings": {
-      "auth": "noauth",
-      "udp": false
+      "auth": "noauth",     // 不认证
+      "udp": false,         // 不开启 UDP 转发
+      "ip": "127.0.0.1"
     }
   },
   "outbound": {
-    "protocol": "vmess",
+    "protocol": "vmess",    // 使用VMess协议作为传出协议
     "settings": {
       "vnext": [
         {
-          // 略过
+          "address": "1.2.3.4", // 服务器IP地址
+          "port": 12345,        // 服务器端口
+          "users": [
+            {
+              "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // UUID
+              "alterId": 64,            // 额外ID，需要和服务器上配置相同
+              "security": "aes-128-cfb" // 加密方式
+            }
+          ]
         }
       ]
+    },
+    "mux": {
+      "enabled": true
     }
   },
   "outboundDetour": [
     {
       "protocol": "freedom",
       "settings": {
-        "domainStrategy": "UseIP" // 使用内部 DNS 解析
+          // ========== BEGIN STEP 1 ==========
+          "domainStrategy": "UseIP" // 使用内部 DNS 解析
+          // ========== END STEP 1 ==========
       },
       "tag": "direct"
     }
   ],
+  // ========== BEGIN STEP 2 ==========
+  // 配置DNS
   "dns": {
     "hosts": {
+      // 在这里使用键值对的形式配置hosts
+      "my-computer": "127.0.0.1",
       "google.com": "220.255.2.153",
       "www.google.com": "220.255.2.153",
       "dns.google.com": "220.255.2.153"
     },
     "servers": [
+      // 在这里可以指定其他DNS
       "8.8.8.8",
       "8.8.4.4"
     ]
   },
+  // ========== END STEP 2 ==========
   "routing": {
     "strategy": "rules",
     "settings": {
+      "domainStrategy": "IPIfNonMatch",
       "rules": [
         {
           "type": "field",
-          "domain": [
-            "google.com",
-          ],
-          "outboundTag": "direct" // google.com 直连
-        },
-        {
-          "type": "field",
-          "ip": [            // 以下 IP 段将被转到 Freedom
+          "ip": [
             "0.0.0.0/8",
             "10.0.0.0/8",
             "100.64.0.0/10",
@@ -74,7 +91,11 @@
             "fc00::/7",
             "fe80::/10"
           ],
-          "outboundTag": "direct" // Freedom 的标签
+          "outboundTag": "direct"
+        },
+        {
+          "type": "chinaip",
+          "outboundTag": "direct"
         }
       ]
     }
