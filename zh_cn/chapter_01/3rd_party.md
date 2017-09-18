@@ -6,21 +6,6 @@
 
 下面的列表包含了目前已知的第三方 V2Ray 客户端以及简单介绍，排名不分先后。
 
-### V2RayN
-
-*新手友好*
-
-* 平台: Windows
-* 链接: https://github.com/v2ray/v2rayN
-* 功能：
-  * 使用 V2Ray 内核：&#10004;
-  * 兼容 VMess 协议：&#10004;
-  * 兼容 Shadowsocks 协议：&#10004;
-* 分发方式：
-  * 开源：&#10004;
-  * 预编译程序：&#10004;
-  * 应用商店：&#10008;
-
 ### V2Ray Taskbar
 
 * 平台：Windows
@@ -63,6 +48,21 @@
 ### V2RayW
 * 平台：Windows
 * 链接：https://github.com/Cenmrev/V2RayW
+* 功能：
+  * 使用 V2Ray 内核：&#10004;
+  * 兼容 VMess 协议：&#10004;
+  * 兼容 Shadowsocks 协议：&#10004;
+* 分发方式：
+  * 开源：&#10004;
+  * 预编译程序：&#10004;
+  * 应用商店：&#10008;
+  
+### V2RayN [停止维护]
+
+*新手友好*
+
+* 平台: Windows
+* 链接: https://github.com/v2ray/v2rayN
 * 功能：
   * 使用 V2Ray 内核：&#10004;
   * 兼容 VMess 协议：&#10004;
