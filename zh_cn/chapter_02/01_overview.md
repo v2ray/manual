@@ -39,10 +39,10 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 其中：
 
 * `access`: 访问日志的文件地址，其值可以是：
-  * 一个合法的文件地址，如`"/tmp/v2ray/_access.log"`（Linux）或者`"C:\\Temp\\v2ray\\_access.log"`（Windows）；
+  * 一个合法的文件地址，如`"/tmp/v2ray/_access.log"`（Linux）或者`"C:\\Temp\\v2ray\\_access.log"`（Windows绝对路径）或者`".\\_access.log"`（Windows相对路径，亦可写为`"..\\V2Ray\\_access.log"`）；
   * 或者留空表示不记录访问日志。
 * `error`: 错误日志的文件地址，其值可以是：
-  * 一个合法的文件地址，如`"/tmp/v2ray/_error.log"`（Linux）或者`"C:\\Temp\\v2ray\\_error.log"`（Windows）；
+  * 一个合法的文件地址，如`"/tmp/v2ray/_error.log"`（Linux）或者`"C:\\Temp\\v2ray\\_error.log"`（Windows绝对路径）或者`".\\_error.log"`（Windows相对路径，亦可写为`"..\\V2Ray\\_error.log"`）；
   * 或者留空表示不记录错误日志。
 * `loglevel`: 错误日志的级别，可选的值为`"debug"`、`"info"`、`"warning"`、`"error"` 和 `"none"`：
   * 其中`"debug"`记录的数据最多，`"error"`记录的最少；
