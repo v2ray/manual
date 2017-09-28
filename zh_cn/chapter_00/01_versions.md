@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.09.29 v2.39
+
+* 当远程服务器关闭连接时，传入代理现在会尽快断开与客户端的连接。
+* 默认连接超时时间更改为 5 分钟。
+
 ## 2017.05.12 v2.27
 
 * 路由中新增了“域名”匹配选项。
