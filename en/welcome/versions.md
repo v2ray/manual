@@ -2,6 +2,11 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.09.29 v2.39
+
+* Inbound proxies now close connections more quickly when remote server closes them.
+* Default connection timeout changes to 5 minutes.
+
 ## 2017.05.12 v2.27
 
 * New domain mode in router.
