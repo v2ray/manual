@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.10.06 v2.40
+
+* 修复了导致内存泄漏的问题。
+
 ## 2017.09.29 v2.39
 
 * 当远程服务器关闭连接时，传入代理现在会尽快断开与客户端的连接。
