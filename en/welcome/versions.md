@@ -2,6 +2,11 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+
+## 2017.10.06 v2.40
+
+* Fix an issue that causes memory leak.
+
 ## 2017.09.29 v2.39
 
 * Inbound proxies now close connections more quickly when remote server closes them.
