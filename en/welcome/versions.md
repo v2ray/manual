@@ -2,6 +2,10 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.10.27 v2.44
+
+* HTTP now supports Basic Authentication.
+* Some bugs are fixed.
 
 ## 2017.10.06 v2.40
 

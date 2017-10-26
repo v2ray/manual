@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.10.27 v2.44
+
+* HTTP 代理中加入了 Basic Authentication 支持。
+* 修复了一些 bug。
+
 ## 2017.10.06 v2.40
 
 * 修复了导致内存泄漏的问题。
