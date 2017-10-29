@@ -72,7 +72,7 @@
               "17un.co"
             ],
             "outboundTag": "block_request"
-            }，
+            },
             {
               "type": "field",
               "ip": [
@@ -80,7 +80,7 @@
                 "23.34.45.56"
               ],
               "outboundTag": "block_request"
-            }，
+            },
           // ========== END STEP 2 ==========
         {
           "type": "field",
