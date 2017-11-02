@@ -2,6 +2,12 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.11.03 v2.46
+
+* Router now supports `geosite:cn`, equivalent to existing `chinasites`, but more flexible.
+* Router now supports `geoip`.
+  * File `geoip.dat` is added to release packages. This file contains all `geoip` information and has to stay in the same directory of `v2ray` program. Due to delayed update of installation script, you may have to copy the file manually.
+
 ## 2017.10.27 v2.44
 
 * HTTP now supports Basic Authentication.

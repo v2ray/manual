@@ -2,6 +2,12 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.11.03 v2.46
+
+* 路由中添加 `geosite:cn`，等效于现有的`chinasites`，但更加灵活。
+* 路由中添加 `geoip`。
+  * 安装包中新增了`geoip.dat`文件，包含所有`geoip`信息，此文件必须和`v2ray`程序放置于同一路径下。由于安装脚本未及时更新，服务器端和部分客户端可能需要手动复制此文件。
+
 ## 2017.10.27 v2.44
 
 * HTTP 代理中加入了 Basic Authentication 支持。
