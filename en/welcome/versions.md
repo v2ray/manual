@@ -7,6 +7,7 @@
 * Router now supports `geosite:cn`, equivalent to existing `chinasites`, but more flexible.
 * Router now supports `geoip`.
   * File `geoip.dat` is added to release packages. This file contains all `geoip` information and has to stay in the same directory of `v2ray` program. Due to delayed update of installation script, you may have to copy the file manually.
+* Program `v2ctl` is added to release packages. You may run `v2ctl verify /path/to/v2ray` to verify the signature of `v2ray` program.
 
 ## 2017.10.27 v2.44
 
