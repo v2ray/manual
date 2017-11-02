@@ -4,7 +4,7 @@
 
 ```javascript
 {
-  "log" : {                                 // [日志](../chapter_02/01_overview.md)
+  "log": {                                  // [日志](../chapter_02/01_overview.md)
     "access": "/var/log/v2ray/access.log",  // 访问日志文件
     "error": "/var/log/v2ray/error.log",    // 错误日志文件
     "loglevel": "warning"                   // 错误日志等级
@@ -18,9 +18,9 @@
           "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // UUID
           "level": 1,       // 用户等级
           "alterId": 64     // 额外ID
-        }
+        },
         // 在这里添加更多用户，注意UUID不能重复
-        ,{
+        {
           "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy", // UUID
           "level": 0,       // 用户等级
           "alterId": 32     // 额外ID
@@ -51,10 +51,10 @@
       "protocol": "blackhole",
       "settings": {},
       "tag": "blocked"
-    }
+    },
     // ========== BEGIN STEP 2 ==========
     // 增加freedom传出绕路，国内流量直接放行
-    ,{
+    {
       "protocol": "freedom",
       "tag": "direct",
       "settings": {}
@@ -65,21 +65,22 @@
     "strategy": "rules",
     "settings": {
       "rules": [
-          // ========== BEGIN STEP 3 ==========
-          // 配置国内网站和IP直连规则
-          {
-            "type": "chinaip", // 对于所有国内的 IP，都采用直连模式
-            "outboundTag": "direct"
-          },
-          {
-            "type": "field",  // 对于一些常见的网站，也使用直连模式
-            "domain": [
-              "qq.com",
-              "baidu.com"
-            ],
-            "outboundTag": "direct"
-          },
-          // ========== END STEP 3 ==========
+        // ========== BEGIN STEP 3 ==========
+        // 配置国内网站和IP直连规则
+        {
+          "type": "chinaip", // 对于所有国内的 IP，都采用直连模式
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",  // 对于一些常见的网站，也使用直连模式
+          "domain": [
+            "qq.com",
+            "baidu.com"
+          ],
+          "outboundTag": "direct"
+        },
+        // ========== END STEP 3 ==========
+        {
           "type": "field",      // 不允许客户端访问服务端的局域网地址，以提升安全性
           "ip": [
             "0.0.0.0/8",
@@ -100,8 +101,8 @@
           ],
           "outboundTag": "blocked"
         }
-      ]
-    }
+      }
+    ]
   }
 }
 ```
