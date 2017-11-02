@@ -101,8 +101,8 @@
           ],
           "outboundTag": "blocked"
         }
-      }
-    ]
+      ]
+    }
   }
 }
 ```
