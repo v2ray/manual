@@ -81,11 +81,11 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
   * 纯字符串: 当此字符串匹配目标域名中任意部分，该规则生效。比如"sina.com"可以匹配"sina.com"、"sina.com.cn"和"www.sina.com"，但不匹配"sina.cn"。
   * 正则表达式: 由"regexp:"开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如"regexp:\\\\.goo.*\\\\.com$"匹配"www.google.com"、"fonts.googleapis.com"，但不匹配"google.com"。
   * 子域名: 由"domain:"开始，余下部分是一个域名。当此域名是目标域名或其子域名时，该规则生效。例如"domain:v2ray.com"匹配"www.v2ray.com"、"v2ray.com"，但不匹配"xv2ray.com"。
-  * 常用国内域名 (V2Ray 2.46+): 特殊值`"geosite:cn"`，内置了一些[常见的国内网站域名](https://www.v2ray.com/links/chinasites/)。
+  * 常用国内域名 (V2Ray 2.46+): 特殊值`"geosite:cn"`，内置了一些常见的国内网站域名。
 * `ip`: 一个数组，数组内每一个元素代表一个 IP 范围。当某一元素匹配目标 IP 时，此规则生效。有三种形式：
   * IP: 形如`"127.0.0.1"`。
   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-  * GeoIP (V2Ray 2.46+): 形如`"geoip:cn"`，必须已`geoip:`（小写）开头，后面跟双字符国家代码，支持几乎所有可以上网的国家。
+  * GeoIP (V2Ray 2.46+): 形如`"geoip:cn"`，必须以`geoip:`（小写）开头，后面跟双字符国家代码，支持几乎所有可以上网的国家。
 * `port`：端口范围，有两种形式：
   * `"a-b"`: a 和 b 均为正整数，且小于 65536。这个范围是一个前后闭合区间，当目标端口落在此范围内时，此规则生效。
   * `a`: a 为正整数，且小于 65536。当目标端口为 a 时，此规则生效。
