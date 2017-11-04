@@ -145,9 +145,6 @@
   },
 
   "transport": {
-    "tcpSettings": {
-      "connectionReuse": true
-    },
     "kcpSettings": {
       "mtu": 1350,
       "tti": 20,

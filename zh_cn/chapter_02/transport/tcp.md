@@ -4,7 +4,6 @@
 
 ```javascript
 {
-  "connectionReuse": true,
   "header": {
     "type": "none"
   }
@@ -13,9 +12,6 @@
 
 其中：
 
-* `connectionReuse`: 是否重用 TCP 连接，默认值为 `true`。
-  * 目前只对 VMess 起作用；
-  * 当值为 `true` 时，V2Ray 会在传输完一段数据之后，继续使用同一个 TCP 连接来传输下一段数据。
 * `header`: 数据包头部伪装设置：
   * `type`: 伪装类型，可选的值有：
     * `"none"`: 默认值，不进行伪装；
