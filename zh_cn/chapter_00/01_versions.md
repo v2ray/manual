@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.11.10 v2.47
+
+* `geosite` 的数据现在放在 `geosite.dat` 文件中了。
+* 一些修复。
+
 ## 2017.11.03 v2.46
 
 * 路由中添加 `geosite:cn`，等效于现有的`chinasites`，但更加灵活。

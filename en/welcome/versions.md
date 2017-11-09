@@ -2,6 +2,11 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.11.10 v2.47
+
+* `geosite` data is now in `geosite.dat` file.
+* Bug fixes.
+
 ## 2017.11.03 v2.46
 
 * Router now supports `geosite:cn`, equivalent to existing `chinasites`, but more flexible.
