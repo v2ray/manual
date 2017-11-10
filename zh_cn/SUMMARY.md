@@ -3,6 +3,7 @@
 * [欢迎使用 V2Ray](README.md)
   * [版本历史](chapter_00/01_versions.md)
   * [捐助支持](chapter_00/02_donate.md)
+    * [贡献你的 CPU](chapter_00/cpu.md)
   * [私下联系](chapter_00/pgp.md)
   * [常见问题](chapter_00/faq.md)
 * 新手入门
