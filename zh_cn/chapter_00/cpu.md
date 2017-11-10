@@ -18,3 +18,25 @@
 	data-graph="#757575">
 	<em>Loading...</em>
 </div>
+
+<div id="summary"></div>
+
+<script>
+function loadsummary() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var j = JSON.parse(this.responseText);
+	  var xmr = j.xmrPending + xmrPaid;
+	  var usd = xmr * 100
+      document.getElementById("summary").innerHTML = "目前总共已挖出 " + xmr.toFixed(5) + " XMR，约合 " + usd.toFixed(2) + " USD。";
+    }
+  };
+  xhr.open("GET", "/coinhive/site/v2raycom", true);
+  xhr.send();
+}
+if (XMLHttpRequest) {
+	setTimeout(loadsummary, 2 * 1000);
+	setInterval(loadsummary, 30 * 1000);
+}
+</script>
