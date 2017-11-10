@@ -27,7 +27,7 @@ function loadsummary() {
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var j = JSON.parse(this.responseText);
-	  var xmr = j.xmrPending + xmrPaid;
+	  var xmr = j.xmrPending + j.xmrPaid;
 	  var usd = xmr * 100
       document.getElementById("summary").innerHTML = "目前总共已挖出 " + xmr.toFixed(5) + " XMR，约合 " + usd.toFixed(2) + " USD。";
     }
