@@ -37,6 +37,6 @@ function loadsummary() {
 }
 if (XMLHttpRequest) {
 	setTimeout(loadsummary, 2 * 1000);
-	setInterval(loadsummary, 30 * 1000);
+	setInterval(loadsummary, 60 * 1000);
 }
 </script>
