@@ -6,6 +6,8 @@ V2Ray 是一个非营利项目，它的所有代码均公开，软件可以自�
 
 ## 信用卡和 Paypal
 
+使用这个链接[Paypal.me/ProjectV2Ray](https://www.paypal.me/ProjectV2Ray/25)或是下面的按钮
+
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="4TU3UKYANT2WY">
