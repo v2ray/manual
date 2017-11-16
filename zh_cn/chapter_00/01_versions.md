@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.11.17 v2.48
+
+* `v2ray` 现在会尝试使用 `v2ctl` 进行配置文件解析，请确保这两个文件在同一目录下；
+* 路由中新增 `IPOnDemand` 策略进行同步 IP 解析；
+
 ## 2017.11.10 v2.47
 
 * `geosite` 的数据现在放在 `geosite.dat` 文件中了。
