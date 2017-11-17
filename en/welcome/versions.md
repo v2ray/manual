@@ -2,7 +2,7 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
-## 2017.11.17 v2.48
+## 2017.11.17 v2.49
 
 * `v2ray` now tried to use `v2ctl` for configuration parsing. Please make sure these 2 files are in the same directory.
 * New `IPOnDemand` strategy in routing.
