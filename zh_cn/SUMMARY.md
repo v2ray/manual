@@ -62,3 +62,4 @@
     * [静态路由](chapter_05/00_config/08_static_hosts.md)
     * [广告拦截](chapter_05/00_config/09_ad_blocker.md)
   * [网友经验](chapter_05/01_exp.md)
+* [博客](https://steemit.com/@v2ray)
