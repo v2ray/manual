@@ -62,5 +62,5 @@
     * [静态路由](chapter_05/00_config/08_static_hosts.md)
     * [广告拦截](chapter_05/00_config/09_ad_blocker.md)
   * [网友经验](chapter_05/01_exp.md)
-* [博客](https://steemit.com/@v2ray)
-* [白话文版上手教程](https://toutyrater.github.io)
+* [博客&#8618;](https://steemit.com/@v2ray)
+* [白话文版上手教程&#8618;](https://toutyrater.github.io)
