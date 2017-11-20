@@ -1,13 +1,8 @@
-# V2Ray 用户手册
+# Project V
 
-欢迎使用 V2Ray 来连接世界的另一端。
+Project V 包含一系列工具，帮助你打造专属的定制网络体系。
 
 * 语言: ![Chinese](resources/chinese.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/)
-* 下载: [![GitHub release](resources/github-release.svg)](https://github.com/v2ray/v2ray-core/releases/latest) [![IPFS](/resources/ipfs.svg)](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
-* 聊天: [![Telegram](resources/telegram.svg)](https://telegram.me/projectv2ray) [![Twitter](resources/twitter.svg)](https://twitter.com/projectv2ray)
-* 联系: [![Email](resources/email.svg)](chapter_00/pgp.md)
-
-[白话文版上手教程](https://toutyrater.github.io)
 
 ## 主要特性
 
@@ -36,6 +31,13 @@ V2Ray 在以下平台中可用：
   * 包括但不限于 Debian 7 / 8、Ubuntu 12.04 / 14.04 及后续版本、CentOS 6 / 7、Arch Linux；
 * FreeBSD (x86 / amd64)；
 * OpenBSD (x86 / amd64)；
+
+## 联系方式
+
+1. Twitter: [@projectv2ray](https://twitter.com/projectv2ray)
+1. Telegram 群组: [projectv2ray](https://t.me/projectv2ray)
+1. Telegram 公告: [v2msg](https://t.me/v2msg)
+1. 私下联系: [Email](chapter_00/pgp.md)
 
 ## 更新本站点
 

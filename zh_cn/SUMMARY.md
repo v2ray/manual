@@ -6,7 +6,7 @@
     * [贡献你的 CPU](chapter_00/cpu.md)
   * [私下联系](chapter_00/pgp.md)
   * [常见问题](chapter_00/faq.md)
-* 新手入门
+* [新手入门](chapter_01/README.md)
   * [使用方式](chapter_01/workflow.md)
   * [安装运行](chapter_01/install.md)
   * [工作原理](chapter_01/internal.md)
@@ -63,3 +63,4 @@
     * [广告拦截](chapter_05/00_config/09_ad_blocker.md)
   * [网友经验](chapter_05/01_exp.md)
 * [博客](https://steemit.com/@v2ray)
+* [白话文版上手教程](https://toutyrater.github.io)
