@@ -6,12 +6,15 @@
 
 * 支持 TCP 和 UDP 数据包转发，其中 UDP 可选择性关闭；
 * 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
-  * 可选择性关闭；
+  * 客户端可选开启或关闭；
+  * 服务器端可强制开启、关闭或自适应；
 * 加密方式：
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
+* 插件：
+  * 通过 Standalone 模式支持 obfs
 
 协议描述：
 
