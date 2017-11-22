@@ -33,6 +33,7 @@ npm install gitbook-cli -g
 
 build_dir zh_cn
 build_dir en
+build_dir eng_zh_cn
 
 TARGET_DIR=_v2ray_com
 
@@ -42,6 +43,8 @@ rm -rf ${TARGET_DIR}/*
 cp -r ./zh_cn/_book/* ${TARGET_DIR}/
 mkdir ${TARGET_DIR}/en/
 cp -r ./en/_book/* ${TARGET_DIR}/en/
+mkdir ${TARGET_DIR}/eng/
+cp -r ./eng_zh_cn/_book/* ${TARGET_DIR}/eng/
 cp -r ./_dev/* ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
