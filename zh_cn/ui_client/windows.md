@@ -6,6 +6,12 @@ V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界
 
 下载：https://github.com/Cenmrev/V2RayW
 
+## V2RayN
+
+V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。
+
+下载：https://github.com/2dust/v2rayN
+
 ## V2Ray Taskbar
 
 https://github.com/kxjhlele/v2ray-taskbar
@@ -17,7 +23,3 @@ https://github.com/hyqhyq3/v2tray
 ## V2RayZero
 
 https://github.com/htczero/V2RayZero
-  
-## V2RayN
-
-https://github.com/v2ray/v2rayN
