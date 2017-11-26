@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.12.01 v3.0
+
+* 支持 Shadowsocks AEAD
+
 ## 2017.11.18 v2.50
 
 * `v2ray` 现在会尝试使用 `v2ctl` 进行配置文件解析，请确保这两个文件在同一目录下；
