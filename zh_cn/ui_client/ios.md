@@ -4,6 +4,8 @@
 
 Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMess 或者 Shadowsocks 的 VPN 连接。Kitsunebi 支持导入和导出与 V2Ray 兼容的 JSON 配置。
 
+由于使用 V2Ray 核心，Kitsunebi 几乎支持 V2Ray 的所有功能，比如 Mux 和 mKCP。
+
 下载：[iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
 
 ## Shadowrocket
@@ -25,3 +27,10 @@ ShadowRay 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的
 一个自动化搭建 VPS 的工具，使用 Docker 技术在 Linux VPS 上自动创建所需要的服务，并监测主机状态。
 
 下载：[iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
+官网：[HyperApp.fun](https://www.hyperapp.fun/)
+
+### Termius
+
+SSH 客户端，可以直接在 iPhone 或 iPad 上操作 VPS。
+
+下载：[iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
