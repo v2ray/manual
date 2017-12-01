@@ -2,6 +2,13 @@
 
 PROJECT=$1
 
+echo "Removing previous machines."
+gcloud compute instances list --project ${PROJECT} | grep TERMINATED \
+| awk '{printf "%s --zone %s\n", $1, $2}' \
+| while read LINE; do
+  yes Y | gcloud compute instances delete ${LINE} --project ${PROJECT}
+done
+
 echo "Launching build machine."
 DIR="$(dirname "$0")"
 RAND="$(openssl rand -hex 5)"
