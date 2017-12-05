@@ -25,6 +25,7 @@
     * [Shadowsocks](chapter_02/protocols/shadowsocks.md)
     * [SOCKS](chapter_02/protocols/socks.md)
     * [VMess](chapter_02/protocols/vmess.md)
+  * [本地策略](chapter_02/policy.md)
   * [路由配置](chapter_02/03_routing.md)
   * [DNS 配置](chapter_02/04_dns.md)
   * [Mux 配置](chapter_02/mux.md)
