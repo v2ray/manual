@@ -13,12 +13,12 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 * `-version`: 只输出当前版本然后退出，不运行 V2Ray 主程序。
 * `-test`: 测试配置文件有效性，如果有问题则输出错误信息，不运行 V2Ray 主程序。
 * `-config`:
-  * 默认格式为配置文件的路径，默认值是 config.json；
+  * 配置文件的路径；
   * 当值为`stdin:`时，将从标准输入读取配置文件内容，调用者必须在输入完毕后关闭标准输入流。
+  * 当值为空时，V2Ray 将先后尝试从当前路径（Working Directory）和环境变量`v2ray.location.asset`所指定的路径中加载配置文件。
 * `-format`: 配置文件格式，可选的值有：
   * `json`: JSON 格式；
   * `pb` 或 `protobuf`: Protobuf 格式；
-
 
 ## V2Ctl
 

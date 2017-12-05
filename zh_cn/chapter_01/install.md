@@ -20,8 +20,8 @@ V2Ray 在以下平台中可用：
 预编译的压缩包可以在如下几个站点找到：
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
-3. IPFS 分流: [https://v2ray.com/download](https://v2ray.com/download)
+1. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
+1. IPFS 分流: [https://v2ray.com/download](https://v2ray.com/download)
 
 压缩包均为 zip 格式，找到对应平台的压缩包，下载解压即可使用。
 
@@ -30,7 +30,7 @@ V2Ray 在以下平台中可用：
 V2Ray 提供两种验证方式：
 
 1. 安装包 zip 文件的 SHA1 摘要，在下载页面的 metadata.txt 文件中可以找到。
-2. 可运行程序（v2ray 或 v2ray.exe）的 gpg 签名，文件位于安装包中的 v2ray.sig 或 v2ray.exe.sig。签名公钥可以[在代码库中](https://raw.githubusercontent.com/v2ray/v2ray-core/master/tools/release/verify/official_release.asc)找到。
+1. 可运行程序（v2ray 或 v2ray.exe）的 gpg 签名，文件位于安装包中的 v2ray.sig 或 v2ray.exe.sig。签名公钥可以[在代码库中](https://raw.githubusercontent.com/v2ray/v2ray-core/master/tools/release/verify/official_release.asc)找到。
 
 ## Windows 和 Mac OS 安装方式
 
