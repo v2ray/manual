@@ -20,7 +20,7 @@ V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。以下�
 
 ## 配置文件位置 (V2Ray 3.1+)
 
-* 名称：`v2ray.location.asset`
+* 名称：`v2ray.location.config`
 * 默认值：和 v2ray 文件同路径下的 config.json
 
 这个环境变量指定了一个文件的绝对路径，这个文件是 V2Ray 的配置文件。

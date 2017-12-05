@@ -12,7 +12,6 @@
   * [工作原理](chapter_01/internal.md)
   * [下载安装](chapter_01/install.md)
   * [命令行参数](chapter_01/command.md)
-  * [错误信息](chapter_01/errors.md)
   * [问题讨论](chapter_01/issue.md)
   * [白话文教程&#8618;](https://toutyrater.github.io)
 * [配置文件](chapter_02/README.md)
