@@ -5,7 +5,7 @@
 * 名称：socks
 * 类型：Inbound / Outbound
 
-## Socks 传出协议配置 (V2Ray 2.14+)
+## Socks 传出协议配置
 
 ```javascript
 {
@@ -15,7 +15,8 @@
     "users": [
       {
         "user": "test user",
-        "pass": "test pass"
+        "pass": "test pass",
+        "level": 0
       }
     ]
   }]
@@ -30,6 +31,7 @@
   * `users`: 用户列表，其中每一项为：
     * `user`: 用户名
     * `pass`: 密码
+    * `level`: 用户等级
 
 注意：
 
@@ -49,7 +51,8 @@
   ],
   "udp": false,
   "ip": "127.0.0.1",
-  "timeout": 0
+  "timeout": 0,
+  "userLevel": 0
 }
 ```
 
@@ -60,4 +63,5 @@
   * 当 `auth` 为 `password` 时有效。
 * `udp`: 是否开启 UDP 协议的支持，`true` / `false`。默认值为 `false`。
 * `ip`: 当开启 UDP 时，V2Ray 需要知道本机的 IP 地址。默认值为 127.0.0.1。
-* `timeout`: 从 Socks 客户端读取数据的超时设置（秒），0 表示不限时。默认值为 `300`。
+* `timeout` (V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略): 从 Socks 客户端读取数据的超时设置（秒），0 表示不限时。默认值为 `300`。
+* `userLevel`: 用户等级，所有连接使用这一等级。
