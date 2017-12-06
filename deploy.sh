@@ -4,7 +4,7 @@ set -x
 
 curl -sL https://deb.nodesource.com/setup_7.x | bash -
 apt-get update
-apt-get -y install jq git file nodejs build-essential dbus
+apt-get -y install jq git file nodejs build-essential
 
 function build_dir {
   DIR="$1"
@@ -58,4 +58,4 @@ git commit -m 'update'
 git push "https://${GITHUB_TOKEN}@github.com/v2ray/v2ray.github.io.git" master
 popd
 
-shutdown -h +5
+shutdown -h now
