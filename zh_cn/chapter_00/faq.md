@@ -41,4 +41,11 @@
 
 ### 访问 Google 时，浏览器中显示证书无效
 
-你的 DNS 缓存可能已被污染，需要在使用代理的情况下，清空缓存并重新抓取 DNS 数据。在 V2Ray 中可使用 domainOverride 功能克服一部分 DNS 污染。
+错误信息：攻击者可能会试图从 www.google.com 窃取您的信息（例如：密码、通讯内容或信用卡信息）。了解详情 NET::ERR_CERT_COMMON_NAME_INVALID
+
+原因：你的 DNS 缓存可能已被污染。
+
+解决方案：
+
+* 需要在使用代理的情况下，清空缓存并重新抓取 DNS 数据
+* 在 V2Ray 中可使用 domainOverride 功能克服一部分 DNS 污染。
