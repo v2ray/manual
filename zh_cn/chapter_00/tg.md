@@ -4,7 +4,7 @@ Project V 提供了下列讨论组，用于讨论不同类型的问题。
 
 1. [开发](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ)：用于讨论 Project V 开发和未来规划。
 1. [使用](https://telegram.me/projectv2ray)：用于讨论 Project V 使用相关问题。
-1. [日常](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg)：用于其它不相当的话题。
+1. [日常](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg)：用于其它不相关的话题。
 
 另外请关注 [Project V 官方公告](https://t.me/v2msg) 以获得最新资讯。
 
