@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.12.08 v3.1
+
+* 支持[本地策略](../chapter_02/policy.md)
+* 支持从环境变量指定的路径加载配置文件
+
 ## 2017.12.01 v3.0
 
 * 支持 Shadowsocks AEAD

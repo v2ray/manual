@@ -2,6 +2,11 @@
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.12.08 v3.1
+
+* Support policy.
+* Config file location can be specified via environment variable.
+
 ## 2017.12.01 v3.0
 
 * Support Shadowsocks AEAD
