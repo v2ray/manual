@@ -1,10 +1,10 @@
 # 环境变量
 
-V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。以下所有的环境变量名称中，`.` 都可以被替换为 `_`，即 `v2ray_location_asset` 等价于 `v2ray.location.asset`。
+V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。
 
 ## 每个连接的缓存大小
 
-* 名称：`v2ray.ray.buffer.size`
+* 名称：`v2ray.ray.buffer.size` 或 `V2RAY_RAY_BUFFER_SIZE`
 * 单位：MBytes
 * 默认值：10
 * 特殊值：0 表示缓存无上限
@@ -13,14 +13,14 @@ V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。以下�
 
 ## 资源文件路径
 
-* 名称：`v2ray.location.asset`
+* 名称：`v2ray.location.asset` 或 `V2RAY_LOCATION_ASSET`
 * 默认值：和 v2ray 文件同路径
 
 这个环境变量指定了一个文件夹位置，这个文件夹应当包含 geoip.dat 和 geosite.dat 文件。
 
 ## 配置文件位置 (V2Ray 3.1+)
 
-* 名称：`v2ray.location.config`
+* 名称：`v2ray.location.config` 或 `V2RAY_LOCATION_CONFIG`
 * 默认值：和 v2ray 文件同路径
 
 这个环境变量指定了一个文件夹位置，这个文件夹应当包含 config.json 文件。
