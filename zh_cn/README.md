@@ -29,13 +29,6 @@ V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 通过内置的路由功能，V2Ray 可以灵活地实现选择性转发、直连或是阻止部分连接。
 
-## 联系方式
-
-1. Twitter: [@projectv2ray](https://twitter.com/projectv2ray)
-1. Telegram 群组: [projectv2ray](https://t.me/projectv2ray)
-1. Telegram 公告: [v2msg](https://t.me/v2msg)
-1. 私下联系: [Email](chapter_00/pgp.md)
-
 ## 更新本站点
 
 本站点由 GitBook 生成，并托管于 GitHub。如需修改本站的内容，请向[这个 Repo](https://github.com/v2ray/manual) 提交 Pull Request。

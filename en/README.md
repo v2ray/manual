@@ -1,11 +1,14 @@
-# V2Ray User Manual
+# Project V
 
-Welcome to V2Ray. You will get connected to the rest of world.
+![English](resources/english.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/)
 
-* Language: ![English](resources/english.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/)
-* Download: [![GitHub release](resources/github-release.svg)](https://github.com/v2ray/v2ray-core/releases/latest) [![BT Sync](resources/btsync.svg)](https://link.getsync.com/#f=v2ray&sz=19E6&t=1&s=6FLYZURKW4ZI5SIE55VJXTLNAMTMILCL&i=CER544EIJKHBENRLTK6JZ4X32OTPZDTQV&v=2.3)
-* Chat: [![Telegram](resources/telegram.svg)](https://telegram.me/projectv2ray) [![Twitter](resources/twitter.svg)](https://twitter.com/projectv2ray)
-* Email: [![Email](resources/email.svg)](chapter_00/pgp.md)
+Project V is a set of tools to help you build your own privicy network over internet.
+
+## Introduction
+
+Project is provides a single core with various GUI programs. The core, V2Ray, is for network connection, routing and data processing, while GUI programs are for user friendly experience.
+
+V2Ray's reponsibility is tranfer data from its client to specified server, based on user configuration. It runs as a commandline tool. It can be configured via JSON based configuration.
 
 ## Features
 
@@ -23,17 +26,6 @@ All proxies above can be send/recieve over TLS, TCL, mKCP and more transport pro
 ### Flexible routing
 
 V2Ray has an internal router, which can be configured to proxy traffic, or send directly, or even block them.
-
-### Multiple platforms
-
-V2Ray runs on the following platforms：
-
-* Windows Vista and later (x86 / amd64);
-* Mac OS X 10.7 and later (amd64);
-* Linux 2.6.23 and later (x86 / amd64 / arm / arm64 / mips64 / mips);
-  * including but not limited to Debian 7 / 8, Ubuntu 12.04 / 14.04 and later, CentOS 6 / 7, Arch Linux;
-* FreeBSD (x86 / amd64);
-* OpenBSD (x86 / amd64);
 
 ## Update this site
 

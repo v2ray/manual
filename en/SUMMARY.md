@@ -3,7 +3,9 @@
 * [Welcome to V2Ray](README.md)
   * [Version History](welcome/versions.md)
   * [Donation](welcome/donate.md)
-  * [Private Communication](welcome/pgp.md)
+  * [Support](welcome/help.md)
+    * [Telegram](welcome/tg.md)
+    * [Private Communication](welcome/pgp.md)
 * Get Started
   * [Workflow](get_started/workflow.md)
   * [Installation](get_started/install.md)
