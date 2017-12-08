@@ -43,6 +43,6 @@ v2ctl <command> <options>
 
 ### Config
 
-`v2ray config`
+`v2ctl config`
 
 此命令没有参数，它从标准输入读取 JSON 格式的配置，然后从标准输出打印 Protobuf 格式的配置。
