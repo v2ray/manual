@@ -34,6 +34,15 @@ v2ctl <command> <options>
 
 `v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
 
+此命令用于验证一个文件是否由 Project V 官方签名。
+
+参数：
+
+* `sig`：签名文件路径，默认值为待验证文件加入'.sig'后缀。
+* 第一参数：待验证文件路径。
+
 ### Config
 
 `v2ray config`
+
+此命令没有参数，它从标准输入读取 JSON 格式的配置，然后从标准输出打印 Protobuf 格式的配置。
