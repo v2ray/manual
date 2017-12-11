@@ -11,7 +11,6 @@
   * [博客&#8618;](https://steemit.com/@v2ray)
 * [新手入门](chapter_01/README.md)
   * [使用方式](chapter_01/workflow.md)
-  * [工作原理](chapter_01/internal.md)
   * [下载安装](chapter_01/install.md)
   * [命令行参数](chapter_01/command.md)
   * [白话文教程&#8618;](https://toutyrater.github.io)
