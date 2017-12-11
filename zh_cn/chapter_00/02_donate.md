@@ -29,10 +29,6 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 * 门罗币 (XMR): 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg
 * [贡献你的 CPU](cpu.md)
 
-## 导购服务
-
-* 主机： [Vultr](https://www.vultr.com/?ref=7269307)
-
 ## 感谢您的帮助
 
 以下列表大约一周更新一次，如您已经捐款，请耐心等待。

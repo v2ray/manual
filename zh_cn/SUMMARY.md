@@ -33,7 +33,7 @@
     * [mKCP](chapter_02/transport/mkcp.md)
     * [WebSocket](chapter_02/transport/websocket.md)
   * [环境变量](chapter_02/env.md)
-* [客户端](ui_client/README.md)
+* [客户端与服务](ui_client/README.md)
   * [Windows](ui_client/windows.md)
   * [OS X](ui_client/osx.md)
   * [iOS](ui_client/ios.md)
