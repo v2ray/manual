@@ -11,4 +11,4 @@ You may want to learn the principle of V2Ray before config it, the diagram below
 * When multiple Outbound exists, Routing can be used to determine which Outbound responsible for a certain type of traffics.
   * Routing will query DNS for more information when necessary to be a factor of the determination.
 
-Specific config formats can be found in [Section 2](chapter_02/01_overview.md), Also can use [Common Configs] as a reference(../chapter_05/00_config/README.md).
+Specific config formats can be found in [Section 2](chapter_02/01_overview.md).

@@ -231,7 +231,7 @@
 
 * 修复了 HTTP 代理中一个可能导致崩溃的问题；
 * [安装脚本](../chapter_00/install.md)中增加了一些功能；
-* [DNS](../chapter_02/04_dns.md) 中增加了[静态路由](../chapter_05/00_config/08_static_hosts.md)功能；
+* [DNS](../chapter_02/04_dns.md) 中增加了静态路由功能；
 * 官方服务器地址变动；
 
 ## 2016.05.16 v1.13
@@ -287,7 +287,6 @@
 
 * 服务器端支持 Shadowsocks；
   * [协议详情](../chapter_02/02_protocols.md#shadowsocks)
-  * [配置示例](../chapter_05/00_config/06_shadowsocks.md)
 
 ## 2016.01.25 v1.5
 
