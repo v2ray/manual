@@ -4,7 +4,6 @@
   "plugins" : [
     "-fontsettings",
     
-    "anchors",
-    "feathers-collapsible-menu"
+    "anchors"
   ]
 }
