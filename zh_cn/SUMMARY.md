@@ -1,6 +1,6 @@
 # Summary
 
-* [欢迎使用 V2Ray](README.md)
+* [Project V](README.md)
   * [版本历史](chapter_00/01_versions.md)
   * [使用方式](chapter_00/workflow.md)
   * [下载安装](chapter_00/install.md)
