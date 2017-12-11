@@ -230,7 +230,7 @@
 ## 2016.05.29 v1.14
 
 * 修复了 HTTP 代理中一个可能导致崩溃的问题；
-* [安装脚本](../chapter_01/install.md)中增加了一些功能；
+* [安装脚本](../chapter_00/install.md)中增加了一些功能；
 * [DNS](../chapter_02/04_dns.md) 中增加了[静态路由](../chapter_05/00_config/08_static_hosts.md)功能；
 * 官方服务器地址变动；
 
@@ -298,7 +298,7 @@
 
 ## 2016.01.18 v1.4
 
-* 更新了[安装脚本](../chapter_01/install.md)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
+* 更新了[安装脚本](../chapter_00/install.md)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
 * 修复了一个 VMess 的内存使用问题；
 
 ## 2016.01.11 v1.3
