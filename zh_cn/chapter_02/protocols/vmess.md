@@ -69,7 +69,7 @@
 * `clients`：一组服务器认可的用户。clients 可以为空。当此配置用作动态端口时，V2Ray 会自动创建用户。
   * 其中每一个用户：
     * `id`：VMess 的用户 ID。
-    * `level`：用户等级，详见[本地策略](policy.md)
+    * `level`：用户等级，详见[本地策略](../policy.md)
     * `alterId`: 与上文传出协议中的含义相同。
     * `email`: 用户邮箱地址，用于区分不同用户的流量。
 * `detour`: 转向 outboundDetour
