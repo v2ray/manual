@@ -52,7 +52,7 @@ function doStripe(event) {
     },
     }).then(function(result) {
       console.log(result);
-      if result.redirect && result.redirect.url {
+      if (result.redirect && result.redirect.url) {
         document.location.href=result.redirect.url;
       }
     });
