@@ -52,8 +52,9 @@ function doStripe(event) {
     },
     }).then(function(result) {
       console.log(result);
-      if (result.redirect && result.redirect.url) {
-        document.location.href=result.redirect.url;
+      var src = result.source;
+      if (src && src.redirect && src.redirect.url) {
+        document.location.href=src.redirect.url;
       }
     });
 }
