@@ -60,7 +60,7 @@ function doStripe(event) {
 
 </script>
 
-支付方式：<input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="信用卡" onclick="doPaypal(event);" /> <input type="hidden" value="支付宝" onclick="doStripe(event);">
+支付方式：<input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="信用卡" onclick="doPaypal(event);" /> <input type="button" value="支付宝" onclick="doStripe(event);">
 
 <form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
