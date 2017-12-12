@@ -43,19 +43,19 @@ function doStripe(event) {
   }
   amt = amt * 85;
   var stripe = Stripe('pk_live_gnBpo8a9p6mluv62soVQtjic');
-  var src = stripe.createSource({
+  stripe.createSource({
     type: 'alipay',
     amount: amt,
     currency: 'eur',
     redirect: {
-        return_url: 'https://www.v2ray.com/chapter_00/02_donate.html',
+        return_url: 'https://www.v2ray.com/chapter_00/02_donate.html'
     },
     }).then(function(result) {
-    // handle result.error or result.source
+      console.log(result);
+      if result.redirect && result.redirect.url {
+        document.location.href=result.redirect.url;
+      }
     });
-  if (src.redirect.url) {
-    document.location.href=src.redirect.url;
-  }
 }
 
 </script>
