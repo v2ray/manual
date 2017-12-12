@@ -12,3 +12,7 @@
 ## VPS
 
 * [Vultr](https://www.vultr.com/?ref=7269307)
+
+## 数字货币
+
+* [LocalBitcoins](https://localbitcoins.com/?ch=khtm): 线下交易比特币
