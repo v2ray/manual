@@ -11,15 +11,38 @@ Notes:
 * All donations are listed below with sensitive information masked out. If you wish to be listed in other ways, please mention it when making the donation.
 * Thank you for loving Project V.
 
-## Credit Card and Paypal
+## The Usual Way
 
-Use this link: [Paypal.me/ProjectV2Ray](https://www.paypal.me/ProjectV2Ray/25) Or the button below:
+Amount: <input id="damount" type="number" min="1" step="any" value="25" />USD
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+\* Donations that less than 1 USD may be refunded due to high service fees.
+
+<script>
+function getAmount() {
+    var e = document.getElementById('damount');
+    return e.value;
+}
+
+function doPaypal(event) {
+  event.preventDefault();
+  document.getElementById('paypalamount').value = getAmount();
+  document.getElementById('paypalform').submit();
+}
+
+function doPaypalMe(event) {
+  event.preventDefault();
+  document.location.href='https://www.paypal.me/ProjectV2Ray/' + getAmount();
+}
+
+</script>
+
+Donate via: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="Credit Card" onclick="doPaypal(event);" />
+
+<form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
+<input id="paypalamount" type="hidden" name="amount" value="25">
+<input type="hidden" name="currency_code" value="usd">
 <input type="hidden" name="hosted_button_id" value="4TU3UKYANT2WY">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
 ## Cryptocurrency
