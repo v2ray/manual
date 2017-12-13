@@ -53,13 +53,17 @@ bash <(curl -L -s https://install.direct/go.sh)
 此脚本会自动安装以下文件：
 
 * `/usr/bin/v2ray/v2ray`：V2Ray 程序；
+* `/usr/bin/v2ray/v2ctl`：V2Ray 工具；
 * `/etc/v2ray/config.json`：配置文件；
+* `/usr/bin/v2ray/geoip.dat`：IP 数据文件
+* `/usr/bin/v2ray/geosite:dat`：域名数据文件
+
 
 此脚本会配置自动运行脚本。自动运行脚本会在系统重启之后，自动运行 V2Ray。目前自动运行脚本只支持带有 Systemd 的系统，以及 Debian / Ubuntu 全系列。
 
 运行脚本位于系统的以下位置：
 
-* `/lib/systemd/system/v2ray.service`: Systemd
+* `/etc/systemd/system/v2ray.service`: Systemd
 * `/etc/init.d/v2ray`: SysV
 
 脚本运行完成后，你需要：
@@ -77,7 +81,7 @@ go.sh 支持如下参数，可在手动安装时根据实际情况调整：
 * `--version`: 指定需要安装的版本，比如 `"v1.13"`。默认值为最新版本。
 * `--local`: 使用一个本地文件进行安装。如果你已经下载了某个版本的 V2Ray，则可通过这个参数指定一个文件路径来进行安装。
 
-**用例**
+示例：
 
 * 使用地址为 127.0.0.1:1080 的 SOCKS 代理下载并安装最新版本：```./go.sh -p socks5://127.0.0.1:1080```
 * 安装本地的 v1.13 版本：```./go.sh --version v1.13 --local /path/to/v2ray.zip```

@@ -2,6 +2,7 @@
 
 * [Welcome to V2Ray](README.md)
   * [Version History](welcome/versions.md)
+  * [Install](welcome/install.md)
   * [Donation](welcome/donate.md)
   * [Support](welcome/help.md)
     * [Telegram](welcome/tg.md)
