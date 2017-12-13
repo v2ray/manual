@@ -30,7 +30,7 @@ Info:
 {
   "email": "love@v2ray.com",
   "method": "aes-128-cfb",
-  "password": "密码",
+  "password": "password",
   "udp": false,
   "level": 0,
   "ota": true
@@ -63,8 +63,8 @@ Info:
       "email": "love@v2ray.com",
       "address": "127.0.0.1",
       "port": 1234,
-      "method": "加密方式",
-      "password": "密码",
+      "method": "method",
+      "password": "password",
       "ota": false,
       "level": 0
     }

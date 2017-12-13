@@ -1,8 +1,8 @@
-# WebSocket 传输方式
+# WebSocket
 
-使用标准的 WebSocket 来传输数据。WebSocket 连接可以被其它 HTTP 服务器（如 NGINX）分流。
+Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
 
-配置：
+Configuration:
 
 ```javascript
 {
@@ -13,7 +13,7 @@
 }
 ```
 
-其中：
+Where:
 
-* `path`: WebSocket 所使用的 HTTP 协议路径，默认值为 `""`。
-* `headers`: 自定义 HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是字符串。默认值为空。
+* `path`: Path used for WebSocket. Default to root, as `""`。
+* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.

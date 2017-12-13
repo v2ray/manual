@@ -1,5 +1,7 @@
 # 配置文件
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/)
+
 V2Ray 的配置文件为 JSON 格式，如果你已经熟悉 JSON 格式，可以跳过这一段。
 
 JSON，全称 [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON)，简而言之是 Javascript 中的对象（Object）。一个 JSON 文件包含一个完整的对象，以大括号“{”开头，大括号“}”结束。

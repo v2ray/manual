@@ -1,5 +1,7 @@
 # V2Ray 协议列表
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols.html)
+
 V2Ray 支持以下协议：
 
 * [Blackhole](protocols/blackhole.md)

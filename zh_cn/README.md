@@ -1,6 +1,6 @@
 # Project V
 
-![Chinese](resources/chinese.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/)
+![Chinese](resources/chinesec.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/)
 
 Project V 包含一系列工具，帮助你打造专属的定制网络体系。
 

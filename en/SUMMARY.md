@@ -11,7 +11,7 @@
     * [Private Communication](welcome/pgp.md)
 * [Configuration](configuration/README.md)
   * [Overview](configuration/01_overview.md)
-  * [Protocols](configuration/02_protocols.md)
+  * [Protocols](configuration/protocols.md)
     * [Blackhole](configuration/protocols/blackhole.md)
     * [Dokodemo](configuration/protocols/dokodemo.md)
     * [Freedom](configuration/protocols/freedom.md)
