@@ -1,5 +1,7 @@
 # Summary
 
+![English](resources/english.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
+
 * [Welcome to V2Ray](README.md)
   * [Version History](welcome/versions.md)
   * [Install](welcome/install.md)
@@ -7,13 +9,7 @@
   * [Support](welcome/help.md)
     * [Telegram](welcome/tg.md)
     * [Private Communication](welcome/pgp.md)
-* Get Started
-  * [Workflow](get_started/workflow.md)
-  * [Principle](get_started/internal.md)
-  * [Error messages](get_started/errors.md)
-  * [Clients](get_started/3rd_party.md)
-* Configuration
-  * [JSON](configuration/json.md)
+* [Configuration](configuration/README.md)
 * [Clients](ui_client/README.md)
   * [Windows](ui_client/windows.md)
   * [OS X](ui_client/osx.md)
