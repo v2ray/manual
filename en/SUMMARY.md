@@ -9,11 +9,14 @@
     * [Private Communication](welcome/pgp.md)
 * Get Started
   * [Workflow](get_started/workflow.md)
-  * [Installation](get_started/install.md)
   * [Principle](get_started/internal.md)
   * [Error messages](get_started/errors.md)
-  * [Issues](get_started/issue.md)
-  * [Hardware Requirements](get_started/hardware.md)
   * [Clients](get_started/3rd_party.md)
 * Configuration
   * [JSON](configuration/json.md)
+* [Clients](ui_client/README.md)
+  * [Windows](ui_client/windows.md)
+  * [OS X](ui_client/osx.md)
+  * [iOS](ui_client/ios.md)
+  * [Android](ui_client/android.md)
+  * [Services](ui_client/service.md)
