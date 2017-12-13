@@ -1,5 +1,7 @@
 # 下载安装
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html)
+
 ## 平台支持 {#platform}
 
 V2Ray 在以下平台中可用：

@@ -1,5 +1,7 @@
 # 寻求帮助
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html)
+
 在讨论问题之前请先阅读下面的内容，以提高问题的质量和解决效率。
 
 ## 语言

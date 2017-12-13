@@ -1,6 +1,6 @@
 # Project V
 
-![English](resources/english.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/)
+![English](resources/englishc.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/)
 
 Project V is a set of tools to help you build your own privicy network over internet.
 

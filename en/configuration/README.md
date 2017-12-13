@@ -1,5 +1,7 @@
 # Configuration
 
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
+
 V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
 
 JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".

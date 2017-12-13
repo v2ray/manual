@@ -1,5 +1,7 @@
 # Telegram 讨论组
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/tg.html)
+
 Project V 提供了下列讨论组，用于讨论不同类型的问题。
 
 1. [开发](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ)：用于讨论 Project V 开发和未来规划。
