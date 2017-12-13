@@ -1,10 +1,12 @@
 # Dokodemo-door
 
-Dokodemo door（任意门）是一个传入数据协议，它可以监听一个本地端口，并把所有进入此端口的数据发送至指定服务器的一个端口，从而达到端口映射的效果。
+Dokodemo door is a protocol for inbound connections. It take any connections and passes them to the specified destination.
 
-* 名称：dokodemo-door
-* 类型：Inbound
-* 配置：
+Dokodemo door can also (if configured) work as a transparent proxy.
+
+* Name: dokodemo-door
+* Type: Inbound
+* Configuration:
 
 ```javascript
 {
@@ -17,22 +19,22 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
 }
 ```
 
-其中：
+Where:
 
-* `address`: 指定服务器的地址，可以是一个 IPv4、IPv6 或者域名，字符串类型。
-  * 当 `followRedirect`（见下文）为 `true` 时，`address` 可为空。
-* `port`: 指定服务器的端口，数值类型。
-* `network`: 指定服务器的网络协议类型，可选值为“tcp”或“udp”。
-* `timeout` (V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略): 传入数据的时间限制（秒），默认值为 300。
-* `followRedirect`: 当值为 `true` 时，dokodemo-door 会识别出由 iptables 转发而来的数据，并转发到相应的目标地址。
-  * 目前只支持 Linux。
-  * 支持 TCP/IPv4 连接。
-  * 支持 UDP/IPv4 连接，需要 root (CAP\_NET\_ADMIN) 权限。
-* `userLevel`: 用户等级，所有连接都会使用这个用户等级。
+* `address`: Address of the destination server. May be an IPv4, IPv6 or a domain, in string form.
+  * when `followRedirect` (see below) is `true`, `address` can be empty.
+* `port`: Port of the destination server. Integer.
+* `network`: Type of network, either "tcp" or "udp".
+* `timeout` (Deprecated, equivalent to `connIdle` in Policy): Timeout for idle connection in seconds. Default value 300.
+* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination.
+  * Only works on Linux
+  * Supports TCP/IPv4 connections
+  * Supports UDP/IPv4 packets. Requires root (CAP\_NET\_ADMIN) permission
+* `userLevel`: User level. All connections share this level. See [Policy](../policy.md) for details.
 
-## 透明代理配置样例
+## Examples for transparent proxy
 
-V2Ray 中增加一个 dokodemo-door 的传入协议：
+Add a dokodemo-door inbound as below.
 
 ```javascript
 {
@@ -42,7 +44,7 @@ V2Ray 中增加一个 dokodemo-door 的传入协议：
 }
 ```
 
-配置 iptables：
+Configure iptables as below.
 
 ```plain
 # Create new chain

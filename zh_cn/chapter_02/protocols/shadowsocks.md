@@ -47,7 +47,7 @@
   * `"chacha20-ietf"`
   * `"aes-256-gcm"` (V2Ray 3.0+)
   * `"aes-128-gcm"` (V2Ray 3.0+)
-  * `"chacha20-poly1305"` (V2Ray 3.0+)
+  * `"chacha20-poly1305"` 或 `"chacha20-ietf-poly1305"` (V2Ray 3.0+)
 * `password`: 密码，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 * `udp`: `true` / `false`，是否开启 UDP 转发，默认值为 `false`。
 * `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见[本地策略](policy.md)。
@@ -84,7 +84,7 @@
   * `"chacha20-ietf"`
   * `"aes-256-gcm"` (V2Ray 3.0+)
   * `"aes-128-gcm"` (V2Ray 3.0+)
-  * `"chacha20-poly1305"` (V2Ray 3.0+)
+  * `"chacha20-poly1305"` 或 `"chacha20-ietf-poly1305"` (V2Ray 3.0+)
 * `password`: 密码，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 * `ota`: 是否开启 Shadowsocks 的一次验证（One time auth）。
   * 当使用 AEAD 时，`ota` 设置无效

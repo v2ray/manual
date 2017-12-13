@@ -14,7 +14,6 @@
   * [博客&#8618;](https://steemit.com/@v2ray)
   * [白话文教程&#8618;](https://toutyrater.github.io)
 * [配置文件](chapter_02/README.md)
-  * [JSON](chapter_02/00_json.md)
   * [文件格式](chapter_02/01_overview.md)
   * [协议列表](chapter_02/02_protocols.md)
     * [Blackhole](chapter_02/protocols/blackhole.md)
