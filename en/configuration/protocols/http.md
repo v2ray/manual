@@ -8,7 +8,6 @@ HTTP is a protocols for inbound connections. It is compatible with HTTP 1.1.
 
 ```javascript
 {
-  "timeout": 0,
   "accounts": [
     {
       "user": "my-username",
@@ -22,7 +21,6 @@ HTTP is a protocols for inbound connections. It is compatible with HTTP 1.1.
 
 Where:
 
-* `timeout` (Deprecated, equivalent to `connIdle` in Policy): Timeout for idle connections in seconds. Default value 300.
 * `accounts`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty.
   * If `accounts` is not empty，HTTP uses Basic Authentication for user verification.
 * `allowTransparent`: If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.

@@ -13,7 +13,6 @@ Dokodemo door can also (if configured) work as a transparent proxy.
   "address": "8.8.8.8",
   "port": 53,
   "network": "tcp",
-  "timeout": 0,
   "followRedirect": false,
   "userLevel": 0
 }
@@ -25,7 +24,6 @@ Where:
   * when `followRedirect` (see below) is `true`, `address` can be empty.
 * `port`: Port of the destination server. Integer.
 * `network`: Type of network, either "tcp" or "udp".
-* `timeout` (Deprecated, equivalent to `connIdle` in Policy): Timeout for idle connection in seconds. Default value 300.
 * `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination.
   * Only works on Linux
   * Supports TCP/IPv4 connections

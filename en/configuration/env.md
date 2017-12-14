@@ -1,26 +1,26 @@
-# 环境变量
+# Environment Variables
 
-V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。
+V2Ray reads the following environment variables.
 
-## 每个连接的缓存大小
+## Cache size per connection
 
-* 名称：`v2ray.ray.buffer.size` 或 `V2RAY_RAY_BUFFER_SIZE`
-* 单位：MBytes
-* 默认值：10
-* 特殊值：0 表示缓存无上限
+* Name: `v2ray.ray.buffer.size` or `V2RAY_RAY_BUFFER_SIZE`
+* Unit: MBytes
+* Default value: 10
+* Special value: 0 for unlimited cache size
 
-对于一个代理连接，当上下游网络速度有差距时，V2Ray 会缓存一部分数据，以减小对网络传输的影响。这个配置设置了缓存的大小，越大的缓存会占用更多的内存，也会使网络性能越好。
+For each connection, when there is a difference in speed between inbound and outbound traffic, V2Ray will cache some data for larger throughput. This setting controls the size of the cache. The larger the cache, the better the performance.
 
-## 资源文件路径
+## Location of V2Ray asset
 
-* 名称：`v2ray.location.asset` 或 `V2RAY_LOCATION_ASSET`
-* 默认值：和 v2ray 文件同路径
+* Name: `v2ray.location.asset` or `V2RAY_LOCATION_ASSET`
+* Default value: Same directory where v2ray is.
 
-这个环境变量指定了一个文件夹位置，这个文件夹应当包含 geoip.dat 和 geosite.dat 文件。
+This variable specifies a directory where geoip.dat and geosite.dat files are.
 
-## 配置文件位置 (V2Ray 3.1+)
+## Location of V2Ray config
 
-* 名称：`v2ray.location.config` 或 `V2RAY_LOCATION_CONFIG`
-* 默认值：和 v2ray 文件同路径
+* Name: `v2ray.location.config` or `V2RAY_LOCATION_CONFIG`
+* Default value: Same directory where v2ray is.
 
-这个环境变量指定了一个文件夹位置，这个文件夹应当包含 config.json 文件。
+This variable specifies a directory where config.json is.
