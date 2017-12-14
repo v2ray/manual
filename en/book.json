@@ -12,7 +12,8 @@
         "user": "v2ray",
         "repo": "v2ray-core",
         "type": "star",
-        "size": "large"
+        "size": "small",
+        "count": true
       }]
     }
   }
