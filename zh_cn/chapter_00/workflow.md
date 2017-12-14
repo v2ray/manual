@@ -1,5 +1,7 @@
 # 工作机制
 
+![Chinese](resources/chinesec.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/welcome/workflow.html)
+
 ## 单服务器模式
 
 和其它的网络代理工具一样，你需要在一台配置了 V2Ray 的服务器，然后在自己的设备上安装 V2Ray 客户端，然后即可流畅地访问互联网。
