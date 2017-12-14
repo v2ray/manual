@@ -1,5 +1,7 @@
 # WebSocket 传输方式
 
+![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/websocket.html)
+
 使用标准的 WebSocket 来传输数据。WebSocket 连接可以被其它 HTTP 服务器（如 NGINX）分流。
 
 配置：

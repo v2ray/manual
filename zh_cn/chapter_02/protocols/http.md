@@ -1,5 +1,7 @@
 # HTTP
 
+![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html)
+
 HTTP 是一个传入数据协议，兼容 HTTP 1.x 代理。
 
 * 名称：http

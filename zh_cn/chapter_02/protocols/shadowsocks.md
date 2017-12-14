@@ -1,5 +1,7 @@
 # Shadowsocks
 
+![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html)
+
 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含传入和传出两部分，兼容大部分其它版本的实现。
 
 与官方版本的兼容性：

@@ -1,6 +1,6 @@
 # Workflow
 
-![English](resources/englishc.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
 
 ## Single Server
 

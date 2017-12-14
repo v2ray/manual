@@ -1,5 +1,7 @@
 # Freedom
 
+![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/freedom.html)
+
 Freedom 是一个传出数据协议，可以用来向任意网络发送（正常的） TCP 或 UDP 数据。
 
 * 名称：freedom

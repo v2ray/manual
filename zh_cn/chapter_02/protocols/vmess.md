@@ -1,5 +1,7 @@
 # VMess
 
+![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/vmess.html)
+
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
 
 * 名称：vmess

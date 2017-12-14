@@ -1,5 +1,7 @@
 # TCP 传输方式
 
+![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/tcp.html)
+
 配置：
 
 ```javascript
