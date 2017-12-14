@@ -1,5 +1,7 @@
 # HTTP
 
+![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html)
+
 HTTP is a protocols for inbound connections. It is compatible with HTTP 1.1.
 
 * Name: http

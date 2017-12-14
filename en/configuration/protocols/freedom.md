@@ -1,5 +1,7 @@
 # Freedom
 
+![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html)
+
 Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
 
 * Name: freedom

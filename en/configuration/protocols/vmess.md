@@ -1,11 +1,11 @@
 # VMess
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
 
-* 名称：vmess
-* 类型：Inbound / Outbound
+* Name: vmess
+* Type: Inbound / Outbound
 
-## VMess 传出协议配置
+## Outbound Proxy Configuration
 
 ```javascript
 {
@@ -26,23 +26,23 @@
 }
 ```
 
-其中：
+Where:
 
-* `vnext`：一个数组，包含一系列的服务器配置，其中每一个服务器：
-  * `address`：服务器地址，支持 IP 地址或者域名。
-  * `port`：服务器端口号。
-  * `users`：一组服务器认可的用户，其中每一个用户：
-    * `id`：VMess 用户的主 ID。
-    * `alterId`：为了进一步防止被探测，一个用户可以在主 ID 的基础上，再额外生成多个 ID。这里只需要指定额外的 ID 的数量，推荐值为 32。不指定的话，默认值是 `0`。最大值 `65535`。这个值必须和服务器端所指定的值相同。
-    * `level`: 用户等级
-    * `security`：加密方式，客户端将使用配置的加密方式发送数据，服务器端自动识别，无需配置。可选的值有：
+* `vnext`: An array, where each entry is a remote server
+  * `address`: Server address, may be IPv4, IPv6 or domain name.
+  * `port`: Server port
+  * `users`: An array where each entry is an VMess user
+    * `id`: User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32.
+    * `level`: User level. See [Policy](../Policy.md) for more detail.
+    * `security`: Encryption method. Options are:
       * `"aes-128-cfb"`
-      * `"aes-128-gcm"`：推荐在 PC 上使用
-      * `"chacha20-poly1305"`：推荐在手机端使用
-      * `"auto"`：默认值，自动选择（运行框架为amd64和s390x时为aes-128-gcm加密方式，其他情况则为chacha20-poly1305加密方式）
-      * `"none"`：不加密
+      * `"aes-128-gcm"`: Recommended for PC.
+      * `"chacha20-poly1305"`: Recommended for mobile.
+      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64 and S390x, or `chacha20-poly1305` otherwise.
+      * `"none"`: Traffic is not encrypted at all.
 
-## VMess 传入协议配置：
+## Inbound Proxy Configuration
 
 ```javascript
 {
@@ -66,14 +66,14 @@
 
 其中：
 
-* `clients`：一组服务器认可的用户。clients 可以为空。当此配置用作动态端口时，V2Ray 会自动创建用户。
-  * 其中每一个用户：
-    * `id`：VMess 的用户 ID。
-    * `level`：用户等级，详见[本地策略](../policy.md)
-    * `alterId`: 与上文传出协议中的含义相同。
-    * `email`: 用户邮箱地址，用于区分不同用户的流量。
-* `detour`: 转向 outboundDetour
-  * `to`: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
-* `default`: 可选，clients 的默认配置
-  * `level`: 用户等级，意义同上。默认值为`0`。
-  * `alterId`: 同 Inbound，默认值为`64`。
+* `clients`: An array for valid user accounts. May be empty when used for dynamic port feature.
+  * Each client contains:
+    * `id`: User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    * `level`：User level. See [Policy](../policy.md)
+    * `alterId`: Number of alternative IDs. Same as in Inbound. Value must be the same as connecting clients.
+    * `email`: Email address to identify users.
+* `detour`: Optional feature to suggest client to take a detour.
+  * `to`: The tag of an outbound proxy. See [Overview](../02_protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
+* `default`: Optional default client configuration. Usually used in detour proxy.
+  * `level`: User level.
+  * `alterId`: Number of alternative IDs. Default value 64.

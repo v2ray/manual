@@ -1,5 +1,7 @@
 # WebSocket
 
+![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html)
+
 Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
 
 Configuration:
