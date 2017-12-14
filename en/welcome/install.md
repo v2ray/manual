@@ -1,5 +1,7 @@
 # Download & Install
 
+![English](resources/englishc.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html)
+
 ## Platform
 
 V2Ray is available on the following platforms:

@@ -1,5 +1,7 @@
 # Support
 
+![English](resources/englishc.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html)
+
 Please read the following guidelines for better discussion quality and quicker solution.
 
 ## Language
