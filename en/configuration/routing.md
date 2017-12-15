@@ -100,29 +100,3 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 * 当多个属性同时指定时，这些属性需要同时满足，才可以使当前规则生效；
   * 如果多个规则分别使用了`domain`或者`ip`，需要对应添加多条规则；
 * 当一个网络连接指定了域名，而一个规则中只有 IP 规则，没有域名规则，则这个规则永远不会生效，反之亦然。
-
-## chinaip
-
-此规则配置如下，没有额外属性。
-
-```javascript
-{
-  "type": "chinaip",
-  "outboundTag": "direct"
-}
-```
-
-chinaip 会匹配所有中国境内的 IP，目前只包含 IPv4 数据。IP 段信息由 [ChinaDNS](https://github.com/shadowsocks/ChinaDNS) 中给出的脚本生成。
-
-## chinasites
-
-此规则配置如下，没有额外属性。
-
-```javascript
-{
-  "type": "chinasites",
-  "outboundTag": "direct"
-}
-```
-
-同上述的`"geosite:cn"`，如果目标域名为这些域名其中之一时，此规则生效。
