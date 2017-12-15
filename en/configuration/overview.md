@@ -142,11 +142,11 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 其中：
 
 * `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
+* `protocol`: 连接协议名称，可选的值见[协议列表](protocols.md)。
 * `settings`: 具体的配置内容，视协议不同而不同。
 * `tag`: 此传出连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `proxySettings`: 传出代理配置。
+* `streamSettings`: [底层传输配置](transport.md#分连接配置)。
+* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` on this outbound will have no effect.
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
 * `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
 
@@ -207,12 +207,12 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 
 其中：
 
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)；
+* `protocol`: 连接协议名称，可选的值见[协议列表](protocols.md)；
 * `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
 * `tag`: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
 * `settings`: 具体的配置内容，视协议不同而不同。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `proxySettings`: 传出代理配置。
+* `streamSettings`: [底层传输配置](transport.md#分连接配置)。
+* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` on this outbound will have no effect.
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
 * `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
 
