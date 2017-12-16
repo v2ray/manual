@@ -1,5 +1,7 @@
 # DNS 服务器
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html)
+
 V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转发到不同的远程服务器中。
 
 示例配置：

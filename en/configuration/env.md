@@ -1,5 +1,7 @@
 # Environment Variables
 
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html)
+
 V2Ray reads the following environment variables.
 
 ## Cache size per connection
