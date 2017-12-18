@@ -31,4 +31,8 @@ V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 ## 更新本站点
 
-本站点由 GitBook 生成，并托管于 GitHub。如需修改本站的内容，请向[这个 Repo](https://github.com/v2ray/manual) 提交 Pull Request。
+本站点由 GitBook 生成，托管于 GitHub。如需修改本站的内容，请向[这个 Repo](https://github.com/v2ray/manual) 提交 Pull Request。
+
+## 版权声明
+
+本站点所有内容基于[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/)进行许可。
