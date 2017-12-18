@@ -19,3 +19,7 @@ Where:
 
 * `path`: Path used for WebSocket. Default to root, as `""`。
 * `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+
+## Notice
+
+* Since V2Ray 3.4, Websocket recognizes X-Forwarded-For header and use it as source address of the traffic.

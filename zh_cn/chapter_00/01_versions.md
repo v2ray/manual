@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.12.22 v3.4
+
+* Websocket 现在可以识别 X-Forwarded-For 并用做源地址。
+
 ## 2017.12.08 v3.1
 
 * 支持[本地策略](../chapter_02/policy.md)

@@ -3,18 +3,6 @@
   "plugins" : [
     "-fontsettings",
     
-    "anchors",
-    "github-buttons"
-  ],
-  "pluginsConfig": {
-    "github-buttons": {
-      "buttons": [{
-        "user": "v2ray",
-        "repo": "v2ray-core",
-        "type": "star",
-        "size": "small",
-        "count": true
-      }]
-    }
-  }
+    "anchors"
+  ]
 }
