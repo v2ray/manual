@@ -5,6 +5,7 @@
 ## 2017.12.22 v3.4
 
 * Websocket nows uses value of X-Forwarded-For header as source address.
+* Support s390x CPU architecture.
 
 ## 2017.12.08 v3.1
 
