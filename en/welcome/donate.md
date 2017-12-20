@@ -48,6 +48,7 @@ Donate via: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> 
 ## Cryptocurrency
 
 * Bitcoin: [15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo](https://blockchain.info/address/15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo)
+* Bitcoin Case: [1473sDqeigUEdctzexUhxjBAiGizsS5tjD](https://blockdozer.com/insight/address/1473sDqeigUEdctzexUhxjBAiGizsS5tjD)
 * Ethereum: [0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b](https://etherscan.io/address/0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b)
 * Monero: 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg
 

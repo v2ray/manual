@@ -75,6 +75,7 @@ function doPaypalMe(event) {
 ## 极客方式
 
 * 比特币 (BTC): [15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo](https://blockchain.info/address/15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo)
+* 比特现金 (BCH): [1473sDqeigUEdctzexUhxjBAiGizsS5tjD](https://blockdozer.com/insight/address/1473sDqeigUEdctzexUhxjBAiGizsS5tjD)
 * 以太坊 (ETH): [0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b](https://etherscan.io/address/0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b)
 * 门罗币 (XMR): 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg
 * [贡献你的 CPU](cpu.md)
