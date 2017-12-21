@@ -13,8 +13,9 @@
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
-      "udp": true
-    }
+      "udp": true,
+      "auth": "noauth"  // SOCKS 代理认证设置，这里设置为 noauth 来避免配置配置文件错误的问题
+    }
   },
   "outbound": {
     "protocol": "vmess",
