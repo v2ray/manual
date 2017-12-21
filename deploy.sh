@@ -58,4 +58,4 @@ git commit -m 'update'
 git push "https://${GITHUB_TOKEN}@github.com/v2ray/v2ray.github.io.git" master
 popd
 
-shutdown -h +5
+shutdown -h now

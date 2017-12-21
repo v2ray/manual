@@ -1,5 +1,7 @@
 # DNS 服务器
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html)
+
 V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转发到不同的远程服务器中。
 
 示例配置：
@@ -32,7 +34,7 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
 
 V2Ray 内置的 DNS 会在单个 DNS 请求中同时查询 A 和 AAAA 记录。由于这种方式并不是所有 DNS 服务器都支持，V2Ray 仅对以下 DNS 服务器同时查询 A 和 AAAA 记录，对其它所有的服务器只查询 A 记录。
 
-```
+```text
 8.8.8.8
 8.8.4.4
 9.9.9.9

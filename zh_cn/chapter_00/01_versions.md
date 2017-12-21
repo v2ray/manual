@@ -1,6 +1,20 @@
 # 更新日志
 
-![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
+
+## 2017.12.22 v3.4
+
+* Websocket 现在可以识别 X-Forwarded-For 并用做源地址。
+* 支持 s390x 平台。
+
+## 2017.12.08 v3.1
+
+* 支持[本地策略](../chapter_02/policy.md)
+* 支持从环境变量指定的路径加载配置文件
+
+## 2017.12.01 v3.0
+
+* 支持 Shadowsocks AEAD
 
 ## 2017.11.18 v2.50
 
@@ -221,8 +235,8 @@
 ## 2016.05.29 v1.14
 
 * 修复了 HTTP 代理中一个可能导致崩溃的问题；
-* [安装脚本](../chapter_01/install.md)中增加了一些功能；
-* [DNS](../chapter_02/04_dns.md) 中增加了[静态路由](../chapter_05/00_config/08_static_hosts.md)功能；
+* [安装脚本](../chapter_00/install.md)中增加了一些功能；
+* [DNS](../chapter_02/04_dns.md) 中增加了静态路由功能；
 * 官方服务器地址变动；
 
 ## 2016.05.16 v1.13
@@ -278,7 +292,6 @@
 
 * 服务器端支持 Shadowsocks；
   * [协议详情](../chapter_02/02_protocols.md#shadowsocks)
-  * [配置示例](../chapter_05/00_config/06_shadowsocks.md)
 
 ## 2016.01.25 v1.5
 
@@ -289,7 +302,7 @@
 
 ## 2016.01.18 v1.4
 
-* 更新了[安装脚本](../chapter_01/install.md)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
+* 更新了[安装脚本](../chapter_00/install.md)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
 * 修复了一个 VMess 的内存使用问题；
 
 ## 2016.01.11 v1.3

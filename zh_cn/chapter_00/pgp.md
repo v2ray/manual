@@ -1,6 +1,6 @@
 # 私下联系
 
-![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/pgp.html)
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/pgp.html)
 
 如果你想和 V2Ray 的开发人员私下讨论一些问题，可以通过下列的邮箱联系。
 
@@ -11,7 +11,7 @@
 
 \#2 所用的 ProtonMail 是端对端加密的，安全性足够好。
 
-由于工作繁忙，不能保证每封邮件都回复，请见谅。对于 V2Ray 的使用问题，可以发到[讨论组](../chapter_01/issue.md)，以得到更快速的社区响应。
+由于工作繁忙，不能保证每封邮件都回复，请见谅。对于 V2Ray 的使用问题，可以发到[讨论组](help.md)，以得到更快速的社区响应。
 
 ```plain
 -----BEGIN PGP PUBLIC KEY BLOCK-----
