@@ -34,7 +34,7 @@ All packages are in ZIP format. Download and unzip corressponding packages to yo
 There are 2 ways to verify packages.
 
 1. Metadata.txt in release page contains SHA1 hash for all packages.
-1. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/tools/release/verify/official_release.asc).
+1. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
 ## Install on Windows or Mac OS
 
