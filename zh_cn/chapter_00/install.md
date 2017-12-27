@@ -58,7 +58,7 @@ bash <(curl -L -s https://install.direct/go.sh)
 * `/usr/bin/v2ray/v2ctl`：V2Ray 工具；
 * `/etc/v2ray/config.json`：配置文件；
 * `/usr/bin/v2ray/geoip.dat`：IP 数据文件
-* `/usr/bin/v2ray/geosite:dat`：域名数据文件
+* `/usr/bin/v2ray/geosite.dat`：域名数据文件
 
 
 此脚本会配置自动运行脚本。自动运行脚本会在系统重启之后，自动运行 V2Ray。目前自动运行脚本只支持带有 Systemd 的系统，以及 Debian / Ubuntu 全系列。
