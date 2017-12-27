@@ -58,7 +58,7 @@ The script installs the following files.
 * `/usr/bin/v2ray/v2ctl`: Utility
 * `/etc/v2ray/config.json`: Config file
 * `/usr/bin/v2ray/geoip.dat`: IP data file
-* `/usr/bin/v2ray/geosite:dat`: domain data file
+* `/usr/bin/v2ray/geosite.dat`: domain data file
 
 This script also configures V2Ray to run as service, if systemd is available.
 
