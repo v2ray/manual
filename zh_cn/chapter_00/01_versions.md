@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.12.29 v3.5
+
+* Geoip 支持名为“Private”的私有地址列表。
+
 ## 2017.12.22 v3.4
 
 * Websocket 现在可以识别 X-Forwarded-For 并用做源地址。

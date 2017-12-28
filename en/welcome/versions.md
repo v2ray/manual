@@ -2,6 +2,10 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2017.12.29 v3.5
+
+* Geoip now supports private network address under name "private".
+
 ## 2017.12.22 v3.4
 
 * Websocket nows uses value of X-Forwarded-For header as source address.

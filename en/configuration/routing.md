@@ -87,6 +87,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
   * IP: 形如`"127.0.0.1"`。
   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
   * GeoIP (V2Ray 2.46+): 形如`"geoip:cn"`，必须以`geoip:`（小写）开头，后面跟双字符国家代码，支持几乎所有可以上网的国家。
+    * Special value: `"geoip:private"` (V2Ray 3.5+), includes all private network addresses, such as `127.0.0.1`.
 * `port`：端口范围，有两种形式：
   * `"a-b"`: a 和 b 均为正整数，且小于 65536。这个范围是一个前后闭合区间，当目标端口落在此范围内时，此规则生效。
   * `a`: a 为正整数，且小于 65536。当目标端口为 a 时，此规则生效。
