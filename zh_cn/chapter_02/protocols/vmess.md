@@ -74,8 +74,8 @@
     * `level`：用户等级，详见[本地策略](../policy.md)
     * `alterId`: 与上文传出协议中的含义相同。
     * `email`: 用户邮箱地址，用于区分不同用户的流量。
-* `detour`: 转向 outboundDetour
-  * `to`: 一个 outboundDetour 的 tag，详见[配置文件](../02_protocols.md)
+* `detour`: 转向 inboundDetour
+  * `to`: 一个 inboundDetour 的 tag，详见[配置文件](../02_protocols.md)
 * `default`: 可选，clients 的默认配置
   * `level`: 用户等级，意义同上。默认值为`0`。
   * `alterId`: 同 Inbound，默认值为`64`。
