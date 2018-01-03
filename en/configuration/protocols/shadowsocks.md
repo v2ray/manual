@@ -52,7 +52,7 @@ Info:
   * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
 * `password`: Password. Can be any string.
 * `udp`: `true` or `false`, whether or not to enable UDP. Default to `false`.
-* `level`: User level. Default to `0`. See [Policy](policy.md).
+* `level`: User level. Default to `0`. See [Policy](../policy.md).
 * `ota`: `true` or `false`, whether or not to enable OTA. Default to auto mode.
   * When AEAD is used, `ota` has no effect.
 
