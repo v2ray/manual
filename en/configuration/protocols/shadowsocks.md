@@ -17,7 +17,7 @@ Compatibility with official version:
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305
+  * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
 * Plugins：
   * Support obfs through standalone mode.
 

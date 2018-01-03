@@ -17,7 +17,7 @@
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305
+  * chacha20-poly1305 或称 chacha20-ietf-poly1305
 * 插件：
   * 通过 Standalone 模式支持 obfs
 
