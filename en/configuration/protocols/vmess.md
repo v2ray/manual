@@ -73,7 +73,7 @@ Where:
     * `alterId`: Number of alternative IDs. Same as in Inbound. Value must be the same as connecting clients.
     * `email`: Email address to identify users.
 * `detour`: Optional feature to suggest client to take a detour.
-  * `to`: The tag of an outbound proxy. See [Overview](../02_protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
+  * `to`: The tag of an inbound proxy. See [Overview](../02_protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
 * `default`: Optional default client configuration. Usually used in detour proxy.
   * `level`: User level.
   * `alterId`: Number of alternative IDs. Default value 64.
