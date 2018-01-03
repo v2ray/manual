@@ -10,7 +10,7 @@ Compatibility with official version:
 * Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)；
   * Client may choose to turn on or off.
   * Server may choose to enable, disable or auto.
-* Encryption methods:
+* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0):
   * aes-256-cfb
   * aes-128-cfb
   * chacha20

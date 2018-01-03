@@ -10,7 +10,7 @@
 * 支持 [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)；
   * 客户端可选开启或关闭；
   * 服务器端可强制开启、关闭或自适应；
-* 加密方式（其中 AEAD 加密方式在 V2Ray 3.0 中加入）：
+* 加密方式（其中 [AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) 加密方式在 V2Ray 3.0 中加入）：
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
