@@ -7,17 +7,17 @@
 与官方版本的兼容性：
 
 * 支持 TCP 和 UDP 数据包转发，其中 UDP 可选择性关闭；
-* 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
+* 支持 [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)；
   * 客户端可选开启或关闭；
   * 服务器端可强制开启、关闭或自适应；
-* 加密方式（其中 AEAD 加密方式在 V2Ray 3.0 中加入）：
+* 加密方式（其中 [AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) 加密方式在 V2Ray 3.0 中加入）：
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305
+  * chacha20-poly1305 或称 chacha20-ietf-poly1305
 * 插件：
   * 通过 Standalone 模式支持 obfs
 
@@ -52,7 +52,7 @@
   * `"chacha20-poly1305"` 或 `"chacha20-ietf-poly1305"` (V2Ray 3.0+)
 * `password`: 密码，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 * `udp`: `true` / `false`，是否开启 UDP 转发，默认值为 `false`。
-* `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见[本地策略](policy.md)。
+* `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见[本地策略](../policy.md)。
 * `ota`: `true` / `false`，是否强制 OTA，默认模式为自动，当指定了 `true` / `false` 时，则为强制不启用或启用。
   * 当使用 AEAD 时，`ota` 设置无效
 

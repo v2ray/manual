@@ -7,17 +7,17 @@
 Compatibility with official version:
 
 * Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
+* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)；
   * Client may choose to turn on or off.
   * Server may choose to enable, disable or auto.
-* Encryption methods:
+* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0):
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305
+  * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
 * Plugins：
   * Support obfs through standalone mode.
 
@@ -52,7 +52,7 @@ Info:
   * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
 * `password`: Password. Can be any string.
 * `udp`: `true` or `false`, whether or not to enable UDP. Default to `false`.
-* `level`: User level. Default to `0`. See [Policy](policy.md).
+* `level`: User level. Default to `0`. See [Policy](../policy.md).
 * `ota`: `true` or `false`, whether or not to enable OTA. Default to auto mode.
   * When AEAD is used, `ota` has no effect.
 
