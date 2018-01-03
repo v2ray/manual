@@ -7,7 +7,7 @@
 Compatibility with official version:
 
 * Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
+* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)；
   * Client may choose to turn on or off.
   * Server may choose to enable, disable or auto.
 * Encryption methods:

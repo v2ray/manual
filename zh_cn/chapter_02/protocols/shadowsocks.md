@@ -7,7 +7,7 @@
 与官方版本的兼容性：
 
 * 支持 TCP 和 UDP 数据包转发，其中 UDP 可选择性关闭；
-* 支持 [OTA](https://shadowsocks.org/en/spec/one-time-auth.html)；
+* 支持 [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)；
   * 客户端可选开启或关闭；
   * 服务器端可强制开启、关闭或自适应；
 * 加密方式（其中 AEAD 加密方式在 V2Ray 3.0 中加入）：
