@@ -1,8 +1,8 @@
 # 底层传输配置
 
-底层传输（transport）配置指定了 V2Ray 如何使用 TCP、UDP 等基础网络协议。配置分为两部分，一是全局设置，二是分连接配置。
+底层传输（transport）配置指定了 V2Ray 如何使用 TCP、UDP 等基础网络协议。配置分为两部分，一是全局设置，二是分协议配置。分协议配置可以指定每个单独的传入传出协议用怎样的方式传输。通常来说客户端和服务器对应的传出传入协议需要使用同样的传输方式。当分协议传输配置指定了一种传输方式，但没有填写其设置时，此传输方式会使用全局配置中的设置。
 
-## 全局配置
+## 全局配置 {#global}
 
 全局配置位于配置文件的 "transport" 项。
 
@@ -20,7 +20,7 @@
 * `kcpSettings`: 针对 [mKCP 连接的配置](transport/mkcp.md)。
 * `wsSettings`: 针对 [WebSocket 连接的配置](transport/websocket.md)。
 
-## 分连接配置
+## 分协议配置 {#perproxy}
 
 每一个传入、传出连接都可以配置不同的传输配置，在 inbound、inboundDetour、outbound、outboundDetour 的每一项中，都可以设置 streamSettings 来进行一些传输的配置。
 

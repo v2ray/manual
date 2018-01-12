@@ -1,5 +1,7 @@
 # mKCP 传输方式
 
+![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/mkcp.html)
+
 mKCP 使用 UDP 来模拟 TCP 连接，请确定主机上的防火墙配置正确。
 
 配置：

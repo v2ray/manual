@@ -1,6 +1,50 @@
 # Version History
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
+
+## 2017.12.29 v3.5
+
+* Geoip now supports private network address under name "private".
+
+## 2017.12.22 v3.4
+
+* Websocket nows uses value of X-Forwarded-For header as source address.
+* Support s390x CPU architecture.
+
+## 2017.12.08 v3.1
+
+* Support policy.
+* Config file location can be specified via environment variable.
+
+## 2017.12.01 v3.0
+
+* Support Shadowsocks AEAD
+
+## 2017.11.18 v2.50
+
+* `v2ray` now tried to use `v2ctl` for configuration parsing. Please make sure these 2 files are in the same directory.
+* New `IPOnDemand` strategy in routing.
+
+## 2017.11.10 v2.47
+
+* `geosite` data is now in `geosite.dat` file.
+* Bug fixes.
+
+## 2017.11.03 v2.46
+
+* Router now supports `geosite:cn`, equivalent to existing `chinasites`, but more flexible.
+* Router now supports `geoip`.
+  * File `geoip.dat` is added to release packages. This file contains all `geoip` information and has to stay in the same directory of `v2ray` program. Due to delayed update of installation script, you may have to copy the file manually.
+* Program `v2ctl` is added to release packages. You may run `v2ctl verify /path/to/v2ray` to verify the signature of `v2ray` program.
+
+## 2017.10.27 v2.44
+
+* HTTP now supports Basic Authentication.
+* Some bugs are fixed.
+
+## 2017.10.06 v2.40
+
+* Fix an issue that causes memory leak.
 
 ## 2017.09.29 v2.39
 

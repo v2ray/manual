@@ -1,6 +1,50 @@
 # 更新日志
 
-![Chinese](../resources/chinese.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
+
+## 2017.12.29 v3.5
+
+* Geoip 支持名为“Private”的私有地址列表。
+
+## 2017.12.22 v3.4
+
+* Websocket 现在可以识别 X-Forwarded-For 并用做源地址。
+* 支持 s390x 平台。
+
+## 2017.12.08 v3.1
+
+* 支持[本地策略](../chapter_02/policy.md)
+* 支持从环境变量指定的路径加载配置文件
+
+## 2017.12.01 v3.0
+
+* 支持 Shadowsocks AEAD
+
+## 2017.11.18 v2.50
+
+* `v2ray` 现在会尝试使用 `v2ctl` 进行配置文件解析，请确保这两个文件在同一目录下；
+* 路由中新增 `IPOnDemand` 策略进行同步 IP 解析；
+
+## 2017.11.10 v2.47
+
+* `geosite` 的数据现在放在 `geosite.dat` 文件中了。
+* 一些修复。
+
+## 2017.11.03 v2.46
+
+* 路由中添加 `geosite:cn`，等效于现有的`chinasites`，但更加灵活。
+* 路由中添加 `geoip`。
+  * 安装包中新增了`geoip.dat`文件，包含所有`geoip`信息，此文件必须和`v2ray`程序放置于同一路径下。由于安装脚本未及时更新，服务器端和部分客户端可能需要手动复制此文件。
+* 安装包中新增 `v2ctl` 程序，可使用命令`v2ctl verify /path/to/v2ray`来验证`v2ray`程序签名的有效性。
+
+## 2017.10.27 v2.44
+
+* HTTP 代理中加入了 Basic Authentication 支持。
+* 修复了一些 bug。
+
+## 2017.10.06 v2.40
+
+* 修复了导致内存泄漏的问题。
 
 ## 2017.09.29 v2.39
 
@@ -195,8 +239,8 @@
 ## 2016.05.29 v1.14
 
 * 修复了 HTTP 代理中一个可能导致崩溃的问题；
-* [安装脚本](../chapter_01/install.md)中增加了一些功能；
-* [DNS](../chapter_02/04_dns.md) 中增加了[静态路由](../chapter_05/00_config/08_static_hosts.md)功能；
+* [安装脚本](../chapter_00/install.md)中增加了一些功能；
+* [DNS](../chapter_02/04_dns.md) 中增加了静态路由功能；
 * 官方服务器地址变动；
 
 ## 2016.05.16 v1.13
@@ -252,7 +296,6 @@
 
 * 服务器端支持 Shadowsocks；
   * [协议详情](../chapter_02/02_protocols.md#shadowsocks)
-  * [配置示例](../chapter_05/00_config/06_shadowsocks.md)
 
 ## 2016.01.25 v1.5
 
@@ -263,7 +306,7 @@
 
 ## 2016.01.18 v1.4
 
-* 更新了[安装脚本](../chapter_01/install.md)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
+* 更新了[安装脚本](../chapter_00/install.md)，在 Debian / Ubuntu / CentOS 7 中可自动安装和更新 V2Ray；
 * 修复了一个 VMess 的内存使用问题；
 
 ## 2016.01.11 v1.3
