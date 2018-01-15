@@ -41,10 +41,10 @@ Explaination：
 
 * `access`: Path of access log, available examples are:
   * A legal path of file, such as `"/tmp/v2ray/_access.log"`(Linux), or `"C:\\Temp\\v2ray\\_access.log"`(Windows);
-  * Leave it empty to discard logs.
+  * Leave it empty to discard logs, and content will send out through `stdout`.
 * `error`: Path of error log, available examples are:
   * A legal path of file, such as `"/tmp/v2ray/_error.log"`(Linux), or `"C:\\Temp\\v2ray\\_error.log"`(Windows);
-  * Leave it empty to discard logs.
+  * Leave it empty to discard logs, and content will send out through `stdout`.
 * `loglevel`: Level of log files, availabe values are`"debug"`、`"info"`、`"warning"`、`"error"`, and`"none"`;
   * Among all of these levels, `"debug"` leaves the most log, `"error"` leaves the least log.
   * `"none"` would discard all error logs.
@@ -212,7 +212,7 @@ Explaination:
 * `tag`: Outbound tag name of the current interface, data would be sent via this interface if this outbound is selected in routing configurations or other outbound's `proxySettings`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `streamSettings`: For details, see [Protocol Transport Options](05_transport.md).
-* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` on this outbound will have no effect.
+* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
   * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
 * `mux` (V2Ray 2.22+): [Mux Configurations](mux.md).
 
