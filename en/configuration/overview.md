@@ -1,6 +1,6 @@
 # Configuration Format
 
-V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，只是实际的配置不一样。
+V2Ray shares a same structure of configuration between server side and client side shown as below,server and client configuration are different in specific sections.
 
 ```javascript
 {
@@ -16,45 +16,45 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 }
 ```
 
-其中：
+Explaination:
 
-* `log`: 日志配置，见下文；
-* `dns`: DNS 配置，见下文；
-* `routing`: 路由配置，见下文；
-* `inbound`: 传入连接配置，见下文；
-* `outbound`: 传出连接配置，见下文；
-* `inboundDetour`: 额外的传入连接配置，见下文；
-* `outboundDetour`: 额外的传出连接配置，见下文；
-* `transport`: 底层传输配置，见下文。
+* `log`: log configuration;
+* `dns`: DNS configuration;
+* `routing`: routing configuration;
+* `inbound`: master inbound interface configuration;
+* `outbound`: master outbound interface configuration;
+* `inboundDetour`: extra inbound interfaces configurations;
+* `outboundDetour`: extra outbound interfaces configurations;
+* `transport`: low-level transport protocol's configurations.
 
-## 日志配置（log）
+## Log configuration（log）
 
 ```javascript
 {
-  "access": "文件地址",
-  "error": "文件地址",
+  "access": "/path/to/file",
+  "error": "/path/to/file",
   "loglevel": "warning"
 }
 ```
 
-其中：
+Explaination：
 
-* `access`: 访问日志的文件地址，其值可以是：
-  * 一个合法的文件地址，如`"/tmp/v2ray/_access.log"`（Linux）或者`"C:\\Temp\\v2ray\\_access.log"`（Windows）；
-  * 或者留空表示不记录访问日志。
-* `error`: 错误日志的文件地址，其值可以是：
-  * 一个合法的文件地址，如`"/tmp/v2ray/_error.log"`（Linux）或者`"C:\\Temp\\v2ray\\_error.log"`（Windows）；
-  * 或者留空表示不记录错误日志。
-* `loglevel`: 错误日志的级别，可选的值为`"debug"`、`"info"`、`"warning"`、`"error"` 和 `"none"`：
-  * 其中`"debug"`记录的数据最多，`"error"`记录的最少；
-  * `"none"`表示不记录任何内容；
-  * 默认值为`"warning"`。
+* `access`: Path of access log, available examples are:
+  * A legal path of file, such as `"/tmp/v2ray/_access.log"`(Linux), or `"C:\\Temp\\v2ray\\_access.log"`(Windows);
+  * Leave it empty to discard logs, and content will send out through `stdout`.
+* `error`: Path of error log, available examples are:
+  * A legal path of file, such as `"/tmp/v2ray/_error.log"`(Linux), or `"C:\\Temp\\v2ray\\_error.log"`(Windows);
+  * Leave it empty to discard logs, and content will send out through `stdout`.
+* `loglevel`: Level of log files, availabe values are`"debug"`、`"info"`、`"warning"`、`"error"`, and`"none"`;
+  * Among all of these levels, `"debug"` leaves the most log, `"error"` leaves the least log.
+  * `"none"` would discard all error logs.
+  * Default value is `"warning"` if you leave it empty.
 
-## DNS 配置（dns）
+## DNS Configurations (dns)
 
-内置的 DNS 服务器，若此项不存在，则默认使用本机的 DNS 设置。详见[DNS 配置](04_dns.md)
+Internal DNS server's configurations, if this section is ommited or empty, V2Ray will use your system-wide DNS configuration. For details, [DNS Configurations](04_dns.md)
 
-## 路由配置（routing）
+## Routing Configurations（routing）
 
 ```javascript
 {
@@ -84,81 +84,81 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 }
 ```
 
-其中：
+Explaination:
 
-* `strategy`: 路由模式，目前只有`"rules"`一个值；
-* `settings`: 具体内容详见[路由配置](03_routing.md)；
+* `strategy`: routing strategy, currently only legal rule is `"rules".
+* `settings`: For specific configurations, see[Routing Configurations](03_routing.md)；
 
-## 本地策略 {#policy}
+## Local Policy {#policy}
 
-本地策略可进行一些权限相关的配置，详见[本地策略](policy.md)。
+Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
 
-## 主传入连接配置（inbound）
+## Master Inbound Interface Configurations (inbound)
 
-传入连接用于接收从客户端（浏览器或上一级代理服务器）发来的数据，可用的协议请见[协议列表](02_protocols.md)。
+Master inbound interface is used to receive data from clients, browsers, or other parent proxy servsers, available protocols are listed at [Protocols](02_protocols.md).
 
 ```javascript
 {
   "port": 1080,
   "listen": "127.0.0.1",
-  "protocol": "协议名称",
+  "protocol": "protocol_name",
   "settings": {},
   "streamSettings": {},
-  "tag": "标识",
+  "tag": "inbound_tag_name",
   "domainOverride": ["http", "tls"]
 }
 ```
 
-其中：
+Explaination:
 
-* `port`: 端口。
-* `listen`: 监听地址，只允许 IP 地址，默认值为`"0.0.0.0"`。
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `domainOverride` (V2Ray 2.25+): 识别相应协议的流量，并根据流量内容重置所请求的目标。
-  * 接受一个字符串数组，默认值为空。
-  * 可选值为 `"http"` 和 `"tls"`。
+* `port`: listening port.
+* `listen`: listening IP address, default value is `"0.0.0.0"`.
+* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
+* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `tag`: This inbound interface's tag, which should be unique amoung all inbound/outbound interfaces.
+* `domainOverride` (V2Ray 2.25+): recognize specific protocols' packets and redirects its request targets.
+  * Accepts an array of strings, default value is empty.
+  * Available values are `"http"` and `"tls"`.
 
-## 主传出连接配置（outbound）
+## Master Outbound Interface Configurations (outbound)
 
-主传出连接用于向远程网站或下一级代理服务器发送数据，可用的协议请见[协议列表](02_protocols.md)。
+Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](02_protocols.md).
 
 ```javascript
 {
   "sendThrough": "0.0.0.0",
-  "protocol": "协议名称",
+  "protocol": "protocol_name",
   "settings": {},
-  "tag": "标识",
+  "tag": "this_outbound_tag_name",
   "streamSettings": {},
   "proxySettings": {
-    "tag": "another-outbound-tag"
+    "tag": "another_outbound_tag_name"
   },
   "mux": {}
 }
 ```
 
-其中：
+Explaination:
 
-* `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
-* `protocol`: 连接协议名称，可选的值见[协议列表](protocols.md)。
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `tag`: 此传出连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `streamSettings`: [底层传输配置](transport.md#分连接配置)。
-* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` on this outbound will have no effect.
-  * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
-* `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
+* `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
+* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
+* `tag`: This outbound interface's tag, which should be unique amoung all inbound/outbound interfaces.
+* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
+  * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
+* `mux` (V2Ray 2.22+): [Mux Configurations](mux.md).
 
-## 额外的传入连接配置（inbound detour）
+## Extra Inbound Interfaces Configurations (inbound detour)
 
-此项是一个数组，可包含多个连接配置，每一个配置形如：
+This section is an array contains multiple extra inbound interfaces' configurations, each are using the structure like below:
 
 ```javascript
-{
-  "protocol": "协议名称",
-  "port": "端口",
-  "tag": "标识",
+{packed
+  "protocol": "protocol_name",
+  "port": "port_number",
+  "tag": "this_inbound_tag_name",
   "listen": "127.0.0.1",
   "allocate": {
     "strategy": "always",
@@ -171,51 +171,51 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 }
 ```
 
-其中：
+Explaination:
 
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* `port`: 端口号，可以是一个数值，或者字符串形式的数值范围，比如`"5-10"`表示端口 5 到端口 10 这 6 个端口。
-* `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `listen`: 监听地址，只允许 IP 地址，默认值为`"0.0.0.0"`。
-* `allocate`: 分配设置：
-  * `strategy`: 分配策略，可选的值有`"always"`和`"random"`两个。`"always"`表示总是分配所有已指定的端口，port 是指定了多少个端口，V2Ray 就会监听这些端口。random 表示随机开放端口，每隔 refresh 分钟在 port 范围中随机选取 concurrency 个端口来监听。
-  * `refresh`: 随机端口刷新间隔，单位为分钟。最小值为`2`，建议值为`5`。这个属性仅当 strategy = random 时有效。
-  * `concurrency`: 随机端口数量。最小值为`1`，最大值为 port 范围的一半。建议值为`3`。
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `domainOverride` (V2Ray 2.25+): 识别相应协议的流量，并根据流量内容重置所请求的目标。
-  * 接受一个字符串数组，默认值为空。
-  * 可选值为 `"http"` 和 `"tls"`。
+* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `port`: port number, could be a single number or range specified by a string, for example:`"5-10"` stands for port number 5 to 10.
+* `tag`: This inbound interface's tag, which should be unique amoung all inbound/outbound interfaces.
+* `listen`: listening IP address, default value is `"0.0.0.0"`.
+* `allocate`: Allocation options:
+  * `strategy`: Allocation strategies, available values are `"always"` and `"random"`. For `"always"` option, all ports will be listening specified by `"port"` settings; for `"random"`, every certain minutes would choose certain ports amoung the port ranges, configured by `"refresh"`, `"port"`, and `"concurrency"`.
+  * `refresh`: The interval refreshing random ports, with unit of minutes. Minimum value is `2`, recommended value is `5`. This setting will only take effect when `strategy = random`.
+  * `concurrency`: Amoount of random ports. Minimum value is `1`, maximum value is a half of ports' range. Recommended value is `3`.
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
+* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `domainOverride` (V2Ray 2.25+): recognize specific protocols' packets and redirects its request targets.
+  * Accepts an array of strings, default value is empty.
+  * Available values are `"http"` and `"tls"`.
 
-### 额外的传出连接配置（outbound detour）
+### Extra Outbound Interfaces Configurations (outbound detour)
 
-此项是一个数组，可包含多个连接配置，每一个配置形如：
+This section is an array contains multiple extra outbound interfaces' configurations, each are using the structure like below:
 
 ```javascript
 {
-  "protocol": "协议名称",
+  "protocol": "protocol_name",
   "sendThrough": "0.0.0.0",
-  "tag": "标识",
+  "tag": "this_outbound_tag_name",
   "settings": {},
   "streamSettings": {},
   "proxySettings": {
-    "tag": "another-outbound-tag"
+    "tag": "another_outbound_tag_name"
   },
   "mux": {}
 }
 ```
 
-其中：
+Explaination:
 
-* `protocol`: 连接协议名称，可选的值见[协议列表](protocols.md)；
-* `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
-* `tag`: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `streamSettings`: [底层传输配置](transport.md#分连接配置)。
-* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` on this outbound will have no effect.
-  * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
-* `mux` (V2Ray 2.22+): [Mux 配置](mux.md)。
+* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
+* `tag`: Outbound tag name of the current interface, data would be sent via this interface if this outbound is selected in routing configurations or other outbound's `proxySettings`.
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
+* `streamSettings`: For details, see [Protocol Transport Options](05_transport.md).
+* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
+  * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
+* `mux` (V2Ray 2.22+): [Mux Configurations](mux.md).
 
-## 底层传输配置（transport）
+## Protocol Transport Options (transport)
 
-用于配置 V2Ray 如何与其它服务器建立和使用网络连接。详见[底层传输配置](05_transport.md)。
+Help configure how V2Ray would connect with other servers and how using network connections. For details, see [Protocol Transport Options](05_transport.md).
