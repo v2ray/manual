@@ -17,6 +17,12 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 * 下载：[Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
 * 源代码：[Github](https://github.com/V2Ray-Android/Actinium)
 
+## BifrostV
+
+BifrostV 是一个基于 V2Ray 内核的 Android 应用，它支持 Vmess、Shadowsocks、Socks 协议。（配置界面偶现横幅广告，测试了多次，只出现过一次）
+
+* 下载：[Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv)
+
 ## 其它工具
 
 ### JuiceSSH
