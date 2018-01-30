@@ -14,11 +14,11 @@ Shadowrocket 是一个通用的 iOS VPN 应用，它支持众多协议，如 Sha
 
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## ShadowRay
+## Pepi（原名ShadowRay）
 
-ShadowRay 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 连接，并与 V2Ray 服务器通信。
+Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 连接，并与 V2Ray 服务器通信。
 
-* 下载：[iTunes](https://www.v2ray.com/itunes/us/shadowray/id1283082051/)
+* 下载：[iTunes](https://itunes.apple.com/us/app/pepi/id1283082051/)
 
 ## 其它工具
 
