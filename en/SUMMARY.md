@@ -24,6 +24,7 @@
   * [Routing](configuration/routing.md)
   * [DNS](configuration/dns.md)
   * [Mux](configuration/mux.md)
+  * [API](configuration/api.md)
   * [Transport](configuration/transport.md)
     * [TCP](configuration/transport/tcp.md)
     * [mKCP](configuration/transport/mkcp.md)

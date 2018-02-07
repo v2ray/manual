@@ -5,6 +5,7 @@ V2Ray shares a same structure of configuration between server side and client si
 ```javascript
 {
   "log": {},
+  "api": {},
   "dns": {},
   "routing": {},
   "policy": {},
@@ -19,6 +20,7 @@ V2Ray shares a same structure of configuration between server side and client si
 Where:
 
 * `log`: log configuration;
+* `api`: API configuration;
 * `dns`: DNS configuration;
 * `routing`: routing configuration;
 * `inbound`: master inbound interface configuration;
@@ -49,6 +51,10 @@ Where:
   * Among all of these levels, `"debug"` leaves the most log, `"error"` leaves the least log.
   * `"none"` would discard all error logs.
   * Default value is `"warning"` if you leave it empty.
+
+## API Configuration
+
+RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
 
 ## DNS Configurations (dns)
 
