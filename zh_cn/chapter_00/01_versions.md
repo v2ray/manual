@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2017.02.09 v3.7
+
+* 开发者预览：[远程控制](../chapter_02/api.md)。
+* 修复了一些问题。
+
 ## 2017.12.29 v3.5
 
 * Geoip 支持名为“Private”的私有地址列表。
