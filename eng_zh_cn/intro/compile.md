@@ -5,8 +5,8 @@
 1. 安装 Git： `sudo apt-get install git -y`
 2. 安装 golang：
   1. 下载安装文件：
-    1. 64位：`curl -o go_latest.tar.gz -L https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz`
-    2. 32位：`curl -o go_latest.tar.gz -L https://storage.googleapis.com/golang/go1.7.4.linux-386.tar.gz`
+    1. 64位：`curl -o go_latest.tar.gz -L https://storage.googleapis.com/golang/go1.9.4.linux-amd64.tar.gz`
+    2. 32位：`curl -o go_latest.tar.gz -L https://storage.googleapis.com/golang/go1.9.4.linux-386.tar.gz`
   2. `sudo tar -C /usr/local -xzf go_latest.tar.gz`
   3. `export PATH=$PATH:/usr/local/go/bin`
   4. `export GOPATH=$HOME/work`
@@ -30,4 +30,4 @@
 
 `bash <(curl -s https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/install.sh)`
 
-此脚本会自动安装 git 和 golang 1.5 （如果系统上没有的话，并且需要 root 权限），然后把 v2ray 编译到 $GOPATH/bin/v2ray，新装的 golang 会把 GOPATH 设定到 /v2ray。
+此脚本会自动安装 git 和 golang 1.9 （如果系统上没有的话，并且需要 root 权限），然后把 v2ray 编译到 $GOPATH/bin/v2ray，新装的 golang 会把 GOPATH 设定到 /v2ray。
