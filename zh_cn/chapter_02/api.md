@@ -9,7 +9,10 @@ V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC]
 ```javascript
 {
     "tag": "api",
-    "services": ["HandlerService"]
+    "services": [
+        "HandlerService",
+        "LoggerService"
+    ]
 }
 ```
 
@@ -30,3 +33,7 @@ V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC]
 * 删除一个现有的传出代理；
 * 在一个传入代理中添加一个用户（仅支持 VMess）；
 * 在一个传入代理中删除一个用户（仅支持 VMess）；
+
+### LoggerService
+
+支持对内置 Logger 的重启，可配合 logrotate 进行一些对日志文件的操作。

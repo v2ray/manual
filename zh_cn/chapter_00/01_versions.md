@@ -2,6 +2,11 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.02.15 v3.9
+
+* 新年快乐!
+* 修复了一些问题。
+
 ## 2018.02.09 v3.7
 
 * 开发者预览：[远程控制](../chapter_02/api.md)。

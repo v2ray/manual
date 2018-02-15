@@ -2,6 +2,11 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.02.15 v3.9
+
+* Happy New Year!
+* Bug fixes.
+
 ## 2018.02.09 v3.7
 
 * Developer preview: [Remote API](../configuration/api.md)。
