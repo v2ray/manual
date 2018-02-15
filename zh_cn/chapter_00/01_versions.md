@@ -2,7 +2,7 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
-## 2017.02.09 v3.7
+## 2018.02.09 v3.7
 
 * 开发者预览：[远程控制](../chapter_02/api.md)。
 * 修复了一些问题。

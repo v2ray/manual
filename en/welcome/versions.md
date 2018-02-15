@@ -2,7 +2,7 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
-## 2017.02.09 v3.7
+## 2018.02.09 v3.7
 
 * Developer preview: [Remote API](../configuration/api.md)。
 * Bug fixes.
