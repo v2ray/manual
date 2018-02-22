@@ -2,6 +2,11 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.02.23 v3.10
+
+* Log entries now contain session ID to distinguish proxy sessions.
+* Bug fixes.
+
 ## 2018.02.15 v3.9
 
 * Happy New Year!

@@ -2,7 +2,12 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
-## 2018.02.15 v3.9
+## 2018.02.23 v3.10
+
+* 日志格式修改，每条日志前添加了 Session ID，用于区分不同的代理请求。
+* 修复了一些问题。
+
+## 2018.02.16 v3.9
 
 * 新年快乐!
 * 修复了一些问题。
