@@ -1,5 +1,7 @@
 # 配置文件格式
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html)
+
 V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，只是实际的配置不一样。
 
 ```javascript

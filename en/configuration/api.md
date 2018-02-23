@@ -1,5 +1,7 @@
 # API
 
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html)
+
 V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC](https://grpc.io/)。
 
 当远程控制开启时，V2Ray 会自建一个传出代理，以`tag`配置的值为标识。用户必须手动将所有的 gRPC 传入连接通过[路由](03_routing.md)指向这一传出代理。
