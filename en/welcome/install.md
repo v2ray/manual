@@ -17,8 +17,6 @@ V2Ray is available on the following platforms:
 
 At least 32MB free memory.
 
-**V2Ray partially relies on system time. Please make sure your system time is in-sync with UTC time.**
-
 ## Download
 
 Pre-built packages can be found here:

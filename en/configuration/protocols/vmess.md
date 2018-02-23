@@ -85,3 +85,5 @@ Where:
 ## Tips
 
 * Always use encryption method `"auto"` to stay secure and compatible.
+* VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter.
+  * One may install `ntp` service on Linux to automatically adjust system time.
