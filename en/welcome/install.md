@@ -91,7 +91,7 @@ Examples:
 
 V2Ray provides 2 docker images:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): Contains official releases.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): Contains latest code.
+* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![official](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): Contains official releases.
+* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![dev](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): Contains latest code.
 
 The 2 images has the same structure as the Linux installation.
