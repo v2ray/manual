@@ -63,7 +63,7 @@
   "detour": {
     "to": "tag_to_detour"
   },
-  'disableInsecureEncryption': false,
+  "disableInsecureEncryption": false
 }
 ```
 

@@ -2,6 +2,10 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.03.02 v3.11
+
+* A new settings is introduced in VMess inbound, to forbid client using insecure encryption methods.
+
 ## 2018.02.23 v3.10
 
 * Log entries now contain session ID to distinguish proxy sessions.

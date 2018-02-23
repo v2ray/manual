@@ -60,7 +60,8 @@ Where:
   },
   "detour": {
     "to": "tag_to_detour"
-  }
+  },
+  "disableInsecureEncryption": false
 }
 ```
 
@@ -77,3 +78,10 @@ Where:
 * `default`: Optional default client configuration. Usually used in detour proxy.
   * `level`: User level.
   * `alterId`: Number of alternative IDs. Default value 64.
+* `disableInsecureEncryption` (V2Ray 3.11+): Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`.
+  * `none`
+  * `aes-128-cfb`
+
+## Tips
+
+* Always use encryption method `"auto"` to stay secure and compatible.

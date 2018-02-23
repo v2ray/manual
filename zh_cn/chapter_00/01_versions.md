@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.03.02 v3.11
+
+* VMess Inbound 提供了一个选项，用于禁止客户端使用不安全的加密方式。
+
 ## 2018.02.23 v3.10
 
 * 日志格式修改，每条日志前添加了 Session ID，用于区分不同的代理请求。
