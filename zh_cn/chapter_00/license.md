@@ -1,5 +1,7 @@
 # 项目授权
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/license.html)
+
 Project V 使用以下方式进行授权：
 
 ## V2Ray

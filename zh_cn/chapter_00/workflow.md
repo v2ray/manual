@@ -1,6 +1,6 @@
 # 工作机制
 
-![Chinese](resources/chinesec.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/welcome/workflow.html)
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/workflow.html)
 
 ## 单服务器模式
 

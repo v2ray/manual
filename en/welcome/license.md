@@ -1,5 +1,7 @@
 # License
 
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/license.html)
+
 Project V uses the following license.
 
 ## V2Ray
