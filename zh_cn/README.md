@@ -35,4 +35,4 @@ V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 ## 版权声明
 
-本站点所有内容基于[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/)进行许可。
+本站点所有内容基于[知识共享署名 4.0 国际许可协议](https://creativecommons.org/licenses/by/4.0/deed.zh)进行许可。

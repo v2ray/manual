@@ -12,6 +12,7 @@
     * [Telegram](chapter_00/tg.md)
     * [私下联系](chapter_00/pgp.md)
   * [常见问题](chapter_00/faq.md)
+  * [项目授权](chapter_00/license.md)
   * [博客&#8618;](https://steemit.com/@v2ray)
   * [白话文教程&#8618;](https://toutyrater.github.io/)
 * [配置文件](chapter_02/README.md)

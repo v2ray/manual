@@ -10,6 +10,7 @@
   * [Support](welcome/help.md)
     * [Telegram](welcome/tg.md)
     * [Private Communication](welcome/pgp.md)
+  * [License](welcome/license.md)
 * [Configuration](configuration/README.md)
   * [Overview](configuration/overview.md)
   * [Protocols](configuration/protocols.md)
