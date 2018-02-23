@@ -62,7 +62,8 @@
   },
   "detour": {
     "to": "tag_to_detour"
-  }
+  },
+  'disableInsecureEncryption': false,
 }
 ```
 
@@ -79,3 +80,10 @@
 * `default`: 可选，clients 的默认配置
   * `level`: 用户等级，意义同上。默认值为`0`。
   * `alterId`: 同 Inbound，默认值为`64`。
+* `disableInsecureEncryption` (V2Ray 3.11+): 禁止客户端使用不安全的加密方式，当下列客户端指定下列加密方式时，服务器会主动断开连接。默认值为`false`。
+  * `none`
+  * `aes-128-cfb`
+
+## 小贴士
+
+* 推荐在客户端使用`"auto"`加密方式，这样可以永久保证安全性和兼容性。

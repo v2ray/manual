@@ -18,7 +18,7 @@ V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。
 
 这个环境变量指定了一个文件夹位置，这个文件夹应当包含 geoip.dat 和 geosite.dat 文件。
 
-## 配置文件位置 (V2Ray 3.1+)
+## 配置文件位置
 
 * 名称：`v2ray.location.config` 或 `V2RAY_LOCATION_CONFIG`
 * 默认值：和 v2ray 文件同路径
