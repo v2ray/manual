@@ -48,6 +48,7 @@ cp -r ./eng_zh_cn/_book/* ${TARGET_DIR}/eng/
 cp -r ./_dev/* ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
+cp -r ./resources/* ${TARGET_DIR}/resources/
 
 pushd ${TARGET_DIR}
 git config user.name "V2Ray Auto Build"

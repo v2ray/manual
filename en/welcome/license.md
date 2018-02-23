@@ -16,7 +16,7 @@ Source code and official releases are licensed under MIT license, including the 
 Office website, [v2ray.com](https://www.v2ray.com/), is licensed under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 * Including all visible text and pictures on the website.
-* Including [Project V log](../resources/v2ray_1024.png)。
+* Including [Project V log](https://www.v2ray.com/resources/v2ray_1024.png)。
 * Including all source code that is used for generating the website, i.e., [v2ray/manual](https://www.github.com/v2ray/manual)。
 
 ## Screenshot and other files
