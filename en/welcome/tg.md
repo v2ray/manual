@@ -1,6 +1,6 @@
 # Telegram Group
 
-![English](resources/englishc.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html)
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html)
 
 Project V provides the following groups for different type of discussions.
 

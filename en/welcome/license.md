@@ -13,7 +13,7 @@ Source code and official releases are licensed under MIT license, including the 
 
 ## V2Ray.Com
 
-Office website, [v2ray.com](https://www.v2ray.com/), is licensed under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+Official website, [v2ray.com](https://www.v2ray.com/), is licensed under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 * Including all visible text and pictures on the website.
 * Including <a href="https://www.v2ray.com/resources/v2ray_1024.png" target="_blank">Project V logo</a>.
