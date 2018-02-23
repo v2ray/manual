@@ -1,5 +1,7 @@
 # Configuration Overview
 
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html)
+
 V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
 
 ```javascript
