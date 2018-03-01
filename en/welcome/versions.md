@@ -5,6 +5,8 @@
 ## 2018.03.02 v3.11
 
 * A new settings is introduced in VMess inbound, to forbid client using insecure encryption methods.
+* Offers ARMv7 release.
+* Offers MIPS release that doesn't require FPU.
 
 ## 2018.02.23 v3.10
 
