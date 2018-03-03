@@ -6,19 +6,19 @@
         <title>{% block title %}{{ config.title|d("GitBook", true) }}{% endblock %}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script type="text/javascript">
-            function inIframe () {
-                try { return window.self !== window.top; } catch (e) { return true; }
-            }
-            function isValidDomain() {
-                var host = window.location.hostname;
-                return host.indexOf('v2ray.com') >= 0 || host.indexOf('github') >= 0;
-            }
-            if (inIframe()) {
-                window.top.location.href = 'https://www.v2ray.com/';
-            }
-            if (!isValidDomain()) {
-                window.location.href = 'https://www.v2ray.com/';
-            }
+function inIframe () {
+    try { return window.self !== window.top; } catch (e) { return true; }
+}
+function isValidDomain() {
+    var host = window.location.hostname;
+    return host.indexOf('v2ray.com') >= 0 || host.indexOf('github') >= 0;
+}
+if (inIframe()) {
+    window.top.location.href = 'https://www.v2ray.com/';
+}
+if (!isValidDomain()) {
+    window.location.href = 'https://www.v2ray.com/';
+}
         </script>
         {% block style %}
             {% for resource in plugins.resources.css %}
