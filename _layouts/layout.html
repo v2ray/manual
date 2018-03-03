@@ -13,8 +13,11 @@
                 var host = window.location.hostname;
                 return host.indexOf('v2ray.com') >= 0 || host.indexOf('github') >= 0;
             }
-            if (inIframe() || !isValidDomain()) {
-                window.location.href = "https://www.v2ray.com/";
+            if (inIframe()) {
+                window.top.location.href = 'https://www.v2ray.com/';
+            }
+            if (!isValidDomain()) {
+                window.location.href = 'https://www.v2ray.com/';
             }
         </script>
         {% block style %}
