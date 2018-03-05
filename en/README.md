@@ -21,7 +21,7 @@ V2Ray supports Socks, HTTP, Shadowsocks and VMess protocol.
 
 ### Multiple transport protocols
 
-All proxies above can be send/recieve over TLS, TCL, mKCP and more transport protocols.
+All proxies above can be send/recieve over TLS, TCP, mKCP and more transport protocols.
 
 ### Flexible routing
 
