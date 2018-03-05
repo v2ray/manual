@@ -13,4 +13,5 @@ Project V 团队支持中文和英文，请选择你所熟悉的语言来提问�
 1. [V2Ray 相关问题](https://github.com/v2ray/v2ray-core/issues)
 1. [V2Ray 未来发展](https://github.com/v2ray/planning)
 1. [Telegram 讨论](tg.md)
+1. [Twitter](https://twitter.com/projectv2ray)
 1. [私下联系](pgp.md)
