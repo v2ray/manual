@@ -94,7 +94,7 @@ Internal DNS server's configurations, if this section is omitted or empty, V2Ray
 
 Where:
 
-* `strategy`: routing strategy, currently the only valid value is `"rules".
+* `strategy`: routing strategy, currently the only valid value is `"rules"`.
 * `settings`: For specific configurations, see [Routing Configurations](03_routing.md)；
 
 ## Local Policy {#policy}
