@@ -13,7 +13,9 @@
             "handshake": 4,
             "connIdle": 300,
             "uplinkOnly": 5,
-            "downlinkOnly": 30
+            "downlinkOnly": 30,
+            "statsUserUplink": false,
+            "statsUserDownlink": false
         }
     }
 }
@@ -26,6 +28,8 @@
   * `connIdle`: 连接空闲的时间限制。单位为秒。
   * `uplinkOnly`: 当连接下行线路关闭后的时间限制。单位为秒。
   * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。
+  * `statsUserUplink`: 当值为`true`时，开启当前等级的所有用户的上行流量统计。
+  * `statsUserDownlink`: 当值为`true`时，开启当前等级的所有用户的下行流量统计。
 
 本地策略在连接处理时的具体细节：
 

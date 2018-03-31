@@ -9,6 +9,7 @@ V2Ray shares a same structure of configuration between server side and client si
   "log": {},
   "api": {},
   "dns": {},
+  "stats": {},
   "routing": {},
   "policy": {},
   "inbound": {},
@@ -24,6 +25,7 @@ Where:
 * `log`: log configuration;
 * `api`: API configuration;
 * `dns`: DNS configuration;
+* `stats`: When specified, internal [Statistics](stats.md) is enabled;
 * `routing`: routing configuration;
 * `inbound`: master inbound interface configuration;
 * `outbound`: master outbound interface configuration;

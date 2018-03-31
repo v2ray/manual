@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.04.06 v3.16
+
+* [统计信息](../chapter_02/stats.md)。开启方式略麻烦，请仔细看文档。
+
 ## 2018.03.02 v3.11
 
 * VMess Inbound 提供了一个选项，用于禁止客户端使用不安全的加密方式。

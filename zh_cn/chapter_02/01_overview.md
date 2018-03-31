@@ -9,6 +9,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "log": {},
   "api": {},
   "dns": {},
+  "stats": {},
   "routing": {},
   "policy": {},
   "inbound": {},
@@ -30,6 +31,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `inboundDetour`: 额外的传入连接配置，见下文；
 * `outboundDetour`: 额外的传出连接配置，见下文；
 * `transport`: 底层传输配置，见下文。
+* `stats`: 当此项存在时，开启[统计信息](stats.md)。
 
 ## 日志配置（log）
 

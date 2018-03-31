@@ -26,6 +26,7 @@
   * [DNS](configuration/dns.md)
   * [Mux](configuration/mux.md)
   * [API](configuration/api.md)
+  * [statistics](configuration/stats.md)
   * [Transport](configuration/transport.md)
     * [TCP](configuration/transport/tcp.md)
     * [mKCP](configuration/transport/mkcp.md)
