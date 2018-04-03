@@ -35,7 +35,8 @@ Info:
   "password": "password",
   "udp": false,
   "level": 0,
-  "ota": true
+  "ota": true,
+  "network": "tcp"
 }
 ```
 
@@ -51,10 +52,11 @@ Info:
   * `"aes-128-gcm"`
   * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
 * `password`: Password. Can be any string.
-* `udp`: `true` or `false`, whether or not to enable UDP. Default to `false`.
+* `udp` (Deprecated, use `network`): `true` or `false`, whether or not to enable UDP. Default to `false`.
 * `level`: User level. Default to `0`. See [Policy](../policy.md).
 * `ota`: `true` or `false`, whether or not to enable OTA. Default to auto mode.
   * When AEAD is used, `ota` has no effect.
+* `network` (V2Ray 3.16+): Type of network, either `"tcp"`, `"udp"`, or `"tcp,udp"`. Default to `"tcp"`.
 
 ## Outbound proxy configuration
 

@@ -5,6 +5,7 @@
 ## 2018.04.06 v3.16
 
 * [Statistics](../configuration/stats.md).
+* Shadowsocks inbound now can be configured to only listen on UDP. Strongly recommend to not listen on both TCP and UDP on the same port.
 
 ## 2018.03.02 v3.11
 
