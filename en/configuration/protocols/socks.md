@@ -60,7 +60,7 @@ Notice:
 其中：
 
 * `auth`: Socks authentication method. Default to `"noauth"`. Options are:
-  * `"noauth"`: Anounymous.
+  * `"noauth"`: Anonymous.
   * `"password"`: User and password [RFC 1929](https://tools.ietf.org/html/rfc1929)
 * `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty.
   * Only works when `auth` is `"password"`

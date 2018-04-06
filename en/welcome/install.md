@@ -25,7 +25,7 @@ Pre-built packages can be found here:
 1. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
 1. IPFS Re-dist: [https://v2ray.com/download](https://v2ray.com/download)
 
-All packages are in ZIP format. Download and unzip corressponding packages to your system.
+All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
 ## Verify
 
@@ -73,7 +73,7 @@ After installation, we will need to:
 
 ### go.sh
 
-go.sh supoorts the following parameters.
+go.sh supports the following parameters.
 
 * `-p` or `--proxy`: Use a proxy to download V2Ray packages. Same as curl format, such as `"socks5://127.0.0.1:1080"` or `"http://127.0.0.1:3128"`.
 * `-f` or `--force`: Force installation. The script will assume V2Ray was not installed at all.

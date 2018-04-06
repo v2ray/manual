@@ -23,4 +23,4 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 Notice:
 
 1. A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
-1. V2Ray supports comments in JSON, annotated by "//" or "/* */".
+1. V2Ray supports comments in JSON, annotated by "//" or "/\* \*/".
