@@ -21,7 +21,7 @@ Algorithm | &#10004;|&#10004;|&#10004;
 Computer network|&#10004;|&#10004;|&#10004;
 Censorship avoidance|&#10004;|&#10004;|&#10004;
 V2Ray usage|&#10008;|&#10004;|&#10004;
-V2Ray depolyment|&#10008;|&#10004;|&#10004;
+V2Ray deployment|&#10008;|&#10004;|&#10004;
 Related software|&#10008;|&#10004;|&#10004;
 Nonsense pictures|&#10008;&#10008;|&#10008;&#10008;|&#10004;
 Politics|&#10008;|&#10008;|&#10004;
@@ -33,7 +33,7 @@ Identity theft|&#10008;&#10008;&#10008;&#10008;|&#10008;&#10008;&#10008;&#10008;
 
 ### Procedure for violations
 
-1. All &#10008; content will be delete immedietely after notice.
+1. All &#10008; content will be delete immediately after notice.
 1. Senders for all &#10008;&#10008; content will be banned for a week.
 1. Senders for all &#10008;&#10008;&#10008; content will be banned for a month.
 1. Sender for all &#10008;&#10008;&#10008;&#10008; content will be banned for good.

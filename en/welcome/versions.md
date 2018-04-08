@@ -91,8 +91,8 @@
 
 ## 2017.04.21 v2.24
 
-* Stablize Mux.
-* Improves memory effeciency.
+* Stabilize Mux.
+* Improves memory efficiency.
 
 ## 2017.04.15 v2.23
 
@@ -162,7 +162,7 @@
 
 ## 2016.12.05 v2.9
 
-* Fix compatiblity with Alpine Linux.
+* Fix compatibility with Alpine Linux.
 
 ## 2016.11.28 v2.8
 
