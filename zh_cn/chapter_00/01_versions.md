@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.04.13 v3.17
+
+* V2Ray 可直接加载来自 HTTP(s) 的配置文件。
+
 ## 2018.04.06 v3.16
 
 * [统计信息](../chapter_02/stats.md)。开启方式略麻烦，请仔细看文档。

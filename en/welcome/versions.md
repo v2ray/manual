@@ -2,6 +2,10 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.04.13 v3.17
+
+* V2Ray can load config file from HTTP(s).
+
 ## 2018.04.06 v3.16
 
 * [Statistics](../configuration/stats.md).
