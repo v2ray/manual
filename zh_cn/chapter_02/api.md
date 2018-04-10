@@ -21,7 +21,7 @@ V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC]
 * `tag`: 传出代理标识。
 * `services`: 开启的 API 列表。
 
-## 支持的 API 列表
+## 支持的 API 列表 {#api-list}
 
 ### HandlerService
 

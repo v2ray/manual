@@ -20,6 +20,6 @@
 * `path`: WebSocket 所使用的 HTTP 协议路径，默认值为 `""`。
 * `headers`: 自定义 HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是字符串。默认值为空。
 
-## 小贴士
+## 小贴士 {#tip}
 
 * 从 V2Ray 3.4 起，Websocket 会识别 HTTP 请求的 X-Forwarded-For 头来用做流量的源地址。

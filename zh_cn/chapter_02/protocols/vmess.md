@@ -7,7 +7,7 @@
 * 名称：vmess
 * 类型：Inbound / Outbound
 
-## VMess 传出协议配置
+## 传出协议配置 {#outbound}
 
 ```javascript
 {
@@ -44,7 +44,7 @@
       * `"auto"`：默认值，自动选择（运行框架为amd64和s390x时为aes-128-gcm加密方式，其他情况则为chacha20-poly1305加密方式）
       * `"none"`：不加密
 
-## VMess 传入协议配置：
+## 传入协议配置 {#inbound}
 
 ```javascript
 {
@@ -84,7 +84,7 @@
   * `none`
   * `aes-128-cfb`
 
-## 小贴士
+## 小贴士 {#tip}
 
 * 推荐在客户端使用`"auto"`加密方式，这样可以永久保证安全性和兼容性。
 * VMess 依赖于系统时间，请确保使用 V2Ray 的系统 UTC 时间误差在两分钟之内，时区无关。

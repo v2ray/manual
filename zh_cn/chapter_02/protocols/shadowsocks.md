@@ -26,7 +26,7 @@
 * 名称：shadowsocks
 * 类型：Inbound / Outbound
 
-## 传入协议配置：
+## 传入协议配置 {#inbound}
 
 ```javascript
 {
@@ -58,8 +58,7 @@
   * 当使用 AEAD 时，`ota` 设置无效
 * `network` (V2Ray 3.16+): 指定服务器的网络协议类型，可选值为`“tcp”`或`“udp”`或`"tcp,udp"`。默认值为`"tcp"`。
 
-
-## 传出协议配置
+## 传出协议配置 {#outbound}
 
 ```javascript
 {

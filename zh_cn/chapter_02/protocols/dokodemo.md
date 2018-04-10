@@ -32,7 +32,7 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
   * 支持 UDP/IPv4 连接，需要 root (CAP\_NET\_ADMIN) 权限。
 * `userLevel`: 用户等级，所有连接都会使用这个用户等级。
 
-## 透明代理配置样例
+## 透明代理配置样例 {#example}
 
 V2Ray 中增加一个 dokodemo-door 的传入协议：
 
