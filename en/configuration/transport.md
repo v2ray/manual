@@ -16,9 +16,9 @@
 
 其中：
 
-* `tcpSettings`: 针对 [TCP 连接的配置](transport/tcp.md)。
-* `kcpSettings`: 针对 [mKCP 连接的配置](transport/mkcp.md)。
-* `wsSettings`: 针对 [WebSocket 连接的配置](transport/websocket.md)。
+* `tcpSettings`: Settings for [TCP transport](transport/tcp.md)。
+* `kcpSettings`: Settings for [mKCP transport](transport/mkcp.md)。
+* `wsSettings`: Settings for [WebSocket transport](transport/websocket.md)。
 
 ## Per-proxy Configuration
 

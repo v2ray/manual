@@ -13,3 +13,7 @@ All stats counters are listed below:
 
 * `user>>>[email]>>>traffic>>>uplink` (V2Ray 3.16+): Accumulated uplink traffic of specific user, in bytes.
 * `user>>>[email]>>>traffic>>>downlink` (V2Ray 3.16+): Accumulated downlink traffic of specific user, in bytes.
+
+## Tips
+
+* If a user doesn't have a valid email address, the stats will not be enabled.

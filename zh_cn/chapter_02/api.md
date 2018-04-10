@@ -11,7 +11,8 @@ V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC]
     "tag": "api",
     "services": [
         "HandlerService",
-        "LoggerService"
+        "LoggerService",
+        "StatsService"
     ]
 }
 ```
@@ -37,3 +38,7 @@ V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC]
 ### LoggerService
 
 支持对内置 Logger 的重启，可配合 logrotate 进行一些对日志文件的操作。
+
+### StatsService
+
+内置的数据统计服务，详见[统计信息](stats.md)。

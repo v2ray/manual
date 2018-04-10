@@ -1,6 +1,8 @@
-# TCP 传输方式
+# TCP Transport
 
-配置：
+![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html)
+
+Configuration:
 
 ```javascript
 {
@@ -10,16 +12,16 @@
 }
 ```
 
-其中：
+Where:
 
-* `header`: 数据包头部伪装设置：
-  * `type`: 伪装类型，可选的值有：
-    * `"none"`: 默认值，不进行伪装；
-    * `"http"`: 伪装成 HTTP 数据流，具体配置见下。
+* `header`: Header obfuscation settings:
+  * `type`: Type of obfuscation. Choices are:
+    * `"none"`: Default. No obfuscation at all.
+    * `"http"`: HTTP obfuscation. See below.
 
-## HTTP 伪装配置
+## HTTP obfuscation
 
-HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。
+HTTP obfuscation must be configured (and matching) for the inbound and outbound of the connecting peers.
 
 ```javascript
 {
@@ -55,14 +57,14 @@ HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容
 
 其中：
 
-* `type`: 和 `tcpSettings` 中的 `type` 是同一项。
-* `request`: HTTP 请求
-  * `version`: HTTP 版本，默认值为`"1.1"`。
-  * `method`: HTTP 方法，默认值为`"GET"`。
-  * `path`: 路径，一个字符串数组。默认值为`"/"`。当有多个值时，每次请求随机选择一个值。
-  * `headers`: HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是一个数组。每次请求会附上所有的键，并随机选择一个对应的值。默认值见样例。
-* `response`: HTTP 响应
-  * `version`: HTTP 版本，默认值为`"1.1"`。
-  * `status`: HTTP 状态，默认值为`"200"`。
-  * `reason`: HTTP 状态说明，默认值为`"OK"`。
-  * `headers`: HTTP 头，一个键值对，每个键表示一个 HTTP 头的名称，对应的值是一个数组。每次请求会附上所有的键，并随机选择一个对应的值。默认值见样例。
+* `type`: same `type` entry as in `tcpSettings`.
+* `request`: HTTP request settings:
+  * `version`: HTTP version, default value `"1.1"`
+  * `method`: HTTP method, default value `"GET"`。
+  * `path`: Path. A string array. Default value is `["/"]`. When there are multiple values, value is picked up randomly for each request.
+  * `headers`: HTTP headers. It is a key value pair. Each key is key of the HTTP header, and value is the value of the HTTP header. When multiple values are set, the effetive value is picked up randomly for each request. Default settings is same as the example above.
+* `response`: HTTP response.
+  * `version`: HTTP version. Default value is `"1.1"`.
+  * `status`: HTTP status. Default value is `"200"`.
+  * `reason`: HTTP status text. Default value is `"OK"`.
+  * `headers`: HTTP header. Same as request headers, but for response.
