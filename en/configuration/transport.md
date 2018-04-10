@@ -105,7 +105,7 @@
   * `certificates`: 证书列表（用于服务器端），其中每一项表示一个证书：
     * `usage` (V2Ray 3.17+): 证书用途，默认值为`"encipherment"`，可选值如下：
       * `"encipherment"`: 证书用于 TLS 认证和加密。
-      * `"verify"`: 证书用于验证远端 TLS 的证书。当使用此项时，当前证书必须为 CA 证书。
+      * `"verify"`: 证书用于验证远端 TLS 的证书。当使用此项时，当前证书必须为 CA 证书。暂不支持 Windows 平台。
       * `"issue"`: 证书用于签发其它证书。当使用此项时，当前证书必须为 CA 证书。
     * `certificateFile`: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
     * `certificate` (V2Ray 3.17+): 证书内容，格式如样例所示。`certificate`和`certificateFile`二者选一。
@@ -119,4 +119,5 @@
 
 * 当`certificateFile`和`certificate`同时指定时，V2Ray 优先使用`certificateFile`。`keyFile`和`key`也一样。
 * 当有新的客户端请求时，假设所指定的`serverName`为`"v2ray.com"`，V2Ray 会先从证书列表中寻找可用于`"v2ray.com"`的证书，如果没有找到，则使用任一`usage`为`"issue"`的证书签发一个适用于`"v2ray.com"`的证书，有效期为一小时。并将新的证书加入证书列表，以供后续使用。
+* 当`usage`为`"verify"`时，`keyFile`和`key`可均为空。
 * 使用`v2ctl cert -ca`可以生成自签名的 CA 证书。
