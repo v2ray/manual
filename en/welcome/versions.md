@@ -5,6 +5,7 @@
 ## 2018.04.13 v3.17
 
 * V2Ray can load config file from HTTP(s).
+* TLS in V2Ray can issue new certificates by provided CA certificates for domains in incoming requests.
 
 ## 2018.04.06 v3.16
 
