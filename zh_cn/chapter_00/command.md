@@ -1,5 +1,7 @@
 # 命令行参数
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/command.html)
+
 ## V2Ray
 
 V2Ray 的程序文件的命令行参数如下：

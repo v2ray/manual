@@ -9,7 +9,7 @@
 
 ## 架构
 
-![](../resources/arch.svg)
+![Architecture](../resources/arch.svg)
 
 内核分为三层：应用层、代理层和传输层。每一层内包含数个模块，模块间互相独立，同类型的模块可以无缝替换。
 
