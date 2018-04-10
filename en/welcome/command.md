@@ -48,3 +48,9 @@ Options:
 `v2ctl config`
 
 No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
+
+### UUID
+
+`v2ray uuid`
+
+No options. This command prints a random UUID.
