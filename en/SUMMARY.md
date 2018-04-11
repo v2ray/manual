@@ -31,6 +31,7 @@
     * [TCP](configuration/transport/tcp.md)
     * [mKCP](configuration/transport/mkcp.md)
     * [WebSocket](configuration/transport/websocket.md)
+    * [HTTP/2](configuration/transport/h2.md)
   * [Env Variables](configuration/env.md)
 * [Clients](ui_client/README.md)
   * [Windows](ui_client/windows.md)

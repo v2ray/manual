@@ -35,6 +35,7 @@
     * [TCP](chapter_02/transport/tcp.md)
     * [mKCP](chapter_02/transport/mkcp.md)
     * [WebSocket](chapter_02/transport/websocket.md)
+    * [HTTP/2](chapter_02/transport/h2.md)
   * [环境变量](chapter_02/env.md)
 * [客户端与服务](ui_client/README.md)
   * [Windows](ui_client/windows.md)

@@ -6,6 +6,7 @@
 
 * V2Ray can load config file from HTTP(s).
 * TLS in V2Ray can issue new certificates by provided CA certificates for domains in incoming requests.
+* [HTTP/2](../configuration/transport/h2.md) transport.
 
 ## 2018.04.06 v3.16
 

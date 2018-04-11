@@ -6,6 +6,7 @@
 
 * V2Ray 可直接加载来自 HTTP(s) 的配置文件。
 * V2Ray 的 TLS 可使用 CA 证书自动为任意域名签发新的证书。
+* [HTTP/2](../chapter_02/transport/h2.md) 传输方式。
 
 ## 2018.04.06 v3.16
 
