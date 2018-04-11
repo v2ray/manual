@@ -6,6 +6,7 @@
   * [Version History](welcome/versions.md)
   * [Workflow](welcome/workflow.md)
   * [Install](welcome/install.md)
+  * [Commandline](welcome/command.md)
   * [Donation](welcome/donate.md)
   * [Support](welcome/help.md)
     * [Telegram](welcome/tg.md)
