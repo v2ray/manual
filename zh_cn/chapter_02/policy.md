@@ -17,6 +17,10 @@
             "statsUserUplink": false,
             "statsUserDownlink": false
         }
+    },
+    "system": {
+        "statsInboundUplink": false,
+        "statsInboundDownlink": false
     }
 }
 ```
@@ -30,6 +34,9 @@
   * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。
   * `statsUserUplink`: 当值为`true`时，开启当前等级的所有用户的上行流量统计。
   * `statsUserDownlink`: 当值为`true`时，开启当前等级的所有用户的下行流量统计。
+* `system` (V2Ray 3.18+): V2Ray 系统的策略。
+  * `statsInboundUplink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的上行流量统计。
+  * `statsInboundDownlink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的下行流量统计。
 
 本地策略在连接处理时的具体细节：
 

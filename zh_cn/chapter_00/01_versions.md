@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.04.20 v3.18
+
+* 传入代理的流量统计。
+
 ## 2018.04.13 v3.17
 
 * V2Ray 可直接加载来自 HTTP(s) 的配置文件。
