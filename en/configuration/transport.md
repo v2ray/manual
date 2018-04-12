@@ -32,6 +32,7 @@
   "security": "none",
   "tlsSettings": {
     "serverName": "v2ray.com",
+    "alpn": ["http/1.1"],
     "allowInsecure": false,
     "certificates": [
       {
@@ -104,6 +105,7 @@
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
   * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
+  * `alpn` (V2Ray 3.18+): 一个字符串数组，指定了 TLS 握手时指定的 ALPN 数值。默认值为`["http/1.1"]`。
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
   * `certificates`: 证书列表（用于服务器端），其中每一项表示一个证书：
     * `usage` (V2Ray 3.17+): 证书用途，默认值为`"encipherment"`，可选值如下：
