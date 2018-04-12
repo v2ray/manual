@@ -12,8 +12,8 @@ Local policy is added in V2Ray 3.1.
         "0": {
             "handshake": 4,
             "connIdle": 300,
-            "uplinkOnly": 5,
-            "downlinkOnly": 30,
+            "uplinkOnly": 2,
+            "downlinkOnly": 5,
             "statsUserUplink": false,
             "statsUserDownlink": false
         }
@@ -28,10 +28,10 @@ Local policy is added in V2Ray 3.1.
 其中：
 
 * `level`: 一组键值对，每个键是一个字符串形式的数字（JSON 的要求），比如 `"0"`、`"1"` 等，双引号不能省略，这个数字对应用户等级。每一个值如下：
-  * `handshake`: 连接建立时的握手时间限制。单位为秒。
-  * `connIdle`: 连接空闲的时间限制。单位为秒。
-  * `uplinkOnly`: 当连接下行线路关闭后的时间限制。单位为秒。
-  * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。
+  * `handshake`: 连接建立时的握手时间限制。单位为秒。默认值为`4`。
+  * `connIdle`: 连接空闲的时间限制。单位为秒。默认值为`300`。
+  * `uplinkOnly`: 当连接下行线路关闭后的时间限制。单位为秒。默认值为`2`。
+  * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。默认值为`5`。
   * `statsUserUplink`: 当值为`true`时，开启当前等级的所有用户的上行流量统计。
   * `statsUserDownlink`: 当值为`true`时，开启当前等级的所有用户的下行流量统计。
 * `system` (V2Ray 3.18+): V2Ray 系统的策略。

@@ -1,4 +1,6 @@
-# 路由功能
+# Routing
+
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/03_routing.html)
 
 V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由不同的传出连接发出，以达到按需代理的目的。这一功能的常见用法是建立一个统一的中转服务器（比如在路由器或者一台国内的 VPS 上），所有的客户端都将数据发往这台服务器，由服务器来选择是否转发至国外的 VPS。这样做的好处是减化了客户端的配置和维护成本，当路由有变化时，不必修改每一个客户端，只需修改中转服务器的配置即可。
 
