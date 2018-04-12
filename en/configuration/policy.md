@@ -2,9 +2,9 @@
 
 Local policy is added in V2Ray 3.1.
 
-本地策略可以配置一些用户相关的权限，比如连接超时设置。V2Ray 处理的每一个连接，都对应到一个用户，按照这个用户的等级（level）应用不同的策略。本地策略可按照等级的不同而变化。
+Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-示例配置：
+Configuration:
 
 ```javascript
 {
