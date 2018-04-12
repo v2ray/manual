@@ -10,7 +10,8 @@
 {
   "tcpSettings": {},
   "kcpSettings": {},
-  "wsSettings": {}
+  "wsSettings": {},
+  "httpSettings": {}
 }
 ```
 
@@ -19,6 +20,7 @@
 * `tcpSettings`: 针对 [TCP 连接的配置](transport/tcp.md)。
 * `kcpSettings`: 针对 [mKCP 连接的配置](transport/mkcp.md)。
 * `wsSettings`: 针对 [WebSocket 连接的配置](transport/websocket.md)。
+* `httpSettings`: 针对 [HTTP/2 连接的配置](transport/h2.md)。
 
 ## 分协议配置 {#perproxy}
 
@@ -91,7 +93,8 @@
   },
   "tcpSettings": {},
   "kcpSettings": {},
-  "wsSettings": {}
+  "wsSettings": {},
+  "httpSettings": {}
 }
 ```
 
@@ -114,6 +117,7 @@
 * `tcpSettings`: 当前连接的 TCP 配置，仅当此连接使用 TCP 时有效。配置内容与上面的全局配置相同。
 * `kcpSettings`: 当前连接的 mKCP 配置，仅当此连接使用 mKCP 时有效。配置内容与上面的全局配置相同。
 * `wsSettings`: 当前连接的 WebSocket 配置，仅当此连接使用 WebSocket 时有效。配置内容与上面的全局配置相同。
+* `httpSettings`: 当前连接的 HTTP/2 配置，仅当此连接使用 HTTP/2 时有效。配置内容与上面的全局配置相同。
 
 ## 小贴士 {#tip}
 
