@@ -20,13 +20,13 @@
 重要模块列表：
 
 * Dispatcher: 用于把传入代理所接收到的数据，传送给传出代理；
-* Router: 内置路由，详见[路由配置](../chapter_02/03_routing.md)；
+* Router: 内置路由，详见[路由配置](https://www.v2ray.com/en/configuration/routing.html)；
 * DNS: 内置的 DNS 缓存；
 * Proxy Manager: 传入代理的管理器；
 
 ## 代理层
 
-代理层分为两部分：传入代理（Inbound Proxy）和传出代理（Outbound Proxy）。两部分相互独立，传入代理不依赖于某个特定的传出代理，反之亦然。所有已实现的[协议列表](../chapter_02/02_protocols.md)一览。
+代理层分为两部分：传入代理（Inbound Proxy）和传出代理（Outbound Proxy）。两部分相互独立，传入代理不依赖于某个特定的传出代理，反之亦然。所有已实现的[协议列表](https://www.v2ray.com/en/configuration/protocols.html)一览。
 
 ### 传入代理
 
