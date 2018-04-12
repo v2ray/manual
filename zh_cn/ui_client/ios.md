@@ -34,10 +34,11 @@ Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 
 SSH 客户端，可以直接在 iPhone 或 iPad 上操作 VPS。
 
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
+* 官网：[termius.com](https://www.termius.com)
 
 ### Telegram
 
 加密聊天神器。
 
-* 官网：[telegram.org](https://telegram.org/)
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
+* 官网：[telegram.org](https://telegram.org/)
