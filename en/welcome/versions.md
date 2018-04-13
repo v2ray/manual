@@ -2,7 +2,7 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
-## 2018.04.20 v3.18
+## 2018.04.20 v3.19
 
 * Traffic stats for inbound proxies.
 
