@@ -1,10 +1,10 @@
 # Transport Settings
 
-底层传输（transport）配置指定了 V2Ray 如何使用 TCP、UDP 等基础网络协议。配置分为两部分，一是全局设置，二是分协议配置。分协议配置可以指定每个单独的传入传出协议用怎样的方式传输。通常来说客户端和服务器对应的传出传入协议需要使用同样的传输方式。当分协议传输配置指定了一种传输方式，但没有填写其设置时，此传输方式会使用全局配置中的设置。
+Transport settings is for how V2Ray sends and receives data from its peers. The settings devides into two parts: global settings and per proxy settings. Per-proxy settings specifies how each individual proxy handles its data, while global settings is for all proxies. Usually the inbound and outbound proxies between the connecting peer must have the same transport settings. When a proxy has no transport settings, the global settings applies.
 
 ## Global Configuration
 
-全局配置位于配置文件的 "transport" 项。
+Global settings is in the "transport" entry of V2Ray config.
 
 ```javascript
 {
@@ -15,7 +15,7 @@
 }
 ```
 
-其中：
+Where:
 
 * `tcpSettings`: Settings for [TCP transport](transport/tcp.md)。
 * `kcpSettings`: Settings for [mKCP transport](transport/mkcp.md)。
@@ -24,7 +24,7 @@
 
 ## Per-proxy Configuration
 
-每一个传入、传出连接都可以配置不同的传输配置，在 inbound、inboundDetour、outbound、outboundDetour 的每一项中，都可以设置 streamSettings 来进行一些传输的配置。
+Each inbound and outbound proxy may has its own transport settings. Each inbound, inboundDetour, outbound and outboundDetour entry may have a `streamSettings` for transport.
 
 ```javascript
 {
@@ -99,14 +99,14 @@
 }
 ```
 
-其中：
+Where:
 
-* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"` 或 `"ws"`，默认值为 `"tcp"`；
-* `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
-* `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
-  * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
-  * `alpn` (V2Ray 3.18+): 一个字符串数组，指定了 TLS 握手时指定的 ALPN 数值。默认值为`["http/1.1"]`。
-  * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
+* `network`: Network type of the stream transport. Choices are `"tcp"`, `"kcp"`, `"ws"`, or `"http"`. Default value `"tcp"`.
+* `security`: Type of security. Choices are `"none"` (default) for no extra security, or `"tls"` for using [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
+* `tlsSettings`: TLS settings. TLS is provided by Golang. Support up to TLS 1.2. DTLS is not supported.
+  * `serverName`: Server name (usually domain) used for TLS authentication.
+  * `alpn` (V2Ray 3.18+): An array of strings, to specifiy the ALPN value in TLS handshake. Default value is `["http/1.1"]`.
+  * `allowInsecure`: If `true`, V2Ray allowss insecure connection at TLS client.
   * `certificates`: 证书列表（用于服务器端），其中每一项表示一个证书：
     * `usage` (V2Ray 3.17+): 证书用途，默认值为`"encipherment"`，可选值如下：
       * `"encipherment"`: 证书用于 TLS 认证和加密。
