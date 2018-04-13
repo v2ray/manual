@@ -31,7 +31,11 @@ V2Ctl 命令行参数如下：
 v2ctl <command> <options>
 ```
 
-可使用的 command 如下，每个 command 有各自不同的 options。
+Command 包括：
+
+* `verify [--sig=/path/to/sigfile] /file/to/verify`: 验证文件是否由 Project V 官方签名。
+* `config`: 从标准输入读取 JSON 格式的配置，然后从标准输出打印 Protobuf 格式的配置。
+* `uuid`: 输出一个随机的 UUID。
 
 ### Verify
 
@@ -42,16 +46,5 @@ v2ctl <command> <options>
 参数：
 
 * `sig`：签名文件路径，默认值为待验证文件加入'.sig'后缀。
-* 第一参数：待验证文件路径。
+* `/file/to/verify`：待验证文件路径。
 
-### Config
-
-`v2ctl config`
-
-此命令没有参数，它从标准输入读取 JSON 格式的配置，然后从标准输出打印 Protobuf 格式的配置。
-
-### UUID
-
-`v2ray uuid`
-
-此命令没有参数。它输出一个随机的 UUID。
