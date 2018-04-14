@@ -51,6 +51,6 @@ No options. This command reads configuration in JSON format from stdin, and then
 
 ### UUID
 
-`v2ray uuid`
+`v2ctl uuid`
 
 No options. This command prints a random UUID.
