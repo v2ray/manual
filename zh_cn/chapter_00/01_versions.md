@@ -109,7 +109,7 @@
 * 提升了 Mux 的性能。
 * Mux 中可以配置并发连接数了。
 * 提升了 HTTP 代理的性能。
-* 移除了 connectionReuse 的配置（由 Mux 替代）。
+* 移除了 connectionResuse 的配置（由 Mux 替代）。
 
 ## 2017.04.08 v2.22
 
