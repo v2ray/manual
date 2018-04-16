@@ -3,7 +3,7 @@
 浏览前建议阅读[文件格式](./01_overview.md)理解整体框架
 一些配置模板，请参考[vTemplate](https://github.com/KiriKira/vTemplate)
 
-V2Ray 的配置文件注释如下，版本号为V3.16配置
+V2Ray 的配置文件参数位置如下，版本号为V3.16的配置文件
 各协议请参考[协议列表](./02_protocols.md)确认对应协议名称和协议配置内容
 
 ```javascript{
