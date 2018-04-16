@@ -7,14 +7,12 @@
 配置：
 
 ```javascript
-"wsSettings": {
-  {
-//  "allowPassive" = true,
-//  "connectionReuse": true,
-    "path": "/random/path",
-    "headers": {
-      "Host": "v2ray.com"
-    }
+{
+//"allowPassive" = true,
+//"connectionReuse": true,
+  "path": "/random/path",
+  "headers": {
+    "Host": "v2ray.com"
   }
 }
 ```
