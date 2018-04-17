@@ -47,10 +47,12 @@ Donate via: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> 
 
 ## Cryptocurrency
 
-* Bitcoin: [15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo](https://blockchain.info/address/15DumaY9Pc3CRf2uKTXAp4R21sEkymvpJo)
-* Bitcoin Case: [1473sDqeigUEdctzexUhxjBAiGizsS5tjD](https://blockdozer.com/insight/address/1473sDqeigUEdctzexUhxjBAiGizsS5tjD)
-* Ethereum: [0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b](https://etherscan.io/address/0x2d2306cDB993f3db217141EbDc5AF4fc54150c2b)
+* Bitcoin: [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
+* Bitcoin Case: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)
+* Ethereum: [0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e](https://etherscan.io/address/0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e)
+* Litecoin: [LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR](https://insight.litecore.io/address/LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR)
 * Monero: 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg
+* EOS: [0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e](https://etherscan.io/token/EOS?a=0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e)
 
 ## Thank you for your donation
 
