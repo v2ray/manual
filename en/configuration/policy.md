@@ -25,24 +25,26 @@ Configuration:
 }
 ```
 
-其中：
+Where:
 
-* `level`: 一组键值对，每个键是一个字符串形式的数字（JSON 的要求），比如 `"0"`、`"1"` 等，双引号不能省略，这个数字对应用户等级。每一个值如下：
-  * `handshake`: 连接建立时的握手时间限制。单位为秒。默认值为`4`。
-  * `connIdle`: 连接空闲的时间限制。单位为秒。默认值为`300`。
-  * `uplinkOnly`: 当连接下行线路关闭后的时间限制。单位为秒。默认值为`2`。
-  * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。默认值为`5`。
-  * `statsUserUplink`: 当值为`true`时，开启当前等级的所有用户的上行流量统计。
-  * `statsUserDownlink`: 当值为`true`时，开启当前等级的所有用户的下行流量统计。
-* `system` (V2Ray 3.18+): V2Ray 系统的策略。
-  * `statsInboundUplink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的上行流量统计。
-  * `statsInboundDownlink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的下行流量统计。
+* `level`: A list of key value pairs. Each key is a string of integer (restricted by JSON), such as `"0"`, `"1"`, etc. The numeric value is for a certain user level. Each value has the following attributes:
+  * `handshake`: Timeout for establishing a connection, in seconds. Default value `4`.
+  * `connIdle`: Timeout for idle connections, in seconds. Default value `300`.
+  * `uplinkOnly`: Time for keeping connections open after the uplink of the connection is closed, in seconds. Default value `2`.
+  * `downlinkOnly`: Time for keeping connections open after the downlink of the connection is closed, in seconds. Default value `5`.
+  * `statsUserUplink`: When set to `true`, V2Ray enables stat counter to uplink traffic for all users in this level.
+  * `statsUserDownlink`: When set to `true`, V2Ray enables stat counter to downlink traffic for all users in this level.
+* `system` (V2Ray 3.18+): System policy for V2Ray
+  * `statsInboundUplink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all uplink traffic in all inbound proxies.
+  * `statsInboundDownlink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all downlink traffic in all inbound proxies.
 
-本地策略在连接处理时的具体细节：
+Some details when V2Ray handles connections:
 
-1. 在传入代理处理一个新连接时，在握手阶段（比如 VMess 读取头部数据，判断目标服务器地址），如果使用的时间超过 `handshake` 时间，则中断该连接。
-1. 在传入传出代理处理一个连接时，如果在 `connIdle` 时间内，没有任何数据被传输（包括上行和下行数据），则中断该连接。
-1. 当客户端（如浏览器）关闭上行连接时，传入代理会在等待 `downlinkOnly` 时间后中断连接。
-1. 当服务器（如远端网站）关闭下行连接时，传出代理会在等待 `uplinkOnly` 时间后中断连接。
+1. At the handshake stage of an inbound proxy dealing with a new connection, say VMess reading request header, if it takes longer than `handshake` time, V2Ray aborts the connection.
+1. If there is no data passed through the connection in `connIdle` time, V2Ray aborts the conneciton.
+1. After client (browser) closes the uplink of the connection, V2Ray aborts the connection after `downlinkOnly` time.
+1. After remote (server) closes the downlink of the connection, V2Ray aborts the connection after `uplinkOnly` times.
 
-每个传入传出代理现在都可以设置用户等级，V2Ray 会根据实际的用户等级应用不同的本地策略。
+## Tips
+
+* Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.

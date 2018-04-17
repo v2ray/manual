@@ -1,5 +1,7 @@
 # Statistics
 
+![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html)
+
 V2Ray provides some information about its internals.
 
 Configuration:

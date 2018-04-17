@@ -1,5 +1,7 @@
 # 统计信息
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/stats.html)
+
 V2Ray 提供了一些关于其运行状况的统计信息。
 
 示例配置：
