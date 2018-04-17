@@ -26,7 +26,7 @@ Where:
 * `api`: API configuration;
 * `dns`: DNS configuration;
 * `stats`: When specified, internal [Statistics](stats.md) is enabled;
-* `routing`: routing configuration;
+* `routing`: [Routing configuration](routing.md);
 * `inbound`: master inbound interface configuration;
 * `outbound`: master outbound interface configuration;
 * `inboundDetour`: extra inbound interfaces configurations;
@@ -63,41 +63,6 @@ RPC API to control the V2Ray instance. See [API configuration](api.md) for detai
 ## DNS Configurations (dns)
 
 Internal DNS server's configurations, if this section is omitted or empty, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](04_dns.md)
-
-## Routing Configurations（routing）
-
-```javascript
-{
-  "strategy": "rules",
-  "settings": {
-    "rules": [
-      {
-        "type": "field",
-        "domain": [
-          "baidu.com",
-          "qq.com"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "ip": "0.0.0.0/8",
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "network": "udp",
-        "outboundTag": "blocked"
-      }
-    ]
-  }
-}
-```
-
-Where:
-
-* `strategy`: routing strategy, currently the only valid value is `"rules"`.
-* `settings`: For specific configurations, see [Routing Configurations](03_routing.md)；
 
 ## Local Policy {#policy}
 
