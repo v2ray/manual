@@ -90,7 +90,7 @@ Where:
 * `inboundTag`: An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
 * `outboundTag` [Tag of the outbound](02_protocols.md) that the connection will be sent to, if this rule take effect.
 
-## 小贴士 {#tips}
+## Tips
 
 * When multiple attributes of the rule are specified, they must be satisfied together, in order to make the rule effective.
   * If you want to route connections by `domain` or `ip`, you probably need multiple rules, instead of one rule containing both `domain` and `ip`.
