@@ -15,7 +15,7 @@ Notes:
 
 Amount: <input id="damount" type="number" min="1" step="any" value="25" />USD
 
-\* Donations that less than 1 USD may be refunded due to high service fees.
+\* Donations that less than 1 USD may be refunded due to high service fees, and will not be listed in the sponsor list below.
 
 <script>
 function getAmount() {
