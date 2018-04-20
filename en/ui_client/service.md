@@ -18,3 +18,4 @@
 ## Cryptocurrency
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Trade Bitcoins offline
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Trade BTC, ETH, BCH, USDT offline.
