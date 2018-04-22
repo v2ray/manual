@@ -88,7 +88,7 @@ Where:
 * `source`: An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
 * `user`: An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now  Shadowsocks and VMess support user with email.
 * `inboundTag`: An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
-* `outboundTag` [Tag of the outbound](02_protocols.md) that the connection will be sent to, if this rule take effect.
+* `outboundTag` [Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
 
 ## Tips
 

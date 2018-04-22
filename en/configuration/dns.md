@@ -2,7 +2,7 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html)
 
-V2Ray has an internal DNS server which provides DNS replay for other components.
+V2Ray has an internal DNS server which provides DNS relay for other components.
 
 Configuration:
 
