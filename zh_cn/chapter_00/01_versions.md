@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.05.25 v3.23
+
+* JSON 配置文件中，端口支持从环境变量加载。
+
 ## 2018.04.20 v3.19
 
 * 传入代理的流量统计。
