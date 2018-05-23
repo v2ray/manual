@@ -76,11 +76,13 @@ Where:
   * Regular expression: Begining with `"regexp:"`, the rest is a regular expression. When the regexp matches targeting domain, this rule takes effect. Example: rule `"regexp:\\.goo.*\\.com$"` matches `"www.google.com"` and `"fonts.googleapis.com"`, but not `"google.com"`.
   * Subdomain: Begining with `"domain:"` and the rest is a domain. When the targeting domain is exactly the value, or is a subdomain of the value, this rule takes effect. Example: rule `"domain:v2ray.com"` matches `"www.v2ray.com"`, `"v2ray.com"`, but not `"xv2ray.com"`.
   * Common domains in China: Special value `"geosite:cn"` for a list of [common domains in China](https://www.v2ray.com/links/chinasites/).
+  * Domains from file (V2Ray 3.23+): Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
 * `ip`: An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. There are three formats:
   * IP: such as `"127.0.0.1"`.
   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): such as `"127.0.0.0/8"`.
   * GeoIP: such as `"geoip:cn"`. It begins with `geoip:` (lower case) and followed by two letter of country code.
     * Special value `"geoip:private"`: for all private addresses such as `127.0.0.1`.
+  * IPs from file (V2Ray 3.23+): Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geoip.dat`. The tag must exist in the file.
 * `port`：Port range. Formats are:
   * `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
   * `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
@@ -94,3 +96,4 @@ Where:
 
 * When multiple attributes of the rule are specified, they must be satisfied together, in order to make the rule effective.
   * If you want to route connections by `domain` or `ip`, you probably need multiple rules, instead of one rule containing both `domain` and `ip`.
+* `"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.

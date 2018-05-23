@@ -5,6 +5,7 @@
 ## 2018.05.25 v3.23
 
 * In JSON configuration, port can now be specified from env variables.
+* JSON config now supports to load domains and IPs from specified files.
 
 ## 2018.04.20 v3.19
 

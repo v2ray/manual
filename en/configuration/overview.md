@@ -89,8 +89,8 @@ Where:
 * `port`: listening port.
 * `port`: port to be listen from. Accepted formats are:
   * Integer: actual port number.
-  * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
-  * String: A numberic string value, such as `"1234"`.
+  * Env variable (V2Ray 3.23+): Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
+  * String (V2Ray 3.23+): A numberic string value, such as `"1234"`.
 * `listen`: listening IP address, default value is `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
@@ -155,7 +155,7 @@ Where:
 * `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
 * `port`: port to be listen from. Accepted formats are:
   * Integer: actual port number.
-  * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
+  * Env variable (V2Ray 3.23+): Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
   * String: Either a numberic string value, such as `"1234"`, or a port range like `"5-10"` which stands for port number 5 to 10.
 * `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
 * `listen`: listening IP address, default value is `"0.0.0.0"`.
