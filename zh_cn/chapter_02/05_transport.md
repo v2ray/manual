@@ -129,3 +129,4 @@
 * 当有新的客户端请求时，假设所指定的`serverName`为`"v2ray.com"`，V2Ray 会先从证书列表中寻找可用于`"v2ray.com"`的证书，如果没有找到，则使用任一`usage`为`"issue"`的证书签发一个适用于`"v2ray.com"`的证书，有效期为一小时。并将新的证书加入证书列表，以供后续使用。
 * 当`usage`为`"verify"`时，`keyFile`和`key`可均为空。
 * 使用`v2ctl cert -ca`可以生成自签名的 CA 证书。
+* 在 Windows 平台上可以将自签名的 CA 证书安装到系统中，即可验证远端 TLS 的证书。
