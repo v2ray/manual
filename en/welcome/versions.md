@@ -5,6 +5,7 @@
 ## 2018.06.01 v3.24
 
 * Internal buffer size (per connection) can now be configured in JSON configuration.
+* mKCP now supports DTLS 1.2 header.
 
 ## 2018.05.25 v3.23
 
