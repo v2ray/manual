@@ -15,7 +15,8 @@
             "uplinkOnly": 2,
             "downlinkOnly": 5,
             "statsUserUplink": false,
-            "statsUserDownlink": false
+            "statsUserDownlink": false,
+            "bufferSize": 10240
         }
     },
     "system": {
@@ -34,6 +35,7 @@
   * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。默认值为`5`。
   * `statsUserUplink`: 当值为`true`时，开启当前等级的所有用户的上行流量统计。
   * `statsUserDownlink`: 当值为`true`时，开启当前等级的所有用户的下行流量统计。
+  * `bufferSize` (V2Ray 3.24+): 每个连接的内部缓存大小。单位为 kB。默认值为`10240`。当值为`0`时，内部缓存被禁用。
 * `system` (V2Ray 3.18+): V2Ray 系统的策略。
   * `statsInboundUplink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的上行流量统计。
   * `statsInboundDownlink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的下行流量统计。
@@ -45,4 +47,7 @@
 1. 当客户端（如浏览器）关闭上行连接时，传入代理会在等待 `downlinkOnly` 时间后中断连接。
 1. 当服务器（如远端网站）关闭下行连接时，传出代理会在等待 `uplinkOnly` 时间后中断连接。
 
-每个传入传出代理现在都可以设置用户等级，V2Ray 会根据实际的用户等级应用不同的本地策略。
+## 小贴士 {#tip}
+
+* 每个传入传出代理现在都可以设置用户等级，V2Ray 会根据实际的用户等级应用不同的本地策略。
+* `bufferSize` 选项会覆盖[环境变量](env.md#buffer-size)中`v2ray.ray.buffer.size`的设定。

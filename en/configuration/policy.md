@@ -34,6 +34,7 @@ Where:
   * `downlinkOnly`: Time for keeping connections open after the downlink of the connection is closed, in seconds. Default value `5`.
   * `statsUserUplink`: When set to `true`, V2Ray enables stat counter to uplink traffic for all users in this level.
   * `statsUserDownlink`: When set to `true`, V2Ray enables stat counter to downlink traffic for all users in this level.
+  * `bufferSize` (V2Ray 3.24+): Size of internal buffer per connection, in kilo-bytes. Default value is `10240`. When it is set to `0`, the internal buffer is disabled.
 * `system` (V2Ray 3.18+): System policy for V2Ray
   * `statsInboundUplink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all uplink traffic in all inbound proxies.
   * `statsInboundDownlink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all downlink traffic in all inbound proxies.
@@ -48,3 +49,4 @@ Some details when V2Ray handles connections:
 ## Tips
 
 * Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.
+* `bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).
