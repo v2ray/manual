@@ -62,7 +62,7 @@ Authentication credential is a 16-byte long Hash value. It can be generated usin
 
 The command is encrypted using AES-128-CFB.
 
-* Key: MD5(User ID + 'c48619fe-8f02-49e0-b9e9-edf763e17e21')
+* Key: MD5(User ID + []byte('c48619fe-8f02-49e0-b9e9-edf763e17e21'))
 * IV: MD5(X + X + X + X), X = []byte(The time when authentication credential is generated) (8 Bytes, Big Endian)
 
 | 1 Byte | 16 Bytes   | 16 Bytes | 1 Byte | 1 Byte | 4 Bits | 4 Bits | 1 Byte | 1 Byte | 2 Bytes | 1 Byte | N Byte | P Byte | 4 Bytes |
