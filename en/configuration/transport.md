@@ -109,6 +109,7 @@ Where:
   * `serverName`: Server name (usually domain) used for TLS authentication.
   * `alpn` (V2Ray 3.18+): An array of strings, to specifiy the ALPN value in TLS handshake. Default value is `["http/1.1"]`.
   * `allowInsecure`: If `true`, V2Ray allowss insecure connection at TLS client.
+  * `allowInsecureCiphers` (V2Ray 3.24+): Whehter or not to allow insecure cipher suites. By default TLS only uses cipher suites from TLS 1.3 spec. Turn on this option to allow cipher suites with static RSA keys.
   * `certificates`: List of TLS certificates. Each entry is one certificate.
     * `usage` (V2Ray 3.17+): Purpose of the certificate. Default value `"encipherment"`. Choices are:
       * `"encipherment"`: Certificate is used for TLS authentication and encryption.
@@ -123,7 +124,7 @@ Where:
 * `wsSettings`: WebSocket transport configuration for current proxy. Effective only when the proxy uses WebSocket transport. Configuration is the same as it is in global configuration.
 * `httpSettings`: HTTP/2 transport configuration for current proxy. Effective only when the proxy uses HTTP/2 transport. Configuration is the same as it is in global configuration.
 
-## 小贴示
+## Tips
 
 * When `certificateFile` and `certificate` are both filled in. V2Ray uses `certificateFile`. Same for `keyFile` and `key`.
 * When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. If not found, V2Ray will try to issue a new certificate using any existing certificate whose `usage` is `"issue"` for `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse.

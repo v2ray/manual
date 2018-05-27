@@ -6,6 +6,7 @@
 
 * Internal buffer size (per connection) can now be configured in JSON configuration.
 * mKCP now supports DTLS 1.2 header.
+* TLS transport now only support cipher suites in TLS 1.3 spec.
 
 ## 2018.05.25 v3.23
 

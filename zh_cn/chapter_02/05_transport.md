@@ -109,6 +109,7 @@
   * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
   * `alpn` (V2Ray 3.18+): 一个字符串数组，指定了 TLS 握手时指定的 ALPN 数值。默认值为`["http/1.1"]`。
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
+  * `allowInsecureCiphers` (V2Ray 3.24+): 是否允许不安全的加密方式。默认情况下 TLS 只使用 TLS 1.3 推荐的加密算法套件，开启这一选项会增加一些与 TLS 1.2 兼容的加密套件。
   * `certificates`: 证书列表，其中每一项表示一个证书：
     * `usage` (V2Ray 3.17+): 证书用途，默认值为`"encipherment"`，可选值如下：
       * `"encipherment"`: 证书用于 TLS 认证和加密。
