@@ -8,6 +8,12 @@ Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
 
+## Kitsunebi Lite
+
+Light version of Kitsunebi.
+
+* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
+
 ## Shadowrocket
 
 Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadowsocks, VMess, SSR etc.
@@ -19,6 +25,10 @@ Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadow
 Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
+
+## Quantumult
+
+* Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
 ## Other tools
 
