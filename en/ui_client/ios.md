@@ -1,4 +1,4 @@
-# iOS 客户端
+# iOS Client
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html)
 
@@ -51,3 +51,10 @@ Encrypted discussion.
 
 * Website: [telegram.org](https://telegram.org/)
 * Download: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
+
+### ProtonMail
+
+Encrypted email.
+
+* Website: [protonmail.com](https://protonmail.com/)
+* Download: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)

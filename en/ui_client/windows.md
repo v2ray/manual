@@ -10,6 +10,10 @@
 
 * Download: [Github](https://github.com/2dust/v2rayN)
 
+## V2RayS
+
+* Download: [Github](https://github.com/Shinlor/V2RayS)
+
 ## Other tools
 
 ### PuTTY
