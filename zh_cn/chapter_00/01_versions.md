@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.06.15 v3.26
+
+* 新增了 Dragonfly BSD 的预编译版本。
+
 ## 2018.06.01 v3.24
 
 * JSON 配置中新增了用户级别的缓存控制选项。

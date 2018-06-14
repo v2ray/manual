@@ -12,6 +12,7 @@ V2Ray 在以下平台中可用：
   * 包括但不限于 Debian 7 / 8、Ubuntu 12.04 / 14.04 及后续版本、CentOS 6 / 7、Arch Linux；
 * FreeBSD (x86 / amd64)；
 * OpenBSD (x86 / amd64)；
+* Dragonfly BSD (amd64)；
 
 ## 硬件要求 {#hardward}
 

@@ -12,6 +12,7 @@ V2Ray is available on the following platforms:
   * Including but not limited to Debian 7 / 8, Ubuntu 12.04 / 14.04 and later, CentOS 6 / 7, Arch Linux
 * FreeBSD (x86 / amd64)
 * OpenBSD (x86 / amd64)
+* Dragonfly BSD (amd64)
 
 ## Hardware requirement
 
