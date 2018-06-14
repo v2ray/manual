@@ -22,16 +22,17 @@ V2Ray shares a same structure of configuration between server side and client si
 
 Where:
 
-* `log`: log configuration;
-* `api`: API configuration;
-* `dns`: DNS configuration;
-* `stats`: When specified, internal [Statistics](stats.md) is enabled;
-* `routing`: [Routing configuration](routing.md);
-* `inbound`: master inbound interface configuration;
-* `outbound`: master outbound interface configuration;
-* `inboundDetour`: extra inbound interfaces configurations;
-* `outboundDetour`: extra outbound interfaces configurations;
-* `transport`: low-level transport protocol's configurations.
+* `log`: log configuration. See below for detail.
+* `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
+* `dns`: Internal DNS server's configurations, if this section is omitted or empty, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](dns.md).
+* `stats`: When specified, internal [Statistics](stats.md) is enabled.
+* `policy`: Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
+* `routing`: [Routing configuration](routing.md).
+* `inbound`: master inbound interface configuration.
+* `outbound`: master outbound interface configuration.
+* `inboundDetour`: extra inbound interfaces configurations.
+* `outboundDetour`: extra outbound interfaces configurations.
+* `transport`: low-level transport protocol's configurations. For details, see [Protocol Transport Options](transport.md).
 
 ## Log configuration（log）
 
@@ -55,18 +56,6 @@ Where:
   * Among all of these levels, `"debug"` leaves the most log, `"error"` leaves the least log.
   * `"none"` would discard all error logs.
   * Default value is `"warning"` if you leave it empty.
-
-## API Configuration
-
-RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
-
-## DNS Configurations (dns)
-
-Internal DNS server's configurations, if this section is omitted or empty, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](04_dns.md)
-
-## Local Policy {#policy}
-
-Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
 
 ## Master Inbound Interface Configurations (inbound)
 
@@ -197,7 +186,3 @@ Where:
 * `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
   * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
 * `mux`: [Mux Configurations](mux.md).
-
-## Protocol Transport Options (transport)
-
-Help configure how V2Ray would connect with other servers and how using network connections. For details, see [Protocol Transport Options](05_transport.md).
