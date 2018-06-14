@@ -8,7 +8,6 @@ Notes:
 
 * The usage of donations will not be published.
 * Your donation has no direct connection to Project V's development and service.
-* All donations are listed below with sensitive information masked out. If you wish to be listed in other ways, please mention it when making the donation.
 * Thank you for loving Project V.
 
 ## The Usual Way
