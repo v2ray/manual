@@ -82,9 +82,3 @@ function doPaypalMe(event) {
 * EOS: [0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e](https://etherscan.io/token/EOS?a=0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e)
 * 嫩模币 (OMG): [0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e](https://etherscan.io/token/OmiseGo?a=0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e)
 * [贡献你的 CPU](cpu.md)
-
-## 感谢您的帮助
-
-以下列表大约一周更新一次，如您已经捐款，请耐心等待。
-
-{% include "../donor.md" %}
