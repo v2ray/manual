@@ -8,6 +8,7 @@
 ## VPN
 
 * [BabyDriver](http://babydriver.me/): 支持 V2Ray 的 VPN 服务。优惠码：bcb518
+* [喵帕斯](https://xn--i2ru8q2qg.com): V2Ray 小范围内测中。
 
 ## 域名相关
 

@@ -10,6 +10,7 @@
 ## VPN
 
 * [BabyDriver](http://babydriver.me/): Supports V2Ray. Coupon code: bcb518
+* [喵帕斯](https://xn--i2ru8q2qg.com): V2Ray support (beta)
 
 ## Domains
 
