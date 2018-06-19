@@ -22,3 +22,8 @@
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): 线下交易比特币
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): 线下交易BTC、ETH、BCH、USDT等货币。
+
+## 试试你的运气
+
+* [PrimeDick](https://primedice.com/?c=default): 用比特币玩骰子游戏
+* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): 用比特币竞猜体育比赛，包括世界杯

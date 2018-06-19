@@ -24,3 +24,8 @@
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Trade Bitcoins offline
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Trade BTC, ETH, BCH, USDT offline.
+
+## Try Your Luck
+
+* [PrimeDick](https://primedice.com/?c=default): Dice game with bitcoin.
+* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Bet sport games with Bitcoin, including World Cup 2018.
