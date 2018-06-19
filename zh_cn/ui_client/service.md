@@ -27,3 +27,4 @@
 
 * [PrimeDick](https://primedice.com/?c=default): 用比特币玩骰子游戏
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): 用比特币竞猜体育比赛，包括世界杯
+* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): 使用比特币玩赌场游戏
