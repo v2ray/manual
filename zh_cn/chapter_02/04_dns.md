@@ -39,3 +39,7 @@ V2Ray 内置的 DNS 会在单个 DNS 请求中同时查询 A 和 AAAA 记录。�
 8.8.4.4
 9.9.9.9
 ```
+
+## 小贴士 {#tips}
+
+* 推荐使用本机 DNS 配合一个额外的 DNS 服务器来做 DNS 查询，如 [CoreDNS](https://coredns.io/)。

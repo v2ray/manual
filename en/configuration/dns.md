@@ -39,3 +39,7 @@ DNS service will try to query both A and AAAA record in the same DNS message. As
 8.8.4.4
 9.9.9.9
 ```
+
+## Tips
+
+* You are recommended to use DNS from your localhost, with a thirdparty DNS relay server, such as [CoreDNS](https://coredns.io/).
