@@ -23,7 +23,9 @@ Configuration:
 
 Where:
 
-* `hosts`: A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
+* `hosts`: A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed. The format of the domain is:
+  * Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
+  * Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
 * `servers`: A list of DNS server addresses. If there are more than one servers, they will be queried from top down. Options for DNS address:
   * `"IP"`: An IP address whose port 53 is open for DNS query.
   * `"localhost"`: A special value that V2Ray will use DNS query from local machine.

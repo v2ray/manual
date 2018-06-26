@@ -5,6 +5,7 @@
 ## 2018.06.39 v3.27
 
 * DNS now supports EDNS client subnet.
+* DNS static host now supports sub-domain matching.
 
 ## 2018.06.15 v3.26
 
