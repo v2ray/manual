@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.06.39 v3.27
+
+* DNS 支持了 EDNS client subnet。
+
 ## 2018.06.15 v3.26
 
 * 新增了 Dragonfly BSD 的预编译版本。

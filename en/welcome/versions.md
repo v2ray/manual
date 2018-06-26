@@ -2,6 +2,10 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.06.39 v3.27
+
+* DNS now supports EDNS client subnet.
+
 ## 2018.06.15 v3.26
 
 * Add Dragonfly BSD release.
