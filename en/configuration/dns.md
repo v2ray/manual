@@ -17,7 +17,6 @@ Configuration:
       "localhost"
   ],
   "clientIp": "1.2.3.4",
-  "clientIp6": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
 }
 ```
 
@@ -30,7 +29,6 @@ Where:
   * `"IP"`: An IP address whose port 53 is open for DNS query.
   * `"localhost"`: A special value that V2Ray will use DNS query from local machine.
 * `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
-* `clientIp6`: IPv6 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
 
 To use the internal DNS service, you need to configure `domainStrategy` in [routing](routing.md).
 
