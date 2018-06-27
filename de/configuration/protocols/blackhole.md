@@ -2,11 +2,11 @@
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html)
 
-Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../03_routing.md), this can be used for blocking access to some websites.
+Blackhole ist ein Protokoll für ausgehende Verbindungen. Es blockiert alle Verbindungen mit vordefinierten Antworten. Kombiniert mit [ Routing ](../03_routing.md) Dies kann zum Sperren des Zugriffs auf einige Websites verwendet werden.
 
 * Name: blackhole
 * Type: Outbound
-* Configuration:
+* Konfiguration:
 
 ```javascript
 {
