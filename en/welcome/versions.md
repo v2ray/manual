@@ -2,7 +2,7 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
-## 2018.06.39 v3.27
+## 2018.06.29 v3.27
 
 * DNS now supports EDNS client subnet.
 * DNS static host now supports sub-domain matching.
