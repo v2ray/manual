@@ -1,26 +1,18 @@
-# Configuration
+# Aufbau
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
 
-V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
+V2Ray verwendet eine Konfigurationsdatei im JSON-Format. Wenn Sie mit JSON vertraut sind, können Sie diese Seite überspringen.
 
-JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
+JSON oder [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), kurz gesagt, sind Objekte in Javascript. Eine JSON-Datei enthält ein und nur ein JSON-Objekt, beginnend mit "{" und endend mit "}".
 
-A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
+Ein JSON-Objekt enthält eine Liste von Schlüsselwertpaaren. Ein Schlüssel ist eine Zeichenfolge, und ein Wert kann verschiedene Typen haben, wie z. B. Zeichenfolge, Zahl, Boolean, Array oder ein anderes Objekt. Ein typisches Objekt ist wie folgt:
 
 ```javascript
-{
-  "stringValue": "This is a string.",
-  "numberValue": 42,
-  "boolValue": true,
-  "arrayValue": ["this", "is", "a", "string", "array"],
-  "objectValue": {
-    "another": "object"
-  }
-}
+{"stringValue": "Dies ist ein String.", "numberValue": 42, "boolValue": true, "arrayValue": ["dies", "ist", "a", "string", "array"] , "objectValue": {"ein anderes": "object"}}
 ```
 
-Notice:
+Beachten:
 
-1. A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
-2. V2Ray supports comments in JSON, annotated by "//" or "/\* \*/".
+1. Ein Schlüsselwertpaar endet normalerweise mit einem Komma ",", darf aber nicht mit einem Komma enden, wenn es das letzte Element des Objekts ist.
+2. V2Ray unterstützt Kommentare in JSON, die mit "//" oder "/ \ * \ * /" kommentiert sind.
