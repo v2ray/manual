@@ -1,96 +1,96 @@
-# Download & Install
+# Download & Installieren
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html)
 
-## Platform
+## Plattform
 
-V2Ray is available on the following platforms:
+V2Ray ist auf den folgenden Plattformen verfügbar:
 
-* Windows Vista and later (x86 / amd64)
-* Mac OS X 10.7 and later (amd64)
-* Linux 2.6.23 and later (x86 / amd64 / arm / arm64 / mips64 / mips) 
-  * Including but not limited to Debian 7 / 8, Ubuntu 12.04 / 14.04 and later, CentOS 6 / 7, Arch Linux
+* Windows Vista und höher (x86 / amd64)
+* Mac OS X 10.7 und höher (amd64)
+* Linux 2.6.23 und höher (x86 / amd64 / arm / arm64 / mips64 / mips) 
+  * Einschließlich, aber nicht beschränkt auf Debian 7/8, Ubuntu 12.04 / 14.04 und später, CentOS 6/7, Arch Linux
 * FreeBSD (x86 / amd64)
 * OpenBSD (x86 / amd64)
-* Dragonfly BSD (amd64)
+* Libelle BSD (amd64)
 
-## Hardware requirement
+## Hardwareanforderung
 
-At least 32MB free memory.
+Mindestens 32 MB freier Speicher.
 
-## Download
+## Herunterladen
 
-Pre-built packages can be found here:
+Vorgefertigte Pakete finden Sie hier:
 
-1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
+1. Github Veröffentlichung: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
+2. IPFS: [/ ipns / QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
 3. IPFS Re-dist: <https://v2ray.com/download>
 
-All packages are in ZIP format. Download and unzip corresponding packages to your system.
+Alle Pakete sind im ZIP-Format. Laden Sie entsprechende Pakete herunter und entzippen Sie sie auf Ihrem System.
 
-## Verify
+## Überprüfen
 
-There are 2 ways to verify packages.
+Es gibt 2 Möglichkeiten, Pakete zu überprüfen.
 
-1. Metadata.txt in release page contains SHA1 hash for all packages.
-2. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
+1. Metadata.txt in Release-Seite enthält SHA1-Hash für alle Pakete.
+2. Die GPG-Signaturdatei für ausführbare Dateien (v2ray / v2ray.exe) befindet sich in v2ray.sig (oder v2ray.exe.sig) im selben Paket. Der öffentliche Schlüssel ist [im Repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
-## Install on Windows or Mac OS
+## Installieren Sie unter Windows oder Mac OS
 
-Run v2ray / v2ray.exe after unzip the packages.
+Führen Sie v2ray / v2ray.exe aus, nachdem Sie die Pakete entpackt haben.
 
-## Install on Linux
+## Installieren Sie unter Linux
 
-We provide a script to install on Linux. This script detects previous installed v2ray and then upgrade or install a new one accordingly. If there is a previous version, the config file in /etc/v2ray will not be overwritten during upgrade.
+Wir bieten ein Skript zur Installation unter Linux an. Dieses Skript erkennt zuvor installierte v2ray und aktualisiert oder installiert dann eine neue Version entsprechend. Wenn es eine vorherige Version gibt, wird die Konfigurationsdatei in / etc / v2ray während des Upgrades nicht überschrieben.
 
-The following command assumes root permission.
+Der folgende Befehl nimmt root-Berechtigung an.
 
-Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
+Führen Sie den folgenden Befehl aus, um V2Ray zu installieren. Wenn yum oder apt verfügbar ist, installiert das Skript unzip und daemon / systemd. Sie müssen V2Ray als Dienst ausführen. Sie müssen sie manuell installieren, wenn Ihr Linux-System yum oder apt nicht unterstützt.
 
 ```shell
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
-The script installs the following files.
+Das Skript installiert die folgenden Dateien.
 
-* `/usr/bin/v2ray/v2ray`: V2Ray executable
-* `/usr/bin/v2ray/v2ctl`: Utility
-* `/etc/v2ray/config.json`: Config file
-* `/usr/bin/v2ray/geoip.dat`: IP data file
-* `/usr/bin/v2ray/geosite.dat`: domain data file
+* `/ usr / bin / v2ray / v2ray`: Ausführbare Datei von V2Ray
+* `/ usr / bin / v2ray / v2ctl`: Dienstprogramm
+* `/etc/v2ray/config.json`: Config-Datei
+* `/usr/bin/v2ray/geoip.dat`: IP-Datendatei
+* `/usr/bin/v2ray/geosite.dat`: Domain-Datendatei
 
-This script also configures V2Ray to run as service, if systemd is available.
+Dieses Skript konfiguriert auch V2Ray als Dienst, wenn systemd verfügbar ist.
 
-Configurations are at the following places.
+Konfigurationen sind an folgenden Stellen.
 
 * `/etc/systemd/system/v2ray.service`: Systemd
 * `/etc/init.d/v2ray`: SysV
 
-After installation, we will need to:
+Nach der Installation müssen wir:
 
-1. Update `/etc/v2ray/config.json` file for your own scenario.
-2. Run `service v2ray start` command to start V2Ray.
-3. Optionally run `service v2ray start|stop|status|reload|restart|force-reload` to control V2Ray service.
+1. Update `/etc/v2ray/config.json` Datei für Ihr eigenes Szenario.
+2. Führen Sie `service v2ray start` , um V2Ray zu starten.
+3. Starten Sie optional `service v2ray start | stop | status | reload | restart | force-reload` , um den V2Ray-Dienst zu steuern.
 
-### go.sh
+### Meine Güte
 
-go.sh supports the following parameters.
+go.sh unterstützt die folgenden Parameter.
 
-* `-p` or `--proxy`: Use a proxy to download V2Ray packages. Same as curl format, such as `"socks5://127.0.0.1:1080"` or `"http://127.0.0.1:3128"`.
-* `-f` or `--force`: Force installation. The script will assume V2Ray was not installed at all.
-* `--version`: The version to be installed, such as `"v1.13"`. Default value is the latest stable release.
-* `--local`: Use a local package for installation.
+* `-p` oder `--proxy`: Verwenden Sie einen Proxy, um V2Ray-Pakete herunterzuladen. Das gleiche wie das Curl-Format, zB `"socks5: //127.0.0.1: 1080"` oder `"http://127.0.0.1:3128"`.
+* `-f` oder `Kraft`: Erzwingen der Installation. Das Skript wird davon ausgehen, dass V2Ray überhaupt nicht installiert wurde.
+* `Version`: Die zu installierende Version, zB `"v1.13"`. Der Standardwert ist die letzte stabile Version.
+* `--local`: Verwenden Sie ein lokales Paket für die Installation.
 
-Examples:
+Beispiele:
 
-* Use SOCKS proxy 127.0.0.1:1080 to install the latest package: ```./go.sh -p socks5://127.0.0.1:1080```
-* Install v1.13 from local file:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
+* Verwenden Sie den SOCKS-Proxy 127.0.0.1:1080, um das neueste Paket zu installieren: ```./go.sh -p socks5: //127.0.0.1: 1080```
+* Installiere v1.13 von der lokalen Datei:```./go.sh --version v1.13 --local /pfad/zu/v2ray.zip```
 
 ## Docker
 
-V2Ray provides 2 docker images:
+V2Ray bietet 2 Docker-Images:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![official](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): Contains official releases.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![dev](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): Contains latest code.
+* [v2ray / offiziell](https://hub.docker.com/r/v2ray/official/) [![official](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): Enthält offizielle Versionen.
+* [v2ray / dev](https://hub.docker.com/r/v2ray/dev/) [![dev](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): Enthält den neuesten Code.
 
-The 2 images has the same structure as the Linux installation.
+Die 2 Bilder haben die gleiche Struktur wie die Linux-Installation.
