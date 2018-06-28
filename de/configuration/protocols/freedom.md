@@ -1,25 +1,21 @@
-# Freedom
+# Freiheit
 
-![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html)
+![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html)
 
-Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
+Freedom ist ein Protokoll für ausgehende Verbindungen. Es übergibt alle TCP- oder UDP-Verbindungen an ihre Ziele.
 
-* Name: freedom
-* Type: Outbound
-* Configuration:
+* Name: Freiheit
+* Typ: Ausgehend
+* Aufbau:
 
 ```javascript
-{
-  "domainStrategy": "AsIs",
-  "redirect": "127.0.0.1:3366",
-  "userLevel": 0
-}
+{"domainStrategy": "AsIs", "Weiterleitung": "127.0.0.1:3366", "userLevel": 0}
 ```
 
-Where:
+Woher:
 
-* `domainStrategy`: Strategy for domain name resolution. Options are: 
-  * `"AsIs"`: Default. Resolve domain name by system.
-  * `"UseIP"`: Use [internal DNS](../04_dns.md) for domain name resolution.
-* `redirect`: Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
-* `userLevel`: User level. All connections share this level.
+* `Domänenstrategie`: Strategie für die Domain-Namensauflösung. Optionen sind: 
+  * `"AsIs"`: Standard. Beheben Sie den Domänennamen nach System.
+  * `"UseIP"`: Verwende [interne DNS](../04_dns.md) für die Domain-Namensauflösung.
+* `redirect`: Leite alle Verbindungen zu dieser Adresse um, in der Form `"127.0.0.1:80"` oder `": 1234"`.
+* `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.
