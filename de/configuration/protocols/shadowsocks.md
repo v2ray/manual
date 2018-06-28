@@ -1,95 +1,75 @@
-# Shadowsocks
+# Schattensocken
 
-![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html)
+![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html)
 
-[Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
+[Shadowsocks](https://www.shadowsocks.org/) Protokoll für ein- und ausgehende Verbindungen.
 
-Compatibility with official version:
+Kompatibilität mit der offiziellen Version:
 
-* Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
-  * Client may choose to turn on or off.
-  * Server may choose to enable, disable or auto.
-* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
+* Unterstützt sowohl TCP- als auch UDP-Verbindungen, wobei UDP optional deaktiviert sein kann.
+* Unterstützt [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html); 
+  * Der Kunde kann wählen, ob er ein- oder ausschaltet.
+  * Der Server kann aktivieren, deaktivieren oder automatisch auswählen.
+* Verschlüsselungsmethoden ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) Verschlüsselungen in V2Ray 3.0 hinzugefügt): 
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
-* Plugins： 
-  * Support obfs through standalone mode.
+  * chacha20-poly1305 alias chacha20-ietf-poly1305
+* Plugins: 
+  * Unterstützen Sie obfs im Standalone-Modus.
 
 Info:
 
-* Name: shadowsocks
-* Type: Inbound / Outbound
+* Name: Schattensocken
+* Geben Sie ein: Eingehend / Ausgehend
 
-## Inbound proxy configuration
+## Inbound-Proxy-Konfiguration
 
 ```javascript
-{
-  "email": "love@v2ray.com",
-  "method": "aes-128-cfb",
-  "password": "password",
-  "udp": false,
-  "level": 0,
-  "ota": true,
-  "network": "tcp"
-}
+{"email": "love@v2ray.com", "Methode": "aes-128-cfb", "passwort": "password", "udp": false, "level": 0, "ota": true , "Netzwerk": "tcp"}
 ```
 
-其中：
+::
 
-* `email`: Email address. Used for user identification.
-* `method`: Encryption method. No default value. Options are: 
+* `E-Mail`: E-Mail-Adresse. Wird zur Benutzeridentifikation verwendet.
+* `Methode`: Verschlüsselungsmethode Kein Standardwert Optionen sind: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `udp` (Deprecated, use `network`): `true` or `false`, whether or not to enable UDP. Default to `false`.
-* `level`: User level. Default to `0`. See [Policy](../policy.md).
-* `ota`: `true` or `false`, whether or not to enable OTA. Default to auto mode. 
-  * When AEAD is used, `ota` has no effect.
-* `network` (V2Ray 3.16+): Type of network, either `"tcp"`, `"udp"`, or `"tcp,udp"`. Default to `"tcp"`.
+  * `"chacha20-poly1305"` oder `"chacha20-ietf-poly1305"`
+* `Passwort`: Passwort. Kann eine beliebige Zeichenfolge sein.
+* `udp` (Veraltet, benutze `Netzwerk`): `true` oder `false`, ob UDP aktiviert werden soll oder nicht. Standardwert auf `false`.
+* `Stufe`: Benutzerebene. Standard auf `0`. Siehe [Richtlinie](../policy.md).
+* `ota`: `wahr` oder `falsch`, ob OTA aktiviert werden soll oder nicht. Standardeinstellung für den automatischen Modus 
+  * Wenn AEAD verwendet wird, `OTA` hat keine Auswirkung.
+* `Netzwerk` (V2Ray 3.16+): Typ des Netzwerks, entweder `"tcp"`, `"udp"`oder `"tcp, udp"`. Standard auf `"tcp"`.
 
-## Outbound proxy configuration
+## Outbound-Proxy-Konfiguration
 
 ```javascript
-{
-  "servers": [
-    {
-      "email": "love@v2ray.com",
-      "address": "127.0.0.1",
-      "port": 1234,
-      "method": "method",
-      "password": "password",
-      "ota": false,
-      "level": 0
-    }
-  ]
-}
+{"Server": [{"email": "love@v2ray.com", "Adresse": "127.0.0.1", "Port": 1234, "Methode": "Methode", "Passwort": "Passwort" , "ota": falsch, "level": 0}]}
 ```
 
-其中：
+::
 
-* `email`: Email address. Used for user identification.
-* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
-* `port`: Port of Shadowsocks server.
-* `method`: Encryption method. No default value. Options are: 
+* `E-Mail`: E-Mail-Adresse. Wird zur Benutzeridentifikation verwendet.
+* `Adresse`: Adresse des Shadowsocks-Servers. Kann IPv4, IPv6 oder Domäne sein.
+* `Port`: Port des Shadowsocks-Servers.
+* `Methode`: Verschlüsselungsmethode Kein Standardwert Optionen sind: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `ota`: Whether or not to use OTA. 
-  * When AEAD is used, `ota` has no effect.
-* `level`: User level.
+  * `"chacha20-poly1305"` oder `"chacha20-ietf-poly1305"`
+* `Passwort`: Passwort. Kann eine beliebige Zeichenfolge sein.
+* `ota`: Ob OTA verwendet werden soll oder nicht. 
+  * Wenn AEAD verwendet wird, `OTA` hat keine Auswirkung.
+* `Stufe`: Benutzerebene.
