@@ -6,7 +6,7 @@ Project V is a set of tools to help you build your own privacy network over inte
 
 ## Introduction
 
-Project is provides a single core with various GUI programs. The core, V2Ray, is for network connection, routing and data processing, while GUI programs are for user friendly experience.
+Project V provides a single core with various GUI programs. The core, V2Ray, is for network connection, routing and data processing, while GUI programs are for user friendly experience.
 
 V2Ray's responsibility is transfer data from its client to specified server, based on user configuration. It runs as a commandline tool. It can be configured via JSON based configuration.
 
