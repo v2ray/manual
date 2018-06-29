@@ -22,7 +22,7 @@ SSH-Client.
 
 * Webseite: [putty.org](http://www.putty.org/)
 
-### Visual Studio-Code
+### Visual Studio Code
 
 Quellcode-Editor von Microsoft.
 

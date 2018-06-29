@@ -10,18 +10,30 @@ Socks ist eine Implementierung des Standard-SOCKS-Protokolls, kompatibel mit [So
 ## Outbound-Proxy-Konfiguration
 
 ```javascript
-{"Server": [{"Adresse": "127.0.0.1", "Port": 1234, "Benutzer": [{"user": "test user", "pass": "test pass", "level" : 0}]}]}
+{
+  "servers": [{
+    "address": "127.0.0.1",
+    "port": 1234,
+    "users": [
+      {
+        "user": "test user",
+        "pass": "test pass",
+        "level": 0
+      }
+    ]
+  }]
+}
 ```
 
 Woher:
 
-* `Server`: Socks Server Liste, in der jeder Eintrag hat: 
-  * `Adresse`: Serveradresse
-  * `Port`: Server-Port
-  * `Benutzer`: Liste der Benutzerkonten: 
-    * `Benutzer`: Benutzername
-    * `Pass`: Passwort
-    * `Stufe`: Benutzerebene.
+* `servers`: Socks Server Liste, in der jeder Eintrag hat: 
+  * `address`: Serveradresse
+  * `port`: Server-Port
+  * `users`: Liste der Benutzerkonten: 
+    * `user`: Benutzername
+    * `pass`: Passwort
+    * `level`: Benutzerebene.
 
 Beachten:
 
@@ -31,16 +43,27 @@ Beachten:
 ## Eingehende Proxy-Konfiguration
 
 ```javascript
-{"auth": "noauth", "Konten": [{"user": "mein-Benutzername", "pass": "mein-Passwort"}], "udp": false, "ip": "127.0. 0.1 "," userLevel ": 0}
+{
+  "auth": "noauth",
+  "accounts": [
+    {
+      "user": "my-username",
+      "pass": "my-password"
+    }
+  ],
+  "udp": false,
+  "ip": "127.0.0.1",
+  "userLevel": 0
+}
 ```
 
-::
+Wo:
 
-* `autorisiert`: Socken Authentifizierungsmethode. Standard auf `"noauth"`. Optionen sind: 
+* `auth`: Socken Authentifizierungsmethode. Standard auf `"noauth"`. Optionen sind: 
   * `"noauth"`: Anonym.
   * `"Passwort"`: Benutzer und Passwort [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `Konten`: Ein Array, in dem jeder Eintrag `Benutzer` für Benutzername und `Pass` für Kennwort enthält. Standard bis leer 
-  * Funktioniert nur, wenn `Auth` `"Passwort"`
-* `udp`: `wahr` oder `falsch` um UDP zu aktivieren. Standard auf falsch.
+* `accounts`: Ein Array, in dem jeder Eintrag `user` für Benutzername und `pass` für Kennwort enthält. Standard bis leer 
+  * Funktioniert nur, wenn `auth` ist `"password"`
+* `udp`: `true` oder `false` um UDP zu aktivieren. Standard auf falsch.
 * `ip`: Wenn UDP aktiviert ist, empfängt diese IP-Adresse UDP-Pakete vom Client. Standard auf `"127.0.0.1"`.
 * `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.

@@ -2,11 +2,11 @@
 
 ![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html)
 
-Dokodemo-door ist ein Protokoll für eingehende Verbindungen. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
+Dokodemo-door is a protocol for inbound connections. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
 
-Dokodemo-door kann auch (wenn konfiguriert) als transparenter Proxy arbeiten.
+Dokodemo-door can also (if configured) work as a transparent proxy.
 
-* Name: dokodemo-tür
+* Name: dokodemo-door
 * Typ: Eingehend
 * Aufbau:
 
@@ -24,9 +24,9 @@ Woher:
 
 * `address`: Adresse des Zielservers. Kann eine IPv4-, IPv6- oder eine Domäne in Zeichenfolgenform sein. 
   * Wenn `followRedirect` (siehe unten) ist `wahr`, `Adresse` kann leer sein.
-* `Port`: Port des Zielservers. Ganze Zahl.
+* `port`: Port des Zielservers. Ganze Zahl.
 * `Netzwerk`: Typ des Netzwerks, entweder "TCP" oder "UDP".
-* `followRedirect`: Wenn der Wert `wahr`, erkennt dokodemo-door das Ziel von TProxy und verwendet es als Ziel. 
+* `followRedirect`: Wenn der Wert `true`, erkennt dokodemo-door das Ziel von TProxy und verwendet es als Ziel. 
   * Funktioniert nur unter Linux
   * Unterstützt TCP / IPv4-Verbindungen
   * Unterstützt UDP / IPv4-Pakete. Erfordert die Berechtigung root (CAP \ _NET \ _ADMIN)

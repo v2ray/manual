@@ -7,7 +7,8 @@ V2Ray bietet einige Informationen über seine Interna.
 Aufbau:
 
 ```javascript
-{}
+{
+}
 ```
 
 Alle Statistikzähler sind unten aufgeführt:

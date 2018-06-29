@@ -5,7 +5,19 @@
 V2Ray teilt die gleiche Struktur der Konfiguration zwischen der Serverseite und der Clientseite wie unten gezeigt. Server- und Client-Konfigurationen unterscheiden sich in bestimmten Abschnitten.
 
 ```javascript
-{"log": {}, "api": {}, "DNS": {}, "Statistik": {}, "routing": {}, "Richtlinie": {}, "Inbound": {}, "outbound": {}, "inboundDetour": [], "outboundDetour": [], "Transport": {}}
+{
+  "log": {},
+  "api": {},
+  "dns": {},
+  "stats": {},
+  "routing": {},
+  "policy": {},
+  "inbound": {},
+  "outbound": {},
+  "inboundDetour": [],
+  "outboundDetour": [],
+  "transport": {}
+}
 ```
 
 Woher:
@@ -25,7 +37,11 @@ Woher:
 ## Protokollkonfiguration (Protokoll)
 
 ```javascript
-{"access": "/ Pfad / zu / Datei", "Fehler": "/ Pfad / zu / Datei", "Loglevel": "Warnung"}
+{
+  "access": "/path/to/file",
+  "error": "/path/to/file",
+  "loglevel": "warning"
+}
 ```
 
 Woher:
@@ -46,7 +62,15 @@ Woher:
 Die Master-Eingangsschnittstelle wird verwendet, um Daten von Clients, Browsern oder anderen übergeordneten Proxy-Servern zu empfangen. Die verfügbaren Protokolle sind unter [Protokolle](02_protocols.md).
 
 ```javascript
-{"port": 1080, "listen": "127.0.0.1", "protocol": "Protokollname", "Einstellungen": {}, "streamSettings": {}, "tag": "inbound_tag_name", "domainOverride" : ["http", "tls"]}
+{
+  "port": 1080,
+  "listen": "127.0.0.1",
+  "protocol": "protocol_name",
+  "settings": {},
+  "streamSettings": {},
+  "tag": "inbound_tag_name",
+  "domainOverride": ["http", "tls"]
+}
 ```
 
 Woher:
@@ -70,7 +94,17 @@ Woher:
 Die Master-Ausgangsschnittstelle wird verwendet, um Daten an entfernte Server oder den nächsten Proxy-Server zu senden. Verfügbare Protokolle sind unter [Protokolle](02_protocols.md)aufgelistet.
 
 ```javascript
-{"sendThrough": "0.0.0.0", "Protokoll": "Protokollname", "Einstellungen": {}, "Tag": "this_outbound_tag_name", "streamSettings": {}, "proxySettings": {"tag": "another_outbound_tag_name"}, "mux": {}}
+{
+  "sendThrough": "0.0.0.0",
+  "protocol": "protocol_name",
+  "settings": {},
+  "tag": "this_outbound_tag_name",
+  "streamSettings": {},
+  "proxySettings": {
+    "tag": "another_outbound_tag_name"
+  },
+  "mux": {}
+}
 ```
 
 Woher:
@@ -89,7 +123,20 @@ Woher:
 Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für zusätzliche eingehende Schnittstellen enthält, die jeweils die folgende Struktur verwenden:
 
 ```javascript
-{"protocol": "Protokollname", "Port": "Portnummer", "Tag": "this_inbound_tag_name", "listen": "127.0.0.1", "allocate": {"strategie": "always", "refresh ": 5," Nebenläufigkeit ": 3}," Einstellungen ": {}," streamSettings ": {}," domainOverride ": [" http "," tls "]}
+{
+  "protocol": "protocol_name",
+  "port": "port_number",
+  "tag": "this_inbound_tag_name",
+  "listen": "127.0.0.1",
+  "allocate": {
+    "strategy": "always",
+    "refresh": 5,
+    "concurrency": 3
+  },
+  "settings": {},
+  "streamSettings": {},
+  "domainOverride": ["http", "tls"]
+}
 ```
 
 Woher:
@@ -116,7 +163,17 @@ Woher:
 Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für extra ausgehende Schnittstellen enthält, die jeweils die folgende Struktur verwenden:
 
 ```javascript
-{"Protokoll": "Protokollname", "sendThrough": "0.0.0.0", "Tag": "this_outbound_tag_name", "Einstellungen": {}, "streamSettings": {}, "proxySettings": {"tag": "another_outbound_tag_name"}, "mux": {}}
+{
+  "protocol": "protocol_name",
+  "sendThrough": "0.0.0.0",
+  "tag": "this_outbound_tag_name",
+  "settings": {},
+  "streamSettings": {},
+  "proxySettings": {
+    "tag": "another_outbound_tag_name"
+  },
+  "mux": {}
+}
 ```
 
 Woher:
