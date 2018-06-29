@@ -55,7 +55,7 @@ HTTP obfuscation must be configured (and matching) for the inbound and outbound 
 }
 ```
 
-其中：
+Where:
 
 * `type`: same `type` entry as in `tcpSettings`.
 * `request`: HTTP request settings: 
