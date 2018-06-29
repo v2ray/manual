@@ -9,7 +9,15 @@ JSON oder [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), kurz
 Ein JSON-Objekt enthält eine Liste von Schlüsselwertpaaren. Ein Schlüssel ist eine Zeichenfolge, und ein Wert kann verschiedene Typen haben, wie z. B. Zeichenfolge, Zahl, Boolean, Array oder ein anderes Objekt. Ein typisches Objekt ist wie folgt:
 
 ```javascript
-{"stringValue": "Dies ist ein String.", "numberValue": 42, "boolValue": true, "arrayValue": ["dies", "ist", "a", "string", "array"] , "objectValue": {"ein anderes": "object"}}
+{
+  "stringValue": "This is a string.",
+  "numberValue": 42,
+  "boolValue": true,
+  "arrayValue": ["this", "is", "a", "string", "array"],
+  "objectValue": {
+    "another": "object"
+  }
+}
 ```
 
 Beachten:
