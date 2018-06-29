@@ -34,7 +34,7 @@ Beachten:
 {"auth": "noauth", "Konten": [{"user": "mein-Benutzername", "pass": "mein-Passwort"}], "udp": false, "ip": "127.0. 0.1 "," userLevel ": 0}
 ```
 
-::
+Where:
 
 * `autorisiert`: Socken Authentifizierungsmethode. Standard auf `"noauth"`. Optionen sind: 
   * `"noauth"`: Anonym.
