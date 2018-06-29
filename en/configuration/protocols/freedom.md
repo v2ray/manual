@@ -20,6 +20,6 @@ Where:
 
 * `domainStrategy`: Strategy for domain name resolution. Options are:
   * `"AsIs"`: Default. Resolve domain name by system.
-  * `"UseIP"`: Use [internal DNS](../04_dns.md) for domain name resolution.
+  * `"UseIP"`: Use [internal DNS](../dns.md) for domain name resolution.
 * `redirect`: Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
 * `userLevel`: User level. All connections share this level.
