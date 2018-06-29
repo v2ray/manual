@@ -1,20 +1,17 @@
-# Multiplexing
+# Multiplexen
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/mux.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/mux.html)
 
-Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections. See [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) for more implementation details.
+Multiplexing, oder Mux, verwendet eine physische TCP-Verbindung für mehrere virtuelle TCP-Verbindungen. Weitere Details zur Implementierung finden Sie unter [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html).
 
-Configuration:
+Aufbau:
 
 ```javascript
-{
-  "enabled": false,
-  "concurrency": 8
-}
+{"aktiviert": false, "Nebenläufigkeit": 8}
 ```
 
-Where:
+Woher:
 
-* `enabled`: Whether or not to enable Mux
-* `concurrency`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 
-  * Usually you don't have to configure this value.
+* `enabled`: Ob Mux aktiv ist oder nicht
+* `Nebenläufigkeit`: Maximale Anzahl an virtuellen Verbindungen, die eine physische Verbindung gleichzeitig bewältigen kann. Max. Wert `1024`, Mindestwert `1`, Standard `8`. 
+  * Normalerweise müssen Sie diesen Wert nicht konfigurieren.

@@ -1,49 +1,49 @@
-# Android Client
+# Android-Client
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/android.html)
+![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/ui_client/android.html)
 
 ## BifrostV
 
-BifrostV is an Android app based on V2Ray core. It supports VMess, Shadowsocks, socks protocols.
+BifrostV ist eine Android App basierend auf V2Ray-Kern. Es unterstützt VMess, Shadowsocks, Sockenprotokolle.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv)
-* Download: [APK Pure](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
+* Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv)
+* Download: [APK Reine](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
 
 ## V2RayNG
 
-V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray core.
+V2RayNG ist eine Android App basierend auf V2Ray. Es bietet dieselben Funktionen wie der V2Ray-Core.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang)
-* Source: [GitHub](https://github.com/2dust/v2rayNG)
+* Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang)
+* Quelle: [GitHub](https://github.com/2dust/v2rayNG)
 
-## V2Ray Go
+## V2Ray gehen
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=org.kkdev.v2raygo)
-* Source: [Github](https://github.com/xiaokangwang/V2RayGO)
+* Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=org.kkdev.v2raygo)
+* Quelle: [Github](https://github.com/xiaokangwang/V2RayGO)
 
-## Actinium
+## Aktinium
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
-* Source: [Github](https://github.com/V2Ray-Android/Actinium)
+* Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
+* Quelle: [Github](https://github.com/V2Ray-Android/Actinium)
 
-## Other tools
+## Andere Werkzeuge
 
-### JuiceSSH
+### SaftSSH
 
-SSH client.
+SSH-Client.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
-* Website: [JuiceSSH.com](https://juicessh.com/)
+* Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
+* Webseite: [JuiceSSH.com](https://juicessh.com/)
 
 ### Termius
 
-SSH client
+SSH-Client
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)
+* Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)
 
-### Telegram
+### Telegramm
 
-Encrypted discussion.
+Verschlüsselte Diskussion
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)
+* Webseite: [telegramm.org](https://telegram.org/)
+* Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)

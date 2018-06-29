@@ -1,23 +1,22 @@
-# Statistics
+# Statistiken
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html)
 
-V2Ray provides some information about its internals.
+V2Ray bietet einige Informationen über seine Interna.
 
-Configuration:
+Aufbau:
 
 ```javascript
-{
-}
+{}
 ```
 
-All stats counters are listed below:
+Alle Statistikzähler sind unten aufgeführt:
 
-* `user>>>[email]>>>traffic>>>uplink` (V2Ray 3.16+): Accumulated uplink traffic of specific user, in bytes.
-* `user>>>[email]>>>traffic>>>downlink` (V2Ray 3.16+): Accumulated downlink traffic of specific user, in bytes.
-* `inbound>>>[tag]>>>traffic>>>uplink` (V2Ray 3.18+): Accumulated uplink traffic of specific inbound, in bytes.
-* `inbound>>>[tag]>>>traffic>>>downlink` (V2Ray 3.18+): Accumulated downlink traffic of specific inbound, in bytes.
+* `Benutzer>>>[email]>>>Verkehr>>>Uplink` (V2Ray 3.16+): Akkumulierter Uplink-Verkehr eines bestimmten Benutzers in Bytes.
+* `Benutzer>>>[email]>>>Verkehr>>>Downlink` (V2Ray 3.16+): Kumulierter Downlink-Verkehr eines bestimmten Benutzers in Bytes.
+* `Inbound>>>[tag]>>>Verkehr>>>Uplink` (V2Ray 3.18+): Akkumulierte Uplink-Verkehr von bestimmten eingehenden, in Bytes.
+* `Inbound>>>[tag]>>>Verkehr>>>Downlink` (V2Ray 3.18+): Akkumulierter Downlink-Verkehr spezifischen eingehenden, in Bytes.
 
-## Tips
+## Tipps
 
-* If a user doesn't have a valid email address, the stats will not be enabled.
+* Wenn ein Benutzer keine gültige E-Mail-Adresse hat, werden die Statistiken nicht aktiviert.

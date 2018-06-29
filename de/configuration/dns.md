@@ -1,49 +1,37 @@
 # DNS
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html)
 
-V2Ray has an internal DNS server which provides DNS relay for other components.
+V2Ray verfügt über einen internen DNS-Server, der DNS-Relay für andere Komponenten bereitstellt.
 
-Configuration:
+Aufbau:
 
 ```javascript
-{
-  "hosts": {
-    "baidu.com": "127.0.0.1"
-  },
-  "servers": [
-      "8.8.8.8",
-      "8.8.4.4",
-      "localhost"
-  ],
-  "clientIp": "1.2.3.4",
-}
+{"Hosts": {"baidu.com": "127.0.0.1"}, "Server": ["8.8.8.8", "8.8.4.4", "localhost"], "clientIp": "1.2.3.4" }
 ```
 
-Where:
+Woher:
 
-* `hosts`: A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed. The format of the domain is: 
-  * Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
-  * Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
-* `servers`: A list of DNS server addresses. If there are more than one servers, they will be queried from top down. Options for DNS address: 
-  * `"IP"`: An IP address whose port 53 is open for DNS query.
-  * `"localhost"`: A special value that V2Ray will use DNS query from local machine.
-* `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
+* `Gastgeber`: Eine Liste von statischen IP-Adressen. Jeder Eintrag hat einen Domänennamen als Schlüssel und IP-Adresse als Wert. Wenn eine DNS-Abfrage auf eine der Domänen in dieser Liste abzielt, wird die entsprechende IP-Adresse sofort zurückgegeben und die DNS-Abfrage wird nicht weitergeleitet. Das Format der Domäne ist: 
+  * Beispiel: `"v2ray.com"`: Die Domäne, die aufgelöst werden soll, muss dieser Domäne entsprechen.
+  * Beispiel: `"domain: v2ray.com"`: Die Domäne, die aufgelöst werden soll, kann diese Domäne oder eine ihrer Unterdomänen sein.
+* `Server`: Eine Liste der DNS-Serveradressen. Wenn mehrere Server vorhanden sind, werden sie von oben nach unten abgefragt. Optionen für die DNS-Adresse: 
+  * `"IP"`: Eine IP-Adresse, deren Port 53 für die DNS-Abfrage geöffnet ist.
+  * `"localhost"`: Ein spezieller Wert, dass V2Ray die DNS-Abfrage von der lokalen Maschine verwendet.
+* `clientIp`: IPv4-Adresse des aktuellen Systems. Dies wird verwendet, um den DNS-Server für eine bessere IP-Auflösung zu benachrichtigen. Der Wert darf keine private Adresse sein.
 
-To use the internal DNS service, you need to configure `domainStrategy` in [routing](routing.md).
+Um den internen DNS-Dienst zu verwenden, müssen Sie `domainStrategy` in [routing](routing.md)konfigurieren.
 
-The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
+Die DNS-Abfragen, die von diesem DNS-Dienst weitergeleitet werden, werden ebenfalls basierend auf Routingeinstellungen ausgelöst. Es ist keine zusätzliche Konfiguration erforderlich.
 
-## Query strategy
+## Abfragestrategie
 
-DNS service will try to query both A and AAAA record in the same DNS message. As not all DNS servers support such query, V2Ray only sends A and AAAA query to the following DNS servers, and only send A queries to all other servers.
+Der DNS-Dienst versucht, sowohl den A- als auch den AAAA-Datensatz in derselben DNS-Nachricht abzufragen. Da nicht alle DNS-Server eine solche Abfrage unterstützen, sendet V2Ray nur die A- und AAAA-Abfrage an die folgenden DNS-Server und sendet nur A-Abfragen an alle anderen Server.
 
 ```text
-8.8.8.8
-8.8.4.4
-9.9.9.9
+8.8.8.8 8.8.4.4 9.9.9.9
 ```
 
-## Tips
+## Tipps
 
-* You are recommended to use DNS from your localhost, with a thirdparty DNS relay server, such as [CoreDNS](https://coredns.io/).
+* Es wird empfohlen, DNS von Ihrem lokalen Host mit einem Drittanbieter-DNS-Relayserver zu verwenden, z. B. [CoreDNS](https://coredns.io/).

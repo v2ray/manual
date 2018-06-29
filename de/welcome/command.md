@@ -1,56 +1,56 @@
-# Commandline
+# Befehlszeile
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html)
 
 ## V2Ray
 
-V2Ray has the following commandline parameters:
+V2Ray hat die folgenden Kommandozeilenparameter:
 
 ```shell
-v2ray [-version] [-test] [-config=config.json] [-format=json]
+v2ray [-version] [-test] [-config = Konfiguration.json] [-format = json]
 ```
 
-Where:
+Woher:
 
-* `-version`: Print the version of V2Ray only, and then exit.
-* `-test`: Test configuration, output any errors and then exit.
-* `-config`: URI of the configuration. 
-  * When its value is `stdin:`, V2Ray reads configuration from standard input. Caller must close stdin after writing out configuration.
-  * (3.17+) When its value begins with `http://` or `https://` (lowercase), V2Ray tries to load configuration from the remote address.
-  * When not set, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by environment variable `v2ray.location.asset`.
-* `-format`: Configuration format. Choices are: 
-  * `json`: JSON format.
-  * `pb` or `protobuf`: Protobuf format.
+* `Version`: Nur die Version von V2Ray drucken und dann beenden.
+* `-test`: Konfiguration testen, Fehler ausgeben und dann beenden.
+* `-config`: URI der Konfiguration 
+  * Wenn der Wert `stdin:`, liest V2Ray die Konfiguration aus der Standardeingabe. Der Anrufer muss die Standardeingabe nach dem Schreiben der Konfiguration schließen.
+  * (3.17+) Wenn der Wert mit `http: //` oder `https: //` (Kleinbuchstaben) beginnt, versucht V2Ray, die Konfiguration von der Remote-Adresse zu laden.
+  * Wenn er nicht gesetzt ist , versucht V2Ray erste Konfiguration von laden `config.json` unter Arbeitsverzeichnis, dann aus dem Verzeichnis , das durch die Umgebungsvariable spezifiziert `v2ray.location.asset`.
+* `-Format`: Konfigurationsformat Auswahlmöglichkeiten sind: 
+  * `JSON`: JSON-Format.
+  * `Pb` oder `Protobuf`: Protobuf-Format.
 
 ## V2Ctl
 
-V2Ctl has the following commandline parameters:
+V2Ctl hat die folgenden Befehlszeilenparameter:
 
 ```shell
 v2ctl <command> <options>
 ```
 
-Available commands are listed below. Each command has its own options.
+Verfügbare Befehle sind unten aufgeführt. Jeder Befehl hat seine eigenen Optionen.
 
-### Verify
+### Überprüfen
 
-`v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
+`v2ctl verify [--sig = / Pfad / zu / sigfile] / file / to / verify`
 
-To verify the signature of a V2Ray binary.
+Um die Signatur einer V2Ray-Binärdatei zu überprüfen.
 
-Options:
+Optionen:
 
-* `sig`：Path to signature file. Default value is the ".sig" file to the path to be verified.
-* First argument: the file to be verified.
+* `sig`: Pfad zur Signaturdatei. Der Standardwert ist die Datei ".sig" für den zu verifizierenden Pfad.
+* Erstes Argument: Die zu verifizierende Datei.
 
-### Config
+### Konfig
 
-`v2ctl config`
+`v2ctl Konfiguration`
 
-No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
+Keine Optionen. Dieser Befehl liest die Konfiguration im JSON-Format von stdin und schreibt dann die entsprechende Konfiguration im Protobuf-Format in stdout.
 
 ### UUID
 
-`v2ctl uuid`
+`v2ctl Uuid`
 
-No options. This command prints a random UUID.
+Keine Optionen. Dieser Befehl druckt eine zufällige UUID.
