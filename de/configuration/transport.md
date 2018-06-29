@@ -22,7 +22,7 @@ Woher:
 * `tcpSettings`: Einstellungen für [TCP-Transport](transport/tcp.md).
 * `kcpSettings`: Einstellungen für [mKCP Transport](transport/mkcp.md).
 * `wsSettings`: Einstellungen für [WebSocket-Transport](transport/websocket.md).
-* `httpSettings`: Einstellungen für [HTTP / 2 Transport](transport/h2.md).
+* `httpSettings`: Einstellungen für [HTTP/2 Transport](transport/h2.md).
 
 ## Pro-Proxy-Konfiguration
 
@@ -116,9 +116,9 @@ Woher:
       * `"verify"`: Zertifikat wird zur Validierung von TLS-Zertifikaten von Remote-Peer verwendet. In diesem Fall muss das Zertifikat ein CA-Zertifikat sein. Derzeit wird Windows nicht unterstützt.
       * `"issue"`: Zertifikat wird für die Ausstellung anderer Zertifikate verwendet. In diesem Fall muss das Zertifikat ein CA-Zertifikat sein.
     * `certificateFile`: Dateipfad zum Zertifikat. Wenn das Zertifikat von OpenSSL generiert wird, endet der Pfad mit ".crt".
-    * ` certificate ` (V2Ray 3.17+): Liste der Strings als Inhalt des Zertifikats. Siehe das obige Beispiel. Entweder `Zertifikat` oder `Zertifikatsdatei` darf nicht leer sein.
+    * ` certificate ` (V2Ray 3.17+): Liste der Strings als Inhalt des Zertifikats. Siehe das obige Beispiel. Entweder `certificate` oder `certificateFile` darf nicht leer sein.
     * `keyFile`: Dateipfad zum privaten Schlüssel. Wenn von OpenSSL generiert, endet die Datei normalerweise mit ".key". Schlüsseldatei mit Passwort wird nicht unterstützt.
-    * `Taste` (V2Ray 3.17+): Liste der Strings als Inhalt des privaten Schlüssels. Siehe das obige Beispiel. Entweder `Taste` oder `Taste` darf nicht leer sein.
+    * `key` (V2Ray 3.17+): Liste der Strings als Inhalt des privaten Schlüssels. Siehe das obige Beispiel. Entweder `Taste` oder `Taste` darf nicht leer sein.
 * `tcpSettings`: TCP-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy TCP-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 * `kcpSettings`: mKCP-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den mKCP-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 * `wsSettings`: WebSocket-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den WebSocket-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
@@ -127,6 +127,6 @@ Woher:
 ## Tipps
 
 * Wenn `certificateFile` und `certificate` beide ausgefüllt. V2Ray verwendet `certificateFile`. Gleiches für `keyFile` und `key`.
-* Wenn es eine neue Client-Anfrage gibt, sagen wir für `serverName` = `"v2ray.com"`, findet V2Ray zuerst ein Zertifikat für `"v2ray.com"`. Wenn V2Ray nicht gefunden wird, versucht V2Ray, ein neues Zertifikat mit einem vorhandenen Zertifikat auszustellen, dessen `Verwendung` `"Problem"` für `"v2ray.com"`. Das neue Zertifikat läuft in einer Stunde ab und wird dem Zertifikatspool zur späteren Wiederverwendung hinzugefügt.
-* Wenn `Verwendung` `"verify"`, können sowohl `keyFile` als auch `key` leer sein.
+* Wenn es eine neue Client-Anfrage gibt, sagen wir für `serverName` = `"v2ray.com"`, findet V2Ray zuerst ein Zertifikat für `"v2ray.com"`. Wenn V2Ray nicht gefunden wird, versucht V2Ray, ein neues Zertifikat mit einem vorhandenen Zertifikat auszustellen, dessen ` usage ` `"issue"` für `"v2ray.com"`. Das neue Zertifikat läuft in einer Stunde ab und wird dem Zertifikatspool zur späteren Wiederverwendung hinzugefügt.
+* Wenn ` usage ` `"verify"`, können sowohl `keyFile` als auch `key` leer sein.
 * Verwenden Sie den Befehl `v2ctl cert -ca` , um ein neues CA-Zertifikat zu generieren.
