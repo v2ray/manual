@@ -70,15 +70,15 @@ Where:
 * `clients`: An array for valid user accounts. May be empty when used for dynamic port feature.
   * Each client contains:
     * `id`: User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `level`：User level. See [Policy](../policy.md)
-    * `alterId`: Number of alternative IDs. Same as in Inbound. Value must be the same as connecting clients.
+    * `level`: User level. See [Policy](../policy.md) for its usage.
+    * `alterId`: Number of alternative IDs. Same as in Inbound. Value must be the same as connecting clients.
     * `email`: Email address to identify users.
 * `detour`: Optional feature to suggest client to take a detour.
   * `to`: The tag of an inbound proxy. See [Overview](../02_protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
 * `default`: Optional default client configuration. Usually used in detour proxy.
   * `level`: User level.
   * `alterId`: Number of alternative IDs. Default value 64.
-* `disableInsecureEncryption` (V2Ray 3.11+): Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`.
+* `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`.
   * `none`
   * `aes-128-cfb`
 
