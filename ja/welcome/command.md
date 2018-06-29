@@ -16,7 +16,7 @@ Where:
 * `-test`: Test configuration, output any errors and then exit.
 * `-config`: URI of the configuration. 
   * When its value is `stdin:`, V2Ray reads configuration from standard input. Caller must close stdin after writing out configuration.
-  * (3.17+) When its value begins with `http://` or `https://` (lowercase), V2Ray tries to load configuration from the remote address.
+  * When its value begins with `http://` or `https://` (lowercase), V2Ray tries to load configuration from the remote address.
   * When not set, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by environment variable `v2ray.location.asset`.
 * `-format`: Configuration format. Choices are: 
   * `json`: JSON format.
