@@ -1,6 +1,6 @@
 # Projekt V
 
-![Englisch](resources/englishc.svg) [![Chinesisch](resources/chinese.svg)](https://www.v2ray.com/) [![Übersetzen](resources/lang.svg)](https://crowdin.com/project/v2ray)
+![Englisch](resources/englishc.svg) [![Chinesisch](resources/chinese.svg)](https://www.v2ray.com/) [![German](resources/german.svg)](https://www.v2ray.com/de/) [![Translate](resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 Project V ist eine Sammlung von Tools, mit denen Sie Ihr eigenes Datenschutznetzwerk über das Internet aufbauen können.
 
