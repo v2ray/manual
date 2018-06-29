@@ -1,4 +1,4 @@
-# Schattensocken
+# Shadowsocks
 
 ![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html)
 
@@ -29,10 +29,18 @@ Info:
 ## Inbound-Proxy-Konfiguration
 
 ```javascript
-{"email": "love@v2ray.com", "Methode": "aes-128-cfb", "passwort": "password", "udp": false, "level": 0, "ota": true , "Netzwerk": "tcp"}
+{
+  "email": "love@v2ray.com",
+  "method": "aes-128-cfb",
+  "password": "password",
+  "udp": false,
+  "level": 0,
+  "ota": true,
+  "network": "tcp"
+}
 ```
 
-::
+Where:
 
 * `E-Mail`: E-Mail-Adresse. Wird zur Benutzeridentifikation verwendet.
 * `Methode`: Verschlüsselungsmethode Kein Standardwert Optionen sind: 
@@ -56,7 +64,7 @@ Info:
 {"Server": [{"email": "love@v2ray.com", "Adresse": "127.0.0.1", "Port": 1234, "Methode": "Methode", "Passwort": "Passwort" , "ota": falsch, "level": 0}]}
 ```
 
-::
+Where:
 
 * `E-Mail`: E-Mail-Adresse. Wird zur Benutzeridentifikation verwendet.
 * `Adresse`: Adresse des Shadowsocks-Servers. Kann IPv4, IPv6 oder Domäne sein.
