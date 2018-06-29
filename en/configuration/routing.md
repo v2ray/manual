@@ -97,3 +97,4 @@ Where:
 * When multiple attributes of the rule are specified, they must be satisfied together, in order to make the rule effective.
   * If you want to route connections by `domain` or `ip`, you probably need multiple rules, instead of one rule containing both `domain` and `ip`.
 * `"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
+* Among all domain matching modes, subdomain (beginning with "domain:") is recommended.
