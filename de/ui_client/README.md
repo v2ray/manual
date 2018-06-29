@@ -1,4 +1,4 @@
-# Projekt V Kunden
+# Project V Clients
 
 ![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/ui_client/)
 
