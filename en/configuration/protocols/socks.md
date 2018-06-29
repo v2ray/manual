@@ -57,7 +57,7 @@ Notice:
 }
 ```
 
-其中：
+Where:
 
 * `auth`: Socks authentication method. Default to `"noauth"`. Options are:
   * `"noauth"`: Anonymous.
