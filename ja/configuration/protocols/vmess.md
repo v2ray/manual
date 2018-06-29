@@ -65,7 +65,7 @@ Where:
 }
 ```
 
-其中：
+Where:
 
 * `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
   * Each client contains: 
