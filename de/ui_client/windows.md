@@ -1,6 +1,6 @@
 # Windows
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/windows.html)
+![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/ui_client/windows.html)
 
 ## V2RayW
 
@@ -10,26 +10,26 @@
 
 * Download: [Github](https://github.com/2dust/v2rayN)
 
-## V2RayS
+## V2Rays
 
 * Download: [Github](https://github.com/Shinlor/V2RayS)
 
-## Other tools
+## Andere Werkzeuge
 
-### PuTTY
+### Kitt
 
-SSH client.
+SSH-Client.
 
-* Website: [putty.org](http://www.putty.org/)
+* Webseite: [putty.org](http://www.putty.org/)
 
-### Visual Studio Code
+### Visual Studio-Code
 
-Source code editor from Microsoft.
+Quellcode-Editor von Microsoft.
 
-* Website: [code.visualstudio.com](https://code.visualstudio.com/)
+* Webseite: [code.visualstudio.com](https://code.visualstudio.com/)
 
-### Telegram
+### Telegramm
 
-Encrypted discussion.
+Verschlüsselte Diskussion
 
-* Website: [telegram.org](https://telegram.org/)
+* Webseite: [telegramm.org](https://telegram.org/)

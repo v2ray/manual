@@ -1,32 +1,32 @@
-# Workflow
+# Arbeitsablauf
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
 
-## Single Server
+## Einzelner Server
 
-Same as other proxies, you need a proxy server which runs V2Ray. Then you can connect to internet through that server from you PC, mobile or other devices.
+Wie bei anderen Proxys benötigen Sie einen Proxy-Server, auf dem V2Ray ausgeführt wird. Dann können Sie über diesen Server von Ihrem PC, Mobiltelefon oder anderen Geräten aus mit dem Internet verbinden.
 
-![direct](../resources/direct.png)
+![Direkte](../resources/direct.png)
 
-V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
+V2Ray unterstützt Verbindungen von mehreren Geräten gleichzeitig mit optional unterschiedlichen Protokollen. In der Zwischenzeit kann der lokale Routing-Mechanismus nur die notwendigen Verbindungen intelligent herstellen.
 
-## Server Bridge
+## Serverbrücke
 
-In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
+Wenn Sie nicht möchten, dass V2Ray auf jedem Ihrer Geräte konfiguriert wird, können Sie einen Server innerhalb der Firewall einrichten, und dann wird der gesamte Datenverkehr über diesen Server geleitet. Der Server führt das Routing selbst durch.
 
-![relay](../resources/relay.png)
+![Relais](../resources/relay.png)
 
-## Internal
+## Intern
 
-The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
+Das interne von V2Ray sieht wie folgt aus. Es unterstützt mehrere eingehende Proxys und mehrere Outbounds. Jeder von ihnen ist unabhängig von anderen.
 
-![internal](../resources/internal.svg)
+![intern](../resources/internal.svg)
 
-Notes:
+Anmerkungen:
 
-* You have to configure at least one inbound and one outbound to make V2Ray work properly.
-* The inbound proxy communicates with client software such as browser.
-* The outbound proxy communicates with remote server, such as Apache for a website.
-* The dispatcher is responsible for choosing a outbound for a given connection, based on configurable rules.
+* Sie müssen mindestens einen Eingang und einen Ausgang konfigurieren, damit V2Ray ordnungsgemäß funktioniert.
+* Der eingehende Proxy kommuniziert mit einer Client-Software wie einem Browser.
+* Der Outbound-Proxy kommuniziert mit dem Remote-Server, z. B. Apache, für eine Website.
+* Der Dispatcher ist verantwortlich für die Auswahl eines Ausgangs für eine bestimmte Verbindung basierend auf konfigurierbaren Regeln.
 
-Detailed configuration can be found [here](../configuration/overview.md).
+Detaillierte Konfiguration kann hier gefunden werden [hier](../configuration/overview.md).

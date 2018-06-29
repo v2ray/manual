@@ -1,44 +1,37 @@
 # API
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html)
 
-V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
+V2Ray bietet eine API für den Remotezugriff. Diese APIs basieren auf [GRPC](https://grpc.io/).
 
-When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
+Wenn die API aktiviert ist, erstellt V2Ray automatisch einen ausgehenden Proxy, der als `Tag`. Benutzer must [Route](routing.md) alle gRPC Verbindungen zu diesem Outbound.
 
-Configuration:
+Aufbau:
 
 ```javascript
-{
-    "tag": "api",
-    "services": [
-        "HandlerService",
-        "LoggerService",
-        "StatsService"
-    ]
-}
+{"tag": "api", "Dienste": ["HandlerService", "LoggerService", "StatsService"]}
 ```
 
-Where:
+Woher:
 
-* `tag`: The tag of the outbound proxy.
-* `services`: List of enabled APIs.
+* `Tag`: Das Tag des Outbound-Proxys.
+* `Dienste`: Liste der aktivierten APIs.
 
-## Supported API list
+## Unterstützte API-Liste
 
 ### HandlerService
 
-API for manipulating inbound and outbound proxies. The following functionalities are provided:
+API zum Manipulieren von eingehenden und ausgehenden Proxies. Folgende Funktionalitäten stehen zur Verfügung:
 
-* Add a new inbound/outbound proxy.
-* Remove an existing inbound/outbound proxy.
-* Add a new user to an inbound proxy (VMess only).
-* Remove an existing user from an inbound proxy (VMess only).
+* Fügen Sie einen neuen eingehenden / ausgehenden Proxy hinzu.
+* Entfernen Sie einen vorhandenen eingehenden / ausgehenden Proxy.
+* Fügen Sie einem eingehenden Proxy einen neuen Benutzer hinzu (nur VMess).
+* Entfernen Sie einen vorhandenen Benutzer von einem eingehenden Proxy (nur VMess).
 
 ### LoggerService
 
-To restart internal logger. Can work with logrotate for operating log files.
+Um den internen Logger neu zu starten. Kann mit logrotate arbeiten, um Protokolldateien zu betreiben.
 
-### StatsService
+### Statistikdienst
 
-Support for internal [Statistics](stats.md).
+Unterstützung für interne [Statistiken](stats.md).

@@ -1,28 +1,28 @@
-# iOS Client
+# iOS-Client
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html)
+![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html)
 
 ## Kitsunebi
 
-Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
+Kitsunebi ist eine iOS App, die auf V2Ray basiert. Es bietet die volle Funktionalität als V2Ray. Es unterstützt auch das Importieren und Exportieren von V2Ray-kompatiblen JSON-Konfigurationen.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
 
 ## Kitsunebi Lite
 
-Light version of Kitsunebi.
+Leichte Version von Kitsunebi.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
 
-## Shadowrocket
+## Schattenrocket
 
-Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadowsocks, VMess, SSR etc.
+Shadowrocket ist eine generische VPN-App. Unterstützt mehrere Protokolle wie Shadowsocks, VMess, SSR usw.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## Pepi (was ShadowRay)
+## Pepi (war ShadowRay)
 
-Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
+Pepi ist V2Ray kompatible App. Es kann VPN-Verbindungen basierend auf dem VMess-Protokoll erstellen und mit beliebigen V2Ray-Servern kommunizieren.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
 
@@ -30,31 +30,31 @@ Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess p
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## Other tools
+## Andere Werkzeuge
 
 ### HyperApp
 
-An utility to build servers with docker.
+Ein Dienstprogramm zum Erstellen von Servern mit Andockfenster.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
-* Website: [HyperApp.fun](https://www.hyperapp.fun/)
+* Webseite: [HyperApp.fun](https://www.hyperapp.fun/)
 
 ### Termius
 
-SSH client.
+SSH-Client.
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
 
-### Telegram
+### Telegramm
 
-Encrypted discussion.
+Verschlüsselte Diskussion
 
-* Website: [telegram.org](https://telegram.org/)
+* Webseite: [telegramm.org](https://telegram.org/)
 * Download: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
 
 ### ProtonMail
 
-Encrypted email.
+Verschlüsselte E-Mail
 
-* Website: [protonmail.com](https://protonmail.com/)
+* Webseite: [protonemail.com](https://protonmail.com/)
 * Download: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)

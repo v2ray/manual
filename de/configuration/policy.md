@@ -1,52 +1,37 @@
-# Local Policy
+# Lokale Richtlinie
 
-Local policy is added in V2Ray 3.1.
+Lokale Richtlinie wird in V2Ray 3.1 hinzugefügt.
 
-Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
+Die lokale Richtlinie verwaltet Einstellungen der aktuellen V2Ray-Instanz, z. B. Verbindungstimeouts. Die Richtlinien können auf jede Benutzerebene oder das gesamte System angewendet werden.
 
-Configuration:
+Aufbau:
 
 ```javascript
-{
-    "levels": {
-        "0": {
-            "handshake": 4,
-            "connIdle": 300,
-            "uplinkOnly": 2,
-            "downlinkOnly": 5,
-            "statsUserUplink": false,
-            "statsUserDownlink": false
-        }
-    },
-    "system": {
-        "statsInboundUplink": false,
-        "statsInboundDownlink": false
-    }
-}
+{"levels": {"0": {"handshake": 4, "connIdle": 300, "uplinkOnly": 2, "downlinkOnly": 5, "statsUserUplink": false, "statsUserDownlink": false}}, " system ": {" statsInboundUplink ": false," statsInboundDownlink ": false}}
 ```
 
-Where:
+Woher:
 
-* `level`: A list of key value pairs. Each key is a string of integer (restricted by JSON), such as `"0"`, `"1"`, etc. The numeric value is for a certain user level. Each value has the following attributes: 
-  * `handshake`: Timeout for establishing a connection, in seconds. Default value `4`.
-  * `connIdle`: Timeout for idle connections, in seconds. Default value `300`.
-  * `uplinkOnly`: Time for keeping connections open after the uplink of the connection is closed, in seconds. Default value `2`.
-  * `downlinkOnly`: Time for keeping connections open after the downlink of the connection is closed, in seconds. Default value `5`.
-  * `statsUserUplink`: When set to `true`, V2Ray enables stat counter to uplink traffic for all users in this level.
-  * `statsUserDownlink`: When set to `true`, V2Ray enables stat counter to downlink traffic for all users in this level.
-  * `bufferSize` (V2Ray 3.24+): Size of internal buffer per connection, in kilo-bytes. Default value is `10240`. When it is set to `0`, the internal buffer is disabled.
-* `system` (V2Ray 3.18+): System policy for V2Ray 
-  * `statsInboundUplink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all uplink traffic in all inbound proxies.
-  * `statsInboundDownlink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all downlink traffic in all inbound proxies.
+* `Niveau`: Eine Liste von Schlüsselwertpaaren. Jeder Schlüssel ist eine Ganzzahl (eingeschränkt durch JSON) wie `"0"`, `"1"`usw. Der numerische Wert gilt für eine bestimmte Benutzerebene. Jeder Wert hat die folgenden Attribute: 
+  * `Handshake`: Timeout für den Verbindungsaufbau in Sekunden. Standardwert `4`.
+  * `CONNIdle`: Timeout für inaktive Verbindungen in Sekunden. Standardwert `300`.
+  * `uplinkOnly`: Zeit für das Offenhalten von Verbindungen nach dem Schließen der Verbindung in Sekunden. Standardwert `2`.
+  * `downlinkOnly`: Zeit für das Offenhalten von Verbindungen nach dem Schließen der Verbindung in Sekunden. Standardwert `5`.
+  * `statsUserUplink`: Wenn `True`, aktiviert V2Ray den Statuszähler für den Uplink-Verkehr für alle Benutzer in dieser Ebene.
+  * `statsUserDownlink`: Wenn `wahr`, aktiviert V2Ray den Statuszähler für den Downlink-Verkehr für alle Benutzer in dieser Ebene.
+  * `bufferSize` (V2Ray 3.24+): Größe des internen Puffers pro Verbindung in Kilobyte. Standardwert ist `10240`. Wenn es auf `0`, ist der interne Puffer deaktiviert.
+* `System` (V2Ray 3.18+): Systemrichtlinie für V2Ray 
+  * `statsInboundUplink` (V2Ray 3.18+): Wenn `wahr`, aktiviert V2Ray den Statistikzähler für den gesamten Aufwärtsverkehr in allen eingehenden Proxys.
+  * `statsInboundDownlink` (V2Ray 3.18+): Wenn `True`, aktiviert V2Ray den Statistikzähler für den gesamten Downlink-Verkehr in allen eingehenden Proxys.
 
-Some details when V2Ray handles connections:
+Einige Details, wenn V2Ray Verbindungen verarbeitet:
 
-1. At the handshake stage of an inbound proxy dealing with a new connection, say VMess reading request header, if it takes longer than `handshake` time, V2Ray aborts the connection.
-2. If there is no data passed through the connection in `connIdle` time, V2Ray aborts the conneciton.
-3. After client (browser) closes the uplink of the connection, V2Ray aborts the connection after `downlinkOnly` time.
-4. After remote (server) closes the downlink of the connection, V2Ray aborts the connection after `uplinkOnly` times.
+1. An der Handshake Phase eines eingehenden Proxy mit einer neuen Verbindung zu tun, sagen VMess Request - Header zu lesen, wenn es länger als dauert `Handshake` Mal, V2Ray die Verbindung abbricht.
+2. Wenn in `connIdle` keine Daten über die Verbindung übergeben werden, bricht V2Ray die Verbindung ab.
+3. Nachdem der Client (Browser) den Uplink der Verbindung beendet hat, bricht V2Ray die Verbindung nach `downlinkOnly` time ab.
+4. Nachdem Remote (Server) den Downlink der Verbindung beendet hat, bricht V2Ray die Verbindung nach `UplinkOnly` mal ab.
 
-## Tips
+## Tipps
 
-* Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.
-* `bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).
+* Jede eingehende und ausgehende Verbindung kann eine Benutzerebene anwenden. V2Ray wendet entsprechende Richtlinien auf Benutzerebene an.
+* `bufferSize` überschreibt `v2ray.ray.buffer.size` Einstellungen in [env-Variablen](env.md#cache-size-per-connection).

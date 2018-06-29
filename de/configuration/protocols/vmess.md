@@ -1,88 +1,57 @@
 # VMess
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) ist ein Protokoll für verschlüsselte Kommunikation. Es umfasst sowohl den eingehenden als auch den ausgehenden Proxy.
 
 * Name: vmess
-* Type: Inbound / Outbound
+* Geben Sie ein: Eingehend / Ausgehend
 
-## Outbound Proxy Configuration
-
-```javascript
-{
-  "vnext": [
-    {
-      "address": "127.0.0.1",
-      "port": 37192,
-      "users": [
-        {
-          "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 10,
-          "security": "aes-128-cfb",
-          "level": 0
-        }
-      ]
-    }
-  ]
-}
-```
-
-Where:
-
-* `vnext`: An array, where each entry is a remote server 
-  * `address`: Server address, may be IPv4, IPv6 or domain name.
-  * `port`: Server port
-  * `users`: An array where each entry is an VMess user 
-    * `id`: User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32.
-    * `level`: User level. See [Policy](../Policy.md) for more detail.
-    * `security`: Encryption method. Options are: 
-      * `"aes-128-cfb"`
-      * `"aes-128-gcm"`: Recommended for PC.
-      * `"chacha20-poly1305"`: Recommended for mobile.
-      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64 and S390x, or `chacha20-poly1305` otherwise.
-      * `"none"`: Traffic is not encrypted at all.
-
-## Inbound Proxy Configuration
+## Outbound-Proxy-Konfiguration
 
 ```javascript
-{
-  "clients": [
-    {
-      "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-      "level": 0,
-      "alterId": 100,
-      "email": "love@v2ray.com"
-    }
-  ],
-  "default": {
-    "level": 0,
-    "alterId": 32
-  },
-  "detour": {
-    "to": "tag_to_detour"
-  },
-  "disableInsecureEncryption": false
-}
+{"vnext": [{"adresse": "127.0.0.1", "port": 37192, "benutzer": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b", "alterId": 10 , "Sicherheit": "aes-128-cfb", "level": 0}]}]}
 ```
 
-其中：
+Woher:
 
-* `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
-  * Each client contains: 
-    * `id`: User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `level`：User level. See [Policy](../policy.md)    * `alterId`: Number of alternative IDs. Same as in Inbound. Value must be the same as connecting clients.
-    * `email`: Email address to identify users.
-* `detour`: Optional feature to suggest client to take a detour. 
-  * `to`: The tag of an inbound proxy. See [Overview](../02_protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
-* `default`: Optional default client configuration. Usually used in detour proxy. 
-  * `level`: User level.
-  * `alterId`: Number of alternative IDs. Default value 64.
-* `disableInsecureEncryption` (V2Ray 3.11+): Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
-  * `none`
-  * `aes-128-cfb`
-
-## Tips
-
-* Always use encryption method `"auto"` to stay secure and compatible.
-* VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. 
-  * One may install `ntp` service on Linux to automatically adjust system time.
+* `vnext`: Ein Array, bei dem jeder Eintrag ein Remote-Server ist 
+  * `Adresse`: Serveradresse, möglicherweise IPv4, IPv6 oder Domänenname.
+  * `Port`: Server-Port
+  * `Benutzer`: Ein Array, bei dem jeder Eintrag ein VMess-Benutzer ist 
+    * `ID`: Benutzer-ID in Form einer [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    * `alterId`: Anzahl der alternativen IDs. Die alternativen IDs werden deterministisch generiert. Standard auf 0. Maximal 65535. Empfehle 32.
+    * `Stufe`: Benutzerebene. Weitere Sie unter [ Richtlinie](../Policy.md).</li> 
+      
+      * `Sicherheit`: Verschlüsselungsmethode Optionen sind: 
+        * `"aes-128-cfb"`
+        * `"aes-128-gcm"`: Empfohlen für PC.
+        * `"chacha20-poly1305"`: Empfohlen für Mobilgeräte.
+        * `"auto"`: Standardwert. Verwenden Sie andernfalls `aes-128-gcm` auf AMD64 und S390x oder `chacha20-poly1305`.
+        * `"keine"`: Der Verkehr ist überhaupt nicht verschlüsselt.</ul></li> </ul></li> </ul> 
+      
+      ## Eingehende Proxy-Konfiguration
+      
+      ```javascript
+      {"clients": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b", "level": 0, "alterId": 100, "email": "love@v2ray.com"}], " Standard ": {" level ": 0," alterId ": 32}," Umleitung ": {" to ":" tag_to_detour "}," disableInsecureEncryption ": false}
+      ```
+      
+      ::
+      
+      * `Kunden`: Ein Array für gültige Benutzerkonten. Kann leer sein, wenn es für die dynamische Portfunktion verwendet wird. 
+        * Jeder Client enthält: 
+          * `ID`: Benutzer ID, in Form von [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+          * `Stufe`: Benutzerebene. Siehe [Policy](../policy.md) * `alterId`: Anzahl der alternativen IDs. Wie in Inbound. Der Wert muss mit dem des Clients übereinstimmen.
+          * `E-Mail`: E-Mail-Adresse, um Benutzer zu identifizieren.
+      * `Umleitung`: Option, um dem Kunden einen Umweg zu empfehlen. 
+        * `bis`: Das Tag eines eingehenden Proxy. Siehe [Übersicht](../02_protocols.md). Wenn konfiguriert, schlägt VMess dem Client vor, den Umweg für weitere Verbindungen zu verwenden.
+      * `Standard`: Optionale Standard-Client-Konfiguration. Wird normalerweise im Umleitungs-Proxy verwendet. 
+        * `Stufe`: Benutzerebene.
+        * `alterId`: Anzahl der alternativen IDs. Standardwert 64.
+      * `disableInsecureEncryption` (V2Ray 3.11+): Verbietet dem Client die Verwendung von unsicheren Verschlüsselungsmethoden. Wenn der Wert auf "true" gesetzt ist, werden die Verbindungen sofort beendet, wenn die folgende Verschlüsselung verwendet wird. Standardwert `false`. 
+        * `keiner`
+        * `aes-128-cfb`
+      
+      ## Tipps
+      
+      * Verwenden Sie immer die Verschlüsselungsmethode `"auto"` , um sicher und kompatibel zu bleiben.
+      * VMess ist abhängig von der Systemzeit. Bitte stellen Sie sicher, dass Ihre Systemzeit mit der UTC-Zeit übereinstimmt. Zeitzone spielt keine Rolle. 
+        * Man kann den Dienst `ntp` unter Linux installieren, um die Systemzeit automatisch anzupassen.

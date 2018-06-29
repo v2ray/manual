@@ -1,20 +1,20 @@
-# Donation
+# Spende
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html)
 
-Project V is a nonprofit project. The source code and program can be used freely under MIT licence. If you like this project, you may buy us a cup of coffee.
+Projekt V ist ein gemeinnütziges Projekt. Der Quellcode und das Programm können frei unter MIT Lizenz verwendet werden. Wenn Sie dieses Projekt mögen, können Sie uns eine Tasse Kaffee kaufen.
 
-Notes:
+Anmerkungen:
 
-* The usage of donations will not be published.
-* Your donation has no direct connection to Project V's development and service.
-* Thank you for loving Project V.
+* Die Verwendung von Spenden wird nicht veröffentlicht.
+* Ihre Spende hat keine direkte Verbindung zur Entwicklung und zum Service von Project V.
+* Danke für das liebevolle Projekt V.
 
-## The Usual Way
+## Der übliche Weg
 
-Amount: <input id="damount" type="number" min="1" step="any" value="25" />USD
+Betrag: <input id="damount" type="number" min="1" step="any" value="25" />USD
 
-\* Donations that less than 1 USD may be refunded due to high service fees, and will not be listed in the sponsor list below. 
+\ * Spenden, die weniger als 1 USD betragen, können aufgrund hoher Servicegebühren zurückerstattet werden und werden nicht in der unten aufgeführten Sponsorenliste aufgeführt. 
 
 <script>
 function getAmount() {
@@ -37,12 +37,12 @@ function doPaypalMe(event) {
 
  
 
-Donate via: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="Credit Card" onclick="doPaypal(event);" />
+Spenden über: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="Kreditkarte" onclick="doPaypal(event);" />
 
-## Cryptocurrency
+## Kryptowährung
 
 * Bitcoin: [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
-* Bitcoin Case: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)
+* Bitcoin-Fall: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)
 * Ethereum: [0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e](https://etherscan.io/address/0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e)
 * Litecoin: [LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR](https://insight.litecore.io/address/LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR)
 * Monero: 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg

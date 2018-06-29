@@ -1,17 +1,17 @@
-# Support
+# Unterstützung
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html)
+![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html)
 
-Please read the following guidelines for better discussion quality and quicker solution.
+Bitte lesen Sie die folgenden Richtlinien für bessere Diskussion Qualität und schnellere Lösung.
 
-## Language
+## Sprache
 
-Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
+Das Projekt V-Team unterstützt Chinesisch und Englisch. Bitte wählen Sie eine, mit der Sie sich bei Fragen auskennen.
 
-## Ways to get support
+## Wege um Unterstützung zu bekommen
 
-1. [V2Ray Usage](https://github.com/v2ray/v2ray-core/issues)
-2. [V2Ray Development](https://github.com/v2ray/planning)
-3. [Telegram Discussion](tg.md)
+1. [V2Ray-Nutzung](https://github.com/v2ray/v2ray-core/issues)
+2. [V2Ray Entwicklung](https://github.com/v2ray/planning)
+3. [Telegramm Diskussion](tg.md)
 4. [Twitter](https://twitter.com/projectv2ray)
-5. [Private Contact](pgp.md)
+5. [Privater Kontakt](pgp.md)

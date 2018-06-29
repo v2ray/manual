@@ -1,25 +1,20 @@
 # WebSocket
 
-![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html)
+![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html)
 
-Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
+Verwenden Sie den Standard-WebSocket, um Daten zu transportieren. Websocket-Verbindungen können von einem HTTP-Server wie Nginx weitergeleitet werden.
 
-Configuration:
+Aufbau:
 
 ```javascript
-{
-  "path": "",
-  "headers": {
-    "Host": "v2ray.com"
-  }
-}
+{"Pfad": "", "Kopfzeilen": {"Host": "v2ray.com"}}
 ```
 
-Where:
+Woher:
 
-* `path`: Path used for WebSocket. Default to root, as `""`。
-* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+* `Pfad`: Pfad für WebSocket. Standard für root, wie `""`.
+* `Header`: Benutzerdefinierter HTTP-Header. Ein Array, bei dem jeder Eintrag ein Schlüsselwertpaar in der Zeichenfolge, für den Header und den Wert im HTTP-Header ist. Der Standardwert ist leer.
 
-## Notice
+## Beachten
 
-* Since V2Ray 3.4, Websocket recognizes X-Forwarded-For header and use it as source address of the traffic.
+* Seit V2Ray 3.4 erkennt Websocket den X-Forwarded-For-Header und verwendet ihn als Quelladresse des Datenverkehrs.
