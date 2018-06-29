@@ -2,7 +2,7 @@
 
 ![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html)
 
-HTTP ist ein Protokoll für eingehende Verbindungen. Es ist kompatibel mit HTTP 1.1.
+HTTP is a protocol for inbound connections. Es ist kompatibel mit HTTP 1.1.
 
 * Name: http
 * Typ: Eingehend
