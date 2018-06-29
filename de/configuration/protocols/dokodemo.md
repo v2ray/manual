@@ -2,9 +2,9 @@
 
 ![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html)
 
-Dokodemo-door ist ein Protokoll für eingehende Verbindungen. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
+Dokodemo-door is a protocol for inbound connections. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
 
-Dokodemo-door kann auch (wenn konfiguriert) als transparenter Proxy arbeiten.
+Dokodemo-door can also (if configured) work as a transparent proxy.
 
 * Name: dokodemo-tür
 * Typ: Eingehend
