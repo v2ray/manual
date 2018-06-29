@@ -16,7 +16,7 @@ Woher:
 * `-test`: Konfiguration testen, Fehler ausgeben und dann beenden.
 * `-config`: URI der Konfiguration 
   * Wenn der Wert `stdin:`, liest V2Ray die Konfiguration aus der Standardeingabe. Der Anrufer muss die Standardeingabe nach dem Schreiben der Konfiguration schließen.
-  * (3.17+) Wenn der Wert mit `http: //` oder `https: //` (Kleinbuchstaben) beginnt, versucht V2Ray, die Konfiguration von der Remote-Adresse zu laden.
+  * When its value begins with `http://` or `https://` (lowercase), V2Ray tries to load configuration from the remote address.
   * Wenn er nicht gesetzt ist , versucht V2Ray erste Konfiguration von laden `config.json` unter Arbeitsverzeichnis, dann aus dem Verzeichnis , das durch die Umgebungsvariable spezifiziert `v2ray.location.asset`.
 * `-Format`: Konfigurationsformat Auswahlmöglichkeiten sind: 
   * `JSON`: JSON-Format.
