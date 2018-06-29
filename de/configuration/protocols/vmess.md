@@ -34,7 +34,7 @@ Woher:
       {"clients": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b", "level": 0, "alterId": 100, "email": "love@v2ray.com"}], " Standard ": {" level ": 0," alterId ": 32}," Umleitung ": {" to ":" tag_to_detour "}," disableInsecureEncryption ": false}
       ```
       
-      ::
+      Where:
       
       * `Kunden`: Ein Array für gültige Benutzerkonten. Kann leer sein, wenn es für die dynamische Portfunktion verwendet wird. 
         * Jeder Client enthält: 
