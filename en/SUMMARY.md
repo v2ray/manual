@@ -1,8 +1,6 @@
 # Summary
 
-![English](resources/english.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
-
-* [Welcome to V2Ray](README.md)
+* [Project V](README.md)
   * [Version History](welcome/versions.md)
   * [Workflow](welcome/workflow.md)
   * [Install](welcome/install.md)
