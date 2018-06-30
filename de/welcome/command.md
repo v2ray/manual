@@ -1,6 +1,6 @@
 # Befehlszeile
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html)
+![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/command.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 ## V2Ray
 
