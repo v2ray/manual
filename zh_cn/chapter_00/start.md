@@ -1,5 +1,7 @@
 # 新手上路
 
+![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html)
+
 在下载并安装了 V2Ray 之后，你需要对它进行一下配置。这里介绍一下简单的配置方式，只是为了演示，如需配置更复杂的功能，请参考后续的[配置文件说明](../chapter_02/01_overview.md)。
 
 ## 客户端
