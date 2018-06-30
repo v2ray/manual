@@ -4,6 +4,7 @@
   * [Version History](welcome/versions.md)
   * [Workflow](welcome/workflow.md)
   * [Install](welcome/install.md)
+  * [Quick Start](welcome/start.md)
   * [Commandline](welcome/command.md)
   * [Donation](welcome/donate.md)
   * [Support](welcome/help.md) 
