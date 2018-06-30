@@ -1,6 +1,15 @@
 # Donation
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html)
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Translate][7]][8]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/donate.html
+[3]: ../resources/chinese.svg
+[4]: https://www.v2ray.com/chapter_00/02_donate.html
+[5]: ../resources/german.svg
+[6]: https://www.v2ray.com/de/welcome/donate.html
+[7]: ../resources/lang.svg
+[8]: https://crowdin.com/project/v2ray
 
 Project V is a nonprofit project. The source code and program can be used freely under MIT licence. If you like this project, you may buy us a cup of coffee.
 
