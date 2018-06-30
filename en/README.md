@@ -1,6 +1,6 @@
 # Project V
 
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7][8]] [![Translate][9]][10]
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8] [![Translate][9]][10]
 
 [1]: resources/english.svg
 [2]: https://www.v2ray.com/en/
