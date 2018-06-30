@@ -1,6 +1,6 @@
 # Support
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 Please read the following guidelines for better discussion quality and quicker solution.
 
