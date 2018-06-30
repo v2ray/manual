@@ -2,7 +2,7 @@
 
 ![English](resources/english.svg) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![German](resources/german.svg)](https://www.v2ray.com/de/) [![Translate](resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-Проект V - это набор инструментов, которые помогут вам создать собственную сеть конфиденциальности через Интернет.
+Проект V - это набор инструментов, которые помогут вам создать собственную приватный туннель через Интернет.
 
 ## Введение
 
