@@ -2,13 +2,13 @@
 
 [![English][1]][2] [![German][3]][4] [![Russian][5][6]] [![Translate][7]][8]
 
-[1]: ../resources/english.svg
+[1]: resources/english.svg
 [2]: https://www.v2ray.com/en/
-[3]: ../resources/german.svg
+[3]: resources/german.svg
 [4]: https://www.v2ray.com/de/
-[5]: ../resources/russian.svg
+[5]: resources/russian.svg
 [6]: https://www.v2ray.com/ru/
-[7]: ../resources/lang.svg
+[7]: resources/lang.svg
 [8]: https://crowdin.com/project/v2ray
 
 Project V 包含一系列工具，帮助你打造专属的定制网络体系。
