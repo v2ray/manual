@@ -1,6 +1,15 @@
 # Commandline
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/command.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Translate][7]][8]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/command.html
+[3]: ../resources/chinese.svg
+[4]: https://www.v2ray.com/chapter_00/command.html
+[5]: ../resources/german.svg
+[6]: https://www.v2ray.com/de/welcome/command.html
+[7]: ../resources/lang.svg
+[8]: https://crowdin.com/project/v2ray
 
 ## V2Ray
 
