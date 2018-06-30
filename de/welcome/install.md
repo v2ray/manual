@@ -1,6 +1,6 @@
 # Download & Installieren
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 ## Plattform
 
