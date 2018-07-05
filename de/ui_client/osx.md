@@ -6,7 +6,7 @@
 
 * Download: [Github](https://github.com/Cenmrev/V2RayX)
 
-## Andere Werkzeuge
+## Other tools {#other}
 
 ### Visual Studio-Code
 
