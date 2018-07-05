@@ -4,7 +4,7 @@
 
 Transporteinstellungen gibt an, wie V2Ray Daten von seinen Peers sendet und empfängt. Die Einstellungen teilen sich in zwei Teile: globale Einstellungen und pro Proxy-Einstellungen. Per-Proxy-Einstellungen gibt an, wie jeder einzelne Proxy seine Daten verarbeitet, während globale Einstellungen für alle Proxies gelten. Normalerweise müssen die eingehenden und ausgehenden Proxies zwischen dem verbindenden Peer die gleichen Transporteinstellungen haben. Wenn ein Proxy keine Transporteinstellungen hat, gelten die globalen Einstellungen.
 
-## Globale Konfiguration
+## Global Configuration {#global}
 
 Globale Einstellungen befinden sich im Eintrag "Transport" von V2Ray config.
 
@@ -24,7 +24,7 @@ Woher:
 * `wsSettings`: Einstellungen für [WebSocket-Transport](transport/websocket.md).
 * `httpSettings`: Einstellungen für [HTTP/2 Transport](transport/h2.md).
 
-## Pro-Proxy-Konfiguration
+## Per-proxy Configuration {#proxy}
 
 Jeder eingehende und ausgehende Proxy hat möglicherweise eigene Transporteinstellungen. Jeder eingehende, eingehendeDetour-, ausgehende und ausgehendeDetour-Eintrag kann eine `streamSettings` für den Transport haben.
 
@@ -124,7 +124,7 @@ Woher:
 * `wsSettings`: WebSocket-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den WebSocket-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 * `httpSettings`: HTTP / 2-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den HTTP / 2-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 
-## Tipps
+## Tips {#tips}
 
 * Wenn `certificateFile` und `certificate` beide ausgefüllt. V2Ray verwendet `certificateFile`. Gleiches für `keyFile` und `key`.
 * Wenn es eine neue Client-Anfrage gibt, sagen wir für `serverName` = `"v2ray.com"`, findet V2Ray zuerst ein Zertifikat für `"v2ray.com"`. Wenn V2Ray nicht gefunden wird, versucht V2Ray, ein neues Zertifikat mit einem vorhandenen Zertifikat auszustellen, dessen ` usage ` `"issue"` für `"v2ray.com"`. Das neue Zertifikat läuft in einer Stunde ab und wird dem Zertifikatspool zur späteren Wiederverwendung hinzugefügt.
