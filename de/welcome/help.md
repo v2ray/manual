@@ -4,11 +4,11 @@
 
 Bitte lesen Sie die folgenden Richtlinien für bessere Diskussion Qualität und schnellere Lösung.
 
-## Sprache
+## Language {#language}
 
 Das Projekt V-Team unterstützt Chinesisch und Englisch. Bitte wählen Sie eine, mit der Sie sich bei Fragen auskennen.
 
-## Wege um Unterstützung zu bekommen
+## Ways to get support {#support}
 
 1. [V2Ray-Nutzung](https://github.com/v2ray/v2ray-core/issues)
 2. [V2Ray Entwicklung](https://github.com/v2ray/planning)
