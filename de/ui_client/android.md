@@ -26,7 +26,7 @@ V2RayNG ist eine Android App basierend auf V2Ray. Es bietet dieselben Funktionen
 * Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
 * Quelle: [Github](https://github.com/V2Ray-Android/Actinium)
 
-## Andere Werkzeuge
+## Other tools {#other}
 
 ### SaftSSH
 
