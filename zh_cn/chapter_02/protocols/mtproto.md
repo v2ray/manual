@@ -2,6 +2,8 @@
 
 MTProto 是一个 Telegram 专用的代理协议。在 V2Ray 中可使用一组传入传出代理来完成 Telegram 数据的代理任务。
 
+目前只支持转发到 Telegram 的 IPv4 地址。
+
 ## 传入协议配置 {#inbound}
 
 ```javascript
