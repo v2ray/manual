@@ -46,7 +46,7 @@ Some details when V2Ray handles connections:
 3. After client (browser) closes the uplink of the connection, V2Ray aborts the connection after `downlinkOnly` time.
 4. After remote (server) closes the downlink of the connection, V2Ray aborts the connection after `uplinkOnly` times.
 
-## Tips
+## Tips {#tips}
 
 * Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.
 * `bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).
