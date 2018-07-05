@@ -10,7 +10,7 @@ Anmerkungen:
 * Ihre Spende hat keine direkte Verbindung zur Entwicklung und zum Service von Project V.
 * Danke für das liebevolle Projekt V.
 
-## Der übliche Weg
+## The Usual Way {#usual-way}
 
 Betrag: <input id="damount" type="number" min="1" step="any" value="25" />USD
 
@@ -39,7 +39,7 @@ function doPaypalMe(event) {
 
 Spenden über: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="Kreditkarte" onclick="doPaypal(event);" />
 
-## Kryptowährung
+## Cryptocurrency {#crypto}
 
 * Bitcoin: [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
 * Bitcoin-Fall: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)

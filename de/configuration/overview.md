@@ -1,6 +1,6 @@
 # Konfigurationsübersicht
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 V2Ray teilt die gleiche Struktur der Konfiguration zwischen der Serverseite und der Clientseite wie unten gezeigt. Server- und Client-Konfigurationen unterscheiden sich in bestimmten Abschnitten.
 
@@ -34,7 +34,7 @@ Woher:
 * `outboundDetour`: Zusätzliche Konfigurationen für ausgehende Schnittstellen.
 * `Transport`: Konfigurationen des Transportprotokolls auf niedriger Ebene. Weitere Informationen finden Sie unter [Protokolltransportoptionen](transport.md).
 
-## Protokollkonfiguration (Protokoll)
+## Log configuration {#log}
 
 ```javascript
 {
@@ -57,7 +57,7 @@ Woher:
   * `"keine"` würde alle Fehlerprotokolle verwerfen.
   * Der Standardwert ist `"Warnung"` wenn Sie ihn leer lassen.
 
-## Master-Eingangsschnittstellenkonfigurationen (Eingang)
+## Master Inbound Interface Configurations {#inbound}
 
 Die Master-Eingangsschnittstelle wird verwendet, um Daten von Clients, Browsern oder anderen übergeordneten Proxy-Servern zu empfangen. Die verfügbaren Protokolle sind unter [Protokolle](02_protocols.md).
 
@@ -81,15 +81,15 @@ Woher:
   * Env-Variable (V2Ray 3.23+): Beginnend mit `"env:"`gibt eine env-Variable den Port im String-Format an, z. B. `"env: PORT"`. V2Ray dekodiert die Variable als String.
   * String (V2Ray 3.23+): Ein numerischer Zeichenfolgenwert wie `"1234"`.
 * `listen`: IP-Adresse abhören, Standardwert ist `"0.0.0.0"`.
-* `Protokoll`: Protokollname, alle verfügbaren Werte sind in [Protokolle](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
-* `streamSettings`: siehe [Protokolltransportoptionen](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `Tag`: Das Tag dieser eingehenden Schnittstelle, das unter allen eingehenden / ausgehenden Schnittstellen eindeutig sein sollte.
 * `domainOverride`: erkennt die Pakete bestimmter Protokolle und leitet seine Anforderungsziele um. 
   * Akzeptiert ein Array von Strings, der Standardwert ist leer.
   * Verfügbare Werte sind `"http"` und `"tls"`.
 
-## Konfiguration ausgehender Master-Schnittstellen (ausgehend)
+## Master Outbound Interface Configurations {#outbound}
 
 Die Master-Ausgangsschnittstelle wird verwendet, um Daten an entfernte Server oder den nächsten Proxy-Server zu senden. Verfügbare Protokolle sind unter [Protokolle](02_protocols.md)aufgelistet.
 
@@ -110,15 +110,15 @@ Die Master-Ausgangsschnittstelle wird verwendet, um Daten an entfernte Server od
 Woher:
 
 * `sendThrough`: Die Netzwerkschnittstelle (IP) zum Senden von Daten, verfügbar, wenn mehrere IPs angezeigt werden, der Standardwert ist `"0.0.0.0"`.
-* `Protokoll`: Protokollname, alle verfügbaren Werte sind in [Protokolle](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
 * `Tag`: Das Tag dieser ausgehenden Schnittstelle, das unter allen eingehenden / ausgehenden Schnittstellen eindeutig sein sollte.
-* `streamSettings`: siehe [Protokolltransportoptionen](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `Proxy-Einstellungen`: Proxy für ausgehende Verbindungen. Wenn dies festgelegt ist, wird `streamSettings` dieses Ausgangs weggelassen und deaktiviert. 
   * `Tag`: Wenn ein anderes Ausgangs-Tag angegeben wird, werden die Daten an den angegebenen Ausgang gesendet.
 * `Mux`: [Mux Konfigurationen](mux.md).
 
-## Konfiguration zusätzlicher Inbound-Schnittstellen (eingehende Umleitung)
+## Extra Inbound Interfaces Configurations {#inbound-detour}
 
 Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für zusätzliche eingehende Schnittstellen enthält, die jeweils die folgende Struktur verwenden:
 
@@ -141,10 +141,10 @@ Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für zusätzliche ei
 
 Woher:
 
-* `Protokoll`: Protokollname, alle verfügbaren Werte sind in [Protokolle](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `Hafen`: Port zu hören von. Akzeptierte Formate sind: 
   * Ganzzahl: aktuelle Portnummer.
-  * Env-Variable (V2Ray 3.23+): Beginnend mit `"env:"`gibt eine env-Variable den Port im String-Format an, z. B. `"env: PORT"`. V2Ray dekodiert die Variable als String.
+  * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray dekodiert die Variable als String.
   * String: Entweder ein numerischer Stringwert wie `"1234"`oder ein Portbereich wie `"5-10"` der für Portnummer 5 bis 10 steht.
 * `Tag`: Das Tag dieser eingehenden Schnittstelle, das unter allen eingehenden / ausgehenden Schnittstellen eindeutig sein sollte.
 * `listen`: IP-Adresse abhören, Standardwert ist `"0.0.0.0"`.
@@ -153,12 +153,12 @@ Woher:
   * `Refresh`: Das Intervall, in dem zufällige Ports aktualisiert werden, mit Minuteneinheiten. Mindestwert ist `2`, empfohlener Wert ist `5`. Diese Einstellung wird nur wirksam, wenn `Strategie = Zufall`.
   * `Nebenläufigkeit`: Anzahl der zufälligen Ports. Der Minimalwert ist `1`, der Maximalwert ist die Hälfte der Reichweite der Ports. Empfohlener Wert ist `3`.
 * `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
-* `streamSettings`: siehe [Protokolltransportoptionen](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `domainOverride`: erkennt die Pakete bestimmter Protokolle und leitet seine Anforderungsziele um. 
   * Akzeptiert ein Array von Strings, der Standardwert ist leer.
   * Verfügbare Werte sind `"http"` und `"tls"`.
 
-### Konfiguration zusätzlicher Outbound-Schnittstellen (Outbound-Umleitung)
+### Extra Outbound Interfaces Configurations {#outbound-detour}
 
 Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für extra ausgehende Schnittstellen enthält, die jeweils die folgende Struktur verwenden:
 
@@ -178,11 +178,11 @@ Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für extra ausgehend
 
 Woher:
 
-* `Protokoll`: Protokollname, alle verfügbaren Werte sind in [Protokolle](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `sendThrough`: Die Netzwerkschnittstelle (IP) zum Senden von Daten, verfügbar, wenn mehrere IPs angezeigt werden, der Standardwert ist `"0.0.0.0"`.
 * `Tag`: Ausgangs - Tag - Name des aktuellen Schnittstelle, Daten würden über diese Schnittstelle gesendet werden , wenn diese in abgehenden Routing - Konfigurationen oder andere outbound des ausgewählt ist `proxySettings`.
 * `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
-* `streamSettings`: Einzelheiten finden Sie unter [Protokolltransportoptionen](05_transport.md).
+* `streamSettings`: For details, see [Protocol Transport Options](transport.md).
 * `Proxy-Einstellungen`: Proxy für ausgehende Verbindungen. Wenn dies festgelegt ist, wird `streamSettings` dieses Ausgangs weggelassen und deaktiviert. 
   * `Tag`: Wenn ein anderes Ausgangs-Tag angegeben wird, werden die Daten an den angegebenen Ausgang gesendet.
 * `Mux`: [Mux Konfigurationen](mux.md).

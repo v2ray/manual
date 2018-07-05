@@ -2,7 +2,7 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-## Plattform
+## Platform {#platform}
 
 V2Ray ist auf den folgenden Plattformen verfügbar:
 
@@ -14,11 +14,11 @@ V2Ray ist auf den folgenden Plattformen verfügbar:
 * OpenBSD (x86 / amd64)
 * Libelle BSD (amd64)
 
-## Hardwareanforderung
+## Hardware requirement {#hardware}
 
 Mindestens 32 MB freier Speicher.
 
-## Herunterladen
+## Download {#download}
 
 Vorgefertigte Pakete finden Sie hier:
 
@@ -28,18 +28,18 @@ Vorgefertigte Pakete finden Sie hier:
 
 Alle Pakete sind im ZIP-Format. Laden Sie entsprechende Pakete herunter und entzippen Sie sie auf Ihrem System.
 
-## Überprüfen
+## Verify {#verify}
 
 Es gibt 2 Möglichkeiten, Pakete zu überprüfen.
 
 1. Metadata.txt in Release-Seite enthält SHA1-Hash für alle Pakete.
 2. Die GPG-Signaturdatei für ausführbare Dateien (v2ray / v2ray.exe) befindet sich in v2ray.sig (oder v2ray.exe.sig) im selben Paket. Der öffentliche Schlüssel ist [im Repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
-## Installieren Sie unter Windows oder Mac OS
+## Install on Windows or Mac OS {#install-windows}
 
 Führen Sie v2ray / v2ray.exe aus, nachdem Sie die Pakete entpackt haben.
 
-## Installieren Sie unter Linux
+## Install on Linux {#install-linux}
 
 Wir bieten ein Skript zur Installation unter Linux an. Dieses Skript erkennt zuvor installierte v2ray und aktualisiert oder installiert dann eine neue Version entsprechend. Wenn es eine vorherige Version gibt, wird die Konfigurationsdatei in / etc / v2ray während des Upgrades nicht überschrieben.
 
@@ -72,7 +72,7 @@ Nach der Installation müssen wir:
 2. Führen Sie `service v2ray start` , um V2Ray zu starten.
 3. Starten Sie optional `service v2ray start | stop | status | reload | restart | force-reload` , um den V2Ray-Dienst zu steuern.
 
-### Meine Güte
+### go.sh {#gosh}
 
 go.sh unterstützt die folgenden Parameter.
 
@@ -86,7 +86,7 @@ Beispiele:
 * Verwenden Sie den SOCKS-Proxy 127.0.0.1:1080, um das neueste Paket zu installieren: ```./go.sh -p socks5: //127.0.0.1: 1080```
 * Installiere v1.13 von der lokalen Datei:```./go.sh --version v1.13 --local /pfad/zu/v2ray.zip```
 
-## Docker
+## Docker {#docker}
 
 V2Ray bietet 2 Docker-Images:
 

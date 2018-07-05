@@ -19,7 +19,7 @@ Die offizielle Website, [v2ray.com](https://www.v2ray.com/), ist lizenziert unte
 * Einschließlich <a href="https://www.v2ray.com/resources/v2ray_1024.png" target="_blank">Projekt V Logo</a>.
 * Einschließlich des gesamten Quellcodes, der für die Erstellung der Website verwendet wird, z. B. [v2ray / manual](https://www.github.com/v2ray/manual).
 
-## Screenshot und andere Dateien
+## Screenshot and other files {#screenshots}
 
 Alle Dateien von Drittanbietern gehören zu ihrem Ersteller. Wer die Datei erstellt, besitzt die Datei.
 
@@ -27,6 +27,6 @@ Alle Dateien von Drittanbietern gehören zu ihrem Ersteller. Wer die Datei erste
 * Einschließlich aller Konfigurationsdateien, die zum Ausführen von Project V verwendet werden
 * Einschließlich aller Protokolle, die während der Laufzeit von Project V generiert wurden.
 
-## Anderer Inhalt
+## Other content {#other}
 
 Alle Inhalte, die oben nicht erwähnt werden, werden von Fall zu Fall lizenziert.
