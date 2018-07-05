@@ -2,6 +2,10 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.07.06 v3.29
+
+* New inbound and outbound for MTProto proxy.
+
 ## 2018.06.29 v3.27
 
 * DNS now supports EDNS client subnet.

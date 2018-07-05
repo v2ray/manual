@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.07.06 v3.29
+
+* 新增了 MTProto 代理协议。
+
 ## 2018.06.29 v3.27
 
 * DNS 支持了 EDNS client subnet。

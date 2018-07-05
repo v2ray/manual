@@ -22,6 +22,7 @@
     * [Dokodemo](chapter_02/protocols/dokodemo.md)
     * [Freedom](chapter_02/protocols/freedom.md)
     * [HTTP](chapter_02/protocols/http.md)
+    * [MTProto](chapter_02/protocols/mtproto.md)
     * [Shadowsocks](chapter_02/protocols/shadowsocks.md)
     * [SOCKS](chapter_02/protocols/socks.md)
     * [VMess](chapter_02/protocols/vmess.md)
