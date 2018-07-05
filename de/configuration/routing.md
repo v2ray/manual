@@ -92,7 +92,7 @@ Woher:
 * `inboundTag`: Ein Array mit einer Zeichenfolge als eingehende Proxy-Tags. Wenn die Verbindung von einem der angegebenen eingehenden Proxyserver stammt, wird diese Regel wirksam.
 * `outboundTag` [Tag des Ausgangs](protocols.md) , an den die Verbindung gesendet wird, wenn diese Regel wirksam wird.
 
-## Tipps
+## Tips {#tips}
 
 * Wenn mehrere Attribute der Regel angegeben sind, müssen sie zusammen erfüllt sein, damit die Regel wirksam wird. 
   * Wenn Sie Verbindungen über `domain` oder `ip`routen möchten, benötigen Sie wahrscheinlich mehrere Regeln anstelle einer Regel, die sowohl `domain` als auch `ip`.
