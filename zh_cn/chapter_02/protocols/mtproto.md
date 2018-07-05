@@ -28,6 +28,41 @@ MTProto 是一个 Telegram 专用的代理协议。在 V2Ray 中可使用一组�
 }
 ```
 
-## 小贴示 {#tips}
+## 样例配置 {#sample}
 
-* MTProto 仅可用于 Telegram 数据。你可能需要一个路由来绑定对应的传入传出代理。
+MTProto 仅可用于 Telegram 数据。你可能需要一个路由来绑定对应的传入传出代理。以下是一个不完整的示例：
+
+传入代理：
+
+```javascript
+{
+  "tag": "tg-in",
+  "port": 443,
+  "protocol": "mtproto",
+  "settings": {
+    "users": [{"secret": "b0cbcef5a486d9636472ac27f8e11a9d"}]
+  }
+}
+```
+
+传出代理：
+
+```javascript
+{
+  "tag": "tg-out",
+  "protocol": "mtproto",
+  "settings": {}
+}
+```
+
+路由：
+
+```javascript
+{
+  "type": "field",
+  "inboundTag": ["tg-in"],
+  "outboundTag": "tg-out"
+}
+```
+
+然后使用 Telegram 连接这台机器的 443 端口即可。
