@@ -4,7 +4,7 @@
 
 Transport settings is for how V2Ray sends and receives data from its peers. The settings devides into two parts: global settings and per proxy settings. Per-proxy settings specifies how each individual proxy handles its data, while global settings is for all proxies. Usually the inbound and outbound proxies between the connecting peer must have the same transport settings. When a proxy has no transport settings, the global settings applies.
 
-## Global Configuration
+## Global Configuration {#global}
 
 Global settings is in the "transport" entry of V2Ray config.
 
@@ -24,7 +24,7 @@ Where:
 * `wsSettings`: Settings for [WebSocket transport](transport/websocket.md)。
 * `httpSettings`: Settings for [HTTP/2 transport](transport/h2.md)。
 
-## Per-proxy Configuration
+## Per-proxy Configuration {#proxy}
 
 Each inbound and outbound proxy may has its own transport settings. Each inbound, inboundDetour, outbound and outboundDetour entry may have a `streamSettings` for transport.
 
@@ -124,7 +124,7 @@ Where:
 * `wsSettings`: WebSocket transport configuration for current proxy. Effective only when the proxy uses WebSocket transport. Configuration is the same as it is in global configuration.
 * `httpSettings`: HTTP/2 transport configuration for current proxy. Effective only when the proxy uses HTTP/2 transport. Configuration is the same as it is in global configuration.
 
-## Tips
+## Tips {#tips}
 
 * When `certificateFile` and `certificate` are both filled in. V2Ray uses `certificateFile`. Same for `keyFile` and `key`.
 * When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. If not found, V2Ray will try to issue a new certificate using any existing certificate whose `usage` is `"issue"` for `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse.
