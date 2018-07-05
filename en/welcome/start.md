@@ -4,7 +4,7 @@
 
 You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
 
-## Client
+## Client {#client}
 
 On your PC (or mobile), run V2Ray with the following configuration.
 
@@ -51,7 +51,7 @@ On your PC (or mobile), run V2Ray with the following configuration.
 
 Please modify the IP address of your V2Ray server as mentioned above. After that, the V2Ray process on your PC will proxy all traffic to V2Ray server except intranet traffic.
 
-## Server
+## Server {#server}
 
 You need another computer to run V2Ray as a server. Usually this computer is located outside firewall. Here is a sample configuration.
 
@@ -73,7 +73,7 @@ You need another computer to run V2Ray as a server. Usually this computer is loc
 
 Please make sure the `id` field is the same between client and server.
 
-## Running
+## Running {#running}
 
 * On Windows and macOS, configuration file is located in the same directory as V2Ray binary. You may run `v2ray` or `v2ray.exe` without additional parameters.
 * On Linux, configuration file is usually located at  `/etc/v2ray/config.json`. Run `v2ray --config=/etc/v2ray/config.json` in foreground or use other tools such as systemd to run V2Ray as background process.

@@ -10,7 +10,7 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 * 您的捐款是对 Project V 的无偿贡献，和 Project V 提供的技术和服务没有直接关联；
 * 感谢您对 Project V 的热爱。
 
-## 传统方式
+## 传统方式 {#usual-way}
 
 捐赠金额：<input id="damount" type="number" min="1" step="any" value="25" />美元
 
@@ -71,7 +71,7 @@ function doPaypalMe(event) {
 <input type="hidden" name="hosted_button_id" value="4TU3UKYANT2WY">
 </form>
 
-## 极客方式
+## 极客方式 {#crypto}
 
 * 比特币 (BTC): [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
 * 比特现金 (BCH): [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)

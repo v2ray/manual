@@ -11,7 +11,7 @@ Project V 使用以下方式进行授权：
 * [v2ray/v2ray-core](https://www.github.com/v2ray/v2ray-core/)
 * [v2ray/ext](https://www.github.com/v2ray/ext)
 
-## 官方网站
+## 官方网站 {#v2ray-com}
 
 官方网站（[v2ray.com](https://www.v2ray.com/)）以[知识共享署名 4.0 国际许可协议](https://creativecommons.org/licenses/by/4.0/deed.zh)协议授权。
 
@@ -19,7 +19,7 @@ Project V 使用以下方式进行授权：
 * 包括 <a href="https://www.v2ray.com/resources/v2ray_1024.png" target="_blank">Project V 图标文件</a>。
 * 包括生成网站所使用到的源代码，即[v2ray/manual](https://www.github.com/v2ray/manual)。
 
-## 软件截图和其它文件
+## 软件截图和其它文件 {#screenshots}
 
 第三方所创作的内容，其版权归其创作者所有。Project V 放弃对这些内容的所有权。
 
@@ -27,6 +27,6 @@ Project V 使用以下方式进行授权：
 * 包括运行 Project V 所需的配置文件。
 * 包括 Project V 运行时产生的日志文件。
 
-## 其它内容
+## 其它内容 {#other}
 
 未在上述提及的内容，其版权视具体情况而定。

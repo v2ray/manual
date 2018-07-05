@@ -11,7 +11,7 @@
 [7]: ../resources/lang.svg
 [8]: https://crowdin.com/project/v2ray
 
-## Platform
+## Platform {#platform}
 
 V2Ray is available on the following platforms:
 
@@ -23,11 +23,11 @@ V2Ray is available on the following platforms:
 * OpenBSD (x86 / amd64)
 * Dragonfly BSD (amd64)
 
-## Hardware requirement
+## Hardware requirement {#hardware}
 
 At least 32MB free memory.
 
-## Download
+## Download {#download}
 
 Pre-built packages can be found here:
 
@@ -37,18 +37,18 @@ Pre-built packages can be found here:
 
 All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
-## Verify
+## Verify {#verify}
 
 There are 2 ways to verify packages.
 
 1. Metadata.txt in release page contains SHA1 hash for all packages.
 1. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
-## Install on Windows or Mac OS
+## Install on Windows or Mac OS {#install-windows}
 
 Run v2ray / v2ray.exe after unzip the packages.
 
-## Install on Linux
+## Install on Linux {#install-linux}
 
 We provide a script to install on Linux. This script detects previous installed v2ray and then upgrade or install a new one accordingly. If there is a previous version, the config file in /etc/v2ray will not be overwritten during upgrade.
 
@@ -81,7 +81,7 @@ After installation, we will need to:
 1. Run `service v2ray start` command to start V2Ray.
 1. Optionally run `service v2ray start|stop|status|reload|restart|force-reload` to control V2Ray service.
 
-### go.sh
+### go.sh {#gosh}
 
 go.sh supports the following parameters.
 
@@ -95,7 +95,7 @@ Examples:
 * Use SOCKS proxy 127.0.0.1:1080 to install the latest package: ```./go.sh -p socks5://127.0.0.1:1080```
 * Install v1.13 from local file:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
 
-## Docker
+## Docker {#docker}
 
 V2Ray provides 2 docker images:
 

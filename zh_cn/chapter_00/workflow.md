@@ -2,7 +2,7 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/workflow.html)
 
-## 单服务器模式
+## 单服务器模式 {#single}
 
 和其它的网络代理工具一样，你需要在一台配置了 V2Ray 的服务器，然后在自己的设备上安装 V2Ray 客户端，然后即可流畅地访问互联网。
 
@@ -10,13 +10,13 @@
 
 一个 V2Ray 服务器可同时支持多台设备，使用不同的代理协议访问。同时，经过合理的配置，V2Ray 可以识别并区分需要代理和不需要代理的流量，直连的流量不需要绕路。
 
-## 桥接模式
+## 桥接模式 {#bridge}
 
 如果你不想在每一台设备上都配置路由，你也可以设置一台中转服务器，用于接收客户端发来的所有流量，然后在服务器中进行转发判断。
 
 ![relay](../resources/relay.svg)
 
-## 工作原理
+## 工作原理 {#internals}
 
 在配置 V2Ray 之前，不妨先来看一下 V2Ray 的工作原理，以下是单个 V2Ray 进程的内部结构示意图。多个 V2Ray 之间互相独立，互不影响。
 

@@ -14,7 +14,7 @@ V2Ray 在以下平台中可用：
 * OpenBSD (x86 / amd64)；
 * Dragonfly BSD (amd64)；
 
-## 硬件要求 {#hardward}
+## 硬件要求 {#hardware}
 
 至少 32MB 空闲内存，推荐 64MB 或更多。
 
