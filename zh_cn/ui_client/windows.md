@@ -16,7 +16,7 @@ V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。
 
 * 下载：[Github](https://github.com/Shinlor/V2RayS)
 
-## 其它工具
+## 其它工具 {#others}
 
 ### PuTTY
 

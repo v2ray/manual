@@ -4,6 +4,11 @@ MTProto 是一个 Telegram 专用的代理协议。在 V2Ray 中可使用一组�
 
 目前只支持转发到 Telegram 的 IPv4 地址。
 
+协议描述：
+
+* 名称：mtproto
+* 类型：Inbound / Outbound
+
 ## 传入协议配置 {#inbound}
 
 ```javascript
@@ -68,3 +73,7 @@ MTProto 仅可用于 Telegram 数据。你可能需要一个路由来绑定对�
 ```
 
 然后使用 Telegram 连接这台机器的 443 端口即可。
+
+## 小贴士 {#tips}
+
+* 使用此命令生成 MTProto 代理所需要的用户密钥：`openssl rand -hex 16`。

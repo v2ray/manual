@@ -30,7 +30,7 @@ Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 
 
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## 其它工具
+## 其它工具 {#others}
 
 ### HyperApp
 

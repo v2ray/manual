@@ -1,6 +1,15 @@
 # Configuration Overview
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html)
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Translate][7]][8]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/overview.html
+[3]: ../resources/chinese.svg
+[4]: https://www.v2ray.com/chapter_02/01_overview.html
+[5]: ../resources/german.svg
+[6]: https://www.v2ray.com/de/configuration/overview.html
+[7]: ../resources/lang.svg
+[8]: https://crowdin.com/project/v2ray
 
 V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
 
@@ -34,7 +43,7 @@ Where:
 * `outboundDetour`: extra outbound interfaces configurations.
 * `transport`: low-level transport protocol's configurations. For details, see [Protocol Transport Options](transport.md).
 
-## Log configuration（log）
+## Log configuration {#log}
 
 ```javascript
 {
@@ -57,7 +66,7 @@ Where:
   * `"none"` would discard all error logs.
   * Default value is `"warning"` if you leave it empty.
 
-## Master Inbound Interface Configurations (inbound)
+## Master Inbound Interface Configurations {#inbound}
 
 Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](02_protocols.md).
 
@@ -81,15 +90,15 @@ Where:
   * Env variable (V2Ray 3.23+): Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
   * String (V2Ray 3.23+): A numberic string value, such as `"1234"`.
 * `listen`: listening IP address, default value is `"0.0.0.0"`.
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
-* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
 * `domainOverride`: recognize specific protocols' packets and redirects its request targets.
   * Accepts an array of strings, default value is empty.
   * Available values are `"http"` and `"tls"`.
 
-## Master Outbound Interface Configurations (outbound)
+## Master Outbound Interface Configurations {#outbound}
 
 Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](02_protocols.md).
 
@@ -110,15 +119,15 @@ Master outbound interface is used to send data to remote servers or next proxy s
 Where:
 
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `tag`: This outbound interface's tag, which should be unique among all inbound/outbound interfaces.
-* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
   * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
 * `mux`: [Mux Configurations](mux.md).
 
-## Extra Inbound Interfaces Configurations (inbound detour)
+## Extra Inbound Interfaces Configurations {#inbound-detour}
 
 This section is an array contains multiple extra inbound interfaces' configurations, each are using the structure like below:
 
@@ -141,10 +150,10 @@ This section is an array contains multiple extra inbound interfaces' configurati
 
 Where:
 
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `port`: port to be listen from. Accepted formats are:
   * Integer: actual port number.
-  * Env variable (V2Ray 3.23+): Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
+  * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
   * String: Either a numberic string value, such as `"1234"`, or a port range like `"5-10"` which stands for port number 5 to 10.
 * `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
 * `listen`: listening IP address, default value is `"0.0.0.0"`.
@@ -153,12 +162,12 @@ Where:
   * `refresh`: The interval refreshing random ports, with unit of minutes. Minimum value is `2`, recommended value is `5`. This setting will only take effect when `strategy = random`.
   * `concurrency`: Number of random ports. Minimum value is `1`, maximum value is a half of ports' range. Recommended value is `3`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
-* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `domainOverride`: recognize specific protocols' packets and redirects its request targets.
   * Accepts an array of strings, default value is empty.
   * Available values are `"http"` and `"tls"`.
 
-### Extra Outbound Interfaces Configurations (outbound detour)
+### Extra Outbound Interfaces Configurations {#outbound-detour}
 
 This section is an array contains multiple extra outbound interfaces' configurations, each are using the structure like below:
 
@@ -178,11 +187,11 @@ This section is an array contains multiple extra outbound interfaces' configurat
 
 Where:
 
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
 * `tag`: Outbound tag name of the current interface, data would be sent via this interface if this outbound is selected in routing configurations or other outbound's `proxySettings`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
-* `streamSettings`: For details, see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: For details, see [Protocol Transport Options](transport.md).
 * `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
   * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
 * `mux`: [Mux Configurations](mux.md).
