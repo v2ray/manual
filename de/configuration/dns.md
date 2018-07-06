@@ -24,7 +24,7 @@ Um den internen DNS-Dienst zu verwenden, müssen Sie `domainStrategy` in [routin
 
 Die DNS-Abfragen, die von diesem DNS-Dienst weitergeleitet werden, werden ebenfalls basierend auf Routingeinstellungen ausgelöst. Es ist keine zusätzliche Konfiguration erforderlich.
 
-## Abfragestrategie
+## Query strategy {#strategy}
 
 Der DNS-Dienst versucht, sowohl den A- als auch den AAAA-Datensatz in derselben DNS-Nachricht abzufragen. Da nicht alle DNS-Server eine solche Abfrage unterstützen, sendet V2Ray nur die A- und AAAA-Abfrage an die folgenden DNS-Server und sendet nur A-Abfragen an alle anderen Server.
 
@@ -32,6 +32,6 @@ Der DNS-Dienst versucht, sowohl den A- als auch den AAAA-Datensatz in derselben 
 8.8.8.8 8.8.4.4 9.9.9.9
 ```
 
-## Tipps
+## Tips {#tips}
 
 * Es wird empfohlen, DNS von Ihrem lokalen Host mit einem Drittanbieter-DNS-Relayserver zu verwenden, z. B. [CoreDNS](https://coredns.io/).

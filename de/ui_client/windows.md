@@ -14,7 +14,7 @@
 
 * Download: [Github](https://github.com/Shinlor/V2RayS)
 
-## Andere Werkzeuge
+## Other tools {#other}
 
 ### Kitt
 

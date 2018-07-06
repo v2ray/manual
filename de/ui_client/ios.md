@@ -20,7 +20,7 @@ Shadowrocket ist eine generische VPN-App. Unterstützt mehrere Protokolle wie Sh
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## Pepi (war ShadowRay)
+## Pepi (was ShadowRay) {#pepi}
 
 Pepi ist V2Ray kompatible App. Es kann VPN-Verbindungen basierend auf dem VMess-Protokoll erstellen und mit beliebigen V2Ray-Servern kommunizieren.
 
@@ -30,7 +30,7 @@ Pepi ist V2Ray kompatible App. Es kann VPN-Verbindungen basierend auf dem VMess-
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## Andere Werkzeuge
+## Other tools {#other}
 
 ### HyperApp
 

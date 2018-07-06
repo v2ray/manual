@@ -34,7 +34,7 @@ To use the internal DNS service, you need to configure `domainStrategy` in [rout
 
 The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
 
-## Query strategy
+## Query strategy {#strategy}
 
 DNS service will try to query both A and AAAA record in the same DNS message. As not all DNS servers support such query, V2Ray only sends A and AAAA query to the following DNS servers, and only send A queries to all other servers.
 
@@ -44,6 +44,6 @@ DNS service will try to query both A and AAAA record in the same DNS message. As
 9.9.9.9
 ```
 
-## Tips
+## Tips {#tips}
 
 * You are recommended to use DNS from your localhost, with a thirdparty DNS relay server, such as [CoreDNS](https://coredns.io/).

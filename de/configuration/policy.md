@@ -31,7 +31,7 @@ Einige Details, wenn V2Ray Verbindungen verarbeitet:
 3. Nachdem der Client (Browser) den Uplink der Verbindung beendet hat, bricht V2Ray die Verbindung nach `downlinkOnly` time ab.
 4. Nachdem Remote (Server) den Downlink der Verbindung beendet hat, bricht V2Ray die Verbindung nach `UplinkOnly` mal ab.
 
-## Tipps
+## Tips {#tips}
 
 * Jede eingehende und ausgehende Verbindung kann eine Benutzerebene anwenden. V2Ray wendet entsprechende Richtlinien auf Benutzerebene an.
 * `bufferSize` überschreibt `v2ray.ray.buffer.size` Einstellungen in [env-Variablen](env.md#cache-size-per-connection).

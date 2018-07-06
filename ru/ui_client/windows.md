@@ -14,7 +14,7 @@
 
 * Download: [Github](https://github.com/Shinlor/V2RayS)
 
-## Other tools
+## Other tools {#other}
 
 ### PuTTY
 
