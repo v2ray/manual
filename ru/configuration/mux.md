@@ -16,5 +16,5 @@
 Где:
 
 * `enabled`: Включать Mux или нет
-* `concurrency`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 
-  * Usually you don't have to configure this value.
+* `concurrency`: Максимальное количество виртуальных подключений, которое может обрабатывать одно физическое соединение за раз. Максимальное значение `1024`, минимальное значение `1`, по умолчанию `8`. 
+  * Обычно это значение не требует дополнительной настройки.
