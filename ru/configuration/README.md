@@ -1,12 +1,12 @@
-# Configuration
+# Настройка
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
 
-V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
+V2Ray использует файл конфигурации в формате JSON. Если вы знакомы с JSON, вы можете пропустить эту страницу.
 
-JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
+JSON или [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON) - способ представления объектов в Javascript. Один JSON-файл содержит один и только один JSON-объект, начинающийся с «{» и завершающийся «}».
 
-A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
+JSON-объект содержит список пар ключ-значение. Ключ - это строка, а значение может быть строкой, числом, логическим значением, массивом или другим объектом. Типичный объект выглядит следующим образом:
 
 ```javascript
 {
@@ -20,7 +20,7 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 }
 ```
 
-Notice:
+Замечания:
 
-1. A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
+1. Пара ключ-значение обычно завершается запятой «,», но после последнего элемента объекта запятая не ставится.
 2. V2Ray supports comments in JSON, annotated by "//" or "/\* \*/".
