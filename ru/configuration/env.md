@@ -1,13 +1,13 @@
-# Environment Variables
+# Переменные окружения
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html)
 
-V2Ray reads the following environment variables.
+V2Ray считывает следующие переменные среды.
 
-## Cache size per connection {#buffer-size}
+## Размер кеша на соединение {#buffer-size}
 
-* Name: `v2ray.ray.buffer.size` or `V2RAY_RAY_BUFFER_SIZE`
-* Unit: MBytes
+* Имя: `v2ray.ray.buffer.size` или `V2RAY_RAY_BUFFER_SIZE`
+* Единицы: МБ
 * Default value: 10
 * Special value: 0 for unlimited cache size
 
