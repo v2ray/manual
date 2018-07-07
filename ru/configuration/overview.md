@@ -1,4 +1,4 @@
-# Configuration Overview
+# Обзор настроек
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
