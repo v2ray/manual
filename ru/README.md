@@ -29,8 +29,8 @@ V2Ray имеет внутренний маршрутизатор, который
 
 ## Обновить этот сайт
 
-Этот сайт создан GitBook, а также хост на GitHub. Если вы хотите изменить его содержимое, отправьте запрос на pull для [ этого репо ](https://github.com/v2ray/manual).
+Этот сайт генерируется GitBook, а располагается на GitHub. Если вы хотите изменить его содержимое, отправьте pull-запрос в [этот репозиторий](https://github.com/v2ray/manual).
 
 ## Лицензия
 
-Этот веб-сайт лицензируется по лицензии [ Creative Commons Attribution 4.0 ](https://creativecommons.org/licenses/by/4.0/).
+Этот веб-сайт лицензируется на условиях [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
