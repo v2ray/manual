@@ -1,32 +1,32 @@
-# Download & Install
+# Загрузка и установка
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-## Platform {#platform}
+## Платформа {#platform}
 
-V2Ray is available on the following platforms:
+V2Ray доступен на следующих платформах:
 
-* Windows Vista and later (x86 / amd64)
-* Mac OS X 10.7 and later (amd64)
-* Linux 2.6.23 and later (x86 / amd64 / arm / arm64 / mips64 / mips) 
-  * Including but not limited to Debian 7 / 8, Ubuntu 12.04 / 14.04 and later, CentOS 6 / 7, Arch Linux
+* Windows Vista и более поздние версии (x86 / amd64)
+* Mac OS X 10.7 и более поздние версии (amd64)
+* Linux 2.6.23 и более поздние версии (x86 / amd64 / arm / arm64 / mips64 / mips) 
+  * Включая, но не ограничиваясь, Debian 7/8, Ubuntu 12.04 / 14.04 и более поздние версии, CentOS 6/7, Arch Linux
 * FreeBSD (x86 / amd64)
 * OpenBSD (x86 / amd64)
 * Dragonfly BSD (amd64)
 
-## Hardware requirement {#hardware}
+## Требования к оборудованию {#hardware}
 
-At least 32MB free memory.
+Не менее 32 МБ свободной памяти.
 
-## Download {#download}
+## Загрузка {#download}
 
-Pre-built packages can be found here:
+Готовые пакеты можно найти здесь:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
 2. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
 3. IPFS Re-dist: <https://v2ray.com/download>
 
-All packages are in ZIP format. Download and unzip corresponding packages to your system.
+Все пакеты находятся в формате ZIP. Download and unzip corresponding packages to your system.
 
 ## Verify {#verify}
 
