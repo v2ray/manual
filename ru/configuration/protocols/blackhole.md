@@ -1,10 +1,10 @@
-# Blackhole
+# Протокол Backhole
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html)
 
-Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
+Backhole это протокол для исходящих соединений. Он блокирует все соединения предопределёнными ответами. В комбинации с [Routing](../routing.md), его можно использовать для блокировки доступа к определённым веб-сайтам.
 
-* Name: blackhole
+* Имя: blackhole
 * Type: Outbound
 * Configuration:
 
