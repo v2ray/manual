@@ -47,13 +47,13 @@ Dokodemo-door также может работать (если настроен)
 Настройте iptables, как показано ниже.
 
 ```plain
-# Create new chain
+# Создайте новую цепь
 root@Wrt:~# iptables -t nat -N V2RAY
 root@Wrt:~# iptables -t mangle -N V2RAY
 root@Wrt:~# iptables -t mangle -N V2RAY_MARK
 
-# Ignore your V2Ray server's addresses
-# It's very IMPORTANT, just be careful.
+# Игнорировать адрес V2Ray сервера
+# Очень важно не ошибиться здесь.
 root@Wrt:~# iptables -t nat -A V2RAY -d 123.123.123.123 -j RETURN
 
 # Ignore LANs and any other addresses you'd like to bypass the proxy
