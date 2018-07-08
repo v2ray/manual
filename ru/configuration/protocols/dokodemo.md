@@ -6,7 +6,7 @@ Dokodemo-door - это протокол для входящих соединен
 
 Dokodemo-door также может работать (если настроен) как прозрачный transparent proxy.
 
-* Имя: dokodemo-door
+* Название: dokodemo-door
 * Тип: входящий
 * Конфигурация:
 
