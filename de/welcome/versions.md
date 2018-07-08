@@ -2,6 +2,11 @@
 
 ![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.07.13 v3.30
+
+* Fix an issue that may cause broken connections in mKCP.
+* Thanks to [our friends](https://crowdin.com/project/v2ray) who speak Russian. Now our documents are in [Russian](https://www.v2ray.com/ru/).
+
 ## 2018.07.06 v3.29
 
 * New inbound and outbound for MTProto proxy.
@@ -55,7 +60,7 @@
 ## 2018.02.15 v3.9
 
 * Happy New Year!
-* Fehlerbehebung.
+* Bug fixes.
 
 ## 2018.02.09 v3.7
 
@@ -180,7 +185,7 @@
 
 ## 2017.01.02 v2.13
 
-* Fehlerbehebung.
+* Bug fixes.
 
 ## 2016.12.26 v2.12
 
@@ -201,7 +206,7 @@
 ## 2016.11.28 v2.8
 
 * Shadowsocks server now accepts OTA settings.
-* Fehlerbehebung.
+* Bug fixes.
 
 ## 2016.11.21 v2.7
 
@@ -259,7 +264,7 @@
 ## 2016.07.25 v1.21
 
 * High performance Chacha20 (Thanks to aead@);
-* Fehlerbehebung;
+* Bug fixes;
 
 ## 2016.07.18 v1.20
 
@@ -342,7 +347,7 @@
   * You can now automatically stop the V2Ray process and update automatically after the completion of V2Ray;
   * The install-release.sh accepts the --proxy argument and V2Ray specified proxy download;
 * Use Go 1.6 compiler to improve the performance of AES encryption;
-* Kleinere Korrekturen;
+* Minor fixes;
 * Update the official server IP (please re-download the installation package to get the latest configuration).
 
 ## 2016.02.08 v1.7
