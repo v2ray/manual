@@ -4,23 +4,23 @@
 
 ## V2RayX
 
-* Download: [Github](https://github.com/Cenmrev/V2RayX)
+* Загрузить: [GitHub](https://github.com/Cenmrev/V2RayX)
 
-## Other tools {#other}
+## Другие инструменты {#other}
 
 ### Visual Studio Code
 
-Source code editor from Microsoft.
+Редактор исходного кода от Microsoft.
 
-* Website: [code.visualstudio.com](https://code.visualstudio.com/)
+* Веб-сайт: [code.visualstudio.com](https://code.visualstudio.com/)
 
 ### Telegram
 
-Encrypted discussion.
+Зашифрованное общение.
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
+* Веб-сайт: [telegram.org](https://telegram.org/)
+* Загрузить: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
 
-### Microsoft Remote Desktop Connection Client
+### Клиент подключения к удаленному рабочему столу от Microsoft
 
-* Download: [Mac App Store](https://www.v2ray.com/itunesm/us/microsoft-remote-desktop/id715768417/)
+* Загрузить: [Mac App Store](https://www.v2ray.com/itunesm/us/microsoft-remote-desktop/id715768417/)

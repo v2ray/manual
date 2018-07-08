@@ -1,12 +1,12 @@
-# Blackhole
+# Протокол Backhole
 
-![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html)
+![Английский](../../resources/englishc.svg) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html)
 
-Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
+Backhole это протокол для исходящих соединений. Он блокирует все соединения предопределёнными ответами. В комбинации с [Routing](../routing.md), его можно использовать для блокировки доступа к определённым веб-сайтам.
 
-* Name: blackhole
-* Type: Outbound
-* Configuration:
+* Имя: blackhole
+* Тип: исходящий
+* Конфигурация:
 
 ```javascript
 {
@@ -16,9 +16,9 @@ Blackhole is a protocol for outbound connections. It blocks all connections with
 }
 ```
 
-Where:
+Где:
 
-* `response`: Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection. 
-  * `type`: Type of the response, available options are: 
-    * `"none"`: Default value. Empty response.
-    * `"http"`: A valid HTTP 403 response.
+* `response`: Предопределённый ответ на входящий запрос. Backhole немедленно отправит (если определён) выбранный ответ для любого предназначенного ему соединения и закроет его. 
+  * `type`: Тип ответа, доступные параметры: 
+    * `"none"`: Значение по умолчанию. Пустой ответ.
+    * ` "HTTP" `: Ответ кодом состояния HTTP 403 Forbidden.

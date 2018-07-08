@@ -1,60 +1,60 @@
-# iOS Client
+# Клиенты iOS
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html)
 
 ## Kitsunebi
 
-Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
+Kitsunebi - приложение для iOS, основанное на V2Ray. Обеспечивает полную функциональность V2Ray. Присутствует импорт и экспорт настроек в JSON, совместимом с V2Ray.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
 
 ## Kitsunebi Lite
 
-Light version of Kitsunebi.
+Облегченная версия Kitsunebi.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
 
 ## Shadowrocket
 
-Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadowsocks, VMess, SSR etc.
+Shadowrocket - универсальный VPN. Поддерживает разнообразные протоколы: Shadowsocks, VMess, SSR и другие.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## Pepi (was ShadowRay) {#pepi}
+## Pepi (ранее ShadowRay) {#pepi}
 
-Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
+Pepi - приложение, совместимое с V2Ray. Может создавать VPN-соединения на основе протокола VMess и обмениваться данными с любыми серверами V2Ray.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
 
 ## Quantumult
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## Other tools {#other}
+## Другие инструменты {#other}
 
 ### HyperApp
 
 An utility to build servers with docker.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
-* Website: [HyperApp.fun](https://www.hyperapp.fun/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
+* Веб-сайт: [HyperApp.fun](https://www.hyperapp.fun/)
 
 ### Termius
 
-SSH client.
+Клиент SSH.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
 
 ### Telegram
 
-Encrypted discussion.
+Зашифрованное общение.
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
+* Веб-сайт: [telegram.org](https://telegram.org/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
 
 ### ProtonMail
 
-Encrypted email.
+Зашифрованная почта.
 
-* Website: [protonmail.com](https://protonmail.com/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)
+* Веб-сайт: [protonmail.com](https://protonmail.com/)
+* Загрузить: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)

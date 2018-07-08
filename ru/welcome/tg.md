@@ -1,39 +1,39 @@
-# Telegram Group
+# Группа в Telegram
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html)
 
-Project V provides the following groups for different type of discussions.
+Project V предоставляет следующие группы для разных типов обсуждений.
 
-1. [Development](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ): Discussion over Project V's development and future plans.
-2. [Usage](https://telegram.me/projectv2ray): For Project V usages.
-3. [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Other topics.
+1. [Разработка](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ): Обсуждение развития Project V и планов на будущее.
+2. [Использование](https://telegram.me/projectv2ray): Использование Project V.
+3. [Другое](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Другие темы.
 
-Please also follow [Project V Announcement](https://t.me/v2msg) for news.
+Также обратите внимание на [канал с объявлениями от Project V](https://t.me/v2msg).
 
-## Rules
+## Правила
 
-Allowed/banned topics are listed as below.
+Разрешенные/запрещенные темы перечислены ниже.
 
-|                     / |              Usage               |              Other               |
-| ---------------------:|:--------------------------------:|:--------------------------------:|
-| Project V development |             &#10004;             |             &#10004;             |
-|             Algorithm |             &#10004;             |             &#10004;             |
-|      Computer network |             &#10004;             |             &#10004;             |
-|  Censorship avoidance |             &#10004;             |             &#10004;             |
-|           V2Ray usage |             &#10004;             |             &#10004;             |
-|      V2Ray deployment |             &#10004;             |             &#10004;             |
-|      Related software |             &#10004;             |             &#10004;             |
-|     Nonsense pictures |         &#10008;&#10008;         |             &#10004;             |
-|              Politics |             &#10008;             |             &#10004;             |
-|             Chit-chat |             &#10008;             |             &#10004;             |
-|         Advertisement |         &#10008;&#10008;         |         &#10008;&#10008;         |
-|                   18+ |     &#10008;&#10008;&#10008;     |     &#10008;&#10008;&#10008;     |
-|           Hate speech |     &#10008;&#10008;&#10008;     |     &#10008;&#10008;&#10008;     |
-|        Identity theft | &#10008;&#10008;&#10008;&#10008; | &#10008;&#10008;&#10008;&#10008; |
+|                    / |          Использование           |              Другое              |
+| --------------------:|:--------------------------------:|:--------------------------------:|
+| Разработка Project V |             &#10004;             |             &#10004;             |
+|            Алгоритмы |             &#10004;             |             &#10004;             |
+|     Сети компьютеров |             &#10004;             |             &#10004;             |
+|        Обход цензуры |             &#10004;             |             &#10004;             |
+|  Использование V2Ray |             &#10004;             |             &#10004;             |
+|  Развертывание V2Ray |             &#10004;             |             &#10004;             |
+|         Связанное ПО |             &#10004;             |             &#10004;             |
+|    Картинки с мемами |         &#10008;&#10008;         |             &#10004;             |
+|             Политика |             &#10008;             |             &#10004;             |
+|             Болтовня |             &#10008;             |             &#10004;             |
+|              Реклама |         &#10008;&#10008;         |         &#10008;&#10008;         |
+|                  18+ |     &#10008;&#10008;&#10008;     |     &#10008;&#10008;&#10008;     |
+|       Лучи ненависти |     &#10008;&#10008;&#10008;     |     &#10008;&#10008;&#10008;     |
+|  Кража личных данных | &#10008;&#10008;&#10008;&#10008; | &#10008;&#10008;&#10008;&#10008; |
 
-### Procedure for violations
+### Кара за нарушения
 
-1. All &#10008; content will be delete immediately after notice.
-2. Senders for all &#10008;&#10008; content will be banned for a week.
-3. Senders for all &#10008;&#10008;&#10008; content will be banned for a month.
-4. Sender for all &#10008;&#10008;&#10008;&#10008; content will be banned for good.
+1. &#10008; немедленное удаление сразу же после уведомления.
+2. &#10008;&#10008; - постер улетает в бан на неделю.
+3. &#10008;&#10008;&#10008; - постер улетает в бан на месяц.
+4. &#10008;&#10008;&#10008;&#10008; - постер улетает в бан навечно.

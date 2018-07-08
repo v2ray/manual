@@ -1,17 +1,17 @@
-# Private Communication
+# Приватное сообщение
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](.https://www.v2ray.com/chapter_00/pgp.html)
 
-Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
+Отправьте сообщение на один из адресов ниже, если вы хотите приватно поговорить с командой V2Ray.
 
 1. `love@v2ray.com`
 2. `v2ray@protonmail.com`
 
-\#1 is based on Gmail. If you concern the privacy of email content, please consider using the PGP public key below.
+\#1 основан на Gmail. Если вы озабочены конфиденциальностью содержимого письма, рассмотрите возможность использования открытого ключа PGP ниже.
 
-\#2 is based on ProtonMail which employs end to end encryption already.
+\#2 основан на ProtonMail, который использует сквозное шифрование.
 
-Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For questions regarding the usage of V2Ray, please [discuss it with our community](../get_started/issue.md) for quick response.
+К сожалению из-за высокой рабочей нагрузки, не обещаем, что на каждое письмо будет дан ответ. Извините за неудобства. Для быстрого ответа на вопросы, связанные с использованием V2Ray, пожалуйста, обратитесь к нашему [сообществу](../get_started/issue.md).
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----

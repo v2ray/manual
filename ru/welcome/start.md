@@ -1,17 +1,17 @@
-# Quick Start
+# Быстрый старт
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](.https://www.v2ray.com/chapter_00/start.html)
 
-You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
+Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре конфигурации](../configuration/overview.md).
 
-## Client {#client}
+## Клиент {#client}
 
-On your PC (or mobile), run V2Ray with the following configuration.
+Запустите V2Ray со следующей конфигурацией на вашем ПК (или мобильном).
 
 ```javascript
 {
   "inbound": {
-    "port": 1080,  // Port of socks5 proxy. Point your browser to use this port.
+    "port": 1080,  // Порт для socks5-прокси. Настройте браузер на использование этого порта.
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
@@ -22,8 +22,8 @@ On your PC (or mobile), run V2Ray with the following configuration.
     "protocol": "vmess",
     "settings": {
       "vnext": [{
-        "address": "server", // Address of your V2Ray server. May be IP or domain address.
-        "port": 10086,  // Port of your V2Ray server.
+        "address": "server", // Адрес сервера V2Ray. Может быть IP или доменным именем.
+        "port": 10086,  // Порт сервера V2Ray.
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }

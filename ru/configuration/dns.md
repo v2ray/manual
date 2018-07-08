@@ -4,7 +4,7 @@
 
 V2Ray has an internal DNS server which provides DNS relay for other components.
 
-Configuration:
+Настройка:
 
 ```javascript
 {
@@ -20,7 +20,7 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
 * `hosts`: A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed. The format of the domain is: 
   * Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
@@ -44,6 +44,6 @@ DNS service will try to query both A and AAAA record in the same DNS message. As
 9.9.9.9
 ```
 
-## Tips {#tips}
+## Подсказки {#tips}
 
 * You are recommended to use DNS from your localhost, with a thirdparty DNS relay server, such as [CoreDNS](https://coredns.io/).

@@ -2,11 +2,11 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html)
 
-V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
+V2Ray предоставляет API для удаленного доступа. Эти API основаны на [gRPC](https://grpc.io/).
 
 When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
 
-Configuration:
+Настройка:
 
 ```javascript
 {
@@ -19,12 +19,12 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
 * `tag`: The tag of the outbound proxy.
-* `services`: List of enabled APIs.
+* `services`: Список включённых API.
 
-## Supported API list
+## Список поддерживаемых API
 
 ### HandlerService
 

@@ -1,14 +1,14 @@
-# Support
+# Поддержка
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-Please read the following guidelines for better discussion quality and quicker solution.
+Пожалуйста, ознакомьтесь со следующими рекомендациями для лучшего качества обсуждения и более быстрого решения.
 
-## Language {#language}
+## Язык {#language}
 
-Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
+Команда Project V поддерживает китайский и английский языки. Пожалуйста, выберите тот, который вам знаком, для вопросов.
 
-## Ways to get support {#support}
+## Способы получения поддержки {#support}
 
 1. [V2Ray Usage](https://github.com/v2ray/v2ray-core/issues)
 2. [V2Ray Development](https://github.com/v2ray/planning)

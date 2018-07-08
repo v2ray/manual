@@ -1,10 +1,10 @@
-# Multiplexing
+# Мультиплексирование
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/mux.html)
 
-Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections. See [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) for more implementation details.
+Мультиплексирование или Mux - это использование одного физического TCP-соединения для нескольких виртуальных TCP-соединений. См. [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) для более подробной информации о реализации.
 
-Configuration:
+Настройка:
 
 ```javascript
 {
@@ -13,8 +13,8 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
-* `enabled`: Whether or not to enable Mux
-* `concurrency`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 
-  * Usually you don't have to configure this value.
+* `enabled`: Включать Mux или нет
+* `concurrency`: Максимальное количество виртуальных подключений, которое может обрабатывать одно физическое соединение за раз. Максимальное значение `1024`, минимальное значение `1`, по умолчанию `8`. 
+  * Обычно это значение не требует дополнительной настройки.

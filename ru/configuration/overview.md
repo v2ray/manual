@@ -1,8 +1,8 @@
-# Configuration Overview
+# Обзор настроек
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
+V2Ray имеет одинаковую структуру (см. ниже) файлов с настройками как на сервере, так и на клиенте. В отдельных секциях настройки сервера и клиента отличаются.
 
 ```javascript
 {
@@ -20,9 +20,9 @@ V2Ray shares a same structure of configuration between server side and client si
 }
 ```
 
-Where:
+Где:
 
-* `log`: log configuration. See below for detail.
+* `log`: конфигурация журнала. Подробности ниже.
 * `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
 * `dns`: Internal DNS server's configurations, if this section is omitted or empty, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](dns.md).
 * `stats`: When specified, internal [Statistics](stats.md) is enabled.

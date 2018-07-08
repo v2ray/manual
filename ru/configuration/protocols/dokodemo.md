@@ -2,13 +2,13 @@
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html)
 
-Dokodemo-door is a protocol for inbound connections. It take any connections and passes them to the specified destination.
+Dokodemo-door - это протокол для входящих соединений. Он принимает любые соединения и передает их в указанное место назначения.
 
-Dokodemo-door can also (if configured) work as a transparent proxy.
+Dokodemo-door также может работать (если настроен) как прозрачный transparent proxy.
 
-* Name: dokodemo-door
-* Type: Inbound
-* Configuration:
+* Имя: dokodemo-door
+* Тип: входящий
+* Конфигурация:
 
 ```javascript
 {
@@ -20,16 +20,16 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 }
 ```
 
-Where:
+Где:
 
-* `address`: Address of the destination server. May be an IPv4, IPv6 or a domain, in string form. 
-  * when `followRedirect` (see below) is `true`, `address` can be empty.
-* `port`: Port of the destination server. Integer.
-* `network`: Type of network, either "tcp" or "udp".
-* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. 
-  * Only works on Linux
-  * Supports TCP/IPv4 connections
-  * Supports UDP/IPv4 packets. Requires root (CAP\_NET\_ADMIN) permission
+* `address`: Адрес определенного сервера. Может быть IPv4, IPv6 или доменом в форме 'string'. 
+  * когда ` followRedirect ` (см. ниже) ` true `, `address` может быть пустым.
+* `port`: Порт определённого сервера. Выражается формой 'Integer'.
+* `network`: Тип сети: "tcp" или "udp".
+* `followRedirect`: Если установлено значение ` true `, dokodemo-door распознает назначение от TProxy и использует его в качестве адресата. 
+  * Работает только на Linux
+  * Поддержка соединений TCP / IPv4
+  * Поддерживает пакеты UDP / IPv4. Требуется права root (CAP \ _NET \ _ADMIN)
 * `userLevel`: User level. All connections share this level. See [Policy](../policy.md) for details.
 
 ## Examples for transparent proxy
