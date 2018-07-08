@@ -30,4 +30,4 @@
 
 * [PrimeDick](https://primedice.com/?c=default): Игра в кости на биткоины.
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Ставки на спорт, Bitcoin, Чемпионат мира 2018.
-* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Casino games with Bitcoin.
+* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Игры в казино на биткоины.
