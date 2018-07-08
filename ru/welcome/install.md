@@ -68,7 +68,7 @@ bash <(curl -L -s https://install.direct/go.sh)
 
 После установки необходимо:
 
-1. Update `/etc/v2ray/config.json` file for your own scenario.
+1. Изменить файл `/etc/v2ray/config.json` так, как вам необходимо.
 2. Выполнить команду `service v2ray start` для запуска V2Ray.
 3. Опционально выполнить `service v2ray start|stop|status|reload|restart|force-reload` для управления службой V2Ray.
 
@@ -88,9 +88,9 @@ go.sh поддерживает следующие параметры.
 
 ## Docker {#docker}
 
-V2Ray предоставляет два докер-контейнера:
+V2Ray предоставляет два типа докер-контейнеров:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![official](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): Contains official releases.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![dev](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): Contains latest code.
+* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![official](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): Содержит официальные релизы.
+* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![dev](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): Содержит свежайший код.
 
-The 2 images has the same structure as the Linux installation.
+Контейнеры имеют ту же структуру, что и установленный Linux.
