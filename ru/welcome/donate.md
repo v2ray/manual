@@ -2,17 +2,17 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/donate.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. If you like this project, you may buy us a cup of coffee.
+Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. Если вам нравится этот проект, купите нам чашку кофею.
 
-Notes:
+Примечания:
 
-* The usage of donations will not be published.
-* Your donation has no direct connection to Project V's development and service.
-* Thank you for loving Project V.
+* Отчёт о расходах публиковаться не будет.
+* Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V.
+* Спасибо, что любите Project V.
 
-## The Usual Way {#usual-way}
+## Обычный способ {#usual-way}
 
-Amount: <input id="damount" type="number" min="1" step="any" value="25" />USD
+Сумма: <input id="damount" type="number" min="1" step="any" value="25" />USD
 
 \* Donations that less than 1 USD may be refunded due to high service fees, and will not be listed in the sponsor list below. 
 
@@ -37,9 +37,9 @@ function doPaypalMe(event) {
 
  
 
-Donate via: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="Credit Card" onclick="doPaypal(event);" />
+Пожертвовать через: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="Credit Card" onclick="doPaypal(event);" />
 
-## Cryptocurrency {#crypto}
+## Криптовалюта {#crypto}
 
 * Bitcoin: [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
 * Bitcoin Case: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)
