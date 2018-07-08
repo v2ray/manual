@@ -30,24 +30,24 @@ V2Ctl имеет следующие параметры командной стр
 v2ctl <command> <options>
 ```
 
-Available commands are listed below. Each command has its own options.
+Ниже перечислены доступные команды. Каждая команда имеет свои собственные параметры.
 
 ### Verify
 
 `v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
 
-To verify the signature of a V2Ray binary.
+Проверка подписи бинарного файла V2Ray.
 
 Опциональные параметры:
 
-* `sig`：Path to signature file. Default value is the ".sig" file to the path to be verified.
-* First argument: the file to be verified.
+* `sig`：Путь к файлу с подписью. Default value is the ".sig" file to the path to be verified.
+* Первый аргумент: файл для проверки.
 
 ### Config
 
 `v2ctl config`
 
-No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
+Нет параметров. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
 
 ### UUID
 
