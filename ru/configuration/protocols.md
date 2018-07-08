@@ -5,7 +5,7 @@
 V2Ray поддерживает следующие протоколы:
 
 * [Blackhole](protocols/blackhole.md)
-* [Dokodemo-door](protocols/dokodemo.md)
+* [Dokodemo](protocols/dokodemo.md)
 * [Freedom](protocols/freedom.md)
 * [HTTP](protocols/http.md)
 * [Shadowsocks](protocols/shadowsocks.md)
