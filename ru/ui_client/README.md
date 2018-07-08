@@ -1,4 +1,4 @@
-# Project V Clients
+# Клиенты Project V
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/)
 
@@ -8,4 +8,4 @@
 * [Mac OS X](osx.md)
 * [iOS](ios.md)
 * [Android](android.md)
-* [Online services](ui_client/service.md)
+* [Онлайн сервисы](ui_client/service.md)
