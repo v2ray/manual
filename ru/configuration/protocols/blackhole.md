@@ -5,8 +5,8 @@
 Backhole это протокол для исходящих соединений. Он блокирует все соединения предопределёнными ответами. В комбинации с [Routing](../routing.md), его можно использовать для блокировки доступа к определённым веб-сайтам.
 
 * Имя: blackhole
-* Type: Outbound
-* Configuration:
+* Тип: исходящий
+* Конфигурация:
 
 ```javascript
 {
@@ -16,9 +16,9 @@ Backhole это протокол для исходящих соединений.
 }
 ```
 
-Where:
+Где:
 
-* `response`: Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection. 
+* `response`Предопределённый ответ на входящий запрос. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection. 
   * `type`: Type of the response, available options are: 
     * `"none"`: Default value. Empty response.
     * `"http"`: A valid HTTP 403 response.
