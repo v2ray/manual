@@ -103,7 +103,7 @@
 
 其中：
 
-* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"` 或 `"ws"`，默认值为 `"tcp"`；
+* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"`、 `"ws"` 或 `http`，默认值为 `"tcp"`；
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
   * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
