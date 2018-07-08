@@ -14,17 +14,17 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 
 * `-version`: Вывести версию V2Ray, затем завершить работу.
 * `-test`: Считать и проверить настройки, вывести найденные ошибки, затем завершить работу.
-* `-config`: URI конфигурации. 
-  * When its value is `stdin:`, V2Ray reads configuration from standard input. Caller must close stdin after writing out configuration.
-  * When its value begins with `http://` or `https://` (lowercase), V2Ray tries to load configuration from the remote address.
-  * When not set, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by environment variable `v2ray.location.asset`.
-* `-format`: Configuration format. Возможные варианты: 
+* `-config`: URI файла с настройками. 
+  * Если значение равно `stdin:`, V2Ray считывает конфигурацию из стандартного ввода. Вызывающая программа должна закрыть stdin после записи конфигурации.
+  * Если значение начинается с `http://` или `https://` (строчными), V2Ray пытается загрузить конфигурацию по указанному адресу.
+  * Если значение не задано, V2Ray сначала пытается загрузить конфигурацию из `config.json` из рабочего каталога, а затем из каталога, заданного переменной среды `v2ray.location.asset`.
+* `-format`: Формат файла с настройками. Возможные варианты: 
   * `json`: формат JSON.
-  * `pb` or `protobuf`: Protobuf format.
+  * `pb` или `protobuf`: формат Protobuf.
 
 ## V2Ctl
 
-V2Ctl has the following commandline parameters:
+V2Ctl имеет следующие параметры командной строки:
 
 ```shell
 v2ctl <command> <options>
