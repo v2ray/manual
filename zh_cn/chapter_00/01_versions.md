@@ -2,6 +2,10 @@
 
 ![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
 
+## 2018.07.13 v3.30
+
+* 解决了一个可能会导致 mKCP 断流的问题。
+
 ## 2018.07.06 v3.29
 
 * 新增了 MTProto 代理协议。

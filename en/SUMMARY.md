@@ -17,6 +17,7 @@
     * [Blackhole](configuration/protocols/blackhole.md)
     * [Dokodemo](configuration/protocols/dokodemo.md)
     * [Freedom](configuration/protocols/freedom.md)
+    * [MTProto](configuration/protocols/mtproto.md)
     * [HTTP](configuration/protocols/http.md)
     * [Shadowsocks](configuration/protocols/shadowsocks.md)
     * [SOCKS](configuration/protocols/socks.md)
