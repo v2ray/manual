@@ -1,32 +1,32 @@
-# Android Client
+# Клиенты Android
 
 ![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/android.html)
 
 ## BifrostV
 
-BifrostV is an Android app based on V2Ray core. It supports VMess, Shadowsocks, socks protocols.
+BifrostV - приложение для Android, основанное на ядре V2Ray. Поддерживает протоколы VMess, Shadowsocks, socks.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv)
-* Download: [APK Pure](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
+* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv)
+* Загрузить: [APK Pure](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
 
 ## V2RayNG
 
-V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray core.
+V2RayNG - приложение для Android, основанное на V2Ray. Оно обеспечивает тот же набор функций, что и ядро ​​V2Ray.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang)
-* Source: [GitHub](https://github.com/2dust/v2rayNG)
+* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang)
+* Исходный код: [GitHub](https://github.com/2dust/v2rayNG)
 
 ## V2Ray Go
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=org.kkdev.v2raygo)
-* Source: [Github](https://github.com/xiaokangwang/V2RayGO)
+* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=org.kkdev.v2raygo)
+* Исходный код: [GitHub](https://github.com/xiaokangwang/V2RayGO)
 
 ## Actinium
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
-* Source: [Github](https://github.com/V2Ray-Android/Actinium)
+* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
+* Исходный код: [GitHub](https://github.com/V2Ray-Android/Actinium)
 
-## Other tools {#other}
+## Другие инструменты {#other}
 
 ### JuiceSSH
 
