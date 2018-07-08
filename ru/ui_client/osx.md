@@ -4,13 +4,13 @@
 
 ## V2RayX
 
-* Download: [Github](https://github.com/Cenmrev/V2RayX)
+* Загрузить: [GitHub](https://github.com/Cenmrev/V2RayX)
 
-## Other tools {#other}
+## Другие инструменты {#other}
 
 ### Visual Studio Code
 
-Source code editor from Microsoft.
+Редактор исходного кода от Microsoft.
 
 * Website: [code.visualstudio.com](https://code.visualstudio.com/)
 
