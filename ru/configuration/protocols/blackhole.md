@@ -1,6 +1,6 @@
 # Протокол Backhole
 
-![Английский](../../resources/englishc.svg) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html)
+![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html)
 
 Backhole это протокол для исходящих соединений. Он блокирует все соединения предопределёнными ответами. В комбинации с [Routing](../routing.md), его можно использовать для блокировки доступа к определённым веб-сайтам.
 
