@@ -30,11 +30,11 @@ Dokodemo-door также может работать (если настроен)
   * Работает только на Linux
   * Поддержка соединений TCP / IPv4
   * Поддерживает пакеты UDP / IPv4. Требуется права root (CAP \ _NET \ _ADMIN)
-* `userLevel`: User level. All connections share this level. See [Policy](../policy.md) for details.
+* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень. Смотреть подробнее: [Policy](../policy.md).
 
-## Examples for transparent proxy
+## Примеры для transparent proxy
 
-Add a dokodemo-door inbound as below.
+Добавить соединение dokodemo-door, как показано ниже.
 
 ```javascript
 {
@@ -44,7 +44,7 @@ Add a dokodemo-door inbound as below.
 }
 ```
 
-Configure iptables as below.
+Настройте iptables, как показано ниже.
 
 ```plain
 # Create new chain
