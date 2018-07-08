@@ -1,8 +1,8 @@
-# Quick Start
+# Быстрый старт
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](.https://www.v2ray.com/chapter_00/start.html)
 
-You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
+Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
 
 ## Client {#client}
 
