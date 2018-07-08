@@ -22,7 +22,7 @@ When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `t
 Где:
 
 * `tag`: The tag of the outbound proxy.
-* `services`: List of enabled APIs.
+* `services`: Список включённых API.
 
 ## Список поддерживаемых API
 
