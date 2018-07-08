@@ -30,20 +30,20 @@ V2RayNG - приложение для Android, основанное на V2Ray. 
 
 ### JuiceSSH
 
-SSH client.
+Клиент SSH.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
-* Website: [JuiceSSH.com](https://juicessh.com/)
+* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
+* Веб-сайт: [JuiceSSH.com](https://juicessh.com/)
 
 ### Termius
 
-SSH client
+Клиент SSH
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)
+* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)
 
 ### Telegram
 
-Encrypted discussion.
+Зашифрованное общение.
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)
+* Веб-сайт: [telegram.org](https://telegram.org/)
+* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)
