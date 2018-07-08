@@ -2,6 +2,11 @@
 
 ![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
 
+## 2018.07.13 v3.30
+
+* Fix an issue that may cause broken connections in mKCP.
+* Thanks to [our friends](https://crowdin.com/project/v2ray) who speak Russian. Now our documents are in [Russian](https://www.v2ray.com/ru/).
+
 ## 2018.07.06 v3.29
 
 * New inbound and outbound for MTProto proxy.
