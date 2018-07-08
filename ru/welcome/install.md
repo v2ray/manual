@@ -43,7 +43,7 @@ V2Ray доступен на следующих платформах:
 
 Мы предоставляем сценарий для установки в Linux. Этот сценарий обнаруживает предыдущую инсталляцию v2ray и затем обновляет старую или устанавливает новую. Если предыдущая версия обнаруживается, конфигурационный файл в /etc/v2ray не будет перезаписан во время обновления.
 
-The following command assumes root permission.
+Следующая команда требует прав суперпользователя.
 
 Выполните следующую команду для установки V2Ray. Если yum или apt доступны, скрипт установит unzip и daemon / systemd. Они необходимы для запуска V2Ray в качестве службы. Вам необходимо установить их вручную, если ваша система Linux не поддерживает yum или apt.
 
@@ -53,38 +53,38 @@ bash <(curl -L -s https://install.direct/go.sh)
 
 Этот сценарий устанавливает следующие файлы.
 
-* `/usr/bin/v2ray/v2ray`: V2Ray executable
+* `/usr/bin/v2ray/v2ray`: Исполняемый файл V2Ray
 * `/usr/bin/v2ray/v2ctl`: Utility
-* `/etc/v2ray/config.json`: Config file
-* `/usr/bin/v2ray/geoip.dat`: IP data file
-* `/usr/bin/v2ray/geosite.dat`: domain data file
+* `/etc/v2ray/config.json`: Файл с настройками
+* `/usr/bin/v2ray/geoip.dat`: Файл с данными об IP
+* `/usr/bin/v2ray/geosite.dat`: Файл с данными о доменах
 
-This script also configures V2Ray to run as service, if systemd is available.
+Этот сценарий также настраивает V2Ray для запуска в качестве службы, если systemd доступен.
 
-Configurations are at the following places.
+Конфигурации находятся в следующих местах.
 
 * `/etc/systemd/system/v2ray.service`: Systemd
 * `/etc/init.d/v2ray`: SysV
 
-After installation, we will need to:
+После установки необходимо:
 
 1. Update `/etc/v2ray/config.json` file for your own scenario.
-2. Run `service v2ray start` command to start V2Ray.
-3. Optionally run `service v2ray start|stop|status|reload|restart|force-reload` to control V2Ray service.
+2. Выполнить команду `service v2ray start` для запуска V2Ray.
+3. Опционально выполнить `service v2ray start|stop|status|reload|restart|force-reload` для управления службой V2Ray.
 
 ### go.sh {#gosh}
 
-go.sh supports the following parameters.
+go.sh поддерживает следующие параметры.
 
-* `-p` or `--proxy`: Use a proxy to download V2Ray packages. Same as curl format, such as `"socks5://127.0.0.1:1080"` or `"http://127.0.0.1:3128"`.
-* `-f` or `--force`: Force installation. The script will assume V2Ray was not installed at all.
-* `--version`: The version to be installed, such as `"v1.13"`. Default value is the latest stable release.
-* `--local`: Use a local package for installation.
+* `-p` или `--proxy`: Использовать прокси для загрузки пакетов V2Ray. Формат такой же, как и у curl. Например, `"socks5://127.0.0.1:1080"` или `"http://127.0.0.1:3128"`.
+* `-f` or `--force`: Принудительная установка. Сценарий предполагает, что V2Ray не был установлен вообще.
+* `--version`: Версия, которая должна быть установлена, например `"v1.13"`. Значение по умолчанию - это последняя стабильная версия.
+* `--local`: Использовать локальный пакет для установки.
 
-Examples:
+Примеры:
 
-* Use SOCKS proxy 127.0.0.1:1080 to install the latest package: ```./go.sh -p socks5://127.0.0.1:1080```
-* Install v1.13 from local file:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
+* Использовать SOCKS-прокси 127.0.0.1:1080 для установки последнего пакета: ```./go.sh -p socks5://127.0.0.1:1080```
+* Установить v1.13 из локального файла:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
 
 ## Docker {#docker}
 
