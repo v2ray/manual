@@ -26,32 +26,32 @@ V2Ray доступен на следующих платформах:
 2. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
 3. IPFS Re-dist: <https://v2ray.com/download>
 
-Все пакеты находятся в формате ZIP. Download and unzip corresponding packages to your system.
+Все пакеты находятся в формате ZIP. Загрузите и распакуйте подходящие пакеты в свою систему.
 
-## Verify {#verify}
+## Проверка {#verify}
 
-There are 2 ways to verify packages.
+Существует два способа проверки пакетов.
 
-1. Metadata.txt in release page contains SHA1 hash for all packages.
-2. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
+1. Metadata.txt на странице релиза содержит хэш SHA1 для всех пакетов.
+2. Файл подписи GPG для исполняемых файлов (v2ray / v2ray.exe) можно найти в файле v2ray.sig (или v2ray.exe.sig) в том же пакете. Открытый ключ находится [в хранилище](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
-## Install on Windows or Mac OS {#install-windows}
+## Установка в Windows и Mac OS {#install-windows}
 
-Run v2ray / v2ray.exe after unzip the packages.
+Запустите v2ray / v2ray.exe после распаковки пакетов.
 
-## Install on Linux {#install-linux}
+## Установка в Linux {#install-linux}
 
-We provide a script to install on Linux. This script detects previous installed v2ray and then upgrade or install a new one accordingly. If there is a previous version, the config file in /etc/v2ray will not be overwritten during upgrade.
+Мы предоставляем сценарий для установки в Linux. Этот сценарий обнаруживает предыдущую инсталляцию v2ray и затем обновляет старую или устанавливает новую. Если предыдущая версия обнаруживается, конфигурационный файл в /etc/v2ray не будет перезаписан во время обновления.
 
 The following command assumes root permission.
 
-Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
+Выполните следующую команду для установки V2Ray. Если yum или apt доступны, скрипт установит unzip и daemon / systemd. Они необходимы для запуска V2Ray в качестве службы. Вам необходимо установить их вручную, если ваша система Linux не поддерживает yum или apt.
 
 ```shell
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
-The script installs the following files.
+Этот сценарий устанавливает следующие файлы.
 
 * `/usr/bin/v2ray/v2ray`: V2Ray executable
 * `/usr/bin/v2ray/v2ctl`: Utility
