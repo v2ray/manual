@@ -47,10 +47,10 @@ v2ctl <command> <options>
 
 `v2ctl config`
 
-Нет параметров. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
+Нет параметров. Эта команда считывает конфигурацию в формате JSON из потока stdin, а выводит её в формате Protobuf в stdout.
 
 ### UUID
 
 `v2ctl uuid`
 
-Нет параметров. This command prints a random UUID.
+Нет параметров. Эта команда выводит случайный UUID.
