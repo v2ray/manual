@@ -1,6 +1,6 @@
 # Dokodemo-door
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/dokodemo.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/dokodemo.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/dokodemo.html)
+[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/dokodemo.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/dokodemo.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/dokodemo.html)
 
 Dokodemo-door - это протокол для входящих соединений. Он принимает любые соединения и передает их в указанное место назначения.
 
