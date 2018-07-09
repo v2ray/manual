@@ -11,6 +11,8 @@
     * [Telegram](welcome/tg.md)
     * [Приватное сообщение](welcome/pgp.md)
   * [Лицензия](welcome/license.md)
+  * [Blog&#8618;](https://steemit.com/@v2ray)
+  * [Translate&#8618;](https://crowdin.com/project/v2ray)
 * [Настройка](configuration/README.md) 
   * [Обзор](configuration/overview.md)
   * [Протоколы](configuration/protocols.md) 
