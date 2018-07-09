@@ -1,8 +1,8 @@
 # VMess
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/vmess.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/vmess.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/vmess.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/vmess.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/vmess.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/vmess.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/vmess.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/vmess.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) это протокол для шифрованной передачи информации. Он включает в себя входящий и исходящий прокси.
 
 * Наименование: vmess
 * Тип: входящий / исходящий
@@ -36,7 +36,7 @@
   * `users`: Массив, в котором каждая запись является пользователем VMess. 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 32.
-    * ` userLevel `: Пользовательский уровень. See [Policy](../policy.md) for more detail.
+    * ` userLevel `: Пользовательский уровень. См. [Локальная политика](../policy.md).
     * `security`: Метод шифрования. Возможные варианты: 
       * `"aes-128-cfb"`
       * `"aes-128-gcm"`: Рекомендуется для ПК.
@@ -67,16 +67,16 @@
 }
 ```
 
-Where:
+Где:
 
 * `clients`: Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта. 
   * Каждый клиент содержит: 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` userLevel `: Пользовательский уровень. См. [Локальная политика](../policy.md).
-    * ` alterId `: Число альтернативных идентификаторов. То же, что и в конфигурации входящего соединения. Value must be the same as in client configuration.
+    * ` alterId `: Число альтернативных идентификаторов. То же, что и в конфигурации входящего соединения. Значение должно быть таким же, как в конфигурации клиента.
     * `email`: Адрес электронной почты для идентификации пользователя.
 * `detour`: Дополнительная функция, чтобы предложить клиенту использовать предложенный протокол. 
-  * ` to `: Тег входящего прокси. See [Overview](../protocols.md). Если сконфигурировано, VMess предложит клиенту использовать предложенный протокол для дальнейших соединений.
+  * ` to `: Тег входящего прокси. См. [ Обзор ](../protocols.md). Если сконфигурировано, VMess предложит клиенту использовать протокол для дальнейших соединений.
 * `default`: Необязательная конфигурация клиента по умолчанию. Обычно используется в предложенном прокси протоколе. 
   * ` userLevel `: Пользовательский уровень.
   * ` alterId `: Число альтернативных идентификаторов. Значение по умолчанию: 64.
