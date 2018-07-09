@@ -2,7 +2,7 @@
 
 [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/tcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/tcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/tcp.html)
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
@@ -12,16 +12,16 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
-* `header`: Header obfuscation settings: 
-  * `type`: Type of obfuscation. Choices are: 
-    * `"none"`: Default. No obfuscation at all.
-    * `"http"`: HTTP obfuscation. See below.
+* `header`: Настройки обфускации заголовка: 
+  * `type`: Тип обфускации. Варианты: 
+    * `"none"`: Значение по умолчанию. Без обфускации.
+    * `"http"`: HTTP обфускация. Смотри ниже.
 
-## HTTP obfuscation
+## Обфускация HTTP
 
-HTTP obfuscation must be configured (and matching) for the inbound and outbound of the connecting peers.
+Обфускацию HTTP необходимо настроить (и сопоставить) для входящих и исходящих соединений.
 
 ```javascript
 {
