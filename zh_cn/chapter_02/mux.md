@@ -1,6 +1,13 @@
 # Mux 多路复用
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/mux.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/mux.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/mux.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/mux.html
 
 Mux 功能是在一条 TCP 连接上分发多个 TCP 连接的数据。实现细节详见[Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html)
 

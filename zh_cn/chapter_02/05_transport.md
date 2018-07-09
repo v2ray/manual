@@ -1,6 +1,13 @@
 # 底层传输配置
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/transport.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/transport.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/transport.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/transport.html
 
 底层传输（transport）配置指定了 V2Ray 如何使用 TCP、UDP 等基础网络协议。配置分为两部分，一是全局设置，二是分协议配置。分协议配置可以指定每个单独的传入传出协议用怎样的方式传输。通常来说客户端和服务器对应的传出传入协议需要使用同样的传输方式。当分协议传输配置指定了一种传输方式，但没有填写其设置时，此传输方式会使用全局配置中的设置。
 

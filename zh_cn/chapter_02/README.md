@@ -1,6 +1,13 @@
 # 配置文件
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/index.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/index.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/index.html
 
 V2Ray 的配置文件为 JSON 格式，如果你已经熟悉 JSON 格式，可以跳过这一段。
 

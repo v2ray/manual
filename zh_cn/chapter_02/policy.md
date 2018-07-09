@@ -1,5 +1,14 @@
 # 本地策略
 
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/policy.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/policy.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/policy.html
+
 此功能在 V2Ray 3.1 中加入。
 
 本地策略可以配置一些用户相关的权限，比如连接超时设置。V2Ray 处理的每一个连接，都对应到一个用户，按照这个用户的等级（level）应用不同的策略。本地策略可按照等级的不同而变化。

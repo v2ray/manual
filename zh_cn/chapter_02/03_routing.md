@@ -1,6 +1,13 @@
 # 路由功能
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/routing.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/routing.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/routing.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/routing.html
 
 V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由不同的传出连接发出，以达到按需代理的目的。这一功能的常见用法是分流国内外流量，V2Ray 可以通过内部机制判断不同地区的流量，然后将它们发送到不同的传出代理。
 
