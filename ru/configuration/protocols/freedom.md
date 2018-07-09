@@ -1,6 +1,6 @@
 # Freedom
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/freedom.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/freedom.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/freedom.html)
+[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/freedom.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/freedom.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/freedom.html)
 
 Freedom - это протокол для исходящих соединений. Он передает все TCP или UDP соединение на указанные адреса.
 
