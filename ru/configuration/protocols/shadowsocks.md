@@ -52,13 +52,13 @@
   * `"aes-128-gcm"`
   * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
 * `password`: Пароль. Может быть любым в форме строки.
-* `udp` (Deprecated, use `network`): `true` or `false`, whether or not to enable UDP. Default to `false`.
-* `level`: User level. Default to `0`. See [Policy](../policy.md).
-* `ota`: `true` or `false`, whether or not to enable OTA. Default to auto mode. 
-  * When AEAD is used, `ota` has no effect.
-* `network` (V2Ray 3.16+): Type of network, either `"tcp"`, `"udp"`, or `"tcp,udp"`. Default to `"tcp"`.
+* `udp` (Устарел, используйте `network`): `true` для включения и `false` для выключения UDP. Значение по умолчанию: `false`.
+* ` userLevel `: Пользовательский уровень. Значение по умолчанию: `0`. См. [Локальная политика](../policy.md).
+* `ota`: ` true ` для включения, ` false ` для выключения и <0>auto</0> для работы в автоматическом режиме OTA. Значение по умолчанию <0>auto</0>. 
+  * Когда используется AEAD, значение ` ota ` не используется.
+* `network` (V2Ray 3.16+): Тип сети. `"tcp"`, `"udp"`, или `"tcp,udp"`. Значение по умолчанию: `tcp`.
 
-## Outbound proxy configuration
+## Конфигурация прокси для исходящего соединения
 
 ```javascript
 {
@@ -76,10 +76,10 @@
 }
 ```
 
-Where:
+Где:
 
-* `email`: Email address. Used for user identification.
-* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
+* `email`: Адрес электронной почты. Используется для идентификации пользователя.
+* ` address `: Адрес сервера Shadowsocks. Может быть IPv4, IPv6 или домен.
 * `port`: Port of Shadowsocks server.
 * `method`: Encryption method. No default value. Options are: 
   * `"aes-256-cfb"`
