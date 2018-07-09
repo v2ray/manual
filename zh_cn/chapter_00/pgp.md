@@ -1,6 +1,6 @@
 # 私下联系
 
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6] [![Translate][7]][8]
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
 
 [1]: ../resources/english.svg
 [2]: https://www.v2ray.com/en/welcome/pgp.html
@@ -8,8 +8,6 @@
 [4]: https://www.v2ray.com/de/welcome/pgp.html
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/pgp.html
-[7]: ../resources/lang.svg
-[8]: https://crowdin.com/project/v2ray
 
 如果你想和 V2Ray 的开发人员私下讨论一些问题，可以通过下列的邮箱联系。
 

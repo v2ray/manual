@@ -15,6 +15,7 @@
   * [项目授权](chapter_00/license.md)
   * [博客&#8618;](https://steemit.com/@v2ray)
   * [白话文教程&#8618;](https://toutyrater.github.io/)
+  * [翻译文档&#8618;](https://crowdin.com/project/v2ray)
 * [配置文件](chapter_02/README.md)
   * [文件格式](chapter_02/01_overview.md)
   * [协议列表](chapter_02/02_protocols.md)
