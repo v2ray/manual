@@ -1,16 +1,18 @@
 # Lokale Richtlinie
 
-Lokale Richtlinie wird in V2Ray 3.1 hinzugefügt.
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/policy.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/policy.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/policy.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/policy.html)
 
-Die lokale Richtlinie verwaltet Einstellungen der aktuellen V2Ray-Instanz, z. B. Verbindungstimeouts. Die Richtlinien können auf jede Benutzerebene oder das gesamte System angewendet werden.
+Local policy is added in V2Ray 3.1.
 
-Aufbau:
+Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
+
+Configuration:
 
 ```javascript
 {"levels": {"0": {"handshake": 4, "connIdle": 300, "uplinkOnly": 2, "downlinkOnly": 5, "statsUserUplink": false, "statsUserDownlink": false}}, " system ": {" statsInboundUplink ": false," statsInboundDownlink ": false}}
 ```
 
-Woher:
+Where:
 
 * `Niveau`: Eine Liste von Schlüsselwertpaaren. Jeder Schlüssel ist eine Ganzzahl (eingeschränkt durch JSON) wie `"0"`, `"1"`usw. Der numerische Wert gilt für eine bestimmte Benutzerebene. Jeder Wert hat die folgenden Attribute: 
   * `Handshake`: Timeout für den Verbindungsaufbau in Sekunden. Standardwert `4`.
@@ -24,7 +26,7 @@ Woher:
   * `statsInboundUplink` (V2Ray 3.18+): Wenn `wahr`, aktiviert V2Ray den Statistikzähler für den gesamten Aufwärtsverkehr in allen eingehenden Proxys.
   * `statsInboundDownlink` (V2Ray 3.18+): Wenn `True`, aktiviert V2Ray den Statistikzähler für den gesamten Downlink-Verkehr in allen eingehenden Proxys.
 
-Einige Details, wenn V2Ray Verbindungen verarbeitet:
+Some details when V2Ray handles connections:
 
 1. An der Handshake Phase eines eingehenden Proxy mit einer neuen Verbindung zu tun, sagen VMess Request - Header zu lesen, wenn es länger als dauert `Handshake` Mal, V2Ray die Verbindung abbricht.
 2. Wenn in `connIdle` keine Daten über die Verbindung übergeben werden, bricht V2Ray die Verbindung ab.
