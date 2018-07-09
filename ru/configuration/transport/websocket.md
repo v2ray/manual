@@ -18,8 +18,8 @@
 Где:
 
 * `path`: Путь, используемый для WebSocket. По умолчанию корень домена `""`.
-* `headers`: Пользовательский HTTP-заголовок. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+* `headers`: Пользовательский HTTP-заголовок. Это массив, в котором каждая запись представляет собой пару ключевых значений в строке, для заголовка и значения в заголовке HTTP. По умолчанию пуст.
 
-## Notice
+## Важно
 
-* Since V2Ray 3.4, Websocket recognizes X-Forwarded-For header and use it as source address of the traffic.
+* Начиная с V2Ray 3.4, Websocket распознает заголовок X-Forwarded-For и использует его как исходный адрес трафика.
