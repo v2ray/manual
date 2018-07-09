@@ -4,9 +4,9 @@
 
 Dokodemo-door - это протокол для входящих соединений. Он принимает любые соединения и передает их в указанное место назначения.
 
-Dokodemo-door также может работать (если настроен) как прозрачный transparent proxy.
+Dokodemo-door также может работать (если настроен) как transparent proxy.
 
-* Имя: dokodemo-door
+* Название: dokodemo-door
 * Тип: входящий
 * Конфигурация:
 
@@ -22,19 +22,19 @@ Dokodemo-door также может работать (если настроен)
 
 Где:
 
-* `address`: Адрес определенного сервера. Может быть IPv4, IPv6 или доменом в форме 'string'. 
-  * когда ` followRedirect ` (см. ниже) ` true `, `address` может быть пустым.
-* `port`: Порт определённого сервера. Выражается формой 'Integer'.
+* `address`: Адрес определенного сервера. Строка, значением которой может быть IPv4, IPv6 или доменное имя. 
+  * если `followRedirect` (см. ниже) `true`, `address` может быть пустым.
+* `port`: Порт сервера назначения. Целое число.
 * `network`: Тип сети: "tcp" или "udp".
 * `followRedirect`: Если установлено значение ` true `, dokodemo-door распознает назначение от TProxy и использует его в качестве адресата. 
   * Работает только на Linux
   * Поддержка соединений TCP / IPv4
-  * Поддерживает пакеты UDP / IPv4. Требуется права root (CAP \ _NET \ _ADMIN)
-* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень. Смотреть подробнее: [Policy](../policy.md).
+  * Поддержка UDP/IPv4-пакетов. Требуются права суперпользователя (CAP\ _NET\ _ADMIN)
+* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень. Подробности: [Правила](../policy.md).
 
 ## Примеры для transparent proxy
 
-Добавить соединение dokodemo-door, как показано ниже.
+Добавьте inbound-соединение dokodemo-door, как показано ниже.
 
 ```javascript
 {
@@ -47,15 +47,17 @@ Dokodemo-door также может работать (если настроен)
 Настройте iptables, как показано ниже.
 
 ```plain
-# Создать новую цепь
+# Создаём новую цепь
 root@Wrt:~# iptables -t nat -N V2RAY
 root@Wrt:~# iptables -t mangle -N V2RAY
 root@Wrt:~# iptables -t mangle -N V2RAY_MARK
 
-# Игнорировать адрес V2Ray сервера
-# Очень важно не ошибиться здесь.
-root @ Wrt: ~ # iptables -t nat -A V2RAY -d 123.123.123.123 -j RETURN 
-# Игнорировать адреса локальной сети и любые другие адреса, которые не требуется пропускать через прокси-сервер 
+# Игнорируем адреса серверов V2Ray
+# Это ОЧЕНЬ ВАЖНО, будьте внимательны.
+root@Wrt:~# iptables -t nat -A V2RAY -d 123.123.123.123 -j RETURN
+
+# Игнорируем адреса локальной сети и любые другие адреса,
+# которые не требуется пропускать через прокси-сервер
 # См. Википедию и RFC5735 для полного списка зарезервированных сетей.
 root@Wrt:~# iptables -t nat -A V2RAY -d 0.0.0.0/8 -j RETURN
 root@Wrt:~# iptables -t nat -A V2RAY -d 10.0.0.0/8 -j RETURN
@@ -66,16 +68,16 @@ root@Wrt:~# iptables -t nat -A V2RAY -d 192.168.0.0/16 -j RETURN
 root@Wrt:~# iptables -t nat -A V2RAY -d 224.0.0.0/4 -j RETURN
 root@Wrt:~# iptables -t nat -A V2RAY -d 240.0.0.0/4 -j RETURN
 
-# Перенаправить на локальный порт Dokodemo-door
+# Всё остальное перенаправляем на локальный порт Dokodemo-door
 root@Wrt:~# iptables -t nat -A V2RAY -p tcp -j REDIRECT --to-ports 12345
 
-# Добавить правила для UDP
+# Добавляем правила для UDP
 root@Wrt:~# ip route add local default dev lo table 100
 root@Wrt:~# ip rule add fwmark 1 lookup 100
 root@Wrt:~# iptables -t mangle -A V2RAY -p udp --dport 53 -j TPROXY --on-port 12345 --tproxy-mark 0x01/0x01
 root@Wrt:~# iptables -t mangle -A V2RAY_MARK -p udp --dport 53 -j MARK --set-mark 1
 
-# Применить правила
+# Применяем правила
 root@Wrt:~# iptables -t nat -A OUTPUT -p tcp -j V2RAY
 root@Wrt:~# iptables -t mangle -A PREROUTING -j V2RAY
 root@Wrt:~# iptables -t mangle -A OUTPUT -j V2RAY_MARK
