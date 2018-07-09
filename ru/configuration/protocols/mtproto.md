@@ -26,9 +26,9 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 * `users`: Массив пользователей. **На данный момент поддерживается только первый пользователь**. Каждый пользователь имеет следующую конфигурацию: 
   * `email`: Электронная почта пользователя. Используется для сбора статистики. См. [ Статистика ](../stats.md).
   * ` userLevel `: Пользовательский уровень.
-  * `secret`: User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
+  * `secret`: Секрет пользователя. В Telegram секрет пользователя должен быть длиной 32 символа и содержать только символы ` 0 ` — ` 9 `, и ` a ` — ` f `.
 
-## Outbound configuration {#outbound}
+## Конфигурация исходящего соединения {#outbound}
 
 ```javascript
 {
