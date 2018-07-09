@@ -1,11 +1,11 @@
 # VMess
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) это протокол для шифрованной передачи информации. Он включает в себя входящий и исходящий прокси.
 
-* Name: vmess
-* Type: Inbound / Outbound
+* Наименование: vmess
+* Тип: входящий / исходящий
 
-## Outbound Proxy Configuration
+## Конфигурация прокси для исходящего соединения
 
 ```javascript
 {
@@ -26,20 +26,20 @@
 }
 ```
 
-Where:
+Где:
 
-* `vnext`: An array, where each entry is a remote server 
-  * `address`: Server address, may be IPv4, IPv6 or domain name.
-  * `port`: Server port
-  * `users`: An array where each entry is an VMess user 
-    * `id`: User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32.
-    * `level`: User level. See [Policy](../Policy.md) for more detail.
-    * `security`: Encryption method. Options are: 
+* `vnext`: Массив, где каждая запись является удаленным сервером 
+  * ` address `: Адрес сервера, может быть IPv4, IPv6 или доменное имя
+  * `port`: Порт сервера
+  * `users`: Массив, в котором каждая запись является пользователем VMess 
+    * ` id ` : Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+    * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 32.
+    * ` userLevel `: Пользовательский уровень. См. [локальная политика](../Policy.md).
+    * `security`: Метод шифрования. Возможные варианты: 
       * `"aes-128-cfb"`
-      * `"aes-128-gcm"`: Recommended for PC.
-      * `"chacha20-poly1305"`: Recommended for mobile.
-      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64 and S390x, or `chacha20-poly1305` otherwise.
+      * `"aes-128-gcm"`: Рекомендуется для ПК.
+      * ` "chacha20-poly1305" `: Рекомендуется для мобильных устройств.
+      * ` "auto" `: Значение по умолчанию. Use `aes-128-gcm` on AMD64 and S390x, or `chacha20-poly1305` otherwise.
       * `"none"`: Traffic is not encrypted at all.
 
 ## Inbound Proxy Configuration
