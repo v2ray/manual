@@ -2,7 +2,7 @@
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html)
 
-[Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
+Протокол [Shadowsocks](https://www.shadowsocks.org/) поддерживает входящие и исходящие соединения.
 
 Compatibility with official version:
 
