@@ -1,6 +1,6 @@
 # Freedom
 
-![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html)
+[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/freedom.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/freedom.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/freedom.html)
 
 Freedom ist ein Protokoll für ausgehende Verbindungen. Es übergibt alle TCP- oder UDP-Verbindungen an ihre Ziele.
 

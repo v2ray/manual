@@ -1,6 +1,6 @@
 # HTTP
 
-![Английский](../../resources/englishc.svg) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html)
+[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/http.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/http.html)
 
 HTTP - это протокол для входящих соединений. Он совместим с HTTP 1.1.
 

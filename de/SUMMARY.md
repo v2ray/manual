@@ -11,6 +11,8 @@
     * [Telegram](welcome/tg.md)
     * [Private Communication](welcome/pgp.md)
   * [License](welcome/license.md)
+  * [Blog&#8618;](https://steemit.com/@v2ray)
+  * [Translate&#8618;](https://crowdin.com/project/v2ray)
 * [Aufbau](configuration/README.md) 
   * [Überblick](configuration/overview.md)
   * [Protokolle](configuration/protocols.md) 
