@@ -35,9 +35,9 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 }
 ```
 
-## Sample {#sample}
+## Пример {#sample}
 
-MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
+MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Here is an incomplete sample.
 
 Inbound:
 
