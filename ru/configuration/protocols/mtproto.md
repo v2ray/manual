@@ -1,10 +1,12 @@
 # MTProto
 
-MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
+[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/mtproto.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/mtproto.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/mtproto.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/mtproto.html)
 
-**На данный момент V2Ray поддерживает только IPv4 адрес сервера Telegram.**
+MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
 
-Описание протокола:
+**For now V2Ray only supports IPv4 address of Telegram server.**
+
+Protocol description:
 
 * Название: mtproto
 * Тип: входящий / исходящий
@@ -21,7 +23,7 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 }
 ```
 
-Где:
+Where:
 
 * `users`: Массив пользователей. **На данный момент поддерживается только первый пользователь**. Каждый пользователь имеет следующую конфигурацию: 
   * `email`: Электронная почта пользователя. Используется для сбора статистики. См. [ Статистика ](../stats.md).
@@ -37,9 +39,9 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 
 ## Пример {#sample}
 
-MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Вот неполный образец.
+MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
 
-Входящее соединение:
+Inbound:
 
 ```javascript
 {
@@ -52,7 +54,7 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Исходящее соединение:
+Outbound:
 
 ```javascript
 {
@@ -62,7 +64,7 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Маршрутизация:
+Routing:
 
 ```javascript
 {
@@ -72,7 +74,7 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Конфигурируйте приложение Telegram для подключения к порту 443 на этом устройстве.
+The configure your Telegram app to connect to 443 port on this machine.
 
 ## Советы {#tips}
 
