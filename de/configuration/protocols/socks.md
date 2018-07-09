@@ -1,6 +1,6 @@
 # Socken
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/socks.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/socks.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/socks.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/socks.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/socks.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/socks.html)
 
 Socks ist eine Implementierung des Standard-SOCKS-Protokolls, kompatibel mit [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a und [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
