@@ -28,21 +28,21 @@
 
 Где:
 
-* `vnext`: Массив, где каждая запись является удаленным сервером 
-  * ` address `: Адрес сервера, может быть IPv4, IPv6 или доменное имя
-  * `port`: Порт сервера
-  * `users`: Массив, в котором каждая запись является пользователем VMess 
-    * ` id ` : Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+* `vnext`: Массив, где каждая запись является удаленным сервером. 
+  * ` address `: Адрес сервера, может быть IPv4, IPv6 или доменное имя.
+  * `port`: Порт сервера.
+  * `users`: Массив, в котором каждая запись является пользователем VMess. 
+    * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 32.
     * ` userLevel `: Пользовательский уровень. См. [локальная политика](../Policy.md).
     * `security`: Метод шифрования. Возможные варианты: 
       * `"aes-128-cfb"`
       * `"aes-128-gcm"`: Рекомендуется для ПК.
       * ` "chacha20-poly1305" `: Рекомендуется для мобильных устройств.
-      * ` "auto" `: Значение по умолчанию. Use `aes-128-gcm` on AMD64 and S390x, or `chacha20-poly1305` otherwise.
-      * `"none"`: Traffic is not encrypted at all.
+      * ` "auto" `: Значение по умолчанию. Используйте ` aes-128-gcm ` на AMD64 и S390x, или ` chacha20-poly1305 ` в противном случае.
+      * ` "none" `: Не использовать шифрование.
 
-## Inbound Proxy Configuration
+## Конфигурация прокси для входящего соединения
 
 ```javascript
 {
@@ -65,13 +65,13 @@
 }
 ```
 
-Where:
+Где:
 
-* `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
-  * Each client contains: 
-    * `id`: User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `level`: User level. See [Policy](../policy.md) for its usage.
-    * `alterId`: Number of alternative IDs. Same as in Inbound. Value must be the same as connecting clients.
+* `clients`: Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта. 
+  * Каждый клиент содержит: 
+    * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    * ` userLevel `: Пользовательский уровень. См. [Локальная политика](../policy.md).
+    * ` alterId `: Число альтернативных идентификаторов. То же, что и в конфигурации входящего соединения. Value must be the same as connecting clients.
     * `email`: Email address to identify users.
 * `detour`: Optional feature to suggest client to take a detour. 
   * `to`: The tag of an inbound proxy. See [Overview](../02_protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
