@@ -19,64 +19,10 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 
 ## 传统方式 {#usual-way}
 
-捐赠金额：<input id="damount" type="number" min="1" step="any" value="25" />美元
+* [Paypal transfer](https://www.paypal.me/ProjectV2Ray/25)
+* [Paypal with credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
 \* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义，对于这类捐赠会直接发起退款。
-
-<!--
-<script src="https://js.stripe.com/v3/"></script>
--->
-<script>
-function getAmount() {
-    var e = document.getElementById('damount');
-    return e.value;
-}
-
-function doPaypal(event) {
-  event.preventDefault();
-  document.getElementById('paypalamount').value = getAmount();
-  document.getElementById('paypalform').submit();
-}
-
-function doPaypalMe(event) {
-  event.preventDefault();
-  document.location.href='https://www.paypal.me/ProjectV2Ray/' + getAmount();
-}
-
-// function doStripe(event) {
-//   event.preventDefault();
-//   var amt = parseInt(getAmount(), 10);
-//   if (!amt) {
-//     amt = 25;
-//   }
-//   amt = amt * 85;
-//   var stripe = Stripe('pk_live_gnBpo8a9p6mluv62soVQtjic');
-//   stripe.createSource({
-//     type: 'alipay',
-//     amount: amt,
-//     currency: 'eur',
-//     redirect: {
-//         return_url: 'https://www.v2ray.com/chapter_00/02_donate.html'
-//     },
-//     }).then(function(result) {
-//       console.log(result);
-//       var src = result.source;
-//       if (src && src.redirect && src.redirect.url) {
-//         document.location.href=src.redirect.url;
-//       }
-//     });
-// }
-
-</script>
-
-支付方式：<input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="信用卡" onclick="doPaypal(event);" />
-
-<form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input id="paypalamount" type="hidden" name="amount" value="25">
-<input type="hidden" name="currency_code" value="usd">
-<input type="hidden" name="hosted_button_id" value="4TU3UKYANT2WY">
-</form>
 
 ## 极客方式 {#crypto}
 

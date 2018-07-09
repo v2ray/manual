@@ -1,6 +1,6 @@
 # Donation
 
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Translate][7]][8]
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
 
 [1]: ../resources/english.svg
 [2]: https://www.v2ray.com/en/welcome/donate.html
@@ -8,8 +8,8 @@
 [4]: https://www.v2ray.com/chapter_00/02_donate.html
 [5]: ../resources/german.svg
 [6]: https://www.v2ray.com/de/welcome/donate.html
-[7]: ../resources/lang.svg
-[8]: https://crowdin.com/project/v2ray
+[7]: ../resources/russian.svg
+[8]: https://www.v2ray.com/ru/welcome/donate.html
 
 Project V is a nonprofit project. The source code and program can be used freely under MIT licence. If you like this project, you may buy us a cup of coffee.
 
@@ -21,37 +21,10 @@ Notes:
 
 ## The Usual Way {#usual-way}
 
-Amount: <input id="damount" type="number" min="1" step="any" value="25" />USD
+* [Paypal transfer](https://www.paypal.me/ProjectV2Ray/25)
+* [Paypal with credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
-\* Donations that less than 1 USD may be refunded due to high service fees, and will not be listed in the sponsor list below.
-
-<script>
-function getAmount() {
-    var e = document.getElementById('damount');
-    return e.value;
-}
-
-function doPaypal(event) {
-  event.preventDefault();
-  document.getElementById('paypalamount').value = getAmount();
-  document.getElementById('paypalform').submit();
-}
-
-function doPaypalMe(event) {
-  event.preventDefault();
-  document.location.href='https://www.paypal.me/ProjectV2Ray/' + getAmount();
-}
-
-</script>
-
-Donate via: <input type="button" value="Paypal" onclick="doPaypalMe(event);" /> <input type="button" value="Credit Card" onclick="doPaypal(event);" />
-
-<form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input id="paypalamount" type="hidden" name="amount" value="25">
-<input type="hidden" name="currency_code" value="usd">
-<input type="hidden" name="hosted_button_id" value="4TU3UKYANT2WY">
-</form>
+Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
 
 ## Cryptocurrency {#crypto}
 
