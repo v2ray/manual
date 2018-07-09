@@ -2,11 +2,11 @@
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html)
 
-HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
+HTTP - это протокол для входящих соединений. Он совместим с HTTP 1.1.
 
-* Name: http
-* Type: Inbound
-* Configuration:
+* Название: http
+* Тип: входящий
+* Конфигурация:
 
 ```javascript
 {
@@ -21,9 +21,9 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 }
 ```
 
-Where:
+Где:
 
-* `accounts`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
+* `accounts`: Массив, в котором каждая запись является учетной записью. Имя пользователя указывается через `"user"`, а пароль через `"pass"`. Значения по умолчанию пустые. 
   * If `accounts` is not empty, HTTP uses Basic Authentication for user verification.
 * `allowTransparent`: If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.
 * `userLevel`: User level. All connections share this level.
