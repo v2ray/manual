@@ -2,7 +2,7 @@
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html)
 
-Freedom - это протокол для исходящих соединений. It passes all TCP or UDP connection to their destinations.
+Freedom - это протокол для исходящих соединений. Он передает все TCP или UDP соединение на указанные адреса.
 
 * Название: freedom
 * Тип: исходящий
