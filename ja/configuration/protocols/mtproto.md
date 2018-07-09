@@ -1,5 +1,7 @@
 # MTProto
 
+[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/mtproto.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/mtproto.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/mtproto.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/mtproto.html)
+
 MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
 
 **For now V2Ray only supports IPv4 address of Telegram server.**
