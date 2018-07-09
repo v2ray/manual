@@ -4,13 +4,13 @@
 
 Протокол [Shadowsocks](https://www.shadowsocks.org/) поддерживает входящие и исходящие соединения.
 
-Compatibility with official version:
+Совместим с официальной версией:
 
-* Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
-  * Client may choose to turn on or off.
-  * Server may choose to enable, disable or auto.
-* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
+* Поддерживает как TCP, так и UDP соединения. UDP может быть отключен.
+* Поддержка [ OTA ](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html). 
+  * Клиент может отключать и включать поддержку при необходимости.
+  * Сервер может включит, отключить поддержку или делать это автоматически.
+* Методы шифрования (методы шифрования [AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) добавлены в V2Ray 3.0): 
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
@@ -18,15 +18,15 @@ Compatibility with official version:
   * aes-256-gcm
   * aes-128-gcm
   * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
-* Plugins： 
-  * Support obfs through standalone mode.
+* Плагины: 
+  * Поддержка obfs через автономный режим.
 
-Info:
+Информация:
 
-* Name: shadowsocks
-* Type: Inbound / Outbound
+* Название: shadowsocks
+* Тип: входящий / исходящий
 
-## Inbound proxy configuration
+## Конфигурация прокси для входящего соединения
 
 ```javascript
 {
@@ -40,17 +40,17 @@ Info:
 }
 ```
 
-Where:
+Где:
 
-* `email`: Email address. Used for user identification.
-* `method`: Encryption method. No default value. Options are: 
+* `email`: Адрес электронной почты. Используется для идентификации пользователя.
+* `method`: Метод шифрования. Значение по умолчанию не установлено. Возможные варианты: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
+  * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
 * `password`: Password. Can be any string.
 * `udp` (Deprecated, use `network`): `true` or `false`, whether or not to enable UDP. Default to `false`.
 * `level`: User level. Default to `0`. See [Policy](../policy.md).
