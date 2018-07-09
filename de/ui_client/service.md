@@ -10,8 +10,8 @@
 ## VPN
 
 * [BabyDriver](http://babydriver.me/): Unterstützt V2Ray. Gutscheincode: bcb518
-* [喵 帕斯](https://xn--i2ru8q2qg.com): V2Ray-Unterstützung (Beta)
-* [Lanan](https://lanan.net/): V2Ray based VPN service. Coupon code: v2ray
+* [喵帕斯](https://xn--i2ru8q2qg.com/): V2Ray support (beta)
+* [Lanan](https://xn--sjt174g.com/): V2Ray based VPN service. Coupon code: v2ray
 
 ## Domänen
 

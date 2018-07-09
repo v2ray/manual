@@ -1,6 +1,6 @@
 # API
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/api.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/api.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/api.html)
 
 V2Ray bietet eine API für den Remotezugriff. Diese APIs basieren auf [GRPC](https://grpc.io/).
 
