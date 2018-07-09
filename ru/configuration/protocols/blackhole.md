@@ -1,4 +1,4 @@
-# Протокол Backhole
+# Backhole
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html)
 
