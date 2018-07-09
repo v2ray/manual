@@ -71,10 +71,10 @@
   * Каждый клиент содержит: 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` userLevel `: Пользовательский уровень. См. [Локальная политика](../policy.md).
-    * ` alterId `: Число альтернативных идентификаторов. То же, что и в конфигурации входящего соединения. Value must be the same as connecting clients.
-    * `email`: Email address to identify users.
-* `detour`: Optional feature to suggest client to take a detour. 
-  * `to`: The tag of an inbound proxy. See [Overview](../02_protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
+    * ` alterId `: Число альтернативных идентификаторов. То же, что и в конфигурации входящего соединения. Значение должно быть таким же, как у подключенных клиентов.
+    * `email`: Адрес электронной почты для идентификации пользователя.
+* `detour`: Дополнительная функция, чтобы предложить клиенту совершить обход. 
+  * ` to `: Тег входящего прокси. См. [ Обзор ](../02_protocols.md). Если сконфигурировано, VMess предложит клиенту использовать обход для дальнейших соединений.
 * `default`: Optional default client configuration. Usually used in detour proxy. 
   * `level`: User level.
   * `alterId`: Number of alternative IDs. Default value 64.
