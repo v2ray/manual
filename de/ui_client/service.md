@@ -1,6 +1,6 @@
 # Online Dienste
 
-![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/ui_client/service.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/service.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/service.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/service.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/service.html)
 
 ## V2Ray bezogen
 
