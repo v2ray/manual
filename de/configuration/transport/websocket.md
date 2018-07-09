@@ -1,6 +1,6 @@
 # WebSocket
 
-![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html)
+[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/websocket.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/websocket.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/websocket.html)
 
 Verwenden Sie den Standard-WebSocket, um Daten zu transportieren. Websocket-Verbindungen können von einem HTTP-Server wie Nginx weitergeleitet werden.
 
