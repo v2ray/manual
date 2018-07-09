@@ -37,9 +37,9 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 
 ## Пример {#sample}
 
-MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Here is an incomplete sample.
+MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Вот неполный образец.
 
-Inbound:
+Входящее соединение:
 
 ```javascript
 {
@@ -52,7 +52,7 @@ Inbound:
 }
 ```
 
-Outbound:
+Исходящее соединение:
 
 ```javascript
 {
@@ -62,7 +62,7 @@ Outbound:
 }
 ```
 
-Routing:
+Маршрутизация:
 
 ```javascript
 {
@@ -72,8 +72,8 @@ Routing:
 }
 ```
 
-The configure your Telegram app to connect to 443 port on this machine.
+Конфигурируйте приложение Telegram для подключения к порту 443 на этом устройстве.
 
-## Tips {#tips}
+## Советы {#tips}
 
-* Use this command to generate MTProto secret: `openssl rand -hex 16`.
+* Используйте эту команду для генерации секрета MTProto: ` openssl rand -hex 16 `.
