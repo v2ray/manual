@@ -51,4 +51,14 @@
   * [mKCP](chapter_03/kcp.md)
   * [传出代理](chapter_03/outboundproxy.md)
   * [速度测试](chapter_03/speed.md)
-* [开发人员手册&#8618;](https://www.v2ray.com/eng/index.html)
+* 开发人员手册
+  * [介绍](developer/intro/README.md)
+    * [加入组织](developer/intro/org.md)
+    * [开发计划](developer/intro/roadmap.md)
+    * [开发指引](developer/intro/guide.md)
+    * [核心设计](developer/intro/design.md)
+    * [编译源文件](developer/intro/compile.md)
+  * 协议细节
+    * [VMess 协议](developer/protocols/vmess.md)
+    * [mKCP 协议](developer/protocols/mkcp.md)
+    * [Mux.Cool](developer/protocols/muxcool.md)

@@ -34,8 +34,6 @@ build_dir zh_cn
 build_dir en
 build_dir de
 build_dir ru
-build_dir eng_zh_cn
-build_dir eng_en
 
 TARGET_DIR=_v2ray_com
 
@@ -49,10 +47,6 @@ mkdir ${TARGET_DIR}/de/
 cp -r ./de/_book/* ${TARGET_DIR}/de/
 mkdir ${TARGET_DIR}/ru/
 cp -r ./ru/_book/* ${TARGET_DIR}/ru/
-mkdir ${TARGET_DIR}/eng/
-cp -r ./eng_zh_cn/_book/* ${TARGET_DIR}/eng/
-mkdir ${TARGET_DIR}/eng_en/
-cp -r ./eng_en/_book/* ${TARGET_DIR}/eng_en/
 cp -r ./_dev/* ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
