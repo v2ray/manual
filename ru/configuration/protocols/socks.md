@@ -2,12 +2,12 @@
 
 ![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html)
 
-Socks is an implementation of standard SOCKS protocol, compatible with [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a and [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
+Socks - это реализация стандартного протокола SOCKS, совместимого с [ Socks 4 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4а и [ Socks 5 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
-* Name: socks
-* Type: Inbound / Outbound
+* Наименование: socks
+* Тип: входящий / исходящий
 
-## Outbound Proxy Configuration
+## Конфигурация прокси для исходящего соединения
 
 ```javascript
 {
@@ -25,22 +25,22 @@ Socks is an implementation of standard SOCKS protocol, compatible with [Socks 4]
 }
 ```
 
-Where:
+Где:
 
-* `servers`: Socks server list, in which each entry has: 
-  * `address`: Server address
-  * `port`: Server port
-  * `users`: List of user accounts: 
-    * `user`: Username
-    * `pass`: Password
-    * `level`: User level.
+* `servers`: Список socks серверов, в котором каждая запись это: 
+  * `address`: Адрес сервера
+  * `port`: Порт сервера
+  * `users`: Список учетных записей пользователей: 
+    * `user`: Логин
+    * `pass`: Пароль
+    * ` userLevel `: Пользовательский уровень.
 
-Notice:
+Замечание:
 
-* When user list is not empty, socks will performance user authentication with remote server, using a random user.
-* Only supports SOCKS5 servers.
+* Если список пользователей не пустой, то socks будет использовать случайного пользователя для подключения к сервера.
+* Поддерживаются только SOCKS5 сервера.
 
-## Inbound Proxy Configuration
+## Конфигурация прокси для входящего соединения
 
 ```javascript
 {
@@ -57,9 +57,9 @@ Notice:
 }
 ```
 
-Where:
+Где:
 
-* `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
+* `auth`: Метод аутентификации socks. Значение по умолчанию: `noauth`. Возможные варианты: 
   * `"noauth"`: Anonymous.
   * `"password"`: User and password [RFC 1929](https://tools.ietf.org/html/rfc1929)
 * `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
