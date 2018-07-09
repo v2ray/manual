@@ -4,7 +4,7 @@
 
 Project V is a set of tools to help you build your own privacy network over internet.
 
-## Introduction
+## 紹介
 
 Project V provides a single core with various GUI programs. The core, V2Ray, is for network connection, routing and data processing, while GUI programs are for user friendly experience.
 
