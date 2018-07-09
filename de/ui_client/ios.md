@@ -1,6 +1,6 @@
 # iOS-Client
 
-![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/ios.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/ios.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/ios.html)
 
 ## Kitsunebi
 

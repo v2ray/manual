@@ -1,6 +1,6 @@
 # Multiplexen
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/mux.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/mux.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/mux.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/mux.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/mux.html)
 
 Multiplexing, oder Mux, verwendet eine physische TCP-Verbindung für mehrere virtuelle TCP-Verbindungen. Weitere Details zur Implementierung finden Sie unter [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html).
 

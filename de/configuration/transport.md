@@ -1,6 +1,6 @@
 # Transporteinstellungen
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/transport.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/05_transport.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/transport.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport.html)
 
 Transporteinstellungen gibt an, wie V2Ray Daten von seinen Peers sendet und empfängt. Die Einstellungen teilen sich in zwei Teile: globale Einstellungen und pro Proxy-Einstellungen. Per-Proxy-Einstellungen gibt an, wie jeder einzelne Proxy seine Daten verarbeitet, während globale Einstellungen für alle Proxies gelten. Normalerweise müssen die eingehenden und ausgehenden Proxies zwischen dem verbindenden Peer die gleichen Transporteinstellungen haben. Wenn ein Proxy keine Transporteinstellungen hat, gelten die globalen Einstellungen.
 

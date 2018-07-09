@@ -1,6 +1,6 @@
 # Configuration
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/index.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/index.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/index.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/index.html)
 
 V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
 

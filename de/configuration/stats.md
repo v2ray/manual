@@ -1,6 +1,6 @@
 # Statistiken
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/stats.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/stats.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/stats.html)
 
 V2Ray bietet einige Informationen über seine Interna.
 
