@@ -1,6 +1,15 @@
 # 下载安装
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6] [![Translate][7]][8]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/install.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/welcome/install.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/welcome/install.html
+[7]: ../resources/lang.svg
+[8]: https://crowdin.com/project/v2ray
 
 ## 平台支持 {#platform}
 

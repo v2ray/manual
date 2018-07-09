@@ -1,6 +1,15 @@
 # 新手上路
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6] [![Translate][7]][8]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/start.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/welcome/start.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/welcome/start.html
+[7]: ../resources/lang.svg
+[8]: https://crowdin.com/project/v2ray
 
 在下载并安装了 V2Ray 之后，你需要对它进行一下配置。这里介绍一下简单的配置方式，只是为了演示，如需配置更复杂的功能，请参考后续的[配置文件说明](../chapter_02/01_overview.md)。
 

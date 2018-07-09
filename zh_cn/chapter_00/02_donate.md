@@ -1,6 +1,15 @@
 # 资助 V2Ray 发展
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6] [![Translate][7]][8]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/donate.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/welcome/donate.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/welcome/donate.html
+[7]: ../resources/lang.svg
+[8]: https://crowdin.com/project/v2ray
 
 Project V 是一个非营利项目，它的所有代码均公开，软件可以自由使用，不受限制。如果您喜爱本项目，可以通过下面的方式请作者喝一杯咖啡。
 
@@ -14,7 +23,7 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 
 捐赠金额：<input id="damount" type="number" min="1" step="any" value="25" />美元
 
-\* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义，对于这类捐赠会直接发起退款，且不会列在捐款人列表中。
+\* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义，对于这类捐赠会直接发起退款。
 
 <!--
 <script src="https://js.stripe.com/v3/"></script>
