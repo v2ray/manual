@@ -1,6 +1,6 @@
 # Mac OS X
 
-![Englisch](../resources/english.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/ui_client/osx.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/osx.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/osx.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/osx.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/osx.html)
 
 ## V2RayX
 
