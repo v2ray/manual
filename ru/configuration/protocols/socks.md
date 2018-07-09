@@ -1,6 +1,6 @@
 # Socks
 
-![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html)
+![Английский](../../resources/englishc.svg) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html)
 
 Socks - это реализация стандартного протокола SOCKS, совместимого с [ Socks 4 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4а и [ Socks 5 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
@@ -60,10 +60,10 @@ Socks - это реализация стандартного протокола 
 Где:
 
 * `auth`: Метод аутентификации socks. Значение по умолчанию: `noauth`. Возможные варианты: 
-  * `"noauth"`: Anonymous.
-  * `"password"`: User and password [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
-  * Only works when `auth` is `"password"`
-* `udp`: `true` or `false` to enable UDP. Default to false.
-* `ip`: When UDP is enabled, this IP address receives UDP packets from client. Default to `"127.0.0.1"`.
-* `userLevel`: User level. All connections share this level.
+  * `noauth`: Анонимная аутентификация
+  * `password`: С использованием логина и пароля [RFC 1929](https://tools.ietf.org/html/rfc1929)
+* `accounts`: Массив, в котором каждая запись содержит ` user` для логина и ` pass ` для пароля. Значения по умолчанию пустые. 
+  * Используется только когда в значении `auth` используется `password`.
+* `udp`: `true` для включения и `false` для выключения UDP. Значение по умолчанию: false.
+* `ip`: Если UDP включен, этот IP адрес принимает пакеты UDP от клиента. Значение по умолчанию: `127.0.0.1`.
+* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень.
