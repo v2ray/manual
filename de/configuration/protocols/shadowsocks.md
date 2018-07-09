@@ -1,6 +1,6 @@
 # Shadowsocks
 
-![Englisch](../../resources/englishc.svg) [![Chinesisch](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/shadowsocks.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 [Shadowsocks](https://www.shadowsocks.org/) Protokoll für ein- und ausgehende Verbindungen.
 
@@ -54,9 +54,11 @@ Where:
 * `Passwort`: Passwort. Kann eine beliebige Zeichenfolge sein.
 * `udp` (Veraltet, benutze `Netzwerk`): `true` oder `false`, ob UDP aktiviert werden soll oder nicht. Standardwert auf `false`.
 * `Stufe`: Benutzerebene. Standard auf `0`. Siehe [Richtlinie](../policy.md).
-* `ota`: `wahr` oder `falsch`, ob OTA aktiviert werden soll oder nicht. Standardeinstellung für den automatischen Modus 
+* `ota`: `true` or `false`, whether or not to enable OTA. 
   * Wenn AEAD verwendet wird, `OTA` hat keine Auswirkung.
-* `Netzwerk` (V2Ray 3.16+): Typ des Netzwerks, entweder `"tcp"`, `"udp"`oder `"tcp, udp"`. Standard auf `"tcp"`.
+  * When this entry is not specified at all, Shadowsocks inbound detects client settings and then act accordingly.
+  * When this is set to `true` (or `false`) but client is set in the other way, Shadowsocks inbound disconnects connection immediately.
+* `network`: Type of network, either `"tcp"`, `"udp"`, or `"tcp,udp"`. Standard auf `"tcp"`.
 
 ## Outbound-Proxy-Konfiguration
 
