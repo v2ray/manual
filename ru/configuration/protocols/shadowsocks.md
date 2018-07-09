@@ -1,6 +1,6 @@
 # Shadowsocks
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/shadowsocks.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/shadowsocks.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 Протокол [Shadowsocks](https://www.shadowsocks.org/) поддерживает входящие и исходящие соединения.
 
@@ -9,7 +9,7 @@
 * Поддерживает как TCP, так и UDP соединения. UDP может быть отключен.
 * Поддержка [ OTA ](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html). 
   * Клиент может отключать и включать поддержку при необходимости.
-  * Сервер может включит, отключить поддержку или делать это автоматически.
+  * Сервер может принудительно включить, отключить поддержку или использовать конфигурация клиента.
 * Методы шифрования (методы шифрования [AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) добавлены в V2Ray 3.0): 
   * aes-256-cfb
   * aes-128-cfb
@@ -54,11 +54,11 @@
 * `password`: Пароль. Может быть любым в форме строки.
 * `udp` (Устарел, используйте `network`): `true` для включения и `false` для выключения UDP. Значение по умолчанию: `false`.
 * ` userLevel `: Пользовательский уровень. Значение по умолчанию: `0`. См. [Локальная политика](../policy.md).
-* `ota`: `true` or `false`, whether or not to enable OTA. 
+* `ota`: `true` для включения и `false` для выключения поддержки OTA. 
   * Когда используется AEAD, значение ` ota ` не используется.
-  * When this entry is not specified at all, Shadowsocks inbound detects client settings and then act accordingly.
-  * When this is set to `true` (or `false`) but client is set in the other way, Shadowsocks inbound disconnects connection immediately.
-* `network`: Type of network, either `"tcp"`, `"udp"`, or `"tcp,udp"`. Значение по умолчанию: `tcp`.
+  * Если значение не установлено, Shadowsocks использует значение, установленное клиентом.
+  * Если установлено `true` или `false`, а при этом у клиента установлено противоположное значение, соединение автоматически разрывается сервером.
+* `network`: Тип сети. `"tcp"`, `"udp"`, или `"tcp,udp"`. Значение по умолчанию: `tcp`.
 
 ## Конфигурация прокси для исходящего соединения
 
