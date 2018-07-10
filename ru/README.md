@@ -1,6 +1,6 @@
 # Project V
 
-[![English](resources/english.svg)](https://www.v2ray.com/en/) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![German](resources/german.svg)](https://www.v2ray.com/de/) [![Russian](resources/russian.svg)](https://www.v2ray.com/ru/) [![Перевод](resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](resources/english.svg)](https://www.v2ray.com/en/) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![German](resources/german.svg)](https://www.v2ray.com/de/) [![Russian](resources/russian.svg)](https://www.v2ray.com/ru/)
 
 Проект V - это набор инструментов для создания собственного защищённого туннеля через Интернет.
 
