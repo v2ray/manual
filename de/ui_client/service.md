@@ -20,6 +20,7 @@
 ## VPS
 
 * [Vultr](https://www.vultr.com/?ref=7269307)
+* [BlueHost](https://www.bluehost.com/track/v2ray/)
 
 ## Kryptowährung
 
