@@ -4,8 +4,6 @@
 
 Project V is a nonprofit project. The source code and program can be used freely under MIT licence. If you like this project, you may buy us a cup of coffee.
 
-Notes:
-
 * The usage of donations will not be published.
 * Your donation has no direct connection to Project V's development and service.
 * Thank you for loving Project V.
