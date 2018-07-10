@@ -1,8 +1,10 @@
 # Обзор настроек
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/overview.html)
 
 V2Ray имеет одинаковую структуру (см. ниже) файлов с настройками как на сервере, так и на клиенте. В отдельных секциях настройки сервера и клиента отличаются.
+
+Below is the top level structure of the configuration. Each section has its own format.
 
 ```javascript
 {
@@ -20,7 +22,7 @@ V2Ray имеет одинаковую структуру (см. ниже) фай
 }
 ```
 
-Где:
+Where:
 
 * `log`: конфигурация журнала. Подробности ниже.
 * `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
@@ -59,7 +61,7 @@ Where:
 
 ## Master Inbound Interface Configurations {#inbound}
 
-Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](02_protocols.md).
+Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
@@ -91,7 +93,7 @@ Where:
 
 ## Master Outbound Interface Configurations {#outbound}
 
-Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](02_protocols.md).
+Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
