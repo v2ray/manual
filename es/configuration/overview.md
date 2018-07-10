@@ -1,8 +1,10 @@
 # Configuration Overview
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/overview.html)
 
 V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
+
+Below is the top level structure of the configuration. Each section has its own format.
 
 ```javascript
 {
@@ -59,7 +61,7 @@ Where:
 
 ## Master Inbound Interface Configurations {#inbound}
 
-Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](02_protocols.md).
+Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
@@ -91,7 +93,7 @@ Where:
 
 ## Master Outbound Interface Configurations {#outbound}
 
-Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](02_protocols.md).
+Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
