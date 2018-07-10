@@ -2,11 +2,13 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/transport.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/05_transport.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/transport.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport.html)
 
-Transporteinstellungen gibt an, wie V2Ray Daten von seinen Peers sendet und empfängt. Die Einstellungen teilen sich in zwei Teile: globale Einstellungen und pro Proxy-Einstellungen. Per-Proxy-Einstellungen gibt an, wie jeder einzelne Proxy seine Daten verarbeitet, während globale Einstellungen für alle Proxies gelten. Normalerweise müssen die eingehenden und ausgehenden Proxies zwischen dem verbindenden Peer die gleichen Transporteinstellungen haben. Wenn ein Proxy keine Transporteinstellungen hat, gelten die globalen Einstellungen.
+Transport is for how V2Ray sends and receives data from its peers. The responsiblity of a transport is to reliably transfer data to a peer. Usually a connection has matching transports on both endpoints. For example, if a V2Ray outbound uses WebSocket as its transport, the inbound it talks to also has to use WebSocket, otherwise a connection can't be established.
+
+The transport settings devides into two parts: global settings and per proxy settings. Per-proxy settings specifies how each individual proxy handles its data, while global settings is for all proxies. Usually the inbound and outbound proxies between the connecting peer must have the same transport settings. When a proxy has no transport settings, the global settings applies.
 
 ## Global Configuration {#global}
 
-Globale Einstellungen befinden sich im Eintrag "Transport" von V2Ray config.
+Global settings is in the "transport" entry of V2Ray config.
 
 ```javascript
 {
@@ -17,7 +19,7 @@ Globale Einstellungen befinden sich im Eintrag "Transport" von V2Ray config.
 }
 ```
 
-Woher:
+Where:
 
 * `tcpSettings`: Einstellungen für [TCP-Transport](transport/tcp.md).
 * `kcpSettings`: Einstellungen für [mKCP Transport](transport/mkcp.md).
@@ -26,7 +28,7 @@ Woher:
 
 ## Per-proxy Configuration {#proxy}
 
-Jeder eingehende und ausgehende Proxy hat möglicherweise eigene Transporteinstellungen. Jeder eingehende, eingehendeDetour-, ausgehende und ausgehendeDetour-Eintrag kann eine `streamSettings` für den Transport haben.
+Each inbound and outbound proxy may has its own transport settings. Each inbound, inboundDetour, outbound and outboundDetour entry may have a `streamSettings` for transport.
 
 ```javascript
 {
@@ -101,7 +103,7 @@ Jeder eingehende und ausgehende Proxy hat möglicherweise eigene Transporteinste
 }
 ```
 
-Woher:
+Where:
 
 * `network`: Netzwerktyp des Stream-Transports. Die Auswahlmöglichkeiten sind `"tcp"`, `"kcp"`, `"ws"`oder `"http"`. Standardwert `"tcp"`.
 * `security`: Art der Sicherheit. Die Auswahlmöglichkeiten sind `"none"` (Standard) für keine zusätzliche Sicherheit oder `"TLS"` für die Verwendung von [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
