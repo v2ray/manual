@@ -9,7 +9,14 @@ Wenn die API aktiviert ist, erstellt V2Ray automatisch einen ausgehenden Proxy, 
 Aufbau:
 
 ```javascript
-{"tag": "api", "Dienste": ["HandlerService", "LoggerService", "StatsService"]}
+{
+  "tag": "api",
+  "services": [
+    "HandlerService",
+    "LoggerService",
+    "StatsService"
+  ]
+}
 ```
 
 Woher:

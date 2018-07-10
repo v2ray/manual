@@ -12,9 +12,9 @@ V2Ray has an internal DNS server which provides DNS relay for other components.
     "baidu.com": "127.0.0.1"
   },
   "servers": [
-      "8.8.8.8",
-      "8.8.4.4",
-      "localhost"
+    "8.8.8.8",
+    "8.8.4.4",
+    "localhost"
   ],
   "clientIp": "1.2.3.4",
 }

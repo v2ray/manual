@@ -10,12 +10,12 @@ When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `t
 
 ```javascript
 {
-    "tag": "api",
-    "services": [
-        "HandlerService",
-        "LoggerService",
-        "StatsService"
-    ]
+  "tag": "api",
+  "services": [
+    "HandlerService",
+    "LoggerService",
+    "StatsService"
+  ]
 }
 ```
 

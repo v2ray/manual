@@ -9,7 +9,22 @@ Local policy manages settings of current V2Ray instance, such as connection time
 Configuration:
 
 ```javascript
-{"levels": {"0": {"handshake": 4, "connIdle": 300, "uplinkOnly": 2, "downlinkOnly": 5, "statsUserUplink": false, "statsUserDownlink": false}}, " system ": {" statsInboundUplink ": false," statsInboundDownlink ": false}}
+{
+  "levels": {
+    "0": {
+      "handshake": 4,
+      "connIdle": 300,
+      "uplinkOnly": 2,
+      "downlinkOnly": 5,
+      "statsUserUplink": false,
+      "statsUserDownlink": false
+    }
+  },
+  "system": {
+    "statsInboundUplink": false,
+    "statsInboundDownlink": false
+  }
+}
 ```
 
 Where:

@@ -1,8 +1,10 @@
 # Konfigurationsübersicht
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/overview.html)
 
 V2Ray teilt die gleiche Struktur der Konfiguration zwischen der Serverseite und der Clientseite wie unten gezeigt. Server- und Client-Konfigurationen unterscheiden sich in bestimmten Abschnitten.
+
+Below is the top level structure of the configuration. Each section has its own format.
 
 ```javascript
 {
@@ -44,7 +46,7 @@ Woher:
 }
 ```
 
-Woher:
+Where:
 
 * `Zugriff`: Pfad des Zugriffsprotokolls, verfügbare Beispiele sind: 
   * Ein gültiger Dateipfad, z. B. `"/tmp/v2ray/_access.log"`(Linux) oder `"C: \ Temp \ v2ray \ _access.log"`(Windows);
@@ -59,7 +61,7 @@ Woher:
 
 ## Master Inbound Interface Configurations {#inbound}
 
-Die Master-Eingangsschnittstelle wird verwendet, um Daten von Clients, Browsern oder anderen übergeordneten Proxy-Servern zu empfangen. Die verfügbaren Protokolle sind unter [Protokolle](02_protocols.md).
+Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
@@ -73,7 +75,7 @@ Die Master-Eingangsschnittstelle wird verwendet, um Daten von Clients, Browsern 
 }
 ```
 
-Woher:
+Where:
 
 * `Port`: Abhörport.
 * `Hafen`: Port zu hören von. Akzeptierte Formate sind: 
@@ -91,7 +93,7 @@ Woher:
 
 ## Master Outbound Interface Configurations {#outbound}
 
-Die Master-Ausgangsschnittstelle wird verwendet, um Daten an entfernte Server oder den nächsten Proxy-Server zu senden. Verfügbare Protokolle sind unter [Protokolle](02_protocols.md)aufgelistet.
+Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
@@ -107,7 +109,7 @@ Die Master-Ausgangsschnittstelle wird verwendet, um Daten an entfernte Server od
 }
 ```
 
-Woher:
+Where:
 
 * `sendThrough`: Die Netzwerkschnittstelle (IP) zum Senden von Daten, verfügbar, wenn mehrere IPs angezeigt werden, der Standardwert ist `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
@@ -120,7 +122,7 @@ Woher:
 
 ## Extra Inbound Interfaces Configurations {#inbound-detour}
 
-Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für zusätzliche eingehende Schnittstellen enthält, die jeweils die folgende Struktur verwenden:
+This section is an array contains multiple extra inbound interfaces' configurations, each are using the structure like below:
 
 ```javascript
 {
@@ -139,7 +141,7 @@ Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für zusätzliche ei
 }
 ```
 
-Woher:
+Where:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `Hafen`: Port zu hören von. Akzeptierte Formate sind: 
@@ -160,7 +162,7 @@ Woher:
 
 ### Extra Outbound Interfaces Configurations {#outbound-detour}
 
-Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für extra ausgehende Schnittstellen enthält, die jeweils die folgende Struktur verwenden:
+This section is an array contains multiple extra outbound interfaces' configurations, each are using the structure like below:
 
 ```javascript
 {
@@ -176,7 +178,7 @@ Dieser Abschnitt ist ein Array, das mehrere Konfigurationen für extra ausgehend
 }
 ```
 
-Woher:
+Where:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `sendThrough`: Die Netzwerkschnittstelle (IP) zum Senden von Daten, verfügbar, wenn mehrere IPs angezeigt werden, der Standardwert ist `"0.0.0.0"`.
