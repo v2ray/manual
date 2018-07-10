@@ -11,11 +11,11 @@
 [7]: ../resources/russian.svg
 [8]: https://www.v2ray.com/ru/welcome/donate.html
 
-Project V is a nonprofit project. The source code and program can be used freely under MIT licence. If you like this project, you may buy us a cup of coffee.
+Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
 
-* The usage of donations will not be published.
+* The usage of donations will not be disclosed.
 * Your donation has no direct connection to Project V's development and service.
-* Thank you for loving Project V.
+* Thank you for loving and supporting Project V.
 
 ## The Usual Way {#usual-way}
 
