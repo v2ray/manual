@@ -11,8 +11,6 @@
 
 Project V 是一个非营利项目，它的所有代码均公开，软件可以自由使用，不受限制。如果您喜爱本项目，可以通过下面的方式请作者喝一杯咖啡。
 
-一些说明：
-
 * 所有捐款的用途将不被公开；
 * 您的捐款是对 Project V 的无偿贡献，和 Project V 提供的技术和服务没有直接关联；
 * 感谢您对 Project V 的热爱。
@@ -22,7 +20,7 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 * [Paypal transfer](https://www.paypal.me/ProjectV2Ray/25)
 * [Paypal with credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
-\* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义，对于这类捐赠会直接发起退款。
+\* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义。
 
 ## 极客方式 {#crypto}
 
