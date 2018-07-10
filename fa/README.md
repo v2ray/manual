@@ -1,6 +1,6 @@
 # Project V
 
-[![English](resources/english.svg)](https://www.v2ray.com/en/) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![German](resources/german.svg)](https://www.v2ray.com/de/) [![Russian](resources/russian.svg)](https://www.v2ray.com/ru/) [![Translate](resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](resources/english.svg)](https://www.v2ray.com/en/) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![German](resources/german.svg)](https://www.v2ray.com/de/) [![Russian](resources/russian.svg)](https://www.v2ray.com/ru/)
 
 Project V is a set of tools to help you build your own privacy network over internet.
 
