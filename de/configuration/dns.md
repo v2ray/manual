@@ -7,7 +7,17 @@ V2Ray verfügt über einen internen DNS-Server, der DNS-Relay für andere Kompon
 Aufbau:
 
 ```javascript
-{"Hosts": {"baidu.com": "127.0.0.1"}, "Server": ["8.8.8.8", "8.8.4.4", "localhost"], "clientIp": "1.2.3.4" }
+{
+  "hosts": {
+    "baidu.com": "127.0.0.1"
+  },
+  "servers": [
+    "8.8.8.8",
+    "8.8.4.4",
+    "localhost"
+  ],
+  "clientIp": "1.2.3.4",
+}
 ```
 
 Woher:

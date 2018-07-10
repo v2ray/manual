@@ -2,7 +2,9 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/transport.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/05_transport.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/transport.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport.html)
 
-Transport settings is for how V2Ray sends and receives data from its peers. The settings devides into two parts: global settings and per proxy settings. Per-proxy settings specifies how each individual proxy handles its data, while global settings is for all proxies. Usually the inbound and outbound proxies between the connecting peer must have the same transport settings. When a proxy has no transport settings, the global settings applies.
+Transport is for how V2Ray sends and receives data from its peers. The responsiblity of a transport is to reliably transfer data to a peer. Usually a connection has matching transports on both endpoints. For example, if a V2Ray outbound uses WebSocket as its transport, the inbound it talks to also has to use WebSocket, otherwise a connection can't be established.
+
+The transport settings devides into two parts: global settings and per proxy settings. Per-proxy settings specifies how each individual proxy handles its data, while global settings is for all proxies. Usually the inbound and outbound proxies between the connecting peer must have the same transport settings. When a proxy has no transport settings, the global settings applies.
 
 ## Global Configuration {#global}
 

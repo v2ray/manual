@@ -12,9 +12,9 @@ Configuration:
     "baidu.com": "127.0.0.1"
   },
   "servers": [
-      "8.8.8.8",
-      "8.8.4.4",
-      "localhost"
+    "8.8.8.8",
+    "8.8.4.4",
+    "localhost"
   ],
   "clientIp": "1.2.3.4",
 }
