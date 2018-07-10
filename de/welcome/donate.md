@@ -4,8 +4,6 @@
 
 Projekt V ist ein gemeinnütziges Projekt. Der Quellcode und das Programm können frei unter MIT Lizenz verwendet werden. Wenn Sie dieses Projekt mögen, können Sie uns eine Tasse Kaffee kaufen.
 
-Anmerkungen:
-
 * Die Verwendung von Spenden wird nicht veröffentlicht.
 * Ihre Spende hat keine direkte Verbindung zur Entwicklung und zum Service von Project V.
 * Danke für das liebevolle Projekt V.
