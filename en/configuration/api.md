@@ -19,12 +19,12 @@ Configuration:
 
 ```javascript
 {
-    "tag": "api",
-    "services": [
-        "HandlerService",
-        "LoggerService",
-        "StatsService"
-    ]
+  "tag": "api",
+  "services": [
+    "HandlerService",
+    "LoggerService",
+    "StatsService"
+  ]
 }
 ```
 
