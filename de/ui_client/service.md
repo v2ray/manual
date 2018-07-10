@@ -25,6 +25,7 @@
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Handel Bitcoins offline
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Handel BTC, ETH, BCH, USDT offline.
+* [Binance](https://www.binance.com/?ref=35382451): Trading market of cyrpto currencies.
 
 ## Versuch dein Glück
 
