@@ -2,13 +2,11 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/donate.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/donate.html)
 
-Projekt V ist ein gemeinnütziges Projekt. Der Quellcode und das Programm können frei unter MIT Lizenz verwendet werden. Wenn Sie dieses Projekt mögen, können Sie uns eine Tasse Kaffee kaufen.
+Projekt V ist ein gemeinnütziges Projekt. The source code and program can be used freely (mainly) under MIT licence. Wenn Sie dieses Projekt mögen, können Sie uns eine Tasse Kaffee kaufen.
 
-Anmerkungen:
-
-* Die Verwendung von Spenden wird nicht veröffentlicht.
+* The usage of donations will not be disclosed.
 * Ihre Spende hat keine direkte Verbindung zur Entwicklung und zum Service von Project V.
-* Danke für das liebevolle Projekt V.
+* Thank you for loving and supporting Project V.
 
 ## The Usual Way {#usual-way}
 

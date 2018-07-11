@@ -20,11 +20,13 @@
 ## VPS
 
 * [Vultr](https://www.vultr.com/?ref=7269307)
+* [BlueHost](https://www.bluehost.com/track/v2ray/)
 
 ## Криптовалюта
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Торговля биткоинами в оффлайн
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Торговля BTC, ETH, BCH, USDT в оффлайн.
+* [Binance](https://www.binance.com/?ref=35382451): Trading market of cyrpto currencies.
 
 ## Испытайте свою удачу
 
