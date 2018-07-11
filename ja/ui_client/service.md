@@ -25,8 +25,9 @@
 ## Cryptocurrency
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Trade Bitcoins offline
-* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Trade BTC, ETH, BCH, USDT offline.
-* [Binance](https://www.binance.com/?ref=35382451): Trading market of cyrpto currencies.
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): OTC market to trade BTC, ETH, BCH, USDT.
+* [Binance](https://www.binance.com/?ref=35382451): Trading market for cyrpto currencies.
+* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Trading market for cyrpto currencies.
 
 ## Try Your Luck
 
