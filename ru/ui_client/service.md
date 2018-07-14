@@ -25,8 +25,9 @@
 ## Криптовалюта
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Торговля биткоинами в оффлайн
-* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Торговля BTC, ETH, BCH, USDT в оффлайн.
-* [Binance](https://www.binance.com/?ref=35382451): Trading market of cyrpto currencies.
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): OTC market to trade BTC, ETH, BCH, USDT.
+* [Binance](https://www.binance.com/?ref=35382451): Trading market for cyrpto currencies.
+* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Trading market for cyrpto currencies.
 
 ## Испытайте свою удачу
 
