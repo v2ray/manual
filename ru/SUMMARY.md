@@ -35,6 +35,7 @@
     * [mKCP](configuration/transport/mkcp.md)
     * [WebSocket](configuration/transport/websocket.md)
     * [HTTP/2](configuration/transport/h2.md)
+    * [DomainSocket](configuration/transport/domainsocket.md)
   * [Переменные](configuration/env.md)
 * [Клиенты](ui_client/README.md) 
   * [Windows](ui_client/windows.md)
