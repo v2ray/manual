@@ -15,16 +15,18 @@ Global settings is in the "transport" entry of V2Ray config.
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {}
 }
 ```
 
 Where:
 
-* `tcpSettings`: Einstellungen für [TCP-Transport](transport/tcp.md).
-* `kcpSettings`: Einstellungen für [mKCP Transport](transport/mkcp.md).
-* `wsSettings`: Einstellungen für [WebSocket-Transport](transport/websocket.md).
-* `httpSettings`: Einstellungen für [HTTP/2 Transport](transport/h2.md).
+* `tcpSettings`: Settings for [TCP transport](transport/tcp.md).
+* `kcpSettings`: Settings for [mKCP transport](transport/mkcp.md).
+* `wsSettings`: Settings for [WebSocket transport](transport/websocket.md).
+* `httpSettings`: Settings for [HTTP/2 transport](transport/h2.md).
+* `dsSettings`: Settings for [Domain Socket transport](transport/domainsocket.md).
 
 ## Per-proxy Configuration {#proxy}
 
@@ -99,13 +101,14 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {}
 }
 ```
 
 Where:
 
-* `network`: Netzwerktyp des Stream-Transports. Die Auswahlmöglichkeiten sind `"tcp"`, `"kcp"`, `"ws"`oder `"http"`. Standardwert `"tcp"`.
+* `network`: Netzwerktyp des Stream-Transports. Choices are `"tcp"`, `"kcp"`, `"ws"`, `"http"`, or `"domainsocket"`. Standardwert `"tcp"`.
 * `security`: Art der Sicherheit. Die Auswahlmöglichkeiten sind `"none"` (Standard) für keine zusätzliche Sicherheit oder `"TLS"` für die Verwendung von [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
 * `tlsSettings`: TLS-Einstellungen TLS wird von Golang bereitgestellt. Unterstützung für TLS 1.2 DTLS wird nicht unterstützt. 
   * `servername`: Servername (normalerweise Domäne), der für die TLS-Authentifizierung verwendet wird.
@@ -125,6 +128,7 @@ Where:
 * `kcpSettings`: mKCP-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den mKCP-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 * `wsSettings`: WebSocket-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den WebSocket-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 * `httpSettings`: HTTP / 2-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den HTTP / 2-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
+* `dsSettings`: Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport.
 
 ## Tips {#tips}
 
