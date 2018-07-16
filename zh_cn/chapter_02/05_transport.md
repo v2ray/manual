@@ -22,7 +22,8 @@
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {}
 }
 ```
 
@@ -32,6 +33,7 @@
 * `kcpSettings`: 针对 [mKCP 连接的配置](transport/mkcp.md)。
 * `wsSettings`: 针对 [WebSocket 连接的配置](transport/websocket.md)。
 * `httpSettings`: 针对 [HTTP/2 连接的配置](transport/h2.md)。
+* `dsSettings`: 针于[Domain Socket 连接的配置](transport/domainsocket.md)。
 
 ## 分协议配置 {#perproxy}
 
@@ -106,13 +108,14 @@
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {}
 }
 ```
 
 其中：
 
-* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"`、 "ws"` 或 `http`，默认值为 `"tcp"`；
+* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、`"kcp"`、`"ws"`、`http`或`"domainsocket"`，默认值为 `"tcp"`；
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
   * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
@@ -132,6 +135,7 @@
 * `kcpSettings`: 当前连接的 mKCP 配置，仅当此连接使用 mKCP 时有效。配置内容与上面的全局配置相同。
 * `wsSettings`: 当前连接的 WebSocket 配置，仅当此连接使用 WebSocket 时有效。配置内容与上面的全局配置相同。
 * `httpSettings`: 当前连接的 HTTP/2 配置，仅当此连接使用 HTTP/2 时有效。配置内容与上面的全局配置相同。
+* `dsSettings`: 当前连接的 Domain socket 配置，仅当此连接使用 Domain socket 时有效。配置内容与上面的全局配置相同。
 
 ## 小贴士 {#tip}
 

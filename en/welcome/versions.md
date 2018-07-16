@@ -13,6 +13,10 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.07.20 v3.31
+
+* New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
+
 ## 2018.07.13 v3.30
 
 * Fix an issue that may cause broken connections in mKCP.

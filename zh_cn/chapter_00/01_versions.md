@@ -9,6 +9,10 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
+## 2018.07.20 v3.31
+
+* 新增了 [Domain Socket 传输方式](../chapter_02/transport/domainsocket.md) (感谢 @xiaokangwang)。
+
 ## 2018.07.13 v3.30
 
 * 解决了一个可能会导致 mKCP 断流的问题。
