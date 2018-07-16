@@ -2,6 +2,10 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
+## 2018.07.20 v3.31
+
+* New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
+
 ## 2018.07.13 v3.30
 
 * Fix an issue that may cause broken connections in mKCP.
@@ -55,7 +59,7 @@
 ## 2018.02.23 v3.10
 
 * Log entries now contain session ID to distinguish proxy sessions.
-* Fehlerbehebung.
+* Bug fixes.
 
 ## 2018.02.15 v3.9
 
