@@ -21,5 +21,7 @@ Woher:
 * `domainStrategy`: Strategie für die Domain-Namensauflösung. Optionen sind: 
   * `"AsIs"`: Standard. Beheben Sie den Domänennamen nach System.
   * `"UseIP"`: Use [internal DNS](../dns.md) for domain name resolution.
-* `redirect`: Leite alle Verbindungen zu dieser Adresse um, in der Form `"127.0.0.1:80"` oder `": 1234"`.
+* `redirect`: Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`. 
+  * (V2Ray 3.31+) When address is empty, e.g. `":443"`, Freedom will use the original destination address.
+  * (V2Ray 3.31+) When port is `0`, e.g. `"v2ray.com:0"`, Freedom will use the original port.
 * `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.
