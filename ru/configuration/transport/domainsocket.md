@@ -1,8 +1,8 @@
-# Domain Socket Transport
+# Доставка через сокет домена
 
 [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/domainsocket.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/domainsocket.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/domainsocket.html)
 
-Domain Socket uses standard Unix domain socket to transport data. Domain socket is system interal tranfer channel. It doesn't jam network buffer and may be a bit faster than trasnferring through local loopback network.
+Сокет домена использует стандартный сокет домена Unix для доставки данных. Domain socket is system interal tranfer channel. It doesn't jam network buffer and may be a bit faster than trasnferring through local loopback network.
 
 Domain socket can only be used on platforms that supports Unix domain socket, such as macOS and Linux. It is not available on Windows.
 
