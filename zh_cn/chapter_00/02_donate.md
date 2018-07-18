@@ -19,6 +19,7 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 
 * [Paypal transfer](https://www.paypal.me/ProjectV2Ray/25)
 * [Paypal with credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
+* [Patreon](https://www.patreon.com/v2ray)
 
 \* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义。
 
