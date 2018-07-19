@@ -44,7 +44,7 @@ Where:
   * `port`: Server port
   * `users`: An array where each entry is an VMess user
     * `id`: User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32.
+    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32. Its value must be not larger than the one in corresponding Inbound.
     * `level`: User level. See [Policy](../policy.md) for more detail.
     * `security`: Encryption method. Options are:
       * `"aes-128-cfb"`
@@ -82,7 +82,7 @@ Where:
   * Each client contains:
     * `id`: User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * `level`: User level. See [Policy](../policy.md) for its usage.
-    * `alterId`: Number of alternative IDs. Same as in Inbound. Value must be the same as in client configuration.
+    * `alterId`: Number of alternative IDs. Same as in Outbound.
     * `email`: Email address to identify users.
 * `detour`: Optional feature to suggest client to take a detour.
   * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
@@ -98,3 +98,4 @@ Where:
 * Always use encryption method `"auto"` to stay secure and compatible.
 * VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter.
   * One may install `ntp` service on Linux to automatically adjust system time.
+* You may choose the value of `alterId` at your interest. For daily usage, a value less than `100` is usually enough.

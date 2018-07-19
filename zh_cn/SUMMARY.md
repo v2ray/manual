@@ -46,12 +46,6 @@
   * [iOS](ui_client/ios.md)
   * [Android](ui_client/android.md)
   * [在线服务](ui_client/service.md)
-* [进阶使用](chapter_03/README.md)
-  * [动态端口](chapter_03/00_dynport.md)
-  * [Effective V2Ray](chapter_03/01_effective.md)
-  * [mKCP](chapter_03/kcp.md)
-  * [传出代理](chapter_03/outboundproxy.md)
-  * [速度测试](chapter_03/speed.md)
 * 开发人员手册
   * [介绍](developer/intro/README.md)
     * [加入组织](developer/intro/org.md)
