@@ -32,7 +32,7 @@ At least 32MB free memory.
 Pre-built packages can be found here:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-1. Redistribution: [https://v2ray.com/download](https://v2ray.com/download)
+1. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
 
 All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
