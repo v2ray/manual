@@ -32,8 +32,7 @@ At least 32MB free memory.
 Pre-built packages can be found here:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-1. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
-1. IPFS Re-dist: [https://v2ray.com/download](https://v2ray.com/download)
+1. Redistribution: [https://v2ray.com/download](https://v2ray.com/download)
 
 All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
