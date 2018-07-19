@@ -23,7 +23,7 @@ Mindestens 32 MB freier Speicher.
 Vorgefertigte Pakete finden Sie hier:
 
 1. Github Veröffentlichung: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. Redistribution: <https://v2ray.com/download>
+2. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
 
 Alle Pakete sind im ZIP-Format. Laden Sie entsprechende Pakete herunter und entzippen Sie sie auf Ihrem System.
 
