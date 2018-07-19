@@ -3,6 +3,7 @@
   "title": "Project V Official",
   "plugins" : [
     "-fontsettings",
+    "-search",
     
     "anchors"
   ]

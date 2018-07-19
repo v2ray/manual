@@ -3,6 +3,7 @@
   "title": "Project V 官方网站",
   "plugins" : [
     "-fontsettings",
+    "-search",
     
     "anchors"
   ]
