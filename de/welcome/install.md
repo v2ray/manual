@@ -23,8 +23,7 @@ Mindestens 32 MB freier Speicher.
 Vorgefertigte Pakete finden Sie hier:
 
 1. Github Veröffentlichung: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. IPFS: [/ ipns / QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
-3. IPFS Re-dist: <https://v2ray.com/download>
+2. Redistribution: <https://v2ray.com/download>
 
 Alle Pakete sind im ZIP-Format. Laden Sie entsprechende Pakete herunter und entzippen Sie sie auf Ihrem System.
 
