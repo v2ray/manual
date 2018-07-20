@@ -46,3 +46,11 @@ Where:
 ## Tips {#tips}
 
 * `uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection.
+* mKCP uses UDP protocol. Please make sure your firewall is correctly setup.
+* mKCP sends more traffic for lower latency. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
+
+## Credits {#credits}
+
+* @skywind3000 invented the original KCP protocol and implemented in C.
+* @xtaci re-implement KCP protocol in Go.
+* @xiaokangwang integrated KCP into V2Ray.

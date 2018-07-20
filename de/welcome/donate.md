@@ -12,6 +12,7 @@ Projekt V ist ein gemeinnütziges Projekt. The source code and program can be us
 
 * [Paypal transfer](https://www.paypal.me/ProjectV2Ray/25)
 * [Paypal with credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
+* [Patreon](https://www.patreon.com/v2ray)
 
 Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
 
