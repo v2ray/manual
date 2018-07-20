@@ -80,7 +80,11 @@ Master inbound interface is used to receive data from clients, browsers, or othe
   "settings": {},
   "streamSettings": {},
   "tag": "inbound_tag_name",
-  "domainOverride": ["http", "tls"]
+  "domainOverride": ["http", "tls"],
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
+  }
 }
 ```
 
@@ -99,6 +103,11 @@ Where:
 * `domainOverride`: recognize specific protocols' packets and redirects its request targets.
   * Accepts an array of strings, default value is empty.
   * Available values are `"http"` and `"tls"`.
+  * (V2Ray 3.32+) Deprecated. Use `sniffing`. When `domainOverride` is set but `sniffing` is not set, V2Ray will enable `sniffing` anyway.
+* `sniffing` (V2Ray 3.32+): Try to sniff current connection.
+  * `enabled`: Whether or not to enable sniffing.
+  * `destOverride`: When current connection uses a protocol specified in the list, override its destination by sniff'ed destination.
+    * Available values are `"http"` and `"tls"`.
 
 ## Master Outbound Interface Configurations {#outbound}
 
@@ -146,7 +155,11 @@ This section is an array contains multiple extra inbound interfaces' configurati
   },
   "settings": {},
   "streamSettings": {},
-  "domainOverride": ["http", "tls"]
+  "domainOverride": ["http", "tls"],
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
+  }
 }
 ```
 
@@ -168,6 +181,11 @@ Where:
 * `domainOverride`: recognize specific protocols' packets and redirects its request targets.
   * Accepts an array of strings, default value is empty.
   * Available values are `"http"` and `"tls"`.
+  * (V2Ray 3.32+) Deprecated. Use `sniffing`. When `domainOverride` is set but `sniffing` is not set, V2Ray will enable `sniffing` anyway.
+* `sniffing` (V2Ray 3.32+): Try to sniff current connection.
+  * `enabled`: Whether or not to enable sniffing.
+  * `destOverride`: When current connection uses a protocol specified in the list, override its destination by sniff'ed destination.
+    * Available values are `"http"` and `"tls"`.
 
 ### Extra Outbound Interfaces Configurations {#outbound-detour}
 

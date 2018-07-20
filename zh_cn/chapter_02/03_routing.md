@@ -71,6 +71,7 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
   "inboundTag": [
     "tag-vmess"
   ],
+  "protocol":["http", "tls", "bittorrent"],
   "outboundTag": "direct"
 }
 ```
@@ -97,6 +98,9 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
 * `source`: 一个数组，数组内每一个元素是一个 IP 或 CIDR。当某一元素匹配来源 IP 时，此规则生效。
 * `user`: 一个数组，数组内每一个元素是一个邮箱地址。当某一元素匹配来源用户时，此规则生效。当前 Shadowsocks 和 VMess 支持此规则。
 * `inboundTag`: 一个数组，数组内每一个元素是一个标识。当某一元素匹配传入协议的标识时，此规则生效。
+* `protocol`: 一个数组，数组内每一个元素表示一种协议。当某一个协议匹配当前连接的流量时，此规则生效。
+  * 可选的值有`"http"`、`"tls"`、`"bittorrent"`，均为小写。
+  * 必须开启传入代理中的`sniffing`选项。
 * `outboundTag` 对应一个[额外传出连接配置](02_protocols.md)的标识。
 
 ## 小贴士 {#tips}

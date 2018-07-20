@@ -9,6 +9,11 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
+## 2018.07.27 v3.32
+
+* 现在可以探测 BitTorrent 流量了。
+* 路由配置中新增了`protocol`选项用于按流量类型进行路由选择。
+
 ## 2018.07.20 v3.31
 
 * 新增了 [Domain Socket 传输方式](../chapter_02/transport/domainsocket.md) (感谢 @xiaokangwang)。

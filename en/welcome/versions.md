@@ -13,6 +13,11 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.07.27 v3.32
+
+* BitTorrent traffic can now be sniff'ed.
+* New `protocol` option in routing rules for protocol-based routing.
+
 ## 2018.07.20 v3.31
 
 * New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
