@@ -64,6 +64,7 @@ Konfiguration für jede Regel:
   "inboundTag": [
     "tag-vmess"
   ],
+  "protocol":["http", "tls", "bittorrent"],
   "outboundTag": "direct"
 }
 ```
@@ -90,7 +91,10 @@ Woher:
 * `source`: Ein Array von IP-Bereichen. Gleiches Format wie `IP`. Wenn sich die Quell-IP der Verbindung im IP-Bereich befindet, wird diese Regel wirksam.
 * `user`: Ein Array von E-Mail-Adresse. Wenn die eingehende Verbindung ein Benutzerkonto der E-Mail-Adresse verwendet, wird diese Regel wirksam. Momentan unterstützen Shadowsocks und VMess Benutzer mit E-Mail.
 * `inboundTag`: Ein Array mit einer Zeichenfolge als eingehende Proxy-Tags. Wenn die Verbindung von einem der angegebenen eingehenden Proxyserver stammt, wird diese Regel wirksam.
-* `outboundTag` [Tag des Ausgangs](protocols.md) , an den die Verbindung gesendet wird, wenn diese Regel wirksam wird.
+* `protocol`: An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. 
+  * Available values are `"http"`,`"tls"`,`"bittorrent"`. All lower-cased.
+  * `sniffing` in inbound proxy must be enabled in advance.
+* `outboundTag` [Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
 
 ## Tips {#tips}
 
