@@ -2,6 +2,11 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
+## 2018.07.27 v3.32
+
+* BitTorrent traffic can now be sniff'ed.
+* New `protocol` option in routing rules for protocol-based routing.
+
 ## 2018.07.20 v3.31
 
 * New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
