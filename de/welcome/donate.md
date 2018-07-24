@@ -25,3 +25,4 @@ Please kindly notice that donation less than 1 USD is meaningless as Paypal char
 * EOS: [EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a](https://eostracker.io/accounts/lovevictoria)
 * Litecoin: [LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR](https://insight.litecore.io/address/LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR)
 * Monero: 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg
+* Ripple: r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq (Tag not required)
