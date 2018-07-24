@@ -32,4 +32,5 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 * EOS: [EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a](https://eostracker.io/accounts/lovevictoria)
 * 莱特币 (LTC): [LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR](https://insight.litecore.io/address/LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR)
 * 门罗币 (XMR): 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg
+* 瑞波币 (XRP): r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq 不需要 Tag
 * [贡献你的 CPU](cpu.md)
