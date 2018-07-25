@@ -76,8 +76,9 @@ Woher:
   * Teilzeichenfolge: Wenn diese Zeichenfolge mit einem Teil der Zieldomäne übereinstimmt, wird diese Regel wirksam. Beispiel: Regel `"sina.com"` stimmt mit Targeting Domain `überein "sina.com"`, `"sina.com.cn"` und `"www.sina.com"`, aber nicht `"sina.cn"`.
   * Regulärer Ausdruck: Beginnt mit `"regexp:"`, der Rest ist ein regulärer Ausdruck. Wenn die reguläre Ausrichtungsdatei der Ausrichtungsdomäne entspricht, wird diese Regel wirksam. Beispiel: Regel `"regexp: \. Goo. * \. Com $"` entspricht `"www.google.com"` und `"fonts.googleapis.com"`, aber nicht `"google.com"`.
   * Subdomain: Beginnt mit `"domain:"` und der Rest ist eine Domain. Wenn die Ausrichtungsdomäne genau der Wert oder eine Unterdomäne des Werts ist, wird diese Regel wirksam. Beispiel: Regel `"domain: v2ray.com"` entspricht `"www.v2ray.com"`, `"v2ray.com"`, aber nicht `"xv2ray.com"`.
-  * Gemeinsame Domänen in China: Sonderwert `"geosite: cn"` für eine Liste von [gemeinsamen Domänen in China](https://www.v2ray.com/links/chinasites/).
-  * Domains aus Datei (V2Ray 3.23+): Wie `"ext: file: tag"`. Der Wert muss mit `ext:` (Kleinbuchstaben) beginnen, gefolgt von Dateiname und Tag. Die Datei wird in platziert [Ressourcenverzeichnis](env.md#location-of-v2ray-asset), und hat das gleiche Format von `geosite.dat`. Das Tag muss in der Datei vorhanden sein.
+  * Special value `"geosite:cn"`: a list of [common domains in China](https://www.v2ray.com/links/chinasites/).
+  * Special value `"geosite:speedtest"` (V2Ray 3.32+): list of all public servers of speedtest.net.
+  * Domains from file (V2Ray 3.23+): Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
 * `ip`: Ein Array von IP-Bereichen. Wenn sich die Targeting-IP in einem der Bereiche befindet, wird diese Regel wirksam. Es gibt drei Formate: 
   * IP: wie `"127.0.0.1"`.
   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): wie `"127.0.0.0/8"`.
