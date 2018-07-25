@@ -6,6 +6,7 @@
 
 * BitTorrent traffic can now be sniff'ed.
 * New `protocol` option in routing rules for protocol-based routing.
+* New `geosite:speedtest` option in routing rules to match all public servers of speedtest.net.
 
 ## 2018.07.20 v3.31
 
