@@ -83,8 +83,9 @@ V2Ray 内建了一个简单的路由功能，可以将传入数据按需求由�
   * 纯字符串: 当此字符串匹配目标域名中任意部分，该规则生效。比如"sina.com"可以匹配"sina.com"、"sina.com.cn"和"www.sina.com"，但不匹配"sina.cn"。
   * 正则表达式: 由"regexp:"开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如"regexp:\\\\.goo.*\\\\.com$"匹配"www.google.com"、"fonts.googleapis.com"，但不匹配"google.com"。
   * 子域名: 由"domain:"开始，余下部分是一个域名。当此域名是目标域名或其子域名时，该规则生效。例如"domain:v2ray.com"匹配"www.v2ray.com"、"v2ray.com"，但不匹配"xv2ray.com"。
-  * 常用国内域名: 特殊值`"geosite:cn"`，内置了一些[常见的国内网站域名](https://www.v2ray.com/links/chinasites/)。
-  * 从文件中加载域名 (V2Ray 3.23+): 形如`"ext:file:tag"`，必须以`ext:`（小写）开头，后面跟文件名和标签，文件存放在[资源目录](env.md#asset-location)中，文件格式与`geosite.dat`相同，标签必须在文件中存在。
+  * 特殊值`"geosite:cn"`: 内置了一些[常见的国内网站域名](https://www.v2ray.com/links/chinasites/)。
+  * 特殊值`"geosite:speedtest"` (V2Ray 3.32+): Speedtest.net 的所有公用服务器列表。
+  * 从文件中加载域名: 形如`"ext:file:tag"`，必须以`ext:`（小写）开头，后面跟文件名和标签，文件存放在[资源目录](env.md#asset-location)中，文件格式与`geosite.dat`相同，标签必须在文件中存在。
 * `ip`: 一个数组，数组内每一个元素代表一个 IP 范围。当某一元素匹配目标 IP 时，此规则生效。有三种形式：
   * IP: 形如`"127.0.0.1"`。
   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)

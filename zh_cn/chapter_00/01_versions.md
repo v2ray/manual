@@ -13,6 +13,7 @@
 
 * 现在可以探测 BitTorrent 流量了。
 * 路由配置中新增了`protocol`选项用于按流量类型进行路由选择。
+* 路由配置中新增了`geosite:speedtest`用于适配所有的 Speedtest.net 公用服务器。
 
 ## 2018.07.20 v3.31
 
