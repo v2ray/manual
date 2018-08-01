@@ -45,6 +45,45 @@ V2Ray 提供两种验证方式：
 
 通过上述方式下载的压缩包，解压之后可看到 v2ray 或 v2ray.exe。直接运行即可。
 
+假如v2ray的配置文件使用socks工作模式，端口在localhost:1080，可以选择在同目录下新建一个.bat，用管理员权限运行即可快速打开关闭v2ray并修改windows代理设置。
+
+根据配置文件的localhost端口改写.bat中
+
+netsh winhttp set proxy proxy-server="socks=localhost:1080" bypass-list="localhost"
+
+的端口
+
+``` 
+@echo off
+
+:head
+set /p switch=输入1开启代理，输入0关闭代理:
+if "%switch%" == "1" goto open
+if "%switch%" == "0" goto close
+goto head
+
+:open
+cd /d %~dp0
+start v2ray.exe
+echo 正在启动Project V...
+ping 127.0.0.1 -n 4 > nul
+netsh winhttp set proxy proxy-server="socks=localhost:1080" bypass-list="localhost"
+echo 开始网上冲浪......
+goto end
+
+:close
+taskkill /f /im v2ray.exe
+echo 正在关闭Project V...
+netsh winhttp reset proxy
+echo 富强、民主、文明、和谐、自由、平等、公正、法治、爱国、敬业、诚信、友善。
+goto end
+
+:end
+pause
+
+``` 
+
+
 ## Linux 安装脚本 {#linuxscript}
 
 V2Ray 提供了一个在 Linux 中的自动化安装脚本。这个脚本会自动检测有没有安装过 V2Ray，如果没有，则进行完整的安装和配置；如果之前安装过 V2Ray，则只更新 V2Ray 二进制程序而不更新配置。
