@@ -1,6 +1,6 @@
 # Быстрый старт
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
 
