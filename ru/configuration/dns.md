@@ -2,7 +2,7 @@
 
 [![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
 
-V2Ray has an internal DNS server which provides DNS relay for other components.
+V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.
 
 Настройка:
 
@@ -22,7 +22,7 @@ V2Ray has an internal DNS server which provides DNS relay for other components.
 
 Где:
 
-* `hosts`: A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed. The format of the domain is: 
+* `hosts`: Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт. Формат домена: 
   * Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
   * Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
 * `servers`: A list of DNS server addresses. If there are more than one servers, they will be queried from top down. Options for DNS address: 
@@ -34,7 +34,7 @@ To use the internal DNS service, you need to configure `domainStrategy` in [rout
 
 The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
 
-## Query strategy {#strategy}
+## Стратегия запросов {#strategy}
 
 DNS service will try to query both A and AAAA record in the same DNS message. As not all DNS servers support such query, V2Ray only sends A and AAAA query to the following DNS servers, and only send A queries to all other servers.
 
