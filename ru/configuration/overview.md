@@ -1,6 +1,6 @@
 # Обзор настроек
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/overview.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/overview.html)
 
 V2Ray имеет одинаковую структуру (см. ниже) файлов с настройками как на сервере, так и на клиенте. В отдельных секциях настройки сервера и клиента отличаются.
 
