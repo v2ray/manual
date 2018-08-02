@@ -1,10 +1,10 @@
-# mKCP Transport
+# Доставка через mKCP
 
 [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/mkcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/mkcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/mkcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/mkcp.html)
 
-mKCP is a reliable stream transport. It is an UDP based protocol.
+mKCP - это надежный потоковый протокол. Основан на UDP.
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
@@ -21,7 +21,7 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
 * `mtu`: Maximum transmission unit. It indicates the maxium number bytes that an UDP packet can carry. Recommended value is between `576` and `1460`. Default value `1350`.
 * `tti`: Transmission time interval, in milli-second. mKCP sends data in this interval. Recommended value is between `10` and `100`. Default value `50`.
