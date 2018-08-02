@@ -34,7 +34,7 @@ Pepi - приложение, совместимое с V2Ray. Может соз�
 
 ### HyperApp
 
-An utility to build servers with docker.
+Утилита для создания серверов при помощи Docker.
 
 * Загрузить: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
 * Веб-сайт: [HyperApp.fun](https://www.hyperapp.fun/)
