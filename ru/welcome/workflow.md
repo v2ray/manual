@@ -10,13 +10,13 @@
 
 V2Ray поддерживает соединения с нескольких устройств с различными протоколами одновременно. В то же время механизм локальной маршрутизации может грамотно проксировать только необходимые соединения.
 
-## Server Bridge
+## Мост из серверов
 
-In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
+Если вам не хочется настраивать V2Ray на каждом устройстве, вы можете настроить сервер до файрвола, весь трафик будет проходить через этот сервер. Сервер сам будет маршрутизировать соединения.
 
 ![relay](../resources/relay.png)
 
-## Internal
+## Внутренности
 
 The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
 
