@@ -11,7 +11,7 @@
 
 * [BabyDriver](http://babydriver.me/): Поддерживает V2Ray. Скидочный код: bcb518
 * [喵帕斯](https://xn--i2ru8q2qg.com/): Поддерживает V2Ray (на стадии внедрения)
-* [Lanan](https://xn--sjt174g.com/): V2Ray based VPN service. Скидочный код: v2ray
+* [Lanan](https://xn--sjt174g.com/): Сервис VPN, основанный на V2Ray. Скидочный код: v2ray
 
 ## Домены
 
@@ -25,9 +25,9 @@
 ## Криптовалюта
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Торговля биткоинами в оффлайн
-* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): OTC market to trade BTC, ETH, BCH, USDT.
-* [Binance](https://www.binance.com/?ref=35382451): Trading market for cyrpto currencies.
-* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Trading market for cyrpto currencies.
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Внебиржевой рынок для торговли BTC, ETH, BCH, USDT.
+* [Binance](https://www.binance.com/?ref=35382451): Торговая площадка для криптовалют.
+* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Торговая площадка для криптовалют.
 
 ## Испытайте свою удачу
 
