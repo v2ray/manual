@@ -28,16 +28,16 @@ V2Ray предоставляет API для удаленного доступа.
 
 ### HandlerService
 
-API for manipulating inbound and outbound proxies. The following functionalities are provided:
+API для управления входящими и исходящими прокси. Доступны следующие функции:
 
-* Add a new inbound/outbound proxy.
-* Remove an existing inbound/outbound proxy.
-* Add a new user to an inbound proxy (VMess only).
-* Remove an existing user from an inbound proxy (VMess only).
+* Добавление нового входящего/исходящего прокси.
+* Удаление существующего входящего/исходящего прокси.
+* Добавление нового пользователя входящего прокси (только для VMess).
+* Удаление существующего пользователя входящего прокси (только для VMess).
 
 ### LoggerService
 
-Перезапуск внутреннего логгера. Can work with logrotate for operating log files.
+Перезапуск внутреннего логгера. Может работать с logrotate для оперирования файлами журнала.
 
 ### StatsService
 
