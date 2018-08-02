@@ -31,23 +31,23 @@ mKCP - это надежный потоковый протокол. Основа
 * `downlinkCapacity`: Ширина полосы входящей линии, МБ/с. Максимальная пропускная способность для экземпляра V2Ray для загрузки данных из Сети. По умолчанию `20`. 
   * Обратите внимание, в "МБ/с" Б - это байт, а не бит.
   * Можно использовать `0` для небольшой пропускной способности.
-* `congestion`: Whether or not to enable congestion control. Default value is `false`. 
+* `congestion`: Whether or not to enable congestion control. Значение по умолчанию: `false`. 
   * When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
 * `readBufferSize`: Read buffer size for a single connection, in MB. Default value is `2`.
 * `writeBufferSize`: Write buffer size for a single connection, in MB. Default value is `2`.
 * `header`: Packet header for obfuscation. 
-  * `type`: Type of obfuscation. Choices are: 
-    * `"none"`: Default value. No obfuscation is added.
+  * `type`: Type of obfuscation. Возможные варианты: 
+    * `"none"`: Значение по умолчанию. No obfuscation is added.
     * `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
     * `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
     * `"wechat-video"`: Obfuscated to WeChat traffic.
     * `"dtls"` (V2Ray 3.24+): Obfuscated as DTLS 1.2 packets.
 
-## Tips {#tips}
+## Замечания {#tips}
 
-* `uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection.
-* mKCP uses UDP protocol. Please make sure your firewall is correctly setup.
-* mKCP sends more traffic for lower latency. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
+* `uplinkCapacity` и `downlinkCapacity` определяют скорость mKCP. На стороне клиента `uplinkCapacity` устанавливает скорость отправки данных на сервер. На стороне сервера `downlinkCapacity` устанавливает скорость получения данных сервером. The minimum of this pair is effective in an actual connection.
+* mKCP использует протокол UDP. Убедитесь, что ваш брандмауэр настроен правильно.
+* mKCP отправляет больше трафика для более низкой задержки. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
 
 ## Благодарности {#credits}
 
