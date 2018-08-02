@@ -10,7 +10,7 @@
 ## VPN
 
 * [BabyDriver](http://babydriver.me/): Поддерживает V2Ray. Скидочный код: bcb518
-* [喵帕斯](https://xn--i2ru8q2qg.com/): V2Ray support (beta)
+* [喵帕斯](https://xn--i2ru8q2qg.com/): Поддерживает V2Ray (на стадии внедрения)
 * [Lanan](https://xn--sjt174g.com/): V2Ray based VPN service. Скидочный код: v2ray
 
 ## Домены
