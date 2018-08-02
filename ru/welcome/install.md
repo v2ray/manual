@@ -23,7 +23,7 @@ V2Ray доступен на следующих платформах:
 Готовые пакеты можно найти здесь:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
+2. Собранные утилиты: [v2ray.com/download](https://www.v2ray.com/download/)
 
 Все пакеты находятся в формате ZIP. Загрузите и распакуйте подходящие пакеты в свою систему.
 
