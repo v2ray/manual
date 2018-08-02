@@ -28,15 +28,15 @@ V2Ray имеет внутренний DNS-сервер, используемый
 * `servers`: Список DNS-серверов. Если задано несколько серверов, они будут опрашиваться сверху вниз. Параметры для DNS-адресов: 
   * `"IP"`: IP-адрес, 53-й порт которого открыт для DNS-запросов.
   * `"localhost"`: Особое значение, V2Ray будет разрешать DNS-запросы на локальной машине.
-* `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
+* `clientIp`: IPv4-адрес текущей системы. Используется для уведомления DNS-сервера для лучшего разрешения IP. Значение не может быть адресом из частных ("серых") диапазонов.
 
-To use the internal DNS service, you need to configure `domainStrategy` in [routing](routing.md).
+Чтобы использовать внутренний DNS, вам необходимо настроить `domainStrategy` в [маршрутизации](routing.md).
 
-The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
+Запросы DNS, ретранслируемые этой службой DNS, также будут отправляться на основе параметров маршрутизации. Никакой дополнительной настройки не требуется.
 
 ## Стратегия запросов {#strategy}
 
-DNS service will try to query both A and AAAA record in the same DNS message. As not all DNS servers support such query, V2Ray only sends A and AAAA query to the following DNS servers, and only send A queries to all other servers.
+Служба DNS попытается получить и A, и AAAA в одном DNS-запросе. Поскольку не все DNS-серверы поддерживают такой формат, V2Ray отправляет объединённые запросы только на следующие DNS-серверы. С остальных серверов запрашивается только A-запись.
 
 ```text
 8.8.8.8
@@ -46,4 +46,4 @@ DNS service will try to query both A and AAAA record in the same DNS message. As
 
 ## Подсказки {#tips}
 
-* You are recommended to use DNS from your localhost, with a thirdparty DNS relay server, such as [CoreDNS](https://coredns.io/).
+* Рекомендуется использовать DNS с вашего локального хоста с DNS-сервером от третьей стороны, например [CoreDNS](https://coredns.io/).
