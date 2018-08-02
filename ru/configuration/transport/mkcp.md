@@ -23,14 +23,14 @@ mKCP - это надежный потоковый протокол. Основа
 
 Где:
 
-* `mtu`: Maximum transmission unit. It indicates the maxium number bytes that an UDP packet can carry. Recommended value is between `576` and `1460`. Default value `1350`.
-* `tti`: Transmission time interval, in milli-second. mKCP sends data in this interval. Recommended value is between `10` and `100`. Default value `50`.
-* `uplinkCapacity`: Uplink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to upload data to a remote one. Default value is `5`. 
-  * Please note it is byte (in MB/s), not bit.
-  * One may use value `0` for a small bandwidth.
-* `downlinkCapacity`: Downlink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to download data. Default value is `20`. 
-  * Please note it is byte (in MB/s), not bit.
-  * One may use value `0` for a small bandwidth.
+* `mtu`: Maximum transmission unit. Устанавливает максимальное количество байт, которые может содержать пакет UDP. Рекомендуемое значение между `576` и `1460`. По умолчанию `1350`.
+* `tti`: Transmission time interval, в миллисекундах. mKCP будет отправлять данные через указанный интервал. Рекомендуемое значение между `10` и `100`. По умолчанию `50`.
+* `uplinkCapacity`: Ширина полосы исходящей линии, МБ/с. Максимальная пропускная способность для экземпляра V2Ray для выгрузки данных в Сеть. По умолчанию `5`. 
+  * Обратите внимание, в "МБ/с" Б - это байт, а не бит.
+  * Можно использовать `0` для небольшой пропускной способности.
+* `downlinkCapacity`: Ширина полосы входящей линии, МБ/с. Максимальная пропускная способность для экземпляра V2Ray для загрузки данных из Сети. По умолчанию `20`. 
+  * Обратите внимание, в "МБ/с" Б - это байт, а не бит.
+  * Можно использовать `0` для небольшой пропускной способности.
 * `congestion`: Whether or not to enable congestion control. Default value is `false`. 
   * When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
 * `readBufferSize`: Read buffer size for a single connection, in MB. Default value is `2`.
