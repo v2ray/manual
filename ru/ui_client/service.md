@@ -1,6 +1,6 @@
 # Онлайн сервисы
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/service.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/service.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/service.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/service.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/service.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/service.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/service.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/service.html)
 
 ## Связанные с V2Ray
 
