@@ -59,12 +59,12 @@
 
 * `type`: тот же `type` что и в `tcpSettings`.
 * `request`: Настройки HTTP-запроса: 
-  * `version`: версия HTTP, по умолчанию `"1.1"`
-  * `method`: HTTP method, default value `"GET"`。
-  * `path`: Path. A string array. Default value is `["/"]`. When there are multiple values, value is picked up randomly for each request.
-  * `headers`: HTTP headers. It is a key value pair. Each key is key of the HTTP header, and value is the value of the HTTP header. When multiple values are set, the effetive value is picked up randomly for each request. Default settings is same as the example above.
-* `response`: HTTP response. 
-  * `version`: HTTP version. Default value is `"1.1"`.
-  * `status`: HTTP status. Default value is `"200"`.
-  * `reason`: HTTP status text. Default value is `"OK"`.
-  * `headers`: HTTP header. Same as request headers, but for response.
+  * `version`: Версия HTTP, по умолчанию `"1.1"`
+  * `method`: Метод HTTP, по умолчанию `"GET"`
+  * `path`: Путь. Массив строк. Значение по умолчанию `["/"]`. Если включает несколько элементов, значение выбирается случайным образом для каждого запроса.
+  * `headers`: Заголовки HTTP. Ассоциативный массив, пары ключ-значение. Каждый ключ - заголовок HTTP, а каждое значение - содержимое HTTP заголовка. Если задано несколько элементов, конечные заголовки выбираются случайным образом для каждого запроса. Параметры по умолчанию - в примере выше.
+* `response`: Ответ HTTP. 
+  * `version`: Версия HTTP. По умолчанию `"1.1"`.
+  * `status`: Статус HTTP. По умолчанию `"200"`.
+  * `reason`: Текст статуса HTTP. По умолчанию `"OK"`.
+  * `headers`: Заголовки HTTP. Same as request headers, but for response.
