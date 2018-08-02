@@ -1,6 +1,6 @@
 # Командная строка
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/command.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/command.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/command.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/command.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/command.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/command.html)
 
 ## V2Ray
 
