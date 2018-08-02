@@ -2,7 +2,7 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре конфигурации](../configuration/overview.md).
+Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
 
 ## Клиент {#client}
 
@@ -78,4 +78,4 @@
 * В Windows и macOS файл конфигурации находится в том же каталоге, что и исполнимый файл V2Ray. Вы можете запустить `v2ray` или `v2ray.exe` без дополнительных параметров.
 * На Linux файл конфигурации обычно находится в `/etc/v2ray/config.json`. Выполните `v2ray --config=/etc/v2ray/config.json` в консоли или используйте другие инструменты, типа systemd, для запуска V2Ray в качестве фонового процесса.
 
-See [Overview](../configuration/overview.md) for more detail of the configuration.
+Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
