@@ -1,6 +1,6 @@
 # API
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/api.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/api.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/api.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/api.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/api.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/api.html)
 
 V2Ray предоставляет API для удаленного доступа. Эти API основаны на [gRPC](https://grpc.io/).
 
