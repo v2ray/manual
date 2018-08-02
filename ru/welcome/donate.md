@@ -1,6 +1,6 @@
 # Пожертвование
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/donate.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/donate.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/donate.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/donate.html)
 
 Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. Если вам нравится этот проект, купите нам чашку кофе.
 
