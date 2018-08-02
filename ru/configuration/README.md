@@ -1,6 +1,6 @@
 # Настройка
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/index.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/index.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/index.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/index.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/index.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/index.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/index.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/index.html)
 
 V2Ray использует файл конфигурации в формате JSON. Если вы знакомы с JSON, вы можете пропустить эту страницу.
 
