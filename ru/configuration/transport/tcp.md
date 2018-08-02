@@ -67,4 +67,4 @@
   * `version`: Версия HTTP. По умолчанию `"1.1"`.
   * `status`: Статус HTTP. По умолчанию `"200"`.
   * `reason`: Текст статуса HTTP. По умолчанию `"OK"`.
-  * `headers`: Заголовки HTTP. Same as request headers, but for response.
+  * `headers`: Заголовки HTTP. То же, что и заголовки для запросов, только для ответов.
