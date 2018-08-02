@@ -1,14 +1,14 @@
 # Принцип работы
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
+![Английский](../resources/englishc.svg) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
 
-## Single Server
+## Одиночный сервер
 
 Как и в случае с другими прокси, вам нужен прокси-сервер, с запущенным V2Ray. Вы можете подключаться к Интернету через этот сервер с ПК, мобильных и других устройств.
 
 ![direct](../resources/direct.png)
 
-V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
+V2Ray поддерживает соединения с нескольких устройств с различными протоколами одновременно. В то же время механизм локальной маршрутизации может грамотно проксировать только необходимые соединения.
 
 ## Server Bridge
 
