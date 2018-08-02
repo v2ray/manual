@@ -1,6 +1,6 @@
 # WebSocket
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/websocket.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/websocket.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/websocket.html)
+[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/websocket.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/websocket.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/websocket.html)
 
 Используйте стандартный WebSocket для передачи данных. Соединения Websocket могут быть проксифицированы HTTP-сервером, таким как Nginx.
 
