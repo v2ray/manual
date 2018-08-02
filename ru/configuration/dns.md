@@ -23,11 +23,11 @@ V2Ray имеет внутренний DNS-сервер, используемый
 Где:
 
 * `hosts`: Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт. Формат домена: 
-  * Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
-  * Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
-* `servers`: A list of DNS server addresses. If there are more than one servers, they will be queried from top down. Options for DNS address: 
-  * `"IP"`: An IP address whose port 53 is open for DNS query.
-  * `"localhost"`: A special value that V2Ray will use DNS query from local machine.
+  * `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
+  * `"domain:v2ray.com"`: По такой схеме будет разрешаться как заданный домен, так и его поддомены.
+* `servers`: Список DNS-серверов. Если задано несколько серверов, они будут опрашиваться сверху вниз. Параметры для DNS-адресов: 
+  * `"IP"`: IP-адрес, 53-й порт которого открыт для DNS-запросов.
+  * `"localhost"`: Особое значение, V2Ray будет разрешать DNS-запросы на локальной машине.
 * `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
 
 To use the internal DNS service, you need to configure `domainStrategy` in [routing](routing.md).
