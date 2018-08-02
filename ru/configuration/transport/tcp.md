@@ -55,11 +55,11 @@
 }
 ```
 
-Where:
+Где:
 
-* `type`: same `type` entry as in `tcpSettings`.
-* `request`: HTTP request settings: 
-  * `version`: HTTP version, default value `"1.1"`
+* `type`: тот же `type` что и в `tcpSettings`.
+* `request`: Настройки HTTP-запроса: 
+  * `version`: версия HTTP, по умолчанию `"1.1"`
   * `method`: HTTP method, default value `"GET"`。
   * `path`: Path. A string array. Default value is `["/"]`. When there are multiple values, value is picked up randomly for each request.
   * `headers`: HTTP headers. It is a key value pair. Each key is key of the HTTP header, and value is the value of the HTTP header. When multiple values are set, the effetive value is picked up randomly for each request. Default settings is same as the example above.
