@@ -1,6 +1,6 @@
 # Загрузка и установка
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Перевод](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 ## Платформа {#platform}
 
