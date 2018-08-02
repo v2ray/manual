@@ -40,7 +40,7 @@ v2ctl <command> <options>
 
 Опциональные параметры:
 
-* `sig`：Путь к файлу с подписью. Default value is the ".sig" file to the path to be verified.
+* `sig`：Путь к файлу с подписью. Значение по умолчанию - ".sig"-файл в проверяемом пути.
 * Первый аргумент: файл для проверки.
 
 ### Config
