@@ -31,23 +31,23 @@ mKCP - это надежный потоковый протокол. Основа
 * `downlinkCapacity`: Ширина полосы входящей линии, МБ/с. Максимальная пропускная способность для экземпляра V2Ray для загрузки данных из Сети. По умолчанию `20`. 
   * Обратите внимание, в "МБ/с" Б - это байт, а не бит.
   * Можно использовать `0` для небольшой пропускной способности.
-* `congestion`: Whether or not to enable congestion control. Значение по умолчанию: `false`. 
-  * When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
-* `readBufferSize`: Read buffer size for a single connection, in MB. Default value is `2`.
-* `writeBufferSize`: Write buffer size for a single connection, in MB. Default value is `2`.
-* `header`: Packet header for obfuscation. 
-  * `type`: Type of obfuscation. Возможные варианты: 
-    * `"none"`: Значение по умолчанию. No obfuscation is added.
-    * `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
-    * `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
-    * `"wechat-video"`: Obfuscated to WeChat traffic.
-    * `"dtls"` (V2Ray 3.24+): Obfuscated as DTLS 1.2 packets.
+* `congestion`: Следует ли включать контроль перегрузки. Значение по умолчанию: `false`. 
+  * Когда управление перегрузкой включено, V2Ray определяет качество сети. Он будет отправлять меньше пакетов, если потеря пакетов будет серьезной, или больше, если сеть не полностью заполнена.
+* `readBufferSize`: Размер буфера для чтения для каждого соединения, в МБ. По умолчанию `2`.
+* `writeBufferSize`: Размер буфера для записи для каждого соединения, в МБ. По умолчанию `2`.
+* `header`: Заголовок пакета для маскировки. 
+  * `type`: Тип маскировки. Возможные варианты: 
+    * `"none"`: Значение по умолчанию. Без обфускации.
+    * `"srtp"`: Маскировка под SRTP трафик. Для прослушивающих выглядит как видеозвонок, например из Facetime.
+    * `"utp"`: Маскировка под uTP трафик. Со стороны выглядит как трафик от Bittorrent.
+    * `"wechat-video"`: Маскировка под WeChat.
+    * `"dtls"` (V2Ray 3.24+): Маскировка под пакеты DTLS 1.2.
 
 ## Замечания {#tips}
 
-* `uplinkCapacity` и `downlinkCapacity` определяют скорость mKCP. На стороне клиента `uplinkCapacity` устанавливает скорость отправки данных на сервер. На стороне сервера `downlinkCapacity` устанавливает скорость получения данных сервером. The minimum of this pair is effective in an actual connection.
+* `uplinkCapacity` и `downlinkCapacity` определяют скорость mKCP. На стороне клиента `uplinkCapacity` устанавливает скорость отправки данных на сервер. На стороне сервера `downlinkCapacity` устанавливает скорость получения данных сервером. Реальная скорость будет определяться наименьшим значением.
 * mKCP использует протокол UDP. Убедитесь, что ваш брандмауэр настроен правильно.
-* mKCP отправляет больше трафика для более низкой задержки. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
+* mKCP отправляет больше трафика для более низкой задержки. Чтобы передавать один и тот же объем данных, mKCP обычно требует большей пропускной способности, чем TCP.
 
 ## Благодарности {#credits}
 
