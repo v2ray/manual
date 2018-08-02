@@ -1,6 +1,6 @@
 # Доставка через mKCP
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/mkcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/mkcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/mkcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/mkcp.html)
+[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/mkcp.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/mkcp.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/mkcp.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/mkcp.html)
 
 mKCP - это надежный потоковый протокол. Основан на UDP.
 
@@ -49,8 +49,8 @@ mKCP - это надежный потоковый протокол. Основа
 * mKCP uses UDP protocol. Please make sure your firewall is correctly setup.
 * mKCP sends more traffic for lower latency. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
 
-## Credits {#credits}
+## Благодарности {#credits}
 
-* @skywind3000 invented the original KCP protocol and implemented in C.
-* @xtaci re-implement KCP protocol in Go.
-* @xiaokangwang integrated KCP into V2Ray.
+* @skywind3000 создал оригинальный протокол KCP и воплотил его на C.
+* @xtaci реализовал KCP на Go.
+* @xiaokangwang встроил KCP в V2Ray.
