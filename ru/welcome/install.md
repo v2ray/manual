@@ -53,7 +53,7 @@ bash <(curl -L -s https://install.direct/go.sh)
 Этот сценарий устанавливает следующие файлы.
 
 * `/usr/bin/v2ray/v2ray`: Исполняемый файл V2Ray
-* `/usr/bin/v2ray/v2ctl`: Utility
+* `/usr/bin/v2ray/v2ctl`: Утилита управления
 * `/etc/v2ray/config.json`: Файл с настройками
 * `/usr/bin/v2ray/geoip.dat`: Файл с данными об IP
 * `/usr/bin/v2ray/geosite.dat`: Файл с данными о доменах
