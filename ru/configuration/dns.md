@@ -1,6 +1,6 @@
 # DNS
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
 
 V2Ray has an internal DNS server which provides DNS relay for other components.
 
