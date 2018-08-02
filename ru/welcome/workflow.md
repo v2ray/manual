@@ -16,17 +16,17 @@ V2Ray поддерживает соединения с нескольких ус
 
 ![relay](../resources/relay.png)
 
-## Внутренности
+## Внутреннее устройство
 
-The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
+Изнутри V2Ray выглядит как показано ниже. Он поддерживает несколько входящих прокси-соединений и несколько исходящих. Каждое из них независимо от других.
 
 ![internal](../resources/internal.svg)
 
-Notes:
+Примечания:
 
-* You have to configure at least one inbound and one outbound to make V2Ray work properly.
-* The inbound proxy communicates with client software such as browser.
-* The outbound proxy communicates with remote server, such as Apache for a website.
-* The dispatcher is responsible for choosing a outbound for a given connection, based on configurable rules.
+* Вы должны настроить как минимум одно входящее и одно исходящее соединение, чтобы заставить V2Ray работать.
+* Прокси на входе взаимодействует с клиентским программным обеспечением, например, браузером.
+* Прокси на выходе взаимодействует с удаленным сервером, например Apache, на котором крутится сайт.
+* Диспетчер выбирает исходящее соединение для запроса на основе настраиваемых правил.
 
-Detailed configuration can be found [here](../configuration/overview.md).
+Детально настройки рассматриваются [здесь](../configuration/overview.md).
