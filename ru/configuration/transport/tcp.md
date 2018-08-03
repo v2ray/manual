@@ -1,6 +1,6 @@
-# TCP Transport
+# Доставка через TCP
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/tcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/tcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/tcp.html)
+[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/tcp.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/tcp.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/tcp.html)
 
 Конфигурация:
 
@@ -55,16 +55,16 @@
 }
 ```
 
-Where:
+Где:
 
-* `type`: same `type` entry as in `tcpSettings`.
-* `request`: HTTP request settings: 
-  * `version`: HTTP version, default value `"1.1"`
-  * `method`: HTTP method, default value `"GET"`。
-  * `path`: Path. A string array. Default value is `["/"]`. When there are multiple values, value is picked up randomly for each request.
-  * `headers`: HTTP headers. It is a key value pair. Each key is key of the HTTP header, and value is the value of the HTTP header. When multiple values are set, the effetive value is picked up randomly for each request. Default settings is same as the example above.
-* `response`: HTTP response. 
-  * `version`: HTTP version. Default value is `"1.1"`.
-  * `status`: HTTP status. Default value is `"200"`.
-  * `reason`: HTTP status text. Default value is `"OK"`.
-  * `headers`: HTTP header. Same as request headers, but for response.
+* `type`: тот же `type` что и в `tcpSettings`.
+* `request`: Настройки HTTP-запроса: 
+  * `version`: Версия HTTP, по умолчанию `"1.1"`
+  * `method`: Метод HTTP, по умолчанию `"GET"`
+  * `path`: Путь. Массив строк. Значение по умолчанию `["/"]`. Если включает несколько элементов, значение выбирается случайным образом для каждого запроса.
+  * `headers`: Заголовки HTTP. Ассоциативный массив, пары ключ-значение. Каждый ключ - заголовок HTTP, а каждое значение - содержимое HTTP заголовка. Если задано несколько элементов, конечные заголовки выбираются случайным образом для каждого запроса. Параметры по умолчанию - в примере выше.
+* `response`: Ответ HTTP. 
+  * `version`: Версия HTTP. По умолчанию `"1.1"`.
+  * `status`: Статус HTTP. По умолчанию `"200"`.
+  * `reason`: Текст статуса HTTP. По умолчанию `"OK"`.
+  * `headers`: Заголовки HTTP. То же, что и заголовки для запросов, только для ответов.

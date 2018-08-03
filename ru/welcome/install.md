@@ -1,6 +1,6 @@
 # Загрузка и установка
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Перевод](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 ## Платформа {#platform}
 
@@ -23,7 +23,7 @@ V2Ray доступен на следующих платформах:
 Готовые пакеты можно найти здесь:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
+2. Собранные утилиты: [v2ray.com/download](https://www.v2ray.com/download/)
 
 Все пакеты находятся в формате ZIP. Загрузите и распакуйте подходящие пакеты в свою систему.
 
@@ -53,7 +53,7 @@ bash <(curl -L -s https://install.direct/go.sh)
 Этот сценарий устанавливает следующие файлы.
 
 * `/usr/bin/v2ray/v2ray`: Исполняемый файл V2Ray
-* `/usr/bin/v2ray/v2ctl`: Utility
+* `/usr/bin/v2ray/v2ctl`: Утилита управления
 * `/etc/v2ray/config.json`: Файл с настройками
 * `/usr/bin/v2ray/geoip.dat`: Файл с данными об IP
 * `/usr/bin/v2ray/geosite.dat`: Файл с данными о доменах

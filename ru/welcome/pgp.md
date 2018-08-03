@@ -1,6 +1,6 @@
 # Приватное сообщение
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](.https://www.v2ray.com/chapter_00/pgp.html)
+![Английский](../resources/englishc.svg) [![Китайский](../resources/chinese.svg)](.https://www.v2ray.com/chapter_00/pgp.html)
 
 Отправьте сообщение на один из адресов ниже, если вы хотите приватно поговорить с командой V2Ray.
 

@@ -1,6 +1,6 @@
 # Поддержка
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Перевод](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 Пожалуйста, ознакомьтесь со следующими рекомендациями для лучшего качества обсуждения и более быстрого решения.
 
@@ -10,8 +10,8 @@
 
 ## Способы получения поддержки {#support}
 
-1. [V2Ray Usage](https://github.com/v2ray/v2ray-core/issues)
-2. [V2Ray Development](https://github.com/v2ray/planning)
-3. [Telegram Discussion](tg.md)
+1. [Использование V2Ray](https://github.com/v2ray/v2ray-core/issues)
+2. [Развертывание V2Ray](https://github.com/v2ray/planning)
+3. [Дискуссия в Telegram](tg.md)
 4. [Twitter](https://twitter.com/projectv2ray)
-5. [Private Contact](pgp.md)
+5. [Личное обращение](pgp.md)

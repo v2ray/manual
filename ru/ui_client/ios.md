@@ -1,6 +1,6 @@
 # Клиенты iOS
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/ios.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/ios.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/ios.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/ios.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/ios.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/ios.html)
 
 ## Kitsunebi
 
@@ -34,7 +34,7 @@ Pepi - приложение, совместимое с V2Ray. Может соз�
 
 ### HyperApp
 
-An utility to build servers with docker.
+Утилита для создания серверов при помощи Docker.
 
 * Загрузить: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
 * Веб-сайт: [HyperApp.fun](https://www.hyperapp.fun/)

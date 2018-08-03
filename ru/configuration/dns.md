@@ -1,8 +1,8 @@
 # DNS
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
 
-V2Ray has an internal DNS server which provides DNS relay for other components.
+V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.
 
 Настройка:
 
@@ -22,21 +22,21 @@ V2Ray has an internal DNS server which provides DNS relay for other components.
 
 Где:
 
-* `hosts`: A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed. The format of the domain is: 
-  * Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
-  * Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
-* `servers`: A list of DNS server addresses. If there are more than one servers, they will be queried from top down. Options for DNS address: 
-  * `"IP"`: An IP address whose port 53 is open for DNS query.
-  * `"localhost"`: A special value that V2Ray will use DNS query from local machine.
-* `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
+* `hosts`: Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт. Формат домена: 
+  * `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
+  * `"domain:v2ray.com"`: По такой схеме будет разрешаться как заданный домен, так и его поддомены.
+* `servers`: Список DNS-серверов. Если задано несколько серверов, они будут опрашиваться сверху вниз. Параметры для DNS-адресов: 
+  * `"IP"`: IP-адрес, 53-й порт которого открыт для DNS-запросов.
+  * `"localhost"`: Особое значение, V2Ray будет разрешать DNS-запросы на локальной машине.
+* `clientIp`: IPv4-адрес текущей системы. Используется для уведомления DNS-сервера для лучшего разрешения IP. Значение не может быть адресом из частных ("серых") диапазонов.
 
-To use the internal DNS service, you need to configure `domainStrategy` in [routing](routing.md).
+Чтобы использовать внутренний DNS, вам необходимо настроить `domainStrategy` в [маршрутизации](routing.md).
 
-The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
+Запросы DNS, ретранслируемые этой службой DNS, также будут отправляться на основе параметров маршрутизации. Никакой дополнительной настройки не требуется.
 
-## Query strategy {#strategy}
+## Стратегия запросов {#strategy}
 
-DNS service will try to query both A and AAAA record in the same DNS message. As not all DNS servers support such query, V2Ray only sends A and AAAA query to the following DNS servers, and only send A queries to all other servers.
+Служба DNS попытается получить и A, и AAAA в одном DNS-запросе. Поскольку не все DNS-серверы поддерживают такой формат, V2Ray отправляет объединённые запросы только на следующие DNS-серверы. С остальных серверов запрашивается только A-запись.
 
 ```text
 8.8.8.8
@@ -46,4 +46,4 @@ DNS service will try to query both A and AAAA record in the same DNS message. As
 
 ## Подсказки {#tips}
 
-* You are recommended to use DNS from your localhost, with a thirdparty DNS relay server, such as [CoreDNS](https://coredns.io/).
+* Рекомендуется использовать DNS с вашего локального хоста с DNS-сервером от третьей стороны, например [CoreDNS](https://coredns.io/).

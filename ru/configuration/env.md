@@ -1,6 +1,6 @@
 # Переменные окружения
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/env.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/env.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/env.html)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/env.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/env.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/env.html)
 
 V2Ray считывает следующие переменные среды.
 

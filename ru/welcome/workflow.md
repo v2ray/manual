@@ -1,32 +1,32 @@
 # Принцип работы
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
+![Английский](../resources/englishc.svg) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
 
-## Single Server
+## Одиночный сервер
 
 Как и в случае с другими прокси, вам нужен прокси-сервер, с запущенным V2Ray. Вы можете подключаться к Интернету через этот сервер с ПК, мобильных и других устройств.
 
-![direct](../resources/direct.png)
+![прямое соединение](../resources/direct.png)
 
-V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
+V2Ray поддерживает соединения с нескольких устройств с различными протоколами одновременно. В то же время механизм локальной маршрутизации может грамотно проксировать только необходимые соединения.
 
-## Server Bridge
+## Мост из серверов
 
-In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
+Если вам не хочется настраивать V2Ray на каждом устройстве, вы можете настроить сервер до файрвола, весь трафик будет проходить через этот сервер. Сервер сам будет маршрутизировать соединения.
 
-![relay](../resources/relay.png)
+![мост из серверов](../resources/relay.png)
 
-## Internal
+## Внутреннее устройство
 
-The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
+Изнутри V2Ray выглядит как показано ниже. Он поддерживает несколько входящих прокси-соединений и несколько исходящих. Каждое из них независимо от других.
 
-![internal](../resources/internal.svg)
+![внутренности](../resources/internal.svg)
 
-Notes:
+Примечания:
 
-* You have to configure at least one inbound and one outbound to make V2Ray work properly.
-* The inbound proxy communicates with client software such as browser.
-* The outbound proxy communicates with remote server, such as Apache for a website.
-* The dispatcher is responsible for choosing a outbound for a given connection, based on configurable rules.
+* Вы должны настроить как минимум одно входящее и одно исходящее соединение, чтобы заставить V2Ray работать.
+* Прокси на входе взаимодействует с клиентским программным обеспечением, например, браузером.
+* Прокси на выходе взаимодействует с удаленным сервером, например Apache, на котором крутится сайт.
+* Диспетчер выбирает исходящее соединение для запроса на основе настраиваемых правил.
 
-Detailed configuration can be found [here](../configuration/overview.md).
+Детально настройки рассматриваются [здесь](../configuration/overview.md).

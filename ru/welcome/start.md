@@ -1,8 +1,8 @@
 # Быстрый старт
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре конфигурации](../configuration/overview.md).
+Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
 
 ## Клиент {#client}
 
@@ -49,16 +49,16 @@
 }
 ```
 
-Please modify the IP address of your V2Ray server as mentioned above. After that, the V2Ray process on your PC will proxy all traffic to V2Ray server except intranet traffic.
+Измените IP-адрес своего сервера V2Ray, как указано выше в комментариях. После этого начнёт V2Ray проксировать весь трафик с вашего ПК на сервер V2Ray, за исключением внутрисетевого трафика.
 
-## Server {#server}
+## Сервер {#server}
 
-You need another computer to run V2Ray as a server. Usually this computer is located outside firewall. Here is a sample configuration.
+Вам нужен еще один компьютер для запуска V2Ray в качестве сервера. Обычно этот компьютер находится за пределами файрвола (локального или глобального). Вот пример конфигурации.
 
 ```javascript
 {
   "inbound": {
-    "port": 10086, // Port of the server. Must be the same as above.
+    "port": 10086, // Port of the server. Должен быть таким же, как упомянутый выше.
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
@@ -71,11 +71,11 @@ You need another computer to run V2Ray as a server. Usually this computer is loc
 }
 ```
 
-Please make sure the `id` field is the same between client and server.
+Убедитесь, что поле `id` одинаково на клиенте и сервере.
 
-## Running {#running}
+## Запуск {#running}
 
-* On Windows and macOS, configuration file is located in the same directory as V2Ray binary. You may run `v2ray` or `v2ray.exe` without additional parameters.
-* On Linux, configuration file is usually located at `/etc/v2ray/config.json`. Run `v2ray --config=/etc/v2ray/config.json` in foreground or use other tools such as systemd to run V2Ray as background process.
+* В Windows и macOS файл конфигурации находится в том же каталоге, что и исполнимый файл V2Ray. Вы можете запустить `v2ray` или `v2ray.exe` без дополнительных параметров.
+* На Linux файл конфигурации обычно находится в `/etc/v2ray/config.json`. Выполните `v2ray --config=/etc/v2ray/config.json` в консоли или используйте другие инструменты, типа systemd, для запуска V2Ray в качестве фонового процесса.
 
-See [Overview](../configuration/overview.md) for more detail of the configuration.
+Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
