@@ -2,9 +2,9 @@
 
 [![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/policy.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/policy.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/policy.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/policy.html)
 
-Local policy is added in V2Ray 3.1.
+Локальная политика была добавлена в V2Ray 3.1.
 
-Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
+Локальная политика управляет параметрами V2Ray, например временем ожидания подключения. The policys can be applied to each user level, or the whole system.
 
 Configuration:
 
