@@ -18,3 +18,4 @@
 * `enabled`: Включать Mux или нет
 * `concurrency`: Максимальное количество виртуальных подключений, которое может обрабатывать одно физическое соединение за раз. Максимальное значение `1024`, минимальное значение `1`, по умолчанию `8`. 
   * Обычно это значение не требует дополнительной настройки.
+* Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
