@@ -1,12 +1,12 @@
-# Local Policy
+# Локальная политика
 
 [![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/policy.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/policy.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/policy.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/policy.html)
 
-Local policy is added in V2Ray 3.1.
+Локальная политика была добавлена в V2Ray 3.1.
 
-Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
+Локальная политика управляет параметрами V2Ray, например временем ожидания подключения. Политики могут применяться к отдельному уровню доступа пользователей или для всей системы.
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
@@ -27,13 +27,13 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
-* `level`: A list of key value pairs. Each key is a string of integer (restricted by JSON), such as `"0"`, `"1"`, etc. The numeric value is for a certain user level. Each value has the following attributes: 
-  * `handshake`: Timeout for establishing a connection, in seconds. Default value `4`.
-  * `connIdle`: Timeout for idle connections, in seconds. Default value `300`.
-  * `uplinkOnly`: Time for keeping connections open after the uplink of the connection is closed, in seconds. Default value `2`.
-  * `downlinkOnly`: Time for keeping connections open after the downlink of the connection is closed, in seconds. Default value `5`.
+* `level`: Ассоциативный массив, пары ключ-значение. Каждый ключ — строка с целым числом (это ограничения JSON), типа `"0"`, `"1"`, и т.д. Числовое значение — это пользовательский уровень. Каждое значение имеет следующие атрибуты: 
+  * `handshake`: Таймаут на установление соединения, в секундах. По умолчанию `4`.
+  * `connIdle`: Таймаут для простаивающих соединений, в секундах. По умолчанию `300`.
+  * `uplinkOnly`: Время поддержания соединения после закрытия исходящего соединения, в секундах. По умолчанию `2`.
+  * `downlinkOnly`: Time for keeping connections open after the downlink of the connection is closed, in seconds. По умолчанию `5`.
   * `statsUserUplink`: When set to `true`, V2Ray enables stat counter to uplink traffic for all users in this level.
   * `statsUserDownlink`: When set to `true`, V2Ray enables stat counter to downlink traffic for all users in this level.
   * `bufferSize` (V2Ray 3.24+): Size of internal buffer per connection, in kilo-bytes. Default value is `10240`. When it is set to `0`, the internal buffer is disabled.
