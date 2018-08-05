@@ -89,7 +89,7 @@ go.sh поддерживает следующие параметры.
 
 V2Ray предоставляет два типа докер-контейнеров:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![official](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): Содержит официальные релизы.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![dev](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): Содержит свежайший код.
+* [v2ray/official](https://hub.docker.com/r/v2ray/official/): Contains official releases.
+* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Contains latest code.
 
 Контейнеры имеют ту же структуру, что и установленный Linux.
