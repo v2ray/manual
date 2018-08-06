@@ -13,6 +13,10 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.08.07 v3.34
+
+* Better memory management on most devices.
+
 ## 2018.07.27 v3.32
 
 * BitTorrent traffic can now be sniff'ed.

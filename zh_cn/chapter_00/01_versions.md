@@ -9,6 +9,10 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
+## 2018.08.07 v3.34
+
+* 在大多数设备上有了更精确的内存控制
+
 ## 2018.07.27 v3.32
 
 * 现在可以探测 BitTorrent 流量了。
