@@ -2,6 +2,10 @@
 
 [![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
+## 2018.08.07 v3.34
+
+* Better memory management on most devices.
+
 ## 2018.07.27 v3.32
 
 * BitTorrent traffic can now be sniff'ed.
