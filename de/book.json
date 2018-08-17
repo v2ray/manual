@@ -4,6 +4,7 @@
   "plugins" : [
     "-fontsettings",
     "-search",
+    "-lunr",
     
     "anchors",
     "ga"
