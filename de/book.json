@@ -5,6 +5,12 @@
     "-fontsettings",
     "-search",
     
-    "anchors"
-  ]
+    "anchors",
+    "ga"
+  ],
+  "pluginsConfig": {
+    "ga": {
+        "token": "UA-73620536-1"
+    }
+  }
 }
