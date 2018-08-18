@@ -13,8 +13,8 @@
 
 V2Ray 在以下平台中可用：
 
-* Windows Vista 及之后版本（x86 / amd64）；
-* Mac OS X 10.7 及之后版本（amd64）；
+* Windows 7 及之后版本（x86 / amd64）；
+* Mac OS X 10.10 Yosemite 及之后版本（amd64）；
 * Linux 2.6.23 及之后版本（x86 / amd64 / arm / arm64 / mips64 / mips）；
   * 包括但不限于 Debian 7 / 8、Ubuntu 12.04 / 14.04 及后续版本、CentOS 6 / 7、Arch Linux；
 * FreeBSD (x86 / amd64)；
