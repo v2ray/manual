@@ -6,8 +6,8 @@
 
 V2Ray ist auf den folgenden Plattformen verfügbar:
 
-* Windows Vista und höher (x86 / amd64)
-* Mac OS X 10.7 und höher (amd64)
+* Windows 7 and later (x86 / amd64)
+* Mac OS X 10.10 Yosemite and later (amd64)
 * Linux 2.6.23 und höher (x86 / amd64 / arm / arm64 / mips64 / mips) 
   * Einschließlich, aber nicht beschränkt auf Debian 7/8, Ubuntu 12.04 / 14.04 und später, CentOS 6/7, Arch Linux
 * FreeBSD (x86 / amd64)
