@@ -2,6 +2,10 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
+## 2018.08.24 v3.36
+
+* Great performance improvement on subdomain matching (`domain:`) in routing.
+
 ## 2018.08.07 v3.34
 
 * Better memory management on most devices.
