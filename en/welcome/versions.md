@@ -13,6 +13,10 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.08.24 v3.36
+
+* Great performance improvement on subdomain matching (`domain:`) in routing.
+
 ## 2018.08.07 v3.34
 
 * Better memory management on most devices.

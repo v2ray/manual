@@ -9,6 +9,10 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
+## 2018.08.24 v3.36
+
+* 大幅提升了路由中子域名（`domain:`）匹配的效率。
+
 ## 2018.08.07 v3.34
 
 * 在大多数设备上有了更精确的内存控制
