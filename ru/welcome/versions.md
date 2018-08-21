@@ -5,6 +5,7 @@
 ## 2018.08.24 v3.36
 
 * Great performance improvement on subdomain matching (`domain:`) in routing.
+* Full domain matching is now supported in routing.
 
 ## 2018.08.07 v3.34
 
