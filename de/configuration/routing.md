@@ -75,7 +75,8 @@ Woher:
 * `domain`: Ein Array von Domänen. Es gibt vier Formate: 
   * Teilzeichenfolge: Wenn diese Zeichenfolge mit einem Teil der Zieldomäne übereinstimmt, wird diese Regel wirksam. Beispiel: Regel `"sina.com"` stimmt mit Targeting Domain `überein "sina.com"`, `"sina.com.cn"` und `"www.sina.com"`, aber nicht `"sina.cn"`.
   * Regulärer Ausdruck: Beginnt mit `"regexp:"`, der Rest ist ein regulärer Ausdruck. Wenn die reguläre Ausrichtungsdatei der Ausrichtungsdomäne entspricht, wird diese Regel wirksam. Beispiel: Regel `"regexp: \. Goo. * \. Com $"` entspricht `"www.google.com"` und `"fonts.googleapis.com"`, aber nicht `"google.com"`.
-  * Subdomain: Beginnt mit `"domain:"` und der Rest ist eine Domain. Wenn die Ausrichtungsdomäne genau der Wert oder eine Unterdomäne des Werts ist, wird diese Regel wirksam. Beispiel: Regel `"domain: v2ray.com"` entspricht `"www.v2ray.com"`, `"v2ray.com"`, aber nicht `"xv2ray.com"`.
+  * Subdomain (recommended): Begining with `"domain:"` and the rest is a domain. Wenn die Ausrichtungsdomäne genau der Wert oder eine Unterdomäne des Werts ist, wird diese Regel wirksam. Beispiel: Regel `"domain: v2ray.com"` entspricht `"www.v2ray.com"`, `"v2ray.com"`, aber nicht `"xv2ray.com"`.
+  * Full domain (V2Ray 3.36+): Begining with `"full:"` and the rest is a domain. When the targeting domain is exactly the value, the rule takes effect. Example: rule `"domain:v2ray.com"` matches `"v2ray.com"`, but not `"www.v2ray.com"`.
   * Special value `"geosite:cn"`: a list of [common domains in China](https://www.v2ray.com/links/chinasites/).
   * Special value `"geosite:speedtest"` (V2Ray 3.32+): list of all public servers of speedtest.net.
   * Domains from file (V2Ray 3.23+): Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
