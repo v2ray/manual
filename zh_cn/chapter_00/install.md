@@ -1,31 +1,36 @@
 # 下载安装
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/install.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/welcome/install.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/welcome/install.html
 
 ## 平台支持 {#platform}
 
 V2Ray 在以下平台中可用：
 
-* Windows Vista 及之后版本（x86 / amd64）；
-* Mac OS X 10.7 及之后版本（amd64）；
+* Windows 7 及之后版本（x86 / amd64）；
+* Mac OS X 10.10 Yosemite 及之后版本（amd64）；
 * Linux 2.6.23 及之后版本（x86 / amd64 / arm / arm64 / mips64 / mips）；
   * 包括但不限于 Debian 7 / 8、Ubuntu 12.04 / 14.04 及后续版本、CentOS 6 / 7、Arch Linux；
 * FreeBSD (x86 / amd64)；
 * OpenBSD (x86 / amd64)；
+* Dragonfly BSD (amd64)；
 
-## 硬件要求 {#hardward}
+## 硬件要求 {#hardware}
 
 至少 32MB 空闲内存，推荐 64MB 或更多。
-
-**V2Ray 的部分功能依赖于系统时间，请确保使用 V2Ray 的系统 UTC 时间误差在两分钟之内，时区无关。**
 
 ## 下载 V2Ray {#download}
 
 预编译的压缩包可以在如下几个站点找到：
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-1. IPFS: [/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR](https://ipfs.io/ipns/QmdtMuAhEUPFX9NQiGhRj2zhS1oEA76SXNDnZRHqivjMwR)
-1. IPFS 分流: [https://v2ray.com/download](https://v2ray.com/download)
+1. Github 分流: [v2ray.com/download](https://www.v2ray.com/download/)
 
 压缩包均为 zip 格式，找到对应平台的压缩包，下载解压即可使用。
 
@@ -92,8 +97,8 @@ go.sh 支持如下参数，可在手动安装时根据实际情况调整：
 
 V2Ray 提供了两个预编译的 Docker image：
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/) [![](https://images.microbadger.com/badges/image/v2ray/official.svg)](https://microbadger.com/images/v2ray/official): 包含最新发布的版本，每周跟随新版本更新；
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/) [![](https://images.microbadger.com/badges/image/v2ray/dev.svg)](https://microbadger.com/images/v2ray/dev): 包含由最新的代码编译而成的程序文件，随代码库更新；
+* [v2ray/official](https://hub.docker.com/r/v2ray/official/): 包含最新发布的版本，每周跟随新版本更新；
+* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): 包含由最新的代码编译而成的程序文件，随代码库更新；
 
 两个 image 的文件结构相同：
 

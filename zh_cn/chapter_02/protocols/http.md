@@ -1,6 +1,13 @@
 # HTTP
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/protocols/http.html
+[3]: ../../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/protocols/http.html
+[5]: ../../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/protocols/http.html
 
 HTTP 是一个传入数据协议，兼容 HTTP 1.x 代理。
 
@@ -30,7 +37,7 @@ HTTP 是一个传入数据协议，兼容 HTTP 1.x 代理。
 * `allowTransparent`: 当为`true`时，会转发所有 HTTP 请求，而非只是代理请求。若配置不当，开启此选项会导致死循环。
 * `userLevel`: 用户等级，所有连接使用这一等级。
 
-## 小贴士
+## 小贴士 {#tip}
 
 在 Linux 中使用以下环境变量即可在当前 session 使用全局 HTTP 代理（很多软件都支持这一设置，也有不支持的）。
 

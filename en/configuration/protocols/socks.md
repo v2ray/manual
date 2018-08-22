@@ -1,6 +1,15 @@
 # Socks
 
-![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html)
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
+
+[1]: ../../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/protocols/socks.html
+[3]: ../../resources/chinese.svg
+[4]: https://www.v2ray.com/chapter_02/protocols/socks.html
+[5]: ../../resources/german.svg
+[6]: https://www.v2ray.com/de/configuration/protocols/socks.html
+[7]: ../../resources/russian.svg
+[8]: https://www.v2ray.com/ru/configuration/protocols/socks.html
 
 Socks is an implementation of standard SOCKS protocol, compatible with [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a and [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
@@ -57,10 +66,10 @@ Notice:
 }
 ```
 
-其中：
+Where:
 
 * `auth`: Socks authentication method. Default to `"noauth"`. Options are:
-  * `"noauth"`: Anounymous.
+  * `"noauth"`: Anonymous.
   * `"password"`: User and password [RFC 1929](https://tools.ietf.org/html/rfc1929)
 * `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty.
   * Only works when `auth` is `"password"`

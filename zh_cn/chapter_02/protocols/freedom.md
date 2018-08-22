@@ -1,6 +1,13 @@
 # Freedom
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/freedom.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/protocols/freedom.html
+[3]: ../../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/protocols/freedom.html
+[5]: ../../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/protocols/freedom.html
 
 Freedom 是一个传出数据协议，可以用来向任意网络发送（正常的） TCP 或 UDP 数据。
 
@@ -24,4 +31,6 @@ Freedom 是一个传出数据协议，可以用来向任意网络发送（正常
   * `"UseIP"`: 使用 V2Ray 的 [DNS 服务器](../04_dns.md)解析成 IP 之后再发送数据。
 * `timeout` (V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略): 从目标服务器读取响应数据的时限，单位为秒。默认值为 `300`。
 * `redirect`: 将所有数据发送到指定地址（而不是传入协调指定的地址）。其值为一个字符串，样例：`"127.0.0.1:80"`, `":1234"`。
+  * (V2Ray 3.31+)当地址不指定时，如`":443"`，Freedom 不会修改原先的目标地址。
+  * (V2Ray 3.31+)当端口为`0`时，如`"v2ray.com:0"`，Freedom 不会修改原先的端口。
 * `userLevel`: 用户等级，所有连接都使用这一等级。

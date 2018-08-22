@@ -3,7 +3,15 @@
   "title": "Project V 官方网站",
   "plugins" : [
     "-fontsettings",
+    "-search",
+    "-lunr",
     
-    "anchors"
-  ]
+    "anchors",
+    "ga"
+  ],
+  "pluginsConfig": {
+    "ga": {
+        "token": "UA-73620536-1"
+    }
+  }
 }

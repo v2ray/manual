@@ -1,6 +1,13 @@
 # Shadowsocks
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/protocols/shadowsocks.html
+[3]: ../../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/protocols/shadowsocks.html
+[5]: ../../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html
 
 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含传入和传出两部分，兼容大部分其它版本的实现。
 
@@ -26,7 +33,7 @@
 * 名称：shadowsocks
 * 类型：Inbound / Outbound
 
-## 传入协议配置：
+## 传入协议配置 {#inbound}
 
 ```javascript
 {
@@ -35,7 +42,8 @@
   "password": "密码",
   "udp": false,
   "level": 0,
-  "ota": true
+  "ota": true,
+  "network": "tcp"
 }
 ```
 
@@ -47,16 +55,17 @@
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
-  * `"aes-256-gcm"` (V2Ray 3.0+)
-  * `"aes-128-gcm"` (V2Ray 3.0+)
-  * `"chacha20-poly1305"` 或 `"chacha20-ietf-poly1305"` (V2Ray 3.0+)
+  * `"aes-256-gcm"`
+  * `"aes-128-gcm"`
+  * `"chacha20-poly1305"` 或 `"chacha20-ietf-poly1305"`
 * `password`: 密码，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
-* `udp`: `true` / `false`，是否开启 UDP 转发，默认值为 `false`。
+* `udp` (已过时，使用`network`替代): `true` / `false`，是否开启 UDP 转发，默认值为 `false`。
 * `level`: 用户等级，默认值为 `0`。如果是自用的 VPS，可以设成 `1`。详见[本地策略](../policy.md)。
 * `ota`: `true` / `false`，是否强制 OTA，默认模式为自动，当指定了 `true` / `false` 时，则为强制不启用或启用。
   * 当使用 AEAD 时，`ota` 设置无效
+* `network` (V2Ray 3.16+): 指定服务器的网络协议类型，可选值为`“tcp”`或`“udp”`或`"tcp,udp"`。默认值为`"tcp"`。
 
-## 传出协议配置
+## 传出协议配置 {#outbound}
 
 ```javascript
 {

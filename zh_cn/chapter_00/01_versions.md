@@ -1,6 +1,97 @@
 # 更新日志
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/versions.html
+[3]: ../resources/german.svg
+[4]: https://www.v2ray.com/de/welcome/versions.html
+[5]: ../resources/russian.svg
+[6]: https://www.v2ray.com/ru/welcome/versions.html
+
+## 2018.08.24 v3.36
+
+* 大幅提升了路由中子域名（`domain:`）匹配的效率。
+* 路由中支持了完整域名匹配。
+
+## 2018.08.07 v3.34
+
+* 在大多数设备上有了更精确的内存控制
+
+## 2018.07.27 v3.32
+
+* 现在可以探测 BitTorrent 流量了。
+* 路由配置中新增了`protocol`选项用于按流量类型进行路由选择。
+* 路由配置中新增了`geosite:speedtest`用于适配所有的 Speedtest.net 公用服务器。
+
+## 2018.07.20 v3.31
+
+* 新增了 [Domain Socket 传输方式](../chapter_02/transport/domainsocket.md) (感谢 @xiaokangwang)。
+
+## 2018.07.13 v3.30
+
+* 解决了一个可能会导致 mKCP 断流的问题。
+* 感谢来自俄罗斯的朋友，我们现在有[俄语文档](https://www.v2ray.com/ru/)了。
+
+## 2018.07.06 v3.29
+
+* 新增了 MTProto 代理协议。
+
+## 2018.06.29 v3.27
+
+* DNS 支持了 EDNS client subnet。
+* DNS 的静态 IP 匹配现在支持子域名了。
+
+## 2018.06.15 v3.26
+
+* 新增了 Dragonfly BSD 的预编译版本。
+
+## 2018.06.01 v3.24
+
+* JSON 配置中新增了用户级别的缓存控制选项。
+* mKCP 新增了 DTLS 伪装。
+* TLS 现在默认只使用 TLS 1.3 推荐的加密套件。
+
+## 2018.05.25 v3.23
+
+* JSON 配置文件中，端口支持从环境变量加载。
+* JSON 配置文件支持从指定文件加载 IP 和域名。
+
+## 2018.04.20 v3.19
+
+* 传入代理的流量统计。
+
+## 2018.04.13 v3.17
+
+* V2Ray 可直接加载来自 HTTP(s) 的配置文件。
+* V2Ray 的 TLS 可使用 CA 证书自动为任意域名签发新的证书。
+* [HTTP/2](../chapter_02/transport/h2.md) 传输方式。
+
+## 2018.04.06 v3.16
+
+* [统计信息](../chapter_02/stats.md)。开启方式略麻烦，请仔细看文档。
+* Shadowsocks 传入协议现在可以只监听 UDP 端口而不监听 TCP 了。强烈建议不在同一端口上同时监听 TCP 和 UDP。
+
+## 2018.03.02 v3.11
+
+* VMess Inbound 提供了一个选项，用于禁止客户端使用不安全的加密方式。
+* 提供了 ARMv7 编译版。
+* 提供了不要求 FPU 的 MIPS 编译版。
+
+## 2018.02.23 v3.10
+
+* 日志格式修改，每条日志前添加了 Session ID，用于区分不同的代理请求。
+* 修复了一些问题。
+
+## 2018.02.16 v3.9
+
+* 新年快乐!
+* 修复了一些问题。
+
+## 2018.02.09 v3.7
+
+* 开发者预览：[远程控制](../chapter_02/api.md)。
+* 修复了一些问题。
 
 ## 2017.12.29 v3.5
 
@@ -73,7 +164,7 @@
 * 提升了 Mux 的性能。
 * Mux 中可以配置并发连接数了。
 * 提升了 HTTP 代理的性能。
-* 移除了 connectionResuse 的配置（由 Mux 替代）。
+* 移除了 connectionReuse 的配置（由 Mux 替代）。
 
 ## 2017.04.08 v2.22
 

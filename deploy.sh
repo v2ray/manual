@@ -2,7 +2,7 @@
 
 set -x
 
-curl -sL https://deb.nodesource.com/setup_7.x | bash -
+curl -sL https://deb.nodesource.com/setup_8.x | bash -
 apt-get update
 apt-get -y install jq git file nodejs build-essential
 
@@ -11,7 +11,6 @@ function build_dir {
   pushd $DIR
   rsync -rv ../_layouts/ ./_layouts/
   rsync -rv ../resources/ ./resources/
-  cp ../donor.md ./donor.md
   gitbook init
   gitbook install
   gitbook build
@@ -30,10 +29,12 @@ cd manual
 curl -o "./resources/github-release.svg" "https://img.shields.io/github/release/v2ray/v2ray-core.svg"
 
 npm install gitbook-cli -g
+npm install gitbook-plugin-ga
 
 build_dir zh_cn
 build_dir en
-build_dir eng_zh_cn
+build_dir de
+build_dir ru
 
 TARGET_DIR=_v2ray_com
 
@@ -43,11 +44,14 @@ rm -rf ${TARGET_DIR}/*
 cp -r ./zh_cn/_book/* ${TARGET_DIR}/
 mkdir ${TARGET_DIR}/en/
 cp -r ./en/_book/* ${TARGET_DIR}/en/
-mkdir ${TARGET_DIR}/eng/
-cp -r ./eng_zh_cn/_book/* ${TARGET_DIR}/eng/
+mkdir ${TARGET_DIR}/de/
+cp -r ./de/_book/* ${TARGET_DIR}/de/
+mkdir ${TARGET_DIR}/ru/
+cp -r ./ru/_book/* ${TARGET_DIR}/ru/
 cp -r ./_dev/* ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
+cp -r ./resources/* ${TARGET_DIR}/resources/
 
 pushd ${TARGET_DIR}
 git config user.name "V2Ray Auto Build"

@@ -1,13 +1,20 @@
 # Socks
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/socks.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/protocols/socks.html
+[3]: ../../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/protocols/socks.html
+[5]: ../../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/protocols/socks.html
 
 标准 Socks 协议实现，兼容 [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)、Socks 4a 和 [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)。
 
 * 名称：socks
 * 类型：Inbound / Outbound
 
-## Socks 传出协议配置
+## 传出协议配置 {#outbound}
 
 ```javascript
 {
@@ -40,7 +47,7 @@
 * 当一个服务器指定了用户时，Socks 客户端会使用此用户信息进行认证；如未指定，则不进行认证。
 * 仅支持连接到 Socks 5 服务器。
 
-## Socks 传入协议配置
+## 传入协议配置 {#inbound}
 
 ```javascript
 {

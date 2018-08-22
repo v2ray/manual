@@ -1,6 +1,15 @@
 # Configuration
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/index.html
+[3]: ../resources/chinese.svg
+[4]: https://www.v2ray.com/chapter_02/index.html
+[5]: ../resources/german.svg
+[6]: https://www.v2ray.com/de/configuration/index.html
+[7]: ../resources/russian.svg
+[8]: https://www.v2ray.com/ru/configuration/index.html
 
 V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
 
@@ -23,4 +32,4 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 Notice:
 
 1. A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
-1. V2Ray supports comments in JSON, annotated by "//" or "/* */".
+1. V2Ray supports comments in JSON, annotated by "//" or "/\* \*/".

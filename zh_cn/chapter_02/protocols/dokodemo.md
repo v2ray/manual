@@ -1,6 +1,13 @@
 # Dokodemo-door
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/dokodemo.html)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: ../../resources/english.svg
+[2]: https://www.v2ray.com/en/configuration/protocols/dokodemo.html
+[3]: ../../resources/german.svg
+[4]: https://www.v2ray.com/de/configuration/protocols/dokodemo.html
+[5]: ../../resources/russian.svg
+[6]: https://www.v2ray.com/ru/configuration/protocols/dokodemo.html
 
 Dokodemo door（任意门）是一个传入数据协议，它可以监听一个本地端口，并把所有进入此端口的数据发送至指定服务器的一个端口，从而达到端口映射的效果。
 
@@ -32,7 +39,7 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
   * 支持 UDP/IPv4 连接，需要 root (CAP\_NET\_ADMIN) 权限。
 * `userLevel`: 用户等级，所有连接都会使用这个用户等级。
 
-## 透明代理配置样例
+## 透明代理配置样例 {#example}
 
 V2Ray 中增加一个 dokodemo-door 的传入协议：
 

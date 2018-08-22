@@ -1,6 +1,101 @@
 # Version History
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
+[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8] [![Translate][9]][10]
+
+[1]: ../resources/english.svg
+[2]: https://www.v2ray.com/en/welcome/versions.html
+[3]: ../resources/chinese.svg
+[4]: https://www.v2ray.com/chapter_00/01_versions.html
+[5]: ../resources/german.svg
+[6]: https://www.v2ray.com/de/welcome/versions.html
+[7]: ../resources/russian.svg
+[8]: https://www.v2ray.com/ru/welcome/versions.html
+[9]: ../resources/lang.svg
+[10]: https://crowdin.com/project/v2ray
+
+## 2018.08.24 v3.36
+
+* Great performance improvement on subdomain matching (`domain:`) in routing.
+* Full domain matching is now supported in routing.
+
+## 2018.08.07 v3.34
+
+* Better memory management on most devices.
+
+## 2018.07.27 v3.32
+
+* BitTorrent traffic can now be sniff'ed.
+* New `protocol` option in routing rules for protocol-based routing.
+* New `geosite:speedtest` option in routing rules to match all public servers of speedtest.net.
+
+## 2018.07.20 v3.31
+
+* New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
+
+## 2018.07.13 v3.30
+
+* Fix an issue that may cause broken connections in mKCP.
+* Thanks to [our friends](https://crowdin.com/project/v2ray) who speak Russian. Now our documents are in [Russian](https://www.v2ray.com/ru/).
+
+## 2018.07.06 v3.29
+
+* New inbound and outbound for MTProto proxy.
+
+## 2018.06.29 v3.27
+
+* DNS now supports EDNS client subnet.
+* DNS static host now supports sub-domain matching.
+
+## 2018.06.15 v3.26
+
+* Add Dragonfly BSD release.
+
+## 2018.06.01 v3.24
+
+* Internal buffer size (per connection) can now be configured in JSON configuration.
+* mKCP now supports DTLS 1.2 header.
+* TLS transport now only support cipher suites in TLS 1.3 spec.
+
+## 2018.05.25 v3.23
+
+* In JSON configuration, port can now be specified from env variables.
+* JSON config now supports to load domains and IPs from specified files.
+
+## 2018.04.20 v3.19
+
+* Traffic stats for inbound proxies.
+
+## 2018.04.13 v3.17
+
+* V2Ray can load config file from HTTP(s).
+* TLS in V2Ray can issue new certificates by provided CA certificates for domains in incoming requests.
+* [HTTP/2](../configuration/transport/h2.md) transport.
+
+## 2018.04.06 v3.16
+
+* [Statistics](../configuration/stats.md).
+* Shadowsocks inbound now can be configured to only listen on UDP. Strongly recommend to not listen on both TCP and UDP on the same port.
+
+## 2018.03.02 v3.11
+
+* A new settings is introduced in VMess inbound, to forbid client using insecure encryption methods.
+* Offers ARMv7 release.
+* Offers MIPS release that doesn't require FPU.
+
+## 2018.02.23 v3.10
+
+* Log entries now contain session ID to distinguish proxy sessions.
+* Bug fixes.
+
+## 2018.02.15 v3.9
+
+* Happy New Year!
+* Bug fixes.
+
+## 2018.02.09 v3.7
+
+* Developer preview: [Remote API](../configuration/api.md)。
+* Bug fixes.
 
 ## 2017.12.29 v3.5
 
@@ -65,8 +160,8 @@
 
 ## 2017.04.21 v2.24
 
-* Stablize Mux.
-* Improves memory effeciency.
+* Stabilize Mux.
+* Improves memory efficiency.
 
 ## 2017.04.15 v2.23
 
@@ -136,7 +231,7 @@
 
 ## 2016.12.05 v2.9
 
-* Fix compatiblity with Alpine Linux.
+* Fix compatibility with Alpine Linux.
 
 ## 2016.11.28 v2.8
 

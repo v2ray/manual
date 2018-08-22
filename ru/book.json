@@ -1,0 +1,17 @@
+{
+  "language": "ru",
+  "title": "Project V Official",
+  "plugins" : [
+    "-fontsettings",
+    "-search",
+    "-lunr",
+    
+    "anchors",
+    "ga"
+  ],
+  "pluginsConfig": {
+    "ga": {
+        "token": "UA-73620536-1"
+    }
+  }
+}

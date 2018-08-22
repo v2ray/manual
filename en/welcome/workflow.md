@@ -6,7 +6,7 @@
 
 Same as other proxies, you need a proxy server which runs V2Ray. Then you can connect to internet through that server from you PC, mobile or other devices.
 
-![](../resources/direct.png)
+![direct](../resources/direct.png)
 
 V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
 
@@ -14,13 +14,13 @@ V2Ray supports connections from multiple devices at the same time, with optional
 
 In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
 
-![](../resources/relay.png)
+![relay](../resources/relay.png)
 
 ## Internal
 
 The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
 
-![](../resources/internal.svg)
+![internal](../resources/internal.svg)
 
 Notes:
 

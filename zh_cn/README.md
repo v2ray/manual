@@ -1,6 +1,13 @@
 # Project V
 
-![Chinese](resources/chinesec.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/)
+[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+
+[1]: resources/english.svg
+[2]: https://www.v2ray.com/en/
+[3]: resources/german.svg
+[4]: https://www.v2ray.com/de/
+[5]: resources/russian.svg
+[6]: https://www.v2ray.com/ru/
 
 Project V 包含一系列工具，帮助你打造专属的定制网络体系。
 
@@ -35,4 +42,4 @@ V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 ## 版权声明
 
-本站点所有内容基于[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/)进行许可。
+本站点所有内容基于[知识共享署名 4.0 国际许可协议](https://creativecommons.org/licenses/by/4.0/deed.zh)进行许可。
