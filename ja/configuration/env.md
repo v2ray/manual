@@ -28,3 +28,16 @@ This variable specifies a directory where geoip.dat and geosite.dat files are.
 * Default value: Same directory where v2ray is.
 
 This variable specifies a directory where config.json is.
+
+## Scatter Reading {#scatter-io}
+
+* Name: `v2ray.buf.readv` or `V2RAY_BUF_READV`
+* Default value: `auto`
+
+V2Ray 3.37 uses Scatter/Gather IO. This feature will use less memory when connection speed is over 100 MByte/s. Possible values are: `auto`, `enable` and `disable`.
+
+* `enable`: Enable scatter reading.
+* `disable`: Disable scatter reading.
+* `auto`: Only enable on Windows, MacOS, Linux when CPU is x86, AMD64 or s390x.
+
+When connection speed is less than 100 MByte/s, no matter whether this is enabled or not, there is no obvious difference in terms of memory usage.
