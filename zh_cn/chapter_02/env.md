@@ -35,3 +35,16 @@ V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。
 * 默认值: 和 v2ray 文件同路径
 
 这个环境变量指定了一个文件夹位置，这个文件夹应当包含 config.json 文件。
+
+## 分散读取 {#scatter-io}
+
+* 名称：`v2ray.buf.readv` 或 `V2RAY_BUF_READV`
+* 默认值：`auto`
+
+V2Ray 3.37 开始使用 Scatter/Gather IO，这一特性可以在大流量（超过 100 MByte/s）的时候依然使用较低的内存。可选的值有`auto`、`enable`和`disable`。
+
+* `enable`: 强制开启分散读取特性。
+* `disable`: 强制关闭分散读取特性
+* `auto`: 仅在 Windows、MacOS、Linux 并且 CPU 平台为 x86、AMD64、s390x 时，开启此特性。
+
+在流量没有达到 100 MByte/s 时，开启与否在内存使用上没有明显的差异。

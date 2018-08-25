@@ -48,7 +48,7 @@
       * `"aes-128-cfb"`
       * `"aes-128-gcm"`：推荐在 PC 上使用
       * `"chacha20-poly1305"`：推荐在手机端使用
-      * `"auto"`：默认值，自动选择（运行框架为amd64和s390x时为aes-128-gcm加密方式，其他情况则为chacha20-poly1305加密方式）
+      * `"auto"`：默认值，自动选择（运行框架为 AMD64、ARM64 或 s390x 时为aes-128-gcm加密方式，其他情况则为 Chacha20-Poly1305 加密方式）
       * `"none"`：不加密
 
 ## 传入协议配置 {#inbound}

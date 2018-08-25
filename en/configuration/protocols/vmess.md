@@ -50,7 +50,7 @@ Where:
       * `"aes-128-cfb"`
       * `"aes-128-gcm"`: Recommended for PC.
       * `"chacha20-poly1305"`: Recommended for mobile.
-      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64 and S390x, or `chacha20-poly1305` otherwise.
+      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
       * `"none"`: Traffic is not encrypted at all.
 
 ## Inbound Proxy Configuration
