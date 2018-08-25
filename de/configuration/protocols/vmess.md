@@ -41,7 +41,7 @@ Wo:
       * `"aes-128-cfb"`
       * `"aes-128-gcm"`: Empfohlen für PC.
       * `"chacha20-poly1305"`: Empfohlen für Mobilgeräte.
-      * `"auto"`: Standardwert. Verwenden Sie andernfalls `aes-128-gcm` auf AMD64 und S390x oder `chacha20-poly1305`.
+      * `"auto"`: Standardwert. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
       * `"none"`: Der Verkehr ist überhaupt nicht verschlüsselt.
 
 ## Eingehende Proxy-Konfiguration
