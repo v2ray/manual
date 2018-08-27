@@ -11,6 +11,7 @@
 * [喵帕斯](https://xn--i2ru8q2qg.com/): V2Ray 小范围内测中。
 * [蓝岸](https://xn--sjt174g.com/): 基于 V2Ray 的网络加速服务。优惠码：v2ray
 * [多数派](https://dspi.io/aff.php?aff=7): 基于V2RAY的全新的网络加速服务
+* [V2rayPro](https://myv2.us): 基于 V2Ray 的网络加速服务。专属优惠码：v2ray.com
 
 ## 域名相关 {#domain}
 
