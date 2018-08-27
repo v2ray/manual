@@ -17,6 +17,7 @@
 
 * Performance of reading network connection in optilized. See [Environment Variables](../configuration/env.md)。
 * VMess uses AES-128-GCM by default on ARM64.
+* mKCP has a new WireGuard header.
 * Built by Go 1.11.
 
 ## 2018.08.24 v3.36

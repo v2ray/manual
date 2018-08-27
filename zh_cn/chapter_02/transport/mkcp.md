@@ -49,6 +49,7 @@ mKCP 使用 UDP 来模拟 TCP 连接，请确定主机上的防火墙配置正�
     * `"utp"`: 伪装成 uTP 数据包，会被识别为 BT 下载数据。
     * `"wechat-video"`: 伪装成微信视频通话的数据包。
     * `"dtls"` (V2Ray 3.24+): 伪装成 DTLS 1.2 数据包。
+    * `"wireguard"` (V2Ray 3.37+): 伪装成 WireGuard 数据包。(并不是真正的 WireGuard 协议)
 
 ## 小贴士 {#tip}
 
