@@ -42,6 +42,7 @@ mKCP - это надежный потоковый протокол. Основа
     * `"utp"`: Маскировка под uTP трафик. Со стороны выглядит как трафик от Bittorrent.
     * `"wechat-video"`: Маскировка под WeChat.
     * `"dtls"` (V2Ray 3.24+): Маскировка под пакеты DTLS 1.2.
+    * `"wireguard"` (V2Ray 3.37+): Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
 
 ## Замечания {#tips}
 
