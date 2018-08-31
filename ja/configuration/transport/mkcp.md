@@ -41,8 +41,8 @@ Where:
     * `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
     * `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
     * `"wechat-video"`: Obfuscated to WeChat traffic.
-    * `"dtls"` (V2Ray 3.24+): Obfuscated as DTLS 1.2 packets.
-    * `"wireguard"` (V2Ray 3.37+): Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
+    * `"dtls"`: Obfuscated as DTLS 1.2 packets.
+    * `"wireguard"` (V2Ray 3.38+): Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
 
 ## Tips {#tips}
 
