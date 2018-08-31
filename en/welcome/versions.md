@@ -13,11 +13,14 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.09.07 v3.38
+
+* mKCP has a new WireGuard header.
+
 ## 2018.08.31 v3.37
 
 * Performance of reading network connection in optilized. See [Environment Variables](../configuration/env.md)。
 * VMess uses AES-128-GCM by default on ARM64.
-* mKCP has a new WireGuard header.
 * Built by Go 1.11.
 
 ## 2018.08.24 v3.36

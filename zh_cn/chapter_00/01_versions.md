@@ -9,11 +9,14 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
+## 2018.09.07 v3.38
+
+* mKCP 中新增了 WireGuard 伪装。
+
 ## 2018.08.31 v3.37
 
 * 优化了读取网络连接时的性能，见[环境变量](../chapter_02/env.md)。
 * VMess 在 ARM64 平台上将默认使用 AES-128-GCM 作为加密方式。
-* mKCP 中新增了 WireGuard 伪装。
 * 使用 Go 1.11 编译。
 
 ## 2018.08.24 v3.36
