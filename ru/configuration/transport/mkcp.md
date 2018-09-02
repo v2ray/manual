@@ -41,8 +41,8 @@ mKCP - это надежный потоковый протокол. Основа
     * `"srtp"`: Маскировка под SRTP трафик. Для прослушивающих выглядит как видеозвонок, например из Facetime.
     * `"utp"`: Маскировка под uTP трафик. Со стороны выглядит как трафик от Bittorrent.
     * `"wechat-video"`: Маскировка под WeChat.
-    * `"dtls"` (V2Ray 3.24+): Маскировка под пакеты DTLS 1.2.
-    * `"wireguard"` (V2Ray 3.37+): Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
+    * `"dtls"`: Obfuscated as DTLS 1.2 packets.
+    * `"wireguard"` (V2Ray 3.38+): Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
 
 ## Замечания {#tips}
 
