@@ -2,9 +2,10 @@
 
 [![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
-## 2018.09.07 v3.38
+## 2018.09.03 v3.38
 
 * mKCP has a new WireGuard header.
+* Fix softfloat binaries in mips/mips64.
 
 ## 2018.08.31 v3.37
 
