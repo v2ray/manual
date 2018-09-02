@@ -13,7 +13,7 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
-## 2018.09.07 v3.38
+## 2018.09.03 v3.38
 
 * mKCP has a new WireGuard header.
 * Fix softfloat binaries in mips/mips64.
