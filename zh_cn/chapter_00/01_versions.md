@@ -9,9 +9,10 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
-## 2018.09.07 v3.38
+## 2018.09.03 v3.38
 
 * mKCP 中新增了 WireGuard 伪装。
+* 修复了 mips/mips64 中 softfloat 版本的编译问题。
 
 ## 2018.08.31 v3.37
 

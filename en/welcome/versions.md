@@ -16,6 +16,7 @@
 ## 2018.09.07 v3.38
 
 * mKCP has a new WireGuard header.
+* Fix softfloat binaries in mips/mips64.
 
 ## 2018.08.31 v3.37
 
