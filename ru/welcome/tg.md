@@ -4,9 +4,8 @@
 
 Project V предоставляет следующие группы для разных типов обсуждений.
 
-1. [Разработка](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ): Обсуждение развития Project V и планов на будущее.
-2. [Использование](https://telegram.me/projectv2ray): Использование Project V.
-3. [Другое](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Другие темы.
+1. [Usage](https://telegram.me/projectv2ray): For Project V usages.
+2. [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Other topics.
 
 Также обратите внимание на [канал с объявлениями от Project V](https://t.me/v2msg).
 
