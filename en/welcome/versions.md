@@ -13,6 +13,10 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.09.14 v3.40
+
+* New socket options in transport configuration. It can be used to setup VPNs.
+
 ## 2018.09.03 v3.38
 
 * mKCP has a new WireGuard header.

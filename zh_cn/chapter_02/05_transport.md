@@ -109,7 +109,10 @@
   "kcpSettings": {},
   "wsSettings": {},
   "httpSettings": {},
-  "dsSettings": {}
+  "dsSettings": {},
+  "sockopt": {
+    "mark": 0,
+  }
 }
 ```
 
@@ -123,19 +126,21 @@
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
   * `allowInsecureCiphers` (V2Ray 3.24+): 是否允许不安全的加密方式。默认情况下 TLS 只使用 TLS 1.3 推荐的加密算法套件，开启这一选项会增加一些与 TLS 1.2 兼容的加密套件。
   * `certificates`: 证书列表，其中每一项表示一个证书：
-    * `usage` (V2Ray 3.17+): 证书用途，默认值为`"encipherment"`，可选值如下：
+    * `usage`: 证书用途，默认值为`"encipherment"`，可选值如下：
       * `"encipherment"`: 证书用于 TLS 认证和加密。
       * `"verify"`: 证书用于验证远端 TLS 的证书。当使用此项时，当前证书必须为 CA 证书。暂不支持 Windows 平台。
       * `"issue"`: 证书用于签发其它证书。当使用此项时，当前证书必须为 CA 证书。
     * `certificateFile`: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
-    * `certificate` (V2Ray 3.17+): 证书内容，格式如样例所示。`certificate`和`certificateFile`二者选一。
+    * `certificate`: 证书内容，格式如样例所示。`certificate`和`certificateFile`二者选一。
     * `keyFile`: 密钥文件，如使用 OpenSSL 生成，后缀名为 .key。目前暂不支持需要密码的 key 文件。
-    * `key` (V2Ray 3.17+): 密钥内容，格式如样例如示。`key`和`keyFile`二者选一。
+    * `key`: 密钥内容，格式如样例如示。`key`和`keyFile`二者选一。
 * `tcpSettings`: 当前连接的 TCP 配置，仅当此连接使用 TCP 时有效。配置内容与上面的全局配置相同。
 * `kcpSettings`: 当前连接的 mKCP 配置，仅当此连接使用 mKCP 时有效。配置内容与上面的全局配置相同。
 * `wsSettings`: 当前连接的 WebSocket 配置，仅当此连接使用 WebSocket 时有效。配置内容与上面的全局配置相同。
 * `httpSettings`: 当前连接的 HTTP/2 配置，仅当此连接使用 HTTP/2 时有效。配置内容与上面的全局配置相同。
 * `dsSettings`: 当前连接的 Domain socket 配置，仅当此连接使用 Domain socket 时有效。配置内容与上面的全局配置相同。
+* `sockopt` (V2Ray 3.40+): 连接选项，可用的配置项有:
+  * `mark`: 一个整数。当其值非零时，在传出连接上标记 SO_MARK。仅适用于 Linux 系统。
 
 ## 小贴士 {#tip}
 
