@@ -140,7 +140,7 @@
 * `httpSettings`: 当前连接的 HTTP/2 配置，仅当此连接使用 HTTP/2 时有效。配置内容与上面的全局配置相同。
 * `dsSettings`: 当前连接的 Domain socket 配置，仅当此连接使用 Domain socket 时有效。配置内容与上面的全局配置相同。
 * `sockopt` (V2Ray 3.40+): 连接选项，可用的配置项有:
-  * `mark`: 一个整数。当其值非零时，在传出连接上标记 SO_MARK。仅适用于 Linux 系统。
+  * `mark`: 一个整数。当其值非零时，在传出连接上标记 SO_MARK。仅适用于 Linux 系统。需要 CAP_NET_ADMIN 权限。
 
 ## 小贴士 {#tip}
 
