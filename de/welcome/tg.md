@@ -4,9 +4,8 @@
 
 Projekt V bietet die folgenden Gruppen für verschiedene Arten von Diskussionen.
 
-1. [Entwicklung](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ): Diskussion über die Entwicklung und Zukunftspläne von Project V.
-2. [Verwendung](https://telegram.me/projectv2ray): Für Projekt V-Verwendungen.
-3. [Andere](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Andere Themen.
+1. [Usage](https://telegram.me/projectv2ray): For Project V usages.
+2. [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Other topics.
 
 Bitte folgen Sie auch [Projekt V Ankündigung](https://t.me/v2msg) für Nachrichten.
 
