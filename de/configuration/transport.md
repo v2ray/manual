@@ -102,7 +102,10 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
   "kcpSettings": {},
   "wsSettings": {},
   "httpSettings": {},
-  "dsSettings": {}
+  "dsSettings": {},
+  "sockopt": {
+    "mark": 0
+  }
 }
 ```
 
@@ -129,6 +132,8 @@ Where:
 * `wsSettings`: WebSocket-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den WebSocket-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 * `httpSettings`: HTTP / 2-Transportkonfiguration für den aktuellen Proxy. Nur wirksam, wenn der Proxy den HTTP / 2-Transport verwendet. Die Konfiguration ist dieselbe wie in der globalen Konfiguration.
 * `dsSettings`: Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport.
+* `sockopt` (V2Ray 3.40+): Socket options 
+  * `mark`: An integer. If non-zero, the value will be set to outbound connections via socket option SO_MARK. Only apply on Linux and requires CAP_NET_ADMIN permission.
 
 ## Tips {#tips}
 
