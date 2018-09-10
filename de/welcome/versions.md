@@ -5,6 +5,7 @@
 ## 2018.09.14 v3.40
 
 * New socket options in transport configuration. It can be used to setup VPNs.
+* New TCP Fast Open option in transport configuration.
 
 ## 2018.09.03 v3.38
 
