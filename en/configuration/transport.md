@@ -113,7 +113,8 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
   "httpSettings": {},
   "dsSettings": {},
   "sockopt": {
-    "mark": 0
+    "mark": 0,
+    "tcpFastOpen": false
   }
 }
 ```
@@ -143,6 +144,12 @@ Where:
 * `dsSettings`: Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport.
 * `sockopt` (V2Ray 3.40+): Socket options
   * `mark`: An integer. If non-zero, the value will be set to outbound connections via socket option SO_MARK. Only apply on Linux and requires CAP_NET_ADMIN permission.
+  * `tcpFastOpen`: Whether or not to enable [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fast_Open). When set to `true`, V2Ray enables TFO for current connection. When set to `false`, V2Ray disables TFO. If this entry doesn't exist, V2Ray uses default settings from operating system.
+    * Only apply on the following operating systems:
+      * Windows 10 (1604) or later
+      * Mac OS 10.11 / iOS 9 or later
+      * Linux 3.16 or later: Enabled by system default.
+    * Applicable for both inbound and outbound connections.
 
 ## Tips {#tips}
 

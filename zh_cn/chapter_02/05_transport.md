@@ -112,6 +112,7 @@
   "dsSettings": {},
   "sockopt": {
     "mark": 0,
+    "tcpFastOpen": false
   }
 }
 ```
@@ -122,7 +123,7 @@
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
   * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
-  * `alpn` (V2Ray 3.18+): 一个字符串数组，指定了 TLS 握手时指定的 ALPN 数值。默认值为`["http/1.1"]`。
+  * `alpn`: 一个字符串数组，指定了 TLS 握手时指定的 ALPN 数值。默认值为`["http/1.1"]`。
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
   * `allowInsecureCiphers` (V2Ray 3.24+): 是否允许不安全的加密方式。默认情况下 TLS 只使用 TLS 1.3 推荐的加密算法套件，开启这一选项会增加一些与 TLS 1.2 兼容的加密套件。
   * `certificates`: 证书列表，其中每一项表示一个证书：
@@ -140,7 +141,15 @@
 * `httpSettings`: 当前连接的 HTTP/2 配置，仅当此连接使用 HTTP/2 时有效。配置内容与上面的全局配置相同。
 * `dsSettings`: 当前连接的 Domain socket 配置，仅当此连接使用 Domain socket 时有效。配置内容与上面的全局配置相同。
 * `sockopt` (V2Ray 3.40+): 连接选项，可用的配置项有:
-  * `mark`: 一个整数。当其值非零时，在传出连接上标记 SO_MARK。仅适用于 Linux 系统。需要 CAP_NET_ADMIN 权限。
+  * `mark`: 一个整数。当其值非零时，在传出连接上标记 SO_MARK。
+    * 仅适用于 Linux 系统。
+    * 需要 CAP_NET_ADMIN 权限。
+  * `tcpFastOpen`: 是否启用 [TCP Fast Open](https://zh.wikipedia.org/wiki/TCP%E5%BF%AB%E9%80%9F%E6%89%93%E5%BC%80)。当其值为`true`时，强制开启TFO；当其它为`false`时，强制关闭TFO；当此项不存在时，使用系统默认设置。
+    * 仅在以下版本（或更新版本）的操作系统中可用:
+      * Windows 10 (1604)
+      * Mac OS 10.11 / iOS 9
+      * Linux 3.16: 系统已默认开启，无需要配置。
+    * 可用于传入传出连接。
 
 ## 小贴士 {#tip}
 
