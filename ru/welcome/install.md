@@ -6,8 +6,8 @@
 
 V2Ray доступен на следующих платформах:
 
-* Windows 7 and later (x86 / amd64)
-* Mac OS X 10.10 Yosemite and later (amd64)
+* Windows 7 и более поздние версии (x86 / amd64)
+* Mac OS X 10.10 Yosemite и более поздние версии (amd64)
 * Linux 2.6.23 и более поздние версии (x86 / amd64 / arm / arm64 / mips64 / mips) 
   * Включая, но не ограничиваясь, Debian 7/8, Ubuntu 12.04 / 14.04 и более поздние версии, CentOS 6/7, Arch Linux
 * FreeBSD (x86 / amd64)
@@ -89,7 +89,7 @@ go.sh поддерживает следующие параметры.
 
 V2Ray предоставляет два типа докер-контейнеров:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/): Contains official releases.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Contains latest code.
+* [v2ray/official](https://hub.docker.com/r/v2ray/official/): Официальные релизы.
+* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Свежайший код (в разработке).
 
 Контейнеры имеют ту же структуру, что и установленный Linux.
