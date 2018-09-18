@@ -18,8 +18,8 @@
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 10,
-          "security": "aes-128-cfb",
+          "alterId": 16,
+          "security": "auto",
           "level": 0
         }
       ]
@@ -35,7 +35,7 @@ Where:
   * `port`: Server port
   * `users`: An array where each entry is an VMess user 
     * `id`: User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32. Its value must be not larger than the one in corresponding Inbound.
+    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 16. Its value must be not larger than the one in corresponding Inbound.
     * `level`: User level. See [Policy](../policy.md) for more detail.
     * `security`: Encryption method. Options are: 
       * `"aes-128-gcm"`: Recommended for PC.
@@ -78,7 +78,7 @@ Where:
   * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
 * `default`: Optional default client configuration. Usually used in detour proxy. 
   * `level`: User level.
-  * `alterId`: Number of alternative IDs. Default value 64.
+  * `alterId`: Number of alternative IDs. Default value 64. Recommend 16.
 * `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
   * `none`
   * `aes-128-cfb`
