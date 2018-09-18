@@ -25,7 +25,7 @@
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 10,
+          "alterId": 16,
           "security": "auto",
           "level": 0
         }
@@ -58,7 +58,7 @@
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100,
+      "alterId": 16,
       "email": "love@v2ray.com"
     }
   ],
