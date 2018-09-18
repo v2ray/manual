@@ -38,11 +38,10 @@ Wo:
     * `alterId`: Anzahl der alternativen IDs. Die alternativen IDs werden deterministisch generiert. Standard auf 0. Maximal 65535. Empfehle 32. Its value must be not larger than the one in corresponding Inbound.
     * `level`: Benutzerebene. See [Policy](../policy.md) for more detail.
     * `security`: Verschlüsselungsmethode Optionen sind: 
-      * `"aes-128-cfb"`
-      * `"aes-128-gcm"`: Empfohlen für PC.
-      * `"chacha20-poly1305"`: Empfohlen für Mobilgeräte.
-      * `"auto"`: Standardwert. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
-      * `"none"`: Der Verkehr ist überhaupt nicht verschlüsselt.
+      * `"aes-128-gcm"`: Recommended for PC.
+      * `"chacha20-poly1305"`: Recommended for mobile.
+      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
+      * `"none"`: Traffic is not encrypted at all.
 
 ## Eingehende Proxy-Konfiguration
 

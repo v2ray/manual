@@ -38,7 +38,6 @@ Where:
     * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32. Its value must be not larger than the one in corresponding Inbound.
     * `level`: User level. See [Policy](../policy.md) for more detail.
     * `security`: Encryption method. Options are: 
-      * `"aes-128-cfb"`
       * `"aes-128-gcm"`: Recommended for PC.
       * `"chacha20-poly1305"`: Recommended for mobile.
       * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
