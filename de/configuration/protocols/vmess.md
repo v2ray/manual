@@ -18,8 +18,8 @@
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 10,
-          "security": "aes-128-cfb",
+          "alterId": 16,
+          "security": "auto",
           "level": 0
         }
       ]
@@ -35,7 +35,7 @@ Wo:
   * `port`: Server-Port
   * `users`: Ein Array, bei dem jeder Eintrag ein VMess-Benutzer ist 
     * `id`: Benutzer-ID in Form einer [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `alterId`: Anzahl der alternativen IDs. Die alternativen IDs werden deterministisch generiert. Standard auf 0. Maximal 65535. Empfehle 32. Its value must be not larger than the one in corresponding Inbound.
+    * `alterId`: Anzahl der alternativen IDs. Die alternativen IDs werden deterministisch generiert. Standard auf 0. Maximal 65535. Recommend 16. Its value must be not larger than the one in corresponding Inbound.
     * `level`: Benutzerebene. See [Policy](../policy.md) for more detail.
     * `security`: Verschlüsselungsmethode Optionen sind: 
       * `"aes-128-gcm"`: Recommended for PC.
@@ -78,7 +78,7 @@ Where:
   * `bis`: Das Tag eines eingehenden Proxy. See [Overview](../protocols.md). Wenn konfiguriert, schlägt VMess dem Client vor, den Umweg für weitere Verbindungen zu verwenden.
 * `default`: Optionale Standard-Client-Konfiguration. Wird normalerweise im Umleitungs-Proxy verwendet. 
   * `level`: Benutzerebene.
-  * `alterId`: Anzahl der alternativen IDs. Standardwert 64.
+  * `alterId`: Anzahl der alternativen IDs. Standardwert 64. Recommend 16.
 * `disableInsecureEncryption`: Forbids client for using insecure encryption methods. Wenn der Wert auf "true" gesetzt ist, werden die Verbindungen sofort beendet, wenn die folgende Verschlüsselung verwendet wird. Standardwert `false`. 
   * `none`
   * `aes-128-cfb`

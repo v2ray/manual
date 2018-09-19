@@ -2,6 +2,10 @@
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
+## 2018.09.21 v3.42
+
+* DNS now supports on-demand queries by domain.
+
 ## 2018.09.14 v3.40
 
 * New socket options in transport configuration. It can be used to setup VPNs.
