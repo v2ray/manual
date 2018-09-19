@@ -9,6 +9,10 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
+## 2018.09.21 v3.42
+
+* DNS 查询支持了按域名选择服务器的功能。
+
 ## 2018.09.14 v3.40
 
 * 传输配置中新增了连接选项，可用于配置 VPN。
