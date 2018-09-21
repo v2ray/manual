@@ -13,7 +13,7 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
-## 2018.09.21 v3.42
+## 2018.09.21 v3.43
 
 * DNS now supports on-demand queries by domain.
 
