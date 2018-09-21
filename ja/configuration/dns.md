@@ -34,7 +34,7 @@ Where:
   * Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
 * `servers`: List of DNS servers. Each server may be specified in two formats: 
   * Basic: A string such as `"8.8.8.8"` for DNS server address with port `53`. When the value is `"localhost"`, V2Ray queries localhost for DNS.
-  * Complete: 
+  * Complete (V2Ray 3.42+): 
     * `address`: DNS server address, such as `"8.8.8.8"`.
     * `port`: DNS server port, such as `53`.
     * `domains`: List of domains that are prioritized for this server. The format of a domain is the same as it is in [routing config](routing.md).
