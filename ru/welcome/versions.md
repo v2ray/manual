@@ -2,6 +2,10 @@
 
 [![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
+## 2018.09.28 v3.44
+
+* Dokodemo-door now supports TProxy in Linux.
+
 ## 2018.09.21 v3.43
 
 * DNS now supports on-demand queries by domain.
