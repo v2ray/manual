@@ -105,7 +105,8 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
   "dsSettings": {},
   "sockopt": {
     "mark": 0,
-    "tcpFastOpen": false
+    "tcpFastOpen": false,
+    "tproxy": "off"
   }
 }
 ```
@@ -141,6 +142,10 @@ Where:
       * Mac OS 10.11 / iOS 9 or later
       * Linux 3.16 or later: Enabled by system default.
     * Applicable for both inbound and outbound connections.
+  * `tproxy` (V2Ray 3.44+): Whether or not to enable transparent proxy on Linux. Choices are: 
+    * `"off"`: Default value. Not enable TProxy at all.
+    * `"redirect"`: Enable TProxy with Redirect mode. Supports TCP/IPv4 and UDP traffic.
+    * `"tproxy"`: Enable TProxy with TProxy mode. Supports TCP and UDP traffic.
 
 ## Tips {#tips}
 
@@ -148,3 +153,5 @@ Where:
 * When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. If not found, V2Ray will try to issue a new certificate using any existing certificate whose `usage` is `"issue"` for `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse.
 * When `usage` is `"verify"`, both `keyFile` and `key` can be empty.
 * Use `v2ctl cert -ca` command to generate a new CA certificate.
+* If `TProxy` is not set, and `allowRedirect` is set in [dokodemo-door](protocols/dokodemo.md), the value of `TProxy` will be set to `"redirect"` automatically.
+* Transparent proxy requires Root or CAP\_NET\_ADMIN permission.
