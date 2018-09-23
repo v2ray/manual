@@ -13,6 +13,10 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.09.28 v3.44
+
+* Dokodemo-door now supports TProxy in Linux.
+
 ## 2018.09.21 v3.43
 
 * DNS now supports on-demand queries by domain.

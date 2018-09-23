@@ -35,10 +35,7 @@ Where:
   * when `followRedirect` (see below) is `true`, `address` can be empty.
 * `port`: Port of the destination server. Integer.
 * `network`: Type of network, either "tcp" or "udp".
-* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination.
-  * Only works on Linux
-  * Supports TCP/IPv4 connections
-  * Supports UDP/IPv4 packets. Requires root (CAP\_NET\_ADMIN) permission
+* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
 * `userLevel`: User level. All connections share this level. See [Policy](../policy.md) for details.
 
 ## Examples for transparent proxy

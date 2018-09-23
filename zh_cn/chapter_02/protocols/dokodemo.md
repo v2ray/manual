@@ -33,10 +33,7 @@ Dokodemo door（任意门）是一个传入数据协议，它可以监听一个�
 * `port`: 指定服务器的端口，数值类型。
 * `network`: 指定服务器的网络协议类型，可选值为“tcp”或“udp”。
 * `timeout` (V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略): 传入数据的时间限制（秒），默认值为 300。
-* `followRedirect`: 当值为 `true` 时，dokodemo-door 会识别出由 iptables 转发而来的数据，并转发到相应的目标地址。
-  * 目前只支持 Linux。
-  * 支持 TCP/IPv4 连接。
-  * 支持 UDP/IPv4 连接，需要 root (CAP\_NET\_ADMIN) 权限。
+* `followRedirect`: 当值为 `true` 时，dokodemo-door 会识别出由 iptables 转发而来的数据，并转发到相应的目标地址。详见[传输配置](../05_transport.md)中的`tproxy`设置。
 * `userLevel`: 用户等级，所有连接都会使用这个用户等级。
 
 ## 透明代理配置样例 {#example}

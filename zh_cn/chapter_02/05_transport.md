@@ -112,7 +112,8 @@
   "dsSettings": {},
   "sockopt": {
     "mark": 0,
-    "tcpFastOpen": false
+    "tcpFastOpen": false,
+    "tproxy": "off"
   }
 }
 ```
@@ -150,6 +151,10 @@
       * Mac OS 10.11 / iOS 9
       * Linux 3.16: 系统已默认开启，无需要配置。
     * 可用于传入传出连接。
+  * `tproxy` (V2Ray 3.44+): 是否开启透明代理 (仅适用于 Linux)。可选的值有:
+    * `"redirect"`: 使用 Redirect 模式的透明代理。仅支持 TCP/IPv4 和 UDP 连接。
+    * `"tproxy"`: 使用 TProxy 模式的透明代理。支持 TCP 和 UDP 连接。
+    * `"off"`: 关闭透明代理。
 
 ## 小贴士 {#tip}
 
@@ -158,3 +163,5 @@
 * 当`usage`为`"verify"`时，`keyFile`和`key`可均为空。
 * 使用`v2ctl cert -ca`可以生成自签名的 CA 证书。
 * 在 Windows 平台上可以将自签名的 CA 证书安装到系统中，即可验证远端 TLS 的证书。
+* 当 [Dokodemo-door](protocols/dokodemo.md) 中指定了`followRedirect`，且`sockopt.tproxy`为空时，`sockopt.tproxy`的值会被设为`"redirect"`。
+* 透明代理需要 Root 或 CAP\_NET\_ADMIN 权限。
