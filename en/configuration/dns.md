@@ -32,7 +32,7 @@ Configuration:
     "8.8.4.4",
     "localhost"
   ],
-  "clientIp": "1.2.3.4",
+  "clientIp": "1.2.3.4"
 }
 ```
 
