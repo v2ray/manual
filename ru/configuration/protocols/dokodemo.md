@@ -26,7 +26,7 @@ Dokodemo-door также может работать (если настроен)
   * если `followRedirect` (см. ниже) `true`, `address` может быть пустым.
 * `port`: Порт сервера назначения. Целое число.
 * `network`: Тип сети: "tcp" или "udp".
-* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
+* `followRedirect`: Если установлено значение `true`, dokodemo-door распознает точку назначения TProxy и будет использовать её. См. `TProxy` в [Настройках доставки](../transport.md) для деталей.
 * ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень. Подробности: [Правила](../policy.md).
 
 ## Примеры для transparent proxy
