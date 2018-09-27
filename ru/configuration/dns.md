@@ -32,7 +32,7 @@ V2Ray имеет внутренний DNS-сервер, используемый
 * `hosts`: Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт. Формат домена: 
   * `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
   * `"domain:v2ray.com"`: По такой схеме будет разрешаться как заданный домен, так и его поддомены.
-* `servers`: List of DNS servers. Each server may be specified in two formats: 
+* `servers`: Список DNS-серверов. Каждый сервер может быть указан в двух форматах: 
   * Basic: A string such as `"8.8.8.8"` for DNS server address with port `53`. When the value is `"localhost"`, V2Ray queries localhost for DNS.
   * Complete (V2Ray 3.42+): 
     * `address`: DNS server address, such as `"8.8.8.8"`.
