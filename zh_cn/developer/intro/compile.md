@@ -12,8 +12,8 @@
   4. `export GOPATH=$HOME/work`
 3. 下载 V2Ray 源文件：`go get -u v2ray.com/core/...`
 4. 下载 V2Ray 扩展包：`go get -u v2ray.com/ext/...`
-5. 生成编译脚本：`go install v2ray.com/ext/tools/build/vbuild`
-6. 编译 V2Ray：`$GOPATH/bin/vbuild`
+5. `go build -o $GOPATH/bin/v2ray v2ray.com/core/main`
+6. `go build -o $GOPATH/bin/v2ctl v2ray.com/ext/tools/control/main`
 7. V2Ray 程序及配置文件会被放在 `$GOPATH/bin/v2ray-XXX` 文件夹下（XXX 视平台不同而不同）
 
 ## Arch Linux
@@ -23,8 +23,8 @@
    1. `export GOPATH=$HOME/work`
 3. `go get -u v2ray.com/core/...`
 4. `go get -u v2ray.com/ext/...`
-5. `go install v2ray.com/ext/tools/build/vbuild`
-6. `$GOPATH/bin/vbuild`
+5. `go build -o $GOPATH/bin/v2ray v2ray.com/core/main`
+6. `go build -o $GOPATH/bin/v2ctl v2ray.com/ext/tools/control/main`
 
 ## Debian / Ubuntu
 
