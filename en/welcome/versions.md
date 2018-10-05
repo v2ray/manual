@@ -13,6 +13,12 @@
 [9]: ../resources/lang.svg
 [10]: https://crowdin.com/project/v2ray
 
+## 2018.10.12 v3.47
+
+* Migrate to a new continuous delivery pipeline. Now supports the following distributions:
+  * [Snapcraft](https://snapcraft.io/v2ray-core)
+  * [Homebrew](https://github.com/v2ray/homebrew-v2ray)
+
 ## 2018.09.28 v3.44
 
 * Dokodemo-door now supports TProxy in Linux.

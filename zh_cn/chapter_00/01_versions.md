@@ -9,6 +9,12 @@
 [5]: ../resources/russian.svg
 [6]: https://www.v2ray.com/ru/welcome/versions.html
 
+## 2018.10.12 v.3.47
+
+* 升级了自动构建工具，更新或支持了以下安装源：
+  * [Snapcraft](https://snapcraft.io/v2ray-core)
+  * [Homebrew](https://github.com/v2ray/homebrew-v2ray)
+
 ## 2018.09.28 v3.44
 
 * Dokodemo-door 现已支持 Linux 的 TProxy。
