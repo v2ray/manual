@@ -24,6 +24,9 @@ Vorgefertigte Pakete finden Sie hier:
 
 1. Github Veröffentlichung: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
 2. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
+3. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
+4. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
+5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
 Alle Pakete sind im ZIP-Format. Laden Sie entsprechende Pakete herunter und entzippen Sie sie auf Ihrem System.
 
