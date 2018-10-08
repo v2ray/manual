@@ -1,16 +1,22 @@
+* * *
+
+refcn: chapter_00/command refen: welcome/command
+
+* * *
+
 # Befehlszeile
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/command.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/command.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/command.html)
 
 ## V2Ray
 
-V2Ray hat die folgenden Kommandozeilenparameter:
+V2Ray has the following commandline parameters:
 
 ```shell
 v2ray [-version] [-test] [-config = Konfiguration.json] [-format = json]
 ```
 
-Woher:
+Where:
 
 * `Version`: Nur die Version von V2Ray drucken und dann beenden.
 * `-test`: Konfiguration testen, Fehler ausgeben und dann beenden.
@@ -24,33 +30,33 @@ Woher:
 
 ## V2Ctl
 
-V2Ctl hat die folgenden Befehlszeilenparameter:
+V2Ctl has the following commandline parameters:
 
 ```shell
 v2ctl <command> <options>
 ```
 
-Verfügbare Befehle sind unten aufgeführt. Jeder Befehl hat seine eigenen Optionen.
+Available commands are listed below. Each command has its own options.
 
 ### Überprüfen
 
-`v2ctl verify [--sig = / Pfad / zu / sigfile] / file / to / verify`
+`v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
 
-Um die Signatur einer V2Ray-Binärdatei zu überprüfen.
+To verify the signature of a V2Ray binary.
 
-Optionen:
+Options:
 
 * `sig`: Pfad zur Signaturdatei. Der Standardwert ist die Datei ".sig" für den zu verifizierenden Pfad.
 * Erstes Argument: Die zu verifizierende Datei.
 
 ### Konfig
 
-`v2ctl Konfiguration`
+`v2ctl config`
 
-Keine Optionen. Dieser Befehl liest die Konfiguration im JSON-Format von stdin und schreibt dann die entsprechende Konfiguration im Protobuf-Format in stdout.
+No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
 
 ### UUID
 
-`v2ctl Uuid`
+`v2ctl uuid`
 
-Keine Optionen. Dieser Befehl druckt eine zufällige UUID.
+No options. This command prints a random UUID.
