@@ -1,6 +1,10 @@
-# Переменные окружения
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/env.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/env.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/env.html)
+refcn: chapter_02/env refen: configuration/env
+
+* * *
+
+# Переменные окружения
 
 V2Ray считывает следующие переменные среды.
 
