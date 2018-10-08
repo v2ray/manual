@@ -1,6 +1,10 @@
-# MTProto
+* * *
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/mtproto.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/mtproto.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/mtproto.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/mtproto.html)
+refcn: chapter_02/protocols/mtproto refen: configuration/protocols/mtproto
+
+* * *
+
+# MTProto
 
 MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
 
