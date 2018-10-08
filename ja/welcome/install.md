@@ -49,7 +49,7 @@ The following command assumes root permission.
 
 Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
 
-```shell
+```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
