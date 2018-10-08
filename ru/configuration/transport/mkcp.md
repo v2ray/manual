@@ -1,6 +1,10 @@
-# Доставка через mKCP
+* * *
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/mkcp.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/mkcp.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/mkcp.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/mkcp.html)
+refcn: chapter_02/transport/mkcp refen: configuration/transport/mkcp
+
+* * *
+
+# Доставка через mKCP
 
 mKCP - это надежный потоковый протокол. Основан на UDP.
 
