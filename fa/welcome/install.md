@@ -1,6 +1,10 @@
-# Download & Install
+* * *
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/install.html)
+refcn: chapter_00/install refen: welcome/install
+
+* * *
+
+# Download & Install
 
 ## Platform {#platform}
 
