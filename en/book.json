@@ -6,6 +6,7 @@
     "-search",
     "-lunr",
     "-highlight",
+    "-sharing",
 
     "anchors",
     "ga",
