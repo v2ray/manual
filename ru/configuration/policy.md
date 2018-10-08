@@ -1,12 +1,14 @@
+* * *
+
+refcn: chapter_02/policy refen: configuration/policy
+
+* * *
+
 # Локальная политика
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/policy.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/policy.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/policy.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/policy.html)
+Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-Локальная политика была добавлена в V2Ray 3.1.
-
-Локальная политика управляет параметрами V2Ray, например временем ожидания подключения. Политики могут применяться к отдельному уровню доступа пользователей или для всей системы.
-
-Конфигурация:
+Configuration:
 
 ```javascript
 {
@@ -27,7 +29,7 @@
 }
 ```
 
-Где:
+Where:
 
 * `level`: Ассоциативный массив, пары ключ-значение. Каждый ключ — строка с целым числом (это ограничения JSON), типа `"0"`, `"1"`, и т.д. Числовое значение — это пользовательский уровень. Каждое значение имеет следующие атрибуты: 
   * `handshake`: Таймаут на установление соединения, в секундах. По умолчанию `4`.
