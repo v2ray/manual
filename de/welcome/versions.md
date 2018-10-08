@@ -1,6 +1,10 @@
-# Versionsgeschichte
+* * *
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html)
+refcn: chapter_00/01_versions refen: welcome/versions
+
+* * *
+
+# Versionsgeschichte
 
 ## 2018.10.12 v3.47
 
