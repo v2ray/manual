@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/transport/domainsocket
+refen: configuration/transport/domainsocket
+---
+
 # Domain Socket Transport
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/transport/domainsocket.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/transport/domainsocket.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/transport/domainsocket.html
 
 Domain Socket uses standard Unix domain socket to transport data. Domain socket is system interal tranfer channel. It doesn't jam network buffer and may be a bit faster than trasnferring through local loopback network.
 

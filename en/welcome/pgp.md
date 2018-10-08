@@ -1,15 +1,9 @@
+---
+refcn: chapter_00/pgp
+refen: welcome/pgp
+---
+
 # Private Communication
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/pgp.html
-[3]: ../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_00/pgp.html
-[5]: ../resources/german.svg
-[6]: https://www.v2ray.com/de/welcome/pgp.html
-[7]: ../resources/russian.svg
-[8]: https://www.v2ray.com/ru/welcome/pgp.html
 
 Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
 

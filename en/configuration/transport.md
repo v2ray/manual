@@ -1,15 +1,9 @@
+---
+refcn: chapter_02/05_transport
+refen: configuration/transport
+---
+
 # Transport Settings
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/transport.html
-[3]: ../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_02/05_transport.html
-[5]: ../resources/german.svg
-[6]: https://www.v2ray.com/de/configuration/transport.html
-[7]: ../resources/russian.svg
-[8]: https://www.v2ray.com/ru/configuration/transport.html
 
 Transport is for how V2Ray sends and receives data from its peers. The responsiblity of a transport is to reliably transfer data to a peer. Usually a connection has matching transports on both endpoints. For example, if a V2Ray outbound uses WebSocket as its transport, the inbound it talks to also has to use WebSocket, otherwise a connection can't be established.
 
