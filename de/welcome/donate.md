@@ -1,6 +1,10 @@
-# Spende
+* * *
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/donate.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/donate.html)
+refcn: chapter_00/02_donate refen: welcome/donate
+
+* * *
+
+# Spende
 
 Projekt V ist ein gemeinnütziges Projekt. The source code and program can be used freely (mainly) under MIT licence. Wenn Sie dieses Projekt mögen, können Sie uns eine Tasse Kaffee kaufen.
 
