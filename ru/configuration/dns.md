@@ -1,6 +1,10 @@
-# DNS
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
+refcn: chapter_02/04_dns refen: configuration/dns
+
+* * *
+
+# DNS
 
 V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.
 
