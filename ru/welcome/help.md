@@ -1,6 +1,10 @@
-# Поддержка
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/help.html)
+refcn: chapter_00/help refen: welcome/help
+
+* * *
+
+# Поддержка
 
 Пожалуйста, ознакомьтесь со следующими рекомендациями для лучшего качества обсуждения и более быстрого решения.
 
