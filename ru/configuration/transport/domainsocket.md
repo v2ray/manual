@@ -1,6 +1,10 @@
-# Доставка через сокет домена
+* * *
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/domainsocket.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/domainsocket.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/domainsocket.html)
+refcn: chapter_02/transport/domainsocket refen: configuration/transport/domainsocket
+
+* * *
+
+# Доставка через сокет домена
 
 Сокет домена использует стандартный сокет домена Unix для доставки данных. Сокет домена - это внутрисистемный канал передачи данных. Он не создаёт задержек в сетевом буфере и может быть немного быстрее, чем передача через локальную петлю (loopback).
 
