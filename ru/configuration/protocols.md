@@ -1,6 +1,10 @@
-# Протоколы
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/02_protocols.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols.html)
+refcn: chapter_02/02_protocols refen: configuration/protocols
+
+* * *
+
+# Протоколы
 
 V2Ray поддерживает следующие протоколы:
 
