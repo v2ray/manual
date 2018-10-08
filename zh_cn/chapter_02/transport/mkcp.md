@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/transport/mkcp
+refen: configuration/transport/mkcp
+---
+
 # mKCP 传输方式
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/transport/mkcp.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/transport/mkcp.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/transport/mkcp.html
 
 mKCP 使用 UDP 来模拟 TCP 连接，请确定主机上的防火墙配置正确。
 

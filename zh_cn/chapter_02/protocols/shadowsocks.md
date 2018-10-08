@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/protocols/shadowsocks
+refen: configuration/protocols/shadowsocks
+---
+
 # Shadowsocks
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/protocols/shadowsocks.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/protocols/shadowsocks.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html
 
 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含传入和传出两部分，兼容大部分其它版本的实现。
 

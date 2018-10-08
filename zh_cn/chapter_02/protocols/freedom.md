@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/protocols/freedom
+refen: configuration/protocols/freedom
+---
+
 # Freedom
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/protocols/freedom.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/protocols/freedom.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/protocols/freedom.html
 
 Freedom 是一个传出数据协议，可以用来向任意网络发送（正常的） TCP 或 UDP 数据。
 

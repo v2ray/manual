@@ -1,15 +1,11 @@
+---
+refcn: chapter_02/protocols/vmess
+refen: configuration/protocols/vmess
+---
+
 # VMess
 
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/protocols/vmess.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/protocols/vmess.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/protocols/vmess.html
-
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
+[VMess](../../developer/protocols/vmess.md) 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
 
 * 名称：vmess
 * 类型：Inbound / Outbound

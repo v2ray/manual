@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/protocols/mtproto
+refen: configuration/protocols/mtproto
+---
+
 # MTProto
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/protocols/mtproto.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/protocols/mtproto.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/protocols/mtproto.html
 
 MTProto 是一个 Telegram 专用的代理协议。在 V2Ray 中可使用一组传入传出代理来完成 Telegram 数据的代理任务。
 

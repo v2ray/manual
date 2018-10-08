@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/protocols/blackhole
+refen: configuration/protocols/blackhole
+---
+
 # Blackhole
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/protocols/blackhole.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/protocols/blackhole.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/protocols/blackhole.html
 
 Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的传出，配合[路由（Routing）](../03_routing.md)一起使用，可以达到禁止访问某些网站的效果。
 
