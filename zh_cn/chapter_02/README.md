@@ -5,7 +5,9 @@ refen: configuration/index
 
 # 配置文件
 
-V2Ray 的配置文件为 JSON 格式，如果你已经熟悉 JSON 格式，可以跳过这一段。
+V2Ray 本身使用基于 [Protobuf](https://developers.google.com/protocol-buffers/) 的配置。由于 Protobuf 的文本格式不方便阅读，V2Ray 同时也支持 JSON 格式的配置。在运行之前，V2Ray 会自动将 JSON 转换为对应的 Protobuf。换言之，V2Ray 将来也可能会支持其它格式的配置。
+
+以下介绍一下基于 JSON 格式的配置。
 
 JSON，全称 [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON)，简而言之是 Javascript 中的对象（Object）。一个 JSON 文件包含一个完整的对象，以大括号“{”开头，大括号“}”结束。
 

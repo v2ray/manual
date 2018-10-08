@@ -1,17 +1,13 @@
+---
+refcn: chapter_02/index
+refen: configuration/index
+---
+
 # Configuration
 
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
+V2Ray uses [protobuf](https://developers.google.com/protocol-buffers/)-based configuration. Due the low readability of protobuf format, V2Ray also supports configuration in JSON. Before V2Ray runs, it automatically converts JSON config into protobuf. That being said, other configuration formats may be introduced in the furture.
 
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/index.html
-[3]: ../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_02/index.html
-[5]: ../resources/german.svg
-[6]: https://www.v2ray.com/de/configuration/index.html
-[7]: ../resources/russian.svg
-[8]: https://www.v2ray.com/ru/configuration/index.html
-
-V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
+Here we introduce the JSON-based configuration.
 
 JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
 
