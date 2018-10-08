@@ -49,7 +49,7 @@ Der folgende Befehl nimmt root-Berechtigung an.
 
 Führen Sie den folgenden Befehl aus, um V2Ray zu installieren. Wenn yum oder apt verfügbar ist, installiert das Skript unzip und daemon / systemd. Sie müssen V2Ray als Dienst ausführen. Sie müssen sie manuell installieren, wenn Ihr Linux-System yum oder apt nicht unterstützt.
 
-```shell
+```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
