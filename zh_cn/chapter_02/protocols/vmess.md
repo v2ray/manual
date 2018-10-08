@@ -88,7 +88,6 @@
   * `alterId`: 同 Inbound，默认值为`64`。推荐值`16`。
 * `disableInsecureEncryption`: 禁止客户端使用不安全的加密方式，当客户端指定下列加密方式时，服务器会主动断开连接。默认值为`false`。
   * `none`
-  * `aes-128-cfb`
 
 ## 小贴士 {#tip}
 

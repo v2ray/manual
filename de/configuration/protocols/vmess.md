@@ -81,7 +81,6 @@ Where:
   * `alterId`: Anzahl der alternativen IDs. Standardwert 64. Recommend 16.
 * `disableInsecureEncryption`: Forbids client for using insecure encryption methods. Wenn der Wert auf "true" gesetzt ist, werden die Verbindungen sofort beendet, wenn die folgende Verschlüsselung verwendet wird. Standardwert `false`. 
   * `none`
-  * `aes-128-cfb`
 
 ## Tipps
 

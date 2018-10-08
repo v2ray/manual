@@ -81,7 +81,6 @@ Where:
   * `alterId`: Number of alternative IDs. Default value 64. Recommend 16.
 * `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
   * `none`
-  * `aes-128-cfb`
 
 ## Tips
 
