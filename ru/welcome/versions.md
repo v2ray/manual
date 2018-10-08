@@ -1,6 +1,6 @@
 # История версий
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html)
 
 ## 2018.10.12 v3.47
 
