@@ -1,6 +1,10 @@
-# Shadowsocks
+* * *
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/shadowsocks.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html)
+refcn: chapter_02/protocols/shadowsocks refen: configuration/protocols/shadowsocks
+
+* * *
+
+# Shadowsocks
 
 Протокол [Shadowsocks](https://www.shadowsocks.org/) поддерживает входящие и исходящие соединения.
 
