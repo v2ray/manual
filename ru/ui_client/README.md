@@ -1,6 +1,10 @@
-# Клиенты Project V
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/index.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/index.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/index.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/index.html)
+refcn: ui_client/index refen: ui_client/index
+
+* * *
+
+# Клиенты Project V
 
 Кроме ядра V2ray, Project V включает в себя различные графические клиенты на многих платформах. Обратите внимание на список ниже, в подкатегориях много полезного.
 
