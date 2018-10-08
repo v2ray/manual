@@ -1,3 +1,8 @@
+---
+refcn: ui_client/android
+refen: ui_client/android
+---
+
 # Android Client
 
 [![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
