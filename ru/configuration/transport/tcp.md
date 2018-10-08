@@ -1,6 +1,10 @@
-# Доставка через TCP
+* * *
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/tcp.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/tcp.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/tcp.html)
+refcn: chapter_02/transport/tcp refen: configuration/transport/tcp
+
+* * *
+
+# Доставка через TCP
 
 Конфигурация:
 
