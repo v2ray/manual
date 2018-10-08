@@ -1,6 +1,10 @@
-# Быстрый старт
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html)
+refcn: chapter_00/start refen: welcome/start
+
+* * *
+
+# Быстрый старт
 
 Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
 
