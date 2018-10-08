@@ -1,15 +1,9 @@
+---
+refcn: chapter_00/tg
+refen: welcome/tg
+---
+
 # Telegram Group
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/tg.html
-[3]: ../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_00/tg.html
-[5]: ../resources/german.svg
-[6]: https://www.v2ray.com/de/welcome/tg.html
-[7]: ../resources/russian.svg
-[8]: https://www.v2ray.com/ru/welcome/tg.html
 
 Project V provides the following groups for different type of discussions.
 
