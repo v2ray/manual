@@ -1,6 +1,10 @@
-# Группа в Telegram
+* * *
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/tg.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/tg.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/tg.html)
+refcn: chapter_00/tg refen: welcome/tg
+
+* * *
+
+# Группа в Telegram
 
 Project V предоставляет следующие группы для разных типов обсуждений.
 
