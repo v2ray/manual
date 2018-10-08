@@ -5,13 +5,20 @@
     "-fontsettings",
     "-search",
     "-lunr",
+    "-highlight",
     
     "anchors",
-    "ga"
+    "ga",
+    "prism"
   ],
   "pluginsConfig": {
     "ga": {
         "token": "UA-73620536-1"
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-coy.css"
+      ]
     }
   }
 }

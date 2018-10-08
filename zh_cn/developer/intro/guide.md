@@ -112,7 +112,3 @@ v2ray-core
 
 * 一个文件包含一个主要类型，及其相关的私有函数等；
 * 测试相关的文件，如 Mock 等工具类，放入 testing 子目录；
-
-#### 与 Golang 官方建议冲突的地方
-
-* Golang 不建议使用单元测试（Unit Test）库，比如其它语言中常见的 assertEquals() 函数等；V2Ray 中为了节省时间，制作了一些常用函数来简化单元测试的开发，参见 [assert](https://godoc.org/v2ray.com/ext/assert) 包。

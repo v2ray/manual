@@ -2,7 +2,7 @@
 
 set -x
 
-curl -sL https://deb.nodesource.com/setup_8.x | bash -
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
 apt-get update
 apt-get -y install jq git file nodejs build-essential
 
