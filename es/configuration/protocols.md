@@ -1,6 +1,10 @@
-# Protocols
+* * *
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/02_protocols.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols.html)
+refcn: chapter_02/02_protocols refen: configuration/protocols
+
+* * *
+
+# Protocols
 
 V2Ray supports the following protocols:
 
