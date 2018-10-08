@@ -1,6 +1,10 @@
-# Blackhole
+* * *
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/blackhole.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/blackhole.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/blackhole.html)
+refcn: chapter_02/protocols/blackhole refen: configuration/protocols/blackhole
+
+* * *
+
+# Blackhole
 
 Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
 
