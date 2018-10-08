@@ -1,6 +1,6 @@
 # Private Kommunikation
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](.https://www.v2ray.com/chapter_00/pgp.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/pgp.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/pgp.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/pgp.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/pgp.html)
 
 Bitte senden Sie eine Nachricht an eine der folgenden Adressen, wenn Sie privat mit dem V2Ray-Team sprechen möchten.
 
