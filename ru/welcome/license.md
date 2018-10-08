@@ -1,6 +1,10 @@
-# Лицензия
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/license.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/license.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/license.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/license.html)
+refcn: chapter_00/license refen: welcome/license
+
+* * *
+
+# Лицензия
 
 Project V использует следующую лицензию.
 
