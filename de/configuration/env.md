@@ -1,6 +1,10 @@
-# Umgebungsvariablen
+* * *
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/env.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/env.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/env.html)
+refcn: chapter_02/env refen: configuration/env
+
+* * *
+
+# Umgebungsvariablen
 
 V2Ray liest die folgenden Umgebungsvariablen.
 
