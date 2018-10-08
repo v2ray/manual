@@ -13,7 +13,7 @@
 
 V2Ray 的程序文件的命令行参数如下：
 
-```shell
+```bash
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
@@ -34,7 +34,7 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 
 V2Ctl 命令行参数如下：
 
-```shell
+```bash
 v2ctl <command> <options>
 ```
 

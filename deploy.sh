@@ -30,6 +30,7 @@ curl -o "./resources/github-release.svg" "https://img.shields.io/github/release/
 
 npm install gitbook-cli -g
 npm install gitbook-plugin-ga
+npm install gitbook-plugin-prism
 
 build_dir zh_cn
 build_dir en

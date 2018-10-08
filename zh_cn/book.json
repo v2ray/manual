@@ -18,7 +18,13 @@
     "prism": {
       "css": [
         "prismjs/themes/prism-coy.css"
-      ]
+      ],
+      "lang": {
+        "objc": "objectivec",
+        "shell": "bash",
+        "text": "textile",
+        "plain": "textile"
+      }
     }
   }
 }
