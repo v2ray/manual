@@ -1,6 +1,10 @@
-# TCP Transport
+* * *
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/tcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/tcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/tcp.html)
+refcn: chapter_02/transport/tcp refen: configuration/transport/tcp
+
+* * *
+
+# TCP Transport
 
 Configuration:
 
