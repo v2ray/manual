@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
+
 # 远程控制
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/api.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/api.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/api.html
 
 V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC](https://grpc.io/)。
 

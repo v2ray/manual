@@ -1,15 +1,9 @@
+---
+refcn: index
+refen: index
+---
+
 # Project V
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
-
-[1]: resources/english.svg
-[2]: https://www.v2ray.com/en/
-[3]: resources/chinese.svg
-[4]: https://www.v2ray.com/
-[5]: resources/german.svg
-[6]: https://www.v2ray.com/de/
-[7]: resources/russian.svg
-[8]: https://www.v2ray.com/ru/
 
 Project V is a set of tools to help you build your own privacy network over internet.
 

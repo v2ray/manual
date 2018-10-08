@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/env
+refen: configuration/env
+---
+
 # 环境变量
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/env.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/env.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/env.html
 
 V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。
 

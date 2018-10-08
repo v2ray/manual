@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/04_dns
+refen: configuration/dns
+---
+
 # DNS 服务器
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/dns.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/dns.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/dns.html
 
 V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转发到不同的远程服务器中。
 

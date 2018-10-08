@@ -5,15 +5,6 @@ refen: welcome/command
 
 # 命令行参数
 
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/command.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/command.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/command.html
-
 ## V2Ray
 
 V2Ray 的程序文件的命令行参数如下：

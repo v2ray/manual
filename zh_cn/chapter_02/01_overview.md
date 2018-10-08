@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/01_overview
+refen: configuration/overview
+---
+
 # 配置文件格式
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/overview.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/overview.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/overview.html
 
 V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，只是实际的配置不一样。
 
