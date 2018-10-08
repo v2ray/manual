@@ -1,6 +1,10 @@
-# Пожертвование
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/donate.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/donate.html)
+refcn: chapter_00/02_donate refen: welcome/donate
+
+* * *
+
+# Пожертвование
 
 Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. Если вам нравится этот проект, купите нам чашку кофе.
 
