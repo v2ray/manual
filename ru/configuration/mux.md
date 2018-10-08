@@ -1,6 +1,10 @@
-# Мультиплексирование
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/mux.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/mux.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/mux.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/mux.html)
+refcn: chapter_02/mux refen: configuration/mux
+
+* * *
+
+# Мультиплексирование
 
 Мультиплексирование или Mux - это использование одного физического TCP-соединения для нескольких виртуальных TCP-соединений. См. [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) для более подробной информации о реализации.
 
