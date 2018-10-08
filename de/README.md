@@ -1,6 +1,10 @@
-# Projekt V
+* * *
 
-[![English](resources/english.svg)](https://www.v2ray.com/en/) [![Chinese](resources/chinese.svg)](https://www.v2ray.com/) [![German](resources/german.svg)](https://www.v2ray.com/de/) [![Russian](resources/russian.svg)](https://www.v2ray.com/ru/)
+refcn: index refen: index
+
+* * *
+
+# Projekt V
 
 Project V ist eine Sammlung von Tools, mit denen Sie Ihr eigenes Datenschutznetzwerk über das Internet aufbauen können.
 
