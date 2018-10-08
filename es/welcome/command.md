@@ -1,3 +1,9 @@
+* * *
+
+refcn: chapter_00/command refen: welcome/command
+
+* * *
+
 # Commandline
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/command.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/command.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/command.html)
