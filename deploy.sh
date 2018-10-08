@@ -3,8 +3,7 @@
 set -x
 
 curl -sL https://deb.nodesource.com/setup_10.x | bash -
-apt-get update
-apt-get -y install jq git file nodejs build-essential
+apt -y install jq git file nodejs build-essential
 
 function build_dir {
   DIR="$1"
@@ -28,9 +27,7 @@ cd manual
 
 curl -o "./resources/github-release.svg" "https://img.shields.io/github/release/v2ray/v2ray-core.svg"
 
-npm install gitbook-cli -g
-npm install gitbook-plugin-ga
-npm install gitbook-plugin-prism
+npm install -g gitbook-cli
 
 build_dir zh_cn
 build_dir en

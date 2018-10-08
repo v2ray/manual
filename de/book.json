@@ -6,18 +6,19 @@
     "-search",
     "-lunr",
     "-highlight",
-    
+
     "anchors",
     "ga",
-    "prism"
+    "prism",
+    "prism-themes"
   ],
   "pluginsConfig": {
     "ga": {
-        "token": "UA-73620536-1"
+      "token": "UA-73620536-1"
     },
     "prism": {
       "css": [
-        "prismjs/themes/prism-coy.css"
+        "prism-themes/themes/prism-atom-dark.css"
       ],
       "lang": {
         "objc": "objectivec",
