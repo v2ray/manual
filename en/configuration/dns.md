@@ -1,15 +1,9 @@
+---
+refcn: chapter_02/04_dns
+refen: configuration/dns
+---
+
 # DNS
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/dns.html
-[3]: ../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_02/04_dns.html
-[5]: ../resources/german.svg
-[6]: https://www.v2ray.com/de/configuration/dns.html
-[7]: ../resources/russian.svg
-[8]: https://www.v2ray.com/ru/configuration/dns.html
 
 V2Ray has an internal DNS server which provides DNS relay for other components.
 
