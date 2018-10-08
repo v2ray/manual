@@ -1,6 +1,10 @@
-# Workflow
+* * *
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
+refcn: chapter_00/workflow refen: welcome/workflow
+
+* * *
+
+# Workflow
 
 ## Single Server
 
