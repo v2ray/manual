@@ -1,6 +1,6 @@
 # License
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/license.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/license.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/license.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/license.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/license.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/license.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/license.html)
 
 Project V uses the following license.
 
