@@ -1,6 +1,6 @@
 # Поддержка
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/help.html)
 
 Пожалуйста, ознакомьтесь со следующими рекомендациями для лучшего качества обсуждения и более быстрого решения.
 

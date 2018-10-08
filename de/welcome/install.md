@@ -1,6 +1,6 @@
 # Download & Installieren
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/install.html)
 
 ## Platform {#platform}
 
@@ -49,7 +49,7 @@ Der folgende Befehl nimmt root-Berechtigung an.
 
 Führen Sie den folgenden Befehl aus, um V2Ray zu installieren. Wenn yum oder apt verfügbar ist, installiert das Skript unzip und daemon / systemd. Sie müssen V2Ray als Dienst ausführen. Sie müssen sie manuell installieren, wenn Ihr Linux-System yum oder apt nicht unterstützt.
 
-```shell
+```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 

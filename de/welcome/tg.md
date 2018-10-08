@@ -1,6 +1,6 @@
 # Telegrammgruppe
 
-![Englisch](../resources/englishc.svg) [![Chinesisch](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html)
+[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/tg.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/tg.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/tg.html)
 
 Projekt V bietet die folgenden Gruppen für verschiedene Arten von Diskussionen.
 
