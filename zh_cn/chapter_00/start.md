@@ -1,13 +1,9 @@
+---
+refcn: chapter_00/start
+refen: welcome/start
+---
+
 # 新手上路
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/start.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/start.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/start.html
 
 在下载并安装了 V2Ray 之后，你需要对它进行一下配置。这里介绍一下简单的配置方式，只是为了演示，如需配置更复杂的功能，请参考后续的[配置文件说明](../chapter_02/01_overview.md)。
 

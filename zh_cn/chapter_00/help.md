@@ -1,3 +1,8 @@
+---
+refcn: chapter_00/help
+refen: welcome/help
+---
+
 # 寻求帮助
 
 [![English][1]][2] [![German][3]][4] [![Russian][5]][6]

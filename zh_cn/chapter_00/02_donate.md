@@ -1,13 +1,9 @@
+---
+refcn: chapter_00/02_donate
+refen: welcome/donate
+---
+
 # 资助 V2Ray 发展
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/donate.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/donate.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/donate.html
 
 Project V 是一个非营利项目，它的所有代码均公开，软件可以自由使用，不受限制。如果您喜爱本项目，可以通过下面的方式请作者喝一杯咖啡。
 

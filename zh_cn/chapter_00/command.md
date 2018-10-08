@@ -1,3 +1,8 @@
+---
+refcn: chapter_00/command
+refen: welcome/command
+---
+
 # 命令行参数
 
 [![English][1]][2] [![German][3]][4] [![Russian][5]][6]

@@ -1,13 +1,9 @@
+---
+refcn: chapter_00/01_versions
+refen: welcome/versions
+---
+
 # 更新日志
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/versions.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/versions.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/versions.html
 
 ## 2018.10.12 v.3.47
 

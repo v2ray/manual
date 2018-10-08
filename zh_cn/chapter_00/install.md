@@ -1,13 +1,9 @@
+---
+refcn: chapter_00/install
+refen: welcome/install
+---
+
 # 下载安装
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/install.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/install.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/install.html
 
 ## 平台支持 {#platform}
 

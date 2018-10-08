@@ -1,13 +1,9 @@
+---
+refcn: chapter_00/license
+refen: welcome/license
+---
+
 # 项目授权
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/license.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/license.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/license.html
 
 Project V 使用以下方式进行授权：
 
