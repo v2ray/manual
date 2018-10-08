@@ -1,6 +1,10 @@
-# Клиенты iOS
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/ios.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/ios.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/ios.html)
+refcn: ui_client/ios refen: ui_client/ios
+
+* * *
+
+# Клиенты iOS
 
 ## Kitsunebi
 
