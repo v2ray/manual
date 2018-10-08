@@ -1,6 +1,10 @@
-# Shadowsocks
+* * *
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/shadowsocks.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html)
+refcn: chapter_02/protocols/shadowsocks refen: configuration/protocols/shadowsocks
+
+* * *
+
+# Shadowsocks
 
 [Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
 
