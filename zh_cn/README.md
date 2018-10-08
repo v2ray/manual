@@ -1,13 +1,9 @@
+---
+refcn: index
+refen: index
+---
+
 # Project V
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: resources/english.svg
-[2]: https://www.v2ray.com/en/
-[3]: resources/german.svg
-[4]: https://www.v2ray.com/de/
-[5]: resources/russian.svg
-[6]: https://www.v2ray.com/ru/
 
 Project V 包含一系列工具，帮助你打造专属的定制网络体系。
 
