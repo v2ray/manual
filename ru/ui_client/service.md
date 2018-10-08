@@ -1,6 +1,10 @@
-# Онлайн сервисы
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/service.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/service.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/service.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/service.html)
+refcn: ui_client/service refen: ui_client/service
+
+* * *
+
+# Онлайн сервисы
 
 ## Связанные с V2Ray
 
