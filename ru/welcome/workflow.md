@@ -1,6 +1,10 @@
-# Принцип работы
+* * *
 
-![Английский](../resources/englishc.svg) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/workflow.html)
+refcn: chapter_00/workflow refen: welcome/workflow
+
+* * *
+
+# Принцип работы
 
 ## Одиночный сервер
 
