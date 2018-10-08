@@ -1,6 +1,10 @@
-# Statistics
+* * *
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/stats.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/stats.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/stats.html)
+refcn: chapter_02/stats refen: configuration/stats
+
+* * *
+
+# Statistics
 
 V2Ray provides some information about its internals.
 
