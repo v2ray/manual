@@ -1,6 +1,10 @@
-# Windows
+* * *
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/windows.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/windows.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/windows.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/windows.html)
+refcn: ui_client/windows refen: ui_client/windows
+
+* * *
+
+# Windows
 
 ## V2RayW
 
