@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/pgp refen: welcome/pgp
-
-* * *
-
+---
+refcn: chapter_00/pgp
+refen: welcome/pgp
+---
 # Private Communication
 
 Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
