@@ -33,15 +33,15 @@ V2Ray считывает следующие переменные среды.
 
 Эта переменная указывает каталог, в котором находится config.json.
 
-## Scatter Reading {#scatter-io}
+## Рассеянное чтение (Scatter reading) {#scatter-io}
 
 * Имя: `v2ray.buf.readv` или `V2RAY_BUF_READV`
 * Значение по умолчанию: `auto`
 
-V2Ray 3.37 uses Scatter/Gather IO. Эта функция будет использовать меньше памяти, если скорость соединения превышает 100 МБайт/с. Возможные значения `auto`, `enable` и `disable`.
+V2Ray 3.37 использует Scatter/Gather IO. Эта функция будет использовать меньше памяти, если скорость соединения превышает 100 МБайт/с. Возможные значения `auto`, `enable` и `disable`.
 
-* `enable`: Enable scatter reading.
-* `disable`: Disable scatter reading.
-* `auto`: Only enable on Windows, MacOS, Linux when CPU is x86, AMD64 or s390x.
+* `enable`: Включить рассеянное чтение.
+* `disable`: Выключить рассеянное чтение.
+* `auto`: Включить рассеянное чтение только на Windows, MacOS, Linux с ЦП x86, AMD64 или s390x.
 
-When connection speed is less than 100 MByte/s, no matter whether this is enabled or not, there is no obvious difference in terms of memory usage.
+Когда скорость соединения меньше 100 Мбайт/с, независимо от того, включена опция или нет, явной разницы в использовании памяти не наблюдается.
