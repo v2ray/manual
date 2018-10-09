@@ -7,21 +7,21 @@ refen: configuration/protocols/http
 HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 
 * Name: http
-* Typ: Eingehend
-* Aufbau:
+* Type: Inbound
+* Configuration:
 
 ```javascript
 {"accounts": [{"user": "mein-Benutzername", "pass": "mein-Passwort"}], "allowTransparent": false, "userLevel": 0}
 ```
 
-Woher:
+Where:
 
 * `Konten`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
   * Wenn `Konten` nicht leer ist, verwendet HTTP die Standardauthentifizierung für die Benutzerüberprüfung.
 * `allowTransparent`: Wenn `wahr`, werden alle HTTP-Anfragen, die an diesen eingehenden Empfänger gesendet werden, einschließlich Nicht-Proxy-Anfragen, weitergeleitet.
 * `userLevel`: User level. All connections share this level.
 
-## Tipps
+## Tips
 
 Verwenden Sie die folgenden Einstellungen unter Linux, um den HTTP-Proxy in der aktuellen Sitzung zu verwenden.
 
