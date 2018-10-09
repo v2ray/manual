@@ -2,13 +2,13 @@
 refcn: chapter_02/protocols/freedom
 refen: configuration/protocols/freedom
 ---
-# Freiheit
+# Freedom
 
 Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
 
 * Name: Freiheit
-* Typ: Ausgehend
-* Aufbau:
+* Type: Outbound
+* Configuration:
 
 ```javascript
 {
@@ -18,7 +18,7 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 }
 ```
 
-Woher:
+Where:
 
 * `domainStrategy`: Strategy for domain name resolution. Options are: 
   * `"AsIs"`: Default. Resolve domain name by system.
