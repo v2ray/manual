@@ -16,11 +16,11 @@ refen: ui_client/windows
 
 * Загрузить: [GitHub](https://github.com/Shinlor/V2RayS)
 
-## Другие инструменты {#other}
+## Other tools {#other}
 
 ### PuTTY
 
-Клиент SSH.
+SSH client.
 
 * Веб-сайт: [putty.org](http://www.putty.org/)
 
@@ -32,6 +32,6 @@ refen: ui_client/windows
 
 ### Telegram
 
-Зашифрованное общение.
+Encrypted discussion.
 
-* Веб-сайт: [telegram.org](https://telegram.org/)
+* Website: [telegram.org](https://telegram.org/)
