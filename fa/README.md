@@ -1,9 +1,7 @@
-* * *
-
-refcn: index refen: index
-
-* * *
-
+---
+refcn: index
+refen: index
+---
 # Project V
 
 Project V is a set of tools to help you build your own privacy network over internet.
