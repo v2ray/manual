@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/socks refen: configuration/protocols/socks
-
-* * *
-
+---
+refcn: chapter_02/protocols/socks
+refen: configuration/protocols/socks
+---
 # Socken
 
 Socks ist eine Implementierung des Standard-SOCKS-Protokolls, kompatibel mit [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a und [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
@@ -31,13 +29,13 @@ Socks ist eine Implementierung des Standard-SOCKS-Protokolls, kompatibel mit [So
 
 Woher:
 
-* `servers`: Socks Server Liste, in der jeder Eintrag hat: 
+* `Server`: Socks Server Liste, in der jeder Eintrag hat: 
   * `address`: Serveradresse
   * `port`: Server-Port
   * `users`: Liste der Benutzerkonten: 
     * `user`: Benutzername
     * `pass`: Passwort
-    * `level`: Benutzerebene.
+    * `Stufe`: Benutzerebene.
 
 Beachten:
 
@@ -61,13 +59,13 @@ Beachten:
 }
 ```
 
-Wo:
+Woher:
 
-* `auth`: Socken Authentifizierungsmethode. Standard auf `"noauth"`. Optionen sind: 
+* `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
   * `"noauth"`: Anonym.
   * `"Passwort"`: Benutzer und Passwort [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `accounts`: Ein Array, in dem jeder Eintrag `user` für Benutzername und `pass` für Kennwort enthält. Standard bis leer 
+* `Konten`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
   * Funktioniert nur, wenn `auth` ist `"password"`
-* `udp`: `true` oder `false` um UDP zu aktivieren. Standard auf falsch.
-* `ip`: Wenn UDP aktiviert ist, empfängt diese IP-Adresse UDP-Pakete vom Client. Standard auf `"127.0.0.1"`.
-* `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.
+* `udp`: `true` or `false` to enable UDP. Default to false.
+* `ip`: When UDP is enabled, this IP address receives UDP packets from client. Default to `"127.0.0.1"`.
+* `userLevel`: User level. All connections share this level.
