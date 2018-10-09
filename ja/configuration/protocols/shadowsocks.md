@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/shadowsocks refen: configuration/protocols/shadowsocks
-
-* * *
-
+---
+refcn: chapter_02/protocols/shadowsocks
+refen: configuration/protocols/shadowsocks
+---
 # Shadowsocks
 
 [Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
