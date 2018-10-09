@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/mux refen: configuration/mux
-
-* * *
-
+---
+refcn: chapter_02/mux
+refen: configuration/mux
+---
 # Мультиплексирование
 
 Мультиплексирование или Mux - это использование одного физического TCP-соединения для нескольких виртуальных TCP-соединений. См. [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) для более подробной информации о реализации.
@@ -20,6 +18,6 @@ refcn: chapter_02/mux refen: configuration/mux
 Где:
 
 * `enabled`: Включать Mux или нет
-* `concurrency`: Максимальное количество виртуальных подключений, которое может обрабатывать одно физическое соединение за раз. Максимальное значение `1024`, минимальное значение `1`, по умолчанию `8`. 
+* `concurrency`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 
   * Обычно это значение не требует дополнительной настройки.
-* Мультиплексирование предназначено для уменьшения задержек при хендшейке (установлении соединения) TCP. Это делается НЕ для повышения пропускной способности. При загрузке больших файлов или измерении скорости, Mux обычно медленнее, чем нормальное TCP-подключение.
+* Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
