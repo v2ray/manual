@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/env refen: configuration/env
-
-* * *
-
+---
+refcn: chapter_02/env
+refen: configuration/env
+---
 # Environment Variables
 
 V2Ray reads the following environment variables.
