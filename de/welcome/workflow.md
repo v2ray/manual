@@ -1,28 +1,26 @@
-* * *
-
-refcn: chapter_00/workflow refen: welcome/workflow
-
-* * *
-
+---
+refcn: chapter_00/workflow
+refen: welcome/workflow
+---
 # Arbeitsablauf
 
 ## Einzelner Server
 
-Wie bei anderen Proxys benötigen Sie einen Proxy-Server, auf dem V2Ray ausgeführt wird. Dann können Sie über diesen Server von Ihrem PC, Mobiltelefon oder anderen Geräten aus mit dem Internet verbinden.
+Same as other proxies, you need a proxy server which runs V2Ray. Then you can connect to internet through that server from you PC, mobile or other devices.
 
 ![Direkte](../resources/direct.png)
 
-V2Ray unterstützt Verbindungen von mehreren Geräten gleichzeitig mit optional unterschiedlichen Protokollen. In der Zwischenzeit kann der lokale Routing-Mechanismus nur die notwendigen Verbindungen intelligent herstellen.
+V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
 
 ## Serverbrücke
 
-Wenn Sie nicht möchten, dass V2Ray auf jedem Ihrer Geräte konfiguriert wird, können Sie einen Server innerhalb der Firewall einrichten, und dann wird der gesamte Datenverkehr über diesen Server geleitet. Der Server führt das Routing selbst durch.
+In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
 
 ![Relais](../resources/relay.png)
 
 ## Intern
 
-Das interne von V2Ray sieht wie folgt aus. Es unterstützt mehrere eingehende Proxys und mehrere Outbounds. Jeder von ihnen ist unabhängig von anderen.
+The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
 
 ![intern](../resources/internal.svg)
 
