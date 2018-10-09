@@ -1,12 +1,10 @@
-* * *
-
-refcn: chapter_02/transport/websocket refen: configuration/transport/websocket
-
-* * *
-
+---
+refcn: chapter_02/transport/websocket
+refen: configuration/transport/websocket
+---
 # WebSocket
 
-Verwenden Sie den Standard-WebSocket, um Daten zu transportieren. Websocket-Verbindungen können von einem HTTP-Server wie Nginx weitergeleitet werden.
+Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
 
 Aufbau:
 
@@ -16,8 +14,8 @@ Aufbau:
 
 Woher:
 
-* `Pfad`: Pfad für WebSocket. Standard für root, wie `""`.
-* `Header`: Benutzerdefinierter HTTP-Header. Ein Array, bei dem jeder Eintrag ein Schlüsselwertpaar in der Zeichenfolge, für den Header und den Wert im HTTP-Header ist. Der Standardwert ist leer.
+* `path`: Path used for WebSocket. Default to root, as `""`。
+* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
 
 ## Beachten
 
