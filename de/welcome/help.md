@@ -1,16 +1,14 @@
-* * *
-
-refcn: chapter_00/help refen: welcome/help
-
-* * *
-
+---
+refcn: chapter_00/help
+refen: welcome/help
+---
 # Unterstützung
 
 Bitte lesen Sie die folgenden Richtlinien für bessere Diskussion Qualität und schnellere Lösung.
 
 ## Language {#language}
 
-Das Projekt V-Team unterstützt Chinesisch und Englisch. Bitte wählen Sie eine, mit der Sie sich bei Fragen auskennen.
+Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
 
 ## Ways to get support {#support}
 
