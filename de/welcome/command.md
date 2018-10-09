@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/command refen: welcome/command
-
-* * *
-
+---
+refcn: chapter_00/command
+refen: welcome/command
+---
 # Befehlszeile
 
 ## V2Ray
@@ -14,15 +12,15 @@ V2Ray has the following commandline parameters:
 v2ray [-version] [-test] [-config = Konfiguration.json] [-format = json]
 ```
 
-Where:
+Woher:
 
 * `Version`: Nur die Version von V2Ray drucken und dann beenden.
 * `-test`: Konfiguration testen, Fehler ausgeben und dann beenden.
 * `-config`: URI der Konfiguration 
-  * Wenn der Wert `stdin:`, liest V2Ray die Konfiguration aus der Standardeingabe. Der Anrufer muss die Standardeingabe nach dem Schreiben der Konfiguration schließen.
+  * When its value is `stdin:`, V2Ray reads configuration from standard input. Caller must close stdin after writing out configuration.
   * When its value begins with `http://` or `https://` (lowercase), V2Ray tries to load configuration from the remote address.
   * Wenn er nicht gesetzt ist , versucht V2Ray erste Konfiguration von laden `config.json` unter Arbeitsverzeichnis, dann aus dem Verzeichnis , das durch die Umgebungsvariable spezifiziert `v2ray.location.asset`.
-* `-Format`: Konfigurationsformat Auswahlmöglichkeiten sind: 
+* `-Format`: Configuration format. Choices are: 
   * `JSON`: JSON-Format.
   * `Pb` oder `Protobuf`: Protobuf-Format.
 
@@ -44,7 +42,7 @@ To verify the signature of a V2Ray binary.
 
 Options:
 
-* `sig`: Pfad zur Signaturdatei. Der Standardwert ist die Datei ".sig" für den zu verifizierenden Pfad.
+* `sig`：Path to signature file. Default value is the ".sig" file to the path to be verified.
 * Erstes Argument: Die zu verifizierende Datei.
 
 ### Konfig
