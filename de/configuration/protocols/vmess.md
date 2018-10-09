@@ -7,9 +7,9 @@ refen: configuration/protocols/vmess
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
 
 * Name: vmess
-* Geben Sie ein: Eingehend / Ausgehend
+* Type: Inbound / Outbound
 
-## Outbound-Proxy-Konfiguration
+## Outbound Proxy Configuration
 
 ```javascript
 {
@@ -30,11 +30,11 @@ refen: configuration/protocols/vmess
 }
 ```
 
-Woher:
+Where:
 
 * `vnext`: Ein Array, bei dem jeder Eintrag ein Remote-Server ist 
   * `Adresse`: Serveradresse, möglicherweise IPv4, IPv6 oder Domänenname.
-  * `port`: Server-Port
+  * `port`: Server port
   * `users`: Ein Array, bei dem jeder Eintrag ein VMess-Benutzer ist 
     * `id`: Benutzer-ID in Form einer [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * `alterId`: Anzahl der alternativen IDs. Die alternativen IDs werden deterministisch generiert. Standard auf 0. Maximal 65535. Recommend 16. Its value must be not larger than the one in corresponding Inbound.
@@ -45,7 +45,7 @@ Woher:
       * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
       * `"none"`: Traffic is not encrypted at all.
 
-## Eingehende Proxy-Konfiguration
+## Inbound Proxy Configuration
 
 ```javascript
 {
@@ -68,7 +68,7 @@ Woher:
 }
 ```
 
-Woher:
+Where:
 
 * `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
   * Jeder Client enthält: 
@@ -79,13 +79,13 @@ Woher:
 * `detour`: Option, um dem Kunden einen Umweg zu empfehlen. 
   * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
 * `default`: Optional default client configuration. Usually used in detour proxy. 
-  * `Stufe`: Benutzerebene.
+  * `level`: User level.
   * `alterId`: Number of alternative IDs. Default value 64. Recommend 16.
 * `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
   * `none`
   * `aes-128-cfb`
 
-## Tipps
+## Tips
 
 * Verwenden Sie immer die Verschlüsselungsmethode `"auto"` , um sicher und kompatibel zu bleiben.
 * VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. 
