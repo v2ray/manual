@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/mux refen: configuration/mux
-
-* * *
-
+---
+refcn: chapter_02/mux
+refen: configuration/mux
+---
 # Multiplexing
 
 Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections. See [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) for more implementation details.
