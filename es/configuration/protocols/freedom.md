@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/freedom refen: configuration/protocols/freedom
-
-* * *
-
+---
+refcn: chapter_02/protocols/freedom
+refen: configuration/protocols/freedom
+---
 # Freedom
 
 Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
