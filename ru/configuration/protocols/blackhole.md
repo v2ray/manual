@@ -8,7 +8,7 @@ Backhole - это протокол для исходящих соединени�
 
 * Название: blackhole
 * Тип: исходящий
-* Настройка:
+* Configuration:
 
 ```javascript
 {
@@ -18,7 +18,7 @@ Backhole - это протокол для исходящих соединени�
 }
 ```
 
-Где:
+Where:
 
 * `response`: Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection. 
   * `type`: Тип ответа, доступные параметры: 
