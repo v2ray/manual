@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/api refen: configuration/api
-
-* * *
-
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
 # API
 
 V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
