@@ -1,9 +1,7 @@
-* * *
-
-refcn: ui_client/osx refen: ui_client/osx
-
-* * *
-
+---
+refcn: ui_client/osx
+refen: ui_client/osx
+---
 # Mac OS X
 
 ## V2RayX
