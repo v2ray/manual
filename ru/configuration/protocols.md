@@ -2,7 +2,7 @@
 refcn: chapter_02/02_protocols
 refen: configuration/protocols
 ---
-# Протоколы
+# Protocols
 
 V2Ray поддерживает следующие протоколы:
 
