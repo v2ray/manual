@@ -23,3 +23,12 @@
   font-weight: 400;
   font-size: 16px;
 }
+
+.markdown-section code:not([class]) {
+  border-radius: 1px;
+  white-space: nowrap;
+  color: #5e5e5e;
+  background: #FFF7DD;
+  border: 1px solid #fbf0cb;
+  padding: 0px 2px;
+}

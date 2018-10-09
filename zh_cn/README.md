@@ -32,9 +32,9 @@ V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 通过内置的路由功能，V2Ray 可以灵活地实现选择性转发、直连或是阻止部分连接。
 
-## 更新本站点
-
+{% hint style='info' %}
 本站点由 GitBook 生成，托管于 GitHub。如需修改本站的内容，请向[这个 Repo](https://github.com/v2ray/manual) 提交 Pull Request。
+{% endhint %}
 
 ## 版权声明
 

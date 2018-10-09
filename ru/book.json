@@ -11,7 +11,8 @@
     "anchors",
     "ga",
     "prism",
-    "prism-themes"
+    "prism-themes",
+    "hints"
   ],
   "pluginsConfig": {
     "ga": {
