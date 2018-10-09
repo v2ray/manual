@@ -2,7 +2,7 @@
 refcn: chapter_00/workflow
 refen: welcome/workflow
 ---
-# Принцип работы
+# Workflow
 
 ## Одиночный сервер
 
