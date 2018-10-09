@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/vmess refen: configuration/protocols/vmess
-
-* * *
-
+---
+refcn: chapter_02/protocols/vmess
+refen: configuration/protocols/vmess
+---
 # VMess
 
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
