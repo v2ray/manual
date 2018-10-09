@@ -1,12 +1,10 @@
-* * *
+---
+refcn: chapter_02/protocols/freedom
+refen: configuration/protocols/freedom
+---
+# Freiheit
 
-refcn: chapter_02/protocols/freedom refen: configuration/protocols/freedom
-
-* * *
-
-# Freedom
-
-Freedom ist ein Protokoll für ausgehende Verbindungen. Es übergibt alle TCP- oder UDP-Verbindungen an ihre Ziele.
+Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
 
 * Name: Freiheit
 * Typ: Ausgehend
@@ -22,10 +20,10 @@ Freedom ist ein Protokoll für ausgehende Verbindungen. Es übergibt alle TCP- o
 
 Woher:
 
-* `domainStrategy`: Strategie für die Domain-Namensauflösung. Optionen sind: 
-  * `"AsIs"`: Standard. Beheben Sie den Domänennamen nach System.
+* `domainStrategy`: Strategy for domain name resolution. Options are: 
+  * `"AsIs"`: Default. Resolve domain name by system.
   * `"UseIP"`: Use [internal DNS](../dns.md) for domain name resolution.
 * `redirect`: Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`. 
   * When address is empty, e.g. `":443"`, Freedom will use the original destination address.
   * When port is `0`, e.g. `"v2ray.com:0"`, Freedom will use the original port.
-* `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.
+* `userLevel`: User level. All connections share this level.
