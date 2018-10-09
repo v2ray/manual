@@ -5,15 +5,6 @@ refen: welcome/help
 
 # 寻求帮助
 
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/help.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/help.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/help.html
-
 在讨论问题之前请先阅读下面的内容，以提高问题的质量和解决效率。
 
 ## 语言 {#language}
