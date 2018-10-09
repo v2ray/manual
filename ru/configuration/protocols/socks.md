@@ -1,6 +1,10 @@
-# Socks
+* * *
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/socks.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/socks.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/socks.html)
+refcn: chapter_02/protocols/socks refen: configuration/protocols/socks
+
+* * *
+
+# Socks
 
 Socks - это реализация стандартного протокола SOCKS, совместимого с [ Socks 4 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4а и [ Socks 5 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
