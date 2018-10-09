@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/env refen: configuration/env
-
-* * *
-
+---
+refcn: chapter_02/env
+refen: configuration/env
+---
 # Переменные окружения
 
 V2Ray считывает следующие переменные среды.
@@ -14,7 +12,7 @@ V2Ray считывает следующие переменные среды.
 * Единицы: МБ
 * Значение по умолчанию: 
   * (V2Ray 3.33-) 10
-  * (V2Ray 3.34+) 2 на x86, amd64, arm64 и s390x. Этот кеш отключен на других платформах.
+  * (V2Ray 3.34+) 2 on x86, amd64, arm64 and s390x. This cache is disabled on other platforms.
 * Диапазон: от 0 до бесконечности
 
 Для каждого соединения, у которого есть разница в скорости между входящим и исходящим трафиком, V2Ray будет кэшировать некоторые данные для большей пропускной способности. Этот параметр управляет размером кэша. Чем больше кеш, тем лучше производительность.
@@ -38,7 +36,7 @@ V2Ray считывает следующие переменные среды.
 * Имя: `v2ray.buf.readv` или `V2RAY_BUF_READV`
 * Значение по умолчанию: `auto`
 
-V2Ray 3.37 использует Scatter/Gather IO. Эта функция будет использовать меньше памяти, если скорость соединения превышает 100 МБайт/с. Возможные значения `auto`, `enable` и `disable`.
+V2Ray 3.37 uses Scatter/Gather IO. This feature will use less memory when connection speed is over 100 MByte/s. Possible values are: `auto`, `enable` and `disable`.
 
 * `enable`: Включить рассеянное чтение.
 * `disable`: Выключить рассеянное чтение.
