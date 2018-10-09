@@ -2,7 +2,7 @@
 refcn: ui_client/service
 refen: ui_client/service
 ---
-# Онлайн сервисы
+# Online services
 
 ## Связанные с V2Ray
 
