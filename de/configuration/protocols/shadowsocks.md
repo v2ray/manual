@@ -2,7 +2,7 @@
 refcn: chapter_02/protocols/shadowsocks
 refen: configuration/protocols/shadowsocks
 ---
-# Schattensocken
+# Shadowsocks
 
 [Shadowsocks](https://www.shadowsocks.org/) Protokoll für ein- und ausgehende Verbindungen.
 
@@ -26,7 +26,7 @@ Kompatibilität mit der offiziellen Version:
 Info:
 
 * Name: Schattensocken
-* Geben Sie ein: Eingehend / Ausgehend
+* Type: Inbound / Outbound
 
 ## Inbound-Proxy-Konfiguration
 
@@ -42,7 +42,7 @@ Info:
 }
 ```
 
-Woher:
+Where:
 
 * `email`: Email address. Used for user identification.
 * `Methode`: Encryption method. No default value. Options are: 
@@ -68,20 +68,20 @@ Woher:
 {"Server": [{"email": "love@v2ray.com", "Adresse": "127.0.0.1", "Port": 1234, "Methode": "Methode", "Passwort": "Passwort" , "ota": falsch, "level": 0}]}
 ```
 
-Woher:
+Where:
 
 * `email`: Email address. Used for user identification.
 * `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
 * `Port`: Port des Shadowsocks-Servers.
-* `Methode`: Encryption method. No default value. Options are: 
+* `method`: Encryption method. No default value. Options are: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` oder `"chacha20-ietf-poly1305"`
+  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
 * `password`: Password. Can be any string.
 * `ota`: Ob OTA verwendet werden soll oder nicht. 
-  * Wenn AEAD verwendet wird, `OTA` hat keine Auswirkung.
-* `Stufe`: Benutzerebene.
+  * When AEAD is used, `ota` has no effect.
+* `level`: User level.
