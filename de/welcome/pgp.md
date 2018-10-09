@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/pgp refen: welcome/pgp
-
-* * *
-
+---
+refcn: chapter_00/pgp
+refen: welcome/pgp
+---
 # Private Kommunikation
 
 Bitte senden Sie eine Nachricht an eine der folgenden Adressen, wenn Sie privat mit dem V2Ray-Team sprechen möchten.
@@ -11,7 +9,7 @@ Bitte senden Sie eine Nachricht an eine der folgenden Adressen, wenn Sie privat 
 1. `love@v2ray.com`
 2. `v2ray@protonmail.com`
 
-\#1 basiert auf Google Mail. Wenn Sie den Datenschutz von E-Mail-Inhalten betreffen, sollten Sie den öffentlichen PGP-Schlüssel unten verwenden.
+\#1 is based on Gmail. If you concern the privacy of email content, please consider using the PGP public key below.
 
 \#2 basiert auf ProtonMail, das bereits eine Ende-zu-Ende-Verschlüsselung verwendet.
 
