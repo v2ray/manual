@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/tg refen: welcome/tg
-
-* * *
-
+---
+refcn: chapter_00/tg
+refen: welcome/tg
+---
 # Telegrammgruppe
 
 Projekt V bietet die folgenden Gruppen für verschiedene Arten von Diskussionen.
