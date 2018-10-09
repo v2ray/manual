@@ -6,13 +6,13 @@ refen: configuration/transport/mkcp
 
 mKCP is a reliable stream transport. It is an UDP based protocol.
 
-Aufbau:
+Configuration:
 
 ```javascript
 {"mtu": 1350, "tti": 20, "uplinkCapacity": 5, "downlinkCapacity": 20, "congestion": false, "readBufferSize": 1, "writeBufferSize": 1, "header": {"type ": "keiner" } }
 ```
 
-Woher:
+Where:
 
 * `mtu`: Maximum transmission unit. It indicates the maxium number bytes that an UDP packet can carry. Recommended value is between `576` and `1460`. Default value `1350`.
 * `tti`: Transmission time interval, in milli-second. mKCP sends data in this interval. Recommended value is between `10` and `100`. Default value `50`.
@@ -35,7 +35,7 @@ Woher:
     * `"dtls"`: Obfuscated as DTLS 1.2 packets.
     * `"wireguard"` (V2Ray 3.38+): Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
 
-## Tipps {#tips}
+## Tips {#tips}
 
 * `uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection.
 * mKCP uses UDP protocol. Please make sure your firewall is correctly setup.
