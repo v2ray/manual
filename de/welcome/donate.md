@@ -18,7 +18,7 @@ Project V is a nonprofit project. The source code and program can be used freely
 
 Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
 
-## Kryptowährung {#crypto}
+## Cryptocurrency {#crypto}
 
 * Bitcoin: [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
 * Bitcoin Case: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)
