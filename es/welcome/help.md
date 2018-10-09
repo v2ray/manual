@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/help refen: welcome/help
-
-* * *
-
+---
+refcn: chapter_00/help
+refen: welcome/help
+---
 # Support
 
 Please read the following guidelines for better discussion quality and quicker solution.
