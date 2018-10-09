@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/install refen: welcome/install
-
-* * *
-
+---
+refcn: chapter_00/install
+refen: welcome/install
+---
 # Загрузка и установка
 
 ## Платформа {#platform}
@@ -32,9 +30,9 @@ V2Ray доступен на следующих платформах:
 4. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
-Все пакеты находятся в формате ZIP. Загрузите и распакуйте подходящие пакеты в свою систему.
+All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
-## Проверка {#verify}
+## Verify {#verify}
 
 Существует два способа проверки пакетов.
 
@@ -82,9 +80,9 @@ bash <(curl -L -s https://install.direct/go.sh)
 
 go.sh поддерживает следующие параметры.
 
-* `-p` или `--proxy`: Использовать прокси для загрузки пакетов V2Ray. Формат такой же, как и у curl. Например, `"socks5://127.0.0.1:1080"` или `"http://127.0.0.1:3128"`.
-* `-f` or `--force`: Принудительная установка. Сценарий предполагает, что V2Ray не был установлен вообще.
-* `--version`: Версия, которая должна быть установлена, например `"v1.13"`. Значение по умолчанию - это последняя стабильная версия.
+* `-p` or `--proxy`: Use a proxy to download V2Ray packages. Same as curl format, such as `"socks5://127.0.0.1:1080"` or `"http://127.0.0.1:3128"`.
+* `-f` or `--force`: Force installation. The script will assume V2Ray was not installed at all.
+* `--version`: The version to be installed, such as `"v1.13"`. Default value is the latest stable release.
 * `--local`: Использовать локальный пакет для установки.
 
 Примеры:
