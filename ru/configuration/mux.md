@@ -6,7 +6,7 @@ refen: configuration/mux
 
 Мультиплексирование или Mux - это использование одного физического TCP-соединения для нескольких виртуальных TCP-соединений. См. [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) для более подробной информации о реализации.
 
-Настройка:
+Configuration:
 
 ```javascript
 {
@@ -15,7 +15,7 @@ refen: configuration/mux
 }
 ```
 
-Где:
+Where:
 
 * `enabled`: Включать Mux или нет
 * `concurrency`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 
