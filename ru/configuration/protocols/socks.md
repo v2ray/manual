@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/socks refen: configuration/protocols/socks
-
-* * *
-
+---
+refcn: chapter_02/protocols/socks
+refen: configuration/protocols/socks
+---
 # Socks
 
 Socks - это реализация стандартного протокола SOCKS, совместимого с [ Socks 4 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4а и [ Socks 5 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
@@ -63,11 +61,11 @@ Socks - это реализация стандартного протокола 
 
 Где:
 
-* `auth`: Метод аутентификации socks. Значение по умолчанию: `noauth`. Возможные варианты: 
+* `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
   * `noauth`: Анонимная аутентификация
   * `password`: С использованием логина и пароля [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `accounts`: Массив, в котором каждая запись содержит ` user` для логина и ` pass ` для пароля. Значения по умолчанию пустые. 
+* `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
   * Используется только когда в значении `auth` используется `password`.
-* `udp`: `true` для включения и `false` для выключения UDP. Значение по умолчанию: false.
-* `ip`: Если UDP включен, этот IP адрес принимает пакеты UDP от клиента. Значение по умолчанию: `127.0.0.1`.
-* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень.
+* `udp`: `true` or `false` to enable UDP. Default to false.
+* `ip`: When UDP is enabled, this IP address receives UDP packets from client. Default to `"127.0.0.1"`.
+* `userLevel`: User level. All connections share this level.
