@@ -1,12 +1,10 @@
-* * *
-
-refcn: chapter_00/02_donate refen: welcome/donate
-
-* * *
-
+---
+refcn: chapter_00/02_donate
+refen: welcome/donate
+---
 # Пожертвование
 
-Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. Если вам нравится этот проект, купите нам чашку кофе.
+Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
 
 * Отчёт о расходах публиковаться не будет.
 * Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V.
