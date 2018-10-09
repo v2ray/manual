@@ -7,8 +7,8 @@ refen: configuration/protocols/http
 HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 
 * Название: http
-* Тип: входящий
-* Настройка:
+* Type: Inbound
+* Configuration:
 
 ```javascript
 {
@@ -23,14 +23,14 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 }
 ```
 
-Где:
+Where:
 
 * `accounts`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
   * Если значение `accounts` не пустое, HTTP использует базовую аутентификацию для подтверждения пользователя.
 * ` allowTransparent `: Если установлено значение ` true `, все полученные HTTP-запросы, будут проксированы, включая запрос без прокси.
 * `userLevel`: User level. All connections share this level.
 
-## Советы
+## Tips
 
 Используйте следующие настройки в Linux для использования прокси-сервера HTTP в текущем сеансе.
 
