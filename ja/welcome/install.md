@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/install refen: welcome/install
-
-* * *
-
+---
+refcn: chapter_00/install
+refen: welcome/install
+---
 # Download & Install
 
 ## Platform {#platform}
