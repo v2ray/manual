@@ -1,16 +1,14 @@
-* * *
-
-refcn: chapter_02/protocols/freedom refen: configuration/protocols/freedom
-
-* * *
-
+---
+refcn: chapter_02/protocols/freedom
+refen: configuration/protocols/freedom
+---
 # Freedom
 
-Freedom - это протокол для исходящих соединений. Он передает все TCP или UDP соединение на указанные адреса.
+Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
 
 * Название: freedom
 * Тип: исходящий
-* Конфигурация:
+* Настройка:
 
 ```javascript
 {
@@ -22,10 +20,10 @@ Freedom - это протокол для исходящих соединений
 
 Где:
 
-* `domainStrategy`: Стратегия разрешения доменных имен. Возможные варианты: 
-  * `"AsIs"`: Значение по умолчанию. Доменные имена разрешаются системой.
+* `domainStrategy`: Strategy for domain name resolution. Options are: 
+  * `"AsIs"`: Default. Resolve domain name by system.
   * ` "UseIP" `: Используйте [ внутренний DNS ](../dns.md) для получения доменных имен.
-* `redirect`: Перенаправление всех соединений на указанный адрес вида `"127.0.0.1:80"` или `":1234"`. 
+* `redirect`: Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`. 
   * Если адрес не указан, например `":443"`, Freedom будет использовать исходный адрес назначения.
   * Если указан порт `0`, например `"v2ray.com:0"`, Freedom будет использовать исходный порт.
-* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень.
+* `userLevel`: User level. All connections share this level.
