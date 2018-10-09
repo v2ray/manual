@@ -1,9 +1,7 @@
-* * *
-
-refcn: ui_client/windows refen: ui_client/windows
-
-* * *
-
+---
+refcn: ui_client/windows
+refen: ui_client/windows
+---
 # Windows
 
 ## V2RayW
