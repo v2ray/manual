@@ -6,7 +6,7 @@ refen: configuration/policy
 
 Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-Aufbau:
+Configuration:
 
 ```javascript
 {
@@ -27,7 +27,7 @@ Aufbau:
 }
 ```
 
-Woher:
+Where:
 
 * `Niveau`: A list of key value pairs. Each key is a string of integer (restricted by JSON), such as `"0"`, `"1"`, etc. The numeric value is for a certain user level. Each value has the following attributes: 
   * `handshake`: Timeout for establishing a connection, in seconds. Default value `4`.
@@ -48,7 +48,7 @@ Some details when V2Ray handles connections:
 3. Nachdem der Client (Browser) den Uplink der Verbindung beendet hat, bricht V2Ray die Verbindung nach `downlinkOnly` time ab.
 4. Nachdem Remote (Server) den Downlink der Verbindung beendet hat, bricht V2Ray die Verbindung nach `UplinkOnly` mal ab.
 
-## Tipps {#tips}
+## Tips {#tips}
 
 * Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.
 * `bufferSize` überschreibt `v2ray.ray.buffer.size` Einstellungen in [env-Variablen](env.md#cache-size-per-connection).
