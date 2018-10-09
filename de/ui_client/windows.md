@@ -20,7 +20,7 @@ refen: ui_client/windows
 
 ### Kitt
 
-SSH-Client.
+SSH client.
 
 * Webseite: [putty.org](http://www.putty.org/)
 
@@ -30,8 +30,8 @@ Quellcode-Editor von Microsoft.
 
 * Webseite: [code.visualstudio.com](https://code.visualstudio.com/)
 
-### Telegramm
+### Telegram
 
-Verschlüsselte Diskussion
+Encrypted discussion.
 
-* Webseite: [telegramm.org](https://telegram.org/)
+* Website: [telegram.org](https://telegram.org/)
