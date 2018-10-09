@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/index refen: configuration/index
-
-* * *
-
+---
+refcn: chapter_02/index
+refen: configuration/index
+---
 # Aufbau
 
 V2Ray uses [protobuf](https://developers.google.com/protocol-buffers/)-based configuration. Due the low readability of protobuf format, V2Ray also supports configuration in JSON. Before V2Ray runs, it automatically converts JSON config into protobuf. That being said, other configuration formats may be introduced in the furture.
@@ -26,7 +24,7 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 }
 ```
 
-Notice:
+Beachten:
 
 1. Ein Schlüsselwertpaar endet normalerweise mit einem Komma ",", darf aber nicht mit einem Komma enden, wenn es das letzte Element des Objekts ist.
 2. V2Ray unterstützt Kommentare in JSON, die mit "//" oder "/ \ * \ * /" kommentiert sind.
