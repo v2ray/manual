@@ -2,7 +2,7 @@
 
 git pull | grep -q -v 'Already up-to-date.' && CHANGED=1
 
-if [[ "$CHANGED" == "1" ]]; then
+if [[ "$CHANGED" != "1" ]]; then
   echo "Nothing to deploy"
   exit 0
 fi
