@@ -4,7 +4,7 @@ refen: welcome/faq
 ---
 # Frequently Asked Questions (FAQ)
 
-## V2Ray Usage
+## V2Ray-Nutzung
 
 ### How to upgrade V2Ray
 
