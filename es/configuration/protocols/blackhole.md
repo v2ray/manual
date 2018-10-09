@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/blackhole refen: configuration/protocols/blackhole
-
-* * *
-
+---
+refcn: chapter_02/protocols/blackhole
+refen: configuration/protocols/blackhole
+---
 # Blackhole
 
 Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
