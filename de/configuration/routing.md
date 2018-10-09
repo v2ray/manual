@@ -6,7 +6,7 @@ refen: configuration/routing
 
 V2Ray verfügt über einen internen Routing-Mechanismus. Es leitet eingehende Verbindungen basierend auf Regeln an verschiedene ausgehende Verbindungen weiter. Ein häufiges Szenario ist die Aufteilung des Datenverkehrs nach Ländern. V2Ray kann das Zielland (nach Geo-IP) einer Verbindung erkennen und sendet dann eine Verbindung zum entsprechenden ausgehenden Proxy.
 
-Aufbau:
+Configuration:
 
 ```javascript
 {
@@ -27,7 +27,7 @@ Aufbau:
 }
 ```
 
-Woher:
+Where:
 
 * `strategy`: Der einzige gültige Wert für jetzt ist `"rules"`.
 * `domainStrategy`: Domain resolution strategy. Choices are: 
@@ -71,7 +71,7 @@ Konfiguration für jede Regel:
 }
 ```
 
-Woher:
+Where:
 
 * `type`: Der einzige gültige Wert für jetzt ist `"field"`.
 * `domain`: An array of domains. There are four formats: 
@@ -87,8 +87,8 @@ Woher:
   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): wie `"127.0.0.0/8"`.
   * GeoIP: such as `"geoip:cn"`. It begins with `geoip:` (lower case) and followed by two letter of country code. 
     * Sonderwert `"geoip: privat"`: für alle privaten Adressen wie `127.0.0.1`.
-  * IPs aus Datei (V2Ray 3.23+): Wie `"ext: file: tag"`. Der Wert muss mit `ext:` (Kleinbuchstaben) beginnen, gefolgt von Dateiname und Tag. Die Datei wird in platziert [Ressourcenverzeichnis](env.md#location-of-v2ray-asset), und hat das gleiche Format von `geoip.dat`. Das Tag muss in der Datei vorhanden sein.
-* `Hafen`：Port range. Formats are: 
+  * IPs aus Datei (V2Ray 3.23+): Wie `"ext: file: tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. Die Datei wird in platziert [Ressourcenverzeichnis](env.md#location-of-v2ray-asset), und hat das gleiche Format von `geoip.dat`. The tag must exist in the file.
+* `port`：Port range. Formats are: 
   * `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
   * `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
 * `network`: Choices are `"tcp"`, `"udp"`, or `"tcp,udp"`. When the connection has in the chosen network, this rule take effect.
