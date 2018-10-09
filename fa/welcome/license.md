@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/license refen: welcome/license
-
-* * *
-
+---
+refcn: chapter_00/license
+refen: welcome/license
+---
 # License
 
 Project V uses the following license.
