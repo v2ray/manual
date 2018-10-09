@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/04_dns refen: configuration/dns
-
-* * *
-
+---
+refcn: chapter_02/04_dns
+refen: configuration/dns
+---
 # DNS
 
 V2Ray verfügt über einen internen DNS-Server, der DNS-Relay für andere Komponenten bereitstellt.
@@ -42,11 +40,11 @@ Woher:
     * `address`: DNS server address, such as `"8.8.8.8"`.
     * `port`: DNS server port, such as `53`.
     * `domains`: List of domains that are prioritized for this server. The format of a domain is the same as it is in [routing config](routing.md).
-* `clientIp`: IPv4-Adresse des aktuellen Systems. Dies wird verwendet, um den DNS-Server für eine bessere IP-Auflösung zu benachrichtigen. Der Wert darf keine private Adresse sein.
+* `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
 
 Um den internen DNS-Dienst zu verwenden, müssen Sie `domainStrategy` in [routing](routing.md)konfigurieren.
 
-Die DNS-Abfragen, die von diesem DNS-Dienst weitergeleitet werden, werden ebenfalls basierend auf Routingeinstellungen ausgelöst. Es ist keine zusätzliche Konfiguration erforderlich.
+The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
 
 ## Query strategy {#strategy}
 
@@ -56,7 +54,7 @@ Der DNS-Dienst versucht, sowohl den A- als auch den AAAA-Datensatz in derselben 
 8.8.8.8 8.8.4.4 9.9.9.9
 ```
 
-## Tips {#tips}
+## Tipps {#tips}
 
 * Es wird empfohlen, DNS von Ihrem lokalen Host mit einem Drittanbieter-DNS-Relayserver zu verwenden, z. B. [CoreDNS](https://coredns.io/).
 * When using localhost as DNS server, outbound DNS queries are not sent through V2Ray by default. You may need some settings to intercept those queries if necessary.
