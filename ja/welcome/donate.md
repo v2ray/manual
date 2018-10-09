@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/02_donate refen: welcome/donate
-
-* * *
-
+---
+refcn: chapter_00/02_donate
+refen: welcome/donate
+---
 # Donation
 
 Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
