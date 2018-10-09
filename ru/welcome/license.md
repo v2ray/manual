@@ -2,7 +2,7 @@
 refcn: chapter_00/license
 refen: welcome/license
 ---
-# Лицензия
+# License
 
 Project V использует следующую лицензию.
 
