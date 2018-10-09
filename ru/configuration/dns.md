@@ -41,7 +41,7 @@ V2Ray имеет внутренний DNS-сервер, используемый
   * Полный (V2Ray 3.42+): 
     * `address`: Адрес DNS-сервера, типа `"8.8.8.8"`.
     * `port`: Порт DNS-сервера, например `53`.
-    * `domains`: Список доменов, приоритетных для этого сервера. The format of a domain is the same as it is in [routing config](routing.md).
+    * `domains`: Список доменов, приоритетных для этого сервера. Формат доменов такой же, как и в [Маршрутизации](routing.md).
 * `clientIp`: IPv4-адрес текущей системы. Используется для уведомления DNS-сервера для лучшего разрешения IP. Значение не может быть адресом из частных ("серых") диапазонов.
 
 Чтобы использовать внутренний DNS, вам необходимо настроить `domainStrategy` в [маршрутизации](routing.md).
@@ -61,5 +61,5 @@ V2Ray имеет внутренний DNS-сервер, используемый
 ## Подсказки {#tips}
 
 * Рекомендуется использовать DNS с вашего локального хоста с DNS-сервером от третьей стороны, например [CoreDNS](https://coredns.io/).
-* When using localhost as DNS server, outbound DNS queries are not sent through V2Ray by default. You may need some settings to intercept those queries if necessary.
+* При использовании localhost в качестве DNS-сервера исходящие DNS-запросы по умолчанию не отправляются через V2Ray. Возможно, вам понадобится изменить некоторые настройки для перехвата этих запросов.
 * When a DNS server has the domain in its domain list, the domain will be queries in this server first, and then other servers. Otherwise DNS queries are sent to DNS servers in the order they appear in the config file.
