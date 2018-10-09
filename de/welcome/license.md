@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/license refen: welcome/license
-
-* * *
-
+---
+refcn: chapter_00/license
+refen: welcome/license
+---
 # Lizenz
 
 Project V verwendet die folgende Lizenz.
@@ -25,7 +23,7 @@ Die offizielle Website, [v2ray.com](https://www.v2ray.com/), ist lizenziert unte
 
 ## Screenshot and other files {#screenshots}
 
-Alle Dateien von Drittanbietern gehören zu ihrem Ersteller. Wer die Datei erstellt, besitzt die Datei.
+All third party files listed below belong to their creator. Whoever creates the file owns the file.
 
 * Einschließlich aller Screenshots von Project V.
 * Einschließlich aller Konfigurationsdateien, die zum Ausführen von Project V verwendet werden
