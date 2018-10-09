@@ -34,7 +34,7 @@ V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray 
 
 ### SaftSSH
 
-SSH-Client.
+SSH client.
 
 * Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
 * Webseite: [JuiceSSH.com](https://juicessh.com/)
@@ -45,9 +45,9 @@ SSH client
 
 * Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)
 
-### Telegramm
+### Telegram
 
-Verschlüsselte Diskussion
+Encrypted discussion.
 
-* Webseite: [telegramm.org](https://telegram.org/)
+* Website: [telegram.org](https://telegram.org/)
 * Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)
