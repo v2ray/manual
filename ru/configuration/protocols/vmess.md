@@ -7,9 +7,9 @@ refen: configuration/protocols/vmess
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
 
 * Наименование: vmess
-* Тип: входящий / исходящий
+* Type: Inbound / Outbound
 
-## Конфигурация прокси для исходящего соединения
+## Outbound Proxy Configuration
 
 ```javascript
 {
@@ -30,11 +30,11 @@ refen: configuration/protocols/vmess
 }
 ```
 
-Где:
+Where:
 
 * `vnext`: Массив, где каждая запись является удаленным сервером. 
   * ` address `: Адрес сервера, может быть IPv4, IPv6 или доменное имя.
-  * `port`: Порт сервера
+  * `port`: Server port
   * `users`: Массив, в котором каждая запись является пользователем VMess. 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 16. Оно не должно быть больше, чем alterId входящего соединения.
@@ -45,7 +45,7 @@ refen: configuration/protocols/vmess
       * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
       * `"none"`: Не использовать шифрование.
 
-## Конфигурация прокси для входящего соединения
+## Inbound Proxy Configuration
 
 ```javascript
 {
@@ -68,7 +68,7 @@ refen: configuration/protocols/vmess
 }
 ```
 
-Где:
+Where:
 
 * `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
   * Каждый клиент содержит: 
@@ -79,13 +79,13 @@ refen: configuration/protocols/vmess
 * `detour`: Дополнительная функция, чтобы предложить клиенту использовать предложенный протокол. 
   * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
 * `default`: Optional default client configuration. Usually used in detour proxy. 
-  * ` userLevel `: Пользовательский уровень.
+  * `level`: User level.
   * `alterId`: Number of alternative IDs. Default value 64. Recommend 16.
 * `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
   * `none`
   * `aes-128-cfb`
 
-## Советы
+## Tips
 
 * Всегда используйте метод шифрования ` "auto" ` для обеспечения безопасности и совместимости.
 * VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. 
