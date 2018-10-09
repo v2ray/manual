@@ -1,6 +1,10 @@
-# Dokodemo-Door
+* * *
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/dokodemo.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/dokodemo.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/dokodemo.html)
+refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
+
+* * *
+
+# Dokodemo-Tür
 
 Dokodemo-door is a protocol for inbound connections. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
 
