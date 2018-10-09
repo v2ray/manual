@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/01_versions refen: welcome/versions
-
-* * *
-
+---
+refcn: chapter_00/01_versions
+refen: welcome/versions
+---
 # Version History
 
 ## 2018.10.12 v3.47
