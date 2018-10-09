@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/transport/tcp refen: configuration/transport/tcp
-
-* * *
-
+---
+refcn: chapter_02/transport/tcp
+refen: configuration/transport/tcp
+---
 # TCP Transport
 
 Configuration:
