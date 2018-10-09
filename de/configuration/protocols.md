@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/02_protocols refen: configuration/protocols
-
-* * *
-
+---
+refcn: chapter_02/02_protocols
+refen: configuration/protocols
+---
 # Protokolle
 
 V2Ray unterstützt die folgenden Protokolle:
