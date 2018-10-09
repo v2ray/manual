@@ -10,17 +10,17 @@ refen: ui_client/osx
 
 ## Other tools {#other}
 
-### Visual Studio-Code
+### Visual Studio Code
 
-Quellcode-Editor von Microsoft.
+Source code editor from Microsoft.
 
-* Webseite: [code.visualstudio.com](https://code.visualstudio.com/)
+* Website: [code.visualstudio.com](https://code.visualstudio.com/)
 
-### Telegramm
+### Telegram
 
-Verschlüsselte Diskussion
+Encrypted discussion.
 
-* Webseite: [telegramm.org](https://telegram.org/)
+* Website: [telegram.org](https://telegram.org/)
 * Download: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
 
 ### Microsoft Remote Desktop-Verbindungsclient
