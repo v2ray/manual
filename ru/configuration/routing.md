@@ -2,11 +2,11 @@
 refcn: chapter_02/03_routing
 refen: configuration/routing
 ---
-# Маршрутизация
+# Routing
 
 V2Ray has an internal routing mechanism. It routes inbound connections to various outbound based on rules. A common scenario is to split traffic by country. V2Ray can detect target country (by Geo IP) of a connection, and sends then connection to corresponding outbound proxy.
 
-Настройка:
+Configuration:
 
 ```javascript
 {
@@ -27,7 +27,7 @@ V2Ray has an internal routing mechanism. It routes inbound connections to variou
 }
 ```
 
-Где:
+Where:
 
 * `strategy`: The only valid value for now is `"rules"`.
 * `domainStrategy`: Domain resolution strategy. Choices are: 
@@ -71,7 +71,7 @@ Configuration for each rule:
 }
 ```
 
-Где:
+Where:
 
 * `type`: The only valid value for now is `"field"`.
 * `domain`: An array of domains. There are four formats: 
@@ -100,7 +100,7 @@ Configuration for each rule:
   * `sniffing` in inbound proxy must be enabled in advance.
 * `outboundTag` [Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
 
-## Советы {#tips}
+## Tips {#tips}
 
 * When multiple attributes of the rule are specified, they must be satisfied together, in order to make the rule effective. 
   * If you want to route connections by `domain` or `ip`, you probably need multiple rules, instead of one rule containing both `domain` and `ip`.
