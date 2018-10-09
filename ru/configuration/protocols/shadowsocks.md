@@ -26,7 +26,7 @@ refen: configuration/protocols/shadowsocks
 Информация:
 
 * Название: shadowsocks
-* Тип: входящий / исходящий
+* Type: Inbound / Outbound
 
 ## Конфигурация прокси для входящего соединения
 
@@ -42,7 +42,7 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-Где:
+Where:
 
 * `email`: Email address. Used for user identification.
 * `method`: Encryption method. No default value. Options are: 
@@ -80,7 +80,7 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-Где:
+Where:
 
 * `email`: Email address. Used for user identification.
 * `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
@@ -92,8 +92,8 @@ refen: configuration/protocols/shadowsocks
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
+  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
 * `password`: Password. Can be any string.
 * `ota`: Использовать или не использовать OTA. 
-  * Когда используется AEAD, значение ` ota ` не используется.
-* ` userLevel `: Пользовательский уровень.
+  * When AEAD is used, `ota` has no effect.
+* `level`: User level.
