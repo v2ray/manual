@@ -1,9 +1,7 @@
-* * *
-
-refcn: ui_client/android refen: ui_client/android
-
-* * *
-
+---
+refcn: ui_client/android
+refen: ui_client/android
+---
 # Android-Client
 
 [![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/android.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/android.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/android.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/android.html)
@@ -36,7 +34,7 @@ V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray 
 
 ### SaftSSH
 
-SSH client.
+SSH-Client.
 
 * Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
 * Webseite: [JuiceSSH.com](https://juicessh.com/)
@@ -49,7 +47,7 @@ SSH client
 
 ### Telegramm
 
-Encrypted discussion.
+Verschlüsselte Diskussion
 
 * Webseite: [telegramm.org](https://telegram.org/)
 * Herunterladen: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)
