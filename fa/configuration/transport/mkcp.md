@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/transport/mkcp refen: configuration/transport/mkcp
-
-* * *
-
+---
+refcn: chapter_02/transport/mkcp
+refen: configuration/transport/mkcp
+---
 # mKCP Transport
 
 mKCP is a reliable stream transport. It is an UDP based protocol.
