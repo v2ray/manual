@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/http refen: configuration/protocols/http
-
-* * *
-
+---
+refcn: chapter_02/protocols/http
+refen: configuration/protocols/http
+---
 # HTTP
 
 HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
