@@ -25,7 +25,7 @@ Protocol description:
 }
 ```
 
-Woher:
+Where:
 
 * `users`: An array of users. **For now only the first user is effective**. Each user has the following configuration: 
   * `email`: User email. Used for tracking purposes. See [Stats](../stats.md).
@@ -78,6 +78,6 @@ Routing:
 
 The configure your Telegram app to connect to 443 port on this machine.
 
-## Tipps {#tips}
+## Tips {#tips}
 
 * Use this command to generate MTProto secret: `openssl rand -hex 16`.
