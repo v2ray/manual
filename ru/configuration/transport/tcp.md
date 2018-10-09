@@ -4,7 +4,7 @@ refen: configuration/transport/tcp
 ---
 # Доставка через TCP
 
-Настройка:
+Configuration:
 
 ```javascript
 {
@@ -14,7 +14,7 @@ refen: configuration/transport/tcp
 }
 ```
 
-Где:
+Where:
 
 * `header`: Настройки обфускации заголовка: 
   * `type`: Type of obfuscation. Choices are: 
@@ -57,7 +57,7 @@ refen: configuration/transport/tcp
 }
 ```
 
-Где:
+Where:
 
 * `type`: тот же `type` что и в `tcpSettings`.
 * `request`: Настройки HTTP-запроса: 
