@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/command refen: welcome/command
-
-* * *
-
+---
+refcn: chapter_00/command
+refen: welcome/command
+---
 # Commandline
 
 ## V2Ray
