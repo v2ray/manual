@@ -2,14 +2,14 @@
 refcn: chapter_02/02_protocols
 refen: configuration/protocols
 ---
-# Protokolle
+# Protocols
 
 V2Ray unterstützt die folgenden Protokolle:
 
-* [Schwarzes Loch](protocols/blackhole.md)
+* [Blackhole](protocols/blackhole.md)
 * [Dokodemo-Tür](protocols/dokodemo.md)
-* [Freiheit](protocols/freedom.md)
+* [Freedom](protocols/freedom.md)
 * [HTTP](protocols/http.md)
-* [Schattensocken](protocols/shadowsocks.md)
+* [Shadowsocks](protocols/shadowsocks.md)
 * [Socken](protocols/socks.md)
 * [VMess](protocols/vmess.md)
