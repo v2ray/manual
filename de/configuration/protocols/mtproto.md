@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/mtproto refen: configuration/protocols/mtproto
-
-* * *
-
+---
+refcn: chapter_02/protocols/mtproto
+refen: configuration/protocols/mtproto
+---
 # MTProto
 
 MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
@@ -13,7 +11,7 @@ MTProto proxy is a special procol for Telegram. It consists of a pair of inbound
 Protocol description:
 
 * Name: mtproto
-* Type: Inbound / Outbound
+* Geben Sie ein: Eingehend / Ausgehend
 
 ## Inbound configuration {#inbound}
 
@@ -27,11 +25,11 @@ Protocol description:
 }
 ```
 
-Where:
+Woher:
 
 * `users`: An array of users. **For now only the first user is effective**. Each user has the following configuration: 
   * `email`: User email. Used for tracking purposes. See [Stats](../stats.md).
-  * `level`: User level.
+  * `Stufe`: Benutzerebene.
   * `secret`: User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
 
 ## Outbound configuration {#outbound}
@@ -80,6 +78,6 @@ Routing:
 
 The configure your Telegram app to connect to 443 port on this machine.
 
-## Tips {#tips}
+## Tipps {#tips}
 
 * Use this command to generate MTProto secret: `openssl rand -hex 16`.
