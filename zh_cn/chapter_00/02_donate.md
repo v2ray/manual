@@ -9,13 +9,16 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 
 * 所有捐款的用途将不被公开；
 * 您的捐款是对 Project V 的无偿贡献，和 Project V 提供的技术和服务没有直接关联；
-* 感谢您对 Project V 的热爱和支持。
+
+{% hint style='tip' %}
+感谢您对 Project V 的热爱和支持。
+{% endhint %}
 
 ## 传统方式 {#usual-way}
 
-* [Paypal transfer](https://www.paypal.me/ProjectV2Ray/25)
-* [Paypal with credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
-* [Patreon](https://www.patreon.com/v2ray)
+* [Paypal 转账](https://www.paypal.me/ProjectV2Ray/25)
+* [Paypal 信用卡](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
+* [Patreon 定期投食](https://www.patreon.com/v2ray)
 
 \* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义。
 
