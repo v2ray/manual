@@ -1,9 +1,7 @@
-* * *
-
-refcn: ui_client/windows refen: ui_client/windows
-
-* * *
-
+---
+refcn: ui_client/windows
+refen: ui_client/windows
+---
 # Windows
 
 ## V2RayW
@@ -26,7 +24,7 @@ SSH-Client.
 
 * Webseite: [putty.org](http://www.putty.org/)
 
-### Visual Studio Code
+### Visual Studio-Code
 
 Quellcode-Editor von Microsoft.
 
