@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/protocols/mtproto refen: configuration/protocols/mtproto
-
-* * *
-
+---
+refcn: chapter_02/protocols/mtproto
+refen: configuration/protocols/mtproto
+---
 # MTProto
 
 MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
