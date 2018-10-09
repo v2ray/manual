@@ -1,14 +1,12 @@
-* * *
-
-refcn: chapter_02/transport/websocket refen: configuration/transport/websocket
-
-* * *
-
+---
+refcn: chapter_02/transport/websocket
+refen: configuration/transport/websocket
+---
 # WebSocket
 
-Используйте стандартный WebSocket для передачи данных. Соединения Websocket могут быть проксифицированы HTTP-сервером, таким как Nginx.
+Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
 
-Конфигурация:
+Настройка:
 
 ```javascript
 {
@@ -21,8 +19,8 @@ refcn: chapter_02/transport/websocket refen: configuration/transport/websocket
 
 Где:
 
-* `path`: Путь, используемый для WebSocket. По умолчанию корень домена `""`.
-* `headers`: Пользовательский HTTP-заголовок. Это массив, в котором каждая запись представляет собой пару ключевых значений в строке, для заголовка и значения в заголовке HTTP. По умолчанию пуст.
+* `path`: Path used for WebSocket. Default to root, as `""`。
+* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
 
 ## Важно
 
