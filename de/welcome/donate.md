@@ -1,12 +1,10 @@
-* * *
-
-refcn: chapter_00/02_donate refen: welcome/donate
-
-* * *
-
+---
+refcn: chapter_00/02_donate
+refen: welcome/donate
+---
 # Spende
 
-Projekt V ist ein gemeinnütziges Projekt. The source code and program can be used freely (mainly) under MIT licence. Wenn Sie dieses Projekt mögen, können Sie uns eine Tasse Kaffee kaufen.
+Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
 
 * The usage of donations will not be disclosed.
 * Ihre Spende hat keine direkte Verbindung zur Entwicklung und zum Service von Project V.
@@ -20,7 +18,7 @@ Projekt V ist ein gemeinnütziges Projekt. The source code and program can be us
 
 Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
 
-## Cryptocurrency {#crypto}
+## Kryptowährung {#crypto}
 
 * Bitcoin: [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
 * Bitcoin Case: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)
