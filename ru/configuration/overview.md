@@ -8,7 +8,7 @@ refcn: chapter_02/01_overview refen: configuration/overview
 
 V2Ray имеет одинаковую структуру (см. ниже) файлов с настройками как на сервере, так и на клиенте. В отдельных секциях настройки сервера и клиента отличаются.
 
-Below is the top level structure of the configuration. Each section has its own format.
+Ниже представлена ​​структура верхнего уровня конфигурации. Каждый раздел имеет свой собственный формат.
 
 ```javascript
 {
@@ -26,7 +26,7 @@ Below is the top level structure of the configuration. Each section has its own 
 }
 ```
 
-Where:
+Где:
 
 * `log`: конфигурация журнала. Подробности ниже.
 * `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
@@ -50,7 +50,7 @@ Where:
 }
 ```
 
-Where:
+Где:
 
 * `access`: Path of access log, available examples are: 
   * A legal path of file, such as `"/tmp/v2ray/_access.log"`(Linux), or `"C:\\Temp\\v2ray\\_access.log"`(Windows);
@@ -83,7 +83,7 @@ Master inbound interface is used to receive data from clients, browsers, or othe
 }
 ```
 
-Where:
+Где:
 
 * `port`: listening port.
 * `port`: port to be listen from. Accepted formats are: 
@@ -122,7 +122,7 @@ Master outbound interface is used to send data to remote servers or next proxy s
 }
 ```
 
-Where:
+Где:
 
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
@@ -158,7 +158,7 @@ This section is an array contains multiple extra inbound interfaces' configurati
 }
 ```
 
-Where:
+Где:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `port`: port to be listen from. Accepted formats are: 
@@ -200,7 +200,7 @@ This section is an array contains multiple extra outbound interfaces' configurat
 }
 ```
 
-Where:
+Где:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
