@@ -25,7 +25,7 @@ MTProto proxy is a special procol for Telegram. It consists of a pair of inbound
 }
 ```
 
-Где:
+Where:
 
 * `users`: Массив пользователей. **For now only the first user is effective**. Each user has the following configuration: 
   * `email`: User email. Used for tracking purposes. See [Stats](../stats.md).
@@ -78,6 +78,6 @@ MTProto can only be used for Telegram traffic. You may need a routing rule to co
 
 Конфигурируйте приложение Telegram для подключения к порту 443 на этом устройстве.
 
-## Советы {#tips}
+## Tips {#tips}
 
 * Используйте эту команду для генерации секрета MTProto: ` openssl rand -hex 16 `.
