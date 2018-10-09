@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/tg refen: welcome/tg
-
-* * *
-
+---
+refcn: chapter_00/tg
+refen: welcome/tg
+---
 # Группа в Telegram
 
 Project V предоставляет следующие группы для разных типов обсуждений.
