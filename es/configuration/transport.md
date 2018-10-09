@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/05_transport refen: configuration/transport
-
-* * *
-
+---
+refcn: chapter_02/05_transport
+refen: configuration/transport
+---
 # Transport Settings
 
 Transport is for how V2Ray sends and receives data from its peers. The responsiblity of a transport is to reliably transfer data to a peer. Usually a connection has matching transports on both endpoints. For example, if a V2Ray outbound uses WebSocket as its transport, the inbound it talks to also has to use WebSocket, otherwise a connection can't be established.
