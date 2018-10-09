@@ -7,8 +7,8 @@ refen: configuration/protocols/freedom
 Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
 
 * Название: freedom
-* Тип: исходящий
-* Настройка:
+* Type: Outbound
+* Configuration:
 
 ```javascript
 {
@@ -18,7 +18,7 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 }
 ```
 
-Где:
+Where:
 
 * `domainStrategy`: Strategy for domain name resolution. Options are: 
   * `"AsIs"`: Default. Resolve domain name by system.
