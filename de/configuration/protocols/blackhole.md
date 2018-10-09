@@ -1,16 +1,14 @@
-* * *
-
-refcn: chapter_02/protocols/blackhole refen: configuration/protocols/blackhole
-
-* * *
-
-# Blackhole
+---
+refcn: chapter_02/protocols/blackhole
+refen: configuration/protocols/blackhole
+---
+# Schwarzes Loch
 
 Blackhole ist ein Protokoll für ausgehende Verbindungen. Es blockiert alle Verbindungen mit vordefinierten Antworten. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
 
 * Name: Schwarzes Loch
 * Typ: Ausgehend
-* Konfiguration:
+* Aufbau:
 
 ```javascript
 {
@@ -22,7 +20,7 @@ Blackhole ist ein Protokoll für ausgehende Verbindungen. Es blockiert alle Verb
 
 Woher:
 
-* `response`: Vordefinierte Antwort Blockhole sendet (falls vorhanden) vordefinierte Daten sofort für jede Verbindung, die an es weitergeleitet wird, und schließt die Verbindung. 
+* `response`: Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection. 
   * `type`: Art der Antwort, verfügbare Optionen sind: 
-    * `"none"`: Standardwert. Leere Antwort.
+    * `"none"`: Default value. Empty response.
     * `"http"`: Eine gültige HTTP 403-Antwort.
