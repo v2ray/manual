@@ -1,12 +1,10 @@
-* * *
-
-refcn: chapter_02/protocols/http refen: configuration/protocols/http
-
-* * *
-
+---
+refcn: chapter_02/protocols/http
+refen: configuration/protocols/http
+---
 # HTTP
 
-HTTP is a protocol for inbound connections. Es ist kompatibel mit HTTP 1.1.
+HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 
 * Name: http
 * Typ: Eingehend
@@ -18,10 +16,10 @@ HTTP is a protocol for inbound connections. Es ist kompatibel mit HTTP 1.1.
 
 Woher:
 
-* `Konten`: Ein Array, in dem jeder Eintrag ein Account ist. Der Benutzername des Accounts wird mit `Benutzer`und das Passwort mit `Pass`. Standard leer 
+* `Konten`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
   * Wenn `Konten` nicht leer ist, verwendet HTTP die Standardauthentifizierung für die Benutzerüberprüfung.
 * `allowTransparent`: Wenn `wahr`, werden alle HTTP-Anfragen, die an diesen eingehenden Empfänger gesendet werden, einschließlich Nicht-Proxy-Anfragen, weitergeleitet.
-* `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.
+* `userLevel`: User level. All connections share this level.
 
 ## Tipps
 
