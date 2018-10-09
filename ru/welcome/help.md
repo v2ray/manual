@@ -1,16 +1,14 @@
-* * *
-
-refcn: chapter_00/help refen: welcome/help
-
-* * *
-
+---
+refcn: chapter_00/help
+refen: welcome/help
+---
 # Поддержка
 
 Пожалуйста, ознакомьтесь со следующими рекомендациями для лучшего качества обсуждения и более быстрого решения.
 
 ## Язык {#language}
 
-Команда Project V поддерживает китайский и английский языки. Пожалуйста, выберите тот, который вам знаком, для вопросов.
+Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
 
 ## Способы получения поддержки {#support}
 
