@@ -7,7 +7,7 @@ refen: configuration/protocols/socks
 Socks - это реализация стандартного протокола SOCKS, совместимого с [ Socks 4 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4а и [ Socks 5 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
 * Наименование: socks
-* Тип: входящий / исходящий
+* Type: Inbound / Outbound
 
 ## Конфигурация прокси для исходящего соединения
 
@@ -27,7 +27,7 @@ Socks - это реализация стандартного протокола 
 }
 ```
 
-Где:
+Where:
 
 * `servers`: Список socks серверов, в котором каждая запись это: 
   * `address`: Адрес сервера
@@ -35,9 +35,9 @@ Socks - это реализация стандартного протокола 
   * `users`: Список учетных записей пользователей: 
     * `user`: Логин
     * `pass`: Пароль
-    * ` userLevel `: Пользовательский уровень.
+    * `level`: User level.
 
-Замечание:
+Notice:
 
 * Если список пользователей не пустой, то socks будет использовать случайного пользователя для подключения к сервера.
 * Поддерживаются только SOCKS5 сервера.
@@ -59,7 +59,7 @@ Socks - это реализация стандартного протокола 
 }
 ```
 
-Где:
+Where:
 
 * `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
   * `noauth`: Анонимная аутентификация
