@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_02/stats refen: configuration/stats
-
-* * *
-
+---
+refcn: chapter_02/stats
+refen: configuration/stats
+---
 # Statistiken
 
 V2Ray bietet einige Informationen über seine Interna.
