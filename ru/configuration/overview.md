@@ -1,14 +1,12 @@
-* * *
-
-refcn: chapter_02/01_overview refen: configuration/overview
-
-* * *
-
+---
+refcn: chapter_02/01_overview
+refen: configuration/overview
+---
 # Обзор настроек
 
-V2Ray имеет одинаковую структуру (см. ниже) файлов с настройками как на сервере, так и на клиенте. В отдельных секциях настройки сервера и клиента отличаются.
+V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
 
-Ниже представлена ​​структура верхнего уровня конфигурации. Каждый раздел имеет свой собственный формат.
+Below is the top level structure of the configuration. Each section has its own format.
 
 ```javascript
 {
@@ -28,7 +26,7 @@ V2Ray имеет одинаковую структуру (см. ниже) фай
 
 Где:
 
-* `log`: конфигурация журнала. Подробности ниже.
+* `log`: log configuration. See below for detail.
 * `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
 * `dns`: Internal DNS server's configurations, if this section is omitted or empty, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](dns.md).
 * `stats`: When specified, internal [Statistics](stats.md) is enabled.
