@@ -2,7 +2,7 @@
 refcn: chapter_02/index
 refen: configuration/index
 ---
-# Настройка
+# Configuration
 
 V2Ray использует конфиг на основе [protobuf](https://developers.google.com/protocol-buffers/). Из-за низкой читаемости формата protobuf, V2Ray также поддерживает конфиг в JSON. Перед запуском, V2Ray автоматически преобразует конфигурацию JSON в protobuf. В дальнейшем могут быть введены другие форматы конфигурации.
 
