@@ -22,7 +22,7 @@ Global settings is in the "transport" entry of V2Ray config.
 }
 ```
 
-Woher:
+Where:
 
 * `tcpSettings`: Settings for [TCP transport](transport/tcp.md).
 * `kcpSettings`: Settings for [mKCP transport](transport/mkcp.md).
@@ -113,7 +113,7 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
 }
 ```
 
-Woher:
+Where:
 
 * `network`: Netzwerktyp des Stream-Transports. Choices are `"tcp"`, `"kcp"`, `"ws"`, `"http"`, or `"domainsocket"`. Standardwert `"tcp"`.
 * `security`: Art der Sicherheit. Die Auswahlmöglichkeiten sind `"none"` (Standard) für keine zusätzliche Sicherheit oder `"TLS"` für die Verwendung von [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
@@ -149,7 +149,7 @@ Woher:
     * `"redirect"`: Enable TProxy with Redirect mode. Supports TCP/IPv4 and UDP traffic.
     * `"tproxy"`: Enable TProxy with TProxy mode. Supports TCP and UDP traffic.
 
-## Tipps {#tips}
+## Tips {#tips}
 
 * When `certificateFile` and `certificate` are both filled in. V2Ray uses `certificateFile`. Same for `keyFile` and `key`.
 * Wenn es eine neue Client-Anfrage gibt, sagen wir für `serverName` = `"v2ray.com"`, findet V2Ray zuerst ein Zertifikat für `"v2ray.com"`. Wenn V2Ray nicht gefunden wird, versucht V2Ray, ein neues Zertifikat mit einem vorhandenen Zertifikat auszustellen, dessen ` usage ` `"issue"` für `"v2ray.com"`. Das neue Zertifikat läuft in einer Stunde ab und wird dem Zertifikatspool zur späteren Wiederverwendung hinzugefügt.
