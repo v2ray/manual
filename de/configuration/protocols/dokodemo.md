@@ -1,6 +1,10 @@
-# Dokodemo-Door
+* * *
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/dokodemo.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/dokodemo.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/dokodemo.html)
+refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
+
+* * *
+
+# Dokodemo-door
 
 Dokodemo-door is a protocol for inbound connections. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
 
@@ -8,7 +12,7 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 
 * Name: dokodemo-door
 * Typ: Eingehend
-* Aufbau:
+* Configuration:
 
 ```javascript
 {
@@ -20,7 +24,7 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 }
 ```
 
-Woher:
+Where:
 
 * `address`: Adresse des Zielservers. Kann eine IPv4-, IPv6- oder eine Domäne in Zeichenfolgenform sein. 
   * Wenn `followRedirect` (siehe unten) ist `wahr`, `Adresse` kann leer sein.

@@ -1,8 +1,10 @@
+---
+refcn: chapter_00/02_donate
+refen: welcome/donate
+---
 # Пожертвование
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/donate.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/02_donate.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/donate.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/donate.html)
-
-Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. Если вам нравится этот проект, купите нам чашку кофе.
+Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
 
 * Отчёт о расходах публиковаться не будет.
 * Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V.
@@ -16,7 +18,7 @@ Project V - некоммерческий проект. Исходный код �
 
 С надеждой на понимание предупреждаем, что переводы меньше одного доллара не имеют смысла из-за большой комиссии PayPal.
 
-## Криптовалюта {#crypto}
+## Cryptocurrency {#crypto}
 
 * Bitcoin: [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
 * Bitcoin Case: [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)

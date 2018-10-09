@@ -1,12 +1,16 @@
-# Aufbau
+---
+refcn: chapter_02/index
+refen: configuration/index
+---
+# Configuration
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/index.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/index.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/index.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/index.html)
+V2Ray uses [protobuf](https://developers.google.com/protocol-buffers/)-based configuration. Due the low readability of protobuf format, V2Ray also supports configuration in JSON. Before V2Ray runs, it automatically converts JSON config into protobuf. That being said, other configuration formats may be introduced in the furture.
 
-V2Ray verwendet eine Konfigurationsdatei im JSON-Format. Wenn Sie mit JSON vertraut sind, können Sie diese Seite überspringen.
+Here we introduce the JSON-based configuration.
 
-JSON oder [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), kurz gesagt, sind Objekte in Javascript. Eine JSON-Datei enthält ein und nur ein JSON-Objekt, beginnend mit "{" und endend mit "}".
+JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
 
-Ein JSON-Objekt enthält eine Liste von Schlüsselwertpaaren. Ein Schlüssel ist eine Zeichenfolge, und ein Wert kann verschiedene Typen haben, wie z. B. Zeichenfolge, Zahl, Boolean, Array oder ein anderes Objekt. Ein typisches Objekt ist wie folgt:
+A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
 
 ```javascript
 {

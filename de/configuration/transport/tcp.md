@@ -1,19 +1,21 @@
+---
+refcn: chapter_02/transport/tcp
+refen: configuration/transport/tcp
+---
 # TCP-Transport
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/tcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/tcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/tcp.html)
-
-Aufbau:
+Configuration:
 
 ```javascript
 {"Kopfzeile": {"Typ": "keine"}}
 ```
 
-Woher:
+Where:
 
-* `Header`: Kopfzeilenverschleierung Einstellungen: 
-  * `Art`: Art der Verschleierung Auswahlmöglichkeiten sind: 
-    * `"keine"`: Standard. Keine Verschleierung.
-    * `"http"`: HTTP-Verschleierung. Siehe unten.
+* `header`: Kopfzeilenverschleierung Einstellungen: 
+  * `type`: Type of obfuscation. Choices are: 
+    * `"none"`: Default. No obfuscation at all.
+    * `"http"`: HTTP obfuscation. See below.
 
 ## HTTP-Verschleierung
 
@@ -29,10 +31,10 @@ Where:
 * `anfordern`: HTTP-Anfrageeinstellungen: 
   * `Version`: HTTP-Version, Standardwert `"1.1"`
   * `Methode`: HTTP-Methode, Standardwert `"GET"`.
-  * `Pfad`: Pfad. Ein String-Array. Der Standardwert ist `["/"]`. Wenn mehrere Werte vorhanden sind, wird der Wert für jede Anforderung zufällig ausgewählt.
+  * `path`: Path. A string array. Default value is `["/"]`. When there are multiple values, value is picked up randomly for each request.
   * `Header`: HTTP-Header. Es ist ein Schlüsselwertpaar. Jeder Schlüssel ist der Schlüssel des HTTP-Headers und der Wert ist der Wert des HTTP-Headers. Wenn mehrere Werte festgelegt sind, wird der effektive Wert für jede Anforderung zufällig ausgewählt. Die Standardeinstellungen sind die gleichen wie im obigen Beispiel.
-* `Antwort`: HTTP-Antwort 
-  * `Version`: HTTP-Version. Standardwert ist `"1.1"`.
-  * `Status`: HTTP-Status. Standardwert ist `"200"`.
-  * `Grund`: HTTP-Statustext. Standardwert ist `"OK"`.
-  * `Header`: HTTP-Header. Wie Anforderungsheader, aber für die Antwort.
+* `response`: HTTP-Antwort 
+  * `version`: HTTP version. Default value is `"1.1"`.
+  * `status`: HTTP status. Default value is `"200"`.
+  * `reason`: HTTP status text. Default value is `"OK"`.
+  * `headers`: HTTP header. Same as request headers, but for response.

@@ -1,10 +1,12 @@
+---
+refcn: chapter_02/transport/websocket
+refen: configuration/transport/websocket
+---
 # WebSocket
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/websocket.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/websocket.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/websocket.html)
+Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
 
-Используйте стандартный WebSocket для передачи данных. Соединения Websocket могут быть проксифицированы HTTP-сервером, таким как Nginx.
-
-Конфигурация:
+Configuration:
 
 ```javascript
 {
@@ -15,10 +17,10 @@
 }
 ```
 
-Где:
+Where:
 
-* `path`: Путь, используемый для WebSocket. По умолчанию корень домена `""`.
-* `headers`: Пользовательский HTTP-заголовок. Это массив, в котором каждая запись представляет собой пару ключевых значений в строке, для заголовка и значения в заголовке HTTP. По умолчанию пуст.
+* `path`: Path used for WebSocket. Default to root, as `""`。
+* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
 
 ## Важно
 

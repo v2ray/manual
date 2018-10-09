@@ -1,11 +1,13 @@
-# Socken
-
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/socks.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/socks.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/socks.html)
+---
+refcn: chapter_02/protocols/socks
+refen: configuration/protocols/socks
+---
+# Socks
 
 Socks ist eine Implementierung des Standard-SOCKS-Protokolls, kompatibel mit [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a und [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
 * Name: Socken
-* Geben Sie ein: Eingehend / Ausgehend
+* Type: Inbound / Outbound
 
 ## Outbound-Proxy-Konfiguration
 
@@ -25,7 +27,7 @@ Socks ist eine Implementierung des Standard-SOCKS-Protokolls, kompatibel mit [So
 }
 ```
 
-Woher:
+Where:
 
 * `servers`: Socks Server Liste, in der jeder Eintrag hat: 
   * `address`: Serveradresse
@@ -33,9 +35,9 @@ Woher:
   * `users`: Liste der Benutzerkonten: 
     * `user`: Benutzername
     * `pass`: Passwort
-    * `level`: Benutzerebene.
+    * `level`: User level.
 
-Beachten:
+Notice:
 
 * Wenn die Benutzerliste nicht leer ist, führt Socks eine Benutzerauthentifizierung mit dem Remoteserver unter Verwendung eines zufälligen Benutzers durch.
 * Unterstützt nur SOCKS5-Server.
@@ -57,13 +59,13 @@ Beachten:
 }
 ```
 
-Wo:
+Where:
 
-* `auth`: Socken Authentifizierungsmethode. Standard auf `"noauth"`. Optionen sind: 
+* `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
   * `"noauth"`: Anonym.
   * `"Passwort"`: Benutzer und Passwort [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `accounts`: Ein Array, in dem jeder Eintrag `user` für Benutzername und `pass` für Kennwort enthält. Standard bis leer 
+* `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
   * Funktioniert nur, wenn `auth` ist `"password"`
-* `udp`: `true` oder `false` um UDP zu aktivieren. Standard auf falsch.
-* `ip`: Wenn UDP aktiviert ist, empfängt diese IP-Adresse UDP-Pakete vom Client. Standard auf `"127.0.0.1"`.
-* `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.
+* `udp`: `true` or `false` to enable UDP. Default to false.
+* `ip`: When UDP is enabled, this IP address receives UDP packets from client. Default to `"127.0.0.1"`.
+* `userLevel`: User level. All connections share this level.

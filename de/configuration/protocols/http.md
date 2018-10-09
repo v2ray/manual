@@ -1,25 +1,27 @@
+---
+refcn: chapter_02/protocols/http
+refen: configuration/protocols/http
+---
 # HTTP
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/http.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/http.html)
-
-HTTP is a protocol for inbound connections. Es ist kompatibel mit HTTP 1.1.
+HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 
 * Name: http
-* Typ: Eingehend
-* Aufbau:
+* Type: Inbound
+* Configuration:
 
 ```javascript
 {"accounts": [{"user": "mein-Benutzername", "pass": "mein-Passwort"}], "allowTransparent": false, "userLevel": 0}
 ```
 
-Woher:
+Where:
 
-* `Konten`: Ein Array, in dem jeder Eintrag ein Account ist. Der Benutzername des Accounts wird mit `Benutzer`und das Passwort mit `Pass`. Standard leer 
+* `Konten`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
   * Wenn `Konten` nicht leer ist, verwendet HTTP die Standardauthentifizierung für die Benutzerüberprüfung.
 * `allowTransparent`: Wenn `wahr`, werden alle HTTP-Anfragen, die an diesen eingehenden Empfänger gesendet werden, einschließlich Nicht-Proxy-Anfragen, weitergeleitet.
-* `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene.
+* `userLevel`: User level. All connections share this level.
 
-## Tipps
+## Tips
 
 Verwenden Sie die folgenden Einstellungen unter Linux, um den HTTP-Proxy in der aktuellen Sitzung zu verwenden.
 

@@ -1,6 +1,8 @@
-# Лицензия
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/license.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/license.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/license.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/license.html)
+---
+refcn: chapter_00/license
+refen: welcome/license
+---
+# License
 
 Project V использует следующую лицензию.
 
@@ -21,7 +23,7 @@ Project V использует следующую лицензию.
 
 ## Скриншоты и другие файлы {#screenshots}
 
-Все файлы третьих лиц, перечисленные ниже, принадлежат их создателям. Файлы принадлежат тем, кто их создал.
+All third party files listed below belong to their creator. Whoever creates the file owns the file.
 
 * Включая все скриншоты Project V.
 * Включая все файлы конфигурации, которые используются для запуска Project V.

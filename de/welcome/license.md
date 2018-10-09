@@ -1,6 +1,8 @@
-# Lizenz
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/license.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/license.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/license.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/license.html)
+---
+refcn: chapter_00/license
+refen: welcome/license
+---
+# License
 
 Project V verwendet die folgende Lizenz.
 
@@ -21,7 +23,7 @@ Die offizielle Website, [v2ray.com](https://www.v2ray.com/), ist lizenziert unte
 
 ## Screenshot and other files {#screenshots}
 
-Alle Dateien von Drittanbietern gehören zu ihrem Ersteller. Wer die Datei erstellt, besitzt die Datei.
+All third party files listed below belong to their creator. Whoever creates the file owns the file.
 
 * Einschließlich aller Screenshots von Project V.
 * Einschließlich aller Konfigurationsdateien, die zum Ausführen von Project V verwendet werden

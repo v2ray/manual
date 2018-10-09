@@ -1,8 +1,10 @@
+---
+refcn: chapter_00/start
+refen: welcome/start
+---
 # Быстрый старт
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html)
-
-Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
+You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
 
 ## Клиент {#client}
 
@@ -49,11 +51,11 @@
 }
 ```
 
-Измените IP-адрес своего сервера V2Ray, как указано выше в комментариях. После этого начнёт V2Ray проксировать весь трафик с вашего ПК на сервер V2Ray, за исключением внутрисетевого трафика.
+Please modify the IP address of your V2Ray server as mentioned above. After that, the V2Ray process on your PC will proxy all traffic to V2Ray server except intranet traffic.
 
 ## Сервер {#server}
 
-Вам нужен еще один компьютер для запуска V2Ray в качестве сервера. Обычно этот компьютер находится за пределами файрвола (локального или глобального). Вот пример конфигурации.
+You need another computer to run V2Ray as a server. Usually this computer is located outside firewall. Here is a sample configuration.
 
 ```javascript
 {
@@ -75,7 +77,7 @@
 
 ## Запуск {#running}
 
-* В Windows и macOS файл конфигурации находится в том же каталоге, что и исполнимый файл V2Ray. Вы можете запустить `v2ray` или `v2ray.exe` без дополнительных параметров.
+* On Windows and macOS, configuration file is located in the same directory as V2Ray binary. You may run `v2ray` or `v2ray.exe` without additional parameters.
 * На Linux файл конфигурации обычно находится в `/etc/v2ray/config.json`. Выполните `v2ray --config=/etc/v2ray/config.json` в консоли или используйте другие инструменты, типа systemd, для запуска V2Ray в качестве фонового процесса.
 
 Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).

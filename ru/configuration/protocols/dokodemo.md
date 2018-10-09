@@ -1,6 +1,10 @@
-# Dokodemo-door
+* * *
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/dokodemo.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/dokodemo.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/dokodemo.html)
+refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
+
+* * *
+
+# Dokodemo-door
 
 Dokodemo-door - это протокол для входящих соединений. Он принимает любые соединения и передает их в указанное место назначения.
 
@@ -8,7 +12,7 @@ Dokodemo-door также может работать (если настроен)
 
 * Название: dokodemo-door
 * Тип: входящий
-* Конфигурация:
+* Configuration:
 
 ```javascript
 {
@@ -20,7 +24,7 @@ Dokodemo-door также может работать (если настроен)
 }
 ```
 
-Где:
+Where:
 
 * `address`: Адрес определенного сервера. Строка, значением которой может быть IPv4, IPv6 или доменное имя. 
   * если `followRedirect` (см. ниже) `true`, `address` может быть пустым.

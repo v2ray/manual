@@ -1,12 +1,16 @@
-# Настройка
+---
+refcn: chapter_02/index
+refen: configuration/index
+---
+# Configuration
 
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/index.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/index.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/index.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/index.html)
+V2Ray использует конфиг на основе [protobuf](https://developers.google.com/protocol-buffers/). Из-за низкой читаемости формата protobuf, V2Ray также поддерживает конфиг в JSON. Перед запуском, V2Ray автоматически преобразует конфигурацию JSON в protobuf. В дальнейшем могут быть введены другие форматы конфигурации.
 
-V2Ray использует файл конфигурации в формате JSON. Если вы знакомы с JSON, вы можете пропустить эту страницу.
+Здесь мы приводим конфигурацию на основе JSON.
 
 JSON или [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON) - способ представления объектов в Javascript. Один JSON-файл содержит один и только один JSON-объект, начинающийся с «{» и завершающийся «}».
 
-JSON-объект содержит список пар ключ-значение. Ключ - это строка, а значение может быть строкой, числом, логическим значением, массивом или другим объектом. Типичный объект выглядит следующим образом:
+A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
 
 ```javascript
 {
@@ -20,7 +24,7 @@ JSON-объект содержит список пар ключ-значение
 }
 ```
 
-Замечания:
+Замечание:
 
 1. Пара ключ-значение обычно завершается запятой «,», но после последнего элемента объекта запятая не ставится.
 2. V2Ray поддерживает комментарии в JSON, аннотированные «//» или «/\* \*/».

@@ -1,6 +1,8 @@
+---
+refcn: ui_client/windows
+refen: ui_client/windows
+---
 # Windows
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/windows.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/windows.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/windows.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/windows.html)
 
 ## V2RayW
 
@@ -18,18 +20,18 @@
 
 ### Kitt
 
-SSH-Client.
+SSH client.
 
 * Webseite: [putty.org](http://www.putty.org/)
 
-### Visual Studio Code
+### Visual Studio-Code
 
 Quellcode-Editor von Microsoft.
 
 * Webseite: [code.visualstudio.com](https://code.visualstudio.com/)
 
-### Telegramm
+### Telegram
 
-Verschlüsselte Diskussion
+Encrypted discussion.
 
-* Webseite: [telegramm.org](https://telegram.org/)
+* Website: [telegram.org](https://telegram.org/)

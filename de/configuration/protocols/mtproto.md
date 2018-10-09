@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/protocols/mtproto
+refen: configuration/protocols/mtproto
+---
 # MTProto
-
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/mtproto.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/mtproto.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/mtproto.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/mtproto.html)
 
 MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
 
@@ -9,7 +11,7 @@ MTProto proxy is a special procol for Telegram. It consists of a pair of inbound
 Protocol description:
 
 * Name: mtproto
-* Type: Inbound / Outbound
+* Geben Sie ein: Eingehend / Ausgehend
 
 ## Inbound configuration {#inbound}
 
@@ -27,7 +29,7 @@ Where:
 
 * `users`: An array of users. **For now only the first user is effective**. Each user has the following configuration: 
   * `email`: User email. Used for tracking purposes. See [Stats](../stats.md).
-  * `level`: User level.
+  * `Stufe`: Benutzerebene.
   * `secret`: User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
 
 ## Outbound configuration {#outbound}

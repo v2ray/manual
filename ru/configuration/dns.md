@@ -1,10 +1,12 @@
+---
+refcn: chapter_02/04_dns
+refen: configuration/dns
+---
 # DNS
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
 
 V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.
 
-Настройка:
+Configuration:
 
 ```javascript
 {
@@ -27,22 +29,22 @@ V2Ray имеет внутренний DNS-сервер, используемый
 }
 ```
 
-Где:
+Where:
 
 * `hosts`: Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт. Формат домена: 
   * `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
   * `"domain:v2ray.com"`: По такой схеме будет разрешаться как заданный домен, так и его поддомены.
-* `servers`: Список DNS-серверов. Каждый сервер может быть указан в двух форматах: 
+* `servers`: List of DNS servers. Each server may be specified in two formats: 
   * Basic: A string such as `"8.8.8.8"` for DNS server address with port `53`. When the value is `"localhost"`, V2Ray queries localhost for DNS.
-  * Complete (V2Ray 3.42+): 
-    * `address`: DNS server address, such as `"8.8.8.8"`.
-    * `port`: DNS server port, such as `53`.
+  * Полный (V2Ray 3.42+): 
+    * `address`: Адрес DNS-сервера, типа `"8.8.8.8"`.
+    * `port`: Порт DNS-сервера, например `53`.
     * `domains`: List of domains that are prioritized for this server. The format of a domain is the same as it is in [routing config](routing.md).
-* `clientIp`: IPv4-адрес текущей системы. Используется для уведомления DNS-сервера для лучшего разрешения IP. Значение не может быть адресом из частных ("серых") диапазонов.
+* `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
 
 Чтобы использовать внутренний DNS, вам необходимо настроить `domainStrategy` в [маршрутизации](routing.md).
 
-Запросы DNS, ретранслируемые этой службой DNS, также будут отправляться на основе параметров маршрутизации. Никакой дополнительной настройки не требуется.
+The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
 
 ## Стратегия запросов {#strategy}
 
@@ -54,7 +56,7 @@ V2Ray имеет внутренний DNS-сервер, используемый
 9.9.9.9
 ```
 
-## Подсказки {#tips}
+## Советы {#tips}
 
 * Рекомендуется использовать DNS с вашего локального хоста с DNS-сервером от третьей стороны, например [CoreDNS](https://coredns.io/).
 * When using localhost as DNS server, outbound DNS queries are not sent through V2Ray by default. You may need some settings to intercept those queries if necessary.

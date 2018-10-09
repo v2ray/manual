@@ -1,12 +1,14 @@
+---
+refcn: chapter_02/protocols/freedom
+refen: configuration/protocols/freedom
+---
 # Freedom
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/freedom.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/freedom.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/freedom.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/freedom.html)
-
-Freedom - это протокол для исходящих соединений. Он передает все TCP или UDP соединение на указанные адреса.
+Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations.
 
 * Название: freedom
-* Тип: исходящий
-* Конфигурация:
+* Type: Outbound
+* Configuration:
 
 ```javascript
 {
@@ -16,12 +18,12 @@ Freedom - это протокол для исходящих соединений
 }
 ```
 
-Где:
+Where:
 
-* `domainStrategy`: Стратегия разрешения доменных имен. Возможные варианты: 
-  * `"AsIs"`: Значение по умолчанию. Доменные имена разрешаются системой.
+* `domainStrategy`: Strategy for domain name resolution. Options are: 
+  * `"AsIs"`: Default. Resolve domain name by system.
   * ` "UseIP" `: Используйте [ внутренний DNS ](../dns.md) для получения доменных имен.
-* `redirect`: Перенаправление всех соединений на указанный адрес вида `"127.0.0.1:80"` или `":1234"`. 
-  * (V2Ray 3.31+) Если адрес не указан, например `":443"`, Freedom будет использовать исходный адрес назначения.
-  * (V2Ray 3.31+) Если указан порт `0`, например `"v2ray.com:0"`, Freedom будет использовать исходный порт.
-* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень.
+* `redirect`: Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`. 
+  * Если адрес не указан, например `":443"`, Freedom будет использовать исходный адрес назначения.
+  * Если указан порт `0`, например `"v2ray.com:0"`, Freedom будет использовать исходный порт.
+* `userLevel`: User level. All connections share this level.

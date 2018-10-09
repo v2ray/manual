@@ -1,8 +1,10 @@
+---
+refcn: chapter_02/01_overview
+refen: configuration/overview
+---
 # Konfigurationsübersicht
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/overview.html)
-
-V2Ray teilt die gleiche Struktur der Konfiguration zwischen der Serverseite und der Clientseite wie unten gezeigt. Server- und Client-Konfigurationen unterscheiden sich in bestimmten Abschnitten.
+V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
 
 Below is the top level structure of the configuration. Each section has its own format.
 
@@ -22,19 +24,19 @@ Below is the top level structure of the configuration. Each section has its own 
 }
 ```
 
-Woher:
+Where:
 
-* `log`: Protokollkonfiguration. Siehe unten für Details.
-* `api`: RPC-API zur Steuerung der V2Ray-Instanz. Weitere Informationen finden Sie unter [API-Konfiguration](api.md).
+* `log`: log configuration. See below for detail.
+* `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
 * `DNS`: Konfiguration des internen DNS-Servers, wenn dieser Abschnitt weggelassen oder leer ist, verwendet V2Ray Ihre systemweite DNS-Konfiguration. Weitere Informationen finden Sie unter [DNS-Konfigurationen](dns.md).
 * `stats`: Wenn angegeben, ist intern [Statistics](stats.md) aktiviert.
-* `Richtlinie`: Konfigurationen für Berechtigungen und andere Sicherheitsstrategien. Weitere Informationen finden Sie unter [Lokale Richtlinie](policy.md).
+* `policy`: Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
 * `Routing`: [Routing Konfiguration](routing.md).
 * `Eingang`: Master-Eingangsschnittstellenkonfiguration.
 * `Ausgang`: Master-Ausgangsschnittstellenkonfiguration.
 * `inboundDetour`: Zusätzliche eingehende Schnittstellenkonfigurationen.
 * `outboundDetour`: Zusätzliche Konfigurationen für ausgehende Schnittstellen.
-* `Transport`: Konfigurationen des Transportprotokolls auf niedriger Ebene. Weitere Informationen finden Sie unter [Protokolltransportoptionen](transport.md).
+* `transport`: low-level transport protocol's configurations. For details, see [Protocol Transport Options](transport.md).
 
 ## Log configuration {#log}
 
@@ -53,8 +55,8 @@ Where:
   * Lassen Sie es leer Protokolle zu verwerfen, und der Inhalt wird aussenden durch `stdout`.
 * `Error`: Pfad des Fehlerprotokolls, verfügbare Beispiele sind: 
   * Ein gültiger Dateipfad, z. B. `"/tmp/v2ray/_error.log"`(Linux) oder `"C: \ Temp \ v2ray \ _error.log"`(Windows);
-  * Lassen Sie es leer Protokolle zu verwerfen, und der Inhalt wird aussenden durch `stdout`.
-* `Loglevel`: Anzahl der Protokolldateien, verfügbare Werte sind`"Debug"`,`"Info"`,`"Warnung"`,`"Fehler"`und`"keine"`; 
+  * Leave it empty to discard logs, and content will send out through `stdout`.
+* `Loglevel`: Level of log files, available values are`"debug"`、`"info"`、`"warning"`、`"error"`, and`"none"`; 
   * Unter all diesen Ebenen verlässt `"debug"` das meiste Protokoll, `"error"` lässt das geringste Protokoll.
   * `"keine"` würde alle Fehlerprotokolle verwerfen.
   * Der Standardwert ist `"Warnung"` wenn Sie ihn leer lassen.
@@ -82,9 +84,9 @@ Master inbound interface is used to receive data from clients, browsers, or othe
 Where:
 
 * `Port`: Abhörport.
-* `Hafen`: Port zu hören von. Akzeptierte Formate sind: 
+* `Hafen`: port to be listen from. Accepted formats are: 
   * Ganzzahl: aktuelle Portnummer.
-  * Env-Variable (V2Ray 3.23+): Beginnend mit `"env:"`gibt eine env-Variable den Port im String-Format an, z. B. `"env: PORT"`. V2Ray dekodiert die Variable als String.
+  * Env variable (V2Ray 3.23+): Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
   * String (V2Ray 3.23+): Ein numerischer Zeichenfolgenwert wie `"1234"`.
 * `listen`: IP-Adresse abhören, Standardwert ist `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
@@ -122,10 +124,10 @@ Where:
 
 * `sendThrough`: Die Netzwerkschnittstelle (IP) zum Senden von Daten, verfügbar, wenn mehrere IPs angezeigt werden, der Standardwert ist `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
-* `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `Tag`: Das Tag dieser ausgehenden Schnittstelle, das unter allen eingehenden / ausgehenden Schnittstellen eindeutig sein sollte.
 * `streamSettings`: see [Protocol Transport Options](transport.md).
-* `Proxy-Einstellungen`: Proxy für ausgehende Verbindungen. Wenn dies festgelegt ist, wird `streamSettings` dieses Ausgangs weggelassen und deaktiviert. 
+* `Proxy-Einstellungen`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled. 
   * `Tag`: Wenn ein anderes Ausgangs-Tag angegeben wird, werden die Daten an den angegebenen Ausgang gesendet.
 * `Mux`: [Mux Konfigurationen](mux.md).
 
@@ -157,21 +159,21 @@ This section is an array contains multiple extra inbound interfaces' configurati
 Where:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
-* `Hafen`: Port zu hören von. Akzeptierte Formate sind: 
-  * Ganzzahl: aktuelle Portnummer.
-  * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray dekodiert die Variable als String.
+* `port`: port to be listen from. Accepted formats are: 
+  * Integer: actual port number.
+  * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
   * String: Entweder ein numerischer Stringwert wie `"1234"`oder ein Portbereich wie `"5-10"` der für Portnummer 5 bis 10 steht.
-* `Tag`: Das Tag dieser eingehenden Schnittstelle, das unter allen eingehenden / ausgehenden Schnittstellen eindeutig sein sollte.
-* `listen`: IP-Adresse abhören, Standardwert ist `"0.0.0.0"`.
+* `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
+* `listen`: listening IP address, default value is `"0.0.0.0"`.
 * `zuordnen`: Zuweisungsoptionen: 
   * `Strategie`: Zuweisungsstrategien, verfügbare Werte sind `"immer"` und `"zufällig"`. Für die Option `"immer"` alle Ports zu, die durch `"Port"` Einstellungen spezifiziert sind; Für `"zufällige"`würde jedes bestimmte Minuten bestimmte Ports unter den Port-Bereichen wählen, konfiguriert durch `"Refresh"`, `"Port"`und `"Parallelität"`.
   * `Refresh`: Das Intervall, in dem zufällige Ports aktualisiert werden, mit Minuteneinheiten. Mindestwert ist `2`, empfohlener Wert ist `5`. Diese Einstellung wird nur wirksam, wenn `Strategie = Zufall`.
-  * `Nebenläufigkeit`: Anzahl der zufälligen Ports. Der Minimalwert ist `1`, der Maximalwert ist die Hälfte der Reichweite der Ports. Empfohlener Wert ist `3`.
-* `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
+  * `concurrency`: Number of random ports. Minimum value is `1`, maximum value is a half of ports' range. Recommended value is `3`.
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `streamSettings`: see [Protocol Transport Options](transport.md).
-* `domainOverride`: erkennt die Pakete bestimmter Protokolle und leitet seine Anforderungsziele um. 
-  * Akzeptiert ein Array von Strings, der Standardwert ist leer.
-  * Verfügbare Werte sind `"http"` und `"tls"`.
+* `domainOverride`: recognize specific protocols' packets and redirects its request targets. 
+  * Accepts an array of strings, default value is empty.
+  * Available values are `"http"` and `"tls"`.
   * (V2Ray 3.32+) Deprecated. Use `sniffing`. When `domainOverride` is set but `sniffing` is not set, V2Ray will enable `sniffing` anyway.
 * `sniffing` (V2Ray 3.32+): Try to sniff current connection. 
   * `enabled`: Whether or not to enable sniffing.
@@ -199,10 +201,10 @@ This section is an array contains multiple extra outbound interfaces' configurat
 Where:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
-* `sendThrough`: Die Netzwerkschnittstelle (IP) zum Senden von Daten, verfügbar, wenn mehrere IPs angezeigt werden, der Standardwert ist `"0.0.0.0"`.
+* `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
 * `Tag`: Ausgangs - Tag - Name des aktuellen Schnittstelle, Daten würden über diese Schnittstelle gesendet werden , wenn diese in abgehenden Routing - Konfigurationen oder andere outbound des ausgewählt ist `proxySettings`.
-* `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `streamSettings`: For details, see [Protocol Transport Options](transport.md).
-* `Proxy-Einstellungen`: Proxy für ausgehende Verbindungen. Wenn dies festgelegt ist, wird `streamSettings` dieses Ausgangs weggelassen und deaktiviert. 
-  * `Tag`: Wenn ein anderes Ausgangs-Tag angegeben wird, werden die Daten an den angegebenen Ausgang gesendet.
-* `Mux`: [Mux Konfigurationen](mux.md).
+* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled. 
+  * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
+* `mux`: [Mux Configurations](mux.md).

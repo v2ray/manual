@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/env
+refen: configuration/env
+---
 # Umgebungsvariablen
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/env.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/env.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/env.html)
 
 V2Ray liest die folgenden Umgebungsvariablen.
 
@@ -25,7 +27,7 @@ Diese Variable gibt ein Verzeichnis an, in dem sich die Dateien geoip.dat und ge
 ## Location of V2Ray config {#config}
 
 * Name: `v2ray.location.config` oder `V2RAY_LOCATION_CONFIG`
-* Standardwert: Dasselbe Verzeichnis, in dem v2ray ist.
+* Default value: Same directory where v2ray is.
 
 Diese Variable gibt ein Verzeichnis an, in dem sich config.json befindet.
 

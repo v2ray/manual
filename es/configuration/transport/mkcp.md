@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/transport/mkcp
+refen: configuration/transport/mkcp
+---
 # mKCP Transport
-
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/mkcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/mkcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/mkcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/mkcp.html)
 
 mKCP is a reliable stream transport. It is an UDP based protocol.
 

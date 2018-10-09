@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/03_routing
+refen: configuration/routing
+---
 # Routing
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/routing.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/03_routing.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/routing.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/routing.html)
 
 V2Ray has an internal routing mechanism. It routes inbound connections to various outbound based on rules. A common scenario is to split traffic by country. V2Ray can detect target country (by Geo IP) of a connection, and sends then connection to corresponding outbound proxy.
 

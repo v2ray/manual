@@ -1,12 +1,14 @@
+---
+refcn: chapter_00/help
+refen: welcome/help
+---
 # Поддержка
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/help.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/help.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/help.html)
 
 Пожалуйста, ознакомьтесь со следующими рекомендациями для лучшего качества обсуждения и более быстрого решения.
 
 ## Язык {#language}
 
-Команда Project V поддерживает китайский и английский языки. Пожалуйста, выберите тот, который вам знаком, для вопросов.
+Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
 
 ## Способы получения поддержки {#support}
 

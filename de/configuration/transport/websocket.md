@@ -1,19 +1,21 @@
+---
+refcn: chapter_02/transport/websocket
+refen: configuration/transport/websocket
+---
 # WebSocket
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/websocket.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/websocket.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/websocket.html)
+Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
 
-Verwenden Sie den Standard-WebSocket, um Daten zu transportieren. Websocket-Verbindungen können von einem HTTP-Server wie Nginx weitergeleitet werden.
-
-Aufbau:
+Configuration:
 
 ```javascript
 {"Pfad": "", "Kopfzeilen": {"Host": "v2ray.com"}}
 ```
 
-Woher:
+Where:
 
-* `Pfad`: Pfad für WebSocket. Standard für root, wie `""`.
-* `Header`: Benutzerdefinierter HTTP-Header. Ein Array, bei dem jeder Eintrag ein Schlüsselwertpaar in der Zeichenfolge, für den Header und den Wert im HTTP-Header ist. Der Standardwert ist leer.
+* `path`: Path used for WebSocket. Default to root, as `""`。
+* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
 
 ## Beachten
 

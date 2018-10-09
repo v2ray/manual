@@ -1,6 +1,8 @@
+---
+refcn: ui_client/windows
+refen: ui_client/windows
+---
 # Windows
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/windows.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/windows.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/windows.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/windows.html)
 
 ## V2RayW
 
@@ -14,11 +16,11 @@
 
 * Загрузить: [GitHub](https://github.com/Shinlor/V2RayS)
 
-## Другие инструменты {#other}
+## Other tools {#other}
 
 ### PuTTY
 
-Клиент SSH.
+SSH client.
 
 * Веб-сайт: [putty.org](http://www.putty.org/)
 
@@ -30,6 +32,6 @@
 
 ### Telegram
 
-Зашифрованное общение.
+Encrypted discussion.
 
-* Веб-сайт: [telegram.org](https://telegram.org/)
+* Website: [telegram.org](https://telegram.org/)

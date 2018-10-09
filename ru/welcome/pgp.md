@@ -1,13 +1,15 @@
+---
+refcn: chapter_00/pgp
+refen: welcome/pgp
+---
 # Приватное сообщение
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/pgp.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/pgp.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/pgp.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/pgp.html)
 
 Отправьте сообщение на один из адресов ниже, если вы хотите приватно поговорить с командой V2Ray.
 
 1. `love@v2ray.com`
 2. `v2ray@protonmail.com`
 
-\#1 основан на Gmail. Если вы озабочены конфиденциальностью содержимого письма, рассмотрите возможность использования открытого ключа PGP ниже.
+\#1 is based on Gmail. If you concern the privacy of email content, please consider using the PGP public key below.
 
 \#2 основан на ProtonMail, который использует сквозное шифрование.
 

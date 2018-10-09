@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
 # API
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/api.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/api.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/api.html)
 
 V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
 

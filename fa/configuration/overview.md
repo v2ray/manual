@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/01_overview
+refen: configuration/overview
+---
 # Configuration Overview
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/01_overview.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/overview.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/overview.html)
 
 V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
 

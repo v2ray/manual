@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/transport/mkcp
+refen: configuration/transport/mkcp
+---
 # mKCP Transport
-
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/mkcp.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/mkcp.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/mkcp.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/mkcp.html)
 
 mKCP is a reliable stream transport. It is an UDP based protocol.
 
@@ -25,7 +27,7 @@ Where:
 * `readBufferSize`: Read buffer size for a single connection, in MB. Default value is `2`.
 * `writeBufferSize`: Write buffer size for a single connection, in MB. Default value is `2`.
 * `Header`: Packet header for obfuscation. 
-  * `Art`: Type of obfuscation. Choices are: 
+  * `type`: Type of obfuscation. Choices are: 
     * `"none"`: Default value. No obfuscation is added.
     * `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
     * `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.

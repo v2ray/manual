@@ -1,6 +1,8 @@
+---
+refcn: chapter_00/tg
+refen: welcome/tg
+---
 # Telegrammgruppe
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/tg.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/tg.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/tg.html)
 
 Projekt V bietet die folgenden Gruppen für verschiedene Arten von Diskussionen.
 
@@ -13,22 +15,22 @@ Bitte folgen Sie auch [Projekt V Ankündigung](https://t.me/v2msg) für Nachrich
 
 Zulässige / verbotene Themen sind wie folgt aufgelistet.
 
-|                     / | Verwendung | Andere |
-| ---------------------:|:----------:|:------:|
-| Projekt V Entwicklung |     ✔      |   ✔    |
-|           Algorithmus |     ✔      |   ✔    |
-|      Computernetzwerk |     ✔      |   ✔    |
-|      Zensurvermeidung |     ✔      |   ✔    |
-|         V2Ray-Nutzung |     ✔      |   ✔    |
-|  V2Ray-Bereitstellung |     ✔      |   ✔    |
-|   Zugehörige Software |     ✔      |   ✔    |
-|         Unsinn Bilder |     ✘✘     |   ✔    |
-|               Politik |     ✘      |   ✔    |
-|             Geplauder |     ✘      |   ✔    |
-|               Werbung |     ✘✘     |   ✘✘   |
-|                   18+ |    ✘✘✘     |  ✘✘✘   |
-|              Hassrede |    ✘✘✘     |  ✘✘✘   |
-|   Identitätsdiebstahl |    ✘✘✘✘    |  ✘✘✘✘  |
+|                     / |        Verwendung        |              Andere              |
+| ---------------------:|:------------------------:|:--------------------------------:|
+| Projekt V Entwicklung |            ✔             |             &#10004;             |
+|           Algorithmus |         &#10004;         |             &#10004;             |
+|      Computernetzwerk |         &#10004;         |             &#10004;             |
+|      Zensurvermeidung |         &#10004;         |             &#10004;             |
+|         V2Ray-Nutzung |         &#10004;         |             &#10004;             |
+|  V2Ray-Bereitstellung |         &#10004;         |             &#10004;             |
+|   Zugehörige Software |         &#10004;         |             &#10004;             |
+|         Unsinn Bilder |            ✘✘            |             &#10004;             |
+|               Politik |            ✘             |             &#10004;             |
+|             Geplauder |         &#10008;         |             &#10004;             |
+|               Werbung |     &#10008;&#10008;     |         &#10008;&#10008;         |
+|                   18+ |           ✘✘✘            |     &#10008;&#10008;&#10008;     |
+|              Hassrede | &#10008;&#10008;&#10008; |     &#10008;&#10008;&#10008;     |
+|   Identitätsdiebstahl |           ✘✘✘✘           | &#10008;&#10008;&#10008;&#10008; |
 
 ### Verfahren für Verstöße
 

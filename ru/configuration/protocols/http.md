@@ -1,12 +1,14 @@
+---
+refcn: chapter_02/protocols/http
+refen: configuration/protocols/http
+---
 # HTTP
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/http.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/http.html)
-
-HTTP - это протокол для входящих соединений. Он совместим с HTTP 1.1.
+HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 
 * Название: http
-* Тип: входящий
-* Конфигурация:
+* Type: Inbound
+* Configuration:
 
 ```javascript
 {
@@ -21,14 +23,14 @@ HTTP - это протокол для входящих соединений. О�
 }
 ```
 
-Где:
+Where:
 
-* `accounts`: Массив, в котором каждая запись является учетной записью. Имя пользователя указывается через `user`, а пароль через `pass`. Значения по умолчанию пустые. 
+* `accounts`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
   * Если значение `accounts` не пустое, HTTP использует базовую аутентификацию для подтверждения пользователя.
 * ` allowTransparent `: Если установлено значение ` true `, все полученные HTTP-запросы, будут проксированы, включая запрос без прокси.
-* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень.
+* `userLevel`: User level. All connections share this level.
 
-## Советы
+## Tips
 
 Используйте следующие настройки в Linux для использования прокси-сервера HTTP в текущем сеансе.
 

@@ -1,6 +1,8 @@
+---
+refcn: chapter_02/protocols/http
+refen: configuration/protocols/http
+---
 # HTTP
-
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/http.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/http.html)
 
 HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 

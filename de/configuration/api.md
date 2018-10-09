@@ -1,10 +1,12 @@
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
 # API
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/api.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/api.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/api.html)
+V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
 
-V2Ray bietet eine API für den Remotezugriff. Diese APIs basieren auf [GRPC](https://grpc.io/).
-
-Wenn die API aktiviert ist, erstellt V2Ray automatisch einen ausgehenden Proxy, der als `Tag`. Benutzer must [Route](routing.md) alle gRPC Verbindungen zu diesem Outbound.
+When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
 
 Aufbau:
 
@@ -28,7 +30,7 @@ Woher:
 
 ### HandlerService
 
-API zum Manipulieren von eingehenden und ausgehenden Proxies. Folgende Funktionalitäten stehen zur Verfügung:
+API for manipulating inbound and outbound proxies. The following functionalities are provided:
 
 * Fügen Sie einen neuen eingehenden / ausgehenden Proxy hinzu.
 * Entfernen Sie einen vorhandenen eingehenden / ausgehenden Proxy.
@@ -37,7 +39,7 @@ API zum Manipulieren von eingehenden und ausgehenden Proxies. Folgende Funktiona
 
 ### LoggerService
 
-Um den internen Logger neu zu starten. Kann mit logrotate arbeiten, um Protokolldateien zu betreiben.
+To restart internal logger. Can work with logrotate for operating log files.
 
 ### Statistikdienst
 

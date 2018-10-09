@@ -1,6 +1,8 @@
-# Online Dienste
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/service.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/service.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/service.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/service.html)
+---
+refcn: ui_client/service
+refen: ui_client/service
+---
+# Online services
 
 ## V2Ray bezogen
 
@@ -9,7 +11,7 @@
 
 ## VPN
 
-* [BabyDriver](http://babydriver.me/): Unterstützt V2Ray. Gutscheincode: bcb518
+* [BabyDriver](http://babydriver.me/): Supports V2Ray. Coupon code: bcb518
 * [喵帕斯](https://xn--i2ru8q2qg.com/): V2Ray support (beta)
 * [Lanan](https://xn--sjt174g.com/): V2Ray based VPN service. Coupon code: v2ray
 * [多数派](https://dspi.io/aff.php?aff=7): New V2Ray based VPN service.
