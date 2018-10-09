@@ -1,9 +1,7 @@
-* * *
-
-refcn: ui_client/ios refen: ui_client/ios
-
-* * *
-
+---
+refcn: ui_client/ios
+refen: ui_client/ios
+---
 # iOS Client
 
 ## Kitsunebi
