@@ -1,12 +1,10 @@
-* * *
-
-refcn: ui_client/index refen: ui_client/index
-
-* * *
-
+---
+refcn: ui_client/index
+refen: ui_client/index
+---
 # Project V Clients
 
-Neben dem Core V2ray enthält Project V verschiedene GUI-Clients auf vielen Plattformen. Bitte beachten Sie die folgende Liste zu Ihren Gunsten.
+Besides the core V2ray, Project V includes various of GUI clients in many platforms. Please see the following list for your favor.
 
 * [Windows](windows.md)
 * [Mac OS X](osx.md)
