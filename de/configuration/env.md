@@ -27,7 +27,7 @@ Diese Variable gibt ein Verzeichnis an, in dem sich die Dateien geoip.dat und ge
 ## Location of V2Ray config {#config}
 
 * Name: `v2ray.location.config` oder `V2RAY_LOCATION_CONFIG`
-* Standardwert: Dasselbe Verzeichnis, in dem v2ray ist.
+* Default value: Same directory where v2ray is.
 
 Diese Variable gibt ein Verzeichnis an, in dem sich config.json befindet.
 
