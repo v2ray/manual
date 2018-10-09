@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/tg refen: welcome/tg
-
-* * *
-
+---
+refcn: chapter_00/tg
+refen: welcome/tg
+---
 # Telegram Group
 
 Project V provides the following groups for different type of discussions.
