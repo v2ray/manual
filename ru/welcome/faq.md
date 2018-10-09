@@ -2,16 +2,16 @@
 refcn: chapter_00/faq
 refen: welcome/faq
 ---
-# Frequently Asked Questions (FAQ)
+# Часто задаваемые вопросы (ЧаВо)
 
-## V2Ray Usage
+## Использование V2Ray
 
-### How to upgrade V2Ray
+### Как обновить V2Ray
 
-* Download latest package, or
-* Re-run installation script (Linux only)
+* Загрузите последний пакет, либо
+* Запустите ещё раз скрипт установки (для Linux)
 
-### V2Ray Crashes
+### Сбои V2Ray
 
-* If you are using Linux with systemd, you can see panic log using command `journalctl -u v2ray`.
-* In general you can run command `v2ray -config=<config-file> -test` to see error information.
+* Если вы используете Linux с systemd, вы можете посмотреть в журнал с ошибками, используя команду `journalctl -u v2ray`.
+* В общем случае вы можете запустить команду `v2ray -config =<config-file> -test` чтобы увидеть информацию об ошибке.
