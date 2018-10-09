@@ -2,7 +2,7 @@
 refcn: chapter_00/command
 refen: welcome/command
 ---
-# Befehlszeile
+# Commandline
 
 ## V2Ray
 
@@ -12,7 +12,7 @@ V2Ray has the following commandline parameters:
 v2ray [-version] [-test] [-config = Konfiguration.json] [-format = json]
 ```
 
-Woher:
+Where:
 
 * `Version`: Nur die Version von V2Ray drucken und dann beenden.
 * `-test`: Konfiguration testen, Fehler ausgeben und dann beenden.
@@ -34,7 +34,7 @@ v2ctl <command> <options>
 
 Available commands are listed below. Each command has its own options.
 
-### Überprüfen
+### Verify
 
 `v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
 
