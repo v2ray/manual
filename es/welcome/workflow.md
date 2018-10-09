@@ -1,9 +1,7 @@
-* * *
-
-refcn: chapter_00/workflow refen: welcome/workflow
-
-* * *
-
+---
+refcn: chapter_00/workflow
+refen: welcome/workflow
+---
 # Workflow
 
 ## Single Server
