@@ -8,7 +8,7 @@ refcn: chapter_02/policy refen: configuration/policy
 
 Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
@@ -29,7 +29,7 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
 * `level`: Ассоциативный массив, пары ключ-значение. Каждый ключ — строка с целым числом (это ограничения JSON), типа `"0"`, `"1"`, и т.д. Числовое значение — это пользовательский уровень. Каждое значение имеет следующие атрибуты: 
   * `handshake`: Таймаут на установление соединения, в секундах. По умолчанию `4`.
