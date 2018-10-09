@@ -1,3 +1,8 @@
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
+
 # 远程控制
 
 V2Ray 中可以开放一些 API 以便远程调用。这些 API 都基于 [gRPC](https://grpc.io/)。

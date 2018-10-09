@@ -1,6 +1,9 @@
-# TCP 传输方式
+---
+refcn: chapter_02/transport/tcp
+refen: configuration/transport/tcp
+---
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/tcp.html)
+# TCP 传输方式
 
 配置：
 

@@ -1,6 +1,9 @@
-# iOS Client
+---
+refcn: ui_client/ios
+refen: ui_client/ios
+---
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html)
+# iOS Client
 
 ## Kitsunebi
 
@@ -20,7 +23,7 @@ Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadow
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## Pepi (was ShadowRay)
+## Pepi (was ShadowRay) {#pepi}
 
 Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
 
@@ -30,7 +33,7 @@ Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess p
 
 * Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## Other tools
+## Other tools {#other}
 
 ### HyperApp
 

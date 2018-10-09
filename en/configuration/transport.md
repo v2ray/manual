@@ -1,10 +1,15 @@
+---
+refcn: chapter_02/05_transport
+refen: configuration/transport
+---
+
 # Transport Settings
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport.html)
+Transport is for how V2Ray sends and receives data from its peers. The responsiblity of a transport is to reliably transfer data to a peer. Usually a connection has matching transports on both endpoints. For example, if a V2Ray outbound uses WebSocket as its transport, the inbound it talks to also has to use WebSocket, otherwise a connection can't be established.
 
-Transport settings is for how V2Ray sends and receives data from its peers. The settings devides into two parts: global settings and per proxy settings. Per-proxy settings specifies how each individual proxy handles its data, while global settings is for all proxies. Usually the inbound and outbound proxies between the connecting peer must have the same transport settings. When a proxy has no transport settings, the global settings applies.
+The transport settings devides into two parts: global settings and per proxy settings. Per-proxy settings specifies how each individual proxy handles its data, while global settings is for all proxies. Usually the inbound and outbound proxies between the connecting peer must have the same transport settings. When a proxy has no transport settings, the global settings applies.
 
-## Global Configuration
+## Global Configuration {#global}
 
 Global settings is in the "transport" entry of V2Ray config.
 
@@ -13,18 +18,20 @@ Global settings is in the "transport" entry of V2Ray config.
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {}
 }
 ```
 
 Where:
 
-* `tcpSettings`: Settings for [TCP transport](transport/tcp.md)。
-* `kcpSettings`: Settings for [mKCP transport](transport/mkcp.md)。
-* `wsSettings`: Settings for [WebSocket transport](transport/websocket.md)。
-* `httpSettings`: Settings for [HTTP/2 transport](transport/h2.md)。
+* `tcpSettings`: Settings for [TCP transport](transport/tcp.md).
+* `kcpSettings`: Settings for [mKCP transport](transport/mkcp.md).
+* `wsSettings`: Settings for [WebSocket transport](transport/websocket.md).
+* `httpSettings`: Settings for [HTTP/2 transport](transport/h2.md).
+* `dsSettings`: Settings for [Domain Socket transport](transport/domainsocket.md).
 
-## Per-proxy Configuration
+## Per-proxy Configuration {#proxy}
 
 Each inbound and outbound proxy may has its own transport settings. Each inbound, inboundDetour, outbound and outboundDetour entry may have a `streamSettings` for transport.
 
@@ -97,13 +104,19 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {},
+  "sockopt": {
+    "mark": 0,
+    "tcpFastOpen": false,
+    "tproxy": "off"
+  }
 }
 ```
 
 Where:
 
-* `network`: Network type of the stream transport. Choices are `"tcp"`, `"kcp"`, `"ws"`, or `"http"`. Default value `"tcp"`.
+* `network`: Network type of the stream transport. Choices are `"tcp"`, `"kcp"`, `"ws"`, `"http"`, or `"domainsocket"`. Default value `"tcp"`.
 * `security`: Type of security. Choices are `"none"` (default) for no extra security, or `"tls"` for using [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
 * `tlsSettings`: TLS settings. TLS is provided by Golang. Support up to TLS 1.2. DTLS is not supported.
   * `serverName`: Server name (usually domain) used for TLS authentication.
@@ -123,10 +136,25 @@ Where:
 * `kcpSettings`: mKCP transport configuration for current proxy. Effective only when the proxy uses mKCP transport. Configuration is the same as it is in global configuration.
 * `wsSettings`: WebSocket transport configuration for current proxy. Effective only when the proxy uses WebSocket transport. Configuration is the same as it is in global configuration.
 * `httpSettings`: HTTP/2 transport configuration for current proxy. Effective only when the proxy uses HTTP/2 transport. Configuration is the same as it is in global configuration.
+* `dsSettings`: Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport.
+* `sockopt` (V2Ray 3.40+): Socket options
+  * `mark`: An integer. If non-zero, the value will be set to outbound connections via socket option SO_MARK. Only apply on Linux and requires CAP_NET_ADMIN permission.
+  * `tcpFastOpen`: Whether or not to enable [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fast_Open). When set to `true`, V2Ray enables TFO for current connection. When set to `false`, V2Ray disables TFO. If this entry doesn't exist, V2Ray uses default settings from operating system.
+    * Only apply on the following operating systems:
+      * Windows 10 (1604) or later
+      * Mac OS 10.11 / iOS 9 or later
+      * Linux 3.16 or later: Enabled by system default.
+    * Applicable for both inbound and outbound connections.
+  * `tproxy` (V2Ray 3.44+): Whether or not to enable transparent proxy on Linux. Choices are:
+    * `"off"`: Default value. Not enable TProxy at all.
+    * `"redirect"`: Enable TProxy with Redirect mode. Supports TCP/IPv4 and UDP traffic.
+    * `"tproxy"`: Enable TProxy with TProxy mode. Supports TCP and UDP traffic.
 
-## Tips
+## Tips {#tips}
 
 * When `certificateFile` and `certificate` are both filled in. V2Ray uses `certificateFile`. Same for `keyFile` and `key`.
 * When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. If not found, V2Ray will try to issue a new certificate using any existing certificate whose `usage` is `"issue"` for `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse.
 * When `usage` is `"verify"`, both `keyFile` and `key` can be empty.
 * Use `v2ctl cert -ca` command to generate a new CA certificate.
+* If `TProxy` is not set, and `allowRedirect` is set in [dokodemo-door](protocols/dokodemo.md), the value of `TProxy` will be set to `"redirect"` automatically.
+* Transparent proxy requires Root or CAP\_NET\_ADMIN permission.

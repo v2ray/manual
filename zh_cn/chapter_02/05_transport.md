@@ -1,8 +1,13 @@
+---
+refcn: chapter_02/05_transport
+refen: configuration/transport
+---
+
 # 底层传输配置
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/transport.html)
+底层传输方式（transport）是当前 V2Ray 节点和其它节点对接的方式。底层传输方式提供了稳定的数据传输通道。通常来说，一个网络连接的两端需要有对称的传输方式。比如一端用了 WebSocket，那么另一个端也必须使用 WebSocket，否则无法建立连接。
 
-底层传输（transport）配置指定了 V2Ray 如何使用 TCP、UDP 等基础网络协议。配置分为两部分，一是全局设置，二是分协议配置。分协议配置可以指定每个单独的传入传出协议用怎样的方式传输。通常来说客户端和服务器对应的传出传入协议需要使用同样的传输方式。当分协议传输配置指定了一种传输方式，但没有填写其设置时，此传输方式会使用全局配置中的设置。
+底层传输（transport）配置分为两部分，一是全局设置，二是分协议配置。分协议配置可以指定每个单独的传入传出协议用怎样的方式传输。通常来说客户端和服务器对应的传出传入协议需要使用同样的传输方式。当分协议传输配置指定了一种传输方式，但没有填写其设置时，此传输方式会使用全局配置中的设置。
 
 ## 全局配置 {#global}
 
@@ -13,7 +18,8 @@
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {}
 }
 ```
 
@@ -23,6 +29,7 @@
 * `kcpSettings`: 针对 [mKCP 连接的配置](transport/mkcp.md)。
 * `wsSettings`: 针对 [WebSocket 连接的配置](transport/websocket.md)。
 * `httpSettings`: 针对 [HTTP/2 连接的配置](transport/h2.md)。
+* `dsSettings`: 针于[Domain Socket 连接的配置](transport/domainsocket.md)。
 
 ## 分协议配置 {#perproxy}
 
@@ -97,32 +104,53 @@
   "tcpSettings": {},
   "kcpSettings": {},
   "wsSettings": {},
-  "httpSettings": {}
+  "httpSettings": {},
+  "dsSettings": {},
+  "sockopt": {
+    "mark": 0,
+    "tcpFastOpen": false,
+    "tproxy": "off"
+  }
 }
 ```
 
 其中：
 
-* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、 `"kcp"` 或 `"ws"`，默认值为 `"tcp"`；
+* `network`: 数据流所使用的网络，可选的值为 `"tcp"`、`"kcp"`、`"ws"`、`http`或`"domainsocket"`，默认值为 `"tcp"`；
 * `security`: 是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 * `tlsSettings`: TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
   * `serverName`: 指定服务器端证书的域名，在连接由 IP 建立时有用。
-  * `alpn` (V2Ray 3.18+): 一个字符串数组，指定了 TLS 握手时指定的 ALPN 数值。默认值为`["http/1.1"]`。
+  * `alpn`: 一个字符串数组，指定了 TLS 握手时指定的 ALPN 数值。默认值为`["http/1.1"]`。
   * `allowInsecure`: 是否允许不安全连接（用于客户端）。当值为 true 时，V2Ray 不会检查远端主机所提供的 TLS 证书的有效性。
   * `allowInsecureCiphers` (V2Ray 3.24+): 是否允许不安全的加密方式。默认情况下 TLS 只使用 TLS 1.3 推荐的加密算法套件，开启这一选项会增加一些与 TLS 1.2 兼容的加密套件。
   * `certificates`: 证书列表，其中每一项表示一个证书：
-    * `usage` (V2Ray 3.17+): 证书用途，默认值为`"encipherment"`，可选值如下：
+    * `usage`: 证书用途，默认值为`"encipherment"`，可选值如下：
       * `"encipherment"`: 证书用于 TLS 认证和加密。
       * `"verify"`: 证书用于验证远端 TLS 的证书。当使用此项时，当前证书必须为 CA 证书。暂不支持 Windows 平台。
       * `"issue"`: 证书用于签发其它证书。当使用此项时，当前证书必须为 CA 证书。
     * `certificateFile`: 证书文件，如使用 OpenSSL 生成，后缀名为 .crt。
-    * `certificate` (V2Ray 3.17+): 证书内容，格式如样例所示。`certificate`和`certificateFile`二者选一。
+    * `certificate`: 证书内容，格式如样例所示。`certificate`和`certificateFile`二者选一。
     * `keyFile`: 密钥文件，如使用 OpenSSL 生成，后缀名为 .key。目前暂不支持需要密码的 key 文件。
-    * `key` (V2Ray 3.17+): 密钥内容，格式如样例如示。`key`和`keyFile`二者选一。
+    * `key`: 密钥内容，格式如样例如示。`key`和`keyFile`二者选一。
 * `tcpSettings`: 当前连接的 TCP 配置，仅当此连接使用 TCP 时有效。配置内容与上面的全局配置相同。
 * `kcpSettings`: 当前连接的 mKCP 配置，仅当此连接使用 mKCP 时有效。配置内容与上面的全局配置相同。
 * `wsSettings`: 当前连接的 WebSocket 配置，仅当此连接使用 WebSocket 时有效。配置内容与上面的全局配置相同。
 * `httpSettings`: 当前连接的 HTTP/2 配置，仅当此连接使用 HTTP/2 时有效。配置内容与上面的全局配置相同。
+* `dsSettings`: 当前连接的 Domain socket 配置，仅当此连接使用 Domain socket 时有效。配置内容与上面的全局配置相同。
+* `sockopt` (V2Ray 3.40+): 连接选项，可用的配置项有:
+  * `mark`: 一个整数。当其值非零时，在传出连接上标记 SO_MARK。
+    * 仅适用于 Linux 系统。
+    * 需要 CAP_NET_ADMIN 权限。
+  * `tcpFastOpen`: 是否启用 [TCP Fast Open](https://zh.wikipedia.org/wiki/TCP%E5%BF%AB%E9%80%9F%E6%89%93%E5%BC%80)。当其值为`true`时，强制开启TFO；当其它为`false`时，强制关闭TFO；当此项不存在时，使用系统默认设置。
+    * 仅在以下版本（或更新版本）的操作系统中可用:
+      * Windows 10 (1604)
+      * Mac OS 10.11 / iOS 9
+      * Linux 3.16: 系统已默认开启，无需要配置。
+    * 可用于传入传出连接。
+  * `tproxy` (V2Ray 3.44+): 是否开启透明代理 (仅适用于 Linux)。可选的值有:
+    * `"redirect"`: 使用 Redirect 模式的透明代理。仅支持 TCP/IPv4 和 UDP 连接。
+    * `"tproxy"`: 使用 TProxy 模式的透明代理。支持 TCP 和 UDP 连接。
+    * `"off"`: 关闭透明代理。
 
 ## 小贴士 {#tip}
 
@@ -131,3 +159,5 @@
 * 当`usage`为`"verify"`时，`keyFile`和`key`可均为空。
 * 使用`v2ctl cert -ca`可以生成自签名的 CA 证书。
 * 在 Windows 平台上可以将自签名的 CA 证书安装到系统中，即可验证远端 TLS 的证书。
+* 当 [Dokodemo-door](protocols/dokodemo.md) 中指定了`followRedirect`，且`sockopt.tproxy`为空时，`sockopt.tproxy`的值会被设为`"redirect"`。
+* 透明代理需要 Root 或 CAP\_NET\_ADMIN 权限。

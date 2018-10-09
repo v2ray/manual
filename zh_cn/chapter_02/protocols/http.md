@@ -1,6 +1,9 @@
-# HTTP
+---
+refcn: chapter_02/protocols/http
+refen: configuration/protocols/http
+---
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html)
+# HTTP
 
 HTTP 是一个传入数据协议，兼容 HTTP 1.x 代理。
 

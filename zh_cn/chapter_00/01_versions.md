@@ -1,6 +1,65 @@
+---
+refcn: chapter_00/01_versions
+refen: welcome/versions
+---
+
 # 更新日志
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
+## 2018.10.12 v.3.47
+
+* 升级了自动构建工具
+
+## 2018.09.28 v3.44
+
+* Dokodemo-door 现已支持 Linux 的 TProxy。
+
+## 2018.09.21 v3.43
+
+* DNS 查询支持了按域名选择服务器的功能。
+
+## 2018.09.14 v3.40
+
+* 传输配置中新增了连接选项，可用于配置 VPN。
+* 传输配置中新增了 TCP Fast Open 选项。
+
+## 2018.09.03 v3.38
+
+* mKCP 中新增了 WireGuard 伪装。
+* 修复了 mips/mips64 中 softfloat 版本的编译问题。
+
+## 2018.08.31 v3.37
+
+* 优化了读取网络连接时的性能，见[环境变量](../chapter_02/env.md)。
+* VMess 在 ARM64 平台上将默认使用 AES-128-GCM 作为加密方式。
+* 使用 Go 1.11 编译。
+
+## 2018.08.24 v3.36
+
+* 大幅提升了路由中子域名（`domain:`）匹配的效率。
+* 路由中支持了完整域名匹配。
+
+## 2018.08.07 v3.34
+
+* 在大多数设备上有了更精确的内存控制
+
+## 2018.07.27 v3.32
+
+* 现在可以探测 BitTorrent 流量了。
+* 路由配置中新增了`protocol`选项用于按流量类型进行路由选择。
+* 路由配置中新增了`geosite:speedtest`用于适配所有的 Speedtest.net 公用服务器。
+
+## 2018.07.20 v3.31
+
+* 新增了 [Domain Socket 传输方式](../chapter_02/transport/domainsocket.md) (感谢 @xiaokangwang)。
+
+## 2018.07.13 v3.30
+
+* 解决了一个可能会导致 mKCP 断流的问题。
+* 感谢来自俄罗斯的朋友，我们现在有[俄语文档](https://www.v2ray.com/ru/)了。
+
+## 2018.07.06 v3.29
+
+* 新增了 MTProto 代理协议。
 
 ## 2018.06.29 v3.27
 

@@ -1,6 +1,9 @@
-# 配置文件格式
+---
+refcn: chapter_02/01_overview
+refen: configuration/overview
+---
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/overview.html)
+# 配置文件格式
 
 V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，只是实际的配置不一样。
 
@@ -34,7 +37,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `transport`: 用于配置 V2Ray 如何与其它服务器建立和使用网络连接。详见[底层传输配置](05_transport.md)；
 * `stats`: 当此项存在时，开启[统计信息](stats.md)。
 
-## 日志配置（log）
+## 日志配置 {#log}
 
 ```javascript
 {
@@ -57,7 +60,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   * `"none"`表示不记录任何内容；
   * 默认值为`"warning"`。
 
-## 主传入连接配置（inbound）
+## 主传入连接配置 {#inbound}
 
 传入连接用于接收从客户端（浏览器或上一级代理服务器）发来的数据，可用的协议请见[协议列表](02_protocols.md)。
 
@@ -69,7 +72,11 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "settings": {},
   "streamSettings": {},
   "tag": "标识",
-  "domainOverride": ["http", "tls"]
+  "domainOverride": ["http", "tls"],
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
+  }
 }
 ```
 
@@ -87,8 +94,13 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `domainOverride`: 识别相应协议的流量，并根据流量内容重置所请求的目标。
   * 接受一个字符串数组，默认值为空。
   * 可选值为 `"http"` 和 `"tls"`。
+  * (V2Ray 3.32+) 已弃用。请使用 `sniffing`。当指定了 `domainOverride` 而没有指定 `sniffing` 时，强制开启 `sniffing`。
+* `sniffing` (V2Ray 3.32+): 尝试探测流量类型。
+  * `enabled`: 是否开启流量探测。
+  * `destOverride`: 当流量为指定类型时，按其中包括的目标地址重置当前连接的目标。
+    * 可选值为 `"http"` 和 `"tls"`。
 
-## 主传出连接配置（outbound）
+## 主传出连接配置 {#outbound}
 
 主传出连接用于向远程网站或下一级代理服务器发送数据，可用的协议请见[协议列表](02_protocols.md)。
 
@@ -117,7 +129,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
 * `mux`: [Mux 配置](mux.md)。
 
-## 额外的传入连接配置（inbound detour）
+## 额外的传入连接配置 {#inbound-detour}
 
 此项是一个数组，可包含多个连接配置，每一个配置形如：
 
@@ -134,7 +146,11 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   },
   "settings": {},
   "streamSettings": {},
-  "domainOverride": ["http", "tls"]
+  "domainOverride": ["http", "tls"],
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
+  }
 }
 ```
 
@@ -156,8 +172,13 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 * `domainOverride`: 识别相应协议的流量，并根据流量内容重置所请求的目标。
   * 接受一个字符串数组，默认值为空。
   * 可选值为 `"http"` 和 `"tls"`。
+  * (V2Ray 3.32+) 已弃用。请使用 `sniffing`。当指定了 `domainOverride` 而没有指定 `sniffing` 时，强制开启 `sniffing`。
+* `sniffing` (V2Ray 3.32+): 尝试探测流量类型。
+  * `enabled`: 是否开启流量探测。
+  * `destOverride`: 当流量为指定类型时，按其中包括的目标地址重置当前连接的目标。
+    * 可选值为 `"http"` 和 `"tls"`。
 
-### 额外的传出连接配置（outbound detour）
+### 额外的传出连接配置 {#outbound-detour}
 
 此项是一个数组，可包含多个连接配置，每一个配置形如：
 

@@ -3,7 +3,31 @@
   "title": "Project V 官方网站",
   "plugins" : [
     "-fontsettings",
-    
-    "anchors"
-  ]
+    "-search",
+    "-lunr",
+    "-highlight",
+    "-sharing",
+
+    "anchors",
+    "ga",
+    "prism",
+    "prism-themes",
+    "hints"
+  ],
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-73620536-1"
+    },
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-atom-dark.css"
+      ],
+      "lang": {
+        "objc": "objectivec",
+        "shell": "bash",
+        "text": "textile",
+        "plain": "textile"
+      }
+    }
+  }
 }

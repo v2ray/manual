@@ -1,6 +1,9 @@
-# API
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html)
+# API
 
 V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
 
@@ -10,12 +13,12 @@ Configuration:
 
 ```javascript
 {
-    "tag": "api",
-    "services": [
-        "HandlerService",
-        "LoggerService",
-        "StatsService"
-    ]
+  "tag": "api",
+  "services": [
+    "HandlerService",
+    "LoggerService",
+    "StatsService"
+  ]
 }
 ```
 

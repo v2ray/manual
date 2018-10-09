@@ -1,6 +1,9 @@
-# Blackhole
+---
+refcn: chapter_02/protocols/blackhole
+refen: configuration/protocols/blackhole
+---
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/blackhole.html)
+# Blackhole
 
 Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的传出，配合[路由（Routing）](../03_routing.md)一起使用，可以达到禁止访问某些网站的效果。
 

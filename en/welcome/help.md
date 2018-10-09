@@ -1,14 +1,17 @@
-# Support
+---
+refcn: chapter_00/help
+refen: welcome/help
+---
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/help.html)
+# Support
 
 Please read the following guidelines for better discussion quality and quicker solution.
 
-## Language
+## Language {#language}
 
 Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
 
-## Ways to get support
+## Ways to get support {#support}
 
 1. [V2Ray Usage](https://github.com/v2ray/v2ray-core/issues)
 1. [V2Ray Development](https://github.com/v2ray/planning)

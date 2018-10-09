@@ -1,13 +1,13 @@
 #!/bin/bash
 
-PROJECT=$1
+git pull | grep -q -v 'Already up-to-date.' && CHANGED=1
 
-echo "Removing previous machines."
-gcloud compute instances list --project ${PROJECT} | grep TERMINATED \
-| awk '{printf "%s --zone %s\n", $1, $2}' \
-| while read LINE; do
-  yes Y | gcloud compute instances delete ${LINE} --project ${PROJECT}
-done
+if [[ "$CHANGED" != "1" ]]; then
+  echo "Nothing to deploy"
+  exit 0
+fi
+
+PROJECT=$1
 
 echo "Launching build machine."
 DIR="$(dirname "$0")"

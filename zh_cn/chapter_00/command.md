@@ -1,12 +1,15 @@
-# 命令行参数
+---
+refcn: chapter_00/command
+refen: welcome/command
+---
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/command.html)
+# 命令行参数
 
 ## V2Ray
 
 V2Ray 的程序文件的命令行参数如下：
 
-```shell
+```bash
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
@@ -27,7 +30,7 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 
 V2Ctl 命令行参数如下：
 
-```shell
+```bash
 v2ctl <command> <options>
 ```
 

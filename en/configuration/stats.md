@@ -1,6 +1,9 @@
-# Statistics
+---
+refcn: chapter_02/stats
+refen: configuration/stats
+---
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html)
+# Statistics
 
 V2Ray provides some information about its internals.
 

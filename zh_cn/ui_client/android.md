@@ -1,3 +1,8 @@
+---
+refcn: ui_client/android
+refen: ui_client/android
+---
+
 # Android 客户端
 
 ## BifrostV
@@ -24,7 +29,7 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 * 下载：[Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
 * 源代码：[Github](https://github.com/V2Ray-Android/Actinium)
 
-## 其它工具
+## 其它工具 {#others}
 
 ### JuiceSSH
 

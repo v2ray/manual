@@ -1,3 +1,8 @@
+---
+refcn: chapter_02/policy
+refen: configuration/policy
+---
+
 # 本地策略
 
 此功能在 V2Ray 3.1 中加入。

@@ -1,6 +1,9 @@
-# 统计信息
+---
+refcn: chapter_02/stats
+refen: configuration/stats
+---
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/stats.html)
+# 统计信息
 
 V2Ray 提供了一些关于其运行状况的统计信息。
 

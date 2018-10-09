@@ -1,6 +1,65 @@
+---
+refcn: chapter_00/01_versions
+refen: welcome/versions
+---
+
 # Version History
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html)
+## 2018.10.12 v3.47
+
+* Migrate to a new continuous delivery pipeline
+
+## 2018.09.28 v3.44
+
+* Dokodemo-door now supports TProxy in Linux.
+
+## 2018.09.21 v3.43
+
+* DNS now supports on-demand queries by domain.
+
+## 2018.09.14 v3.40
+
+* New socket options in transport configuration. It can be used to setup VPNs.
+* New TCP Fast Open option in transport configuration.
+
+## 2018.09.03 v3.38
+
+* mKCP has a new WireGuard header.
+* Fix softfloat binaries in mips/mips64.
+
+## 2018.08.31 v3.37
+
+* Performance of reading network connection in optilized. See [Environment Variables](../configuration/env.md)。
+* VMess uses AES-128-GCM by default on ARM64.
+* Built by Go 1.11.
+
+## 2018.08.24 v3.36
+
+* Great performance improvement on subdomain matching (`domain:`) in routing.
+* Full domain matching is now supported in routing.
+
+## 2018.08.07 v3.34
+
+* Better memory management on most devices.
+
+## 2018.07.27 v3.32
+
+* BitTorrent traffic can now be sniff'ed.
+* New `protocol` option in routing rules for protocol-based routing.
+* New `geosite:speedtest` option in routing rules to match all public servers of speedtest.net.
+
+## 2018.07.20 v3.31
+
+* New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
+
+## 2018.07.13 v3.30
+
+* Fix an issue that may cause broken connections in mKCP.
+* Thanks to [our friends](https://crowdin.com/project/v2ray) who speak Russian. Now our documents are in [Russian](https://www.v2ray.com/ru/).
+
+## 2018.07.06 v3.29
+
+* New inbound and outbound for MTProto proxy.
 
 ## 2018.06.29 v3.27
 

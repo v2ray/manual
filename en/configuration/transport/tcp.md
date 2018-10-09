@@ -1,6 +1,9 @@
-# TCP Transport
+---
+refcn: chapter_02/transport/tcp
+refen: configuration/transport/tcp
+---
 
-![English](../../resources/englishc.svg) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/tcp.html)
+# TCP Transport
 
 Configuration:
 

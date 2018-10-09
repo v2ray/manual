@@ -1,6 +1,9 @@
-# 私下联系
+---
+refcn: chapter_00/pgp
+refen: welcome/pgp
+---
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/pgp.html)
+# 私下联系
 
 如果你想和 V2Ray 的开发人员私下讨论一些问题，可以通过下列的邮箱联系。
 

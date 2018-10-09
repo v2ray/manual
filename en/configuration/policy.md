@@ -1,6 +1,9 @@
-# Local Policy
+---
+refcn: chapter_02/policy
+refen: configuration/policy
+---
 
-Local policy is added in V2Ray 3.1.
+# Local Policy
 
 Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
@@ -8,20 +11,20 @@ Configuration:
 
 ```javascript
 {
-    "levels": {
-        "0": {
-            "handshake": 4,
-            "connIdle": 300,
-            "uplinkOnly": 2,
-            "downlinkOnly": 5,
-            "statsUserUplink": false,
-            "statsUserDownlink": false
-        }
-    },
-    "system": {
-        "statsInboundUplink": false,
-        "statsInboundDownlink": false
+  "levels": {
+    "0": {
+      "handshake": 4,
+      "connIdle": 300,
+      "uplinkOnly": 2,
+      "downlinkOnly": 5,
+      "statsUserUplink": false,
+      "statsUserDownlink": false
     }
+  },
+  "system": {
+    "statsInboundUplink": false,
+    "statsInboundDownlink": false
+  }
 }
 ```
 
@@ -46,7 +49,7 @@ Some details when V2Ray handles connections:
 1. After client (browser) closes the uplink of the connection, V2Ray aborts the connection after `downlinkOnly` time.
 1. After remote (server) closes the downlink of the connection, V2Ray aborts the connection after `uplinkOnly` times.
 
-## Tips
+## Tips {#tips}
 
 * Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.
 * `bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).
