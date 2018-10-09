@@ -6,7 +6,7 @@ refen: configuration/dns
 
 V2Ray verfügt über einen internen DNS-Server, der DNS-Relay für andere Komponenten bereitstellt.
 
-Aufbau:
+Configuration:
 
 ```javascript
 {
@@ -29,7 +29,7 @@ Aufbau:
 }
 ```
 
-Woher:
+Where:
 
 * `Gastgeber`: Eine Liste von statischen IP-Adressen. Jeder Eintrag hat einen Domänennamen als Schlüssel und IP-Adresse als Wert. Wenn eine DNS-Abfrage auf eine der Domänen in dieser Liste abzielt, wird die entsprechende IP-Adresse sofort zurückgegeben und die DNS-Abfrage wird nicht weitergeleitet. Das Format der Domäne ist: 
   * Beispiel: `"v2ray.com"`: Die Domäne, die aufgelöst werden soll, muss dieser Domäne entsprechen.
