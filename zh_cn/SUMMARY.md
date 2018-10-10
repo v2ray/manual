@@ -8,8 +8,6 @@
   * [命令行参数](chapter_00/command.md)
   * [捐助支持](chapter_00/02_donate.md)
   * [寻求帮助](chapter_00/help.md)
-    * [Telegram](chapter_00/tg.md)
-    * [私下联系](chapter_00/pgp.md)
   * [常见问题](chapter_00/faq.md)
   * [项目授权](chapter_00/license.md)
   * [博客&#8618;](https://steemit.com/@v2ray)
