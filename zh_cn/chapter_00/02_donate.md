@@ -11,7 +11,7 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 * 您的捐款是对 Project V 的无偿贡献，和 Project V 提供的技术和服务没有直接关联；
 
 {% hint style='tip' %}
-感谢您对 Project V 的热爱和支持。
+感谢您对 Project V 的热爱和支持。我们会对每一份捐赠发送一份确认函，请务必在捐赠时留下您的邮件地址，或留言注明不需要确认。
 {% endhint %}
 
 ## 传统方式 {#usual-way}
@@ -38,4 +38,8 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 
 {% hint style='tip' %}
 [这个页面](../ui_client/service.md)列举了一些常见的加密货币交易所。
+{% endhint %}
+
+{% hint style='info' %}
+由于加密货币天生的匿名特性，如果有必要的话，请事先联系项目组表明捐赠者的身份。
 {% endhint %}

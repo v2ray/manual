@@ -13,6 +13,8 @@ Project V 团队支持中文和英文，请选择你所熟悉的语言来提问�
 
 ## Github Issue
 
+我们使用几个不同的仓库进行不同类型的讨论。
+
 * [代码问题](https://github.com/v2ray/v2ray-core/issues)
   * 仅用于讨论 V2Ray 的代码问题，比如 bug。
 * [未来计划](https://github.com/v2ray/planning/issues)
@@ -50,7 +52,7 @@ Project V 的所有讨论组都不可以发布 18 禁、政治相关、仇恨言
 由于工作繁忙，不能保证每封邮件都回复，请见谅。请尽量使用社区讨论以得到更快速的社区响应。
 {% endhint %}
 
-如果你需要发送加密信息，可以搜索`love@v2ray.com`相关联的 PGP 密钥，或者从下面的文本导入。
+如果你需要发送加密信息，可以搜索`love@v2ray.com`相关联的 PGP 公钥，或者从下面的文本导入。
 
 ```plain
 -----BEGIN PGP PUBLIC KEY BLOCK-----

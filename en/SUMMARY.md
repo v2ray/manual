@@ -8,8 +8,6 @@
   * [Commandline](welcome/command.md)
   * [Donation](welcome/donate.md)
   * [Support](welcome/help.md)
-    * [Telegram](welcome/tg.md)
-    * [Private Communication](welcome/pgp.md)
   * [FAQ](welcome/faq.md)
   * [License](welcome/license.md)
   * [Blog&#8618;](https://steemit.com/@v2ray)
