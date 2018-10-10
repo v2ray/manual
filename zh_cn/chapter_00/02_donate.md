@@ -19,6 +19,7 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 * [Paypal 转账](https://www.paypal.me/ProjectV2Ray/25)
 * [Paypal 信用卡](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 * [Patreon 定期投食](https://www.patreon.com/v2ray)
+* 美亚礼品卡: 寄送至`love@v2ray.com`，可在 [Amazon](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY) 或者[淘宝](https://s.taobao.com/search?q=%E7%BE%8E%E4%BA%9A%E7%A4%BC%E5%93%81%E5%8D%A1)购买。
 
 {% hint style='danger' %}
 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义。
