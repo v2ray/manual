@@ -20,16 +20,22 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 * [Paypal 信用卡](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 * [Patreon 定期投食](https://www.patreon.com/v2ray)
 
-\* 由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义。
+{% hint style='danger' %}
+由于平台的关系，小于 1 美元的捐赠可能会全部用于支付手续费而变得没有意义。
+{% endhint %}
 
 ## 极客方式 {#crypto}
 
-* 比特币 (BTC): [15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW](https://blockchain.info/address/15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW)
-* 比特现金 (BCH): [1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa](https://blockdozer.com/insight/address/1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa)
-* 以太坊 (ETH): [0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e](https://etherscan.io/address/0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e)
+* 比特币 (BTC): `15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW`
+* 比特现金 (BCH): `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
+* 以太坊 (ETH): `0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e`
   * 同时支持这些货币： OMG、REP、GNT、DGD
-* EOS: [EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a](https://eostracker.io/accounts/lovevictoria)
-* 莱特币 (LTC): [LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR](https://insight.litecore.io/address/LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR)
-* 门罗币 (XMR): 48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg
-* 瑞波币 (XRP): r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq 不需要 Tag
-* [贡献你的 CPU](cpu.md)
+* EOS: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
+* 莱特币 (LTC): `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
+* 门罗币 (XMR): `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
+* 瑞波币 (XRP): `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
+  * 不需要 Tag
+
+{% hint style='tip' %}
+[这个页面](../ui_client/service.md)列举了一些常见的加密货币交易所。
+{% endhint %}

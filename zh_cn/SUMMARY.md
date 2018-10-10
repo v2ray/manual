@@ -7,7 +7,6 @@
   * [新手上路](chapter_00/start.md)
   * [命令行参数](chapter_00/command.md)
   * [捐助支持](chapter_00/02_donate.md)
-    * [贡献你的 CPU](chapter_00/cpu.md)
   * [寻求帮助](chapter_00/help.md)
     * [Telegram](chapter_00/tg.md)
     * [私下联系](chapter_00/pgp.md)
