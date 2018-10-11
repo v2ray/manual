@@ -61,6 +61,13 @@ Where:
   * `"keine"` würde alle Fehlerprotokolle verwerfen.
   * Der Standardwert ist `"Warnung"` wenn Sie ihn leer lassen.
 
+Log levels:
+
+* `debug`: Information for developers only.
+* `info`: Information for current state of V2Ray. Users don't have to take care of those.
+* `warning`: Something wrong with the environment, usually outside of V2Ray, e.g., network breakage. V2Ray still runs, but users may experience some breakages.
+* `error`: Something severely wrong, that V2Ray can't run at all.
+
 ## Master Inbound Interface Configurations {#inbound}
 
 Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](protocols.md).
@@ -83,19 +90,19 @@ Master inbound interface is used to receive data from clients, browsers, or othe
 
 Where:
 
-* `Port`: Abhörport.
-* `Hafen`: port to be listen from. Accepted formats are: 
-  * Ganzzahl: aktuelle Portnummer.
+* `port`: listening port.
+* `port`: port to be listen from. Accepted formats are: 
+  * Integer: actual port number.
   * Env variable (V2Ray 3.23+): Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
-  * String (V2Ray 3.23+): Ein numerischer Zeichenfolgenwert wie `"1234"`.
-* `listen`: IP-Adresse abhören, Standardwert ist `"0.0.0.0"`.
+  * String (V2Ray 3.23+): A numberic string value, such as `"1234"`.
+* `listen`: listening IP address, default value is `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
-* `Einstellungen`: Protokollspezifische Einstellungen, Details finden Sie auf den Detailseiten der Protokolle.
+* `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `streamSettings`: see [Protocol Transport Options](transport.md).
-* `Tag`: Das Tag dieser eingehenden Schnittstelle, das unter allen eingehenden / ausgehenden Schnittstellen eindeutig sein sollte.
-* `domainOverride`: erkennt die Pakete bestimmter Protokolle und leitet seine Anforderungsziele um. 
-  * Akzeptiert ein Array von Strings, der Standardwert ist leer.
-  * Verfügbare Werte sind `"http"` und `"tls"`.
+* `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
+* `domainOverride`: recognize specific protocols' packets and redirects its request targets. 
+  * Accepts an array of strings, default value is empty.
+  * Available values are `"http"` and `"tls"`.
   * (V2Ray 3.32+) Deprecated. Use `sniffing`. When `domainOverride` is set but `sniffing` is not set, V2Ray will enable `sniffing` anyway.
 * `sniffing` (V2Ray 3.32+): Try to sniff current connection. 
   * `enabled`: Whether or not to enable sniffing.
@@ -122,14 +129,14 @@ Master outbound interface is used to send data to remote servers or next proxy s
 
 Where:
 
-* `sendThrough`: Die Netzwerkschnittstelle (IP) zum Senden von Daten, verfügbar, wenn mehrere IPs angezeigt werden, der Standardwert ist `"0.0.0.0"`.
+* `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
-* `Tag`: Das Tag dieser ausgehenden Schnittstelle, das unter allen eingehenden / ausgehenden Schnittstellen eindeutig sein sollte.
+* `tag`: This outbound interface's tag, which should be unique among all inbound/outbound interfaces.
 * `streamSettings`: see [Protocol Transport Options](transport.md).
-* `Proxy-Einstellungen`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled. 
-  * `Tag`: Wenn ein anderes Ausgangs-Tag angegeben wird, werden die Daten an den angegebenen Ausgang gesendet.
-* `Mux`: [Mux Konfigurationen](mux.md).
+* `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled. 
+  * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
+* `mux`: [Mux Configurations](mux.md).
 
 ## Extra Inbound Interfaces Configurations {#inbound-detour}
 
@@ -162,12 +169,12 @@ Where:
 * `port`: port to be listen from. Accepted formats are: 
   * Integer: actual port number.
   * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
-  * String: Entweder ein numerischer Stringwert wie `"1234"`oder ein Portbereich wie `"5-10"` der für Portnummer 5 bis 10 steht.
+  * String: Either a numberic string value, such as `"1234"`, or a port range like `"5-10"` which stands for port number 5 to 10.
 * `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
 * `listen`: listening IP address, default value is `"0.0.0.0"`.
-* `zuordnen`: Zuweisungsoptionen: 
-  * `Strategie`: Zuweisungsstrategien, verfügbare Werte sind `"immer"` und `"zufällig"`. Für die Option `"immer"` alle Ports zu, die durch `"Port"` Einstellungen spezifiziert sind; Für `"zufällige"`würde jedes bestimmte Minuten bestimmte Ports unter den Port-Bereichen wählen, konfiguriert durch `"Refresh"`, `"Port"`und `"Parallelität"`.
-  * `Refresh`: Das Intervall, in dem zufällige Ports aktualisiert werden, mit Minuteneinheiten. Mindestwert ist `2`, empfohlener Wert ist `5`. Diese Einstellung wird nur wirksam, wenn `Strategie = Zufall`.
+* `allocate`: Allocation options: 
+  * `strategy`: Allocation strategies, available values are `"always"` and `"random"`. For `"always"` option, all ports will be listening specified by `"port"` settings; for `"random"`, every certain minutes would choose certain ports among the port ranges, configured by `"refresh"`, `"port"`, and `"concurrency"`.
+  * `refresh`: The interval refreshing random ports, with unit of minutes. Minimum value is `2`, recommended value is `5`. This setting will only take effect when `strategy = random`.
   * `concurrency`: Number of random ports. Minimum value is `1`, maximum value is a half of ports' range. Recommended value is `3`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `streamSettings`: see [Protocol Transport Options](transport.md).
@@ -202,7 +209,7 @@ Where:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
-* `Tag`: Ausgangs - Tag - Name des aktuellen Schnittstelle, Daten würden über diese Schnittstelle gesendet werden , wenn diese in abgehenden Routing - Konfigurationen oder andere outbound des ausgewählt ist `proxySettings`.
+* `tag`: Outbound tag name of the current interface, data would be sent via this interface if this outbound is selected in routing configurations or other outbound's `proxySettings`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `streamSettings`: For details, see [Protocol Transport Options](transport.md).
 * `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled. 
