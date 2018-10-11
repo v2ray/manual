@@ -62,6 +62,13 @@ Where:
   * `"none"` would discard all error logs.
   * Default value is `"warning"` if you leave it empty.
 
+Log levels:
+
+* `debug`: Information for developers only.
+* `info`: Information for current state of V2Ray. Users don't have to take care of those.
+* `warning`: Something wrong with the environment, usually outside of V2Ray, e.g., network breakage. V2Ray still runs, but users may experience some breakages.
+* `error`: Something severely wrong, that V2Ray can't run at all.
+
 ## Master Inbound Interface Configurations {#inbound}
 
 Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](protocols.md).
