@@ -42,13 +42,11 @@
   * [iOS](ui_client/ios.md)
   * [Android](ui_client/android.md)
   * [在线服务](ui_client/service.md)
-* 开发人员手册
-  * [介绍](developer/intro/README.md)
-    * [加入组织](developer/intro/org.md)
-    * [开发计划](developer/intro/roadmap.md)
-    * [开发指引](developer/intro/guide.md)
-    * [核心设计](developer/intro/design.md)
-    * [配置开发环境](developer/intro/compile.md)
+* [开发人员手册](developer/README.md)
+  * [开发计划](developer/intro/roadmap.md)
+  * [开发指引](developer/intro/guide.md)
+  * [核心设计](developer/intro/design.md)
+  * [配置开发环境](developer/intro/compile.md)
   * 协议细节
     * [VMess 协议](developer/protocols/vmess.md)
     * [mKCP 协议](developer/protocols/mkcp.md)
