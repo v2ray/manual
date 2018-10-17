@@ -7,9 +7,9 @@ refen: configuration/protocols/vmess
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
 
 * Наименование: vmess
-* Type: Inbound / Outbound
+* Тип: входящий / исходящий
 
-## Outbound Proxy Configuration
+## Конфигурация прокси для исходящего соединения
 
 ```javascript
 {
@@ -30,7 +30,7 @@ refen: configuration/protocols/vmess
 }
 ```
 
-Where:
+Где:
 
 * `vnext`: Массив, где каждая запись является удаленным сервером. 
   * ` address `: Адрес сервера, может быть IPv4, IPv6 или доменное имя.
@@ -45,7 +45,7 @@ Where:
       * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
       * `"none"`: Не использовать шифрование.
 
-## Inbound Proxy Configuration
+## Конфигурация прокси для входящего соединения
 
 ```javascript
 {
@@ -68,7 +68,7 @@ Where:
 }
 ```
 
-Where:
+Где:
 
 * `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
   * Каждый клиент содержит: 
@@ -85,7 +85,7 @@ Where:
   * `none`
   * `aes-128-cfb`
 
-## Tips
+## Замечания
 
 * Всегда используйте метод шифрования ` "auto" ` для обеспечения безопасности и совместимости.
 * VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. 
