@@ -24,7 +24,7 @@ Below is the top level structure of the configuration. Each section has its own 
 }
 ```
 
-Where:
+Где:
 
 * `log`: log configuration. See below for detail.
 * `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
