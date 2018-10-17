@@ -11,11 +11,11 @@ refen: ui_client/service
 
 ## VPN
 
-* [BabyDriver](http://babydriver.me/): Supports V2Ray. Coupon code: bcb518
+* [BabyDriver](http://babydriver.me/): Поддерживает V2Ray. Скидочный код: bcb518
 * [喵帕斯](https://xn--i2ru8q2qg.com/): Поддерживает V2Ray (на стадии внедрения)
-* [Lanan](https://xn--sjt174g.com/): V2Ray based VPN service. Coupon code: v2ray
+* [Lanan](https://xn--sjt174g.com/): Сервис VPN, основанный на V2Ray. Скидочный код: v2ray
 * [多数派](https://dspi.io/aff.php?aff=7): Новый сервис VPN, основанный на V2Ray.
-* [V2rayPro](https://myv2.us): VPN service based on V2Ray. Coupon code: v2ray.com
+* [V2rayPro](https://myv2.us): Сервис VPN, основанный на V2Ray. Скидочный код: v2ray.com
 
 ## Домены
 
