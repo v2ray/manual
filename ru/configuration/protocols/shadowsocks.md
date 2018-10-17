@@ -26,7 +26,7 @@ refen: configuration/protocols/shadowsocks
 Информация:
 
 * Название: shadowsocks
-* Type: Inbound / Outbound
+* Тип: входящий / исходящий
 
 ## Конфигурация прокси для входящего соединения
 
@@ -42,7 +42,7 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-Where:
+Где:
 
 * `email`: Email address. Used for user identification.
 * `method`: Encryption method. No default value. Options are: 
@@ -80,7 +80,7 @@ Where:
 }
 ```
 
-Where:
+Где:
 
 * `email`: Email address. Used for user identification.
 * `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
