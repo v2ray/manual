@@ -27,7 +27,7 @@ V2Ray считывает следующие переменные среды.
 ## Расположение конфигурации V2Ray {#config}
 
 * Имя: `v2ray.location.config` или `V2RAY_LOCATION_CONFIG`
-* Default value: Same directory where v2ray is.
+* Значение по умолчанию: директория, где находится v2ray.
 
 Эта переменная указывает каталог, в котором находится config.json.
 
