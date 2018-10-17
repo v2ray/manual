@@ -30,11 +30,11 @@ V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray 
 * Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
 * Исходный код: [GitHub](https://github.com/V2Ray-Android/Actinium)
 
-## Other tools {#other}
+## Другие инструменты {#other}
 
 ### JuiceSSH
 
-SSH client.
+Клиент SSH.
 
 * Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
 * Веб-сайт: [JuiceSSH.com](https://juicessh.com/)
@@ -47,7 +47,7 @@ SSH client.
 
 ### Telegram
 
-Encrypted discussion.
+Зашифрованное общение.
 
-* Website: [telegram.org](https://telegram.org/)
+* Веб-сайт: [telegram.org](https://telegram.org/)
 * Загрузить: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)
