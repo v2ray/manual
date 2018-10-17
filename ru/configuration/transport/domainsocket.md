@@ -6,9 +6,9 @@ refen: configuration/transport/domainsocket
 
 Сокет домена использует стандартный сокет домена Unix для доставки данных. Сокет домена - это внутрисистемный канал передачи данных. Он не создаёт задержек в сетевом буфере и может быть немного быстрее, чем передача через локальную петлю (loopback).
 
-Domain socket can only be used on platforms that supports Unix domain socket, such as macOS and Linux. It is not available on Windows.
+Сокет домена может использоваться только на платформах, которые его поддерживают: Unix, macOS и Linux. Windows не поддерживает эту технологию.
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
