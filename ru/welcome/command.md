@@ -2,7 +2,7 @@
 refcn: chapter_00/command
 refen: welcome/command
 ---
-# Commandline
+# Командная строка
 
 ## V2Ray
 
@@ -12,7 +12,7 @@ V2Ray имеет следующие параметры командной стр
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
-Where:
+Где:
 
 * `-version`: Вывести версию V2Ray, затем завершить работу.
 * `-test`: Считать и проверить настройки, вывести найденные ошибки, затем завершить работу.
