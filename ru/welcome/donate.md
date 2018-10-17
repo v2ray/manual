@@ -20,7 +20,7 @@ Project V is a nonprofit project. The source code and program can be used freely
 
 {% hint style='danger' %} Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee. {% endhint %}
 
-## Cryptocurrency {#crypto}
+## Криптовалюта {#crypto}
 
 * Bitcoin: `15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW`
 * Bitcoin Case: `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
