@@ -2,11 +2,11 @@
 refcn: chapter_02/stats
 refen: configuration/stats
 ---
-# Statistics
+# Статистика
 
 V2Ray предоставляет информацию о своём состоянии.
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
@@ -20,6 +20,6 @@ Configuration:
 * `inbound>>>[tag]>>>traffic>>>uplink` (V2Ray 3.18+): Накопленный исходящий трафик соединения в байтах.
 * `inbound>>>[tag]>>>traffic>>>downlink` (V2Ray 3.18+): Накопленный входящий трафик соединения в байтах.
 
-## Tips
+## Замечания
 
 * Если у пользователя нет валидного адреса электронной почты, статистика не будет накапливаться.
