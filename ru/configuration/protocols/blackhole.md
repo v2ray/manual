@@ -2,7 +2,7 @@
 refcn: chapter_02/protocols/blackhole
 refen: configuration/protocols/blackhole
 ---
-# Blackhole
+# Backhole
 
 Backhole - это протокол для исходящих соединений. Он блокирует все соединения предопределёнными ответами. В сочетании с [Маршрутизацией](../routing.md), он может быть использован для блокировки доступа к определённым веб-сайтам.
 
@@ -18,7 +18,7 @@ Backhole - это протокол для исходящих соединени�
 }
 ```
 
-Where:
+Где:
 
 * `response`: Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection. 
   * `type`: Тип ответа, доступные параметры: 
