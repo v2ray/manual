@@ -8,9 +8,9 @@ refen: index
 
 ## Введение
 
-Project V provides a single core with various GUI programs. The core, V2Ray, is for network connection, routing and data processing, while GUI programs are for user friendly experience.
+Project V - это одно кроссплатформенное ядро с разными GUI. Ядро, V2Ray, предназначено для подключения, маршрутизации и транспортировки данных.
 
-V2Ray's responsibility is transfer data from its client to specified server, based on user configuration. It runs as a commandline tool. It can be configured via JSON based configuration.
+Задача V2Ray - передача данных от клиента до специального сервера, указанного в настройках. Оно работает в командном режиме. Настраивается через JSON файл.
 
 ## Возможности
 
