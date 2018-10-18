@@ -34,7 +34,7 @@ refen: configuration/protocols/vmess
 
 * `vnext`: Массив, где каждая запись является удаленным сервером. 
   * ` address `: Адрес сервера, может быть IPv4, IPv6 или доменное имя.
-  * `port`: Server port
+  * `port`: Порт сервера.
   * `users`: Массив, в котором каждая запись является пользователем VMess. 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 16. Оно не должно быть больше, чем alterId входящего соединения.
@@ -88,6 +88,6 @@ refen: configuration/protocols/vmess
 ## Замечания
 
 * Всегда используйте метод шифрования ` "auto" ` для обеспечения безопасности и совместимости.
-* VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. 
+* VMess зависит от системного времени. Убедитесь, что ваше системное время синхронизировано с временем UTC. Часовой пояс не имеет значения. 
   * Можно установить ` ntp ` службы на Linux для автоматической синхронизации системного времени.
-* You may choose the value of `alterId` at your interest. For daily usage, a value less than `100` is usually enough.
+* Вы можете выбрать значение `alterId` по желанию. Для ежедневного использования, значения меньше `100`, как правило, достаточно.
