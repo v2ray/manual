@@ -35,7 +35,7 @@ Socks - это реализация стандартного протокола 
   * `users`: Список учетных записей пользователей: 
     * `user`: Логин
     * `pass`: Пароль
-    * `level`: User level.
+    * `level`: Пользовательский уровень.
 
 Важно:
 
@@ -61,11 +61,11 @@ Socks - это реализация стандартного протокола 
 
 Где:
 
-* `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
+* `auth`: Метод аутентификации socks. По умолчанию `"noauth"`. Возможные варианты: 
   * `noauth`: Анонимная аутентификация
   * `password`: С использованием логина и пароля [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
+* `accounts`: Массив, в котором каждая запись содержит `user` для имени пользователя и `pass` для пароля. По умолчанию пуст. 
   * Используется только когда в значении `auth` используется `password`.
-* `udp`: `true` or `false` to enable UDP. Default to false.
-* `ip`: When UDP is enabled, this IP address receives UDP packets from client. Default to `"127.0.0.1"`.
-* `userLevel`: User level. All connections share this level.
+* `udp`: `true` для включения и `false` для выключения UDP. По умолчанию - false.
+* `ip`: Если UDP включен, этот IP адрес принимает пакеты UDP от клиента. Значение по умолчанию - `"127.0.0.1"`.
+* `userLevel`: Пользовательский уровень. Все подключения проходят через этот уровень.
