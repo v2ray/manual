@@ -4,7 +4,7 @@ refen: configuration/api
 ---
 # API
 
-V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
+V2Ray предоставляет API для удаленного доступа. Эти API основаны на [gRPC](https://grpc.io/).
 
 When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
 
