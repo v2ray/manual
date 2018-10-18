@@ -2,7 +2,7 @@
 refcn: chapter_02/index
 refen: configuration/index
 ---
-# Configuration
+# Настройка
 
 V2Ray использует конфиг на основе [protobuf](https://developers.google.com/protocol-buffers/). Из-за низкой читаемости формата protobuf, V2Ray также поддерживает конфиг в JSON. Перед запуском, V2Ray автоматически преобразует конфигурацию JSON в protobuf. В дальнейшем могут быть введены другие форматы конфигурации.
 
@@ -10,7 +10,7 @@ V2Ray использует конфиг на основе [protobuf](https://dev
 
 JSON или [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON) - способ представления объектов в Javascript. Один JSON-файл содержит один и только один JSON-объект, начинающийся с «{» и завершающийся «}».
 
-A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
+JSON-объект содержит список пар ключ-значение. Ключ - это строка, а значение может быть строкой, числом, логическим значением, массивом или другим объектом. Типичный объект выглядит следующим образом:
 
 ```javascript
 {
