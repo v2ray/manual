@@ -4,7 +4,7 @@ refen: welcome/start
 ---
 # Быстрый старт
 
-You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
+Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
 
 ## Клиент {#client}
 
@@ -51,16 +51,16 @@ You need to configure V2Ray after installing it. Here is a quick configuration f
 }
 ```
 
-Please modify the IP address of your V2Ray server as mentioned above. After that, the V2Ray process on your PC will proxy all traffic to V2Ray server except intranet traffic.
+Измените IP-адрес своего сервера V2Ray, как указано выше в комментариях. После этого начнёт V2Ray проксировать весь трафик с вашего ПК на сервер V2Ray, за исключением внутрисетевого трафика.
 
 ## Сервер {#server}
 
-You need another computer to run V2Ray as a server. Usually this computer is located outside firewall. Here is a sample configuration.
+Вам нужен еще один компьютер для запуска V2Ray в качестве сервера. Обычно этот компьютер находится за пределами файрвола (локального или глобального). Вот пример конфигурации.
 
 ```javascript
 {
   "inbound": {
-    "port": 10086, // Port of the server. Должен быть таким же, как упомянутый выше.
+    "port": 10086,  // Порт сервера. Должен быть таким же, как упомянутый выше.
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
@@ -77,7 +77,7 @@ You need another computer to run V2Ray as a server. Usually this computer is loc
 
 ## Запуск {#running}
 
-* On Windows and macOS, configuration file is located in the same directory as V2Ray binary. You may run `v2ray` or `v2ray.exe` without additional parameters.
+* В Windows и macOS файл конфигурации находится в том же каталоге, что и исполнимый файл V2Ray. Вы можете запустить `v2ray` или `v2ray.exe` без дополнительных параметров.
 * На Linux файл конфигурации обычно находится в `/etc/v2ray/config.json`. Выполните `v2ray --config=/etc/v2ray/config.json` в консоли или используйте другие инструменты, типа systemd, для запуска V2Ray в качестве фонового процесса.
 
 Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
