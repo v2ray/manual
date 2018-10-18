@@ -4,7 +4,7 @@ refen: configuration/protocols/vmess
 ---
 # VMess
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) это протокол для шифрованной передачи информации. Он включает в себя входящий и исходящий прокси.
 
 * Наименование: vmess
 * Тип: входящий / исходящий
@@ -38,11 +38,11 @@ refen: configuration/protocols/vmess
   * `users`: Массив, в котором каждая запись является пользователем VMess. 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 16. Оно не должно быть больше, чем alterId входящего соединения.
-    * `level`: User level. See [Policy](../policy.md) for more detail.
+    * `level`: Пользовательский уровень. См. [Локальная политика](../policy.md).
     * `security`: Метод шифрования. Возможные варианты: 
       * `"aes-128-gcm"`: Рекомендуется для ПК.
       * `"chacha20-poly1305"`: Рекомендуется для мобильных устройств.
-      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
+      * `"auto"`: Значение по умолчанию. Используйте `aes-128-gcm` на AMD64, ARM64 и S390x, или `chacha20-poly1305` в остальных случаях.
       * `"none"`: Не использовать шифрование.
 
 ## Конфигурация прокси для входящего соединения
@@ -70,10 +70,10 @@ refen: configuration/protocols/vmess
 
 Где:
 
-* `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
+* `clients`: Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта. 
   * Каждый клиент содержит: 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `level`: User level. See [Policy](../policy.md) for its usage.
+    * `level`: Пользовательский уровень. См. [Локальная политика](../policy.md).
     * `alterId`: Number of alternative IDs. Same as in Outbound.
     * `email`: Адрес электронной почты для идентификации пользователя.
 * `detour`: Дополнительная функция, чтобы предложить клиенту использовать предложенный протокол. 
