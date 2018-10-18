@@ -4,7 +4,7 @@ refen: welcome/donate
 ---
 # Пожертвование
 
-Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
+Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. Если вам нравится этот проект, купите нам чашку кофе.
 
 * Отчёт о расходах публиковаться не будет.
 * Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V.
@@ -16,7 +16,7 @@ Project V is a nonprofit project. The source code and program can be used freely
 * [PayPal: перевод](https://www.paypal.me/ProjectV2Ray/25)
 * [PayPal: кредитной картой](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 * [Patreon](https://www.patreon.com/v2ray)
-* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Send to `love@v2ray.com`.
+* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Отправляйте на `love@v2ray.com`.
 
 {% hint style='danger' %} С надеждой на понимание предупреждаем, что переводы меньше одного доллара не имеют смысла из-за большой комиссии PayPal. {% endhint %}
 
