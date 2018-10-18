@@ -30,7 +30,7 @@ V2Ray доступен на следующих платформах:
 4. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
-All packages are in ZIP format. Download and unzip corresponding packages to your system.
+Все пакеты находятся в формате ZIP. Загрузите и распакуйте подходящие пакеты в свою систему.
 
 ## Verify {#verify}
 
