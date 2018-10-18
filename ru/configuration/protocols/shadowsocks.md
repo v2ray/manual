@@ -55,7 +55,7 @@ refen: configuration/protocols/shadowsocks
   * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
 * `password`: Пароль. Может быть любой строкой.
 * `udp` (Устарел, используйте `network`): `true` для включения и `false` для выключения UDP. По умолчанию `false`.
-* `level`: User level. Default to `0`. See [Policy](../policy.md).
+* `level`: Пользовательский уровень. По умолчанию `0`. См. [Локальная политика](../policy.md).
 * `ota`: `true` или `false`, использовать или не использовать OTA. 
   * Когда используется AEAD, значение ` ota ` не используется.
   * Если значение не установлено, Shadowsocks использует значение, установленное клиентом.
