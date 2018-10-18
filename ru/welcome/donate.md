@@ -18,7 +18,7 @@ Project V is a nonprofit project. The source code and program can be used freely
 * [Patreon](https://www.patreon.com/v2ray)
 * [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Send to `love@v2ray.com`.
 
-{% hint style='danger' %} Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee. {% endhint %}
+{% hint style='danger' %} С надеждой на понимание предупреждаем, что переводы меньше одного доллара не имеют смысла из-за большой комиссии PayPal. {% endhint %}
 
 ## Криптовалюта {#crypto}
 
@@ -30,7 +30,7 @@ Project V is a nonprofit project. The source code and program can be used freely
 * Litecoin: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
 * Monero: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
 * Ripple: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
-  * Tag not required
+  * Тэг не обязателен
 
 {% hint style='tip' %} [This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies. {% endhint %}
 
