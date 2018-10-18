@@ -35,16 +35,16 @@ mKCP is a reliable stream transport. It is an UDP based protocol.
   * One may use value `0` for a small bandwidth.
 * `congestion`: Whether or not to enable congestion control. Default value is `false`. 
   * When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
-* `readBufferSize`: Read buffer size for a single connection, in MB. Default value is `2`.
-* `writeBufferSize`: Write buffer size for a single connection, in MB. Default value is `2`.
+* `readBufferSize`: Размер буфера для чтения для каждого соединения, в МБ. Значение по умолчанию: `2`.
+* `writeBufferSize`: Размер буфера для записи для каждого соединения, в МБ. Значение по умолчанию: `2`.
 * `header`: Заголовок пакета для маскировки. 
-  * `type`: Type of obfuscation. Choices are: 
-    * `"none"`: Default value. No obfuscation is added.
+  * `type`: Тип маскировки. Возможные варианты: 
+    * `"none"`: Значение по умолчанию. Без обфускации.
     * `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
     * `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
     * `"wechat-video"`: Маскировка под WeChat.
     * `"dtls"`: Маскировка под пакеты DTLS 1.2.
-    * `"wireguard"` (V2Ray 3.38+): Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
+    * `"wireguard"` (V2Ray 3.38+): Маскировка под пакеты WireGuard. (только маскировка, НЕ настоящий протокол WireGuard)
 
 ## Замечания {#tips}
 
