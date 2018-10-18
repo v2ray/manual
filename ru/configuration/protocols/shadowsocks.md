@@ -9,7 +9,7 @@ refen: configuration/protocols/shadowsocks
 Совместим с официальной версией:
 
 * Поддерживает как TCP, так и UDP соединения. UDP может быть отключен.
-* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
+* Поддерживает [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
   * Клиент может отключать и включать поддержку при необходимости.
   * Сервер может принудительно включить, отключить поддержку или использовать конфигурация клиента.
 * Методы шифрования ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) шифры, добавленные в V2Ray 3.0): 
@@ -53,8 +53,8 @@ refen: configuration/protocols/shadowsocks
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
   * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `udp` (Deprecated, use `network`): `true` or `false`, whether or not to enable UDP. Default to `false`.
+* `password`: Пароль. Может быть любой строкой.
+* `udp` (Устарел, используйте `network`): `true` для включения и `false` для выключения UDP. По умолчанию `false`.
 * `level`: User level. Default to `0`. See [Policy](../policy.md).
 * `ota`: `true` или `false`, использовать или не использовать OTA. 
   * Когда используется AEAD, значение ` ota ` не используется.
@@ -83,7 +83,7 @@ refen: configuration/protocols/shadowsocks
 Где:
 
 * `email`: Адрес электронной почты. Используется для идентификации пользователя.
-* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
+* `address`: Адрес сервера Shadowsocks. Может быть IPv4, IPv6 или доменом.
 * `port`: Порт используемый Shadowsocks сервером.
 * `method`: Метод шифрования. Значение по умолчанию отсутствует. Возможные варианты: 
   * `"aes-256-cfb"`
@@ -93,7 +93,7 @@ refen: configuration/protocols/shadowsocks
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
   * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
+* `password`: Пароль. Может быть любой строкой.
 * `ota`: Использовать или не использовать OTA. 
-  * When AEAD is used, `ota` has no effect.
-* `level`: User level.
+  * Когда используется AEAD, значение ` ota ` не используется.
+* ` userLevel `: Пользовательский уровень.
