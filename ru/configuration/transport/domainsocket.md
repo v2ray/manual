@@ -18,8 +18,8 @@ refen: configuration/transport/domainsocket
 
 Где:
 
-* `path`: An valid absolute file path. Before running V2Ray, the file on this path must not exist.
+* `path`: Реальный абсолютный путь к файлу. Перед запуском V2Ray указанный файл не должен существовать.
 
 ## Замечания {#tips}
 
-* When domain socket is used, IP and port specified on the inbound/outbound proxy will be ignored. All traffic is tunneled through the domain socket.
+* Когда используется сокет домена, IP и порт, указанные во входящем/исходящем прокси, будут проигнорированы. Весь трафик туннелируется через сокет домена.
