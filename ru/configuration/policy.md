@@ -6,7 +6,7 @@ refen: configuration/policy
 
 Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
