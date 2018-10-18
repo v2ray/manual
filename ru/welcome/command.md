@@ -20,7 +20,7 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
   * Path to the local config file. May be a relative path or absolute path.
   * `"stdin:"`: Indicates V2Ray to read configuration from standard input. Caller must close stdin after writing out configuration.
   * Value begins with `http://` or `https://` (lowercase): V2Ray tries to load configuration from the remote address.
-* `-format`: Configuration format. Choices are: 
+* `-format`: Формат файла с настройками. Возможные варианты: 
   * `json`: формат JSON.
   * `pb` или `protobuf`: формат Protobuf.
 
