@@ -74,14 +74,14 @@ refen: configuration/protocols/vmess
   * Каждый клиент содержит: 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * `level`: Пользовательский уровень. См. [Локальная политика](../policy.md).
-    * `alterId`: Number of alternative IDs. Same as in Outbound.
+    * ` alterId `: Число альтернативных идентификаторов. То же, что и в Исходящем соединении (см выше).
     * `email`: Адрес электронной почты для идентификации пользователя.
 * `detour`: Дополнительная функция, чтобы предложить клиенту использовать предложенный протокол. 
-  * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
-* `default`: Optional default client configuration. Usually used in detour proxy. 
-  * `level`: User level.
-  * `alterId`: Number of alternative IDs. Default value 64. Recommend 16.
-* `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
+  * `to`: Тег входящего прокси. См. [Обзор](../protocols.md). Если сконфигурировано, VMess предложит клиенту использовать протокол для дальнейших соединений.
+* `default`: Необязательная конфигурация клиента по умолчанию. Обычно используется в предложенном прокси протоколе. 
+  * `level`: Пользовательский уровень.
+  * ` alterId `: Число альтернативных идентификаторов. По умолчанию: 64. Рекомендуемое значение: 16.
+* `disableInsecureEncryption`: Запретить клиенту использовать небезопасные методы шифрования. Если установлено значение true, соединения будут немедленно разорваны, если будут использоваться следующие методы шифрования. Значение по умолчанию: `false`. 
   * `none`
   * `aes-128-cfb`
 
