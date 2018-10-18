@@ -23,7 +23,7 @@ Project V использует следующую лицензию.
 
 ## Скриншоты и другие файлы {#screenshots}
 
-All third party files listed below belong to their creator. Whoever creates the file owns the file.
+Все файлы третьих лиц, перечисленные ниже, принадлежат их создателям. Файлы принадлежат тем, кто их создал.
 
 * Включая все скриншоты Project V.
 * Включая все файлы конфигурации, которые используются для запуска Project V.
