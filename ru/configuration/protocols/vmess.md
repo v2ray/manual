@@ -39,7 +39,7 @@ refen: configuration/protocols/vmess
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 16. Оно не должно быть больше, чем alterId входящего соединения.
     * `level`: User level. See [Policy](../policy.md) for more detail.
-    * `security`: Encryption method. Options are: 
+    * `security`: Метод шифрования. Возможные варианты: 
       * `"aes-128-gcm"`: Рекомендуется для ПК.
       * `"chacha20-poly1305"`: Рекомендуется для мобильных устройств.
       * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
