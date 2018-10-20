@@ -20,7 +20,7 @@ go get -u v2ray.com/ext/...
 
 ```bash
 cd $GOPATH/src/v2ray.com/core
-bazel build --action_env=GOPATH=$GOPATH --action_env=PATH=$PATH//release:v2ray_linux_amd64_package
+bazel build --action_env=GOPATH=$GOPATH --action_env=PATH=$PATH //release:v2ray_linux_amd64_package
 #Output: bazel-bin/release/v2ray-linux-64.zip
 ```
 
@@ -28,7 +28,7 @@ bazel build --action_env=GOPATH=$GOPATH --action_env=PATH=$PATH//release:v2ray_l
 
 ```bash
 cd $GOPATH/src/v2ray.com/core
-bazel build --action_env=GOPATH=$GOPATH --action_env=PATH=$PATH//release:all
+bazel build --action_env=GOPATH=$GOPATH --action_env=PATH=$PATH //release:all
 ```
 
 ## 安装构建完成的安装包 {#install}
@@ -48,7 +48,7 @@ $GOPATH/src/v2ray.com/core/release/install-release.sh --local <path/to/zip/file>
 
 ```bash
 cd $GOPATH/src/v2ray.com/core
-bazel build --action_env=GOPATH=$GOPATH --action_env=PATH=$PATH//release:v2ray_linux_amd64_package
+bazel build --action_env=GOPATH=$GOPATH --action_env=PATH=$PATH //release:v2ray_linux_amd64_package
 ```
 
 5. 然后可以解压安装包并重新打包: `unzip bazel-bin/release/v2ray-linux-64.zip`
