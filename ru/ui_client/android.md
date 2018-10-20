@@ -27,7 +27,7 @@ V2RayNG - приложение для Android, основанное на V2Ray. 
 
 ## Actinium
 
-* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
+* Download: Play Store (Unavailable)
 * Исходный код: [GitHub](https://github.com/V2Ray-Android/Actinium)
 
 ## Другие инструменты {#other}
