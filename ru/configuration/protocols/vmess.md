@@ -4,12 +4,12 @@ refen: configuration/protocols/vmess
 ---
 # VMess
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) это протокол для шифрованной передачи информации. Он включает в себя входящий и исходящий прокси.
 
 * Наименование: vmess
-* Type: Inbound / Outbound
+* Тип: входящий / исходящий
 
-## Outbound Proxy Configuration
+## Конфигурация прокси для исходящего соединения
 
 ```javascript
 {
@@ -30,22 +30,22 @@ refen: configuration/protocols/vmess
 }
 ```
 
-Where:
+Где:
 
 * `vnext`: Массив, где каждая запись является удаленным сервером. 
   * ` address `: Адрес сервера, может быть IPv4, IPv6 или доменное имя.
-  * `port`: Server port
+  * `port`: Порт сервера.
   * `users`: Массив, в котором каждая запись является пользователем VMess. 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * ` alterId `: Число альтернативных идентификаторов. Альтернативные идентификаторы будут генерироваться детерминированным способом. Значение по умолчанию: 0. Максимальное значение: 65535. Рекомендуемое значение: 16. Оно не должно быть больше, чем alterId входящего соединения.
-    * `level`: User level. See [Policy](../policy.md) for more detail.
-    * `security`: Encryption method. Options are: 
+    * `level`: Пользовательский уровень. См. [Локальная политика](../policy.md).
+    * `security`: Метод шифрования. Возможные варианты: 
       * `"aes-128-gcm"`: Рекомендуется для ПК.
       * `"chacha20-poly1305"`: Рекомендуется для мобильных устройств.
-      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
+      * `"auto"`: Значение по умолчанию. Используйте `aes-128-gcm` на AMD64, ARM64 и S390x, или `chacha20-poly1305` в остальных случаях.
       * `"none"`: Не использовать шифрование.
 
-## Inbound Proxy Configuration
+## Конфигурация прокси для входящего соединения
 
 ```javascript
 {
@@ -68,26 +68,26 @@ Where:
 }
 ```
 
-Where:
+Где:
 
-* `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
+* `clients`: Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта. 
   * Каждый клиент содержит: 
     * ` id `: Идентификатор пользователя в формате [ UUID ](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `level`: User level. See [Policy](../policy.md) for its usage.
-    * `alterId`: Number of alternative IDs. Same as in Outbound.
+    * `level`: Пользовательский уровень. См. [Локальная политика](../policy.md).
+    * ` alterId `: Число альтернативных идентификаторов. То же, что и в Исходящем соединении (см выше).
     * `email`: Адрес электронной почты для идентификации пользователя.
 * `detour`: Дополнительная функция, чтобы предложить клиенту использовать предложенный протокол. 
-  * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
-* `default`: Optional default client configuration. Usually used in detour proxy. 
-  * `level`: User level.
-  * `alterId`: Number of alternative IDs. Default value 64. Recommend 16.
-* `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
+  * `to`: Тег входящего прокси. См. [Обзор](../protocols.md). Если сконфигурировано, VMess предложит клиенту использовать протокол для дальнейших соединений.
+* `default`: Необязательная конфигурация клиента по умолчанию. Обычно используется в предложенном прокси протоколе. 
+  * `level`: Пользовательский уровень.
+  * ` alterId `: Число альтернативных идентификаторов. По умолчанию: 64. Рекомендуемое значение: 16.
+* `disableInsecureEncryption`: Запретить клиенту использовать небезопасные методы шифрования. Если установлено значение true, соединения будут немедленно разорваны, если будут использоваться следующие методы шифрования. Значение по умолчанию: `false`. 
   * `none`
   * `aes-128-cfb`
 
-## Tips
+## Замечания
 
 * Всегда используйте метод шифрования ` "auto" ` для обеспечения безопасности и совместимости.
-* VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. 
+* VMess зависит от системного времени. Убедитесь, что ваше системное время синхронизировано с временем UTC. Часовой пояс не имеет значения. 
   * Можно установить ` ntp ` службы на Linux для автоматической синхронизации системного времени.
-* You may choose the value of `alterId` at your interest. For daily usage, a value less than `100` is usually enough.
+* Вы можете выбрать значение `alterId` по желанию. Для ежедневного использования, значения меньше `100`, как правило, достаточно.

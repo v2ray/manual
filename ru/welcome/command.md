@@ -2,7 +2,7 @@
 refcn: chapter_00/command
 refen: welcome/command
 ---
-# Commandline
+# Командная строка
 
 ## V2Ray
 
@@ -12,15 +12,15 @@ V2Ray имеет следующие параметры командной стр
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
-Where:
+Где:
 
 * `-version`: Вывести версию V2Ray, затем завершить работу.
 * `-test`: Считать и проверить настройки, вывести найденные ошибки, затем завершить работу.
-* `-config`: URI of the configuration. Avilable formats are: 
+* `-config`: URI файла с настройками. Возможные варианты: 
   * Path to the local config file. May be a relative path or absolute path.
   * `"stdin:"`: Indicates V2Ray to read configuration from standard input. Caller must close stdin after writing out configuration.
   * Value begins with `http://` or `https://` (lowercase): V2Ray tries to load configuration from the remote address.
-* `-format`: Configuration format. Choices are: 
+* `-format`: Формат файла с настройками. Возможные варианты: 
   * `json`: формат JSON.
   * `pb` или `protobuf`: формат Protobuf.
 
@@ -28,33 +28,33 @@ Where:
 
 ## V2Ctl
 
-V2Ctl has the following commandline parameters:
+V2Ctl имеет следующие параметры командной строки:
 
 ```shell
 v2ctl <command> <options>
 ```
 
-Available commands are listed below. Each command has its own options.
+Ниже перечислены доступные команды. Каждая команда имеет свои собственные параметры.
 
 ### Verify
 
 `v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
 
-To verify the signature of a V2Ray binary.
+Проверка подписи бинарного файла V2Ray.
 
-Options:
+Опциональные параметры:
 
-* `sig`：Path to signature file. Default value is the ".sig" file to the path to be verified.
+* `sig`：Путь к файлу с подписью. Значение по умолчанию - ".sig"-файл в проверяемом пути.
 * Первый аргумент: файл для проверки.
 
 ### Config
 
 `v2ctl config`
 
-No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
+Нет параметров. Эта команда считывает конфигурацию в формате JSON из потока stdin, а выводит её в формате Protobuf в stdout.
 
 ### UUID
 
 `v2ctl uuid`
 
-No options. This command prints a random UUID.
+Нет параметров. Эта команда выводит случайный UUID.

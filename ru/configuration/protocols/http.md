@@ -4,11 +4,11 @@ refen: configuration/protocols/http
 ---
 # HTTP
 
-HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
+HTTP - это протокол для входящих соединений. Он совместим с HTTP 1.1.
 
 * Название: http
-* Type: Inbound
-* Configuration:
+* Тип: входящий
+* Конфигурация:
 
 ```javascript
 {
@@ -23,14 +23,14 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 }
 ```
 
-Where:
+Где:
 
-* `accounts`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
+* `accounts`: Массив, в котором каждая запись является учетной записью. Имя пользователя указывается через `user`, а пароль через `pass`. Значения по умолчанию пустые. 
   * Если значение `accounts` не пустое, HTTP использует базовую аутентификацию для подтверждения пользователя.
 * ` allowTransparent `: Если установлено значение ` true `, все полученные HTTP-запросы, будут проксированы, включая запрос без прокси.
-* `userLevel`: User level. All connections share this level.
+* `userLevel`: Пользовательский уровень. Все подключения проходят через этот уровень.
 
-## Tips
+## Подсказки
 
 Используйте следующие настройки в Linux для использования прокси-сервера HTTP в текущем сеансе.
 

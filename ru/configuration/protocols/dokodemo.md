@@ -12,7 +12,7 @@ Dokodemo-door также может работать (если настроен)
 
 * Название: dokodemo-door
 * Тип: входящий
-* Configuration:
+* Конфигурация:
 
 ```javascript
 {
@@ -24,7 +24,7 @@ Dokodemo-door также может работать (если настроен)
 }
 ```
 
-Where:
+Где:
 
 * `address`: Адрес определенного сервера. Строка, значением которой может быть IPv4, IPv6 или доменное имя. 
   * если `followRedirect` (см. ниже) `true`, `address` может быть пустым.
@@ -48,17 +48,18 @@ Where:
 Настройте iptables, как показано ниже.
 
 ```bash
-# Create new chain
+# Создаём новую цепь
 iptables -t nat -N V2RAY
 iptables -t mangle -N V2RAY
 iptables -t mangle -N V2RAY_MARK
 
-# Ignore your V2Ray server's addresses
-# It's very IMPORTANT, just be careful.
+# Игнорируем адреса серверов V2Ray
+# Это ОЧЕНЬ ВАЖНО, будьте внимательны.
 iptables -t nat -A V2RAY -d 123.123.123.123 -j RETURN
 
-# Ignore LANs and any other addresses you'd like to bypass the proxy
-# See Wikipedia and RFC5735 for full list of reserved networks.
+# Игнорируем адреса локальной сети и любые другие адреса,
+# которые не требуется пропускать через прокси-сервер
+# См. Википедию и RFC5735 для полного списка зарезервированных сетей.
 iptables -t nat -A V2RAY -d 0.0.0.0/8 -j RETURN
 iptables -t nat -A V2RAY -d 10.0.0.0/8 -j RETURN
 iptables -t nat -A V2RAY -d 127.0.0.0/8 -j RETURN
@@ -68,16 +69,16 @@ iptables -t nat -A V2RAY -d 192.168.0.0/16 -j RETURN
 iptables -t nat -A V2RAY -d 224.0.0.0/4 -j RETURN
 iptables -t nat -A V2RAY -d 240.0.0.0/4 -j RETURN
 
-# Anything else should be redirected to Dokodemo-door's local port
+# Всё остальное перенаправляем на локальный порт Dokodemo-door
 iptables -t nat -A V2RAY -p tcp -j REDIRECT --to-ports 12345
 
-# Add any UDP rules
+# Добавляем правила для UDP
 ip route add local default dev lo table 100
 ip rule add fwmark 1 lookup 100
 iptables -t mangle -A V2RAY -p udp --dport 53 -j TPROXY --on-port 12345 --tproxy-mark 0x01/0x01
 iptables -t mangle -A V2RAY_MARK -p udp --dport 53 -j MARK --set-mark 1
 
-# Apply the rules
+# Применяем правила
 iptables -t nat -A OUTPUT -p tcp -j V2RAY
 iptables -t mangle -A PREROUTING -j V2RAY
 iptables -t mangle -A OUTPUT -j V2RAY_MARK

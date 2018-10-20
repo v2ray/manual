@@ -4,7 +4,7 @@ refen: welcome/donate
 ---
 # Пожертвование
 
-Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
+Project V - некоммерческий проект. Исходный код и программа могут свободно использоваться по лицензии MIT. Если вам нравится этот проект, купите нам чашку кофе.
 
 * Отчёт о расходах публиковаться не будет.
 * Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V.
@@ -16,11 +16,11 @@ Project V is a nonprofit project. The source code and program can be used freely
 * [PayPal: перевод](https://www.paypal.me/ProjectV2Ray/25)
 * [PayPal: кредитной картой](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 * [Patreon](https://www.patreon.com/v2ray)
-* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Send to `love@v2ray.com`.
+* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Отправляйте на `love@v2ray.com`.
 
-{% hint style='danger' %} Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee. {% endhint %}
+{% hint style='danger' %} С надеждой на понимание предупреждаем, что переводы меньше одного доллара не имеют смысла из-за большой комиссии PayPal. {% endhint %}
 
-## Cryptocurrency {#crypto}
+## Криптовалюта {#crypto}
 
 * Bitcoin: `15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW`
 * Bitcoin Case: `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
@@ -30,7 +30,7 @@ Project V is a nonprofit project. The source code and program can be used freely
 * Litecoin: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
 * Monero: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
 * Ripple: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
-  * Tag not required
+  * Тэг не обязателен
 
 {% hint style='tip' %} [This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies. {% endhint %}
 

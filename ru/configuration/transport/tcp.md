@@ -4,7 +4,7 @@ refen: configuration/transport/tcp
 ---
 # Доставка через TCP
 
-Configuration:
+Конфигурация:
 
 ```javascript
 {
@@ -14,12 +14,12 @@ Configuration:
 }
 ```
 
-Where:
+Где:
 
 * `header`: Настройки обфускации заголовка: 
-  * `type`: Type of obfuscation. Choices are: 
-    * `"none"`: Default. No obfuscation at all.
-    * `"http"`: HTTP obfuscation. See below.
+  * `type`: Тип маскировки. Возможные варианты: 
+    * `"none"`: Значение по умолчанию. Без обфускации.
+    * `"http"`: HTTP обфускация. Смотри ниже.
 
 ## Обфускация HTTP
 
@@ -57,16 +57,16 @@ Where:
 }
 ```
 
-Where:
+Где:
 
 * `type`: тот же `type` что и в `tcpSettings`.
 * `request`: Настройки HTTP-запроса: 
   * `version`: Версия HTTP, по умолчанию `"1.1"`
   * `method`: Метод HTTP, по умолчанию `"GET"`
-  * `path`: Path. A string array. Default value is `["/"]`. When there are multiple values, value is picked up randomly for each request.
+  * `path`: Путь. Массив строк. Значение по умолчанию `["/"]`. Если включает несколько элементов, значение выбирается случайным образом для каждого запроса.
   * `headers`: Заголовки HTTP. Ассоциативный массив, пары ключ-значение. Каждый ключ - заголовок HTTP, а каждое значение - содержимое HTTP заголовка. Если задано несколько элементов, конечные заголовки выбираются случайным образом для каждого запроса. Параметры по умолчанию - в примере выше.
 * `response`: Ответ HTTP. 
-  * `version`: HTTP version. Default value is `"1.1"`.
-  * `status`: HTTP status. Default value is `"200"`.
-  * `reason`: HTTP status text. Default value is `"OK"`.
-  * `headers`: HTTP header. Same as request headers, but for response.
+  * `version`: Версия HTTP, по умолчанию `"1.1"`.
+  * `status`: Статус HTTP. По умолчанию `"200"`.
+  * `reason`: Текст статуса HTTP. По умолчанию `"OK"`.
+  * `headers`: Заголовки HTTP. То же, что и заголовки для запросов, только для ответов.

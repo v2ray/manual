@@ -8,19 +8,19 @@ refen: ui_client/osx
 
 * Загрузить: [GitHub](https://github.com/Cenmrev/V2RayX)
 
-## Other tools {#other}
+## Другие инструменты {#other}
 
 ### Visual Studio Code
 
-Source code editor from Microsoft.
+Редактор исходного кода от Microsoft.
 
-* Website: [code.visualstudio.com](https://code.visualstudio.com/)
+* Веб-сайт: [code.visualstudio.com](https://code.visualstudio.com/)
 
 ### Telegram
 
-Encrypted discussion.
+Зашифрованное общение.
 
-* Website: [telegram.org](https://telegram.org/)
+* Веб-сайт: [telegram.org](https://telegram.org/)
 * Загрузить: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
 
 ### Клиент подключения к удаленному рабочему столу от Microsoft

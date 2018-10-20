@@ -4,9 +4,9 @@ refen: configuration/api
 ---
 # API
 
-V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
+V2Ray предоставляет API для удаленного доступа. Эти API основаны на [gRPC](https://grpc.io/).
 
-When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
+Когда API включено, V2Ray автоматически создает исходящий прокси, помеченный через `tag`. Пользователь должен [маршрутизировать](routing.md) все соединения gRPC в этот прокси.
 
 Настройка:
 
@@ -30,7 +30,7 @@ When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `t
 
 ### HandlerService
 
-API for manipulating inbound and outbound proxies. The following functionalities are provided:
+API для управления входящими и исходящими прокси. Доступны следующие функции:
 
 * Добавление нового входящего/исходящего прокси.
 * Удаление существующего входящего/исходящего прокси.
@@ -39,7 +39,7 @@ API for manipulating inbound and outbound proxies. The following functionalities
 
 ### LoggerService
 
-To restart internal logger. Can work with logrotate for operating log files.
+Перезапуск внутреннего логгера. Может работать с logrotate для оперирования файлами журнала.
 
 ### StatsService
 
