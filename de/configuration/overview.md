@@ -24,7 +24,7 @@ Below is the top level structure of the configuration. Each section has its own 
 }
 ```
 
-Where:
+Wo:
 
 * `log`: log configuration. See below for detail.
 * `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
@@ -48,7 +48,7 @@ Where:
 }
 ```
 
-Where:
+Wo:
 
 * `Zugriff`: Pfad des Zugriffsprotokolls, verfügbare Beispiele sind: 
   * Ein gültiger Dateipfad, z. B. `"/tmp/v2ray/_access.log"`(Linux) oder `"C: \ Temp \ v2ray \ _access.log"`(Windows);
@@ -88,7 +88,7 @@ Master inbound interface is used to receive data from clients, browsers, or othe
 }
 ```
 
-Where:
+Wo:
 
 * `port`: listening port.
 * `port`: port to be listen from. Accepted formats are: 
@@ -127,7 +127,7 @@ Master outbound interface is used to send data to remote servers or next proxy s
 }
 ```
 
-Where:
+Wo:
 
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
@@ -163,7 +163,7 @@ This section is an array contains multiple extra inbound interfaces' configurati
 }
 ```
 
-Where:
+Wo:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `port`: port to be listen from. Accepted formats are: 
@@ -205,7 +205,7 @@ This section is an array contains multiple extra outbound interfaces' configurat
 }
 ```
 
-Where:
+Wo:
 
 * `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
