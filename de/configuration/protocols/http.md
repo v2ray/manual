@@ -8,13 +8,13 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 
 * Name: http
 * Type: Inbound
-* Configuration:
+* Konfiguration:
 
 ```javascript
 {"accounts": [{"user": "mein-Benutzername", "pass": "mein-Passwort"}], "allowTransparent": false, "userLevel": 0}
 ```
 
-Where:
+Wo:
 
 * `Konten`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
   * Wenn `Konten` nicht leer ist, verwendet HTTP die Standardauthentifizierung für die Benutzerüberprüfung.
