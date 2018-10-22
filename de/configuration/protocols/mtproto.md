@@ -25,7 +25,7 @@ Protocol description:
 }
 ```
 
-Where:
+Wo:
 
 * `users`: An array of users. **For now only the first user is effective**. Each user has the following configuration: 
   * `email`: User email. Used for tracking purposes. See [Stats](../stats.md).
