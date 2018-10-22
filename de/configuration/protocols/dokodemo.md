@@ -4,7 +4,7 @@ refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
 
 * * *
 
-# Dokodemo-door
+# Dokodemo-Door
 
 Dokodemo-door is a protocol for inbound connections. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
 
@@ -12,7 +12,7 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 
 * Name: dokodemo-door
 * Typ: Eingehend
-* Configuration:
+* Konfiguration:
 
 ```javascript
 {
@@ -24,7 +24,7 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 }
 ```
 
-Where:
+Wo:
 
 * `address`: Adresse des Zielservers. Kann eine IPv4-, IPv6- oder eine Domäne in Zeichenfolgenform sein. 
   * Wenn `followRedirect` (siehe unten) ist `wahr`, `Adresse` kann leer sein.

@@ -6,7 +6,7 @@ refen: configuration/routing
 
 V2Ray verfügt über einen internen Routing-Mechanismus. Es leitet eingehende Verbindungen basierend auf Regeln an verschiedene ausgehende Verbindungen weiter. Ein häufiges Szenario ist die Aufteilung des Datenverkehrs nach Ländern. V2Ray kann das Zielland (nach Geo-IP) einer Verbindung erkennen und sendet dann eine Verbindung zum entsprechenden ausgehenden Proxy.
 
-Configuration:
+Konfiguration:
 
 ```javascript
 {
@@ -27,7 +27,7 @@ Configuration:
 }
 ```
 
-Where:
+Wo:
 
 * `strategy`: Der einzige gültige Wert für jetzt ist `"rules"`.
 * `domainStrategy`: Domain resolution strategy. Choices are: 
@@ -71,7 +71,7 @@ Konfiguration für jede Regel:
 }
 ```
 
-Where:
+Wo:
 
 * `type`: Der einzige gültige Wert für jetzt ist `"field"`.
 * `domain`: An array of domains. There are four formats: 

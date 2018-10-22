@@ -6,13 +6,13 @@ refen: configuration/mux
 
 Multiplexing, oder Mux, verwendet eine physische TCP-Verbindung für mehrere virtuelle TCP-Verbindungen. Weitere Details zur Implementierung finden Sie unter [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html).
 
-Configuration:
+Konfiguration:
 
 ```javascript
 {"aktiviert": false, "Nebenläufigkeit": 8}
 ```
 
-Where:
+Wo:
 
 * `enabled`: Ob Mux aktiv ist oder nicht
 * `Nebenläufigkeit`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 

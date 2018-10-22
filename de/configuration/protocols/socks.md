@@ -27,7 +27,7 @@ Socks ist eine Implementierung des Standard-SOCKS-Protokolls, kompatibel mit [So
 }
 ```
 
-Where:
+Wo:
 
 * `servers`: Socks Server Liste, in der jeder Eintrag hat: 
   * `address`: Serveradresse
@@ -35,7 +35,7 @@ Where:
   * `users`: Liste der Benutzerkonten: 
     * `user`: Benutzername
     * `pass`: Passwort
-    * `level`: User level.
+    * `level`: Benutzerebene.
 
 Notice:
 
@@ -59,7 +59,7 @@ Notice:
 }
 ```
 
-Where:
+Wo:
 
 * `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
   * `"noauth"`: Anonym.

@@ -123,7 +123,7 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
   * `allowInsecure`: If `true`, V2Ray allowss insecure connection at TLS client.
   * `allowInsecureCiphers` (V2Ray 3.24+): Whehter or not to allow insecure cipher suites. By default TLS only uses cipher suites from TLS 1.3 spec. Turn on this option to allow cipher suites with static RSA keys.
   * `certificates`: List of TLS certificates. Each entry is one certificate. 
-    * `usage` (V2Ray 3.17+): Purpose of the certificate. Default value `"encipherment"`. Choices are: 
+    * `использование` (V2Ray 3.17+): Purpose of the certificate. Default value `"encipherment"`. Возможные варианты: 
       * `"encipherment"`: Certificate is used for TLS authentication and encryption.
       * `"verify"`: Certificate is used for validating TLS certificates from remote peer. In this case, the certificate has to be a CA certificate. For now, Windows is not supported.
       * `"issue"`: Certificate is used for issuing other certificates. In this case, the certificate has to be a CA certificate.

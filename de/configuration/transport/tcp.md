@@ -4,13 +4,13 @@ refen: configuration/transport/tcp
 ---
 # TCP-Transport
 
-Configuration:
+Konfiguration:
 
 ```javascript
 {"Kopfzeile": {"Typ": "keine"}}
 ```
 
-Where:
+Wo:
 
 * `header`: Kopfzeilenverschleierung Einstellungen: 
   * `type`: Type of obfuscation. Choices are: 
@@ -25,7 +25,7 @@ Die HTTP-Verschleierung muss für die eingehenden und ausgehenden verbindenden P
 {"Typ": "http", "Anfrage": {"Version": "1.1", "Methode": "GET", "Pfad": ["/"], "Kopfzeilen": {"Host": [ "www.baidu.com", "www.bing.com", "User-Agent": ["Mozilla / 5.0 (Windows NT 10.0; WOW64)" AppleWebKit / 537.36 (KHTML, wie Gecko) Chrome / 53.0.2785.143 Safari /537.36 "," Mozilla / 5.0 (iPhone; CPU iPhone OS 10_0_2 wie Mac OS X) AppleWebKit / 601.1 (KHTML, wie Gecko) CriOS / 53.0.2785.109 Mobil / 14A456 Safari / 601.1.46 "]," Accept-Encoding " : ["gzip, deflate"], "Verbindung": ["keep-alive"], "Pragma": "no-cache"}}, "Antwort": {"version": "1.1", "status": "200", "Grund": "OK", "Kopfzeilen": {"Content-Type": ["application / octet-stream", "video / mpeg"], "Transfer-Encoding": ["chunked"] , "Verbindung": ["keep-alive"], "Pragma": "no-cache"}}}
 ```
 
-Where:
+Wo:
 
 * `Typ`: gleich `Typ` Eintrag wie in `tcpSettings`.
 * `anfordern`: HTTP-Anfrageeinstellungen: 

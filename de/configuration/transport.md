@@ -22,7 +22,7 @@ Global settings is in the "transport" entry of V2Ray config.
 }
 ```
 
-Where:
+Wo:
 
 * `tcpSettings`: Settings for [TCP transport](transport/tcp.md).
 * `kcpSettings`: Settings for [mKCP transport](transport/mkcp.md).
@@ -113,7 +113,7 @@ Each inbound and outbound proxy may has its own transport settings. Each inbound
 }
 ```
 
-Where:
+Wo:
 
 * `network`: Netzwerktyp des Stream-Transports. Choices are `"tcp"`, `"kcp"`, `"ws"`, `"http"`, or `"domainsocket"`. Standardwert `"tcp"`.
 * `security`: Art der Sicherheit. Die Auswahlmöglichkeiten sind `"none"` (Standard) für keine zusätzliche Sicherheit oder `"TLS"` für die Verwendung von [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).

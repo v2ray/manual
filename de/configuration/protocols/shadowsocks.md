@@ -42,7 +42,7 @@ Info:
 }
 ```
 
-Where:
+Wo:
 
 * `email`: Email address. Used for user identification.
 * `Methode`: Encryption method. No default value. Options are: 
@@ -68,7 +68,7 @@ Where:
 {"Server": [{"email": "love@v2ray.com", "Adresse": "127.0.0.1", "Port": 1234, "Methode": "Methode", "Passwort": "Passwort" , "ota": falsch, "level": 0}]}
 ```
 
-Where:
+Wo:
 
 * `email`: Email address. Used for user identification.
 * `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
@@ -84,4 +84,4 @@ Where:
 * `password`: Password. Can be any string.
 * `ota`: Ob OTA verwendet werden soll oder nicht. 
   * When AEAD is used, `ota` has no effect.
-* `level`: User level.
+* `level`: Benutzerebene.

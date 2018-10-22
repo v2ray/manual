@@ -12,7 +12,7 @@ V2Ray has the following commandline parameters:
 v2ray [-version] [-test] [-config = Konfiguration.json] [-format = json]
 ```
 
-Where:
+Wo:
 
 * `Version`: Nur die Version von V2Ray drucken und dann beenden.
 * `-test`: Konfiguration testen, Fehler ausgeben und dann beenden.

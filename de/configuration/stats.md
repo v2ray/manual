@@ -6,7 +6,7 @@ refen: configuration/stats
 
 V2Ray bietet einige Informationen über seine Interna.
 
-Configuration:
+Konfiguration:
 
 ```javascript
 {
