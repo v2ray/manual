@@ -30,11 +30,11 @@ refen: configuration/protocols/vmess
 }
 ```
 
-Where:
+Wo:
 
 * `vnext`: Ein Array, bei dem jeder Eintrag ein Remote-Server ist 
   * `Adresse`: Serveradresse, möglicherweise IPv4, IPv6 oder Domänenname.
-  * `port`: Server port
+  * `port`: Server-Port
   * `users`: Ein Array, bei dem jeder Eintrag ein VMess-Benutzer ist 
     * `id`: Benutzer-ID in Form einer [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
     * `alterId`: Anzahl der alternativen IDs. Die alternativen IDs werden deterministisch generiert. Standard auf 0. Maximal 65535. Recommend 16. Its value must be not larger than the one in corresponding Inbound.
@@ -43,7 +43,7 @@ Where:
       * `"aes-128-gcm"`: Recommended for PC.
       * `"chacha20-poly1305"`: Recommended for mobile.
       * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
-      * `"none"`: Traffic is not encrypted at all.
+      * `"none"`: Der Verkehr ist überhaupt nicht verschlüsselt.
 
 ## Inbound Proxy Configuration
 
@@ -68,7 +68,7 @@ Where:
 }
 ```
 
-Where:
+Wo:
 
 * `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
   * Jeder Client enthält: 
@@ -79,7 +79,7 @@ Where:
 * `detour`: Option, um dem Kunden einen Umweg zu empfehlen. 
   * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
 * `default`: Optional default client configuration. Usually used in detour proxy. 
-  * `level`: User level.
+  * `level`: Benutzerebene.
   * `alterId`: Number of alternative IDs. Default value 64. Recommend 16.
 * `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
   * `none`
