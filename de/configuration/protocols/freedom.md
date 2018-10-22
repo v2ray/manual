@@ -8,7 +8,7 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 
 * Name: Freiheit
 * Type: Outbound
-* Configuration:
+* Konfiguration:
 
 ```javascript
 {
@@ -18,7 +18,7 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 }
 ```
 
-Where:
+Wo:
 
 * `domainStrategy`: Strategy for domain name resolution. Options are: 
   * `"AsIs"`: Default. Resolve domain name by system.
