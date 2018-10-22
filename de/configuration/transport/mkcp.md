@@ -6,13 +6,13 @@ refen: configuration/transport/mkcp
 
 mKCP is a reliable stream transport. It is an UDP based protocol.
 
-Configuration:
+Konfiguration:
 
 ```javascript
 {"mtu": 1350, "tti": 20, "uplinkCapacity": 5, "downlinkCapacity": 20, "congestion": false, "readBufferSize": 1, "writeBufferSize": 1, "header": {"type ": "keiner" } }
 ```
 
-Where:
+Wo:
 
 * `mtu`: Maximum transmission unit. It indicates the maxium number bytes that an UDP packet can carry. Recommended value is between `576` and `1460`. Default value `1350`.
 * `tti`: Transmission time interval, in milli-second. mKCP sends data in this interval. Recommended value is between `10` and `100`. Default value `50`.
