@@ -8,7 +8,7 @@ Domain Socket uses standard Unix domain socket to transport data. Domain socket 
 
 Domain socket can only be used on platforms that supports Unix domain socket, such as macOS and Linux. It is not available on Windows.
 
-Configuration:
+Konfiguration:
 
 ```javascript
 {
@@ -16,7 +16,7 @@ Configuration:
 }
 ```
 
-Where:
+Wo:
 
 * `path`: An valid absolute file path. Before running V2Ray, the file on this path must not exist.
 
