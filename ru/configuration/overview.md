@@ -56,7 +56,7 @@ V2Ray имеет одинаковую структуру (см. ниже) фай
 * `error`: Path of error log, available examples are: 
   * A legal path of file, such as `"/tmp/v2ray/_error.log"`(Linux), or `"C:\\Temp\\v2ray\\_error.log"`(Windows);
   * Leave it empty to discard logs, and content will send out through `stdout`.
-* `loglevel`: Level of log files, available values are`"debug"`、`"info"`、`"warning"`、`"error"`, and`"none"`; 
+* `loglevel`: Level of log files, available values are`"debug"`、`"информация"`、`"warning"`、`"error"`, and`"none"`; 
   * Among all of these levels, `"debug"` leaves the most log, `"error"` leaves the least log.
   * `"none"` would discard all error logs.
   * Default value is `"warning"` if you leave it empty.
