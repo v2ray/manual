@@ -106,3 +106,4 @@ Wo:
   * Wenn Sie Verbindungen über `domain` oder `ip`routen möchten, benötigen Sie wahrscheinlich mehrere Regeln anstelle einer Regel, die sowohl `domain` als auch `ip`.
 * `"ext:geoip.dat:cn"` entspricht `"geoip:cn"`.
 * Among all domain matching modes, subdomain (beginning with "domain:") is recommended.
+* When none of the rules are satisfied, traffic will be sent out through the main outbound proxy.
