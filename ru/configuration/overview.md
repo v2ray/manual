@@ -175,7 +175,7 @@ This section is an array contains multiple extra inbound interfaces' configurati
 * `allocate`: Allocation options: 
   * `strategy`: Allocation strategies, available values are `"always"` and `"random"`. For `"always"` option, all ports will be listening specified by `"port"` settings; for `"random"`, every certain minutes would choose certain ports among the port ranges, configured by `"refresh"`, `"port"`, and `"concurrency"`.
   * `refresh`: The interval refreshing random ports, with unit of minutes. Minimum value is `2`, recommended value is `5`. This setting will only take effect when `strategy = random`.
-  * `concurrency`: Number of random ports. Minimum value is `1`, maximum value is a half of ports' range. Recommended value is `3`.
+  * `concurrency`: Number of random ports. Minimum value is `1`, maximum value is 1/3 of ports' range. Recommended value is `3`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `streamSettings`: see [Protocol Transport Options](transport.md).
 * `domainOverride`: recognize specific protocols' packets and redirects its request targets. 
