@@ -1,16 +1,32 @@
-.book {
+.markdown-section {
   font-family:
       'Noto Sans CJK SC', 'Noto Sans S Chinese',
       'Noto Sans SC', 'source-han-sans-simplified-c',
       'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei';
   font-weight: 400;
-}
-
-.markdown-section {
   font-size: 16px;
 }
 
-.markdown-section code {
+.markdown-section pre>code {
   font-family: "Source Code Pro", Inconsolata, Consolas, "Droid Sans Mono", "Courier New", monospace;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.book-summary {
+  font-family:
+      'Noto Sans CJK SC', 'Noto Sans S Chinese',
+      'Noto Sans SC', 'source-han-sans-simplified-c',
+      'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei';
+  font-size: 16px;
+}
+
+.markdown-section code:not([class]) {
+  border-radius: 2px;
+  white-space: nowrap;
+  color: #5e5e5e;
+  background: #FFF7DD;
+  border: 1px solid #fbf0cb;
+  padding: 0px 2px;
+  font-size: 16px;
 }

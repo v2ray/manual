@@ -1,11 +1,20 @@
+---
+refcn: chapter_02/01_overview
+refen: configuration/overview
+---
+
 # Configuration Overview
 
 V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
 
+Below is the top level structure of the configuration. Each section has its own format.
+
 ```javascript
 {
   "log": {},
+  "api": {},
   "dns": {},
+  "stats": {},
   "routing": {},
   "policy": {},
   "inbound": {},
@@ -18,16 +27,19 @@ V2Ray shares a same structure of configuration between server side and client si
 
 Where:
 
-* `log`: log configuration;
-* `dns`: DNS configuration;
-* `routing`: routing configuration;
-* `inbound`: master inbound interface configuration;
-* `outbound`: master outbound interface configuration;
-* `inboundDetour`: extra inbound interfaces configurations;
-* `outboundDetour`: extra outbound interfaces configurations;
-* `transport`: low-level transport protocol's configurations.
+* `log`: log configuration. See below for detail.
+* `api`: RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
+* `dns`: Internal DNS server's configurations, if this section is omitted or empty, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](dns.md).
+* `stats`: When specified, internal [Statistics](stats.md) is enabled.
+* `policy`: Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
+* `routing`: [Routing configuration](routing.md).
+* `inbound`: master inbound interface configuration.
+* `outbound`: master outbound interface configuration.
+* `inboundDetour`: extra inbound interfaces configurations.
+* `outboundDetour`: extra outbound interfaces configurations.
+* `transport`: low-level transport protocol's configurations. For details, see [Protocol Transport Options](transport.md).
 
-## Log configuration（log）
+## Log configuration {#log}
 
 ```javascript
 {
@@ -50,52 +62,16 @@ Where:
   * `"none"` would discard all error logs.
   * Default value is `"warning"` if you leave it empty.
 
-## DNS Configurations (dns)
+Log levels:
 
-Internal DNS server's configurations, if this section is omitted or empty, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](04_dns.md)
+* `debug`: Information for developers only.
+* `info`: Information for current state of V2Ray. Users don't have to take care of those.
+* `warning`: Something wrong with the environment, usually outside of V2Ray, e.g., network breakage. V2Ray still runs, but users may experience some breakages.
+* `error`: Something severely wrong, that V2Ray can't run at all.
 
-## Routing Configurations（routing）
+## Master Inbound Interface Configurations {#inbound}
 
-```javascript
-{
-  "strategy": "rules",
-  "settings": {
-    "rules": [
-      {
-        "type": "field",
-        "domain": [
-          "baidu.com",
-          "qq.com"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "ip": "0.0.0.0/8",
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "network": "udp",
-        "outboundTag": "blocked"
-      }
-    ]
-  }
-}
-```
-
-Where:
-
-* `strategy`: routing strategy, currently the only valid value is `"rules".
-* `settings`: For specific configurations, see [Routing Configurations](03_routing.md)；
-
-## Local Policy {#policy}
-
-Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
-
-## Master Inbound Interface Configurations (inbound)
-
-Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](02_protocols.md).
+Master inbound interface is used to receive data from clients, browsers, or other parent proxy servers, available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
@@ -105,25 +81,38 @@ Master inbound interface is used to receive data from clients, browsers, or othe
   "settings": {},
   "streamSettings": {},
   "tag": "inbound_tag_name",
-  "domainOverride": ["http", "tls"]
+  "domainOverride": ["http", "tls"],
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
+  }
 }
 ```
 
 Where:
 
 * `port`: listening port.
+* `port`: port to be listen from. Accepted formats are:
+  * Integer: actual port number.
+  * Env variable (V2Ray 3.23+): Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
+  * String (V2Ray 3.23+): A numberic string value, such as `"1234"`.
 * `listen`: listening IP address, default value is `"0.0.0.0"`.
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
-* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
 * `domainOverride`: recognize specific protocols' packets and redirects its request targets.
   * Accepts an array of strings, default value is empty.
   * Available values are `"http"` and `"tls"`.
+  * (V2Ray 3.32+) Deprecated. Use `sniffing`. When `domainOverride` is set but `sniffing` is not set, V2Ray will enable `sniffing` anyway.
+* `sniffing` (V2Ray 3.32+): Try to sniff current connection.
+  * `enabled`: Whether or not to enable sniffing.
+  * `destOverride`: When current connection uses a protocol specified in the list, override its destination by sniff'ed destination.
+    * Available values are `"http"` and `"tls"`.
 
-## Master Outbound Interface Configurations (outbound)
+## Master Outbound Interface Configurations {#outbound}
 
-Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](02_protocols.md).
+Master outbound interface is used to send data to remote servers or next proxy server. Available protocols are listed at [Protocols](protocols.md).
 
 ```javascript
 {
@@ -142,15 +131,15 @@ Master outbound interface is used to send data to remote servers or next proxy s
 Where:
 
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
 * `tag`: This outbound interface's tag, which should be unique among all inbound/outbound interfaces.
-* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
   * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
 * `mux`: [Mux Configurations](mux.md).
 
-## Extra Inbound Interfaces Configurations (inbound detour)
+## Extra Inbound Interfaces Configurations {#inbound-detour}
 
 This section is an array contains multiple extra inbound interfaces' configurations, each are using the structure like below:
 
@@ -167,27 +156,39 @@ This section is an array contains multiple extra inbound interfaces' configurati
   },
   "settings": {},
   "streamSettings": {},
-  "domainOverride": ["http", "tls"]
+  "domainOverride": ["http", "tls"],
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
+  }
 }
 ```
 
 Where:
 
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
-* `port`: port number, could be a single number or range specified by a string, for example:`"5-10"` stands for port number 5 to 10.
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
+* `port`: port to be listen from. Accepted formats are:
+  * Integer: actual port number.
+  * Env variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
+  * String: Either a numberic string value, such as `"1234"`, or a port range like `"5-10"` which stands for port number 5 to 10.
 * `tag`: This inbound interface's tag, which should be unique among all inbound/outbound interfaces.
 * `listen`: listening IP address, default value is `"0.0.0.0"`.
 * `allocate`: Allocation options:
   * `strategy`: Allocation strategies, available values are `"always"` and `"random"`. For `"always"` option, all ports will be listening specified by `"port"` settings; for `"random"`, every certain minutes would choose certain ports among the port ranges, configured by `"refresh"`, `"port"`, and `"concurrency"`.
   * `refresh`: The interval refreshing random ports, with unit of minutes. Minimum value is `2`, recommended value is `5`. This setting will only take effect when `strategy = random`.
-  * `concurrency`: Number of random ports. Minimum value is `1`, maximum value is a half of ports' range. Recommended value is `3`.
+  * `concurrency`: Number of random ports. Minimum value is `1`, maximum value is 1/3 of ports' range. Recommended value is `3`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
-* `streamSettings`: see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: see [Protocol Transport Options](transport.md).
 * `domainOverride`: recognize specific protocols' packets and redirects its request targets.
   * Accepts an array of strings, default value is empty.
   * Available values are `"http"` and `"tls"`.
+  * (V2Ray 3.32+) Deprecated. Use `sniffing`. When `domainOverride` is set but `sniffing` is not set, V2Ray will enable `sniffing` anyway.
+* `sniffing` (V2Ray 3.32+): Try to sniff current connection.
+  * `enabled`: Whether or not to enable sniffing.
+  * `destOverride`: When current connection uses a protocol specified in the list, override its destination by sniff'ed destination.
+    * Available values are `"http"` and `"tls"`.
 
-### Extra Outbound Interfaces Configurations (outbound detour)
+### Extra Outbound Interfaces Configurations {#outbound-detour}
 
 This section is an array contains multiple extra outbound interfaces' configurations, each are using the structure like below:
 
@@ -207,15 +208,11 @@ This section is an array contains multiple extra outbound interfaces' configurat
 
 Where:
 
-* `protocol`: protocol name, all available values are listed at [Protocols](02_protocols.md).
+* `protocol`: protocol name, all available values are listed at [Protocols](protocols.md).
 * `sendThrough`: The network interface (IP) to send data, available when multiple IPs shown, default value is `"0.0.0.0"`.
 * `tag`: Outbound tag name of the current interface, data would be sent via this interface if this outbound is selected in routing configurations or other outbound's `proxySettings`.
 * `settings`: Protocol-specific settings, details are at protocols' detail pages.
-* `streamSettings`: For details, see [Protocol Transport Options](05_transport.md).
+* `streamSettings`: For details, see [Protocol Transport Options](transport.md).
 * `proxySettings`: Proxy for outbound connections. When this is set, `streamSettings` of this outbound will be omitted and disabled.
   * `tag`: When another outbound tag is specified, the data would be send via to the specified outbound.
 * `mux`: [Mux Configurations](mux.md).
-
-## Protocol Transport Options (transport)
-
-Help configure how V2Ray would connect with other servers and how using network connections. For details, see [Protocol Transport Options](05_transport.md).

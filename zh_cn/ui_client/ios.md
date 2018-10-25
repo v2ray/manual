@@ -1,3 +1,8 @@
+---
+refcn: ui_client/ios
+refen: ui_client/ios
+---
+
 # iOS 客户端
 
 ## Kitsunebi
@@ -6,7 +11,13 @@ Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMe
 
 由于使用 V2Ray 核心，Kitsunebi 几乎支持 V2Ray 的所有功能，比如 Mux 和 mKCP。
 
-* 下载：[iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
+* 下载：iTunes (已下架)
+
+## Kitsunebi Lite
+
+精简版的 Kitsunebi
+
+* 下载：[iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
 
 ## Shadowrocket
 
@@ -14,13 +25,17 @@ Shadowrocket 是一个通用的 iOS VPN 应用，它支持众多协议，如 Sha
 
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## ShadowRay
+## Pepi（原名ShadowRay）
 
-ShadowRay 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 连接，并与 V2Ray 服务器通信。
+Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 连接，并与 V2Ray 服务器通信。
 
-* 下载：[iTunes](https://www.v2ray.com/itunes/us/shadowray/id1283082051/)
+* 下载：[iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
 
-## 其它工具
+## Quantumult
+
+* 下载：[iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
+
+## 其它工具 {#others}
 
 ### HyperApp
 
@@ -34,10 +49,18 @@ ShadowRay 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的
 SSH 客户端，可以直接在 iPhone 或 iPad 上操作 VPS。
 
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
+* 官网：[termius.com](https://www.termius.com)
 
 ### Telegram
 
 加密聊天神器。
 
-* 官网：[telegram.org](https://telegram.org/)
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
+* 官网：[telegram.org](https://telegram.org/)
+
+### ProtonMail
+
+加密邮件
+
+* 下载: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)
+* 官网: [protonmail.com](https://protonmail.com/)

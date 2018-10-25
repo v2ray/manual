@@ -1,6 +1,9 @@
-# V2Ray 协议列表
+---
+refcn: chapter_02/02_protocols
+refen: configuration/protocols
+---
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols.html)
+# V2Ray 协议列表
 
 V2Ray 支持以下协议：
 

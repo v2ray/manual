@@ -1,8 +1,11 @@
+---
+refcn: chapter_02/mux
+refen: configuration/mux
+---
+
 # Mux 多路复用
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/mux.html)
-
-Mux 功能是在一条 TCP 连接上分发多个 TCP 连接的数据。实现细节详见[Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html)
+Mux 功能是在一条 TCP 连接上分发多个 TCP 连接的数据。实现细节详见[Mux.Cool](../developer/protocols/muxcool.md)
 
 配置：
 
@@ -19,10 +22,8 @@ Mux 功能是在一条 TCP 连接上分发多个 TCP 连接的数据。实现细
 * concurrency: 最大并发连接数。最小值`1`，最大值`1024`，默认值`8`。
   * 没有特殊需求一般不需要修改这个数值。
 
-** Mux 目前处于测试阶段，期间请保持客户端服务器版本一致以达到最稳定的效果。**
+## 小贴士 {#tip}
 
-Mux 只需要在客户端启用，服务器端自动适配。
-
-一些暂时不能调整的参数：
-
+* Mux 只需要在客户端启用，服务器端自动适配。
 * 一条 TCP 连接最多传输 128 条连接之后关闭；
+* Mux 是为了减少 TCP 的握手延迟而设计，而非提高连接的吞吐量。使用 Mux 看视频、下载或者测速通常都有反效果。

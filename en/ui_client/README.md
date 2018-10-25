@@ -1,6 +1,9 @@
-# Project V Clients
+---
+refcn: ui_client/index
+refen: ui_client/index
+---
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/)
+# Project V Clients
 
 Besides the core V2ray, Project V includes various of GUI clients in many platforms. Please see the following list for your favor.
 

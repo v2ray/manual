@@ -1,37 +1,55 @@
-# 本地策略
+---
+refcn: chapter_02/policy
+refen: configuration/policy
+---
 
-此功能在 V2Ray 3.1 中加入。
+# Local Policy
 
-本地策略可以配置一些用户相关的权限，比如连接超时设置。V2Ray 处理的每一个连接，都对应到一个用户，按照这个用户的等级（level）应用不同的策略。本地策略可按照等级的不同而变化。
+Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-示例配置：
+Configuration:
 
 ```javascript
 {
-    "levels": {
-        "0": {
-            "handshake": 4,
-            "connIdle": 300,
-            "uplinkOnly": 5,
-            "downlinkOnly": 30
-        }
+  "levels": {
+    "0": {
+      "handshake": 4,
+      "connIdle": 300,
+      "uplinkOnly": 2,
+      "downlinkOnly": 5,
+      "statsUserUplink": false,
+      "statsUserDownlink": false
     }
+  },
+  "system": {
+    "statsInboundUplink": false,
+    "statsInboundDownlink": false
+  }
 }
 ```
 
-其中：
+Where:
 
-* `level`: 一组键值对，每个键是一个字符串形式的数字（JSON 的要求），比如 `"0"`、`"1"` 等，双引号不能省略，这个数字对应用户等级。每一个值如下：
-  * `handshake`: 连接建立时的握手时间限制。单位为秒。
-  * `connIdle`: 连接空闲的时间限制。单位为秒。
-  * `uplinkOnly`: 当连接下行线路关闭后的时间限制。单位为秒。
-  * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。
+* `level`: A list of key value pairs. Each key is a string of integer (restricted by JSON), such as `"0"`, `"1"`, etc. The numeric value is for a certain user level. Each value has the following attributes:
+  * `handshake`: Timeout for establishing a connection, in seconds. Default value `4`.
+  * `connIdle`: Timeout for idle connections, in seconds. Default value `300`.
+  * `uplinkOnly`: Time for keeping connections open after the uplink of the connection is closed, in seconds. Default value `2`.
+  * `downlinkOnly`: Time for keeping connections open after the downlink of the connection is closed, in seconds. Default value `5`.
+  * `statsUserUplink`: When set to `true`, V2Ray enables stat counter to uplink traffic for all users in this level.
+  * `statsUserDownlink`: When set to `true`, V2Ray enables stat counter to downlink traffic for all users in this level.
+  * `bufferSize` (V2Ray 3.24+): Size of internal buffer per connection, in kilo-bytes. Default value is `10240`. When it is set to `0`, the internal buffer is disabled.
+* `system` (V2Ray 3.18+): System policy for V2Ray
+  * `statsInboundUplink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all uplink traffic in all inbound proxies.
+  * `statsInboundDownlink` (V2Ray 3.18+): When set to `true`, V2Ray enables stat counter for all downlink traffic in all inbound proxies.
 
-本地策略在连接处理时的具体细节：
+Some details when V2Ray handles connections:
 
-1. 在传入代理处理一个新连接时，在握手阶段（比如 VMess 读取头部数据，判断目标服务器地址），如果使用的时间超过 `handshake` 时间，则中断该连接。
-1. 在传入传出代理处理一个连接时，如果在 `connIdle` 时间内，没有任何数据被传输（包括上行和下行数据），则中断该连接。
-1. 当客户端（如浏览器）关闭上行连接时，传入代理会在等待 `downlinkOnly` 时间后中断连接。
-1. 当服务器（如远端网站）关闭下行连接时，传出代理会在等待 `uplinkOnly` 时间后中断连接。
+1. At the handshake stage of an inbound proxy dealing with a new connection, say VMess reading request header, if it takes longer than `handshake` time, V2Ray aborts the connection.
+1. If there is no data passed through the connection in `connIdle` time, V2Ray aborts the conneciton.
+1. After client (browser) closes the uplink of the connection, V2Ray aborts the connection after `downlinkOnly` time.
+1. After remote (server) closes the downlink of the connection, V2Ray aborts the connection after `uplinkOnly` times.
 
-每个传入传出代理现在都可以设置用户等级，V2Ray 会根据实际的用户等级应用不同的本地策略。
+## Tips {#tips}
+
+* Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.
+* `bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).

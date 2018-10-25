@@ -1,3 +1,8 @@
+---
+refcn: chapter_00/faq
+refen: welcome/faq
+---
+
 # 常见问题
 
 ## 一般问题
@@ -20,6 +25,11 @@
 
 * 重新下载安装包，或者
 * 如果你使用安装脚本进行安装，重新运行安装脚本即可
+
+### V2Ray 闪退
+
+* 如果你使用 Linux 并开启了 systemd，可以使用 `journalctl -u v2ray` 查看 V2Ray 退出时的日志；
+* 一般情况可以手动运行 `v2ray -config=<config-file> -test` 来查看错误信息；
 
 ## V2Ray 错误信息
 

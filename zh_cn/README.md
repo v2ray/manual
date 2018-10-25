@@ -1,6 +1,9 @@
-# Project V
+---
+refcn: index
+refen: index
+---
 
-![Chinese](resources/chinesec.svg) [![English](resources/english.svg)](https://www.v2ray.com/en/)
+# Project V
 
 Project V 包含一系列工具，帮助你打造专属的定制网络体系。
 
@@ -29,10 +32,10 @@ V2Ray 原生支持 Socks、HTTP、Shadowsocks、VMess 等协议。
 
 通过内置的路由功能，V2Ray 可以灵活地实现选择性转发、直连或是阻止部分连接。
 
-## 更新本站点
-
+{% hint style='info' %}
 本站点由 GitBook 生成，托管于 GitHub。如需修改本站的内容，请向[这个 Repo](https://github.com/v2ray/manual) 提交 Pull Request。
+{% endhint %}
 
-## 版权声明
-
-本站点所有内容基于[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/)进行许可。
+{% hint style='info' %}
+本站点所有内容基于[知识共享署名 4.0 国际许可协议](https://creativecommons.org/licenses/by/4.0/deed.zh)进行许可。
+{% endhint %}

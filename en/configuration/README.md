@@ -1,8 +1,13 @@
+---
+refcn: chapter_02/index
+refen: configuration/index
+---
+
 # Configuration
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/)
+V2Ray uses [protobuf](https://developers.google.com/protocol-buffers/)-based configuration. Due the low readability of protobuf format, V2Ray also supports configuration in JSON. Before V2Ray runs, it automatically converts JSON config into protobuf. That being said, other configuration formats may be introduced in the furture.
 
-V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
+Here we introduce the JSON-based configuration.
 
 JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
 
@@ -23,4 +28,4 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 Notice:
 
 1. A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
-1. V2Ray supports comments in JSON, annotated by "//" or "/* */".
+1. V2Ray supports comments in JSON, annotated by "//" or "/\* \*/".

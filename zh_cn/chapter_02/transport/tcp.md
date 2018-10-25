@@ -1,6 +1,9 @@
-# TCP 传输方式
+---
+refcn: chapter_02/transport/tcp
+refen: configuration/transport/tcp
+---
 
-![Chinese](../../resources/chinesec.svg) [![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/tcp.html)
+# TCP 传输方式
 
 配置：
 
@@ -19,7 +22,7 @@
     * `"none"`: 默认值，不进行伪装；
     * `"http"`: 伪装成 HTTP 数据流，具体配置见下。
 
-## HTTP 伪装配置
+## HTTP 伪装配置 {#http-header}
 
 HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。
 
