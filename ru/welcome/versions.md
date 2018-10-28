@@ -4,6 +4,10 @@ refen: welcome/versions
 ---
 # История версий
 
+## 2018.11.02 v4.0
+
+* Reverse proxy.
+
 ## 2018.10.12 v3.47
 
 * Migrate to a new continuous delivery pipeline
