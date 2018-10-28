@@ -22,7 +22,7 @@
     "domain": "test.v2ray.com"
   }],
   "portals": [{
-    "tag": "bridge",
+    "tag": "portal",
     "domain": "test.v2ray.com"
   }]
 }
