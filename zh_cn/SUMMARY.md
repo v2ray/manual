@@ -29,6 +29,7 @@
   * [Mux 配置](chapter_02/mux.md)
   * [API 配置](chapter_02/api.md)
   * [统计信息](chapter_02/stats.md)
+  * [反向代理](chapter_02/reverse.md)
   * [传输配置](chapter_02/05_transport.md)
     * [TCP](chapter_02/transport/tcp.md)
     * [mKCP](chapter_02/transport/mkcp.md)
