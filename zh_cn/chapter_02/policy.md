@@ -29,6 +29,10 @@ refen: configuration/policy
 }
 ```
 
+{% hint style='tip' %}
+在 HTTP 浏览的场景中，可以将`uplinkOnly`和`downlinkOnly`设为`0`，以提高连接关闭的效率。
+{% endhint %}
+
 其中：
 
 * `level`: 一组键值对，每个键是一个字符串形式的数字（JSON 的要求），比如 `"0"`、`"1"` 等，双引号不能省略，这个数字对应用户等级。每一个值如下：
@@ -38,10 +42,10 @@ refen: configuration/policy
   * `downlinkOnly`: 当连接上行线路关闭后的时间限制。单位为秒。默认值为`5`。
   * `statsUserUplink`: 当值为`true`时，开启当前等级的所有用户的上行流量统计。
   * `statsUserDownlink`: 当值为`true`时，开启当前等级的所有用户的下行流量统计。
-  * `bufferSize` (V2Ray 3.24+): 每个连接的内部缓存大小。单位为 kB。默认值为`10240`。当值为`0`时，内部缓存被禁用。
-* `system` (V2Ray 3.18+): V2Ray 系统的策略。
-  * `statsInboundUplink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的上行流量统计。
-  * `statsInboundDownlink` (V2Ray 3.18+): 当值为`true`时，开启所有传入代理的下行流量统计。
+  * `bufferSize`: 每个连接的内部缓存大小。单位为 kB。默认值为`10240`。当值为`0`时，内部缓存被禁用。
+* `system`: V2Ray 系统的策略。
+  * `statsInboundUplink`: 当值为`true`时，开启所有传入代理的上行流量统计。
+  * `statsInboundDownlink`: 当值为`true`时，开启所有传入代理的下行流量统计。
 
 本地策略在连接处理时的具体细节：
 
@@ -50,7 +54,10 @@ refen: configuration/policy
 1. 当客户端（如浏览器）关闭上行连接时，传入代理会在等待 `downlinkOnly` 时间后中断连接。
 1. 当服务器（如远端网站）关闭下行连接时，传出代理会在等待 `uplinkOnly` 时间后中断连接。
 
-## 小贴士 {#tip}
+{% hint style='info' %}
+每个传入传出代理现在都可以设置用户等级，V2Ray 会根据实际的用户等级应用不同的本地策略。
+{% endhint %}
 
-* 每个传入传出代理现在都可以设置用户等级，V2Ray 会根据实际的用户等级应用不同的本地策略。
-* `bufferSize` 选项会覆盖[环境变量](env.md#buffer-size)中`v2ray.ray.buffer.size`的设定。
+{% hint style='info' %}
+`bufferSize` 选项会覆盖[环境变量](env.md#buffer-size)中`v2ray.ray.buffer.size`的设定。
+{% endhint %}
