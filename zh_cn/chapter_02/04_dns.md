@@ -19,16 +19,16 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
     "baidu.com": "127.0.0.1"
   },
   "servers": [
-      {
-        "address": "1.2.3.4",
-        "port": 5353,
-        "domains": [
-          "domain:v2ray.com"
-        ],
-      },
-      "8.8.8.8",
-      "8.8.4.4",
-      "localhost"
+    {
+      "address": "1.2.3.4",
+      "port": 5353,
+      "domains": [
+        "domain:v2ray.com"
+      ],
+    },
+    "8.8.8.8",
+    "8.8.4.4",
+    "localhost"
   ],
   "clientIp": "1.2.3.4"
 }
