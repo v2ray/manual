@@ -30,3 +30,10 @@
   padding: 0px 2px;
   font-size: 16px;
 }
+
+.markdown-section blockquote {
+  margin: 0;
+  margin-bottom: .85em;
+  padding: 0 15px;
+  border-left: 4px solid #64b5f6;
+}
