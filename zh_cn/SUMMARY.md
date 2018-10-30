@@ -48,6 +48,7 @@
   * [开发指引](developer/intro/guide.md)
   * [核心设计](developer/intro/design.md)
   * [配置开发环境](developer/intro/compile.md)
+  * [开发工具](developer/intro/tools.md)
   * 协议细节
     * [VMess 协议](developer/protocols/vmess.md)
     * [mKCP 协议](developer/protocols/mkcp.md)
