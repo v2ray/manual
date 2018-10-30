@@ -41,19 +41,19 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-> **email**: "邮箱地址"
+> **email**: string
 
-可选，用于标识用户
+邮件地址，可选，用于标识用户
 
-> **method**: "加密方式"
+> **method**: string
 
 必填。可选的值见[加密方式列表](#encryption-list)
 
-> **password**: "密码"
+> **password**: string
 
 必填，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 
-> **level**: 0
+> **level**: number
 
 用户等级，默认值为 `0`。详见[本地策略](../policy.md)。
 
@@ -103,23 +103,23 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-> **email**: "邮箱地址"
+> **email**: string
 
-可选，用于标识用户
+邮件地址，可选，用于标识用户
 
-> **address**: IP | 域名
+> **address**: string
 
 Shadowsocks 服务器地址，支持 IPv4、IPv6 和域名。必填。
 
-> **port**: 端口
+> **port**: number
 
 Shadowsocks 服务器端口。必填。
 
-> **method**: "加密方式"
+> **method**: string
 
 必填。可选的值见[加密方式列表](#encryption-list)
 
-> **password**: "密码"
+> **password**: string
 
 必填。任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 
@@ -129,7 +129,7 @@ Shadowsocks 服务器端口。必填。
 
 当使用 AEAD 时，`ota` 设置无效。
 
-> **level**: 0
+> **level**: number
 
 用户等级
 
