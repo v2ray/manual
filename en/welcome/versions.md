@@ -5,6 +5,10 @@ refen: welcome/versions
 
 # Version History
 
+## 2018.11.09 v4.1
+
+* JSON configuration format changes. Old format is still suported.
+
 ## 2018.11.02 v4.0
 
 * Reverse proxy.
