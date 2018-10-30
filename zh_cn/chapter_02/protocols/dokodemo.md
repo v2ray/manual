@@ -23,15 +23,35 @@ Dokodemo door（任意门）是一个入站数据协议，它可以监听一个�
 }
 ```
 
-其中：
+### 配置项
 
-* `address`: 指定服务器的地址，可以是一个 IPv4、IPv6 或者域名，字符串类型。
-  * 当 `followRedirect`（见下文）为 `true` 时，`address` 可为空。
-* `port`: 指定服务器的端口，数值类型。
-* `network`: 指定服务器的网络协议类型，可选值为“tcp”或“udp”。
-* `timeout` (V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略): 入站数据的时间限制（秒），默认值为 300。
-* `followRedirect`: 当值为 `true` 时，dokodemo-door 会识别出由 iptables 转发而来的数据，并转发到相应的目标地址。详见[传输配置](../05_transport.md)中的`tproxy`设置。
-* `userLevel`: 用户等级，所有连接都会使用这个用户等级。
+> **address**: IP 地址 | 域名
+
+将流量转发到此地址。可以是一个 IP 地址，形如`"1.2.3.4"`，或者一个域名，形如`"v2ray.com"`。字符串类型。
+
+当 `followRedirect`（见下文）为 `true` 时，`address` 可为空。
+
+> **port**: 端口
+
+将流量转发到目标地址的指定端口，范围\[1, 65535\]，数值类型。必填参数。
+
+> **network**: "tcp" | "udp" | "tcp,udp"
+
+可接收的网络协议类型。比如当指定为`"tcp"`时，任意门仅会接收 TCP 流量。默认值为`"tcp"`。
+
+> **timeout**: 300
+
+入站数据的时间限制（秒），默认值为 300。
+
+V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略
+
+> **followRedirect**: true | false
+
+当值为`true`时，dokodemo-door 会识别出由 iptables 转发而来的数据，并转发到相应的目标地址。详见[传输配置](../05_transport.md)中的`tproxy`设置。
+
+> **userLevel**: 0
+
+用户等级，所有连接都会使用这个用户等级。
 
 ## 透明代理配置样例 {#example}
 
