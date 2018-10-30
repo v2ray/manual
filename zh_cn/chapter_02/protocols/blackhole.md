@@ -9,7 +9,8 @@ Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的�
 
 * 名称：blackhole
 * 类型：Outbound
-* 配置：
+
+## 示例配置
 
 ```javascript
 {
@@ -19,9 +20,22 @@ Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的�
 }
 ```
 
-其中：
+### 配置项
 
-* `response`: 配置黑洞的响应数据。Blackhole 会在收到待转发数据之后，发送下面的响应数据（如果有的话），然后关闭连接。待转发的数据将被丢弃。
-  * `type`: 数据类型，可选的值有：
-    * `"none"`: 默认值，不返回任何数据直接关闭连接；
-    * `"http"`: 返回一个简单的 HTTP 403 响应；
+> `response`: [Response](#response)
+> 可选，默认为空
+
+配置黑洞的响应数据。Blackhole 会在收到待转发数据之后，发送指定的响应数据，然后关闭连接。待转发的数据将被丢弃。
+
+### Response
+
+```javascript
+{
+  "type": "none"
+}
+```
+
+> `type`: "http" | "none"
+> 可选，默认值为 "none"
+
+当`type`为`"none"`时，Blackhole将直接关闭连接。当`type`为`"http"`时，Blackhole会发回一个简单的 HTTP 403 数据包，然后关闭连接。
