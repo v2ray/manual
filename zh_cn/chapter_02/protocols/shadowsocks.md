@@ -5,7 +5,7 @@ refen: configuration/protocols/shadowsocks
 
 # Shadowsocks
 
-[Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含传入和传出两部分，兼容大部分其它版本的实现。
+[Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含入站和出站两部分，兼容大部分其它版本的实现。
 
 与官方版本的兼容性：
 
@@ -29,7 +29,7 @@ refen: configuration/protocols/shadowsocks
 * 名称：shadowsocks
 * 类型：Inbound / Outbound
 
-## 传入协议配置 {#inbound}
+## 入站协议配置 {#inbound}
 
 ```javascript
 {
@@ -61,7 +61,7 @@ refen: configuration/protocols/shadowsocks
   * 当使用 AEAD 时，`ota` 设置无效
 * `network` (V2Ray 3.16+): 指定服务器的网络协议类型，可选值为`“tcp”`或`“udp”`或`"tcp,udp"`。默认值为`"tcp"`。
 
-## 传出协议配置 {#outbound}
+## 出站协议配置 {#outbound}
 
 ```javascript
 {

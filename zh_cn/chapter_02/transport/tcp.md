@@ -24,7 +24,7 @@ refen: configuration/transport/tcp
 
 ## HTTP 伪装配置 {#http-header}
 
-HTTP 伪装配置必须在对应的传入传出连接上同时配置，且内容必须一致。
+HTTP 伪装配置必须在对应的入站出站连接上同时配置，且内容必须一致。
 
 ```javascript
 {

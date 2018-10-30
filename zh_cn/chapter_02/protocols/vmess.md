@@ -5,12 +5,12 @@ refen: configuration/protocols/vmess
 
 # VMess
 
-[VMess](../../developer/protocols/vmess.md) 是一个加密传输协议，它分为传入和传出两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
+[VMess](../../developer/protocols/vmess.md) 是一个加密传输协议，它分为入站和出站两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
 
 * 名称：vmess
 * 类型：Inbound / Outbound
 
-## 传出协议配置 {#outbound}
+## 出站协议配置 {#outbound}
 
 ```javascript
 {
@@ -46,7 +46,7 @@ refen: configuration/protocols/vmess
       * `"auto"`：默认值，自动选择（运行框架为 AMD64、ARM64 或 s390x 时为aes-128-gcm加密方式，其他情况则为 Chacha20-Poly1305 加密方式）
       * `"none"`：不加密
 
-## 传入协议配置 {#inbound}
+## 入站协议配置 {#inbound}
 
 ```javascript
 {
@@ -75,7 +75,7 @@ refen: configuration/protocols/vmess
   * 其中每一个用户：
     * `id`：VMess 的用户 ID。
     * `level`：用户等级，详见[本地策略](../policy.md)
-    * `alterId`: 与上文传出协议中的含义相同。
+    * `alterId`: 与上文出站协议中的含义相同。
     * `email`: 用户邮箱地址，用于区分不同用户的流量。
 * `detour`: 转向 inboundDetour
   * `to`: 一个 inboundDetour 的 tag，详见[配置文件](../02_protocols.md)

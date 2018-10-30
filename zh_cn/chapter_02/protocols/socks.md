@@ -10,7 +10,7 @@ refen: configuration/protocols/socks
 * 名称：socks
 * 类型：Inbound / Outbound
 
-## 传出协议配置 {#outbound}
+## 出站协议配置 {#outbound}
 
 ```javascript
 {
@@ -43,7 +43,7 @@ refen: configuration/protocols/socks
 * 当一个服务器指定了用户时，Socks 客户端会使用此用户信息进行认证；如未指定，则不进行认证。
 * 仅支持连接到 Socks 5 服务器。
 
-## 传入协议配置 {#inbound}
+## 入站协议配置 {#inbound}
 
 ```javascript
 {
