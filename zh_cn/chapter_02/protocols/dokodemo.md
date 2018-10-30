@@ -5,11 +5,13 @@ refen: configuration/protocols/dokodemo
 
 # Dokodemo-door
 
-Dokodemo door（任意门）是一个传入数据协议，它可以监听一个本地端口，并把所有进入此端口的数据发送至指定服务器的一个端口，从而达到端口映射的效果。
+| 名称         |    类型        |
+|:------------:|:-------------:|
+| dokodemo-door | 入站协议       |
 
-* 名称：dokodemo-door
-* 类型：Inbound
-* 配置：
+Dokodemo door（任意门）是一个入站数据协议，它可以监听一个本地端口，并把所有进入此端口的数据发送至指定服务器的一个端口，从而达到端口映射的效果。
+
+## 示例配置
 
 ```javascript
 {
