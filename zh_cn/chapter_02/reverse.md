@@ -13,7 +13,11 @@
 * `bridge`会向`portal`主动建立连接。在连接建立之后，`portal`可以将流量由这些连接反向发送给`bridge`。
 * `bridge`会根据流量的大小进行动态的负载均衡。
 
-## 配置
+{% hint style='danger' %}
+反向代理默认已开启 [Mux](mux.md)，请不要在其用到的出站代理上再次开启 Mux。
+{% endhint %}
+
+## 示例配置
 
 ```javascript
 {
@@ -28,24 +32,46 @@
 }
 ```
 
-其中:
+> **bridges**: \[[BridgeObject](bridgeobject)\]
 
-* `bridges`: 一个数组，每一项表示一个`bridge`。每个`bridge`的配置如下:
-  * `tag`: 一个标识，所有由`bridge`发出的连接，都会带有这个标识。可以在[路由](03_routing.md)中使用`inboundTag`进行识别。
-  * `domain`: `bridge`向`portal`建立的连接，都会使用这个域名进行发送。这个域名只作为`bridge`和`portal`的通信用途，不必真实存在。
-* `portals`: 一个数组，每一项表示一个`portal`。每个`portal`的配置如下:
-  * `tag`: `portal`的标识。在[路由](03_routing.md)中使用`outboundTag`将流量转发到这个`portal`。
-  * `domain`: 一个域名。当`portal`接收到流量时，如果流量的目标域名是此域名，则`portal`认为当前连接上`bridge`发来的通信连接。而其它流量则会被当成需要转发的流量。`portal`所做的工作就是把这两类连接进行识别并拼接。
+一个数组，每一项表示一个`bridge`。每个`bridge`的配置是一个 [BridgeObject](bridgeobject)。
+
+> **portals**: \[[PortalObject](portalobject)\]
+
+一个数组，每一项表示一个`portal`。每个`portal`的配置是一个 [PortalObject](bridgeobject)。
+
+### BridgeObject
+
+```javascript
+{
+  "tag": "bridge",
+  "domain": "test.v2ray.com"
+}
+```
+
+> **tag**: string
+
+一个标识，所有由`bridge`发出的连接，都会带有这个标识。可以在[路由](03_routing.md)中使用`inboundTag`进行识别。
+
+> **domain**: string
+
+一个域名。`bridge`向`portal`建立的连接，都会使用这个域名进行发送。这个域名只作为`bridge`和`portal`的通信用途，不必真实存在。
+
+### PortalObject
+
+> **tag**: string
+
+`portal`的标识。在[路由](03_routing.md)中使用`outboundTag`将流量转发到这个`portal`。
+
+> **domain**: string
+
+一个域名。当`portal`接收到流量时，如果流量的目标域名是此域名，则`portal`认为当前连接上`bridge`发来的通信连接。而其它流量则会被当成需要转发的流量。`portal`所做的工作就是把这两类连接进行识别并拼接。
 
 {% hint style='tip' %}
 和其它配置一样，一个 V2Ray 既可以作为`bridge`，也可以作为`portal`，也可以同时两者，以适用于不同的场景需要。
 {% endhint %}
 
-{% hint style='danger' %}
-反向代理默认已开启 [Mux](mux.md)，请不要在其用到的出站代理上再次开启 Mux。
-{% endhint %}
-
-## 样例配置
+## 完整配置
 
 `bridge`通常需要两个出站代理，一个用于连接`portal`，另一个用于发送实际的流量。也就是说，你需要用路由区分两种流量。
 
