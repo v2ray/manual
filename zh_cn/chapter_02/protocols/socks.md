@@ -5,10 +5,10 @@ refen: configuration/protocols/socks
 
 # Socks
 
-标准 Socks 协议实现，兼容 [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)、Socks 4a 和 [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)。
-
 * 名称：socks
-* 类型：Inbound / Outbound
+* 类型：入站 / 出站
+
+标准 Socks 协议实现，兼容 [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)、Socks 4a 和 [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)。
 
 ## 出站协议配置 {#outbound}
 
