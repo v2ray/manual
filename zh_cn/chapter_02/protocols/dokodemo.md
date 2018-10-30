@@ -23,7 +23,7 @@ Dokodemo door（任意门）是一个入站数据协议，它可以监听一个�
 }
 ```
 
-> **address**: string
+> **address**: address
 
 将流量转发到此地址。可以是一个 IP 地址，形如`"1.2.3.4"`，或者一个域名，形如`"v2ray.com"`。字符串类型。
 

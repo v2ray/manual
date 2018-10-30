@@ -107,7 +107,7 @@ refen: configuration/protocols/shadowsocks
 
 邮件地址，可选，用于标识用户
 
-> **address**: string
+> **address**: address
 
 Shadowsocks 服务器地址，支持 IPv4、IPv6 和域名。必填。
 
