@@ -22,7 +22,7 @@ Blackhole（黑洞）是一个传出数据协议，它会阻碍所有数据的�
 
 ### 配置项
 
-> `response`: [Response](#response)
+> `response`: [Response](#response) 对象
 > 可选，默认为空
 
 配置黑洞的响应数据。Blackhole 会在收到待转发数据之后，发送指定的响应数据，然后关闭连接。待转发的数据将被丢弃。
