@@ -5,13 +5,14 @@ refen: configuration/protocols/dokodemo
 
 # Dokodemo-door
 
+* Name: dokodemo-door
+* Type: Inbound
+
 Dokodemo-door is a protocol for inbound connections. It take any connections and passes them to the specified destination.
 
 Dokodemo-door can also (if configured) work as a transparent proxy.
 
-* Name: dokodemo-door
-* Type: Inbound
-* Configuration:
+## ConfigurationObject
 
 ```javascript
 {
@@ -23,14 +24,25 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 }
 ```
 
-Where:
+> `address`: address
 
-* `address`: Address of the destination server. May be an IPv4, IPv6 or a domain, in string form.
-  * when `followRedirect` (see below) is `true`, `address` can be empty.
-* `port`: Port of the destination server. Integer.
-* `network`: Type of network, either "tcp" or "udp".
-* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
-* `userLevel`: User level. All connections share this level. See [Policy](../policy.md) for details.
+Address of the destination server. May be an IPv4, IPv6 or a domain, in string form. When `followRedirect` (see below) is `true`, `address` can be empty.
+
+> `port`: number
+
+Port of the destination server.
+
+> `network`: "tcp" | "udp" | "tcp,udp"
+
+Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to this dokodemo-door will be discarded.
+
+> `followRedirect`: true | false
+
+When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
+
+> `userLevel`: number
+
+User level. All connections share this level. See [Policy](../policy.md) for details.
 
 ## Examples for transparent proxy
 
