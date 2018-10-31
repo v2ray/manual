@@ -35,3 +35,9 @@ Project V is a nonprofit project. The source code and program can be used freely
 {% hint style='tip' %} [This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies. {% endhint %}
 
 {% hint style='info' %} Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation. {% endhint %}
+
+## Thank you for your support
+
+* For any doantion worth more than $50, you may choose one of the following: 
+  * Your name or your company log on our front page for one month;
+  * Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
