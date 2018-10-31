@@ -11,7 +11,9 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
 由于 DNS 协议的复杂性，V2Ray 只支持最基本的 IP 查询（A 和 AAAA 记录）。推荐使用本机 DNS 配合一个额外的 DNS 服务器来做 DNS 查询，如 [CoreDNS](https://coredns.io/)，以使用完整的 DNS 功能。
 {% endhint %}
 
-## 示例配置 {#configuration}
+## DnsObject
+
+`DnsObject`对应配置文件中的`dns`项。
 
 ```javascript
 {
@@ -34,7 +36,7 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
 }
 ```
 
-> **hosts**: map{string: address}
+> `hosts`: map{string: address}
 
 静态 IP 列表，其值为一系列的"域名":"IP"。IP 可以是 IPv4 或者 IPv6。在解析域名时，如果域名匹配这个列表中的某一项，则解析结果为该项的 IP，而不会使用下述的 servers 进行解析。
 
@@ -43,7 +45,7 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
 * 形如 `"v2ray.com"`: 被解析的域名需要和此域名完全一致；
 * 形如 `"domain:v2ray.com"`: 被解析的域名可以是此域名或是其子域名。
 
-> **servers**: \[string | [ServerObject](#serverobject) | "localhost" \]
+> `servers`: \[string | [ServerObject](#serverobject) | "localhost" \]
 
 一个 DNS 服务器列表，支持的类型有三种：IP 地址（字符串形式），ServerObject，或者`"localhost"`。
 
@@ -55,7 +57,7 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
 当使用 localhost 时，本机的 DNS 请求不受 V2Ray 控制，需要额外的配置才可以使 DNS 请求由 V2Ray 转发。
 {% endhint %}
 
-> **clientIp**: string
+> `clientIp`: string
 
 当前系统的 IP 地址，用于 DNS 查询时，通知服务器客户端的所在位置。不能是私有地址。
 
@@ -71,15 +73,15 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
 }
 ```
 
-> **address**: address
+> `address`: address
 
 DNS 服务器地址，如`"8.8.8.8"`。目前只支持 UDP 协议的 DNS 服务器。
 
-> **port**: number
+> `port`: number
 
 DNS 服务器端口，如`53`。
 
-> **domains**: \[string\]
+> `domains`: \[string\]
 
 一个域名列表，此列表包含的域名，将优先使用此服务器进行查询。域名格式和[路由配置](03_routing.md)中相同。
 

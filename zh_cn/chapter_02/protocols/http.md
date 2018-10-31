@@ -10,7 +10,7 @@ refen: configuration/protocols/http
 
 HTTP 是一个入站数据协议，兼容 HTTP 1.x 代理。
 
-## 示例配置：
+## ConfigurationObject
 
 ```javascript
 {
@@ -26,21 +26,21 @@ HTTP 是一个入站数据协议，兼容 HTTP 1.x 代理。
 }
 ```
 
-> **timeout**: number
+> `timeout`: number
 
 从客户端读取数据的超时设置（秒），0 表示不限时。默认值为 300。 V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略。
 
-> **accounts**: \[[AccountObject](#accountobject)\]
+> `accounts`: \[[AccountObject](#accountobject)\]
 
 一个数组，数组中每个元素为一个用户帐号。默认值为空。
 
 当 `accounts` 非空时，HTTP 代理将对入站连接进行 Basic Authentication 验证。
 
-> **allowTransparent**: true | false
+> `allowTransparent`: true | false
 
 当为`true`时，会转发所有 HTTP 请求，而非只是代理请求。若配置不当，开启此选项会导致死循环。
 
-> **userLevel**: number
+> `userLevel`: number
 
 用户等级，所有连接使用这一等级。
 
@@ -53,11 +53,11 @@ HTTP 是一个入站数据协议，兼容 HTTP 1.x 代理。
 }
 ```
 
-> **user**: string
+> `user`: string
 
 用户名，字符串类型。必填。
 
-> **pass**: string
+> `pass`: string
 
 密码，字符串类型。必填。
 

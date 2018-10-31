@@ -41,29 +41,29 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-> **email**: string
+> `email`: string
 
 邮件地址，可选，用于标识用户
 
-> **method**: string
+> `method`: string
 
 必填。可选的值见[加密方式列表](#encryption-list)
 
-> **password**: string
+> `password`: string
 
 必填，任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 
-> **level**: number
+> `level`: number
 
 用户等级，默认值为 `0`。详见[本地策略](../policy.md)。
 
-> **ota**: true | false
+> `ota`: true | false
 
 是否强制 OTA，如果不指定此项，则自动判断。强制开启 OTA 后，V2Ray 会拒绝未启用 OTA 的连接。反之亦然。
 
 当使用 AEAD 时，`ota` 设置无效
 
-> **network**: "tcp" | "udp" | "tcp,udp"
+> `network`: "tcp" | "udp" | "tcp,udp"
 
 可接收的网络连接类型，默认值为`"tcp"`。
 
@@ -85,7 +85,7 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-> **servers**: \[[ServerObject](#serverobject)\]
+> `servers`: \[[ServerObject](#serverobject)\]
 
 一个数组，其中每一项是一个 [ServerObject](#serverobject)。
 
@@ -103,33 +103,33 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-> **email**: string
+> `email`: string
 
 邮件地址，可选，用于标识用户
 
-> **address**: address
+> `address`: address
 
 Shadowsocks 服务器地址，支持 IPv4、IPv6 和域名。必填。
 
-> **port**: number
+> `port`: number
 
 Shadowsocks 服务器端口。必填。
 
-> **method**: string
+> `method`: string
 
 必填。可选的值见[加密方式列表](#encryption-list)
 
-> **password**: string
+> `password`: string
 
 必填。任意字符串。Shadowsocks 协议不限制密码长度，但短密码会更可能被破解，建议使用 16 字符或更长的密码。
 
-> **ota**: true | false
+> `ota`: true | false
 
 是否开启 Shadowsocks 的一次验证（One time auth），默认值为`false`。
 
 当使用 AEAD 时，`ota` 设置无效。
 
-> **level**: number
+> `level`: number
 
 用户等级
 
