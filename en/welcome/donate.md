@@ -47,8 +47,6 @@ Due to the anonymity natural of cryptocurrenty, please send us an email before y
 
 ## Thank you for your support
 
-* For any donation worth more than $10, we will attach a beautiful gift in the confirmation email.
 * For any doantion worth more than $50, you may choose one of the following:
-  * More beautiful email gift;
   * Your name or your company log on our front page for one month;
   * Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
