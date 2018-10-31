@@ -27,7 +27,9 @@ refen: configuration/protocols/shadowsocks
 * 插件：
   * 通过 Standalone 模式支持 obfs
 
-## 入站协议配置 {#inbound}
+Shadowsocks 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigurationObject`，分别对应入站和出站协议配置中的`settings`项。
+
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -67,7 +69,7 @@ refen: configuration/protocols/shadowsocks
 
 可接收的网络连接类型，默认值为`"tcp"`。
 
-## 出站协议配置 {#outbound}
+## OutboundConfigurationObject
 
 ```javascript
 {
