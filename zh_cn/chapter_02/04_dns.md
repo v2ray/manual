@@ -34,7 +34,7 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
 }
 ```
 
-> **hosts**: map
+> **hosts**: map{string: address}
 
 静态 IP 列表，其值为一系列的"域名":"IP"。IP 可以是 IPv4 或者 IPv6。在解析域名时，如果域名匹配这个列表中的某一项，则解析结果为该项的 IP，而不会使用下述的 servers 进行解析。
 

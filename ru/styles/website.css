@@ -24,11 +24,15 @@
 }
 
 .markdown-section code:not([class]) {
-  border-radius: 1px;
   white-space: nowrap;
-  color: #5e5e5e;
-  background: #FFF7DD;
-  border: 1px solid #fbf0cb;
-  padding: 0px 2px;
-  font-size: 16px;
+  font-weight: 600;
+}
+
+.markdown-section blockquote {
+  margin: 0;
+  margin-bottom: .85em;
+  padding: 0 15px;
+  border-left: 4px solid #64b5f6;
+  border-top: 1px solid #64b5f6;
+  color: #000000;
 }

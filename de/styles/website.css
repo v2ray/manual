@@ -14,21 +14,16 @@
   font-size: 16px;
 }
 
-.book-summary {
-  font-family:
-      -apple-system, BlinkMacSystemFont, 
-      "Segoe UI", "Roboto", "Oxygen", 
-      "Ubuntu", "Cantarell", "Fira Sans", 
-      "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
+.markdown-section code:not([class]) {
+  white-space: nowrap;
+  font-weight: 600;
 }
 
-.markdown-section code:not([class]) {
-  border-radius: 1px;
-  white-space: nowrap;
-  color: #5e5e5e;
-  background: #FFF7DD;
-  border: 1px solid #fbf0cb;
-  padding: 0px 2px;
-  font-size: 16px;
+.markdown-section blockquote {
+  margin: 0;
+  margin-bottom: .85em;
+  padding: 0 15px;
+  border-left: 4px solid #64b5f6;
+  border-top: 1px solid #64b5f6;
+  color: #000000;
 }
