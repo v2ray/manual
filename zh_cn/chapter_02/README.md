@@ -33,23 +33,23 @@ V2Ray 的 JSON 格式支持注释，可使用“//”或者“/\* \*/”来进�
 
 这里介绍一下常用的数据类型，在之后其它的配置中会用到。
 
-> **boolean**: true | false
+> `boolean`: true | false
 
 布尔值，只有`true`和`false`两种取值，不带引号。
 
-> **number**
+> `number`
 
 数字，在 V2Ray 的使用中通常为非负整数，即`0`、`53`…… 数字在 JSON 格式中不带引号。
 
-> **string**
+> `string`
 
 字符串，由引号包含的一串字符，如无特殊说明，字符的内容不限。
 
-> **array**: []
+> `array`: []
 
 数组，由方括号包含的一组元素，如字符串数组表示为`[string]`。
 
-> **object**: {}
+> `object`: {}
 
 对象，一组键值对。样例见本文上方的示例。
 
@@ -59,14 +59,14 @@ V2Ray 的 JSON 格式支持注释，可使用“//”或者“/\* \*/”来进�
 
 ## V2Ray 常用数据类型
 
-> **map**: \{string:string\}
+> `map`: object \{string:string\}
 
 一组键值对，其类型在括号内指出。每一个键和值的类型对应相同。
 
-> **address**: string
+> `address`: string
 
 字符串，表示一个 IP 地址或域名，形如：`"8.8.8.8"` 或 `"www.v2ray.com"`
 
-> **address_port**: string
+> `address_port`: string
 
 字符串，表示一个地址和端口，常见的形式如：`"8.8.8.8:53"`，或者 `"www.v2ray.com:80"`。在一部分配置中，地址部分可以省略，如`":443"`。
