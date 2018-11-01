@@ -6,7 +6,9 @@ refen: configuration/stats
 
 V2Ray предоставляет информацию о своём состоянии.
 
-Конфигурация:
+## StatsObject
+
+`StatsObject` is used as `stats` field in top level configuration.
 
 ```javascript
 {
@@ -20,6 +22,6 @@ V2Ray предоставляет информацию о своём состоя
 * `inbound>>>[tag]>>>traffic>>>uplink` (V2Ray 3.18+): Накопленный исходящий трафик соединения в байтах.
 * `inbound>>>[tag]>>>traffic>>>downlink` (V2Ray 3.18+): Накопленный входящий трафик соединения в байтах.
 
-## Замечания
+## Tips
 
 * Если у пользователя нет валидного адреса электронной почты, статистика не будет накапливаться.
