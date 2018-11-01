@@ -6,7 +6,9 @@ refen: configuration/stats
 
 V2Ray bietet einige Informationen über seine Interna.
 
-Konfiguration:
+## StatsObject
+
+`StatsObject` is used as `stats` field in top level configuration.
 
 ```javascript
 {
