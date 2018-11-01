@@ -8,7 +8,11 @@ refen: configuration/transport/domainsocket
 
 Сокет домена может использоваться только на платформах, которые его поддерживают: Unix, macOS и Linux. ОС Windows не поддерживается.
 
-Конфигурация:
+{% hint style='info' %} When domain socket is used, IP and port specified on the inbound/outbound proxy will be ignored. All traffic is tunneled through the domain socket. {% endhint %}
+
+## DomainSocketObject
+
+`DomainSocketObject` is used in `dsSettings` field in `TransportObject` and `StreamSettingsObject`.
 
 ```javascript
 {
@@ -16,10 +20,6 @@ refen: configuration/transport/domainsocket
 }
 ```
 
-Где:
+> `path`: string
 
-* `path`: Реальный абсолютный путь к файлу. Перед запуском V2Ray указанный файл не должен существовать.
-
-## Замечания {#tips}
-
-* Когда используется сокет домена, IP и порт, указанные во входящем/исходящем прокси, будут проигнорированы. Весь трафик туннелируется через сокет домена.
+An valid absolute file path. Before running V2Ray, the file on this path must not exist.
