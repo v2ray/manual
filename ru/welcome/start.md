@@ -12,25 +12,24 @@ refen: welcome/start
 
 ```javascript
 {
-  "inbound": {
-    "port": 1080,  // Порт для socks5-прокси. Настройте браузер на использование этого порта.
+  "inbounds": [{
+    "port": 1080,  // Port of socks5 proxy. Настройте браузер на использование этого порта.
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
       "udp": true
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "vmess",
     "settings": {
       "vnext": [{
-        "address": "server", // Адрес сервера V2Ray. Может быть IP или доменным именем.
+        "address": "server", // Address of your V2Ray server. Может быть IP или доменным именем.
         "port": 10086,  // Порт сервера V2Ray.
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }
-  },
-  "outboundDetour": [{
+  },{
     "protocol": "freedom",
     "tag": "direct",
     "settings": {}
@@ -41,9 +40,7 @@ refen: welcome/start
       "domainStrategy": "IPOnDemand",
       "rules": [{
         "type": "field",
-        "ip": [
-          "geoip:private"
-        ],
+        "ip": ["geoip:private"],
         "outboundTag": "direct"
       }]
     }
@@ -59,17 +56,17 @@ refen: welcome/start
 
 ```javascript
 {
-  "inbound": {
-    "port": 10086,  // Порт сервера. Должен быть таким же, как упомянутый выше.
+  "inbounds": [{
+    "port": 10086, // Port of the server. Должен быть таким же, как упомянутый выше.
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "freedom",
     "settings": {}
-  }
+  }]
 }
 ```
 
