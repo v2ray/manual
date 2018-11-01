@@ -4,9 +4,11 @@ refen: configuration/policy
 ---
 # Lokale Richtlinie
 
-Local policy manages settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
+Local policy manages policy settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-Konfiguration:
+## PolicyObject
+
+`PolicyObject` is used as `policy` field in top level configuration.
 
 ```javascript
 {
