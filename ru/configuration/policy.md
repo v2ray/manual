@@ -4,9 +4,11 @@ refen: configuration/policy
 ---
 # Локальная политика
 
-Локальная политика управляет параметрами V2Ray, например временем ожидания подключения. Политики могут применяться к отдельному уровню доступа пользователей или для всей системы.
+Local policy manages policy settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
 
-Конфигурация:
+## PolicyObject
+
+`PolicyObject` is used as `policy` field in top level configuration.
 
 ```javascript
 {
@@ -48,7 +50,7 @@ Some details when V2Ray handles connections:
 3. After client (browser) closes the uplink of the connection, V2Ray aborts the connection after `downlinkOnly` time.
 4. After remote (server) closes the downlink of the connection, V2Ray aborts the connection after `uplinkOnly` times.
 
-## Замечания {#tips}
+## Tips {#tips}
 
 * Each inbound and outbound connection can apply a user level. V2Ray applies corresponding policy based on user level.
 * `bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).
