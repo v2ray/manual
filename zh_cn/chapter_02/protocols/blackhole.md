@@ -10,7 +10,7 @@ refen: configuration/protocols/blackhole
 
 Blackhole（黑洞）是一个出站数据协议，它会阻碍所有数据的出站，配合[路由（Routing）](../03_routing.md)一起使用，可以达到禁止访问某些网站的效果。
 
-## ConfigurationObject
+## OutboundConfigurationObject
 
 ```javascript
 {
