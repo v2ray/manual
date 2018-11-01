@@ -8,6 +8,7 @@ refen: welcome/versions
 ## 2018.11.09 v4.1
 
 * JSON configuration format changes. Old format is still suported.
+* Performance on GeoIP matching is improved.
 
 ## 2018.11.02 v4.0
 
