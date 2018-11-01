@@ -6,13 +6,14 @@ refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
 
 # Dokodemo-Door
 
+* Name: dokodemo-door
+* Typ: Eingehend
+
 Dokodemo-door is a protocol for inbound connections. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
 
 Dokodemo-door can also (if configured) work as a transparent proxy.
 
-* Name: dokodemo-door
-* Typ: Eingehend
-* Konfiguration:
+## ConfigurationObject
 
 ```javascript
 {
@@ -24,18 +25,29 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 }
 ```
 
-Wo:
+> `address`: address
 
-* `address`: Adresse des Zielservers. Kann eine IPv4-, IPv6- oder eine Domäne in Zeichenfolgenform sein. 
-  * Wenn `followRedirect` (siehe unten) ist `wahr`, `Adresse` kann leer sein.
-* `port`: Port des Zielservers. Ganze Zahl.
-* `Netzwerk`: Typ des Netzwerks, entweder "TCP" oder "UDP".
-* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
-* `userLevel`: Benutzerebene. Alle Verbindungen teilen diese Ebene. Siehe [Richtlinie](../policy.md) für Details.
+Address of the destination server. May be an IPv4, IPv6 or a domain, in string form. When `followRedirect` (see below) is `true`, `address` can be empty.
 
-## Beispiele für transparenten Proxy
+> `port`: number
 
-Fügen Sie eine dokodemo-Tür eingehend wie folgt hinzu.
+Port of the destination server.
+
+> `network`: "tcp" | "udp" | "tcp,udp"
+
+Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to this dokodemo-door will be discarded.
+
+> `followRedirect`: true | false
+
+When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
+
+> `userLevel`: number
+
+User level. All connections share this level. See [Policy](../policy.md) for details.
+
+## Examples for transparent proxy
+
+Add a dokodemo-door inbound as below.
 
 ```javascript
 {
@@ -45,7 +57,7 @@ Fügen Sie eine dokodemo-Tür eingehend wie folgt hinzu.
 }
 ```
 
-Konfigurieren Sie iptables wie folgt.
+Configure iptables as below.
 
 ```bash
 # Create new chain

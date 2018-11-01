@@ -6,13 +6,14 @@ refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
 
 # Dokodemo-door
 
+* Название: dokodemo-door
+* Тип: входящий
+
 Dokodemo-door - это протокол для входящих соединений. Он принимает любые соединения и передает их в указанное место назначения.
 
 Dokodemo-door также может работать (если настроен) как transparent proxy.
 
-* Название: dokodemo-door
-* Тип: входящий
-* Конфигурация:
+## ConfigurationObject
 
 ```javascript
 {
@@ -24,18 +25,29 @@ Dokodemo-door также может работать (если настроен)
 }
 ```
 
-Где:
+> `address`: address
 
-* `address`: Адрес определенного сервера. Строка, значением которой может быть IPv4, IPv6 или доменное имя. 
-  * если `followRedirect` (см. ниже) `true`, `address` может быть пустым.
-* `port`: Порт сервера назначения. Целое число.
-* `network`: Тип сети: "tcp" или "udp".
-* `followRedirect`: Если установлено значение `true`, dokodemo-door распознает точку назначения TProxy и будет использовать её. См. `TProxy` в [Настройках доставки](../transport.md) для деталей.
-* ` userLevel `: Пользовательский уровень. Все подключения проходят через этот уровень. Подробности: [Правила](../policy.md).
+Address of the destination server. May be an IPv4, IPv6 or a domain, in string form. When `followRedirect` (see below) is `true`, `address` can be empty.
 
-## Примеры для transparent proxy
+> `port`: number
 
-Добавьте inbound-соединение dokodemo-door, как показано ниже.
+Port of the destination server.
+
+> `network`: "tcp" | "udp" | "tcp,udp"
+
+Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to this dokodemo-door will be discarded.
+
+> `followRedirect`: true | false
+
+When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
+
+> `userLevel`: number
+
+User level. All connections share this level. See [Policy](../policy.md) for details.
+
+## Examples for transparent proxy
+
+Add a dokodemo-door inbound as below.
 
 ```javascript
 {
@@ -45,7 +57,7 @@ Dokodemo-door также может работать (если настроен)
 }
 ```
 
-Настройте iptables, как показано ниже.
+Configure iptables as below.
 
 ```bash
 # Создаём новую цепь
