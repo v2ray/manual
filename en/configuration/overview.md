@@ -129,19 +129,19 @@ The actual ports to open also depend on `allocate` setting. See below.
 
 The address to be listened on. Default value is `"0.0.0.0"` for incoming connections on all network interfaces. Otherwise the value has to be the address of an existing network interface.
 
-* `protocol`: string
+> `protocol`: string
 
 Name of the inbound protocol. See each individual for available values.
 
-* `settings`: InboundConfigurationObject
+> `settings`: InboundConfigurationObject
 
 Protocol-specific settings. See `InboundConfigurationObject` defined in each protocol.
 
-* `streamSettings`: [StreamSettingsObject]
+> `streamSettings`: [StreamSettingsObject]
 
 See [Protocol Transport Options](transport.md) for detail.
 
-* `tag`: string
+> `tag`: string
 
 The tag of the inbound proxy. It can be used for routing decisions. If not empty, it must be unique among all inbound proxies.
 
