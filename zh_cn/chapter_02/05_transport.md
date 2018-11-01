@@ -101,13 +101,6 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 
 连接选项
 
-## 小贴士 {#tip}
-
-* 使用`v2ctl cert -ca`可以生成自签名的 CA 证书。
-* 在 Windows 平台上可以将自签名的 CA 证书安装到系统中，即可验证远端 TLS 的证书。
-* 当 [Dokodemo-door](protocols/dokodemo.md) 中指定了`followRedirect`，且`sockopt.tproxy`为空时，`sockopt.tproxy`的值会被设为`"redirect"`。
-* 透明代理需要 Root 或 CAP\_NET\_ADMIN 权限。
-
 ### TLSObject
 
 ```javascript
@@ -204,8 +197,12 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 证书用途，默认值为`"encipherment"`
 
 * `"encipherment"`: 证书用于 TLS 认证和加密。
-* `"verify"`: 证书用于验证远端 TLS 的证书。当使用此项时，当前证书必须为 CA 证书。暂不支持 Windows 平台。
+* `"verify"`: 证书用于验证远端 TLS 的证书。当使用此项时，当前证书必须为 CA 证书。
 * `"issue"`: 证书用于签发其它证书。当使用此项时，当前证书必须为 CA 证书。
+
+{% hint style='info' %}
+在 Windows 平台上可以将自签名的 CA 证书安装到系统中，即可验证远端 TLS 的证书。
+{% endhint %}
 
 {% hint style='info' %}
 当有新的客户端请求时，假设所指定的`serverName`为`"v2ray.com"`，V2Ray 会先从证书列表中寻找可用于`"v2ray.com"`的证书，如果没有找到，则使用任一`usage`为`"issue"`的证书签发一个适用于`"v2ray.com"`的证书，有效期为一小时。并将新的证书加入证书列表，以供后续使用。
@@ -214,6 +211,10 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 > `certificateFile`: string
 
 证书文件路径，如使用 OpenSSL 生成，后缀名为 .crt。
+
+{% hint style='info' %}
+使用`v2ctl cert -ca`可以生成自签名的 CA 证书。
+{% endhint %}
 
 > `certificate`: \[ string \]
 
@@ -227,9 +228,7 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 
 一个字符串数组，表示密钥内容，格式如样例如示。`key`和`keyFile`二者选一。
 
-{% hint style='info' %}
 当`certificateFile`和`certificate`同时指定时，V2Ray 优先使用`certificateFile`。`keyFile`和`key`也一样。
-{% endhint %}
 
 {% hint style='info' %}
 当`usage`为`"verify"`时，`keyFile`和`key`可均为空。
@@ -268,3 +267,9 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 * `"redirect"`: 使用 Redirect 模式的透明代理。仅支持 TCP/IPv4 和 UDP 连接。
 * `"tproxy"`: 使用 TProxy 模式的透明代理。支持 TCP 和 UDP 连接。
 * `"off"`: 关闭透明代理。
+
+透明代理需要 Root 或 CAP\_NET\_ADMIN 权限。
+
+{% hint style='info' %}
+当 [Dokodemo-door](protocols/dokodemo.md) 中指定了`followRedirect`，且`sockopt.tproxy`为空时，`sockopt.tproxy`的值会被设为`"redirect"`。
+{% endhint %}
