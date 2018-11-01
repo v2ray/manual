@@ -13,15 +13,15 @@ On your PC (or mobile), run V2Ray with the following configuration.
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 1080,  // Port of socks5 proxy. Point your browser to use this port.
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
       "udp": true
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "vmess",
     "settings": {
       "vnext": [{
@@ -30,8 +30,7 @@ On your PC (or mobile), run V2Ray with the following configuration.
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }
-  },
-  "outboundDetour": [{
+  },{
     "protocol": "freedom",
     "tag": "direct",
     "settings": {}
@@ -42,9 +41,7 @@ On your PC (or mobile), run V2Ray with the following configuration.
       "domainStrategy": "IPOnDemand",
       "rules": [{
         "type": "field",
-        "ip": [
-          "geoip:private"
-        ],
+        "ip": ["geoip:private"],
         "outboundTag": "direct"
       }]
     }
@@ -60,17 +57,17 @@ You need another computer to run V2Ray as a server. Usually this computer is loc
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 10086, // Port of the server. Must be the same as above.
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "freedom",
     "settings": {}
-  }
+  }]
 }
 ```
 

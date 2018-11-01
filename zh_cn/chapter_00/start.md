@@ -13,15 +13,15 @@ refen: welcome/start
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 1080,  // SOCKS 代理端口，在浏览器中需配置代理并指向这个端口
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
       "udp": true
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "vmess",
     "settings": {
       "vnext": [{
@@ -30,8 +30,7 @@ refen: welcome/start
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }
-  },
-  "outboundDetour": [{
+  },{
     "protocol": "freedom",
     "tag": "direct",
     "settings": {}
@@ -42,23 +41,7 @@ refen: welcome/start
       "domainStrategy": "IPOnDemand",
       "rules": [{
         "type": "field",
-        "ip": [
-          "0.0.0.0/8",
-          "10.0.0.0/8",
-          "100.64.0.0/10",
-          "127.0.0.0/8",
-          "169.254.0.0/16",
-          "172.16.0.0/12",
-          "192.0.0.0/24",
-          "192.0.2.0/24",
-          "192.168.0.0/16",
-          "198.18.0.0/15",
-          "198.51.100.0/24",
-          "203.0.113.0/24",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10"
-        ],
+        "ip": ["geoip:private"],
         "outboundTag": "direct"
       }]
     }
@@ -74,17 +57,17 @@ refen: welcome/start
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 10086, // 服务器监听端口，必须和上面的一样
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "freedom",
     "settings": {}
-  }
+  }]
 }
 ```
 
