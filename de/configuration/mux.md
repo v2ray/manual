@@ -4,17 +4,20 @@ refen: configuration/mux
 ---
 # Multiplexen
 
-Multiplexing, oder Mux, verwendet eine physische TCP-Verbindung für mehrere virtuelle TCP-Verbindungen. Weitere Details zur Implementierung finden Sie unter [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html).
+Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections.
 
-Konfiguration:
+Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
+
+## MuxObject
 
 ```javascript
 {"aktiviert": false, "Nebenläufigkeit": 8}
 ```
 
-Wo:
+> `enabled`: true | false
 
-* `enabled`: Ob Mux aktiv ist oder nicht
-* `Nebenläufigkeit`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 
-  * Normalerweise müssen Sie diesen Wert nicht konfigurieren.
-* Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
+Whether or not to enable Mux on an outbound.
+
+> `concurrency`: number
+
+Max number of multiplexed connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`.
