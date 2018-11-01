@@ -4,9 +4,11 @@ refen: configuration/mux
 ---
 # Мультиплексирование
 
-Мультиплексирование или Mux - это использование одного физического TCP-соединения для нескольких виртуальных TCP-соединений. См. [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) для более подробной информации о реализации.
+Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections.
 
-Конфигурация:
+Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
+
+## MuxObject
 
 ```javascript
 {
@@ -15,9 +17,10 @@ refen: configuration/mux
 }
 ```
 
-Где:
+> `enabled`: true | false
 
-* `enabled`: Включать Mux или нет
-* `concurrency`: Максимальное количество виртуальных подключений, которое может обрабатывать одно физическое соединение за раз. Максимум: `1024`. Минимум: `1`. По умолчанию: `8`. 
-  * Обычно это значение не требует дополнительной настройки.
-* Мультиплексирование предназначено для уменьшения задержек при хендшейке (установлении соединения) TCP. Это делается НЕ для повышения пропускной способности. При загрузке больших файлов или измерении скорости, Mux обычно медленнее, чем нормальное TCP-подключение.
+Whether or not to enable Mux on an outbound.
+
+> `concurrency`: number
+
+Max number of multiplexed connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`.
