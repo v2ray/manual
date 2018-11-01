@@ -82,7 +82,7 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 
 > `domain`: \[string\]
 
-一个数组，数组每一项是一个域名的匹配。有四种形式：
+一个数组，数组每一项是一个域名的匹配。有以下几种形式：
 
 * 纯字符串: 当此字符串匹配目标域名中任意部分，该规则生效。比如"sina.com"可以匹配"sina.com"、"sina.com.cn"和"www.sina.com"，但不匹配"sina.cn"。
 * 正则表达式: 由`"regexp:"`开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如"regexp:\\\\.goo.*\\\\.com$"匹配"www.google.com"、"fonts.googleapis.com"，但不匹配"google.com"。
@@ -94,7 +94,7 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 
 > `ip`: \[string\]
 
-一个数组，数组内每一个元素代表一个 IP 范围。当某一元素匹配目标 IP 时，此规则生效。有三种形式：
+一个数组，数组内每一个元素代表一个 IP 范围。当某一元素匹配目标 IP 时，此规则生效。有以下几种形式：
 
 * IP: 形如`"127.0.0.1"`。
 * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
