@@ -12,6 +12,7 @@ refen: welcome/versions
 ## 2018.11.02 v4.0
 
 * 反向代理
+* 新增了 ppc64 和 ppc64le 预编译包。
 
 ## 2018.10.12 v3.47
 

@@ -12,6 +12,7 @@ refen: welcome/versions
 ## 2018.11.02 v4.0
 
 * Reverse proxy.
+* Release packages for ppc64 and ppc64le.
 
 ## 2018.10.12 v3.47
 
