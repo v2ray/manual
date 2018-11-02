@@ -4,7 +4,7 @@ refen: configuration/protocols
 ---
 # Протоколы
 
-V2Ray поддерживает следующие протоколы:
+V2Ray supports the following protocols. Each protocol may be an inbound protocol, or an outbound protocol, or both.
 
 * [Blackhole](protocols/blackhole.md)
 * [Dokodemo](protocols/dokodemo.md)
