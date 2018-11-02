@@ -6,6 +6,8 @@ refen: configuration/protocols/vmess
 
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) это протокол для шифрованной передачи информации. Он включает в себя входящий и исходящий прокси.
 
+VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. One may install `ntp` service on Linux to automatically adjust system time.
+
 * Наименование: vmess
 * Тип: входящий / исходящий
 
@@ -68,7 +70,7 @@ refen: configuration/protocols/vmess
 }
 ```
 
-Где:
+Where:
 
 * `clients`: Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта. 
   * Каждый клиент содержит: 
