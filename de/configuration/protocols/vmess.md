@@ -6,6 +6,8 @@ refen: configuration/protocols/vmess
 
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
 
+VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. One may install `ntp` service on Linux to automatically adjust system time.
+
 * Name: vmess
 * Type: Inbound / Outbound
 
@@ -68,7 +70,7 @@ Wo:
 }
 ```
 
-Wo:
+Where:
 
 * `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
   * Jeder Client enthält: 
