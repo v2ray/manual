@@ -45,14 +45,7 @@ VMess 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigu
 {
   "address": "127.0.0.1",
   "port": 37192,
-  "users": [
-    {
-      "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-      "alterId": 16,
-      "security": "auto",
-      "level": 0
-    }
-  ]
+  "users": []
 }
 ```
 
