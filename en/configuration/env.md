@@ -11,9 +11,7 @@ V2Ray reads the following environment variables.
 
 * Name: `v2ray.ray.buffer.size` or `V2RAY_RAY_BUFFER_SIZE`
 * Unit: MBytes
-* Default value:
-  * (V2Ray 3.33-) 10
-  * (V2Ray 3.34+) 2 on x86, amd64, arm64 and s390x. This cache is disabled on other platforms.
+* Default value: 2 on x86, amd64, arm64 and s390x. This cache is disabled on other platforms.
 * Special value: 0 for unlimited cache size
 
 For each connection, when there is a difference in speed between inbound and outbound traffic, V2Ray will cache some data for larger throughput. This setting controls the size of the cache. The larger the cache, the better the performance.
