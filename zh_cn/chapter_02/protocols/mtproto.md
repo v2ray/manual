@@ -5,14 +5,14 @@ refen: configuration/protocols/mtproto
 
 # MTProto
 
-* 名称: mtproto
+* 名称: `mtproto`
 * 类型: 入站 / 出站
 
 MTProto 是一个 Telegram 专用的代理协议。在 V2Ray 中可使用一组入站出站代理来完成 Telegram 数据的代理任务。
 
 目前只支持转发到 Telegram 的 IPv4 地址。
 
-## 入站协议配置 {#inbound}
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -54,7 +54,7 @@ MTProto 是一个 Telegram 专用的代理协议。在 V2Ray 中可使用一组�
 使用此命令生成 MTProto 代理所需要的用户密钥：`openssl rand -hex 16`
 {% endhint %}
 
-## 出站协议配置 {#outbound}
+## OutboundConfigurationObject
 
 ```javascript
 {

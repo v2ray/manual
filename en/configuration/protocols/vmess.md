@@ -70,7 +70,6 @@ An array where each element is an VMess user
 }
 ```
 
-
 > `id`: string
 
 User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).

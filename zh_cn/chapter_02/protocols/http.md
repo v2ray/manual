@@ -5,7 +5,7 @@ refen: configuration/protocols/http
 
 # HTTP
 
-* 名称：http
+* 名称：`http`
 * 类型：入站协议
 
 HTTP 是一个入站数据协议，兼容 HTTP 1.x 代理。
