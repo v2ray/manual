@@ -4,26 +4,49 @@ refen: configuration/protocols/http
 ---
 # HTTP
 
+* Name: `http`
+* Type: Inbound
+
 HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
 
-* Name: http
-* Type: Inbound
-* Konfiguration:
+## InboundConfigurationObject
 
 ```javascript
 {"accounts": [{"user": "mein-Benutzername", "pass": "mein-Passwort"}], "allowTransparent": false, "userLevel": 0}
 ```
 
-Wo:
+> `accounts`: \[[AccountObject](#accountobject)\]
 
-* `Konten`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
-  * Wenn `Konten` nicht leer ist, verwendet HTTP die Standardauthentifizierung für die Benutzerüberprüfung.
-* `allowTransparent`: Wenn `wahr`, werden alle HTTP-Anfragen, die an diesen eingehenden Empfänger gesendet werden, einschließlich Nicht-Proxy-Anfragen, weitergeleitet.
-* `userLevel`: User level. All connections share this level.
+An array in which each entry is an account. It is empty by default. If not empty, HTTP Basic Authentication is required for incoming requests.
 
-## Tips
+> `allowTransparent`: true | false
 
-Verwenden Sie die folgenden Einstellungen unter Linux, um den HTTP-Proxy in der aktuellen Sitzung zu verwenden.
+If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.
 
-* `export http_proxy = http: //127.0.0.1: 8080/` (URL hat nach der Config ändern)
-* `export https_proxy =$http_proxy`
+> `userLevel`: number
+
+User level. All connections share this level.
+
+### AccountObject
+
+```javascript
+{
+  "user": "my-username",
+  "pass": "my-password"
+}
+```
+
+> `user`: string
+
+Username for HTTP authentication.
+
+> `pass`: string
+
+password for HTTP authentication.
+
+{% hint style='info' %} Use the following settings in Linux to use HTTP proxy in current session.
+
+* `export http_proxy=http://127.0.0.1:8080/` (URL has to change according to your config)
+* `export https_proxy=$http_proxy`
+
+{% endhint %}
