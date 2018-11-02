@@ -49,7 +49,7 @@ User level.
 
 User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
 
-{% hint style='info' %} 使用此命令生成 MTProto 代理所需要的用户密钥：`openssl rand -hex 16` {% endhint %}
+{% hint style='tip' %} You may use the following command to generate MTProto secret: `openssl rand -hex 16` {% endhint %}
 
 ## Outbound configuration {#outbound}
 
