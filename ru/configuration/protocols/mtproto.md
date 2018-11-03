@@ -4,16 +4,14 @@ refen: configuration/protocols/mtproto
 ---
 # MTProto
 
-MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
-
-**На данный момент V2Ray поддерживает только IPv4 адрес сервера Telegram.**
-
-Описание протокола:
-
-* Название: mtproto
+* Name: `mtproto`
 * Тип: входящий / исходящий
 
-## Конфигурация входящего соединения {#inbound}
+MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
+
+For now V2Ray only supports IPv4 address of Telegram server.
+
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -25,12 +23,33 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 }
 ```
 
-Где:
+> `users`: \[[UserObject](#userobject)\]
 
-* `users`: Массив пользователей. **На данный момент поддерживается только первый пользователь**. Каждый пользователь имеет следующую конфигурацию: 
-  * `email`: Электронная почта пользователя. Используется для сбора статистики. См. [Статистика](../stats.md).
-  * ` userLevel `: Пользовательский уровень.
-  * `secret`: Секрет пользователя. В Telegram секрет пользователя должен быть длиной 32 символа и содержать только символы `0-9 `, и `a-f`.
+An array of users. For now only the first user is effective.
+
+### UserObject
+
+```javascript
+{
+  "email": "love@v2ray.com",
+  "level": 0,
+  "secret": "b0cbcef5a486d9636472ac27f8e11a9d"
+}
+```
+
+> `email`: string
+
+User email. Used for tracking purposes. See [Stats](../stats.md).
+
+> `level`: number
+
+User level.
+
+> `secret`: string
+
+User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
+
+{% hint style='tip' %} You may use the following command to generate MTProto secret: `openssl rand -hex 16` {% endhint %}
 
 ## Конфигурация исходящего соединения {#outbound}
 
@@ -41,9 +60,9 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 
 ## Пример {#sample}
 
-MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Вот неполный образец.
+MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
 
-Входящее соединение:
+Inbound:
 
 ```javascript
 {
@@ -56,7 +75,7 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Исходящее соединение:
+Outbound:
 
 ```javascript
 {
@@ -66,7 +85,7 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Маршрутизация:
+Routing:
 
 ```javascript
 {
@@ -76,8 +95,4 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Конфигурируйте приложение Telegram для подключения к порту 443 на этом устройстве.
-
-## Подсказки {#tips}
-
-* Используйте эту команду для генерации секрета MTProto: ` openssl rand -hex 16 `.
+The configure your Telegram app to connect to 443 port on this machine.

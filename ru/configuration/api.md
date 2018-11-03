@@ -8,7 +8,9 @@ V2Ray предоставляет API для удаленного доступа.
 
 Когда API включено, V2Ray автоматически создает исходящий прокси, помеченный через `tag`. Пользователь должен [маршрутизировать](routing.md) все соединения gRPC в этот прокси.
 
-Настройка:
+## ApiObject
+
+`ApiObject` is used as `api` field in top level configuration.
 
 ```javascript
 {
@@ -21,26 +23,29 @@ V2Ray предоставляет API для удаленного доступа.
 }
 ```
 
-Где:
+> `tag`: string
 
-* `tag`: Метка исходящего прокси.
-* `services`: Список включённых API.
+The tag of the outbound proxy.
 
-## Список поддерживаемых API
+> `services`: \[ string \]
+
+List of enabled APIs.
+
+## Supported API list
 
 ### HandlerService
 
-API для управления входящими и исходящими прокси. Доступны следующие функции:
+API for manipulating inbound and outbound proxies. The following functionalities are provided:
 
-* Добавление нового входящего/исходящего прокси.
-* Удаление существующего входящего/исходящего прокси.
-* Добавление нового пользователя входящего прокси (только для VMess).
-* Удаление существующего пользователя входящего прокси (только для VMess).
+* Add a new inbound/outbound proxy.
+* Remove an existing inbound/outbound proxy.
+* Add a new user to an inbound proxy (VMess only).
+* Remove an existing user from an inbound proxy (VMess only).
 
 ### LoggerService
 
-Перезапуск внутреннего логгера. Может работать с logrotate для оперирования файлами журнала.
+To restart internal logger. Can work with logrotate for operating log files.
 
 ### StatsService
 
-Поддержка [внутренней статистики](stats.md).
+Support for internal [Statistics](stats.md).

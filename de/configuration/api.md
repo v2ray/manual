@@ -8,7 +8,9 @@ V2Ray provides some API for remote access. These APIs are based on [gRPC](https:
 
 When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
 
-Aufbau:
+## ApiObject
+
+`ApiObject` is used as `api` field in top level configuration.
 
 ```javascript
 {
@@ -21,21 +23,24 @@ Aufbau:
 }
 ```
 
-Woher:
+> `tag`: string
 
-* `Tag`: Das Tag des Outbound-Proxys.
-* `Dienste`: Liste der aktivierten APIs.
+The tag of the outbound proxy.
 
-## Unterstützte API-Liste
+> `services`: \[ string \]
+
+List of enabled APIs.
+
+## Supported API list
 
 ### HandlerService
 
 API for manipulating inbound and outbound proxies. The following functionalities are provided:
 
-* Fügen Sie einen neuen eingehenden / ausgehenden Proxy hinzu.
-* Entfernen Sie einen vorhandenen eingehenden / ausgehenden Proxy.
-* Fügen Sie einem eingehenden Proxy einen neuen Benutzer hinzu (nur VMess).
-* Entfernen Sie einen vorhandenen Benutzer von einem eingehenden Proxy (nur VMess).
+* Add a new inbound/outbound proxy.
+* Remove an existing inbound/outbound proxy.
+* Add a new user to an inbound proxy (VMess only).
+* Remove an existing user from an inbound proxy (VMess only).
 
 ### LoggerService
 
@@ -43,4 +48,4 @@ To restart internal logger. Can work with logrotate for operating log files.
 
 ### Statistikdienst
 
-Unterstützung für interne [Statistiken](stats.md).
+Support for internal [Statistics](stats.md).
