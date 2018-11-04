@@ -6,6 +6,8 @@ refen: configuration/dns
 
 V2Ray has an internal DNS server which provides DNS relay for other components.
 
+{% hint style='info' %} Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray. {% endhint %}
+
 Configuration:
 
 ```javascript
