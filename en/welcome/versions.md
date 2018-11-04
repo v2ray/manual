@@ -5,7 +5,7 @@ refen: welcome/versions
 
 # Version History
 
-## 2018.11.09 v4.1
+## 2018.11.05 v4.1
 
 * JSON configuration format changes. Old format is still suported.
 * Performance on GeoIP matching is improved.
