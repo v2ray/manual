@@ -16,8 +16,8 @@ Below is the top level structure of the configuration. Each section has its own 
   "stats": {},
   "routing": {},
   "policy": {},
-  "inbound": {},
-  "outbound": {},
+  "inbounds": [],
+  "outbounds": [],
   "inboundDetour": [],
   "outboundDetour": [],
   "transport": {}
