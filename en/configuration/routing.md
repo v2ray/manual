@@ -11,26 +11,22 @@ Configuration:
 
 ```javascript
 {
-  "strategy": "rules",
-  "settings": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "domain": [
-          "baidu.com",
-          "qq.com"
-        ],
-        "outboundTag": "direct"
-      }
-    ]
-  }
+  "domainStrategy": "AsIs",
+  "rules": [
+    {
+      "type": "field",
+      "domain": [
+        "baidu.com",
+        "qq.com"
+      ],
+      "outboundTag": "direct"
+    }
+  ]
 }
 ```
 
 Where:
 
-* `strategy`: The only valid value for now is `"rules"`.
 * `domainStrategy`: Domain resolution strategy. Choices are:
   * `"AsIs"`: Only use domain for routing. Default value.
   * `"IPIfNonMatch"`: When no rule matches current domain, V2Ray resolves it into IP addresses (A or AAAA records) and try all rules again.

@@ -13,17 +13,10 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 
 ```javascript
 {
-  "strategy": "rules",
-  "settings": {
-    "domainStrategy": "AsIs",
-    "rules": []
-  }
+  "domainStrategy": "AsIs",
+  "rules": []
 }
 ```
-
-> `strategy`: "rules"
-
-目前只有`"rules"`这一个选项。
 
 > `domainStrategy`: "AsIs" | "IPIfNonMatch" | "IPOnDeman"
 
