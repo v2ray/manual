@@ -9,7 +9,6 @@
   * [Donation](welcome/donate.md)
   * [Support](welcome/help.md)
   * [FAQ](welcome/faq.md)
-  * [License](welcome/license.md)
   * [Blog&#8618;](https://steemit.com/@v2ray)
 * [Aufbau](configuration/README.md) 
   * [Überblick](configuration/overview.md)
