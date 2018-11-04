@@ -16,8 +16,8 @@ V2Ray имеет одинаковую структуру (см. ниже) фай
   "stats": {},
   "routing": {},
   "policy": {},
-  "inbound": {},
-  "outbound": {},
+  "inbounds": [],
+  "outbounds": [],
   "inboundDetour": [],
   "outboundDetour": [],
   "transport": {}
