@@ -6,7 +6,9 @@ refen: configuration/dns
 
 V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.
 
-Конфигурация:
+{% hint style='info' %} Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray. {% endhint %}
+
+Configuration:
 
 ```javascript
 {
@@ -29,7 +31,7 @@ V2Ray имеет внутренний DNS-сервер, используемый
 }
 ```
 
-Где:
+Where:
 
 * `hosts`: Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт. Формат домена: 
   * `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
@@ -42,13 +44,13 @@ V2Ray имеет внутренний DNS-сервер, используемый
     * `domains`: Список доменов, приоритетных для этого сервера. Формат доменов такой же, как и в [Маршрутизации](routing.md).
 * `clientIp`: IPv4-адрес текущей системы. Используется для уведомления DNS-сервера для лучшего разрешения IP. Значение не может быть адресом из частных ("серых") диапазонов.
 
-Чтобы использовать внутренний DNS, вам необходимо настроить `domainStrategy` в [маршрутизации](routing.md).
+To use the internal DNS service, you need to configure `domainStrategy` in [routing](routing.md).
 
-Запросы DNS, ретранслируемые этой службой DNS, также будут отправляться на основе параметров маршрутизации. Никакой дополнительной настройки не требуется.
+The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
 
 ## Стратегия запросов {#strategy}
 
-Служба DNS попытается получить и A, и AAAA в одном DNS-запросе. Поскольку не все DNS-серверы поддерживают такой формат, V2Ray отправляет объединённые запросы только на следующие DNS-серверы. С остальных серверов запрашивается только A-запись.
+DNS service will try to query both A and AAAA record in the same DNS message. As not all DNS servers support such query, V2Ray only sends A and AAAA query to the following DNS servers, and only send A queries to all other servers.
 
 ```text
 8.8.8.8
