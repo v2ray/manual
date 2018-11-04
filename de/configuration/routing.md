@@ -10,33 +10,29 @@ Konfiguration:
 
 ```javascript
 {
-  "strategy": "rules",
-  "settings": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "domain": [
-          "baidu.com",
-          "qq.com"
-        ],
-        "outboundTag": "direct"
-      }
-    ]
-  }
+  "domainStrategy": "AsIs",
+  "rules": [
+    {
+      "type": "field",
+      "domain": [
+        "baidu.com",
+        "qq.com"
+      ],
+      "outboundTag": "direct"
+    }
+  ]
 }
 ```
 
 Wo:
 
-* `strategy`: Der einzige gültige Wert für jetzt ist `"rules"`.
 * `domainStrategy`: Domain resolution strategy. Choices are: 
   * `"AsIs"`: Only use domain for routing. Default value.
-  * `"IPIfNonMatch"`: Wenn keine Regel der aktuellen Domäne entspricht, löst V2Ray sie in IP-Adressen (A- oder AAAA-Datensätze) auf und versucht alle Regeln erneut. 
-    * Wenn eine Domäne mehrere IP-Adressen hat, versucht V2Ray alle von ihnen.
-    * Die aufgelösten IPs werden nur für Routingentscheidungen verwendet. Der Datenverkehr wird weiterhin an die ursprüngliche Domänenadresse gesendet.
-  * `"IPOnDemand"`: Solange es eine IP-basierte Regel gibt, löst V2Ray die Domäne sofort in IP auf.
-* `rules`: Ein Array von Regeln. Für jede eingehende Verbindung versucht V2Ray diese Regeln von oben nach unten nacheinander auszuführen. Wenn eine Regel wirksam wird, wird die Verbindung an den Ausgang `outboundTag` der Regel weitergeleitet.
+  * `"IPIfNonMatch"`: When no rule matches current domain, V2Ray resolves it into IP addresses (A or AAAA records) and try all rules again. 
+    * If a domain has multiple IP addresses, V2Ray tries all of them.
+    * The resolved IPs are only used for routing decisions, the traffic is still sent to original domain address.
+  * `"IPOnDemand"`: As long as there is a IP-based rule, V2Ray resolves the domain into IP immediately.
+* `rules`: An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` of the rule.
 
 Konfiguration für jede Regel:
 
