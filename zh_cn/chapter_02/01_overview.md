@@ -46,7 +46,7 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 
 一个数组，每个元素是一个[入站连接配置](#inboundobject)。
 
-> `outbound`: \[[OutboundObject](#outboundobject)\]
+> `outbounds`: \[[OutboundObject](#outboundobject)\]
 
 一个数组，每个元素是一个[出站连接配置](#outboundobject)。列表中的第一个元素作为主出站协议。当路由匹配不存在或没有匹配成功时，流量由主出站协议发出。
 
