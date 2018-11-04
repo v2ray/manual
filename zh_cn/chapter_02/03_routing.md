@@ -18,7 +18,7 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 }
 ```
 
-> `domainStrategy`: "AsIs" | "IPIfNonMatch" | "IPOnDeman"
+> `domainStrategy`: "AsIs" | "IPIfNonMatch" | "IPOnDemand"
 
 域名解析策略，根据不同的设置使用不同的策略。
 
@@ -31,10 +31,6 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 > `rules`: \[[RuleObject](#ruleobject)\]
 
 对应一个数组，数组中每个一个元素是一个规则。对于每一个连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接转发至它所指定的`outboundTag`。当没有匹配到任何规则时，流量默认由主出站协议发出。
-
-{% hint style='info' %}
-当多个属性同时指定时，这些属性需要同时满足，才可以使当前规则生效。如果多个规则分别使用了`domain`或者`ip`，需要对应添加多条规则。
-{% endhint %}
 
 ### RuleObject
 
@@ -69,6 +65,10 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 }
 ```
 
+{% hint style='info' %}
+当多个属性同时指定时，这些属性需要同时满足，才可以使当前规则生效。如果多个规则分别使用了`domain`或者`ip`，需要对应添加多条规则。
+{% endhint %}
+
 > `type`: "field"
 
 目前只支持`"field"`这一个选项。
@@ -90,7 +90,7 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 一个数组，数组内每一个元素代表一个 IP 范围。当某一元素匹配目标 IP 时，此规则生效。有以下几种形式：
 
 * IP: 形如`"127.0.0.1"`。
-* [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+* [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): 形如`"10.0.0.0/8"`.
 * GeoIP: 形如`"geoip:cn"`，必须以`geoip:`（小写）开头，后面跟双字符国家代码，支持几乎所有可以上网的国家。
   * 特殊值：`"geoip:private"` (V2Ray 3.5+)，包含所有私有地址，如`127.0.0.1`。
 * 从文件中加载 IP: 形如`"ext:file:tag"`，必须以`ext:`（小写）开头，后面跟文件名和标签，文件存放在[资源目录](env.md#asset-location)中，文件格式与`geoip.dat`相同标签必须在文件中存在。
