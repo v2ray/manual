@@ -6,7 +6,9 @@ refen: configuration/dns
 
 V2Ray verfügt über einen internen DNS-Server, der DNS-Relay für andere Komponenten bereitstellt.
 
-Konfiguration:
+{% hint style='info' %} Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray. {% endhint %}
+
+Configuration:
 
 ```javascript
 {
@@ -29,7 +31,7 @@ Konfiguration:
 }
 ```
 
-Wo:
+Where:
 
 * `Gastgeber`: Eine Liste von statischen IP-Adressen. Jeder Eintrag hat einen Domänennamen als Schlüssel und IP-Adresse als Wert. Wenn eine DNS-Abfrage auf eine der Domänen in dieser Liste abzielt, wird die entsprechende IP-Adresse sofort zurückgegeben und die DNS-Abfrage wird nicht weitergeleitet. Das Format der Domäne ist: 
   * Beispiel: `"v2ray.com"`: Die Domäne, die aufgelöst werden soll, muss dieser Domäne entsprechen.
@@ -42,13 +44,13 @@ Wo:
     * `domains`: List of domains that are prioritized for this server. The format of a domain is the same as it is in [routing config](routing.md).
 * `clientIp`: IPv4 address of current system. This is used to notify DNS server for better IP resolution. The value can't be a private address.
 
-Um den internen DNS-Dienst zu verwenden, müssen Sie `domainStrategy` in [routing](routing.md)konfigurieren.
+To use the internal DNS service, you need to configure `domainStrategy` in [routing](routing.md).
 
 The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
 
 ## Query strategy {#strategy}
 
-Der DNS-Dienst versucht, sowohl den A- als auch den AAAA-Datensatz in derselben DNS-Nachricht abzufragen. Da nicht alle DNS-Server eine solche Abfrage unterstützen, sendet V2Ray nur die A- und AAAA-Abfrage an die folgenden DNS-Server und sendet nur A-Abfragen an alle anderen Server.
+DNS service will try to query both A and AAAA record in the same DNS message. As not all DNS servers support such query, V2Ray only sends A and AAAA query to the following DNS servers, and only send A queries to all other servers.
 
 ```text
 8.8.8.8 8.8.4.4 9.9.9.9
