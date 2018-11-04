@@ -47,6 +47,16 @@ refen: welcome/faq
 
 1. Shadowsocks 协议的加密方式或是密码不匹配；
 
+### Socks: Unknown Socks version: 67
+
+可能的原因：
+
+* 你开启的是 Socks 代理，但在浏览器中配置了 HTTP 代理
+
+解决方案：
+
+* 在 V2Ray 中配置一个 HTTP 入站代理，然后把浏览器的设置指向这个代理
+
 ## 其它软件错误
 
 ### 访问 Google 时，浏览器中显示证书无效

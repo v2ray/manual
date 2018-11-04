@@ -17,6 +17,18 @@ refen: welcome/faq
 * If you are using Linux with systemd, you can see panic log using command `journalctl -u v2ray`.
 * In general you can run command `v2ray -config=<config-file> -test` to see error information.
 
+## V2Ray Errors
+
+### Socks: Unknown Socks version: 67
+
+Possible causes
+
+* You are using socks inbound in V2Ray, but your browser is configured to use HTTP proxy.
+
+Solution
+
+* Add a HTTP inbound in V2Ray, and then update your browser proxy settings to use this proxy.
+
 ## License of this project
 
 Project V uses the following license.
