@@ -1,18 +1,18 @@
+.book-summary {
+  font-family: "Helvetica Neue", "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
 .markdown-section {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica Neue", "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .markdown-section code {
   font-family: "Source Code Pro", monospace;
   font-weight: 400;
   font-size: 14px;
-}
-
-.book-summary {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
 }
 
 .markdown-section code:not([class]) {
