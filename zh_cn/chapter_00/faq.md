@@ -68,7 +68,7 @@ refen: welcome/faq
 解决方案：
 
 * 需要在使用代理的情况下，清空缓存并重新抓取 DNS 数据
-* 在 V2Ray 中可使用 domainOverride 功能克服一部分 DNS 污染。
+* 在 V2Ray 中可使用`sniffing`功能克服一部分 DNS 污染。
 
 ## 项目授权
 
