@@ -5,7 +5,7 @@ refen: configuration/protocols/shadowsocks
 
 # Shadowsocks
 
-* 名称：shadowsocks
+* 名称：`shadowsocks`
 * 类型：入站 / 出站
 
 [Shadowsocks](https://zh.wikipedia.org/wiki/Shadowsocks) 协议，包含入站和出站两部分，兼容大部分其它版本的实现。
@@ -36,7 +36,6 @@ Shadowsocks 的配置分为两部分，`InboundConfigurationObject`和`OutboundC
   "email": "love@v2ray.com",
   "method": "aes-128-cfb",
   "password": "密码",
-  "udp": false,
   "level": 0,
   "ota": true,
   "network": "tcp"
