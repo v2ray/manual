@@ -2,50 +2,50 @@
 refcn: ui_client/android
 refen: ui_client/android
 ---
-# Android Client
+# Android 클라이언트
 
 ## BifrostV
 
-BifrostV is an Android app based on V2Ray core. It supports VMess, Shadowsocks, socks protocols.
+BifrostV는 V2Ray 코어 기반의 Android 앱입니다. VMess, Shadowsocks, socks 프로토콜을 지원합니다.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv)
-* Download: [APK Pure](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
+* 다운로드 : [Play 스토어](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv)
+* 다운로드 : [APK Pure](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
 
 ## V2RayNG
 
-V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray core.
+V2RayNG는 V2Ray를 기반으로하는 Android 앱입니다. V2Ray 코어와 동일한 기능 세트를 제공합니다.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang)
-* Source: [GitHub](https://github.com/2dust/v2rayNG)
+* 다운로드 : [Play 스토어](https://play.google.com/store/apps/details?id=com.v2ray.ang)
+* 출처 : [GitHub](https://github.com/2dust/v2rayNG)
 
 ## V2Ray Go
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=org.kkdev.v2raygo)
-* Source: [Github](https://github.com/xiaokangwang/V2RayGO)
+* 다운로드 : [Play 스토어](https://play.google.com/store/apps/details?id=org.kkdev.v2raygo)
+* 출처 : [Github](https://github.com/xiaokangwang/V2RayGO)
 
-## Actinium
+## 악티늄
 
-* Download: Play Store (Unavailable)
-* Source: [Github](https://github.com/V2Ray-Android/Actinium)
+* 다운로드 : Play 스토어 (사용할 수 없음)
+* 출처 : [Github](https://github.com/V2Ray-Android/Actinium)
 
-## Other tools {#other}
+## 기타 도구 {#other}
 
-### JuiceSSH
+### 주스
 
-SSH client.
+SSH 클라이언트.
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
-* Website: [JuiceSSH.com](https://juicessh.com/)
+* 다운로드 : [Play 스토어](https://play.google.com/store/apps/details?id=com.sonelli.juicessh)
+* 웹 사이트 : [JuiceSSH.com](https://juicessh.com/)
 
 ### Termius
 
-SSH client
+SSH 클라이언트
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)
+* 다운로드 : [Play 스토어](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)
 
-### Telegram
+### 전보
 
-Encrypted discussion.
+암호화 된 토론.
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [Play Store](https://play.google.com/store/apps/details?id=org.telegram.messenger)
+* 웹 사이트 : [telegram.org](https://telegram.org/)
+* 다운로드 : [Play 스토어](https://play.google.com/store/apps/details?id=org.telegram.messenger)
