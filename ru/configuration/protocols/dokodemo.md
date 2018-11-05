@@ -6,7 +6,7 @@ refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
 
 # Dokodemo-door
 
-* Название: dokodemo-door
+* Name: `dokodemo-door`
 * Тип: входящий
 
 Dokodemo-door - это протокол для входящих соединений. Он принимает любые соединения и передает их в указанное место назначения.

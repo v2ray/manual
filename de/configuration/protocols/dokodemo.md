@@ -6,7 +6,7 @@ refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
 
 # Dokodemo-Door
 
-* Name: dokodemo-door
+* Name: `dokodemo-door`
 * Typ: Eingehend
 
 Dokodemo-door is a protocol for inbound connections. Es nimmt alle Verbindungen und übergibt sie an das angegebene Ziel.
