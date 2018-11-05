@@ -2,12 +2,12 @@
 refcn: chapter_02/protocols/blackhole
 refen: configuration/protocols/blackhole
 ---
-# Blackhole
+# 블랙홀
 
-* Name: `blackhole`
-* Type: Outbound
+* 이름 : `블랙 홀`
+* 유형 : 아웃 바운드
 
-Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
+블랙홀은 아웃 바운드 연결을위한 프로토콜입니다. 사전 정의 된 응답으로 모든 연결을 차단합니다. [Routing](../routing.md)과 결합하여 일부 웹 사이트에 대한 액세스를 차단하는 데 사용할 수 있습니다.
 
 ## ConfigurationObject
 
@@ -19,21 +19,21 @@ Blackhole is a protocol for outbound connections. It blocks all connections with
 }
 ```
 
-> `response`: [ResponseObject](#responseobject)
+> `응답`: [ResponseObject](#responseobject)
 
-Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection.
+사전 정의 된 응답. Blockhole은 전달 된 연결에 대해 즉시 미리 정의 된 데이터를 보내고 연결을 종료합니다.
 
 ### ResponseObject
 
 ```javascript
 {
-  "type": "none"
+  "유형": "없음"
 }
 ```
 
-> `type`: "none" | "http"
+> `유형`: "없음"| "http"
 
-Type of the response, available options are:
+응답의 유형, 사용 가능한 옵션은 다음과 같습니다.
 
-* `"none"`: Default value. Empty response.
-* `"http"`: A valid HTTP 403 response.
+* `"없음"`: 기본값. 빈 응답.
+* `"http"`: 유효한 HTTP 403 응답입니다.

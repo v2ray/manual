@@ -2,187 +2,187 @@
 refcn: chapter_02/reverse
 refen: configuration/reverse
 ---
-# Reverse Proxy
+# 역방향 프록시
 
-Reverse proxy is an optional feature in V2Ray. It redirects traffic from a server to a client. Thus is so called "Reverse" proxying.
+역방향 프록시는 V2Ray의 선택적 기능입니다. 서버에서 클라이언트로 트래픽을 리디렉션합니다. 따라서 "역방향"프록 싱이라고합니다.
 
-{% hint style='tip' %} Reverse proxy is available in V2Ray 4.0+. It is now in beta, and may be improved in near future. {% endhint %}
+{% hint style = 'tip'%} 역방향 프록시는 V2Ray 4.0 이상에서 사용할 수 있습니다. 현재 베타 버전이므로 가까운 시일 내에 향상 될 수 있습니다. {% endhint %}
 
-Reverse proxy works in the following way:
+역방향 프록시는 다음과 같은 방식으로 작동합니다.
 
-* Suppose there is a device A that runs a web server. Device A has no public IP address, and can't be accessed from internet. There is another device B, say a cloud server, which can be access from internet. We need to use B as portal, to redirect traffice to A.
-* Now we install a V2Ray on device A, named `bridge`. And then install a V2Ray on device B, named `portal`.
-* `bridge` will open connections to `portal`. Their target can be customized for routing purpose. `portal` will receive these connections, as well as connections from other uses in the internet. `portal` will "connect" these two kind of connections. Then the interent traffic will be tunneled to `bridge`.
-* After `bridge` receives traffic from internet through `portal`, it will send these traffic to the web server on localhost. You may configure routing for these traffic as well.
-* `bridge` will control load balance based of the amount of traffic.
+* 웹 서버를 실행하는 장치 A가 있다고 가정합니다. 장치 A에는 공용 IP 주소가 없으므로 인터넷에서 액세스 할 수 없습니다. 인터넷에서 액세스 할 수있는 클라우드 서버라고하는 또 다른 장치 B가 있습니다. 우리는 B를 포털로 사용하여 traffice를 A로 리디렉션해야합니다.
+* 이제 우리는 `bridge`이라는 이름의 장치 A에 V2Ray를 설치합니다. 그런 다음 장치 `포털`이라는 V2Ray를 설치합니다.
+* `브리지` 은 `포털`연결을 엽니 다. 대상은 라우팅 용도로 사용자 정의 할 수 있습니다. `포털` 은 인터넷에서 다른 용도의 연결은 물론이 연결을받습니다. `포털` 은이 두 종류의 연결을 "연결"합니다. 그러면 interent 트래픽은 `bridge`로 터널링됩니다.
+* `브릿지` 이 `포털`통해 인터넷 트래픽을 수신하면 localhost의 웹 서버에 이러한 트래픽을 보냅니다. 이러한 트래픽에 대한 라우팅을 구성 할 수도 있습니다.
+* `브릿지` 은 트래픽 양에 따라로드 밸런스를 제어합니다.
 
-{% hint style='danger' %} Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to configure Mux again on its outbound. {% endhint %}
+{% 힌트 스타일 = '위험'%} 리버스 프록시는 이미 [Mux](mux.md). 아웃 바운드에 Mux를 다시 설정할 필요가 없습니다. {% endhint %}
 
-## ReverseObject
+## 역 객체
 
-`ReverseObject` is used as `reverse` field in top level configuration.
+`역방향 객체` 은 최상위 레벨 구성에서 `역` 필드로 사용됩니다.
 
 ```javascript
 {
-  "bridges": [{
-    "tag": "bridge",
-    "domain": "test.v2ray.com"
-  }],
-  "portals": [{
-    "tag": "portal",
+  "브리지"[{
+    "태그": "다리"
+    "도메인": "test.v2ray.com"
+  },
+  "포털"[{
+    "태그": "포털"
     "domain": "test.v2ray.com"
   }]
 }
 ```
 
-> `bridges`: \[[BridgeObject](bridgeobject)\]
+> `브릿지`: \ [[BridgeObject](bridgeobject)\]
 
-An array of `bridge`s. Each `bridge` is a [BridgeObject](bridgeobject).
+`브릿지`의 배열. 각 `브릿지` 은 [BridgeObject](bridgeobject)입니다.
 
-> `portals`: \[[PortalObject](portalobject)\]
+> `포털`: \ [[PortalObject](portalobject)\]
 
-An array of `portal`s. Each `portal` is a [PortalObject](bridgeobject).
+`포털`의 배열입니다. 각 `포털` 은 [PortalObject](bridgeobject)입니다.
 
 ### BridgeObject
 
 ```javascript
 {
-  "tag": "bridge",
-  "domain": "test.v2ray.com"
+  "태그": "브리지",
+  "도메인": "test.v2ray.com"
 }
 ```
 
-> `tag`: string
+> `태그`: 문자열
 
-A tag. All traffic initiated by this `bridge` will have this tag. It can be used for [routing](routing.md), identified as `inboundTag`.
+태그. 이 `브리지` 의해 시작된 모든 트래픽에는이 태그가 있습니다. `인바운드 태그`식별되는 [라우팅](routing.md)사용될 수 있습니다.
 
-> `domain`: string
+> `도메인`: 문자열
 
-A domain. All connections initiated by `bridge` towards `portal` will use this domain as target. This domain is only used for communication between `bridge` and `portal`. It is not necessary to be actually registered.
+도메인. `브리지` 에서 시작하여 `포털` 으로 향하는 모든 연결은이 도메인을 대상으로 사용합니다. 이 도메인은 `브리지` 과 `포털`사이의 통신에만 사용됩니다. 실제로 등록 할 필요는 없습니다.
 
 ### PortalObject
 
-> `tag`: string
+> `태그`: 문자열
 
-A Tag. You need to redirect all traffic to this `portal`, by targeting `outboundTag` to this `tag`. The traffic includes the connections from `bridge`, as well as internet traffic.
+태그. `아웃 바운드 태그` 을이 `태그`로 타겟팅하여 모든 트래픽을이 `포털`로 리디렉션해야합니다. 트래픽에는 `브리지`의 연결과 인터넷 트래픽이 포함됩니다.
 
-> `domain`: string
+> `도메인`: 문자열
 
-A domain. When a connection targeting this domain, `portal` considers it is a connection from `bridge`, otherwise it is an internet connection.
+도메인. 이 도메인을 대상으로하는 연결 인 경우 `포털` 은 `브리지`에서의 연결이라고 간주하고, 그렇지 않으면 인터넷 연결입니다.
 
-{% hint style='tip' %} Like other usages, a V2Ray instance can be used as a `bridge`, or a `portal`, or both as the same time. {% endhint %}
+{% hint style = 'tip'%} 다른 용도와 마찬가지로 V2Ray 인스턴스는 `브리지`또는 `포털`또는 두 가지 모두로 같은 시간에 사용할 수 있습니다. {% endhint %}
 
-## Example configuration
+## 구성 예
 
-`bridge` usually needs two outbounds. One for connecting `portal`, and another for connecting local web server.
+`브릿지` 일반적으로 두 개의 아웃 바운드가 필요합니다. 하나는 `포털`을 연결하기위한 것이고 다른 하나는 로컬 웹 서버 연결을위한 포털입니다.
 
-Reverse:
+역:
 
 ```javascript
 {
-  "bridges": [{
-    "tag": "bridge",
-    "domain": "test.v2ray.com"
+  "브리지": [{
+    "태그": "브리지",
+    "도메인": "test.v2ray.com"
   }]
 }
 ```
 
-Outbound:
+배 밖으로:
 
 ```javascript
 {
   "tag": "out"
-  "protocol": "freedom",
+  "protocol": "자유",
   "settings": {
-    "redirect": "127.0.0.1:80" // Send traffic to local web server
+    "redirect": "127.0.0.1:80"// 로컬 웹 서버로 트래픽 보내기
   }
 },
-{
-  "protocol": "vmess",
-  "settings": {
+
+  "프로토콜": "vmess",
+  "설정": {
     "vnext": [{
-      "address": "portal的IP地址",
+      "주소": "포털 IP 주소",
       "port": 1024,
-      "users": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
+      "users": [{ " id ":"27848739-7e62-4138-9fd3-098a63964b6b "}]
     }]
   },
-  "tag": "interconn"
+  "tag ":"interconn "
 }
 ```
 
-Routing:
+라우팅 :
 
 ```javascript
-"routing": {
-  "strategy": "rules",
-  "settings": {
-    "rules": [{
-      "type": "field",
-      "inboundTag": ["bridge"],
-      "domain": ["full:test.v2ray.com"],
-      "outboundTag": "interconn"
-    },{
-      "type": "field",
-      "inboundTag": ["bridge"],
-      "outboundTag": "out"
+"라우팅": {
+  "전략": "규칙",
+  "설정": {
+    "규칙": [{
+      "유형": "필드",
+      "inboundTag": [ "브리지"],
+      "도메인 ":"[full : test.v2ray.com "],
+      "outboundTag ":"interconn "
+    }, {
+      "type ":"field ",
+      "inboundTag ": ["bridge "],
+      "outboundTag " : "out"
     }]
   }
 }
 ```
 
-`portal` usually needs two inbounds. One for connections from `bridge`, and another for internet connections.
+`포털` 에는 대개 두 개의 인바운드가 필요합니다. 하나는 `브리지`연결이고 다른 하나는 인터넷 연결입니다.
 
-Reverse:
+역:
 
 ```javascript
 {
-  "portals": [{
-    "tag": "portal",
-    "domain": "test.v2ray.com"  // Must be the same as in bridge
-  }]
+  "포털": [{
+    "태그": "포털",
+    "도메인": "test.v2ray.com"// 브릿지
+  와 동일해야 함}]
 }
 ```
 
-入站代理:
+入 站 代理 :
 
 ```javascript
 {
-  "tag": "external",
-  "port": 80,  // Open port 80 for internet HTTP traffic
-  "protocol": "dokodemo-door",
-  "settings": {
-    "address": "127.0.0.1",
+  "태그": "외부",
+  "포트": 80, // 인터넷 HTTP 트래픽 용 "포트 80"
+  "프로토콜": "dokodemo-door",
+  "설정": {
+    "주소": "127.0
     "port": 80,
     "network": "tcp"
   }
 },
 {
-  "port": 1024, // For bridge connections
+  "port": 1024, // 브리지 연결의 경우
   "tag": "interconn",
-  "protocol": "vmess",
-  "settings": {
-    "clients": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
+  "protocol ":"vmess ",
+  "settings ": {
+    "clients ": [{"id ":"27848739-7e62-4138-9fd3-098a63964b6b "}]
   }
 }
 ```
 
-Routing
+라우팅
 
 ```javascript
-"routing": {
-  "strategy": "rules",
-  "settings": {
-    "rules": [{
-      "type": "field",
-      "inboundTag": ["external"],
-      "outboundTag": "portal"
-    },{
-      "type": "field",
-      "inboundTag": ["interconn"],
-      "outboundTag": "portal"
+"라우팅": {
+  "전략": "규칙",
+  "설정": {
+    "규칙": [{
+      "유형": "필드",
+      "inboundTag": [ "외부"],
+      " ":"포털 "
+    , {
+      "유형 ":"필드 ",
+      "인바운드 태그 ": ["interconn "],
+      "아웃 바운드 태그 ":"포털 "
     }]
   }
 }
 ```
 
-{% hint style='tip' %} In practice, you may want to run `bridge` first and then `portal`. {% endhint %}
+{% 힌트 스타일 = '팁'%}는 실제로, 당신은 실행할 수 있습니다 `다리` 먼저 다음 `문`. {% endhint %}

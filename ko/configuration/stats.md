@@ -2,26 +2,26 @@
 refcn: chapter_02/stats
 refen: configuration/stats
 ---
-# Statistics
+# 통계
 
-V2Ray provides some information about its internals.
+V2Ray는 내부 정보를 제공합니다.
 
 ## StatsObject
 
-`StatsObject` is used as `stats` field in top level configuration.
+`StatsObject` 은 최상위 레벨 구성에서 `stats` 필드로 사용됩니다.
 
 ```javascript
 {
 }
 ```
 
-All stats counters are listed below:
+모든 통계 카운터는 다음과 같습니다.
 
-* `user>>>[email]>>>traffic>>>uplink` (V2Ray 3.16+): Accumulated uplink traffic of specific user, in bytes.
-* `user>>>[email]>>>traffic>>>downlink` (V2Ray 3.16+): Accumulated downlink traffic of specific user, in bytes.
-* `inbound>>>[tag]>>>traffic>>>uplink` (V2Ray 3.18+): Accumulated uplink traffic of specific inbound, in bytes.
-* `inbound>>>[tag]>>>traffic>>>downlink` (V2Ray 3.18+): Accumulated downlink traffic of specific inbound, in bytes.
+* `사용자>>>[email]>>>트래픽>>>업 링크` (V2Ray 3.16+) : 특정 사용자의 누적 업 링크 트래픽 (바이트).
+* `사용자>>>[email]>>>트래픽>>>다운 링크` (V2Ray 3.16+) : 특정 사용자의 누적 다운 링크 트래픽 (바이트).
+* `인바운드>>>[tag]>>>트래픽>>>업 링크` (V2Ray 3.18+) : 특정 인바운드의 누적 업 링크 트래픽 (바이트).
+* `인바운드>>>[tag]>>>트래픽>>>다운 링크` (V2Ray 3.18+) : 특정 인바운드의 누적 다운 링크 트래픽 (바이트).
 
-## Tips
+## 팁
 
-* If a user doesn't have a valid email address, the stats will not be enabled.
+* 사용자에게 유효한 이메일 주소가 없으면 통계가 사용 설정되지 않습니다.
