@@ -9,7 +9,7 @@
   font-size: 14px;
 }
 
-.markdown-section code {
+.markdown-section pre>code {
   font-family: "Source Code Pro", monospace;
   font-weight: 400;
   font-size: 14px;
