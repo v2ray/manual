@@ -33,6 +33,7 @@ build_dir zh_cn
 build_dir en
 build_dir de
 build_dir ru
+build_dir ko
 
 TARGET_DIR=_v2ray_com
 
@@ -46,6 +47,8 @@ mkdir ${TARGET_DIR}/de/
 cp -r ./de/_book/* ${TARGET_DIR}/de/
 mkdir ${TARGET_DIR}/ru/
 cp -r ./ru/_book/* ${TARGET_DIR}/ru/
+mkdir ${TARGET_DIR}/ko/
+cp -r ./ru/_book/* ${TARGET_DIR}/ko/
 cp -r ./_dev/* ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
