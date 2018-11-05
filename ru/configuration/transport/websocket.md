@@ -6,22 +6,25 @@ refen: configuration/transport/websocket
 
 Использует стандартный WebSocket для передачи данных. Соединения Websocket могут быть проксифицированы HTTP-сервером, например Nginx.
 
-Конфигурация:
+## WebSocketObject
+
+`WebSocketObject` is used as `wsSettings` in `TransportObject` or `StreamSettingsObject`.
+
+{% hint style='info' %} Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address. {% endhint %}
 
 ```javascript
 {
-  "path": "",
+  "path": "/",
   "headers": {
     "Host": "v2ray.com"
   }
 }
 ```
 
-Где:
+> `path`: string
 
-* `path`: Путь, используемый для WebSocket. По умолчанию корень домена `""`.
-* `headers`: Пользовательский HTTP-заголовок. Это массив, в котором каждая запись представляет собой пару ключевых значений в строке, для заголовка и значения в заголовке HTTP. По умолчанию пуст.
+Path used for WebSocket. Default to root, as `"/"`.
 
-## Важно
+> `headers`: map{string, string}
 
-* Начиная с V2Ray 3.4, Websocket распознает заголовок X-Forwarded-For и использует его как исходный адрес трафика.
+Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.

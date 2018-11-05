@@ -16,13 +16,9 @@ V2Ray доступен на следующих платформах:
 * OpenBSD (x86 / amd64)
 * Dragonfly BSD (amd64)
 
-## Требования к оборудованию {#hardware}
+## Download {#download}
 
-Не менее 32 МБ свободной памяти.
-
-## Загрузка {#download}
-
-Готовые пакеты можно найти здесь:
+Pre-built packages can be found here:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
 2. Собранные утилиты: [v2ray.com/download](https://www.v2ray.com/download/)
@@ -30,32 +26,32 @@ V2Ray доступен на следующих платформах:
 4. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
-Все пакеты находятся в формате ZIP. Загрузите и распакуйте подходящие пакеты в свою систему.
+All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
 ## Verify {#verify}
 
-Существует два способа проверки пакетов.
+There are 2 ways to verify packages.
 
-1. Metadata.txt на странице релиза содержит хэш SHA1 для всех пакетов.
+1. Each `.zip` file has a corresponding `.dgst` file for SHA digests.
 2. Файл подписи GPG для исполняемых файлов (v2ray / v2ray.exe) можно найти в файле v2ray.sig (или v2ray.exe.sig) в том же пакете. Открытый ключ находится [в хранилище](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
-## Установка в Windows и Mac OS {#install-windows}
+## Install on Windows or Mac OS {#install-windows}
 
-Запустите v2ray / v2ray.exe после распаковки пакетов.
+Run v2ray / v2ray.exe after unzip the packages.
 
-## Установка в Linux {#install-linux}
+## Install on Linux {#install-linux}
 
-Мы предоставляем сценарий для установки в Linux. Этот сценарий обнаруживает предыдущую инсталляцию v2ray и затем обновляет старую или устанавливает новую. Если предыдущая версия обнаруживается, конфигурационный файл в /etc/v2ray не будет перезаписан во время обновления.
+We provide a script to install on Linux. This script detects previous installed v2ray and then upgrade or install a new one accordingly. If there is a previous version, the config file in /etc/v2ray will not be overwritten during upgrade.
 
-Следующая команда требует прав суперпользователя.
+The following command assumes root permission.
 
-Выполните следующую команду для установки V2Ray. Если yum или apt доступны, скрипт установит unzip и daemon / systemd. Они необходимы для запуска V2Ray в качестве службы. Вам необходимо установить их вручную, если ваша система Linux не поддерживает yum или apt.
+Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
 
 ```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
-Этот сценарий устанавливает следующие файлы.
+The script installs the following files.
 
 * `/usr/bin/v2ray/v2ray`: Исполняемый файл V2Ray
 * `/usr/bin/v2ray/v2ctl`: Утилита управления
@@ -63,14 +59,14 @@ bash <(curl -L -s https://install.direct/go.sh)
 * `/usr/bin/v2ray/geoip.dat`: Файл с данными об IP
 * `/usr/bin/v2ray/geosite.dat`: Файл с данными о доменах
 
-Этот сценарий также настраивает V2Ray для запуска в качестве службы, если systemd доступен.
+This script also configures V2Ray to run as service, if systemd is available.
 
-Конфигурации находятся в следующих местах.
+Configurations are at the following places.
 
 * `/etc/systemd/system/v2ray.service`: Systemd
 * `/etc/init.d/v2ray`: SysV
 
-После установки необходимо:
+After installation, we will need to:
 
 1. Изменить файл `/etc/v2ray/config.json` так, как вам необходимо.
 2. Выполнить команду `service v2ray start` для запуска V2Ray.
@@ -78,23 +74,23 @@ bash <(curl -L -s https://install.direct/go.sh)
 
 ### go.sh {#gosh}
 
-go.sh поддерживает следующие параметры.
+go.sh supports the following parameters.
 
 * `-p` или `--proxy`: Использовать прокси для загрузки пакетов V2Ray. Формат такой же, как и у curl. Например, `"socks5://127.0.0.1:1080"` или `"http://127.0.0.1:3128"`.
 * `-f` or `--force`: Принудительная установка. Сценарий предполагает, что V2Ray не был установлен вообще.
 * `--version`: Версия, которая должна быть установлена, например `"v1.13"`. Значение по умолчанию - это последняя стабильная версия.
 * `--local`: Использовать локальный пакет для установки.
 
-Примеры:
+Examples:
 
 * Использовать SOCKS-прокси 127.0.0.1:1080 для установки последнего пакета: ```./go.sh -p socks5://127.0.0.1:1080```
 * Установить v1.13 из локального файла:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
 
 ## Docker {#docker}
 
-V2Ray предоставляет два типа докер-контейнеров:
+V2Ray provides 2 docker images:
 
 * [v2ray/official](https://hub.docker.com/r/v2ray/official/): Официальные релизы.
 * [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Свежайший код (в разработке).
 
-Контейнеры имеют ту же структуру, что и установленный Linux.
+The 2 images has the same structure as the Linux installation.
