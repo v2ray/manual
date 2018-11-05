@@ -16,13 +16,9 @@ V2Ray ist auf den folgenden Plattformen verfügbar:
 * OpenBSD (x86 / amd64)
 * Libelle BSD (amd64)
 
-## Hardware requirement {#hardware}
-
-Mindestens 32 MB freier Speicher.
-
 ## Download {#download}
 
-Vorgefertigte Pakete finden Sie hier:
+Pre-built packages can be found here:
 
 1. Github Veröffentlichung: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
 2. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
@@ -32,30 +28,30 @@ Vorgefertigte Pakete finden Sie hier:
 
 All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
-## Überprüfen {#verify}
+## Verify {#verify}
 
-Es gibt 2 Möglichkeiten, Pakete zu überprüfen.
+There are 2 ways to verify packages.
 
-1. Metadata.txt in Release-Seite enthält SHA1-Hash für alle Pakete.
+1. Each `.zip` file has a corresponding `.dgst` file for SHA digests.
 2. Die GPG-Signaturdatei für ausführbare Dateien (v2ray / v2ray.exe) befindet sich in v2ray.sig (oder v2ray.exe.sig) im selben Paket. Der öffentliche Schlüssel ist [im Repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
 ## Install on Windows or Mac OS {#install-windows}
 
-Führen Sie v2ray / v2ray.exe aus, nachdem Sie die Pakete entpackt haben.
+Run v2ray / v2ray.exe after unzip the packages.
 
 ## Install on Linux {#install-linux}
 
-Wir bieten ein Skript zur Installation unter Linux an. Dieses Skript erkennt zuvor installierte v2ray und aktualisiert oder installiert dann eine neue Version entsprechend. Wenn es eine vorherige Version gibt, wird die Konfigurationsdatei in / etc / v2ray während des Upgrades nicht überschrieben.
+We provide a script to install on Linux. This script detects previous installed v2ray and then upgrade or install a new one accordingly. If there is a previous version, the config file in /etc/v2ray will not be overwritten during upgrade.
 
-Der folgende Befehl nimmt root-Berechtigung an.
+The following command assumes root permission.
 
-Führen Sie den folgenden Befehl aus, um V2Ray zu installieren. Wenn yum oder apt verfügbar ist, installiert das Skript unzip und daemon / systemd. Sie müssen V2Ray als Dienst ausführen. Sie müssen sie manuell installieren, wenn Ihr Linux-System yum oder apt nicht unterstützt.
+Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
 
 ```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
-Das Skript installiert die folgenden Dateien.
+The script installs the following files.
 
 * `/ usr / bin / v2ray / v2ray`: Ausführbare Datei von V2Ray
 * `/ usr / bin / v2ray / v2ctl`: Dienstprogramm
@@ -63,14 +59,14 @@ Das Skript installiert die folgenden Dateien.
 * `/usr/bin/v2ray/geoip.dat`: IP-Datendatei
 * `/usr/bin/v2ray/geosite.dat`: Domain-Datendatei
 
-Dieses Skript konfiguriert auch V2Ray als Dienst, wenn systemd verfügbar ist.
+This script also configures V2Ray to run as service, if systemd is available.
 
-Konfigurationen sind an folgenden Stellen.
+Configurations are at the following places.
 
 * `/etc/systemd/system/v2ray.service`: Systemd
 * `/etc/init.d/v2ray`: SysV
 
-Nach der Installation müssen wir:
+After installation, we will need to:
 
 1. Update `/etc/v2ray/config.json` Datei für Ihr eigenes Szenario.
 2. Führen Sie `service v2ray start` , um V2Ray zu starten.
@@ -78,23 +74,23 @@ Nach der Installation müssen wir:
 
 ### go.sh {#gosh}
 
-go.sh unterstützt die folgenden Parameter.
+go.sh supports the following parameters.
 
 * `-p` or `--proxy`: Use a proxy to download V2Ray packages. Same as curl format, such as `"socks5://127.0.0.1:1080"` or `"http://127.0.0.1:3128"`.
 * `-f` or `--force`: Force installation. The script will assume V2Ray was not installed at all.
 * `--version`: The version to be installed, such as `"v1.13"`. Default value is the latest stable release.
 * `--local`: Verwenden Sie ein lokales Paket für die Installation.
 
-Beispiele:
+Examples:
 
 * Verwenden Sie den SOCKS-Proxy 127.0.0.1:1080, um das neueste Paket zu installieren: ```./go.sh -p socks5: //127.0.0.1: 1080```
 * Installiere v1.13 von der lokalen Datei:```./go.sh --version v1.13 --local /pfad/zu/v2ray.zip```
 
 ## Docker {#docker}
 
-V2Ray bietet 2 Docker-Images:
+V2Ray provides 2 docker images:
 
 * [v2ray/official](https://hub.docker.com/r/v2ray/official/): Contains official releases.
 * [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Contains latest code.
 
-Die 2 Bilder haben die gleiche Struktur wie die Linux-Installation.
+The 2 images has the same structure as the Linux installation.
