@@ -4,7 +4,7 @@ refen: configuration/protocols/freedom
 ---
 # Freedom
 
-* Название: freedom
+* Name: `freedom`
 * Тип: исходящий
 
 Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations. This outbound is used when you want to send traffic to its real destination.

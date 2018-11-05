@@ -4,9 +4,9 @@ refen: configuration/transport/mkcp
 ---
 # Доставка через mKCP
 
-mKCP - это надежный потоковый протокол. Основан на UDP.
+mKCP is a reliable stream transport. It is an UDP based protocol. mKCP sends more traffic for lower latency. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
 
-Конфигурация:
+## KcpObject
 
 ```javascript
 {
@@ -23,37 +23,61 @@ mKCP - это надежный потоковый протокол. Основа
 }
 ```
 
-Где:
+> `mtu`: number
 
-* `mtu`: Maximum transmission unit. Устанавливает максимальное количество байт, которые может содержать пакет UDP. Рекомендуемое значение между `576` и `1460`. По умолчанию `1350`.
-* `tti`: Transmission time interval, в миллисекундах. mKCP будет отправлять данные через указанный интервал. Рекомендуемое значение между `10` и `100`. По умолчанию `50`.
-* `uplinkCapacity`: Ширина полосы исходящей линии, МБ/с. Максимальная пропускная способность для экземпляра V2Ray для выгрузки данных в Сеть. Значение по умолчанию: `5`. 
-  * Обратите внимание, в "МБ/с" Б - это байт, а не бит.
-  * Можно использовать `0` для небольшой пропускной способности.
-* `downlinkCapacity`: Ширина полосы входящей линии, МБ/с. Максимальная пропускная способность для экземпляра V2Ray для загрузки данных из Сети. Значение по умолчанию: `20`. 
-  * Обратите внимание, в "МБ/с" Б - это байт, а не бит.
-  * Можно использовать `0` для небольшой пропускной способности.
-* `congestion`: Следует ли включать контроль перегрузки. Значение по умолчанию: `false`. 
-  * Когда управление перегрузкой включено, V2Ray определяет качество сети. Он будет отправлять меньше пакетов, если потеря пакетов будет серьезной, или больше, если сеть не полностью заполнена.
-* `readBufferSize`: Размер буфера для чтения для каждого соединения, в МБ. Значение по умолчанию: `2`.
-* `writeBufferSize`: Размер буфера для записи для каждого соединения, в МБ. Значение по умолчанию: `2`.
-* `header`: Заголовок пакета для маскировки. 
-  * `type`: Тип маскировки. Возможные варианты: 
-    * `"none"`: Значение по умолчанию. Без обфускации.
-    * `"srtp"`: Маскировка под SRTP трафик. Для прослушивающих выглядит как видеозвонок, например из Facetime.
-    * `"utp"`: Маскировка под uTP трафик. Со стороны выглядит как трафик от Bittorrent.
-    * `"wechat-video"`: Маскировка под WeChat.
-    * `"dtls"`: Маскировка под пакеты DTLS 1.2.
-    * `"wireguard"` (V2Ray 3.38+): Маскировка под пакеты WireGuard. (только маскировка, НЕ настоящий протокол WireGuard)
+Maximum transmission unit. It indicates the maxium number bytes that an UDP packet can carry. Recommended value is between `576` and `1460`. Default value `1350`.
 
-## Замечания {#tips}
+> `tti`: number
 
-* `uplinkCapacity` и `downlinkCapacity` определяют скорость mKCP. На стороне клиента `uplinkCapacity` устанавливает скорость отправки данных на сервер. На стороне сервера `downlinkCapacity` устанавливает скорость получения данных сервером. Реальная скорость будет определяться наименьшим значением.
-* mKCP использует протокол UDP. Убедитесь, что ваш брандмауэр настроен правильно.
-* mKCP отправляет больше трафика для более низкой задержки. Чтобы передавать один и тот же объем данных, mKCP обычно требует большей пропускной способности, чем TCP.
+Transmission time interval, in milli-second. mKCP sends data in this interval. Recommended value is between `10` and `100`. Default value `50`.
+
+> `uplinkCapacity`: number
+
+Uplink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to upload data to a remote one. Default value is `5`. Please note it is byte (in MB/s), not bit. One may use value `0` for a small bandwidth.
+
+> `downlinkCapacity`: number
+
+Downlink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to download data. Default value is `20`. Please note it is byte (in MB/s), not bit. One may use value `0` for a small bandwidth.
+
+{% hint style='info' %} `uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection. {% endhint %}
+
+> `congestion`: true | false
+
+Whether or not to enable congestion control. Default value is `false`. When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
+
+> `readBufferSize`: number
+
+Read buffer size for a single connection, in MB. Default value is `2`.
+
+> `writeBufferSize`: number
+
+Write buffer size for a single connection, in MB. Default value is `2`.
+
+> `header`: [HeaderObject]{#headerobject}
+
+Configuration for packet header obfuscation.
+
+### HeaderObject
+
+```javascript
+{
+  "type": "none"
+}
+```
+
+> `type`: string
+
+Type of obfuscation. Corresponding inbound and outbound proxy must have the same settings. Choices are:
+
+* `"none"`: Default value. No obfuscation is used.
+* `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
+* `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
+* `"wechat-video"`: Obfuscated to WeChat traffic.
+* `"dtls"`: Obfuscated as DTLS 1.2 packets.
+* `"wireguard"`: Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
 
 ## Благодарности {#credits}
 
-* @skywind3000 создал оригинальный протокол KCP и воплотил его на C.
-* @xtaci реализовал KCP на Go.
-* @xiaokangwang встроил KCP в V2Ray.
+* @skywind3000 invented the original KCP protocol and implemented in C.
+* @xtaci re-implement KCP protocol in Go.
+* @xiaokangwang integrated KCP into V2Ray.
