@@ -4,7 +4,7 @@ refen: configuration/protocols/blackhole
 ---
 # Blackhole
 
-* Name: Schwarzes Loch
+* Name: `blackhole`
 * Typ: Ausgehend
 
 Blackhole ist ein Protokoll für ausgehende Verbindungen. Es blockiert alle Verbindungen mit vordefinierten Antworten. Kombiniert mit [ Routing ](../routing.md) Dies kann zum Sperren des Zugriffs auf einige Websites verwendet werden.
