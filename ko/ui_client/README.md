@@ -2,12 +2,12 @@
 refcn: ui_client/index
 refen: ui_client/index
 ---
-# Project V Clients
+# 프로젝트 V 클라이언트
 
-Besides the core V2ray, Project V includes various of GUI clients in many platforms. Please see the following list for your favor.
+핵심 V2ray 외에, Project V는 많은 플랫폼에 다양한 GUI 클라이언트를 포함합니다. 다음 목록을 참조하십시오.
 
 * [Windows](windows.md)
-* [Mac OS X](osx.md)
+* [맥 OS X](osx.md)
 * [iOS](ios.md)
-* [Android](android.md)
-* [Online services](ui_client/service.md)
+* [기계적 인조 인간](android.md)
+* [온라인 서비스](ui_client/service.md)
