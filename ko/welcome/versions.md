@@ -2,416 +2,416 @@
 refcn: chapter_00/01_versions
 refen: welcome/versions
 ---
-# Version History
+# 버전 기록
 
 ## 2018.11.05 v4.1
 
-* JSON configuration format changes. Old format is still suported.
-* Performance on GeoIP matching is improved.
+* JSON 구성 형식이 변경됩니다. 이전 형식은 여전히 ​​지원됩니다.
+* GeoIP 일치 성능이 향상되었습니다.
 
 ## 2018.11.02 v4.0
 
-* Reverse proxy.
-* Release packages for ppc64 and ppc64le.
+* 역방향 프록시.
+* ppc64 및 ppc64le 용 패키지를 릴리스하십시오.
 
 ## 2018.10.12 v3.47
 
-* Migrate to a new continuous delivery pipeline
+* 새로운 지속적인 공급 파이프 라인으로 마이그레이션
 
 ## 2018.09.28 v3.44
 
-* Dokodemo-door now supports TProxy in Linux.
+* Dokodemo-door는 이제 Linux에서 TProxy를 지원합니다.
 
 ## 2018.09.21 v3.43
 
-* DNS now supports on-demand queries by domain.
+* DNS는 이제 도메인 별 주문형 쿼리를 지원합니다.
 
 ## 2018.09.14 v3.40
 
-* New socket options in transport configuration. It can be used to setup VPNs.
-* New TCP Fast Open option in transport configuration.
+* 전송 구성의 새 소켓 옵션 VPN 설정에 사용될 수 있습니다.
+* 전송 구성의 새 TCP 고속 열기 옵션입니다.
 
 ## 2018.09.03 v3.38
 
-* mKCP has a new WireGuard header.
-* Fix softfloat binaries in mips/mips64.
+* mKCP에는 새로운 WireGuard 헤더가 있습니다.
+* softfloat 바이너리를 mips / mips64로 수정하십시오.
 
 ## 2018.08.31 v3.37
 
-* Performance of reading network connection in optilized. See [Environment Variables](../configuration/env.md)。
-* VMess uses AES-128-GCM by default on ARM64.
-* Built by Go 1.11.
+* optilized에서 읽기 네트워크 연결 성능. [환경 변수](../configuration/env.md)참조하십시오.
+* VMess는 기본적으로 ARM64에서 AES-128-GCM을 사용합니다.
+* 1.11에 의해 만들어진.
 
 ## 2018.08.24 v3.36
 
-* Great performance improvement on subdomain matching (`domain:`) in routing.
-* Full domain matching is now supported in routing.
+* 라우팅에서 하위 도메인 매칭 (`도메인 :`)에서 성능이 크게 향상되었습니다.
+* 이제 전체 도메인 일치가 라우팅에서 지원됩니다.
 
 ## 2018.08.07 v3.34
 
-* Better memory management on most devices.
+* 대부분의 장치에서 메모리 관리 기능 향상.
 
 ## 2018.07.27 v3.32
 
-* BitTorrent traffic can now be sniff'ed.
-* New `protocol` option in routing rules for protocol-based routing.
-* New `geosite:speedtest` option in routing rules to match all public servers of speedtest.net.
+* 이제 BitTorrent 트래픽을 스니핑 할 수 있습니다.
+* 프로토콜 기반 라우팅을위한 라우팅 규칙에서 새로운 `프로토콜` 옵션.
+* 새로운 `geosite : speedtest.net의 모든 공용 서버와 일치시키는 라우팅 규칙의 speedtest` 옵션.
 
 ## 2018.07.20 v3.31
 
-* New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
+* 새로운 [도메인 소켓 전송](../configuration/transport/domainsocket.md) (@ xiaokangwang에게 감사).
 
 ## 2018.07.13 v3.30
 
-* Fix an issue that may cause broken connections in mKCP.
-* Thanks to [our friends](https://crowdin.com/project/v2ray) who speak Russian. Now our documents are in [Russian](https://www.v2ray.com/ru/).
+* mKCP에서 연결이 끊어 질 수있는 문제를 해결합니다.
+* [감사합니다. 우리 친구](https://crowdin.com/project/v2ray) 은 러시아어를 구사합니다. 이제 우리의 문서는 [러시아어](https://www.v2ray.com/ru/)있습니다.
 
 ## 2018.07.06 v3.29
 
-* New inbound and outbound for MTProto proxy.
+* MTProto 프록시의 새로운 인바운드 및 아웃 바운드
 
 ## 2018.06.29 v3.27
 
-* DNS now supports EDNS client subnet.
-* DNS static host now supports sub-domain matching.
+* 이제 DNS가 EDNS 클라이언트 서브넷을 지원합니다.
+* DNS 정적 호스트는 이제 하위 도메인 일치를 지원합니다.
 
 ## 2018.06.15 v3.26
 
-* Add Dragonfly BSD release.
+* Dragonfly BSD 릴리스를 추가하십시오.
 
 ## 2018.06.01 v3.24
 
-* Internal buffer size (per connection) can now be configured in JSON configuration.
-* mKCP now supports DTLS 1.2 header.
-* TLS transport now only support cipher suites in TLS 1.3 spec.
+* JSON 구성에서 내부 버퍼 크기 (연결 당)를 구성 할 수 있습니다.
+* mKCP는 이제 DTLS 1.2 헤더를 지원합니다.
+* TLS 전송은 이제 TLS 1.3 사양의 암호화 제품군 만 지원합니다.
 
 ## 2018.05.25 v3.23
 
-* In JSON configuration, port can now be specified from env variables.
-* JSON config now supports to load domains and IPs from specified files.
+* JSON 구성에서 포트를 env 변수에서 지정할 수 있습니다.
+* JSON 구성은 이제 지정된 파일에서 도메인 및 IP를로드하도록 지원합니다.
 
 ## 2018.04.20 v3.19
 
-* Traffic stats for inbound proxies.
+* 인바운드 프록시의 트래픽 통계.
 
 ## 2018.04.13 v3.17
 
-* V2Ray can load config file from HTTP(s).
-* TLS in V2Ray can issue new certificates by provided CA certificates for domains in incoming requests.
-* [HTTP/2](../configuration/transport/h2.md) transport.
+* V2Ray는 HTTP (들)에서 구성 파일을로드 할 수 있습니다.
+* V2Ray의 TLS는 들어오는 요청의 도메인에 대해 제공된 CA 인증서로 새 인증서를 발급 할 수 있습니다.
+* [HTTP / 2](../configuration/transport/h2.md) 전송.
 
 ## 2018.04.06 v3.16
 
-* [Statistics](../configuration/stats.md).
-* Shadowsocks inbound now can be configured to only listen on UDP. Strongly recommend to not listen on both TCP and UDP on the same port.
+* [통계](../configuration/stats.md).
+* 현재 Shadowsock 인바운드는 UDP에서만 수신 대기하도록 구성 할 수 있습니다. 동일한 포트에서 TCP와 UDP를 수신 대기하지 않는 것이 좋습니다.
 
 ## 2018.03.02 v3.11
 
-* A new settings is introduced in VMess inbound, to forbid client using insecure encryption methods.
-* Offers ARMv7 release.
-* Offers MIPS release that doesn't require FPU.
+* 안전하지 않은 암호화 방법을 사용하는 클라이언트를 금지하는 새로운 설정이 VMess 인바운드에 도입되었습니다.
+* ARMv7 릴리즈를 제공합니다.
+* FPU가 필요없는 MIPS 릴리스를 제공합니다.
 
 ## 2018.02.23 v3.10
 
-* Log entries now contain session ID to distinguish proxy sessions.
-* Bug fixes.
+* 이제 로그 항목에 프록시 세션을 구별하기위한 세션 ID가 포함됩니다.
+* 버그 수정.
 
 ## 2018.02.15 v3.9
 
-* Happy New Year!
-* Bug fixes.
+* 새해 복 많이 받으세요!
+* 버그 수정.
 
 ## 2018.02.09 v3.7
 
-* Developer preview: [Remote API](../configuration/api.md)。
-* Bug fixes.
+* 개발자 미리보기 : [원격 API](../configuration/api.md).
+* 버그 수정.
 
 ## 2017.12.29 v3.5
 
-* Geoip now supports private network address under name "private".
+* Geoip은 이제 "개인"이라는 이름으로 개인 네트워크 주소를 지원합니다.
 
 ## 2017.12.22 v3.4
 
-* Websocket nows uses value of X-Forwarded-For header as source address.
-* Support s390x CPU architecture.
+* Websocket nows는 X-Forwarded-For 헤더의 값을 소스 주소로 사용합니다.
+* s390x CPU 아키텍처를 지원합니다.
 
 ## 2017.12.08 v3.1
 
-* Support policy.
-* Config file location can be specified via environment variable.
+* 지원 정책.
+* 설정 파일 위치는 환경 변수를 통해 지정할 수 있습니다.
 
 ## 2017.12.01 v3.0
 
-* Support Shadowsocks AEAD
+* Shadowsock AEAD 지원
 
 ## 2017.11.18 v2.50
 
-* `v2ray` now tried to use `v2ctl` for configuration parsing. Please make sure these 2 files are in the same directory.
-* New `IPOnDemand` strategy in routing.
+* `v2ray` 이제 구성 파싱에 `v2ctl` 을 사용하려고했습니다. 이 두 파일이 같은 디렉토리에 있는지 확인하십시오.
+* 새로운 `라우팅에서 IPOnDemand` 전략.
 
 ## 2017.11.10 v2.47
 
-* `geosite` data is now in `geosite.dat` file.
-* Bug fixes.
+* `geosite` 데이터가 `geosite.dat` 파일에 있습니다.
+* 버그 수정.
 
 ## 2017.11.03 v2.46
 
-* Router now supports `geosite:cn`, equivalent to existing `chinasites`, but more flexible.
-* Router now supports `geoip`. 
-  * File `geoip.dat` is added to release packages. This file contains all `geoip` information and has to stay in the same directory of `v2ray` program. Due to delayed update of installation script, you may have to copy the file manually.
-* Program `v2ctl` is added to release packages. You may run `v2ctl verify /path/to/v2ray` to verify the signature of `v2ray` program.
+* 라우터는 이제 `geosite : cn`지원합니다. 기존 `chinasites`과 동일하지만 더 유연합니다.
+* 라우터가 이제 지원됩니다. `지오 프`. 
+  * 파일 `geoip.dat` 이 릴리스 패키지에 추가되었습니다. 이 파일에는 `geoip` 정보가 모두 포함되어 있으며 `v2ray` 프로그램과 동일한 디렉토리에 있어야합니다. 설치 스크립트의 업데이트가 지연되어 수동으로 파일을 복사해야 할 수 있습니다.
+* 프로그램 `v2ctl` 이 패키지를 릴리스하기 위해 추가되었습니다. `v2ctl verify / path / to / v2ray` 을 실행하여 `v2ray` 프로그램의 서명을 검증 할 수 있습니다.
 
 ## 2017.10.27 v2.44
 
-* HTTP now supports Basic Authentication.
-* Some bugs are fixed.
+* HTTP는 이제 기본 인증을 지원합니다.
+* 일부 버그가 수정되었습니다.
 
 ## 2017.10.06 v2.40
 
-* Fix an issue that causes memory leak.
+* 메모리 누수의 원인을 수정하십시오.
 
 ## 2017.09.29 v2.39
 
-* Inbound proxies now close connections more quickly when remote server closes them.
-* Default connection timeout changes to 5 minutes.
+* 인바운드 프록시는 이제 원격 서버가 연결을 닫을 때 더 빨리 연결을 닫습니다.
+* 기본 연결 제한 시간은 5 분으로 변경됩니다.
 
 ## 2017.05.12 v2.27
 
-* New domain mode in router.
+* 라우터의 새로운 도메인 모드.
 
 ## 2017.05.05 v2.26
 
-* Stability fixes.
+* 안정성 수정.
 
 ## 2017.04.28 v2.25
 
-* Simple sniffing on HTTP and TLS traffic for the actual domain on request.
+* 요청시 실제 도메인의 HTTP 및 TLS 트래픽에 대한 간단한 스니핑.
 
 ## 2017.04.21 v2.24
 
-* Stabilize Mux.
-* Improves memory efficiency.
+* Mux 안정화.
+* 메모리 효율성을 향상시킵니다.
 
 ## 2017.04.15 v2.23
 
-* Performance improvement in Mux.
-* Max number of connections can be configured in Mux now.
-* Performance improvement in HTTP inbound.
-* connectionReuse setting is removed in favor of Mux.
+* Mux의 성능 향상.
+* Mux에서 최대 연결 수를 구성 할 수 있습니다.
+* HTTP 인바운드의 성능 향상.
+* connectionReuse 설정은 Mux를 위해 제거되었습니다.
 
 ## 2017.04.08 v2.22
 
-* Mux.Cool protocol.
+* Mux.Cool 프로토콜.
 
 ## 2017.02.25 v2.20
 
-* GPG signature is added to download package.
-* New binary wv2ray.exe is added to Windows package, which runs as a background application.
+* GPG 서명이 다운로드 패키지에 추가됩니다.
+* 새로운 바이너리 wv2ray.exe가 백그라운드 패키지로 실행되는 Windows 패키지에 추가되었습니다.
 
 ## 2017.02.18 v2.19
 
-* A new mechanism for anti reply attack is now enforced on server side. 
-  * No impact to existing clients.
-* Upgrade of VMess AES-128-GCM / Chacha20-Poly1305 / None encryption methods. 
-  * Please upgrade client and server at once.
-  * AES-128-CFB is not affected.
-* Built with Golang 1.8. Add 32-bit MIPS support.
+* 이제 서버 측에서 안티 회신 공격을위한 새로운 메커니즘이 시행됩니다. 
+  * 기존 고객에게는 영향을 미치지 않습니다.
+* VMess AES-128-GCM / Chacha20-Poly1305 / None 암호화 방법의 업그레이드. 
+  * 클라이언트와 서버를 동시에 업그레이드하십시오.
+  * AES-128-CFB는 영향을받지 않습니다.
+* Golang 1.8으로 제작되었습니다. 32 비트 MIPS 지원을 추가하십시오.
 
 ## 2017.02.11 v2.18
 
-* Cleanup WebSocket code.
-* Remove allowPassive option. Now passive connections are always allowed.
-* Bug fixes
+* WebSocket 코드를 정리하십시오.
+* allowPassive 옵션을 제거하십시오. 이제 수동 연결이 항상 허용됩니다.
+* 버그 수정
 
 ## 2017.02.04 v2.17
 
-* Bug fixes.
+* 버그 수정.
 
 ## 2017.01.28 v2.16
 
-* New 'redirect' option in freedom. It can be used to adapt tools like Shadowsocks Obfs.
-* Performance improvement in VMess non-encryption mode. Not compatible with previous versions.
-* Happy New Year!
+* 자유의 새로운 '리디렉션'옵션. Shadowsock Obfs와 같은 도구를 적용하는 데 사용할 수 있습니다.
+* VMess 비 암호화 모드의 성능 향상. 이전 버전과 호환되지 않습니다.
+* 새해 복 많이 받으세요!
 
 ## 2017.01.16 v2.15
 
-* All proxies can use mKCP and WebSocket now.
+* 모든 프록시는 이제 mKCP와 WebSocket을 사용할 수 있습니다.
 
 ## 2017.01.09 v2.14
 
-* Socks 5 outbound.
-* Bug fixes.
+* 양말 5 아웃 바운드.
+* 버그 수정.
 
 ## 2017.01.02 v2.13
 
-* Bug fixes.
+* 버그 수정.
 
 ## 2016.12.26 v2.12
 
-* Bug fixes.
+* 버그 수정.
 
 ## 2016.12.19 v2.11
 
-* JSON config file now supports comment.
+* JSON 구성 파일이 이제 주석을 지원합니다.
 
 ## 2016.12.12 v2.10
 
-* VMess now supports AES-GCM and ChaCha20-Poly1305 encryption methods.
+* 이제 VMess는 AES-GCM 및 ChaCha20-Poly1305 암호화 방법을 지원합니다.
 
 ## 2016.12.05 v2.9
 
-* Fix compatibility with Alpine Linux.
+* Alpine Linux와의 호환성을 수정합니다.
 
 ## 2016.11.28 v2.8
 
-* Shadowsocks server now accepts OTA settings.
-* Bug fixes.
+* 이제 Shadowsocks 서버는 OTA 설정을 허용합니다.
+* 버그 수정.
 
 ## 2016.11.21 v2.7
 
-* Main inbound and outbound connection handler can be tagged now.
-* Bug fixes.
+* 기본 인바운드 및 아웃 바운드 연결 핸들러에 태그를 추가 할 수 있습니다.
+* 버그 수정.
 
 ## 2016.11.14 v2.6
 
-* Data sent by one outbound can be proxied to another outbound.
-* Routing can be based on inbound tag.
+* 하나의 아웃 바운드가 보낸 데이터는 다른 아웃 바운드로 프록시 될 수 있습니다.
+* 라우팅은 인바운드 태그를 기반으로 할 수 있습니다.
 
 ## 2016.11.07 v2.5
 
-* New Shadowsocks outbound;
-* New TCP header: HTTP;
+* 새로운 Shadowsocks 아웃 바운드;
+* 새 TCP 헤더 : HTTP;
 
 ## 2016.10.24 v2.4
 
-* TCP / mKCP / WebSocket can be configured per inbound / outbound;
-* Routing can be done on source IP;
+* TCP / mKCP / WebSocket은 인바운드 / 아웃 바운드별로 구성 할 수 있습니다.
+* 라우팅은 소스 IP에서 수행 할 수 있습니다.
 
 ## 2016.10.17 v2.3
 
-* Introduce new Protobuf-based configuration;
-* OpenBSD binaries;
-* Small fixes;
+* 새로운 Protobuf 기반 구성을 도입하십시오.
+* OpenBSD 바이너리;
+* 작은 수정;
 
 ## 2016.09.19 v2.2
 
-* New transport: WebSocket (Thanks to [@xiaokangwang](https://github.com/xiaokangwang));
+* 새로운 전송 : WebSocket (감사 [@ xiaokangwang](https://github.com/xiaokangwang));
 
 ## 2016.09.19 v2.1
 
-* mKCP performance improvement;
+* mKCP 성능 향상;
 
 ## 2016.08.20 v2.0
 
-* One year;
+* 1 년;
 
 ## 2016.08.15 v1.24
 
-* New mKCP header: utp;
-* New option in inbound connection config "allowPassive" to allow passive connection;
+* 새로운 mKCP 헤더 : utp;
+* 인바운드 연결 구성의 새로운 옵션 "allowPassive"는 수동 연결을 허용합니다.
 
 ## 2016.08.08 v1.23
 
-* Optimize mKCP packet format. This version of mKCP is NOT compatible with previous ones;
-* mKCP can now be configured to disguise as video data.
+* mKCP 패킷 형식을 최적화하십시오. 이 버전의 mKCP는 이전 버전과 호환되지 않습니다.
+* 이제 mKCP를 비디오 데이터로 위장하도록 구성 할 수 있습니다.
 
 ## 2016.08.01 v1.22
 
-* Fix a memory leak in mKCP;
-* Add FreeBSD release;
+* mKCP에서 메모리 누수를 수정합니다.
+* FreeBSD 릴리즈 추가;
 
 ## 2016.07.25 v1.21
 
-* High performance Chacha20 (Thanks to aead@);
-* Bug fixes;
+* 고성능 Chacha20 (감사합니다 @);
+* 버그 수정;
 
 ## 2016.07.18 v1.20
 
-* New KCP options: readBufferSize and writeBufferSize;
-* Bug fixes;
+* 새로운 KCP 옵션 : readBufferSize 및 writeBufferSize;
+* 버그 수정;
 
 ## 2016.07.11 v1.19
 
-* Enable TLS option for all proxies;
-* Fix a performance issue in KCP;
-* Fix an issue in KCP that could cause EOF response;
+* 모든 프록시에 대해 TLS 옵션을 사용합니다.
+* KCP의 성능 문제 수정.
+* ECP 응답을 야기 할 수있는 KCP의 문제 수정.
 
 ## 2016.07.04 v1.18
 
-* Fix a "too many open files" issue in KCP;
-* KCP now uses fewer CPU;
-* Other bug fixes;
+* KCP에서 "너무 많은 파일 열기"문제 수정.
+* KCP는 이제 더 적은 CPU를 사용합니다.
+* 기타 버그 수정.
 
 ## 2016.06.19 v1.17
 
-* KCP now is integrated into V2Ray. (Special thanks to [xiaokangwang](https://github.com/xiaokangwang), [xtaci](https://github.com/xtaci) and [skywind3000](https://github.com/skywind3000))
-* Minor bug fixes
+* KCP는 이제 V2Ray에 통합되었습니다. ( [xiaokangwang](https://github.com/xiaokangwang), [xtaci](https://github.com/xtaci) 및 [skywind3000](https://github.com/skywind3000)특별 감사)
+* 사소한 버그 수정
 
 ## 2016.06.12 v1.16
 
-* TCP connection reuse is now enabled by default;
-* Dokodemo-door is able to recognize TCP connection redirected by iptables;
-* Blackhole is able to send back HTTP forbidden data;
+* 이제 TCP 연결 재사용이 기본적으로 활성화됩니다.
+* Dokodemo-door는 iptables로 리디렉션 된 TCP 연결을 인식 할 수 있습니다.
+* Blackhole은 HTTP 금지 된 데이터를 다시 보낼 수 있습니다.
 
 ## 2016.06.05 v1.15
 
-* Optionally reuse TCP connection for better performance;
-* Allow listening on a specific IP address;
-* Allow sending data through a specific IP address;
-* Fix an issue in HTTP proxy that may exhaust memory;
+* 선택적으로 더 나은 성능을 위해 TCP 연결을 재사용하십시오.
+* 특정 IP 주소에서 청취 허용;
+* 특정 IP 주소를 통한 데이터 전송 허용.
+* 메모리를 소모 할 수있는 HTTP 프록시의 문제 해결.
 
 ## 2016.05.29 v1.14
 
-* Fix a panic issue in http proxy;
-* More functionalies in install script;
-* Static route in DNS;
-* Official server address change;
+* http 프록시에서 공황 문제를 수정합니다.
+* 설치 스크립트에 더 많은 기능이 있습니다.
+* DNS의 정적 경로.
+* 공식적인 서버 주소 변경;
 
 ## 2016.05.16 v1.13
 
-* Internal DNS server, to provide better routing results combined with chinasites and chinaip;
-* Fix an issue in UDP relay;
+* chinasites 및 chinaip와 결합 된 더 나은 라우팅 결과를 제공하기위한 내부 DNS 서버.
+* UDP 중계 문제 수정.
 
 ## 2016.05.01 v1.12.1
 
-* Fix a bug in VMess.
+* VMess의 버그를 수정했습니다.
 
 ## 2016.05.01 v1.12
 
-* Second try to fix the memory usage issue;
-* Improve Shadowsocks performance;
-* New option "none" in loglevel;
+* 두 번째 메모리 사용 문제를 해결하기 위해 노력;
+* Shadowsocks 성능 향상;
+* loglevel의 새로운 옵션 "none";
 
 ## 2016.04.18 v1.11
 
-* Try to fix the memory usage issue.
+* 메모리 사용 문제를 해결하십시오.
 
 ## 2016.03.07 v1.10
 
-* Fix an performance issue when dynamic ports refreshes.
+* 동적 포트가 새로 고쳐질 때 성능 문제를 수정했습니다.
 
 ## 2016.02.29 v1.9.1
 
-* Fix Shadowsocks one-time authentication (OTA) issue.
+* 그림자 도크 일회성 인증 (OTA) 문제를 수정했습니다.
 
 ## 2016.02.29 v1.9
 
-* Support for Shadowsocks ChaCha20 encryption;
-* Add more direct connection sites to the default configuration file;
-* Dynamic ports now automatically create an account.
+* Shadowsocks ChaCha20 암호화 지원;
+* 직접 연결 사이트를 기본 구성 파일에 추가하십시오.
+* 이제 동적 포트가 자동으로 계정을 만듭니다.
 
 ## 2016.02.22 v1.8
 
-* Update installation script install-release.sh (thanks, @netcookies): 
-  * You can now automatically stop the V2Ray process and update automatically after the completion of V2Ray;
-  * The install-release.sh accepts the --proxy argument and V2Ray specified proxy download;
-* Use Go 1.6 compiler to improve the performance of AES encryption;
-* Minor fixes;
-* Update the official server IP (please re-download the installation package to get the latest configuration).
+* 업데이트 설치 스크립트 install-release.sh (thanks, @netcookies) : 
+  * V2Ray가 완료되면 자동으로 V2Ray 프로세스를 중지하고 자동으로 업데이트 할 수 있습니다.
+  * install-release.sh는 --proxy 인수와 V2Ray 지정 프록시 다운로드를 허용합니다.
+* Go 1.6 컴파일러를 사용하여 AES 암호화의 성능을 향상시킵니다.
+* 사소한 수정;
+* 공식 서버 IP를 업데이트하십시오 (최신 구성을 얻으려면 설치 패키지를 다시 다운로드하십시오).
 
 ## 2016.02.08 v1.7
 
-* UDP relay performance improved;
-* Shadowsocks security improved;
-* Minor fixes;
-* Happy new year!
+* UDP 릴레이 성능이 향상되었습니다.
+* Shadowsocks 보안이 향상되었습니다.
+* 사소한 수정;
+* 새해 복 많이 받으세요!
