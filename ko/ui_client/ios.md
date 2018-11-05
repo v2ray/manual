@@ -2,61 +2,61 @@
 refcn: ui_client/ios
 refen: ui_client/ios
 ---
-# iOS Client
+# iOS 고객
 
-## Kitsunebi
+## 키츠 네비
 
-Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
+Kitsunebi는 V2Ray를 기반으로하는 iOS 앱입니다. V2Ray와 같은 모든 기능을 제공합니다. V2Ray 호환 JSON 구성 가져 오기 및 내보내기도 지원합니다.
 
-* Download: iTunes (Unavailable)
+* 다운로드 : iTunes (사용할 수 없음)
 
-## Kitsunebi Lite
+## 키츠 네비 라이트
 
-Light version of Kitsunebi.
+Kitsunebi의 가벼운 버전.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
 
-## Shadowrocket
+## 그림자 격자
 
-Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadowsocks, VMess, SSR etc.
+Shadowrocket은 일반적인 VPN 응용 프로그램입니다. Is는 Shadowsocks, VMess, SSR 등과 같은 여러 프로토콜을 지원합니다.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## Pepi (was ShadowRay) {#pepi}
+## Pepi (ShadowRay) {#pepi}
 
-Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
+Pepi는 V2Ray 호환 응용 프로그램입니다. VMess 프로토콜을 기반으로 VPN 연결을 생성하고 모든 V2Ray 서버와 통신 할 수 있습니다.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
 
 ## Quantumult
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## Other tools {#other}
+## 기타 도구 {#other}
 
 ### HyperApp
 
-An utility to build servers with docker.
+도커로 서버를 구축하는 유틸리티.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
-* Website: [HyperApp.fun](https://www.hyperapp.fun/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
+* 웹 사이트 : [HyperApp.fun](https://www.hyperapp.fun/)
 
 ### Termius
 
-SSH client.
+SSH 클라이언트.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
 
-### Telegram
+### 전보
 
-Encrypted discussion.
+암호화 된 토론.
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
+* 웹 사이트 : [telegram.org](https://telegram.org/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
 
-### ProtonMail
+### 프로톤 메일
 
-Encrypted email.
+암호화 된 이메일.
 
-* Website: [protonmail.com](https://protonmail.com/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)
+* 웹 사이트 : [protonmail.com](https://protonmail.com/)
+* 다운로드 : [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)
