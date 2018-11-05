@@ -17,7 +17,7 @@
 
 .markdown-section code:not([class]) {
   white-space: nowrap;
-  font-weight: 600;
+  padding: 0;
 }
 
 .markdown-section blockquote {
