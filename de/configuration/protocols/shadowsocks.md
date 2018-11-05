@@ -73,7 +73,7 @@ Type of supported networks. Default to `"tcp"`.
 {"Server": [{"email": "love@v2ray.com", "Adresse": "127.0.0.1", "Port": 1234, "Methode": "Methode", "Passwort": "Passwort" , "ota": falsch, "level": 0}]}
 ```
 
-Where:
+Wo:
 
 * `email`: Email address. Used for user identification.
 * `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
@@ -89,7 +89,7 @@ Where:
 * `password`: Password. Can be any string.
 * `ota`: Whether or not to use OTA. 
   * Wenn AEAD verwendet wird, `OTA` hat keine Auswirkung.
-* `level`: User level.
+* `level`: Benutzerebene.
 
 > `servers`: \[[ServerObject](#serverobject)\]
 

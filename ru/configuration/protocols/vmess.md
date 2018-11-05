@@ -9,7 +9,7 @@ refen: configuration/protocols/vmess
 
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) это протокол для шифрованной передачи информации. Он включает в себя входящий и исходящий прокси.
 
-VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. One may install `ntp` service on Linux to automatically adjust system time.
+VMess зависит от системного времени. Убедитесь, что ваше системное время синхронизировано с временем UTC. Часовой пояс не имеет значения. Можно установить ` ntp ` службы на Linux для автоматической синхронизации системного времени.
 
 ## OutboundConfigurationObject
 
@@ -85,10 +85,10 @@ User level. See [Policy](../policy.md) for more detail.
 
 Method for encrypting payload. This setting is only available at outbound. The VMess inbound will automatically recognize this setting and decrypt payload accordingly. Options are:
 
-* `"aes-128-gcm"`: Recommended for PC.
-* `"chacha20-poly1305"`: Recommended for mobile.
-* `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
-* `"none"`: Traffic is not encrypted at all.
+* `"aes-128-gcm"`: Рекомендуется для ПК.
+* `"chacha20-poly1305"`: Рекомендуется для мобильных устройств.
+* `"auto"`: Значение по умолчанию. Используйте `aes-128-gcm` на AMD64, ARM64 и S390x, или `chacha20-poly1305` в остальных случаях.
+* ` "none" `: Не использовать шифрование.
 
 {% hint style='info' %} Use `"auto"` wherever possible for better compatibility. {% endhint %}
 
@@ -117,7 +117,7 @@ Method for encrypting payload. This setting is only available at outbound. The V
 
 > `clients`: \[ [ClientObject](#clientobject) \]
 
-An array for valid user accounts. May be empty when used for dynamic port feature.
+Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта.
 
 > `detour`: [DetourObject](#detourobject)
 

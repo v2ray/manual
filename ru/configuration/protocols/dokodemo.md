@@ -27,7 +27,7 @@ Dokodemo-door также может работать (если настроен)
 
 > `address`: address
 
-Address of the destination server. May be an IPv4, IPv6 or a domain, in string form. When `followRedirect` (see below) is `true`, `address` can be empty.
+Адрес определенного сервера. Строка, значением которой может быть IPv4, IPv6 или доменное имя. Если `followRedirect` (см. ниже) `true`, `address` может быть пустым.
 
 > `port`: number
 
@@ -39,15 +39,15 @@ Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to thi
 
 > `followRedirect`: true | false
 
-When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
+Если установлено значение ` true `, dokodemo-door распознает назначение от TProxy и использует его в качестве адресата. См. `TProxy` в [Настройках доставки](../transport.md) для деталей.
 
 > `userLevel`: number
 
-User level. All connections share this level. See [Policy](../policy.md) for details.
+User level. Все подключения проходят через этот уровень. Подробности: [Правила](../policy.md).
 
-## Examples for transparent proxy
+## Примеры для transparent proxy
 
-Add a dokodemo-door inbound as below.
+Добавьте inbound-соединение dokodemo-door, как показано ниже.
 
 ```javascript
 {
@@ -57,7 +57,7 @@ Add a dokodemo-door inbound as below.
 }
 ```
 
-Configure iptables as below.
+Настройте iptables, как показано ниже.
 
 ```bash
 # Создаём новую цепь

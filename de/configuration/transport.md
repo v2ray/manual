@@ -195,13 +195,13 @@ List of TLS certificates. Each entry is one certificate.
 
 Purpose of the certificate. Default value `"encipherment"`. Choices are:
 
-* `"encipherment"`: Certificate is used for TLS authentication and encryption.
+* `"encipherment"`: Zertifikat wird für TLS-Authentifizierung und Verschlüsselung verwendet.
 * `"verify"`: Certificate is used for validating TLS certificates from remote peer. In this case, the certificate has to be a CA certificate.
 * `"issue"`: Certificate is used for issuing other certificates. In this case, the certificate has to be a CA certificate.
 
 {% hint style='info' %} On Windows, you have to install your CA certificate to system, in order to verify cerificates issued from the CA. {% endhint %}
 
-{% hint style='info' %} When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. If not found, V2Ray will try to issue a new certificate using any existing certificate whose `usage` is `"issue"` for `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse. {% endhint %}
+{% hint style='info' %} When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. Wenn V2Ray nicht gefunden wird, versucht V2Ray, ein neues Zertifikat mit einem vorhandenen Zertifikat auszustellen, dessen ` usage ` `"issue"` für `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse. {% endhint %}
 
 > `certificateFile`: string
 

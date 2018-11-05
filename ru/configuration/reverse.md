@@ -87,7 +87,7 @@ Reverse:
 }
 ```
 
-Outbound:
+Исходящее соединение:
 
 ```javascript
 {
@@ -110,7 +110,7 @@ Outbound:
 }
 ```
 
-Routing:
+Маршрутизация:
 
 ```javascript
 "routing": {
@@ -166,7 +166,7 @@ Reverse:
 }
 ```
 
-Routing
+Маршрутизация
 
 ```javascript
 "routing": {

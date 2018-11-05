@@ -8,7 +8,7 @@ V2Ray имеет внутренний DNS-сервер, используемый
 
 {% hint style='info' %} Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray. {% endhint %}
 
-The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
+Запросы DNS, ретранслируемые этой службой DNS, также будут отправляться на основе параметров маршрутизации. Никакой дополнительной настройки не требуется.
 
 ## DnsObject
 
@@ -37,12 +37,12 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
 
 > `hosts`: map{string: address}
 
-A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
+Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт.
 
-The format of the domain is:
+Формат домена:
 
-* Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
-* Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
+* `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
+* `"domain:v2ray.com"`: По такой схеме будет разрешаться как заданный домен, так и его поддомены.
 
 > `servers`: \[string | [ServerObject](#serverobject) | "localhost" \]
 
