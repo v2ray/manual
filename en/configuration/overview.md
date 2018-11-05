@@ -41,7 +41,7 @@ Configuration for internal DNS server's configurations. If this section is omitt
 
 When specified, internal [Statistics](stats.md) is enabled.
 
-> `policy`: [PolicyObject)(policy.md)
+> `policy`: [PolicyObject](policy.md)
 
 Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
 
