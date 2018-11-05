@@ -17,10 +17,6 @@ V2Ray 在以下平台中可用：
 * OpenBSD (x86 / amd64)；
 * Dragonfly BSD (amd64)；
 
-## 硬件要求 {#hardware}
-
-至少 32MB 空闲内存，推荐 64MB 或更多。
-
 ## 下载 V2Ray {#download}
 
 预编译的压缩包可以在如下几个站点找到：
@@ -37,7 +33,7 @@ V2Ray 在以下平台中可用：
 
 V2Ray 提供两种验证方式：
 
-1. 安装包 zip 文件的 SHA1 摘要，在下载页面的 metadata.txt 文件中可以找到。
+1. 安装包 zip 文件的 SHA1 / SHA256 摘要，在每个安装包对应的`.dgst`文件中可以找到。
 1. 可运行程序（v2ray 或 v2ray.exe）的 gpg 签名，文件位于安装包中的 v2ray.sig 或 v2ray.exe.sig。签名公钥可以[在代码库中](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc)找到。
 
 ## Windows 和 Mac OS 安装方式
