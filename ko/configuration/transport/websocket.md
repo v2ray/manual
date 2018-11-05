@@ -2,29 +2,29 @@
 refcn: chapter_02/transport/websocket
 refen: configuration/transport/websocket
 ---
-# WebSocket
+# 웹 소켓
 
-Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
+표준 WebSocket을 사용하여 데이터를 전송하십시오. Websocket 연결은 Nginx와 같은 HTTP 서버에 의해 프록시 될 수 있습니다.
 
 ## WebSocketObject
 
-`WebSocketObject` is used as `wsSettings` in `TransportObject` or `StreamSettingsObject`.
+`WebSocketObject` 로 사용되는 `wsSettings` 에서 `TransportObject` 또는 `StreamSettingsObject`.
 
-{% hint style='info' %} Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address. {% endhint %}
+{% hint style = 'info'%} Websocket은 HTTP 헤더 X-Forwarded-For를 인식하고 인바운드 소스 주소로 사용합니다. {% endhint %}
 
 ```javascript
 {
-  "path": "/",
-  "headers": {
-    "Host": "v2ray.com"
+  "경로": "/",
+  "헤더": {
+    "호스트": "v2ray.com"
   }
 }
 ```
 
-> `path`: string
+> `경로`: 문자열
 
-Path used for WebSocket. Default to root, as `"/"`.
+WebSocket에 사용되는 경로입니다. 루트 기본값, `"/"`.
 
-> `headers`: map{string, string}
+> `헤더`:지도{string, string}
 
-Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+사용자 지정 HTTP 헤더. 각 항목은 HTTP 헤더의 헤더 및 값에 대한 문자열의 키 값 쌍인 배열입니다. 기본값은 비어 있습니다.
