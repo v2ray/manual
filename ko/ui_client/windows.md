@@ -6,32 +6,32 @@ refen: ui_client/windows
 
 ## V2RayW
 
-* Download: [Github](https://github.com/Cenmrev/V2RayW)
+* 다운로드 : [Github](https://github.com/Cenmrev/V2RayW)
 
 ## V2RayN
 
-* Download: [Github](https://github.com/2dust/v2rayN)
+* 다운로드 : [Github](https://github.com/2dust/v2rayN)
 
 ## V2RayS
 
-* Download: [Github](https://github.com/Shinlor/V2RayS)
+* 다운로드 : [Github](https://github.com/Shinlor/V2RayS)
 
-## Other tools {#other}
+## 기타 도구 {#other}
 
-### PuTTY
+### 퍼티
 
-SSH client.
+SSH 클라이언트.
 
-* Website: [putty.org](http://www.putty.org/)
+* 웹 사이트 : [putty.org](http://www.putty.org/)
 
-### Visual Studio Code
+### Visual Studio 코드
 
-Source code editor from Microsoft.
+Microsoft의 소스 코드 편집기.
 
-* Website: [code.visualstudio.com](https://code.visualstudio.com/)
+* 웹 사이트 : [code.visualstudio.com](https://code.visualstudio.com/)
 
-### Telegram
+### 전보
 
-Encrypted discussion.
+암호화 된 토론.
 
-* Website: [telegram.org](https://telegram.org/)
+* 웹 사이트 : [telegram.org](https://telegram.org/)
