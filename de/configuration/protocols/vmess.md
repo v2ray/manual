@@ -88,7 +88,7 @@ Method for encrypting payload. This setting is only available at outbound. The V
 * `"aes-128-gcm"`: Recommended for PC.
 * `"chacha20-poly1305"`: Recommended for mobile.
 * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
-* `"none"`: Traffic is not encrypted at all.
+* `"none"`: Der Verkehr ist überhaupt nicht verschlüsselt.
 
 {% hint style='info' %} Use `"auto"` wherever possible for better compatibility. {% endhint %}
 

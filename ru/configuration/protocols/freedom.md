@@ -21,17 +21,17 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 
 > `domainStrategy`: "AsIs" | "UseIP"
 
-Strategy for domain name resolution. Options are:
+Стратегия разрешения доменных имен. Возможные варианты:
 
 * `"AsIs"`: Default value. Resolve domain name by system.
-* `"UseIP"`: Use [internal DNS](../dns.md) for domain name resolution.
+* ` "UseIP" `: Используйте [ внутренний DNS ](../dns.md) для получения доменных имен.
 
 > `redirect`: address_port
 
-Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
+Перенаправление всех соединений на указанный адрес вида `"127.0.0.1:80"` или `":1234"`.
 
-* When address is empty, e.g. `":443"`, Freedom will use the original destination address.
-* When port is `0`, e.g. `"v2ray.com:0"`, Freedom will use the original port.
+* Если адрес не указан, например `":443"`, Freedom будет использовать исходный адрес назначения.
+* Если указан порт `0`, например `"v2ray.com:0"`, Freedom будет использовать исходный порт.
 
 > `userLevel`: number
 

@@ -5,17 +5,17 @@ refen: configuration/protocols/shadowsocks
 # Shadowsocks
 
 * Name: `shadowsocks`
-* Type: Inbound / Outbound
+* Тип: входящий / исходящий
 
 Протокол [Shadowsocks](https://www.shadowsocks.org/) поддерживает входящие и исходящие соединения.
 
 Совместим с официальной версией:
 
-* Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
-  * Client may choose to turn on or off.
-  * Server may choose to enable, disable or auto.
-* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
+* Поддерживает как TCP, так и UDP соединения. UDP может быть отключен.
+* Поддерживает [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
+  * Клиент может отключать и включать поддержку при необходимости.
+  * Сервер может принудительно включить, отключить поддержку или использовать конфигурация клиента.
+* Методы шифрования ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) шифры, добавленные в V2Ray 3.0): 
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
@@ -23,8 +23,8 @@ refen: configuration/protocols/shadowsocks
   * aes-256-gcm
   * aes-128-gcm
   * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
-* Plugins： 
-  * Support obfs through standalone mode.
+* Плагины: 
+  * Поддержка obfs через автономный режим.
 
 ## InboundConfigurationObject
 
@@ -85,23 +85,23 @@ Type of supported networks. Default to `"tcp"`.
 }
 ```
 
-Where:
+Где:
 
 * `email`: Адрес электронной почты. Используется для идентификации пользователя.
-* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
-* `port`: Port of Shadowsocks server.
-* `method`: Encryption method. No default value. Options are: 
+* `address`: Адрес сервера Shadowsocks. Может быть IPv4, IPv6 или доменом.
+* `port`: Порт используемый Shadowsocks сервером.
+* `method`: Метод шифрования. Значение по умолчанию отсутствует. Возможные варианты: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `ota`: Whether or not to use OTA. 
+  * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
+* `password`: Пароль. Может быть любой строкой.
+* `ota`: Использовать или не использовать OTA. 
   * Когда используется AEAD, значение ` ota ` не используется.
-* `level`: User level.
+* ` userLevel `: Пользовательский уровень.
 
 > `servers`: \[[ServerObject](#serverobject)\]
 
@@ -151,7 +151,7 @@ When AEAD encryption is used, this field has no effect.
 
 User level.
 
-## Encryption methods
+## Методы шифрования
 
 * `"aes-256-cfb"`
 * `"aes-128-cfb"`
@@ -159,4 +159,4 @@ User level.
 * `"chacha20-ietf"`
 * `"aes-256-gcm"`
 * `"aes-128-gcm"`
-* `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
+* `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`

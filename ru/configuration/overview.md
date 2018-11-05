@@ -82,7 +82,7 @@ Path to error log. If not empty, it must be a legal file path. If empty, V2Ray w
 
 Level of logs to be written. Different log levels indicate different content of logs. Default value is `"warning"`.
 
-Log levels:
+Уровни журналирования:
 
 * `"debug"`: Information for developers only. Also includes all `"info"` logs.
 * `"info"`: Information for current state of V2Ray. Users don't have to take care of those. Also includes all `"warning"` logs.

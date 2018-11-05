@@ -21,7 +21,7 @@ Backhole - это протокол для исходящих соединени�
 
 > `response`: [ResponseObject](#responseobject)
 
-Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection.
+Если задан, Backhole немедленно отправит его в ответ на запрос и закроет соединение.
 
 ### ResponseObject
 
@@ -33,7 +33,7 @@ Pre-defined response. Blockhole will send (if any) pre-defined data immediately 
 
 > `type`: "none" | "http"
 
-Type of the response, available options are:
+Тип ответа, доступные параметры:
 
-* `"none"`: Default value. Empty response.
-* `"http"`: A valid HTTP 403 response.
+* `"none"`: Значение по умолчанию. Пустой ответ.
+* ` "HTTP" `: Ответ кодом состояния HTTP 403 Forbidden.

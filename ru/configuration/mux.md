@@ -4,9 +4,9 @@ refen: configuration/mux
 ---
 # Мультиплексирование
 
-Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections.
+Мультиплексирование или Mux - это использование одного физического TCP-соединения для нескольких виртуальных TCP-соединений.
 
-Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
+Мультиплексирование предназначено для уменьшения задержек при хендшейке (установлении соединения) TCP. Это делается НЕ для повышения пропускной способности. При загрузке больших файлов или измерении скорости, Mux обычно медленнее, чем нормальное TCP-подключение.
 
 ## MuxObject
 

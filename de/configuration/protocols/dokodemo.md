@@ -39,7 +39,7 @@ Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to thi
 
 > `followRedirect`: true | false
 
-When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
+Wenn der Wert `true`, erkennt dokodemo-door das Ziel von TProxy und verwendet es als Ziel. See `TProxy` in [transport](../transport.md) for detail.
 
 > `userLevel`: number
 

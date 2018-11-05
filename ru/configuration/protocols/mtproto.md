@@ -9,7 +9,7 @@ refen: configuration/protocols/mtproto
 
 MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
 
-For now V2Ray only supports IPv4 address of Telegram server.
+На данный момент V2Ray поддерживает только IPv4 адрес сервера Telegram.
 
 ## InboundConfigurationObject
 
@@ -60,9 +60,9 @@ User secret. In Telegram, user secret must be 32 characters long, and only conta
 
 ## Пример {#sample}
 
-MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
+MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Вот неполный образец.
 
-Inbound:
+Входящее соединение:
 
 ```javascript
 {
@@ -75,7 +75,7 @@ Inbound:
 }
 ```
 
-Outbound:
+Исходящее соединение:
 
 ```javascript
 {
@@ -85,7 +85,7 @@ Outbound:
 }
 ```
 
-Routing:
+Маршрутизация:
 
 ```javascript
 {
@@ -95,4 +95,4 @@ Routing:
 }
 ```
 
-The configure your Telegram app to connect to 443 port on this machine.
+Конфигурируйте приложение Telegram для подключения к порту 443 на этом устройстве.
