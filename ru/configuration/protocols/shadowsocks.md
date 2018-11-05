@@ -4,15 +4,18 @@ refen: configuration/protocols/shadowsocks
 ---
 # Shadowsocks
 
+* Name: `shadowsocks`
+* Type: Inbound / Outbound
+
 Протокол [Shadowsocks](https://www.shadowsocks.org/) поддерживает входящие и исходящие соединения.
 
 Совместим с официальной версией:
 
-* Поддерживает как TCP, так и UDP соединения. UDP может быть отключен.
-* Поддерживает [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
-  * Клиент может отключать и включать поддержку при необходимости.
-  * Сервер может принудительно включить, отключить поддержку или использовать конфигурация клиента.
-* Методы шифрования ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) шифры, добавленные в V2Ray 3.0): 
+* Supports both TCP and UDP connections, where UDP can be optional turned off.
+* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
+  * Client may choose to turn on or off.
+  * Server may choose to enable, disable or auto.
+* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
@@ -20,49 +23,51 @@ refen: configuration/protocols/shadowsocks
   * aes-256-gcm
   * aes-128-gcm
   * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
-* Плагины: 
-  * Поддержка obfs через автономный режим.
+* Plugins： 
+  * Support obfs through standalone mode.
 
-Информация:
-
-* Название: shadowsocks
-* Тип: входящий / исходящий
-
-## Конфигурация прокси для входящего соединения
+## InboundConfigurationObject
 
 ```javascript
 {
   "email": "love@v2ray.com",
   "method": "aes-128-cfb",
   "password": "password",
-  "udp": false,
   "level": 0,
   "ota": true,
   "network": "tcp"
 }
 ```
 
-Где:
+> `email`: string
 
-* `email`: Адрес электронной почты. Используется для идентификации пользователя.
-* `method`: Метод шифрования. Значение по умолчанию отсутствует. Возможные варианты: 
-  * `"aes-256-cfb"`
-  * `"aes-128-cfb"`
-  * `"chacha20"`
-  * `"chacha20-ietf"`
-  * `"aes-256-gcm"`
-  * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
-* `password`: Пароль. Может быть любой строкой.
-* `udp` (Устарел, используйте `network`): `true` для включения и `false` для выключения UDP. По умолчанию `false`.
-* `level`: Пользовательский уровень. По умолчанию `0`. См. [Локальная политика](../policy.md).
-* `ota`: `true` или `false`, использовать или не использовать OTA. 
-  * Когда используется AEAD, значение ` ota ` не используется.
-  * Если значение не установлено, Shadowsocks использует значение, установленное клиентом.
-  * Если установлено `true` или `false`, а при этом у клиента установлено противоположное значение, соединение автоматически разрывается сервером.
-* `network`: Тип сети. `"tcp"`, `"udp"`, или `"tcp,udp"`. По умолчанию - `"tcp"`.
+Email address. Used for user identification.
 
-## Конфигурация прокси для исходящего соединения
+> `method`: string
+
+Required. See [Encryption methods](#encryption-methods) for available values.
+
+> `password`: string
+
+Required. Password in Shadowsocks protocol. Can be any string.
+
+> `level`: number
+
+User level. Default to `0`. See [Policy](../policy.md).
+
+> `ota`: `true` | `false`
+
+Whether or not to force OTA. If `true` and the incoming connection doesn't enable OTA, V2Ray will reject this connection. Vice versa.
+
+If this field is not specified, V2Ray auto detects OTA settings from incoming connections.
+
+When AEAD encryption is used, `ota` has no effect.
+
+> `network`: "tcp" | "udp" | "tcp,udp"
+
+Type of supported networks. Default to `"tcp"`.
+
+## OutboundConfigurationObject
 
 ```javascript
 {
@@ -80,20 +85,78 @@ refen: configuration/protocols/shadowsocks
 }
 ```
 
-Где:
+Where:
 
 * `email`: Адрес электронной почты. Используется для идентификации пользователя.
-* `address`: Адрес сервера Shadowsocks. Может быть IPv4, IPv6 или доменом.
-* `port`: Порт используемый Shadowsocks сервером.
-* `method`: Метод шифрования. Значение по умолчанию отсутствует. Возможные варианты: 
+* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
+* `port`: Port of Shadowsocks server.
+* `method`: Encryption method. No default value. Options are: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` или `"chacha20-ietf-poly1305"`
-* `password`: Пароль. Может быть любой строкой.
-* `ota`: Использовать или не использовать OTA. 
+  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
+* `password`: Password. Can be any string.
+* `ota`: Whether or not to use OTA. 
   * Когда используется AEAD, значение ` ota ` не используется.
-* ` userLevel `: Пользовательский уровень.
+* `level`: User level.
+
+> `servers`: \[[ServerObject](#serverobject)\]
+
+An array of [ServerObject](#serverobject)s.
+
+### ServerObject
+
+```javascript
+{
+  "email": "love@v2ray.com",
+  "address": "127.0.0.1",
+  "port": 1234,
+  "method": "加密方式",
+  "password": "密码",
+  "ota": false,
+  "level": 0
+}
+```
+
+> `email`: string
+
+Email address. Used for user identification.
+
+> `address`: address
+
+Required. Shadowsocks server address. May be IPv4, IPv6 or domain address.
+
+> `port`: number
+
+Required. Shadowsocks server port.
+
+> `method`: string
+
+Required. See [Encryption methods](#encryption-methods) for available values.
+
+> `password`: string
+
+Required. Password in Shadowsocks protocol. Can be any string.
+
+> `ota`: true | false
+
+Whether or not to use OTA. Default value is `false`.
+
+When AEAD encryption is used, this field has no effect.
+
+> `level`: number
+
+User level.
+
+## Encryption methods
+
+* `"aes-256-cfb"`
+* `"aes-128-cfb"`
+* `"chacha20"`
+* `"chacha20-ietf"`
+* `"aes-256-gcm"`
+* `"aes-128-gcm"`
+* `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
