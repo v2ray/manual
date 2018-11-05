@@ -5,7 +5,7 @@ refen: configuration/protocols/freedom
 
 # Freedom
 
-* 名称：freedom
+* 名称：`freedom`
 * 类型：出站协议
 
 Freedom 是一个出站协议，可以用来向任意网络发送（正常的） TCP 或 UDP 数据。

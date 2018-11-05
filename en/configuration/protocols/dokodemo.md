@@ -5,7 +5,7 @@ refen: configuration/protocols/dokodemo
 
 # Dokodemo-door
 
-* Name: dokodemo-door
+* Name: `dokodemo-door`
 * Type: Inbound
 
 Dokodemo-door is a protocol for inbound connections. It take any connections and passes them to the specified destination.

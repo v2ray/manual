@@ -5,7 +5,7 @@ refen: configuration/protocols/vmess
 
 # VMess
 
-* 名称：vmess
+* 名称：`vmess`
 * 类型：入站 / 出站
 
 [VMess](../../developer/protocols/vmess.md) 是一个加密传输协议，它分为入站和出站两部分，通常作为 V2Ray 客户端和服务器之间的桥梁。
