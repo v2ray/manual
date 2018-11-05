@@ -2,240 +2,241 @@
 refcn: chapter_02/01_overview
 refen: configuration/overview
 ---
-# Configuration Overview
+# 구성 개요
 
-V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
+V2Ray는 아래와 같이 서버 측과 클라이언트 측의 구성이 동일합니다. 서버 및 클라이언트 구성은 특정 섹션에서 다릅니다.
 
-Below is the top level structure of the configuration. Each section has its own format.
+아래는 구성의 최상위 레벨 구조입니다. 각 섹션에는 자체 형식이 있습니다.
 
 ```javascript
 {
-  "log": {},
-  "api": {},
+  ,
+  } {}, {}, 
+ "api": {},
   "dns": {},
-  "stats": {},
-  "routing": {},
-  "policy": {},
-  "inbounds": [],
-  "outbounds": [],
-  "inboundDetour": [],
-  "outboundDetour": [],
-  "transport": {}
+  "통계": {},
+  "라우팅": {},
+  "정책": {},
+  "인바운드"[],
+  "outbounds"[],
+  "inboundDetour"[],
+  "outboundDetour"[]
+  의 "전송"} {
 }
 ```
 
-> `log`: [LogObject](#logobject)
+> `로그`: [LogObject](#logobject)
 
-Log configuration to control log outputs.
+로그 출력을 제어하기위한 로그 구성.
 
 > `api`: [ApiObject](api.md)
 
-RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
+V2Ray 인스턴스를 제어하는 ​​RPC API 자세한 내용은 [API 구성](api.md) 을 참조하십시오.
 
 > `dns`: [DnsObject](dns.md)
 
-Configuration for internal DNS server's configurations. If this section is omitted, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](dns.md).
+내부 DNS 서버 구성을위한 구성. 이 섹션을 생략하면 V2Ray는 시스템 전체의 DNS 구성을 사용합니다. 자세한 내용은 [DNS 구성을 참조하십시오.](dns.md).
 
 > `stats`: [StatsObject](stats.md)
 
-When specified, internal [Statistics](stats.md) is enabled.
+지정되면 내부 [통계](stats.md) 이 사용됩니다.
 
-> `policy`: [PolicyObject](policy.md)
+> `정책`: [PolicyObject](policy.md)
 
-Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
+사용 권한 및 기타 보안 전략을위한 구성. 자세한 내용은 [로컬 정책](policy.md)참조하십시오.
 
-> `routing`: [RoutingObject](routing.md)
+> `라우팅`: [RoutingObject](routing.md)
 
-Configuration for internal [Routing](routing.md) strategy.
+내부 [라우팅](routing.md) 전략을위한 구성.
 
-> `inbounds`: \[ [InboundObject](#inboundobject) \]
+> `인바운드`: \ [ [인바운드 개체](#inboundobject)\]
 
-An array of [InboundObject](#inboundobject) as configuration for inbound proxies.
+인바운드 프록시의 구성으로 [InboundObject](#inboundobject) 배열입니다.
 
-> `outbounds`: \[ [OutboundObject](#outboundobject) \]
+> `아웃 바운드`: \ [ [아웃 바운드 개체](#outboundobject)\]
 
-An array of [OutboundObject](#outboundobject) as configuration for outbound proxies. The first outbound in the array is the main one. It is the default outbound in routing decision.
+아웃 바운드 프록시의 구성으로서 [OutboundObject](#outboundobject) 배열입니다. 배열의 첫 번째 아웃 바운드가 주요 아웃 바운드입니다. 라우팅 결정시 기본 아웃 바운드입니다.
 
-> `transport`: [TransportObject](transport.md)
+> `전송`: [전송 객체](transport.md)
 
-Low-level transport protocol's configurations. For details, see [Protocol Transport Options](transport.md).
+낮은 수준의 전송 프로토콜 구성 자세한 내용은 [프로토콜 전송 옵션](transport.md)참조하십시오.
 
 ## LogObject
 
 ```javascript
 {
-  "access": "/path/to/file",
-  "error": "/path/to/file",
-  "loglevel": "warning"
+  "접근": "/ 경로 / to / 파일",
+  "오류": "/ path / to / file",
+  "loglevel": "경고"
 }
 ```
 
-> `access`: string
+> `액세스`: 문자열
 
-Path to access log. If not empty, it must be a legal file path, such as `"/tmp/v2ray/_access.log"`(Linux), or `"C:\\Temp\\v2ray\\_access.log"`(Windows). If empty, V2Ray writes access log to `stdout`.
+로그에 액세스하는 경로입니다. 비어 있지 않은 경우, 법적 파일 경로 여야합니다 같은 `"/tmp/v2ray/_access.log"`(리눅스), 또는 `개의 "C : \\ 온도 \\ v2ray \\ _ access.log의"`(윈도우 ). 비어있는 경우 V2Ray는 액세스 로그를 `표준 출력`씁니다.
 
-> `error`: string
+> `오류`: 문자열
 
-Path to error log. If not empty, it must be a legal file path. If empty, V2Ray writes error log to `stdout`.
+오류 로그의 경로. 비어 있지 않은 경우 합법적 인 파일 경로 여야합니다. 비어있는 경우 V2Ray는 오류 로그를 `표준 출력`씁니다.
 
-> `loglevel`: "debug" | "info" | "warning" | "error" | "none"
+> `loglevel`: "디버그"| "정보"| "경고"| "오류"| "없음"
 
-Level of logs to be written. Different log levels indicate different content of logs. Default value is `"warning"`.
+기록 할 로그의 레벨. 다른 로그 레벨은 로그의 다른 내용을 나타냅니다. 기본값은 `"경고"`.
 
-Log levels:
+로그 수준 :
 
-* `"debug"`: Information for developers only. Also includes all `"info"` logs.
-* `"info"`: Information for current state of V2Ray. Users don't have to take care of those. Also includes all `"warning"` logs.
-* `"warning"`: Something wrong with the environment, usually outside of V2Ray, e.g., network breakage. V2Ray still runs, but users may experience some breakages. Also includes all `"error"` logs.
-* `"error"`: Something severely wrong, that V2Ray can't run at all.
-* `"none"`: All logging are disabled.
+* `"debug"`: 개발자 전용 정보. 또한 `"info"` 로그를 모두 포함합니다.
+* `"정보"`: V2Ray의 현재 상태에 대한 정보. 사용자는 이러한 문제를 처리 할 필요가 없습니다. 또한 `"경고"` 로그를 모두 포함합니다.
+* `"경고"`: 환경에 문제가 있습니다. 일반적으로 V2Ray 외부에 있습니다 (예 : 네트워크 손상). V2Ray는 계속 실행되지만 사용자가 일부 손상을 입을 수 있습니다. 또한 모든 포함 `"오류"` 로그.
+* `"오류"`: 뭔가 잘못되었습니다. V2Ray가 전혀 실행되지 않습니다.
+* `"none"`: 모든 로깅을 사용할 수 없습니다.
 
-## InboundObject
+## 인바운드 객체
 
-An InboundObject defines an inbound proxy. It handles incoming connections to V2Ray. Available proxies are [listed here](protocols.md).
+InboundObject는 인바운드 프록시를 정의합니다. V2Ray 로의 수신 연결을 처리합니다. 사용 가능한 프록시는 여기에 나열된 [입니다.](protocols.md).
 
 ```javascript
 {
-  "port": 1080,
-  "listen": "127.0.0.1",
-  "protocol": "protocol_name",
-  "settings": {},
-  "streamSettings": {},
-  "tag": "inbound_tag_name",
-  "sniffing": {
-    "enabled": false,
-    "destOverride": ["http", "tls"]
+  "포트"1080,
+  "수신" "127.0.0.1"
+  "프로토콜": "protocol_name"
+  "설정"{},
+  "streamSettings"{},
+  "태그": " inbound_tag_name ",
+  "스니핑 ": {
+    "활성화 "거짓,
+    "destOverride ":"HTTP ","TLS "]
   },
-  "allocate": {
-    "strategy": "always",
-    "refresh": 5,
-    "concurrency": 3
+  "할당 ": {
+    "전략 ":"항상 ",
+    " 새로 고침 ": 5,
+    "동시성 ": 3
   },
 }
 ```
 
-> `port`: number | "env:variable" | string
+> `포트`: 번호 | "env : 변수"| 끈
 
-Port that the proxy is listening on. Acceptable formats are:
+프록시가 수신 대기하는 포트입니다. 사용할 수있는 형식은 다음과 같습니다.
 
-* Integer: actual port number.
-* Environment variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
-* String: A numberic string value, such as `"1234"`, or a range of ports, such as `"5-10"` for 6 ports in total.
+* 정수 : 실제 포트 번호.
+* 환경 변수를 시작으로 `"ENV는"`, ENV 변수는 문자열 형식의 포트와 같은 지정 `: "PORT ENV를"`. V2Ray는 변수를 문자열로 디코딩합니다.
+* 문자열 : `"1234"`과 같은 숫자 문자열 값 또는 총 6 개의 포트에 대해 `"5-10"` 과 같은 포트 범위.
 
-The actual ports to open also depend on `allocate` setting. See below.
+열려는 실제 포트도 `할당` 설정에 따라 다릅니다. 아래를 참조하십시오.
 
-> `listen`: address
+> `듣기`: 주소
 
-The address to be listened on. Default value is `"0.0.0.0"` for incoming connections on all network interfaces. Otherwise the value has to be the address of an existing network interface.
+들릴 주소. 기본값은 `"0.0.0.0"` 모든 네트워크 인터페이스에서 들어오는 연결합니다. 그렇지 않으면 값은 기존 네트워크 인터페이스의 주소 여야합니다.
 
-> `protocol`: string
+> `프로토콜`: 문자열
 
-Name of the inbound protocol. See each individual for available values.
+인바운드 프로토콜의 이름. 사용 가능한 값은 각 개인을 참조하십시오.
 
-> `settings`: InboundConfigurationObject
+> `설정`: InboundConfigurationObject
 
-Protocol-specific settings. See `InboundConfigurationObject` defined in each protocol.
+프로토콜 별 설정. 각 프로토콜에 정의 된 `InboundConfigurationObject` 참조하십시오.
 
 > `streamSettings`: [StreamSettingsObject]
 
-See [Protocol Transport Options](transport.md) for detail.
+세부 사항은 [프로토콜 전송 옵션](transport.md) 을 참조하십시오.
 
-> `tag`: string
+> `태그`: 문자열
 
-The tag of the inbound proxy. It can be used for routing decisions. If not empty, it must be unique among all inbound proxies.
+인바운드 프록시의 태그. 라우팅 결정에 사용될 수 있습니다. 비어 있지 않으면 모든 인바운드 프록시 중에서 고유해야합니다.
 
-> `sniffing`: [SniffingObject](#sniffingobject)
+> `스니핑`: [스니핑 객체](#sniffingobject)
 
-Configuration for content sniffing.
+콘텐츠 스니핑을위한 구성.
 
-> `allocate`: [AllocateObject](#allocateobject)
+> `할당`: [AllocateObject](#allocateobject)
 
-Configuration for port allocation.
+포트 할당을위한 구성.
 
 ### SniffingObject
 
 ```javascript
 {
   "enabled": false,
-  "destOverride": ["http", "tls"]
+  "destOverride": [ "http", "tls"]
 }
 ```
 
-> `enabled`: true | false
+> `활성화 됨`: true | 그릇된
 
-Whether or not to enable content sniffing.
+콘텐츠 스니핑을 사용할지 여부.
 
-> `destOverride`: \["http" | "tls"\]
+> `destOverride`: \ [ "http"| "tls"\]
 
-An array of content type. If the content type of incoming traffic is specified in the list, the destination of the connection will be overwritten by sniffed value.
+내용 유형의 배열입니다. 들어오는 트래픽의 컨텐트 유형이 목록에 지정되어 있으면 연결 대상이 스니핑 된 값으로 덮어 쓰여집니다.
 
 ### AllocateObject
 
 ```javascript
 {
-  "strategy": "always",
-  "refresh": 5,
-  "concurrency": 3
+  "전략": "항상",
+  "새로 고침": ​​5,
+  "동시성": 3
 }
 ```
 
-> `strategy`: "always" | "random"
+> `전략`: "항상"| "무작위"
 
-Strategy of port allocation. When it is set to `"always"`, all port in the `port` field will be allocated for listening. If `"random"` is set, V2Ray will listen on number of `concurrency` ports, and the list of ports are refereshed every `refresh` minutes.
+포트 할당 전략. `"항상"`로 설정되면 `포트` 필드의 모든 포트가 청취에 할당됩니다. `"임의"` 이 설정된 경우 V2Ray는 `동시성` 포트를 수신하고 `새로 고침` 분마다 포트 목록이 다시 채워집니다.
 
-> `refresh`: number
+> `새로 고침`: 번호
 
-Number of minutes to refresh the ports of listening. Min value is `2`. This setting is only effective when `strategy` is set to `"random"`.
+청취 포트를 새로 고치는 시간 (분)입니다. 최소값은 `2`입니다. 이 설정은 `전략` 이 `"임의"`설정된 경우에만 유효합니다.
 
-> `concurrency`: number
+> `동시성`: 숫자
 
-Number of ports to listen. Min value is `1`. Max value is one third of entire port range.
+수신 대기 포트 수입니다. 최소값은 `1`입니다. 최대 값은 전체 포트 범위의 1/3입니다.
 
-## OutboundObject
+## 아웃 바운드 개체
 
-An OutboundObject defines an outbound proxy for handling out-going connections. Available protocols are listed [here](protocols.md).
+OutboundObject는 나가는 연결을 처리하기위한 아웃 바운드 프록시를 정의합니다. 사용 가능한 프로토콜이 나열됩니다 [여기](protocols.md).
 
 ```javascript
 {
   "sendThrough": "0.0.0.0",
-  "protocol": "protocol_name",
-  "settings": {},
-  "tag": "this_outbound_tag_name",
+  "protocol_name",
+  "설정": {},
+  "태그": "this_outbound_tag_name",
   "streamSettings": {},
-  "proxySettings": {
+  "proxySettings" : {
     "tag": "another_outbound_tag_name"
   },
   "mux": {}
 }
 ```
 
-> `sendThrough`: address
+> `sendThrough`: 주소
 
-An IP address for sending traffic out. The default value, `"0.0.0.0"` is for randomly choosing an IP available on the host. Otherwise the value has to be an IP address from existing network interfaces.
+트래픽을 보내는 IP 주소입니다. 기본값 " `"0.0.0.0 "` 은 호스트에서 사용 가능한 IP를 무작위로 선택하기위한 것입니다. 그렇지 않으면 값은 기존 네트워크 인터페이스의 IP 주소 여야합니다.
 
-> `protocol`: string
+> `프로토콜`: 문자열
 
-The protocol name of this outbound. See [Protocols](protocols.md) for all available values.
+이 아웃 바운드의 프로토콜 이름입니다. 사용 가능한 모든 값에 대해서는 [프로토콜](protocols.md) 을 참조하십시오.
 
-> `settings`: OutboundConfigurationObject
+> `설정`: OutboundConfigurationObject
 
-Protocol-specific settings. See `OutboundConfigurationObject` in each individual protocols.
+프로토콜 별 설정. 각 개별 프로토콜에서 `OutboundConfigurationObject` 을 참조하십시오.
 
-> `tag`: string
+> `태그`: 문자열
 
-The tag of this outbound. If not empty, it must be unique among all outbounds.
+이 아웃 바운드의 태그입니다. 비어 있지 않으면 모든 아웃 바운드 중에서 고유해야합니다.
 
 > `streamSettings`: [StreamSettingsObject](transport.md)
 
-Low-level transport settings. See [Protocol Transport Options](transport.md).
+낮은 수준의 전송 설정. [프로토콜 전송 옵션](transport.md)참조하십시오.
 
 > `proxySettings`: [ProxySettingsObject](#proxysettingsobject)
 
-Configuration for delegating traffic from this outbound to another. When this is set, `streamSettings` of this outbound will has no effect.
+이 아웃 바운드에서 다른 아웃 바운드로 트래픽을 위임하기위한 구성입니다. 이 값을 설정하면이 아웃 바운드의 `streamSettings` 이 적용되지 않습니다.
 
 > `mux`: [MuxObject](mux.md)
 
-See [Mux](mux.md) configuration for detail.
+세부 사항은 [Mux](mux.md) 구성을 참조하십시오.
 
 ### ProxySettingsObject
 
@@ -245,6 +246,6 @@ See [Mux](mux.md) configuration for detail.
 }
 ```
 
-> `tag`: string
+> `태그`: 문자열
 
-When `tag` is set to the tag of another outbound, the out-going traffic of current outbound will be delegated to the specified one.
+`태그` 이 다른 아웃 바운드의 태그로 설정되면 현재 아웃 바운드의 나가는 트래픽이 지정된 아웃 바운드 트래픽으로 위임됩니다.
