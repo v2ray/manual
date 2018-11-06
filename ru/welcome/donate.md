@@ -9,7 +9,11 @@ Project V - некоммерческий проект. Исходный код �
 * Отчёт о расходах публиковаться не будет.
 * Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V.
 
-{% hint style='tip' %} Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't. {% endhint %}
+{% hint style='tip' %}
+
+Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't.
+
+{% endhint %}
 
 ## Обычный способ {#usual-way}
 
@@ -18,7 +22,7 @@ Project V - некоммерческий проект. Исходный код �
 * [Patreon](https://www.patreon.com/v2ray)
 * [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Отправляйте на `love@v2ray.com`.
 
-{% hint style='danger' %} С надеждой на понимание предупреждаем, что переводы меньше одного доллара не имеют смысла из-за большой комиссии PayPal. {% endhint %}
+{% hint style='danger' %} Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee. {% endhint %}
 
 ## Криптовалюта {#crypto}
 
