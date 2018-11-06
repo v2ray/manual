@@ -40,9 +40,9 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 
 ```javascript
 {
-  "주소": "127.0.0.1",
-  "포트": 37192,
-  "사용자": []
+  "address": "127.0.0.1",
+  "port": 37192,
+  "users": []
 }
 ```
 
@@ -64,8 +64,8 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
   "alterId": 16,
-  "보안": "자동",
-  "레벨": 0
+  "security": "auto",
+  "level": 0
 }
 ```
 
@@ -105,17 +105,17 @@ Use `"auto"` wherever possible for better compatibility.
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
       "alterId": 100,
-      "email": "love @ v2ray. COM "
+      "email": "love@v2ray.com"
     }
-  ,
-  "기본 "{
-    "레벨 "0,
-    "alterId "32
+  ],
+  "default": {
+    "level": 0,
+    "alterId": 32
   },
-  "우회 "{
-    "를 ""tag_to_detour "
-  }
-  "disableInsecureEncryption " : 거짓
+  "detour": {
+    "to": "tag_to_detour"
+  },
+  "disableInsecureEncryption": false
 }
 ```
 
@@ -169,7 +169,7 @@ Email address for user identification.
 
 ```javascript
 {
-  "~": "tag_to_detour"
+  "to": "tag_to_detour"
 }
 ```
 
@@ -181,7 +181,7 @@ The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMe
 
 ```javascript
 {
-  "레벨": 0,
+  "level": 0,
   "alterId": 32
 }
 ```
