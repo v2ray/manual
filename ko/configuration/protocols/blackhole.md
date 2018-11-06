@@ -2,7 +2,7 @@
 refcn: chapter_02/protocols/blackhole
 refen: configuration/protocols/blackhole
 ---
-# 블랙홀
+# Blackhole
 
 * 이름 : `블랙 홀`
 * 유형 : 아웃 바운드
