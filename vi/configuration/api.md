@@ -4,13 +4,13 @@ refen: configuration/api
 ---
 # API
 
-V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
+V2Ray cung cấp một số API để truy cập từ xa. Các API này dựa trên [gRPC](https://grpc.io/).
 
-When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
+Khi API được bật, V2Ray sẽ tự động tạo proxy đi, được gắn thẻ là `thẻ`. Người dùng phải [định tuyến](routing.md) tất cả các kết nối gRPC cho kết nối này.
 
 ## ApiObject
 
-`ApiObject` is used as `api` field in top level configuration.
+`ApiObject` được sử dụng làm trường `api` trong cấu hình cấp cao nhất.
 
 ```javascript
 {
@@ -25,27 +25,27 @@ When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `t
 
 > `tag`: string
 
-The tag of the outbound proxy.
+Thẻ của proxy gửi đi.
 
 > `services`: \[ string \]
 
-List of enabled APIs.
+Danh sách các API được bật.
 
-## Supported API list
+## Danh sách API được hỗ trợ
 
 ### HandlerService
 
-API for manipulating inbound and outbound proxies. The following functionalities are provided:
+API để thao tác proxy trong và ngoài. Các chức năng sau đây được cung cấp:
 
-* Add a new inbound/outbound proxy.
-* Remove an existing inbound/outbound proxy.
-* Add a new user to an inbound proxy (VMess only).
-* Remove an existing user from an inbound proxy (VMess only).
+* Thêm proxy vào / ra mới.
+* Xóa proxy hiện tại / thư đi.
+* Thêm người dùng mới vào proxy đến (chỉ dành cho VMess).
+* Xóa người dùng hiện tại khỏi proxy gửi đến (chỉ VMess).
 
 ### LoggerService
 
-To restart internal logger. Can work with logrotate for operating log files.
+Để khởi động lại trình ghi nhật ký nội bộ. Có thể làm việc với logrotate cho các tệp log hoạt động.
 
 ### StatsService
 
-Support for internal [Statistics](stats.md).
+Hỗ trợ nội bộ [Thống kê](stats.md).
