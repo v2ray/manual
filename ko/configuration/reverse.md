@@ -155,7 +155,7 @@ Reverse:
 }
 ```
 
-入站代理:
+Inbound:
 
 ```javascript
 {
@@ -178,7 +178,7 @@ Reverse:
 }
 ```
 
-Routing
+Routing:
 
 ```javascript
 "라우팅": {
