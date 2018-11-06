@@ -2,14 +2,14 @@
 refcn: chapter_02/02_protocols
 refen: configuration/protocols
 ---
-# Protocols
+# Giao thức
 
-V2Ray supports the following protocols. Each protocol may be an inbound protocol, or an outbound protocol, or both.
+V2Ray hỗ trợ các giao thức sau. Mỗi giao thức có thể là giao thức gửi đến hoặc giao thức gửi đi hoặc cả hai.
 
-* [Blackhole](protocols/blackhole.md)
-* [Dokodemo-door](protocols/dokodemo.md)
-* [Freedom](protocols/freedom.md)
+* [Hố đen](protocols/blackhole.md)
+* [Cửa Dokodemo](protocols/dokodemo.md)
+* [Sự tự do](protocols/freedom.md)
 * [HTTP](protocols/http.md)
 * [Shadowsocks](protocols/shadowsocks.md)
-* [Socks](protocols/socks.md)
+* [Vớ](protocols/socks.md)
 * [VMess](protocols/vmess.md)
