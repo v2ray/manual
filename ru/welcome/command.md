@@ -24,25 +24,29 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
   * `json`: формат JSON.
   * `pb` или `protobuf`: формат Protobuf.
 
-{% hint style='info' %} When `-config` is not specified, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by [environment variable](../configuration/env.md) `v2ray.location.asset`. {% endhint %}
+{% hint style='info' %}
+
+When `-config` is not specified, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by [environment variable](../configuration/env.md) `v2ray.location.asset`.
+
+{% endhint %}
 
 ## V2Ctl
 
-V2Ctl имеет следующие параметры командной строки:
+V2Ctl has the following commandline parameters:
 
 ```shell
 v2ctl <command> <options>
 ```
 
-Ниже перечислены доступные команды. Каждая команда имеет свои собственные параметры.
+Available commands are listed below. Each command has its own options.
 
 ### Verify
 
 `v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
 
-Проверка подписи бинарного файла V2Ray.
+To verify the signature of a V2Ray binary.
 
-Опциональные параметры:
+Options:
 
 * `sig`：Путь к файлу с подписью. Значение по умолчанию - ".sig"-файл в проверяемом пути.
 * Первый аргумент: файл для проверки.
@@ -51,10 +55,10 @@ v2ctl <command> <options>
 
 `v2ctl config`
 
-Нет параметров. Эта команда считывает конфигурацию в формате JSON из потока stdin, а выводит её в формате Protobuf в stdout.
+No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
 
 ### UUID
 
 `v2ctl uuid`
 
-Нет параметров. Эта команда выводит случайный UUID.
+No options. This command prints a random UUID.
