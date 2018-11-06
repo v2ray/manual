@@ -2,9 +2,9 @@
 refcn: chapter_02/protocols/blackhole
 refen: configuration/protocols/blackhole
 ---
-# Hố đen
+# Blackhole
 
-* Tên: `hố đen`
+* Tên: `blackhole`
 * Loại: Đi
 
 Blackhole là một giao thức cho các kết nối gửi đi. Nó chặn tất cả các kết nối với các câu trả lời được xác định trước. Kết hợp với [Định tuyến](../routing.md), điều này có thể được sử dụng để chặn truy cập vào một số trang web.
