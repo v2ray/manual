@@ -24,6 +24,9 @@
         <script src="{{ resource.path|resolveAsset }}"></script>
         {% endif %}
     {% endfor %}
+    {% if config.pluginsConfig['mermaid-gb3'] %}
+        <script src="{{ "gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"|resolveAsset }}"></script>
+    {% endif %}
 {% endblock %}
 
 {% block body %}
