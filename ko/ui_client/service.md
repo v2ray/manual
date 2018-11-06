@@ -35,6 +35,6 @@ refen: ui_client/service
 
 ## 너의 운을 시험 해봐
 
-* [PrimeDick](https://primedice.com/?c=default): 비트 코인을 사용하는 주사위 게임.
+* [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): 월드컵 2018을 포함하여 비트 코인으로 베팅 스포츠 게임.
 * [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Bitcoin을 사용한 카지노 게임.
