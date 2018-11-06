@@ -17,11 +17,22 @@ V2Ray는 내부 정보를 제공합니다.
 
 모든 통계 카운터는 다음과 같습니다.
 
-* `사용자>>>[email]>>>트래픽>>>업 링크` (V2Ray 3.16+) : 특정 사용자의 누적 업 링크 트래픽 (바이트).
-* `사용자>>>[email]>>>트래픽>>>다운 링크` (V2Ray 3.16+) : 특정 사용자의 누적 다운 링크 트래픽 (바이트).
-* `인바운드>>>[tag]>>>트래픽>>>업 링크` (V2Ray 3.18+) : 특정 인바운드의 누적 업 링크 트래픽 (바이트).
-* `인바운드>>>[tag]>>>트래픽>>>다운 링크` (V2Ray 3.18+) : 특정 인바운드의 누적 다운 링크 트래픽 (바이트).
+> `user>>>[email]>>>traffic>>>uplink`
+
+Accumulated uplink traffic of specific user, in bytes.
+
+> `user>>>[email]>>>traffic>>>downlink`
+
+Accumulated downlink traffic of specific user, in bytes.
+
+> `inbound>>>[tag]>>>traffic>>>uplink`
+
+Accumulated uplink traffic of specific inbound, in bytes.
+
+> `inbound>>>[tag]>>>traffic>>>downlink`
+
+Accumulated downlink traffic of specific inbound, in bytes.
 
 ## 팁
 
-* 사용자에게 유효한 이메일 주소가 없으면 통계가 사용 설정되지 않습니다.
+* If a user doesn't have a valid email address, the stats will not be enabled.
