@@ -20,7 +20,7 @@ Print the version of V2Ray only, and then exit.
 
 Test configuration, output any errors and then exit.
 
-> `-config`:
+> `-config`
 
 URI of the configuration. Avilable formats are:
 
