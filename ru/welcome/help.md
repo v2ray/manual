@@ -6,7 +6,11 @@ refen: welcome/help
 
 Project V provides multiple methods for communications.
 
-{% hint style='info' %} Project V team supports Chinese and English. Please choose either one that you are familiar with for questions. {% endhint %}
+{% hint style='info' %}
+
+Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
+
+{% endhint %}
 
 ## Github issues
 
@@ -19,7 +23,7 @@ We uses several repositories for different type of discussions.
 
 ## Telegram
 
-Project V предоставляет следующие группы для разных типов обсуждений.
+Project V provides the following groups for different type of discussions.
 
 * [Использование](https://telegram.me/projectv2ray) 
   * Only for Project V related topics.
@@ -28,7 +32,7 @@ Project V предоставляет следующие группы для ра
 
 {% hint style='danger' %} All discussion groups forbid the following topics: adult content, politics, hate speeches. Senders of these topics will be banned immedietely. {% endhint %}
 
-Также обратите внимание на [канал с объявлениями от Project V](https://t.me/v2msg).
+Please also follow [Project V Announcement](https://t.me/v2msg) for news.
 
 ## Twitter
 
@@ -36,13 +40,13 @@ Project V предоставляет следующие группы для ра
 
 ## Email
 
-Отправьте сообщение на один из адресов ниже, если вы хотите приватно поговорить с командой V2Ray.
+Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
 
 `love@v2ray.com`: Main email address for communication. Checked every day.
 
 `v2ray@protonmail.com`: A [ProtonMail](https://protonmail.com/) mailbox which employs end to end encryption. It is difficult to use, and only being checked occasionally.
 
-{% hint style='info' %} Sadly due to high workload, it is not promised that every email gets replied. Извините за неудобства. For general questions, please use discussion groups above for quick response. {% endhint %}
+{% hint style='info' %} Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For general questions, please use discussion groups above for quick response. {% endhint %}
 
 You may get PGP public key by searching `love@v2ray.com`, or use the public key below.
 
