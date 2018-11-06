@@ -2,95 +2,95 @@
 refcn: chapter_00/install
 refen: welcome/install
 ---
-# Download & Install
+# Tải xuống & Cài đặt
 
-## Platform {#platform}
+## Nền tảng {#platform}
 
-V2Ray is available on the following platforms:
+V2Ray có sẵn trên các nền tảng sau:
 
-* Windows 7 and later (x86 / amd64)
-* Mac OS X 10.10 Yosemite and later (amd64)
-* Linux 2.6.23 and later (x86 / amd64 / arm / arm64 / mips64 / mips) 
-  * Including but not limited to Debian 7 / 8, Ubuntu 12.04 / 14.04 and later, CentOS 6 / 7, Arch Linux
+* Windows 7 trở lên (x86 / amd64)
+* Mac OS X 10.10 Yosemite trở lên (amd64)
+* Linux phiên bản 2.6.23 trở lên (x86 / amd64 / arm / arm64 / mips64 / mips) 
+  * Bao gồm nhưng không giới hạn ở Debian 7/8, Ubuntu 12.04 / 14.04 trở lên, CentOS 6/7, Arch Linux
 * FreeBSD (x86 / amd64)
 * OpenBSD (x86 / amd64)
 * Dragonfly BSD (amd64)
 
-## Download {#download}
+## Tải về {#download}
 
-Pre-built packages can be found here:
+Bạn có thể tìm thấy các gói dựng sẵn tại đây:
 
-1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
+1. Phát hành Github: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
+2. Phân phối lại: [v2ray.com/download](https://www.v2ray.com/download/)
 3. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
-4. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
+4. Arch Linux: [gói / cộng đồng / x86_64 / v2ray /](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
-All packages are in ZIP format. Download and unzip corresponding packages to your system.
+Tất cả các gói đều ở định dạng ZIP. Tải xuống và giải nén các gói tương ứng vào hệ thống của bạn.
 
-## Verify {#verify}
+## Kiểm chứng {#verify}
 
-There are 2 ways to verify packages.
+Có 2 cách để xác minh gói.
 
-1. Each `.zip` file has a corresponding `.dgst` file for SHA digests.
-2. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
+1. Mỗi tệp `.zip` có tệp `.dgst` tương ứng với các tệp SHA.
+2. Tập tin chữ ký GPG cho các tập tin thực thi (v2ray / v2ray.exe) có thể được tìm thấy trong v2ray.sig (hoặc v2ray.exe.sig) trong cùng một gói. Khóa công khai là [trong kho lưu trữ](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
-## Install on Windows or Mac OS {#install-windows}
+## Cài đặt trên Windows hoặc Mac OS {#install-windows}
 
-Run v2ray / v2ray.exe after unzip the packages.
+Chạy v2ray / v2ray.exe sau khi giải nén các gói.
 
-## Install on Linux {#install-linux}
+## Cài đặt trên Linux {#install-linux}
 
-We provide a script to install on Linux. This script detects previous installed v2ray and then upgrade or install a new one accordingly. If there is a previous version, the config file in /etc/v2ray will not be overwritten during upgrade.
+Chúng tôi cung cấp một kịch bản để cài đặt trên Linux. Kịch bản này phát hiện v2ray đã cài đặt trước đó và sau đó nâng cấp hoặc cài đặt một phiên bản mới cho phù hợp. Nếu có phiên bản trước, tệp cấu hình trong / etc / v2ray sẽ không bị ghi đè trong khi nâng cấp.
 
-The following command assumes root permission.
+Lệnh sau giả định quyền root.
 
-Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
+Chạy lệnh sau để cài đặt V2Ray. Nếu yum hoặc apt có sẵn, tập lệnh sẽ cài đặt giải nén và daemon / systemd. Họ được yêu cầu chạy V2Ray như một dịch vụ. Bạn cần cài đặt chúng theo cách thủ công nếu hệ thống Linux của bạn không hỗ trợ yum hoặc apt.
 
 ```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
-The script installs the following files.
+Tập lệnh cài đặt các tệp sau.
 
-* `/usr/bin/v2ray/v2ray`: V2Ray executable
-* `/usr/bin/v2ray/v2ctl`: Utility
-* `/etc/v2ray/config.json`: Config file
-* `/usr/bin/v2ray/geoip.dat`: IP data file
-* `/usr/bin/v2ray/geosite.dat`: domain data file
+* `/ usr / bin / v2ray / v2ray`: V2Ray thực thi
+* `/ usr / bin / v2ray / v2ctl`: Tiện ích
+* `/etc/v2ray/config.json`: Tập tin cấu hình
+* `/usr/bin/v2ray/geoip.dat`: Tệp dữ liệu IP
+* `/usr/bin/v2ray/geosite.dat`: tệp dữ liệu miền
 
-This script also configures V2Ray to run as service, if systemd is available.
+Tập lệnh này cũng cấu hình V2Ray để chạy dưới dạng dịch vụ, nếu systemd có sẵn.
 
-Configurations are at the following places.
+Cấu hình ở các vị trí sau.
 
 * `/etc/systemd/system/v2ray.service`: Systemd
 * `/etc/init.d/v2ray`: SysV
 
-After installation, we will need to:
+Sau khi cài đặt, chúng tôi sẽ cần:
 
-1. Update `/etc/v2ray/config.json` file for your own scenario.
-2. Run `service v2ray start` command to start V2Ray.
-3. Optionally run `service v2ray start|stop|status|reload|restart|force-reload` to control V2Ray service.
+1. Cập nhật tập tin `/etc/v2ray/config.json` cho kịch bản của riêng bạn.
+2. Chạy lệnh `dịch vụ v2ray bắt đầu` để bắt đầu V2Ray.
+3. Tùy chọn chạy `dịch vụ v2ray start | stop | status | reload | restart | force-reload` để điều khiển dịch vụ V2Ray.
 
 ### go.sh {#gosh}
 
-go.sh supports the following parameters.
+go.sh hỗ trợ các tham số sau.
 
-* `-p` or `--proxy`: Use a proxy to download V2Ray packages. Same as curl format, such as `"socks5://127.0.0.1:1080"` or `"http://127.0.0.1:3128"`.
-* `-f` or `--force`: Force installation. The script will assume V2Ray was not installed at all.
-* `--version`: The version to be installed, such as `"v1.13"`. Default value is the latest stable release.
-* `--local`: Use a local package for installation.
+* `-p` hoặc `--proxy`: Sử dụng proxy để tải xuống gói V2Ray. Giống như định dạng curl, chẳng hạn như `"socks5: //127.0.0.1: 1080"` hoặc `"http://127.0.0.1:3128"`.
+* `-f` hoặc `- force`: Bắt buộc cài đặt. Kịch bản sẽ giả định V2Ray chưa được cài đặt.
+* `phiên bản`: Phiên bản sẽ được cài đặt, chẳng hạn như `"v1.13"`. Giá trị mặc định là bản phát hành ổn định mới nhất.
+* `--local`: Sử dụng gói địa phương để cài đặt.
 
-Examples:
+Ví dụ:
 
-* Use SOCKS proxy 127.0.0.1:1080 to install the latest package: ```./go.sh -p socks5://127.0.0.1:1080```
-* Install v1.13 from local file:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
+* Sử dụng SOCKS proxy 127.0.0.1:1080 để cài đặt gói mới nhất: ```./go.sh -p socks5://127.0.0.1:1080```
+* Cài đặt v1.13 từ tệp cục bộ:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
 
 ## Docker {#docker}
 
-V2Ray provides 2 docker images:
+V2Ray cung cấp 2 hình ảnh docker:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/): Contains official releases.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Contains latest code.
+* [v2ray / official](https://hub.docker.com/r/v2ray/official/): Chứa phiên bản chính thức.
+* [v2ray / dev](https://hub.docker.com/r/v2ray/dev/): Chứa mã mới nhất.
 
-The 2 images has the same structure as the Linux installation.
+2 hình ảnh có cấu trúc giống như cài đặt Linux.
