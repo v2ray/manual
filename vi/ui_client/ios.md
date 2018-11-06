@@ -2,61 +2,61 @@
 refcn: ui_client/ios
 refen: ui_client/ios
 ---
-# iOS Client
+# Ứng dụng khách iOS
 
 ## Kitsunebi
 
-Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
+Kitsunebi là một ứng dụng iOS dựa trên V2Ray. Nó cung cấp đầy đủ chức năng như V2Ray. Nó cũng hỗ trợ nhập và xuất cấu hình JSON tương thích V2Ray.
 
-* Download: iTunes (Unavailable)
+* Tải xuống: iTunes (Không khả dụng)
 
 ## Kitsunebi Lite
 
-Light version of Kitsunebi.
+Phiên bản nhẹ của Kitsunebi.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
 
 ## Shadowrocket
 
-Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadowsocks, VMess, SSR etc.
+Shadowrocket là một ứng dụng VPN chung. Hỗ trợ nhiều giao thức như Shadowsocks, VMess, SSR, v.v.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## Pepi (was ShadowRay) {#pepi}
+## Pepi (là ShadowRay) {#pepi}
 
-Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
+Pepi là ứng dụng tương thích V2Ray. Có thể tạo các kết nối VPN dựa trên giao thức VMess và giao tiếp với bất kỳ máy chủ V2Ray nào.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
 
 ## Quantumult
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## Other tools {#other}
+## Các công cụ khác {#other}
 
 ### HyperApp
 
-An utility to build servers with docker.
+Một tiện ích để xây dựng các máy chủ với docker.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
-* Website: [HyperApp.fun](https://www.hyperapp.fun/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
+* Trang web: [HyperApp.fun](https://www.hyperapp.fun/)
 
 ### Termius
 
 SSH client.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
 
 ### Telegram
 
-Encrypted discussion.
+Thảo luận được mã hóa.
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
+* Trang web: [telegram.org](https://telegram.org/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
 
 ### ProtonMail
 
-Encrypted email.
+Email được mã hóa.
 
-* Website: [protonmail.com](https://protonmail.com/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)
+* Trang web: [protonmail.com](https://protonmail.com/)
+* Tải xuống: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)
