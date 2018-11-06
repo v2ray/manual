@@ -2,41 +2,41 @@
 refcn: chapter_02/stats
 refen: configuration/stats
 ---
-# Statistics
+# Số liệu thống kê
 
-V2Ray provides some information about its internals.
+V2Ray cung cấp một số thông tin về nội bộ của nó.
 
 ## StatsObject
 
-`StatsObject` is used as `stats` field in top level configuration.
+`StatsObject` được sử dụng như `số liệu thống kê` trường trong cấu hình cấp cao nhất.
 
 ```javascript
 {
 }
 ```
 
-At the moment there is no parameter in stats settings. Stats is enabled automatically when the `StatsObject` is set in top level configuration. You need also enable the corresponding settings in [Policy](policy.md), in order to keep track of user or system stats.
+Tại thời điểm này không có tham số trong cài đặt thống kê. Số liệu thống kê được bật tự động khi `StatsObject` được đặt ở cấu hình cấp cao nhất. Bạn cũng cần bật cài đặt tương ứng trong [Chính sách](policy.md), để theo dõi số liệu thống kê người dùng hoặc hệ thống.
 
-All stats counters are listed below:
+Tất cả các số liệu thống kê quầy được liệt kê dưới đây:
 
-## User Traffic
+## Lưu lượng người dùng
 
-If an user doesn't has email address set in protocol settings, the traffic stats will not be enabled.
+Nếu người dùng không có địa chỉ email được đặt trong cài đặt giao thức, thống kê lưu lượng truy cập sẽ không được bật.
 
-> `user>>>[email]>>>traffic>>>uplink`
+> `người dùng>>>[email]>>>giao thông>>>uplink`
 
-Accumulated uplink traffic of specific user, in bytes.
+Lưu lượng truy cập uplink tích lũy của người dùng cụ thể, tính theo byte.
 
-> `user>>>[email]>>>traffic>>>downlink`
+> `người dùng>>>[email]>>>lưu lượng truy cập>>>đường xuống`
 
-Accumulated downlink traffic of specific user, in bytes.
+Lưu lượng truy cập đường xuống tích lũy của người dùng cụ thể, tính theo byte.
 
-## Global Traffic
+## Lưu lượng truy cập toàn cầu
 
-> `inbound>>>[tag]>>>traffic>>>uplink`
+> `trong nước>>>[tag]>>>giao thông>>>uplink`
 
-Accumulated uplink traffic of specific inbound, in bytes.
+Lưu lượng truy cập uplink tích lũy cụ thể trong nước, tính theo byte.
 
-> `inbound>>>[tag]>>>traffic>>>downlink`
+> `gửi đến>>>[tag]>>>lưu lượng truy cập>>>đường xuống`
 
-Accumulated downlink traffic of specific inbound, in bytes.
+Lưu lượng truy cập đường xuống được tích lũy của cụ thể trong nước, tính theo byte.
