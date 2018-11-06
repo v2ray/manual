@@ -4,7 +4,7 @@ refen: configuration/transport/tcp
 ---
 # TCP حمل و نقل
 
-پیکربندی:
+## TcpObject
 
 ```javascript
 {
@@ -14,59 +14,116 @@ refen: configuration/transport/tcp
 }
 ```
 
-جایی که:
+> `header`: NoneHeaderObject | HttpHeaderobject
 
-* `سرتیتر`: تنظیمات مبهم سربرگ: 
-  * `تایپ کنید`: نوع سوءاستفاده انتخاب ها عبارتند از: 
-    * `"هیچکدام"`: پیش فرض. هیچ تردیدی وجود ندارد.
-    * `"http"`: ابهام HTTP. زیر را ببینید
+Header obfuscation. Default value is `NoneHeaderObject`.
 
-## ابهام HTTP
+### NoneHeaderObject
 
-تداخل HTTP باید پیکربندی (و تطبیق) برای ورودی و خروجی از همتایان اتصال.
+No header obfuscation.
 
 ```javascript
 {
-  "type": http،
-  "request": {
-    "version": "1.1"،
-    "method": "GET"،
-    "path": ["/"]،
-    "headers": {
-      "میزبان": ["www.baidu.com"، "www.bing.com"]،
-      کاربر عامل: [
-        "موزیلا / 5.0 (ویندوز NT 10.0؛ WOW64) AppleWebKit / 537.36 (KHTML، مانند Gecko) کروم / 53.0.2785.143 Safari / 537.36 "،
-        " موزیلا / 5.0 (iPhone؛ پردازنده آی فون OS 10_0_2 مانند Mac OS X) AppleWebKit / 601.1 (KHTML، مانند Gecko) CriOS / 53.0.2785.109 Mobile / 14A456 Safari / 601.1 .46 "
-      ]،
-      " پذیرش رمزگذاری ": [" gzip، deflate "]،
-      " اتصال ": [" زنده نگه داشتن "]،
-      " Pragma ":" بدون حافظه پنهان "
-    }
-  }،
-  "پاسخ": {
-    "نسخه": "1.1"،
-    "وضعیت": "200"،
-    دلیل: "OK"،
-    "headers": {
-      "Content-type": ["application / octet -Stream "،" ویدیو / MPEG "]،
-      " انتقال-رمزگذاری ": [" تقطیع "]،
-      " اتصال ": [" حفظ اتصال "]،
-      " پراگما ":" بدون نهانگاه "
-    }
+  "type": "none"
+}
+```
+
+> `type`: "none"
+
+Disable header obfuscation.
+
+### HttpHeaderObject
+
+HTTP header obfuscation. The configuration must be the same between connecting inbound and outbound.
+
+```javascript
+{
+  "type": "http",
+  "request": {},
+  "response": {}
+}
+```
+
+> `type`: "http"
+
+Enable HTTP header obfuscation.
+
+> `request`: [HTTPRequestObject](#httprequestobject)
+
+HTTP request template.
+
+> `response`: [HTTPResponseObject](#httpresponseobject)
+
+HTTP response template.
+
+### HTTPRequestObject
+
+```javascript
+{
+  "version": "1.1",
+  "method": "GET",
+  "path": ["/"],
+  "headers": {
+    "Host": ["www.baidu.com", "www.bing.com"],
+    "User-Agent": [
+      "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/53.0.2785.109 Mobile/14A456 Safari/601.1.46"
+    ],
+    "Accept-Encoding": ["gzip, deflate"],
+    "Connection": ["keep-alive"],
+    "Pragma": "no-cache"
   }
 }
 ```
 
-جایی که:
+> `version`: string
 
-* `نوع`: همان `نوع` ورود به عنوان در `tcpSettings`.
-* `درخواست`: تنظیمات درخواست HTTP: 
-  * `نسخه`: نسخه HTTP، مقدار پیش فرض `"1.1"`
-  * `روش`: روش HTTP، مقدار پیش فرض `"GET"`.
-  * `مسیر`: مسیر. یک آرایه رشته ای مقدار پیش فرض `["/"]`. وقتی مقادیر چندگانه وجود دارد، ارزش برای هر درخواست به طور تصادفی برداشته می شود.
-  * `هدر`: هدر HTTP. این یک جفت ارزش کلیدی است. هر کلید کلیدی از هدر HTTP است، و ارزش مقدار هدر HTTP است. هنگامی که مقادیر چندگانه تنظیم می شوند، مقدار تاثیر گذار به طور تصادفی برای هر درخواست برداشت می شود. تنظیمات پیش فرض همانند مثال بالا است.
-* `واکنش`: پاسخ HTTP 
-  * `نسخه`: نسخه HTTP. مقدار پیش فرض `"1.1"`.
-  * `وضعیت`: وضعیت HTTP. مقدار پیش فرض `"200"`.
-  * `دلیل`: متن وضعیت HTTP. مقدار پیش فرض `"OK"`.
-  * `هدر`: هدر HTTP. همانند عنوان های درخواست، اما برای پاسخ.
+HTTP version. Default value is `"1.1"`.
+
+> `method`: string
+
+HTTP method. Default value is `"GET"`。
+
+> `path`: \[ string \]
+
+HTTP path. An array is string. The path will be chosen randomly for every connection.
+
+> `headers`: map{string, \[ string \] }
+
+HTTP header. The key of each entry is the key of HTTP header. The value of each entry is a list of strings. The actual HTTP header value will be chosen randomly from the list for each connection. Default value is the values in the example above.
+
+In a connection, all keys in the specified map will be set to the HTTP header.
+
+### HTTPResponseObject
+
+```javascript
+{
+  "version": "1.1",
+  "status": "200",
+  "reason": "OK",
+  "headers": {
+    "Content-Type": ["application/octet-stream", "video/mpeg"],
+    "Transfer-Encoding": ["chunked"],
+    "Connection": ["keep-alive"],
+    "Pragma": "no-cache"
+  }
+}
+```
+
+> `version`: string
+
+HTTP version. Default value is `"1.1"`.
+
+> `status`: string
+
+HTTP status. Default value is `"200"`
+
+> `reason`: string
+
+HTTP status message. Default value is `"OK"`.
+
+> `headers`: map{string, string}
+
+HTTP header. The key of each entry is the key of HTTP header. The value of each entry is a list of strings. The actual HTTP header value will be chosen randomly from the list for each connection. Default value is the values in the example above.
+
+In a connection, all keys in the specified map will be set to the HTTP header.
