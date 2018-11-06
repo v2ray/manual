@@ -2,15 +2,15 @@
 refcn: chapter_02/index
 refen: configuration/index
 ---
-# Configuration
+# Cấu hình
 
-V2Ray uses [protobuf](https://developers.google.com/protocol-buffers/)-based configuration. As protobuf format is less readable, V2Ray also supports configuration in JSON. Before V2Ray runs, it automatically converts JSON config into protobuf. That being said, other configuration formats may be introduced in the furture.
+V2Ray sử dụng [cấu hình dựa trên protobuf](https://developers.google.com/protocol-buffers/). Vì định dạng protobuf ít có thể đọc được, V2Ray cũng hỗ trợ cấu hình trong JSON. Trước khi V2Ray chạy, nó sẽ tự động chuyển đổi cấu hình JSON thành protobuf. Điều đó đang được nói, các định dạng cấu hình khác có thể được giới thiệu trong furture.
 
-Here we introduce the JSON-based configuration.
+Ở đây chúng tôi giới thiệu cấu hình dựa trên JSON.
 
-JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
+JSON, hoặc [Ký hiệu đối tượng JavaScript](https://en.wikipedia.org/wiki/JSON), viết tắt là các đối tượng trong Javascript. Một tệp JSON chứa một và chỉ một đối tượng JSON, bắt đầu bằng "{" và kết thúc bằng "}".
 
-A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
+Một đối tượng JSON chứa một danh sách các cặp giá trị khóa. Khóa là một chuỗi và giá trị có thể khác nhau về các loại, chẳng hạn như chuỗi, số, boolean, mảng hoặc đối tượng khác. Một đối tượng điển hình như sau:
 
 ```javascript
 {
@@ -26,50 +26,50 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 
 {% hint style='info' %}
 
-V2Ray supports comments in JSON，annotated by "//" or "/\* \*/". In an editor that doesn't support comments, they may get displayed as errors, but comments actually work fine in V2Ray.
+V2Ray hỗ trợ các chú thích trong JSON ， được chú thích bởi "//" hoặc "/ \ * \ * /". Trong trình chỉnh sửa không hỗ trợ nhận xét, chúng có thể được hiển thị dưới dạng lỗi, nhưng nhận xét thực sự hoạt động tốt trong V2Ray.
 
 {% endhint %}
 
-## JSON Data Types
+## Các kiểu dữ liệu JSON
 
-Here is a brief introduction of JSON data types. They will be referenced in the rest of docs.
+Đây là một giới thiệu ngắn gọn về các kiểu dữ liệu JSON. Chúng sẽ được tham chiếu trong phần còn lại của tài liệu.
 
 > `boolean`: true | false
 
-Boolean value, has to be either `true` or `false`, without quotation mark.
+Giá trị logic, phải là `true` hoặc `false`, không có dấu ngoặc kép.
 
-> `number`
+> `con số`
 
-Usually non-negative integers, without quotation mark.
+Thông thường các số nguyên không âm, không có dấu ngoặc kép.
 
-> `string`
+> `chuỗi`
 
-Sequence of characters, surrounded by quotation mark.
+Chuỗi ký tự, được bao quanh bởi dấu ngoặc kép.
 
 > `array`: []
 
-Array of elements. The type of its elements is usually the same, e.g., `[string]` is an array of `string`s.
+Mảng các yếu tố. Loại phần tử của nó thường giống nhau, ví dụ, `[string]` là một mảng gồm `chuỗi`s.
 
 > `object`: {}
 
-Object. It comes with a list of key value pairs.
+Vật. Nó đi kèm với một danh sách các cặp giá trị quan trọng.
 
 {% hint style='tip' %}
 
-A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
+Cặp giá trị khóa thường kết thúc bằng dấu phẩy ",", nhưng không được kết thúc bằng dấu phẩy nếu đó là phần tử cuối cùng của đối tượng.
 
 {% endhint %}
 
-## V2Ray Common Data Types
+## Các kiểu dữ liệu chung V2Ray
 
 > `map`: object \{string, string\}
 
-An object whose keys and values have fixed types.
+Một đối tượng có khóa và giá trị có các loại cố định.
 
 > `address`: string
 
-An IP or domain address in string form, such as `"8.8.8.8"` or `"www.v2ray.com"`
+Địa chỉ IP hoặc tên miền ở dạng chuỗi, chẳng hạn như `"8.8.8.8"` hoặc `"www.v2ray.com"`
 
 > `address_port`: string
 
-An `address` with port, such as `"8.8.8.8:53"` or `"www.v2ray.com:80"`. In some usages, the address part can be omitted, like `":443"`.
+Một `địa chỉ` với cổng, chẳng hạn như `"8.8.8.8:53"` hoặc `"www.v2ray.com:80"`. Trong một số tập quán, phần địa chỉ có thể được bỏ qua, như `": 443"`.
