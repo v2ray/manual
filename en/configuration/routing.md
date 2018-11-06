@@ -52,7 +52,7 @@ An array of rules. For each inbound connection, V2Ray tries these rules from top
   "port": "0-100",
   "network": "tcp",
   "source": [
-    "10.0.0.1",
+    "10.0.0.1"
   ],
   "user": [
     "love@v2ray.com"

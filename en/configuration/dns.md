@@ -30,7 +30,7 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
       "port": 5353,
       "domains": [
         "domain:v2ray.com"
-      ],
+      ]
     },
     "8.8.8.8",
     "8.8.4.4",
