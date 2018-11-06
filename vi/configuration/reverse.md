@@ -2,33 +2,33 @@
 refcn: chapter_02/reverse
 refen: configuration/reverse
 ---
-# Reverse Proxy
+# Proxy ngược
 
-Reverse proxy is an optional feature in V2Ray. It redirects traffic from a server to a client. Thus is so called "Reverse" proxying.
+Proxy ngược là một tính năng tùy chọn trong V2Ray. Nó chuyển hướng lưu lượng truy cập từ máy chủ đến máy khách. Vì vậy, được gọi là "Reverse" proxy.
 
 {% hint style='tip' %}
 
-Reverse proxy is available in V2Ray 4.0+. It is now in beta, and may be improved in near future.
+Proxy ngược có sẵn trong V2Ray 4.0+. Nó hiện đang trong giai đoạn thử nghiệm và có thể được cải thiện trong tương lai gần.
 
 {% endhint %}
 
-Reverse proxy works in the following way:
+Proxy ngược hoạt động theo cách sau:
 
-* Suppose there is a device A that runs a web server. Device A has no public IP address, and can't be accessed from internet. There is another device B, say a cloud server, which can be access from internet. We need to use B as portal, to redirect traffice to A.
-* Now we install a V2Ray on device A, named `bridge`. And then install a V2Ray on device B, named `portal`.
-* `bridge` will open connections to `portal`. Their target can be customized for routing purpose. `portal` will receive these connections, as well as connections from other uses in the internet. `portal` will "connect" these two kind of connections. Then the interent traffic will be tunneled to `bridge`.
-* After `bridge` receives traffic from internet through `portal`, it will send these traffic to the web server on localhost. You may configure routing for these traffic as well.
-* `bridge` will control load balance based of the amount of traffic.
+* Giả sử có một thiết bị A chạy một máy chủ web. Thiết bị A không có địa chỉ IP công khai và không thể truy cập được từ internet. Có một thiết bị B khác, nói một máy chủ đám mây, có thể truy cập từ internet. Chúng ta cần sử dụng B làm cổng thông tin, để chuyển hướng traffice sang A.
+* Bây giờ chúng tôi cài đặt V2Ray trên thiết bị A, có tên là `bridge`. Và sau đó cài đặt V2Ray trên thiết bị B, có tên là `cổng`.
+* `cầu` sẽ mở các kết nối tới `cổng`. Mục tiêu của họ có thể được tùy chỉnh cho mục đích định tuyến. `cổng` sẽ nhận các kết nối này, cũng như các kết nối từ các ứng dụng khác trên internet. `cổng` sẽ "kết nối" hai loại kết nối này. Sau đó, giao thông interent sẽ được tunneled `cầu`.
+* Sau khi `cầu` nhận lưu lượng truy cập từ internet thông qua `cổng`, nó sẽ gửi lưu lượng truy cập đến máy chủ web trên máy chủ cục bộ. Bạn cũng có thể định cấu hình định tuyến cho các lưu lượng truy cập này.
+* `cầu` sẽ kiểm soát cân bằng tải dựa trên lượng lưu lượng truy cập.
 
 {% hint style='danger' %}
 
-Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to configure Mux again on its outbound.
+Proxy ngược đã tận dụng [Mux](mux.md). Nó không phải là cần thiết để cấu hình Mux một lần nữa trên đường đi của nó.
 
 {% endhint %}
 
 ## ReverseObject
 
-`ReverseObject` is used as `reverse` field in top level configuration.
+`ReverseObject` được sử dụng làm `ngược` trong cấu hình mức cao nhất.
 
 ```javascript
 {
@@ -45,11 +45,11 @@ Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to config
 
 > `bridges`: \[[BridgeObject](bridgeobject)\]
 
-An array of `bridge`s. Each `bridge` is a [BridgeObject](bridgeobject).
+Một mảng `cầu`s. Mỗi `cầu` là [BridgeObject](bridgeobject).
 
 > `portals`: \[[PortalObject](portalobject)\]
 
-An array of `portal`s. Each `portal` is a [PortalObject](bridgeobject).
+Một mảng `cổng`s. Mỗi cổng `` là [PortalObject](bridgeobject).
 
 ### BridgeObject
 
@@ -62,33 +62,33 @@ An array of `portal`s. Each `portal` is a [PortalObject](bridgeobject).
 
 > `tag`: string
 
-A tag. All traffic initiated by this `bridge` will have this tag. It can be used for [routing](routing.md), identified as `inboundTag`.
+Một thẻ. Tất cả lưu lượng khởi xướng của thành viên này `cầu` sẽ có thẻ này. Nó có thể được sử dụng cho [định tuyến](routing.md), được xác định là `inboundTag`.
 
 > `domain`: string
 
-A domain. All connections initiated by `bridge` towards `portal` will use this domain as target. This domain is only used for communication between `bridge` and `portal`. It is not necessary to be actually registered.
+Tên miền. Tất cả các kết nối được khởi tạo bởi `cầu` hướng tới `cổng` sẽ sử dụng tên miền này làm mục tiêu. Tên miền này chỉ được sử dụng để liên lạc giữa `cầu` và `cổng`. Nó không phải là cần thiết để được thực sự đăng ký.
 
 ### PortalObject
 
 > `tag`: string
 
-A Tag. You need to redirect all traffic to this `portal`, by targeting `outboundTag` to this `tag`. The traffic includes the connections from `bridge`, as well as internet traffic.
+Thẻ. Bạn cần phải chuyển hướng tất cả lưu lượng truy cập đến cổng thông tin `này`, bằng cách nhắm mục tiêu `outboundTag` đến thẻ `này`. Lưu lượng truy cập bao gồm các kết nối từ `cầu`, cũng như lưu lượng truy cập internet.
 
 > `domain`: string
 
-A domain. When a connection targeting this domain, `portal` considers it is a connection from `bridge`, otherwise it is an internet connection.
+Tên miền. Khi một kết nối nhắm mục tiêu tên miền này, `cổng` xem xét nó là một kết nối từ `cầu`, nếu không nó là một kết nối internet.
 
 {% hint style='tip' %}
 
-Like other usages, a V2Ray instance can be used as a `bridge`, or a `portal`, or both as the same time.
+Giống như tập quán khác, một trường hợp V2Ray có thể được sử dụng như một `cầu`hoặc `cổng`, hoặc cả hai như cùng một lúc.
 
 {% endhint %}
 
-## Example configuration
+## Cấu hình ví dụ
 
-`bridge` usually needs two outbounds. One for connecting `portal`, and another for connecting local web server.
+`cầu` thường cần hai outbounds. Một để kết nối `cổng`và một cho kết nối máy chủ web cục bộ.
 
-Reverse:
+Đảo ngược:
 
 ```javascript
 {
@@ -122,7 +122,7 @@ Outbound:
 }
 ```
 
-Routing:
+Định tuyến:
 
 ```javascript
 "routing": {
@@ -142,9 +142,9 @@ Routing:
 }
 ```
 
-`portal` usually needs two inbounds. One for connections from `bridge`, and another for internet connections.
+`cổng thông tin` thường cần hai giới hạn. Một cho các kết nối từ `cầu`và một cho kết nối internet.
 
-Reverse:
+Đảo ngược:
 
 ```javascript
 {
@@ -155,7 +155,7 @@ Reverse:
 }
 ```
 
-Inbound:
+Trong nước:
 
 ```javascript
 {
@@ -178,7 +178,7 @@ Inbound:
 }
 ```
 
-Routing:
+Định tuyến:
 
 ```javascript
 "routing": {
@@ -199,6 +199,6 @@ Routing:
 
 {% hint style='tip' %}
 
-In practice, you may want to run `bridge` first and then `portal`.
+Trong thực tế, bạn có thể muốn chạy `cầu` đầu tiên và sau đó là `cổng`.
 
 {% endhint %}
