@@ -53,7 +53,9 @@ HTTP 인증을위한 사용자 이름.
 
 HTTP 인증을위한 암호.
 
-{% hint style = 'info'%} 현재 세션에서 HTTP 프록시를 사용하려면 Linux에서 다음 설정을 사용하십시오.
+{% hint style='info' %}
+
+Use the following settings in Linux to use HTTP proxy in current session.
 
 * `내보내기 http_proxy = http : //127.0.0.1 : 8080 /` (URL은 설정에 따라 변경해야 함)
 * `https_proxy =$http_proxy내 보냅니다.`
