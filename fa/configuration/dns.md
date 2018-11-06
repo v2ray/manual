@@ -4,19 +4,19 @@ refen: configuration/dns
 ---
 # DNS
 
-V2Ray has an internal DNS server which provides DNS relay for other components.
+V2Ray دارای یک سرور DNS داخلی است که رله DNS را برای اجزای دیگر فراهم می کند.
 
 {% hint style='info' %}
 
-Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray.
+با توجه به پیچیدگی پروتکل DNS، V2Ray در حال حاضر تنها از درخواستهای IP اصلی (A و AAAA) پشتیبانی می کند. توصیه می کنیم از DNS حرفه ای (مانند [CoreDNS](https://coredns.io/)) برای V2Ray استفاده کنید.
 
 {% endhint %}
 
-The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
+پرسش های DNS که توسط این سرویس DNS رله می شود نیز براساس تنظیمات مسیریابی ارسال می شود. هیچ پیکربندی اضافی لازم نیست.
 
 ## DnsObject
 
-`DnsObject` is used as `dns` field in top level configuration.
+`DnsObject` به عنوان `dns` فیلد در پیکربندی سطح بالا استفاده می شود.
 
 ```javascript
 {
@@ -39,57 +39,57 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
 }
 ```
 
-> `hosts`: map{string: address}
+> `میزبان`: نقشه{string: address}
 
-A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
+لیستی از آدرس های IP ثابت. هر ورودی دارای نام دامنه به عنوان کلید و آدرس IP به عنوان ارزش است. اگر یک پرس و جو DNS یکی از دامنه های این لیست را هدف قرار دهد، IP مربوطه بلافاصله پس داده می شود و پرس و جو DNS نخواهد شد.
 
-The format of the domain is:
+قالب دامنه:
 
-* Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
-* Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
+* مانند `"v2ray.com"`: دامنه قابل حل باید برابر با این دامنه باشد.
+* مانند `"domain: v2ray.com"`: دامنه قابل حل می تواند این دامنه یا هر زیر دامنه آن باشد.
 
-> `servers`: \[string | [ServerObject](#serverobject) | "localhost" \]
+> `سرور`: \ [رشته | [ServerObject](#serverobject) | "localhost" \]
 
-List of DNS servers. Each server may be specified in three formats: IP address, [ServerObject](#serverobject), or `"localhost"`.
+فهرست سرورهای DNS. هر سرور ممکن است در سه فرمت مشخص شود: آدرس IP، [ServerObject](#serverobject)یا `"localhost"`.
 
-When a server is an IP address, such as `"8.8.8.8"`, V2Ray queries DNS on UDP port 53 on this address.
+هنگامی که یک سرور یک آدرس IP است، مانند `"8.8.8.8"`، V2Ray در DNS UDP روی 53 آدرس در این آدرس نمایش داده می شود.
 
-When a server is `"localhost"`, V2Ray queries local host for DNS.
+هنگامی که یک سرور `"localhost"`، V2Ray میزبان محلی DNS را نمایش می دهد.
 
 {% hint style='info' %}
 
-When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. However, you may redirect DNS queries back to V2Ray with additional configuration.
+هنگامی که `"localhost"` استفاده می شود، ترافیک در حال انجام DNS توسط V2Ray کنترل نمی شود. با این وجود، شما می توانید پرس و جوهای DNS را با تنظیمات اضافی به V2Ray هدایت کنید.
 
 {% endhint %}
 
 > `clientIp`: string
 
-IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-Subnet. This IP can't be a private address.
+آدرس آی پی دستگاه فعلی. اگر مشخص شود، V2Ray از این IP به عنوان EDNS-Client-Subnet استفاده می کند. این IP نمی تواند یک آدرس خصوصی باشد.
 
 ### ServerObject
 
 ```javascript
 {
-  "address": "1.2.3.4",
-  "port": 5353,
-  "domains": [
-    "domain:v2ray.com"
-  ],
+  "آدرس": "1.2.3.4"،
+  "پورت": 5353،
+  "دامنه": [
+    "دامنه: v2ray.com"
+  ]،
 }
 ```
 
-> `address`: address
+> `آدرس`: آدرس
 
-Address of the DNS server. For now only UDP servers are supported.
+آدرس سرور DNS در حال حاضر فقط سرورهای UDP پشتیبانی می شوند.
 
-> `port`: number
+> `پورت`: شماره
 
-Port of the DNS server. Usually it is `53` or `5353`.
+پورت سرور DNS. معمولا `53` یا `5353`.
 
-> `domains`: \[string\]
+> `دامنه`: \ [رشته \]
 
-A list of domains. If the domain of enquire matches one of the list, this DNS server will be prioritized for DNS query for this domain.
+لیستی از حوزه ها اگر دامنه پرس و جو با یکی از لیست مطابقت داشته باشد، این DNS سرور برای پرس و جو DNS برای این دامنه اولویت خواهد داشت.
 
-Domain name format is the same as in [routing](routing.md).
+فرمت نام دامنه همانند [مسیریابی](routing.md).
 
-When a DNS server has the domain in its domain list, the domain will be queried in this server first, and then other servers. Otherwise DNS queries are sent to DNS servers in the order they appear in the config file.
+هنگامی که یک سرور DNS دارای دامنه در لیست دامنه خود است، دامنه در ابتدا در این سرور و سپس سرورهای دیگر مورد سوال قرار می گیرد. در غیر این صورت، پرس و جوهای DNS به سرورهای DNS ارسال می شوند به ترتیب آنها در فایل پیکربندی ظاهر می شوند.
