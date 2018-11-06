@@ -4,15 +4,15 @@ refen: configuration/transport/websocket
 ---
 # WebSocket
 
-Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
+Sử dụng WebSocket chuẩn để truyền tải dữ liệu. Các kết nối Websocket có thể được proxy của Nginx ủy nhiệm.
 
 ## WebSocketObject
 
-`WebSocketObject` is used as `wsSettings` in `TransportObject` or `StreamSettingsObject`.
+`WebSocketObject` được sử dụng như `wsSettings` trong `TransportObject` hoặc `StreamSettingsObject`.
 
 {% hint style='info' %}
 
-Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address.
+Websocket nhận ra tiêu đề HTTP X-Forwarded-For và sử dụng nó như là địa chỉ nguồn trong nước.
 
 {% endhint %}
 
@@ -27,8 +27,8 @@ Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source 
 
 > `path`: string
 
-Path used for WebSocket. Default to root, as `"/"`.
+Đường dẫn được sử dụng cho WebSocket. Mặc định là root, là `"/"`.
 
 > `headers`: map{string, string}
 
-Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+Tiêu đề HTTP tùy chỉnh. Một mảng trong đó mỗi mục nhập là một cặp giá trị khóa trong chuỗi, cho tiêu đề và giá trị trong tiêu đề HTTP. Mặc định trống.
