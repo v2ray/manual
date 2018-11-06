@@ -29,12 +29,12 @@ refen: configuration/protocols/shadowsocks
 ## InboundConfigurationObject
 
 ```javascript
-"
-  "이메일 : "love@v2ray.com",
+{
+  "email": "love@v2ray.com",
   "method": "aes-128-cfb",
   "password": "password",
   "level": 0,
-  "ota"
+  "ota": true,
   "network": "tcp"
 }
 ```
@@ -71,12 +71,12 @@ AEAD 암호화를 사용하면 `오타` 이 적용되지 않습니다.
 
 ```javascript
 {
-  "서버": [
+  "servers": [
     {
-      "이메일": "love@v2ray.com",
-      "주소": "127.0.0.1",
-      "포트": 1234,
-      "방법": "방법",
+      "email": "love@v2ray.com",
+      "address": "127.0.0.1",
+      "port": 1234,
+      "method": "method",
       "password": "password",
       "ota": false,
       "level": 0
@@ -114,8 +114,8 @@ AEAD 암호화를 사용하면 `오타` 이 적용되지 않습니다.
   "email": "love@v2ray.com",
   "address": "127.0.0.1",
   "port": 1234,
-  "method": "加密 방식",
-  "password": "密码" ,
+  "method": "加密方式",
+  "password": "密码",
   "ota": false,
   "level": 0
 }
