@@ -2,41 +2,41 @@
 refcn: chapter_02/stats
 refen: configuration/stats
 ---
-# Statistics
+# آمار
 
-V2Ray provides some information about its internals.
+V2Ray برخی از اطلاعات مربوط به درون آن را فراهم می کند.
 
 ## StatsObject
 
-`StatsObject` is used as `stats` field in top level configuration.
+`StatsObject` به عنوان `آمار` فیلد در پیکربندی سطح بالا استفاده می شود.
 
 ```javascript
 {
 }
 ```
 
-At the moment there is no parameter in stats settings. Stats is enabled automatically when the `StatsObject` is set in top level configuration. You need also enable the corresponding settings in [Policy](policy.md), in order to keep track of user or system stats.
+در حال حاضر هیچ پارامتری در تنظیمات آمار وجود ندارد. آمار در صورت فعال بودن `StatsObject` در پیکربندی سطح بالا فعال می شود. شما همچنین باید تنظیمات متناظر را در [خط مشی](policy.md)فعال کنید تا بتوانید از کاربر یا آمار سیستم پیگیری کنید.
 
-All stats counters are listed below:
+کلیه آمار شمارنده در زیر ذکر شده است:
 
-## User Traffic
+## ترافیک کاربر
 
-If an user doesn't has email address set in protocol settings, the traffic stats will not be enabled.
+اگر کاربر آدرس ایمیل را در تنظیمات پروتکل تنظیم نکند، آمار ترافیک فعال نخواهد شد.
 
-> `user>>>[email]>>>traffic>>>uplink`
+> `کاربر>>>[email]>>>ترافیک>>>uplink`
 
-Accumulated uplink traffic of specific user, in bytes.
+ترافیک uplink مرتبط با کاربر خاص در بایت.
 
-> `user>>>[email]>>>traffic>>>downlink`
+> `کاربر>>>[email]>>>ترافیک>>>downlink`
 
-Accumulated downlink traffic of specific user, in bytes.
+ترافیک downlink پیوسته از کاربر خاص، در بایت.
 
-## Global Traffic
+## ترافیک جهانی
 
-> `inbound>>>[tag]>>>traffic>>>uplink`
+> `ورودی>>>[tag]>>>ترافیک>>>uplink`
 
-Accumulated uplink traffic of specific inbound, in bytes.
+ترافیک uplink متصل شده از ورودی خاص، در بایت.
 
-> `inbound>>>[tag]>>>traffic>>>downlink`
+> `ورودی>>>[tag]>>>ترافیک>>>downlink`
 
-Accumulated downlink traffic of specific inbound, in bytes.
+ترافیک downlink پیوسته از ورودی خاص، در بایت.
