@@ -10,16 +10,16 @@ V2Ray همان ساختار پیکربندی را بین طرف سرور و سم
 
 ```javascript
 {
-  "log": {}،
-  "api": {}،
-  "dns": {}،
-  "آمار": {}،
-  "مسیریابی": {}،
-  "policy": {}،
-  "inbounds": []،
-  "outbounds": []،
-  "inboundDetour": []،
-  "outboundDetour": []،
+  "log": {},
+  "api": {},
+  "dns": {},
+  "stats": {},
+  "routing": {},
+  "policy": {},
+  "inbounds": [],
+  "outbounds": [],
+  "inboundDetour": [],
+  "outboundDetour": [],
   "transport": {}
 }
 ```
@@ -64,8 +64,8 @@ API RPC برای کنترل نمونه V2Ray. مشاهده [API پیکربندی
 
 ```javascript
 {
-  "دسترسی": "/ path / to / file"،
-  "خطا": "/ path / to / file"،
+  "access": "/path/to/file",
+  "error": "/path/to/file",
   "loglevel": "warning"
 }
 ```
@@ -96,21 +96,21 @@ InboundObject یک پروکسی ورودی را تعریف می کند. این �
 
 ```javascript
 {
-  "پورت": 1080،
-  "گوش": "127.0.0.1"،
-  "پروتکل": "protocol_name"،
-  "تنظیمات": {}،
-  "streamSettings": {}،
-  برچسب ":" inbound_tag_name "،
-  " خرناس ": {
-    " فعال ": نادرست،
-    " destOverride ": [" HTTP "،" TLS "]
-  }،
-  " اختصاص ": {
-    " استراتژی ":" همیشه "،
-    " تازه کردن ": 5،
-    " همپوشانی ": 3
-  }،
+  "port": 1080,
+  "listen": "127.0.0.1",
+  "protocol": "protocol_name",
+  "settings": {},
+  "streamSettings": {},
+  "tag": "inbound_tag_name",
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
+  },
+  "allocate": {
+    "strategy": "always",
+    "refresh": 5,
+    "concurrency": 3
+  },
 }
 ```
 
@@ -156,8 +156,8 @@ InboundObject یک پروکسی ورودی را تعریف می کند. این �
 
 ```javascript
 {
-  'فعال': false،
-  'destOverride': ["http"، "tls"]
+  "enabled": false,
+  "destOverride": ["http", "tls"]
 }
 ```
 
@@ -173,9 +173,9 @@ InboundObject یک پروکسی ورودی را تعریف می کند. این �
 
 ```javascript
 {
-  "استراتژی": "همیشه"،
-  "تازه کردن": 5،
-  "همپوشانی": 3
+  "strategy": "always",
+  "refresh": 5,
+  "concurrency": 3
 }
 ```
 
@@ -197,14 +197,14 @@ OutboundObject یک پروکسی خروجی را برای مدیریت اتصا�
 
 ```javascript
 {
-  "sendThrough": "0.0.0.0"،
-  "protocol": "protocol_name"،
-  "settings": {}،
-  "tag": "this_outbound_tag_name"،
-  "streamSettings": {}،
-  "proxySettings" : {
-    "برچسب": "another_outbound_tag_name"
-  }،
+  "sendThrough": "0.0.0.0",
+  "protocol": "protocol_name",
+  "settings": {},
+  "tag": "this_outbound_tag_name",
+  "streamSettings": {},
+  "proxySettings": {
+    "tag": "another_outbound_tag_name"
+  },
   "mux": {}
 }
 ```
@@ -241,7 +241,7 @@ OutboundObject یک پروکسی خروجی را برای مدیریت اتصا�
 
 ```javascript
 {
-  "برچسب": "برچسب دیگری-خروجی"
+  "tag": "another-outbound-tag"
 }
 ```
 

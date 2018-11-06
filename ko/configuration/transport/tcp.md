@@ -27,30 +27,30 @@ refen: configuration/transport/tcp
 
 ```javascript
 {
-  "타입": "HTTP"
-  "요청"{
-    "버전" "1.1"
-    "에있어서", "GET"
-    [ "/", "클리핑"
-    "헤더"
-      "호스트": [ "www.baidu.com", "www.bing.com"],
-      "사용자 에이전트": [
-        "Mozilla / 5.0 (Windows NT 10.0, WOW64) AppleWebKit / 537.36 (KHTML, Chrome / 53.0.2785.143 Safari / 537.36 ",
-        "Mozilla / 5.0 (Mac OS X과 같은 iPhone iPhone CPU 10_0_2) AppleWebKit / 601.1 (Gecko와 같은 KHTML) CriOS / 53.0.2785.109 모바일 / 14A456 Safari / 601.1 0.46 "
-      ,
-      "인코딩 적용 "["GZIP, 수축 ",
-      "연결 "["킵 얼라이브 ",
-      "에서 Pragma ":"아니오 캐시 "
+  "type": "http",
+  "request": {
+    "version": "1.1",
+    "method": "GET",
+    "path": ["/"],
+    "headers": {
+      "Host": ["www.baidu.com", "www.bing.com"],
+      "User-Agent": [
+        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/53.0.2785.109 Mobile/14A456 Safari/601.1.46"
+      ],
+      "Accept-Encoding": ["gzip, deflate"],
+      "Connection": ["keep-alive"],
+      "Pragma": "no-cache"
     }
-  }
-  "응답": {
-    "버전": "1.1",
-    "상태": "200",
-    "이유": "OK",
-    "헤더": {
-      "Content-Type": [ "application / octet
-      "Transfer-Encoding": [ "chunked"],
-      "Connection": "keep-alive"],
+  },
+  "response": {
+    "version": "1.1",
+    "status": "200",
+    "reason": "OK",
+    "headers": {
+      "Content-Type": ["application/octet-stream", "video/mpeg"],
+      "Transfer-Encoding": ["chunked"],
+      "Connection": ["keep-alive"],
       "Pragma": "no-cache"
     }
   }

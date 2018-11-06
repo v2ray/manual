@@ -29,6 +29,6 @@ Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source 
 
 Path used for WebSocket. Default to root, as `"/"`.
 
-> `헤더`:지도{string, string}
+> `headers`: map{string, string}
 
 Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.

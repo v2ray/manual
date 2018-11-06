@@ -31,9 +31,9 @@ MTProto 프록시는 전보를위한 특별한 프로그램입니다. V2Ray의 �
 
 ```javascript
 {
-  "이메일": "love@v2ray.com",
-  "레벨": 0,
-  "비밀": "b0cbcef5a486d9636472ac27f8e11a9d"
+  "email": "love@v2ray.com",
+  "level": 0,
+  "secret": "b0cbcef5a486d9636472ac27f8e11a9d"
 }
 ```
 
@@ -70,11 +70,11 @@ Inbound:
 
 ```javascript
 {
-  "태그": "tg-in",
-  "포트": 443,
-  "프로토콜": "mtproto",
-  "설정": {
-    "사용자": [{ "secret": "b0cbcef5a486d9636472ac27f8e11a9d"}]
+  "tag": "tg-in",
+  "port": 443,
+  "protocol": "mtproto",
+  "settings": {
+    "users": [{"secret": "b0cbcef5a486d9636472ac27f8e11a9d"}]
   }
 }
 ```
@@ -94,7 +94,7 @@ Routing:
 ```javascript
 {
   "type": "field",
-  "inboundTag": [ "tg-in"],
+  "inboundTag": ["tg-in"],
   "outboundTag": "tg-out"
 }
 ```

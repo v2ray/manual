@@ -31,9 +31,9 @@ refen: configuration/protocols/mtproto
 
 ```javascript
 {
-  "ایمیل": "love@v2ray.com"،
-  "سطح": 0،
-  "راز": "b0cbcef5a486d9636472ac27f8e11a9d"
+  "email": "love@v2ray.com",
+  "level": 0,
+  "secret": "b0cbcef5a486d9636472ac27f8e11a9d"
 }
 ```
 
@@ -70,9 +70,9 @@ MTProto تنها می تواند برای ترافیک Telegram استفاده �
 
 ```javascript
 {
-  "tag": "tg-in"،
-  "port": 443،
-  "protocol": "mtproto"،
+  "tag": "tg-in",
+  "port": 443,
+  "protocol": "mtproto",
   "settings": {
     "users": [{"secret": "b0cbcef5a486d9636472ac27f8e11a9d"}]
   }
@@ -83,9 +83,9 @@ MTProto تنها می تواند برای ترافیک Telegram استفاده �
 
 ```javascript
 {
-  "برچسب": "tg-out"،
-  "پروتکل": "mtproto"،
-  "تنظیمات": {}
+  "tag": "tg-out",
+  "protocol": "mtproto",
+  "settings": {}
 }
 ```
 
@@ -93,8 +93,8 @@ MTProto تنها می تواند برای ترافیک Telegram استفاده �
 
 ```javascript
 {
-  "نوع": "فیلد"،
-  "inboundTag": ["tg-in"]،
+  "type": "field",
+  "inboundTag": ["tg-in"],
   "outboundTag": "tg-out"
 }
 ```

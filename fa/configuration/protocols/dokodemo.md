@@ -51,8 +51,8 @@ Dokodemo درب همچنین (اگر پیکربندی شده) به عنوان ی
 
 ```javascript
 {
-  "شبکه": "tcp، udp"،
-  "وقفه": 30،
+  "network": "tcp,udp",
+  "timeout": 30,
   "followRedirect": true
 }
 ```

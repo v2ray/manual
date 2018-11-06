@@ -50,7 +50,7 @@ Sequence of characters, surrounded by quotation mark.
 
 Array of elements. The type of its elements is usually the same, e.g., `[string]` is an array of `string`s.
 
-> `개체`: {}
+> `object`: {}
 
 Object. It comes with a list of key value pairs.
 
@@ -62,7 +62,7 @@ A key value pair usually ends with a comma ",", but must not ends with a comma i
 
 ## V2Ray 일반 데이터 형식
 
-> `지도`: 개체 \ {문자열, 문자열 \}
+> `map`: object \{string, string\}
 
 An object whose keys and values have fixed types.
 

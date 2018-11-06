@@ -22,7 +22,7 @@ refen: welcome/donate
 * [Patreon](https://www.patreon.com/v2ray)
 * [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): ارسال به `love@v2ray.com`.
 
-{٪ hint style = 'خطر'٪}
+{% hint style='danger' %}
 
 لطفا توجه داشته باشید که کمک به کمتر از 1 دلار بی معنی است زیرا Paypal هزینه خدمات بالا را پرداخت می کند.
 
@@ -40,13 +40,13 @@ refen: welcome/donate
 * موج دار شدن: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
   * برچسب مورد نیاز نیست
 
-{٪ hint style = 'tip'٪}
+{% hint style='tip' %}
 
 [این صفحه](../ui_client/service.md) لیستی از سرویسهای معمولی را ارائه می دهد که در آن شما می توانید خرید اوراق بهادار را خریداری کنید.
 
 {% endhint %}
 
-{٪ hint style = 'info'٪}
+{% hint style='info' %}
 
 با توجه به نامحدود طبیعی cryptocurrenty، اگر میخواهید تأیید کنید، قبل از اهدای شما، یک ایمیل ارسال کنید.
 

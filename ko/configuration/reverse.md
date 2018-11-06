@@ -32,12 +32,12 @@ Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to config
 
 ```javascript
 {
-  "브리지"[{
-    "태그": "다리"
-    "도메인": "test.v2ray.com"
-  },
-  "포털"[{
-    "태그": "포털"
+  "bridges": [{
+    "tag": "bridge",
+    "domain": "test.v2ray.com"
+  }],
+  "portals": [{
+    "tag": "portal",
     "domain": "test.v2ray.com"
   }]
 }
@@ -55,8 +55,8 @@ An array of `portal`s. Each `portal` is a [PortalObject](bridgeobject).
 
 ```javascript
 {
-  "태그": "브리지",
-  "도메인": "test.v2ray.com"
+  "tag": "bridge",
+  "domain": "test.v2ray.com"
 }
 ```
 
@@ -92,9 +92,9 @@ Reverse:
 
 ```javascript
 {
-  "브리지": [{
-    "태그": "브리지",
-    "도메인": "test.v2ray.com"
+  "bridges": [{
+    "tag": "bridge",
+    "domain": "test.v2ray.com"
   }]
 }
 ```
@@ -104,39 +104,39 @@ Outbound:
 ```javascript
 {
   "tag": "out"
-  "protocol": "자유",
+  "protocol": "freedom",
   "settings": {
-    "redirect": "127.0.0.1:80"// 로컬 웹 서버로 트래픽 보내기
+    "redirect": "127.0.0.1:80" // Send traffic to local web server
   }
 },
-
-  "프로토콜": "vmess",
-  "설정": {
+{
+  "protocol": "vmess",
+  "settings": {
     "vnext": [{
-      "주소": "포털 IP 주소",
+      "address": "portal的IP地址",
       "port": 1024,
-      "users": [{ " id ":"27848739-7e62-4138-9fd3-098a63964b6b "}]
+      "users": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
     }]
   },
-  "tag ":"interconn "
+  "tag": "interconn"
 }
 ```
 
 Routing:
 
 ```javascript
-"라우팅": {
-  "전략": "규칙",
-  "설정": {
-    "규칙": [{
-      "유형": "필드",
-      "inboundTag": [ "브리지"],
-      "도메인 ":"[full : test.v2ray.com "],
-      "outboundTag ":"interconn "
-    }, {
-      "type ":"field ",
-      "inboundTag ": ["bridge "],
-      "outboundTag " : "out"
+"routing": {
+  "strategy": "rules",
+  "settings": {
+    "rules": [{
+      "type": "field",
+      "inboundTag": ["bridge"],
+      "domain": ["full:test.v2ray.com"],
+      "outboundTag": "interconn"
+    },{
+      "type": "field",
+      "inboundTag": ["bridge"],
+      "outboundTag": "out"
     }]
   }
 }
@@ -148,10 +148,10 @@ Reverse:
 
 ```javascript
 {
-  "포털": [{
-    "태그": "포털",
-    "도메인": "test.v2ray.com"// 브릿지
-  와 동일해야 함}]
+  "portals": [{
+    "tag": "portal",
+    "domain": "test.v2ray.com"  // Must be the same as in bridge
+  }]
 }
 ```
 
@@ -159,21 +159,21 @@ Inbound:
 
 ```javascript
 {
-  "태그": "외부",
-  "포트": 80, // 인터넷 HTTP 트래픽 용 "포트 80"
-  "프로토콜": "dokodemo-door",
-  "설정": {
-    "주소": "127.0
+  "tag": "external",
+  "port": 80,  // Open port 80 for internet HTTP traffic
+  "protocol": "dokodemo-door",
+  "settings": {
+    "address": "127.0.0.1",
     "port": 80,
     "network": "tcp"
   }
 },
 {
-  "port": 1024, // 브리지 연결의 경우
+  "port": 1024, // For bridge connections
   "tag": "interconn",
-  "protocol ":"vmess ",
-  "settings ": {
-    "clients ": [{"id ":"27848739-7e62-4138-9fd3-098a63964b6b "}]
+  "protocol": "vmess",
+  "settings": {
+    "clients": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
   }
 }
 ```
@@ -181,17 +181,17 @@ Inbound:
 Routing:
 
 ```javascript
-"라우팅": {
-  "전략": "규칙",
-  "설정": {
-    "규칙": [{
-      "유형": "필드",
-      "inboundTag": [ "외부"],
-      " ":"포털 "
-    , {
-      "유형 ":"필드 ",
-      "인바운드 태그 ": ["interconn "],
-      "아웃 바운드 태그 ":"포털 "
+"routing": {
+  "strategy": "rules",
+  "settings": {
+    "rules": [{
+      "type": "field",
+      "inboundTag": ["external"],
+      "outboundTag": "portal"
+    },{
+      "type": "field",
+      "inboundTag": ["interconn"],
+      "outboundTag": "portal"
     }]
   }
 }

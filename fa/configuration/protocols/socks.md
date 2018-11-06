@@ -46,15 +46,15 @@ refen: configuration/protocols/socks
 
 ```javascript
 {
-  "auth": "noauth"،
-  "حساب": [
+  "auth": "noauth",
+  "accounts": [
     {
-      'user': my-username}،
-      pass، my password
+      "user": "my-username",
+      "pass": "my-password"
     }
-  ،
-  'udp': false ،
-  "ip": "127.0.0.1"،
+  ],
+  "udp": false,
+  "ip": "127.0.0.1",
   "userLevel": 0
 }
 ```

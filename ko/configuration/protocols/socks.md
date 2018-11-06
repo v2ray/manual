@@ -46,14 +46,14 @@ refen: configuration/protocols/socks
 
 ```javascript
 {
-  "의 인증": "NOAUTH '
-  '계정 '[
+  "auth": "noauth",
+  "accounts": [
     {
-      "사용자 ""내 - 이름 ",
-      "패스 ""내 비밀번호 "
+      "user": "my-username",
+      "pass": "my-password"
     }
-  ,
-  "UDP "거짓 ,
+  ],
+  "udp": false,
   "ip": "127.0.0.1",
   "userLevel": 0
 }
