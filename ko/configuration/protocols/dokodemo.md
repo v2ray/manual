@@ -25,19 +25,19 @@ Dokodemo-door는 (구성된 경우) 투명한 프록시로 작동 할 수도 있
 }
 ```
 
-> `주소`: 주소
+> `address`: address
 
 대상 서버의 주소. 문자열 형식의 IPv4, IPv6 또는 도메인 일 수 있습니다. `followRedirect` (아래 참조)이 `이면 true`, `address` 는 비어있을 수 있습니다.
 
-> `포트`: 번호
+> `port`: number
 
 대상 서버의 포트입니다.
 
-> `네트워크`: "tcp"| "udp"| "tcp, udp"
+> `network`: "tcp" | "udp" | "tcp,udp"
 
 수용 할 수있는 네트워크 유형. `"tcp"` 이 지정되면이 dokodemo-door로 전송 된 모든 UDP 트래픽이 삭제됩니다.
 
-> `followRedirect`: true | 그릇된
+> `followRedirect`: true | false
 
 `설정하면`, dokodemo-door는 TProxy의 대상을 인식하여 대상으로 사용합니다. 자세한 내용은 [전송](../transport.md) `TProxy` 을 참조하십시오.
 
