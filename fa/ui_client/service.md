@@ -2,39 +2,39 @@
 refcn: ui_client/service
 refen: ui_client/service
 ---
-# Online services
+# خدمات آنلاین
 
-## V2Ray related
+## V2Ray مرتبط است
 
-* [Configuration generator](https://htfy96.github.io/v2ray-config-gen/)
-* [UUID Generator](https://www.uuidgenerator.net/)
+* [ژنراتور پیکربندی](https://htfy96.github.io/v2ray-config-gen/)
+* [ژنراتور UUID](https://www.uuidgenerator.net/)
 
 ## VPN
 
-* [BabyDriver](http://babydriver.me/): Supports V2Ray. Coupon code: bcb518
-* [喵帕斯](https://xn--i2ru8q2qg.com/): V2Ray support (beta)
-* [Lanan](https://xn--sjt174g.com/): V2Ray based VPN service. Coupon code: v2ray
-* [多数派](https://dspi.io/aff.php?aff=7): New V2Ray based VPN service.
-* [V2rayPro](https://myv2.us): VPN service based on V2Ray. Coupon code: v2ray.com
+* [BabyDriver](http://babydriver.me/): پشتیبانی از V2Ray. کد کوپن: bcb518
+* [喵 帕斯](https://xn--i2ru8q2qg.com/): حمایت V2Ray (بتا)
+* [Lanan](https://xn--sjt174g.com/): سرویس VPN مبتنی بر V2Ray. کد کوپن: v2ray
+* [多数 派](https://dspi.io/aff.php?aff=7): سرویس VPN جدید مبتنی بر V2Ray.
+* [V2rayPro](https://myv2.us): سرویس VPN بر اساس V2Ray. کد کوپن: v2ray.com
 
-## Domains
+## دامنه ها
 
-* [Let's Encrypt](https://letsencrypt.org/): Free TLS certificates
+* [بیایید رمزگذاری](https://letsencrypt.org/): گواهینامه TLS رایگان
 
 ## VPS
 
-* [Vultr](https://www.vultr.com/?ref=7269307)
+* [ولتر](https://www.vultr.com/?ref=7269307)
 * [BlueHost](https://www.bluehost.com/track/v2ray/)
 
 ## Cryptocurrency
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Trade Bitcoins offline
-* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): OTC market to trade BTC, ETH, BCH, USDT.
-* [Binance](https://www.binance.com/?ref=35382451): Trading market for crypto currencies.
-* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Trading market for crypto currencies.
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): بازار OTC برای تجارت BTC، ETH، BCH، USDT.
+* [Binance](https://www.binance.com/?ref=35382451): بازار معاملاتی برای ارزهای رمزنگاری.
+* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): بازار معاملاتی برای ارزهای رمزنگاری.
 
-## Try Your Luck
+## شانست را امتحان کن
 
-* [PrimeDick](https://primedice.com/?c=default): Dice game with bitcoin.
-* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Bet sport games with Bitcoin, including World Cup 2018.
-* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Casino games with Bitcoin.
+* [PrimeDick](https://primedice.com/?c=default): بازی تاس با بیت کوین.
+* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): شرط بندی های ورزشی با Bitcoin، از جمله جام جهانی 2018.
+* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): بازی های کازینو با Bitcoin.
