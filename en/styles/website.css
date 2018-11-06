@@ -3,6 +3,10 @@
   font-size: 14px;
 }
 
+.book-header .btn {
+  padding: 0 10px;
+}
+
 .markdown-section {
   font-family: "Helvetica Neue", "Open Sans", sans-serif;
   font-weight: 400;
