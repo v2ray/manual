@@ -6,7 +6,11 @@ refen: configuration/reverse
 
 Reverse proxy is an optional feature in V2Ray. It redirects traffic from a server to a client. Thus is so called "Reverse" proxying.
 
-{% hint style='tip' %} Reverse proxy is available in V2Ray 4.0+. It is now in beta, and may be improved in near future. {% endhint %}
+{% hint style='tip' %}
+
+Reverse proxy is available in V2Ray 4.0+. It is now in beta, and may be improved in near future.
+
+{% endhint %}
 
 Reverse proxy works in the following way:
 
@@ -16,7 +20,11 @@ Reverse proxy works in the following way:
 * After `bridge` receives traffic from internet through `portal`, it will send these traffic to the web server on localhost. You may configure routing for these traffic as well.
 * `bridge` will control load balance based of the amount of traffic.
 
-{% hint style='danger' %} Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to configure Mux again on its outbound. {% endhint %}
+{% hint style='danger' %}
+
+Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to configure Mux again on its outbound.
+
+{% endhint %}
 
 ## ReverseObject
 
@@ -70,7 +78,11 @@ A Tag. You need to redirect all traffic to this `portal`, by targeting `outbound
 
 A domain. When a connection targeting this domain, `portal` considers it is a connection from `bridge`, otherwise it is an internet connection.
 
-{% hint style='tip' %} Like other usages, a V2Ray instance can be used as a `bridge`, or a `portal`, or both as the same time. {% endhint %}
+{% hint style='tip' %}
+
+Like other usages, a V2Ray instance can be used as a `bridge`, or a `portal`, or both as the same time.
+
+{% endhint %}
 
 ## Example configuration
 
@@ -87,7 +99,7 @@ Reverse:
 }
 ```
 
-Исходящее соединение:
+Outbound:
 
 ```javascript
 {
@@ -110,7 +122,7 @@ Reverse:
 }
 ```
 
-Маршрутизация:
+Routing:
 
 ```javascript
 "routing": {
@@ -166,7 +178,7 @@ Reverse:
 }
 ```
 
-Маршрутизация
+Routing
 
 ```javascript
 "routing": {
@@ -185,4 +197,8 @@ Reverse:
 }
 ```
 
-{% hint style='tip' %} In practice, you may want to run `bridge` first and then `portal`. {% endhint %}
+{% hint style='tip' %}
+
+In practice, you may want to run `bridge` first and then `portal`.
+
+{% endhint %}

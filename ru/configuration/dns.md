@@ -6,9 +6,13 @@ refen: configuration/dns
 
 V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.
 
-{% hint style='info' %} Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray. {% endhint %}
+{% hint style='info' %}
 
-Запросы DNS, ретранслируемые этой службой DNS, также будут отправляться на основе параметров маршрутизации. Никакой дополнительной настройки не требуется.
+Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray.
+
+{% endhint %}
+
+The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
 
 ## DnsObject
 
@@ -37,9 +41,9 @@ V2Ray имеет внутренний DNS-сервер, используемый
 
 > `hosts`: map{string: address}
 
-Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт.
+A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
 
-Формат домена:
+The format of the domain is:
 
 * `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
 * `"domain:v2ray.com"`: По такой схеме будет разрешаться как заданный домен, так и его поддомены.
@@ -52,7 +56,11 @@ When a server is an IP address, such as `"8.8.8.8"`, V2Ray queries DNS on UDP po
 
 When a server is `"localhost"`, V2Ray queries local host for DNS.
 
-{% hint style='info' %} When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. However, you may redirect DNS queries back to V2Ray with additional configuration. {% endhint %}
+{% hint style='info' %}
+
+When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. However, you may redirect DNS queries back to V2Ray with additional configuration.
+
+{% endhint %}
 
 > `clientIp`: string
 

@@ -49,7 +49,11 @@ MTProto 프록시는 전보를위한 특별한 프로그램입니다. V2Ray의 �
 
 사용자 비밀. 텔레 그램에서 사용자 비밀은 32 자이어야하며 `0` 에서 `9`사이의 문자와 `a`에서 `f`사이의 문자 만 포함해야합니다.
 
-{% hint style = 'tip'%} 다음 명령을 사용하여 MTProto secret를 생성 할 수 있습니다 : `openssl rand -hex 16` {% endhint %}
+{% hint style='tip' %}
+
+You may use the following command to generate MTProto secret: `openssl rand -hex 16`
+
+{% endhint %}
 
 ## 아웃 바운드 구성 {#outbound}
 
@@ -60,9 +64,9 @@ MTProto 프록시는 전보를위한 특별한 프로그램입니다. V2Ray의 �
 
 ## 견본 {#sample}
 
-MTProto는 텔레 그램 트래픽에만 사용할 수 있습니다. 해당 인바운드 및 아웃 바운드를 결합하려면 라우팅 규칙이 필요할 수 있습니다. 다음은 불완전한 샘플입니다.
+MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
 
-인바운드 :
+Inbound:
 
 ```javascript
 {
@@ -75,7 +79,7 @@ MTProto는 텔레 그램 트래픽에만 사용할 수 있습니다. 해당 인�
 }
 ```
 
-배 밖으로:
+Outbound:
 
 ```javascript
 {
@@ -85,7 +89,7 @@ MTProto는 텔레 그램 트래픽에만 사용할 수 있습니다. 해당 인�
 }
 ```
 
-라우팅 :
+Routing:
 
 ```javascript
 {
@@ -95,4 +99,4 @@ MTProto는 텔레 그램 트래픽에만 사용할 수 있습니다. 해당 인�
 }
 ```
 
-이 시스템의 443 포트에 연결하기 위해 텔레 그램 앱을 구성하십시오.
+The configure your Telegram app to connect to 443 port on this machine.

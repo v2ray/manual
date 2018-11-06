@@ -9,7 +9,11 @@ Project V is a nonprofit project. The source code and program can be used freely
 * The usage of donations will not be disclosed.
 * Your donation has no direct connection to Project V's development and service.
 
-{% hint style='tip' %} Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't. {% endhint %}
+{% hint style='tip' %}
+
+Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't.
+
+{% endhint %}
 
 ## The Usual Way {#usual-way}
 
@@ -18,7 +22,11 @@ Project V is a nonprofit project. The source code and program can be used freely
 * [Patreon](https://www.patreon.com/v2ray)
 * [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Send to `love@v2ray.com`.
 
-{% hint style='danger' %} Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee. {% endhint %}
+{% hint style='danger' %}
+
+Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
+
+{% endhint %}
 
 ## Cryptocurrency {#crypto}
 
@@ -32,9 +40,17 @@ Project V is a nonprofit project. The source code and program can be used freely
 * Ripple: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
   * Tag not required
 
-{% hint style='tip' %} [This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies. {% endhint %}
+{% hint style='tip' %}
 
-{% hint style='info' %} Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation. {% endhint %}
+[This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies.
+
+{% endhint %}
+
+{% hint style='info' %}
+
+Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation.
+
+{% endhint %}
 
 ## Thank you for your support
 

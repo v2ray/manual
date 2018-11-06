@@ -8,7 +8,11 @@ refen: configuration/transport/domainsocket
 
 Сокет домена может использоваться только на платформах, которые его поддерживают: Unix, macOS и Linux. ОС Windows не поддерживается.
 
-{% hint style='info' %} When domain socket is used, IP and port specified on the inbound/outbound proxy will be ignored. All traffic is tunneled through the domain socket. {% endhint %}
+{% hint style='info' %}
+
+When domain socket is used, IP and port specified on the inbound/outbound proxy will be ignored. All traffic is tunneled through the domain socket.
+
+{% endhint %}
 
 ## DomainSocketObject
 

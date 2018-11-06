@@ -9,7 +9,11 @@ refen: welcome/donate
 * 기부금 사용은 공개되지 않습니다.
 * 기부금은 Project V의 개발 및 서비스와 직접적인 관련이 없습니다.
 
-{% hint style = 'tip'%} 프로젝트 V를 사랑하고 지원해 주셔서 감사합니다. 기부 할 때마다 이메일로 확인을 보내 드리겠습니다. 이메일을 받으려면 이메일을 기부에 남겨주세요. 그렇지 않은 경우에는 확인이 필요하지 않음을 분명히 말하십시오. {% endhint %}
+{% hint style='tip' %}
+
+Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't.
+
+{% endhint %}
 
 ## 평범한 길 {#usual-way}
 
@@ -18,7 +22,11 @@ refen: welcome/donate
 * [팻 레온](https://www.patreon.com/v2ray)
 * [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): `보내기 love@v2ray.com`.
 
-{% hint style = 'danger'%} Paypal이 높은 서비스 수수료를 부과하므로 1 USD 미만의 기부는 무의미하다는 점에 유념하십시오. {% endhint %}
+{% hint style='danger' %}
+
+Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
+
+{% endhint %}
 
 ## 암호 해독 성 {#crypto}
 
@@ -32,9 +40,17 @@ refen: welcome/donate
 * 리플: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
   * 태그 필요 없음
 
-{% hint style = 'tip'%} [이 페이지](../ui_client/service.md) 에는 cryptocurrencies를 살 수있는 몇 가지 공통 서비스가 나와 있습니다. {% endhint %}
+{% hint style='tip' %}
 
-{% hint style = 'info'%} cryptocurrenty의 자연스러운 익명 성 때문에 확인을 받기를 원한다면 기부 전에 이메일을 보내주십시오. {% endhint %}
+[This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies.
+
+{% endhint %}
+
+{% hint style='info' %}
+
+Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation.
+
+{% endhint %}
 
 ## 지원해 주셔서 감사합니다.
 

@@ -28,7 +28,11 @@ Uplink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to uploa
 
 Downlink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to download data. Default value is `20`. Please note it is byte (in MB/s), not bit. One may use value `0` for a small bandwidth.
 
-{% hint style='info' %} `uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection. {% endhint %}
+{% hint style='info' %}
+
+`uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection.
+
+{% endhint %}
 
 > `congestion`: true | false
 

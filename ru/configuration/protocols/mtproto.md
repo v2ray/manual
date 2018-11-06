@@ -49,7 +49,11 @@ User level.
 
 User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
 
-{% hint style='tip' %} You may use the following command to generate MTProto secret: `openssl rand -hex 16` {% endhint %}
+{% hint style='tip' %}
+
+You may use the following command to generate MTProto secret: `openssl rand -hex 16`
+
+{% endhint %}
 
 ## Конфигурация исходящего соединения {#outbound}
 
@@ -60,9 +64,9 @@ User secret. In Telegram, user secret must be 32 characters long, and only conta
 
 ## Пример {#sample}
 
-MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Вот неполный образец.
+MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
 
-Входящее соединение:
+Inbound:
 
 ```javascript
 {
@@ -75,7 +79,7 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Исходящее соединение:
+Outbound:
 
 ```javascript
 {
@@ -85,7 +89,7 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Маршрутизация:
+Routing:
 
 ```javascript
 {
@@ -95,4 +99,4 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Конфигурируйте приложение Telegram для подключения к порту 443 на этом устройстве.
+The configure your Telegram app to connect to 443 port on this machine.

@@ -10,7 +10,11 @@ refen: configuration/transport/websocket
 
 `WebSocketObject` is used as `wsSettings` in `TransportObject` or `StreamSettingsObject`.
 
-{% hint style='info' %} Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address. {% endhint %}
+{% hint style='info' %}
+
+Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address.
+
+{% endhint %}
 
 ```javascript
 {

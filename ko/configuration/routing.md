@@ -64,15 +64,19 @@ V2Ray는 내부 라우팅 메커니즘을 가지고 있습니다. 규칙에 따�
 }
 ```
 
-{% hint style = 'info'%} 여러 개의 필드가 지정되면 규칙을 적용하기 위해이 필드들을 모두 만족시켜야합니다. 당신이 모두 필요한 경우 `도메인` 과 `의 IP를` 규칙을, 당신이 별도의 규칙에 넣어 필요 가능성이 높다. {% endhint %}
+{% hint style='info' %}
+
+When multiple fields are specified, these fields have to be all satisfied, in order to make the rule effective. If you need both `domain` and `ip` rules, it is highly likely you need put them into separate rules.
+
+{% endhint %}
 
 > `유형`: "필드"
 
-유효한 유일한 값은 `"필드"`입니다.
+The only valid value for now is `"field"`.
 
 > `도메인`: \ [string \]
 
-도메인 배열입니다. 사용 가능한 형식은 다음과 같습니다.
+An array of domains. Available formats are:
 
 * 일반 텍스트 :이 문자열이 타겟팅 도메인의 일부와 일치하는 경우이 규칙은 효력을 갖습니다. 예 : 규칙 `"sina.com"` 은 도메인 `"sina.com"`, `"sina.com.cn"` 및 `"www.sina.com"`타겟팅하지만 `"sina.cn은 타겟팅하지 않습니다.`.
 * 정규 표현식 : `"regexp :"`, 나머지는 정규 표현식입니다. 정규 표현식이 타겟팅 도메인과 일치하면이 규칙이 적용됩니다. 예 : 규칙 `"regexp : \\. goo. * \\. com $"` 은 `"www.google.com"` 및 `"fonts.googleapis.com"`와 일치하지만 `"google.com"`과 일치하지 않습니다. </code> .
@@ -84,7 +88,7 @@ V2Ray는 내부 라우팅 메커니즘을 가지고 있습니다. 규칙에 따�
 
 > `ip`: \ [string \]
 
-IP 범위의 배열. 타겟팅 IP가 범위 중 하나에 있으면이 규칙이 적용됩니다. 사용 가능한 형식 :
+An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. Available formats:
 
 * IP : 예 : `"127.0.0.1"`.
 * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing):과 같은 `"127.0.0.0/8"`.
@@ -92,11 +96,15 @@ IP 범위의 배열. 타겟팅 IP가 범위 중 하나에 있으면이 규칙이
   * 특별 값 `"geoip : 비공개"`: `와 같은 모든 비공개 주소 127.0.0.1`.
 * 파일에서 IP : `"ext : file : tag"`. 값은 `ext :` (소문자)로 시작해야하며 그 다음에 파일 이름과 태그가 와야합니다. 파일은 [리소스 디렉토리](env.md#location-of-v2ray-asset)에 저장되며 `geoip.dat와 같은 형식을가집니다.`. 태그는 파일에 존재해야합니다.
 
-{% 힌트 스타일 = '정보'} % `"EXT : geoip.dat : CN"` 에 상당 `"GeoIP가 : CN"`. {% endhint %}
+{% hint style='info' %}
+
+`"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
+
+{% endhint %}
 
 > `포트`: 번호 | 끈
 
-포트 범위. 형식은 다음과 같습니다.
+Port range. Formats are:
 
 * `"ab"`: `a` 과 `b` 는 모두 양의 정수이고 65536보다 작습니다. 대상 포트가 [`a`, `b`] 인 경우이 규칙이 적용됩니다.
 
@@ -104,24 +112,24 @@ IP 범위의 배열. 타겟팅 IP가 범위 중 하나에 있으면이 규칙이
 
 > `네트워크`: "tcp"| "udp"| "tcp, udp"
 
-선택한 네트워크에 연결이 있으면이 규칙이 적용됩니다.
+When the connection has in the chosen network, this rule take effect.
 
 > `소스`: \ [string \]
 
-IP 범위의 배열. `ip`과 같은 형식입니다. 연결의 소스 IP가 IP 범위에 있으면이 규칙이 적용됩니다.
+An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
 
 > `사용자`: \ [string \]
 
-전자 메일 주소의 배열입니다. 인바운드 연결에서 전자 메일 주소의 사용자 계정을 사용하면이 규칙이 적용됩니다. 현재 Shadowsock과 VMess는 이메일을 통해 사용자를 지원합니다.
+An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now Shadowsocks and VMess support user with email.
 
 > `인바운드 태그`: \ [문자열 \]
 
-인바운드 프록시 태그로서의 문자열 배열입니다. 지정된 인바운드 프록시 중 하나에서 연결이 오면이 규칙이 적용됩니다.
+An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
 
 > `프로토콜`: \ [ "http"| "tls"| "비트 토 런트"\]
 
-프로토콜 타입으로서의 문자열의 배열. 연결에서 프로토콜 중 하나를 사용하면이 규칙이 적용됩니다. 연결의 프로토콜을 인식하기 위해, 하나는 활성화해야합니다 `스니핑` 인바운드 프록시에서 옵션을 선택합니다.
+An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. To recognize the protocol of a connection, one must enable `sniffing` option in inbound proxy.
 
 > `outboundTag` 문자열
 
-[이 규칙이 적용되면 연결이 전송 될 아웃 바운드](protocols.md) 태그.
+[Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.

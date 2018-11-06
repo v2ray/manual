@@ -10,7 +10,11 @@ refen: configuration/transport/websocket
 
 `WebSocketObject` 로 사용되는 `wsSettings` 에서 `TransportObject` 또는 `StreamSettingsObject`.
 
-{% hint style = 'info'%} Websocket은 HTTP 헤더 X-Forwarded-For를 인식하고 인바운드 소스 주소로 사용합니다. {% endhint %}
+{% hint style='info' %}
+
+Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address.
+
+{% endhint %}
 
 ```javascript
 {
@@ -23,8 +27,8 @@ refen: configuration/transport/websocket
 
 > `경로`: 문자열
 
-WebSocket에 사용되는 경로입니다. 루트 기본값, `"/"`.
+Path used for WebSocket. Default to root, as `"/"`.
 
 > `헤더`:지도{string, string}
 
-사용자 지정 HTTP 헤더. 각 항목은 HTTP 헤더의 헤더 및 값에 대한 문자열의 키 값 쌍인 배열입니다. 기본값은 비어 있습니다.
+Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.

@@ -90,7 +90,11 @@ Method for encrypting payload. This setting is only available at outbound. The V
 * `"auto"`: Значение по умолчанию. Используйте `aes-128-gcm` на AMD64, ARM64 и S390x, или `chacha20-poly1305` в остальных случаях.
 * ` "none" `: Не использовать шифрование.
 
-{% hint style='info' %} Use `"auto"` wherever possible for better compatibility. {% endhint %}
+{% hint style='info' %}
+
+Use `"auto"` wherever possible for better compatibility.
+
+{% endhint %}
 
 ## InboundConfigurationObject
 
@@ -117,7 +121,7 @@ Method for encrypting payload. This setting is only available at outbound. The V
 
 > `clients`: \[ [ClientObject](#clientobject) \]
 
-Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта.
+An array for valid user accounts. May be empty when used for dynamic port feature.
 
 > `detour`: [DetourObject](#detourobject)
 

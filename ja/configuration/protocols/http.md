@@ -53,7 +53,9 @@ Username for HTTP authentication.
 
 password for HTTP authentication.
 
-{% hint style='info' %} Use the following settings in Linux to use HTTP proxy in current session.
+{% hint style='info' %}
+
+Use the following settings in Linux to use HTTP proxy in current session.
 
 * `export http_proxy=http://127.0.0.1:8080/` (URL has to change according to your config)
 * `export https_proxy=$http_proxy`

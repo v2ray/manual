@@ -90,7 +90,11 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 * `"auto"`: 기본값. 사용 `AES-128-GCM` AMD64, ARM64 및 s390x가, 또는에 `chacha20-poly1305` 그렇지.
 * `"없음"`: 트래픽이 전혀 암호화되지 않습니다.
 
-{% hint style = 'info'%} 보다 나은 호환성을 위해 가능하면 `"auto"` 사용하십시오. {% endhint %}
+{% hint style='info' %}
+
+Use `"auto"` wherever possible for better compatibility.
+
+{% endhint %}
 
 ## InboundConfigurationObject
 
@@ -117,19 +121,19 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 
 > `클라이언트`: \ [ [ClientObject](#clientobject)\]
 
-유효한 사용자 계정을위한 배열. 동적 포트 기능으로 사용될 때 비어있을 수 있습니다.
+An array for valid user accounts. May be empty when used for dynamic port feature.
 
 > `detour`: [DetourObject](#detourobject)
 
-선택 기능으로 클라이언트에게 우회를 제안 할 수 있습니다. 이 인바운드가 지정되면 아웃 바운드가 다른 인바운드를 사용하도록 지시합니다.
+Optional feature to suggest client to take a detour. If specified, this inbound will instruct the outbound to use another inbound.
 
 > `기본값`: [DefaultObject](#defaultobject)
 
-선택적 기본 클라이언트 구성. 일반적으로 `우회로와 함께 사용됩니다`.
+Optional default client configuration. Usually used with `detour`.
 
 > `disableInsecureEncryption`: true | 그릇된
 
-클라이언트가 안전하지 않은 암호화 방법을 사용하는 것을 금지합니다. 로 설정하면 `에 해당`다음 암호화가 사용된다면, 연결은 즉시 종결된다. 기본값 `false`.
+Forbids client for using insecure encryption methods. When set to `true`, connections will be terminated immediately if the following encryption is used. Default value `false`.
 
 * `없음`
 * `에이스 -128-cfb`
@@ -147,19 +151,19 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 
 > `id`: 문자열
 
-[UUID 형식의 사용자 ID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 > `레벨`: 숫자
 
-사용자 수준. 사용법은 [정책](../policy.md) 을 참조하십시오.
+User level. See [Policy](../policy.md) for its usage.
 
 > `alterId`: 숫자
 
-대체 ID의 수. 아웃 바운드와 동일합니다.
+Number of alternative IDs. Same as in Outbound.
 
 > `이메일`: 문자열
 
-사용자 식별을위한 이메일 주소.
+Email address for user identification.
 
 ### DetourObject
 
@@ -171,7 +175,7 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 
 > `~`: 문자열
 
-인바운드 프록시의 태그. [개요](../protocols.md)참조하십시오. 구성된 경우 VMess는 추가 연결을 위해 우회 경로를 사용할 클라이언트를 제안합니다.
+The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
 
 ### DefaultObject
 
@@ -184,8 +188,8 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 
 > `레벨`: 숫자
 
-사용자 수준.
+User level.
 
 > `alterId`: 숫자
 
-대체 ID의 수. 기본값은 64입니다.
+Number of alternative IDs. Default value 64. Recommend 16.

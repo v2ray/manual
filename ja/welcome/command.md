@@ -24,7 +24,11 @@ Where:
   * `json`: JSON format.
   * `pb` or `protobuf`: Protobuf format.
 
-{% hint style='info' %} When `-config` is not specified, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by [environment variable](../configuration/env.md) `v2ray.location.asset`. {% endhint %}
+{% hint style='info' %}
+
+When `-config` is not specified, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by [environment variable](../configuration/env.md) `v2ray.location.asset`.
+
+{% endhint %}
 
 ## V2Ctl
 

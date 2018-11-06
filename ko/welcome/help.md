@@ -6,11 +6,15 @@ refen: welcome/help
 
 프로젝트 V는 여러 가지 통신 방법을 제공합니다.
 
-{% hint style = 'info'%} Project V 팀은 중국어와 영어를 지원합니다. 질문에 익숙한 것을 선택하십시오. {% endhint %}
+{% hint style='info' %}
+
+Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
+
+{% endhint %}
 
 ## 기생 문제
 
-여러 유형의 토론을 위해 여러 저장소를 사용합니다.
+We uses several repositories for different type of discussions.
 
 * [코드 문제](https://github.com/v2ray/v2ray-core/issues) 
   * 버그 같은 코딩 질문에만 사용됩니다.
@@ -19,32 +23,42 @@ refen: welcome/help
 
 ## 전보
 
-프로젝트 V는 서로 다른 유형의 토론에 대해 다음과 같은 그룹을 제공합니다.
+Project V provides the following groups for different type of discussions.
 
 * [용법](https://telegram.me/projectv2ray) 
   * Project V 관련 주제에만 해당됩니다.
 * [기타](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
   * 다른 주제들.
 
-{% hint style = 'danger'%} 모든 토론 그룹은 성인용 콘텐츠, 정치, 증오 성 발언과 같은 주제를 금지합니다. 이 주제의 발신자는 즉시 금지됩니다. {% endhint %}
+Topics in these groups are mainly in Chinese. Feel free to setup groups in your own language and let us know.
 
-또한 따르십시오 [프로젝트 V 발표](https://t.me/v2msg) 뉴스.
+{% hint style='danger' %}
+
+All discussion groups forbid the following topics: adult content, politics, hate speeches. Senders of these topics will be banned immedietely.
+
+{% endhint %}
+
+Please also follow [Project V Announcement](https://t.me/v2msg) for news.
 
 ## 지저귀다
 
-[ProjectV2Ray](https://twitter.com/projectv2ray) 일반 통신.
+[ProjectV2Ray](https://twitter.com/projectv2ray) for regular communications.
 
 ## 이메일
 
-비공개로 V2Ray 팀과 이야기하고 싶다면 아래 주소로 메시지를 보내주십시오.
+Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
 
-`love@v2ray.com`: 의사 소통을위한 주요 이메일 주소. 매일 확인했습니다.
+`love@v2ray.com`: Main email address for communication. Checked every day.
 
-`v2ray@protonmail.com`: 엔드 투 엔드 암호화를 사용하는 [ProtonMail](https://protonmail.com/) 사서함. 사용하기가 어렵고 가끔씩 만 점검됩니다.
+`v2ray@protonmail.com`: A [ProtonMail](https://protonmail.com/) mailbox which employs end to end encryption. It is difficult to use, and only being checked occasionally.
 
-{% hint style = 'info'%} 슬프게도 높은 작업량으로 인해 모든 이메일이 응답을 받았다고 약속하지 않습니다. 불편을 드려 죄송합니다. 일반적인 질문은 위의 토론 그룹을 사용하여 신속하게 응답하십시오. {% endhint %}
+{% hint style='info' %}
 
-`love@v2ray.com`을 검색하거나 아래의 공개 키를 사용하여 PGP 공개 키를 얻을 수 있습니다.
+Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For general questions, please use discussion groups above for quick response.
+
+{% endhint %}
+
+You may get PGP public key by searching `love@v2ray.com`, or use the public key below.
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----

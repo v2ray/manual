@@ -39,23 +39,27 @@ mKCP는 안정적인 스트림 전송입니다. UDP 기반 프로토콜입니다
 
 다운 링크 대역폭 (MB / s). V2Ray 인스턴스가 데이터를 다운로드 할 수있는 최대 대역폭. 기본값은 `20`입니다. 비트가 아니라 바이트 (MB / s)임을주의하십시오. 작은 대역폭을 위해 값 `0` 을 사용할 수 있습니다.
 
-{% hint style = 'info'%} `업 링크 용량` 와 `다운 링크 용량` 는 mKCP의 속도를 결정합니다. 클라이언트 측에서 `uplinkCapacity` 은 클라이언트가 서버로 데이터를 보내는 속도를 지정합니다. 서버 측에서 `downlinkCapacity` 은 서버 수신 데이터의 속도를 지정합니다. 이 쌍의 최소값은 실제 연결에서 효과적입니다. {% endhint %}
+{% hint style='info' %}
+
+`uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection.
+
+{% endhint %}
 
 > `혼잡`: 참 | 그릇된
 
-폭주 제어를 사용할지 여부. 기본값은 `입니다. false`. 정체 제어가 활성화되면 V2Ray는 네트워크 품질을 감지합니다. 패킷 손실이 심할 때 패킷을 적게 보내고 네트워크가 완전히 채워지지 않으면 더 많은 데이터를 보냅니다.
+Whether or not to enable congestion control. Default value is `false`. When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
 
 > `readBufferSize`: 숫자
 
-단일 연결의 읽기 버퍼 크기 (MB). 기본값은 `2`입니다.
+Read buffer size for a single connection, in MB. Default value is `2`.
 
 > `writeBufferSize`: 숫자
 
-단일 연결에 대한 쓰기 버퍼 크기 (MB). 기본값은 `2`입니다.
+Write buffer size for a single connection, in MB. Default value is `2`.
 
 > `헤더`: [HeaderObject]{#headerobject}
 
-패킷 헤더 난독 화를위한 구성.
+Configuration for packet header obfuscation.
 
 ### HeaderObject
 
@@ -67,7 +71,7 @@ mKCP는 안정적인 스트림 전송입니다. UDP 기반 프로토콜입니다
 
 > `유형`: 문자열
 
-난독 화 유형입니다. 상응하는 인바운드 및 아웃 바운드 프록시는 동일한 설정을 가져야합니다. 선택 사항은 다음과 같습니다.
+Type of obfuscation. Corresponding inbound and outbound proxy must have the same settings. Choices are:
 
 * `"없음"`: 기본값. 난독 화는 사용되지 않습니다.
 * `"srtp"`: SRTP 트래픽으로 난독 화됩니다. Facetime과 같은 화상 통화로 인식 될 수 있습니다.
