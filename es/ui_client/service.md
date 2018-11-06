@@ -35,6 +35,6 @@ refen: ui_client/service
 
 ## Try Your Luck
 
-* [PrimeDick](https://primedice.com/?c=default): Dice game with bitcoin.
+* [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Bet sport games with Bitcoin, including World Cup 2018.
 * [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Casino games with Bitcoin.
