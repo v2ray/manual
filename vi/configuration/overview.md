@@ -2,11 +2,11 @@
 refcn: chapter_02/01_overview
 refen: configuration/overview
 ---
-# Configuration Overview
+# Tổng quan về cấu hình
 
-V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
+V2Ray chia sẻ cùng một cấu trúc cấu hình giữa phía máy chủ và phía máy khách được hiển thị như bên dưới. Cấu hình máy chủ và máy khách khác nhau trong các phần cụ thể.
 
-Below is the top level structure of the configuration. Each section has its own format.
+Dưới đây là cấu trúc cấp cao nhất của cấu hình. Mỗi phần có định dạng riêng.
 
 ```javascript
 {
@@ -26,39 +26,39 @@ Below is the top level structure of the configuration. Each section has its own 
 
 > `log`: [LogObject](#logobject)
 
-Log configuration to control log outputs.
+Đăng nhập cấu hình để kiểm soát đầu ra nhật ký.
 
 > `api`: [ApiObject](api.md)
 
-RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
+API RPC để điều khiển phiên bản V2Ray. Xem [cấu hình API](api.md) để biết chi tiết.
 
 > `dns`: [DnsObject](dns.md)
 
-Configuration for internal DNS server's configurations. If this section is omitted, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](dns.md).
+Cấu hình cho cấu hình máy chủ DNS nội bộ. Nếu phần này bị bỏ qua, V2Ray sẽ sử dụng cấu hình DNS toàn hệ thống của bạn. Để biết chi tiết, xem [Cấu hình DNS](dns.md).
 
 > `stats`: [StatsObject](stats.md)
 
-When specified, internal [Statistics](stats.md) is enabled.
+Khi được chỉ định, nội bộ [Thống kê](stats.md) được bật.
 
 > `policy`: [PolicyObject](policy.md)
 
-Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
+Cấu hình cho quyền và các chiến lược bảo mật khác. Để biết chi tiết, xem [Chính sách địa phương](policy.md).
 
 > `routing`: [RoutingObject](routing.md)
 
-Configuration for internal [Routing](routing.md) strategy.
+Cấu hình cho nội bộ [Định tuyến](routing.md) chiến lược.
 
 > `inbounds`: \[ [InboundObject](#inboundobject) \]
 
-An array of [InboundObject](#inboundobject) as configuration for inbound proxies.
+Một mảng [InboundObject](#inboundobject) làm cấu hình cho proxy gửi đến.
 
 > `outbounds`: \[ [OutboundObject](#outboundobject) \]
 
-An array of [OutboundObject](#outboundobject) as configuration for outbound proxies. The first outbound in the array is the main one. It is the default outbound in routing decision.
+Một mảng [OutboundObject](#outboundobject) làm cấu hình cho các proxy gửi đi. Chuyến đi đầu tiên trong mảng là mảng chính. Đây là định tuyến mặc định trong định tuyến định tuyến.
 
 > `transport`: [TransportObject](transport.md)
 
-Low-level transport protocol's configurations. For details, see [Protocol Transport Options](transport.md).
+Cấu hình giao thức vận tải cấp thấp. Để biết chi tiết, xem [Giao thức Tùy chọn Giao vận](transport.md).
 
 ## LogObject
 
@@ -72,27 +72,27 @@ Low-level transport protocol's configurations. For details, see [Protocol Transp
 
 > `access`: string
 
-Path to access log. If not empty, it must be a legal file path, such as `"/tmp/v2ray/_access.log"`(Linux), or `"C:\\Temp\\v2ray\\_access.log"`(Windows). If empty, V2Ray writes access log to `stdout`.
+Đường dẫn để truy cập nhật ký. Nếu không trống, nó phải là một đường dẫn tập tin hợp pháp, chẳng hạn như `"/tmp/v2ray/_access.log"`(Linux) hoặc `"C: \\ Temp \\ v2ray \\ _ access.log"`(Windows ). Nếu trống, V2Ray ghi nhật ký truy cập vào `stdout`.
 
 > `error`: string
 
-Path to error log. If not empty, it must be a legal file path. If empty, V2Ray writes error log to `stdout`.
+Đường dẫn đến nhật ký lỗi. Nếu không trống, nó phải là một đường dẫn tập tin hợp pháp. Nếu trống, V2Ray ghi nhật ký lỗi tới `stdout`.
 
 > `loglevel`: "debug" | "info" | "warning" | "error" | "none"
 
-Level of logs to be written. Different log levels indicate different content of logs. Default value is `"warning"`.
+Mức nhật ký được ghi. Các cấp nhật ký khác nhau cho biết nội dung nhật ký khác nhau. Giá trị mặc định là `"cảnh báo"`.
 
-Log levels:
+Mức nhật ký:
 
-* `"debug"`: Information for developers only. Also includes all `"info"` logs.
-* `"info"`: Information for current state of V2Ray. Users don't have to take care of those. Also includes all `"warning"` logs.
-* `"warning"`: Something wrong with the environment, usually outside of V2Ray, e.g., network breakage. V2Ray still runs, but users may experience some breakages. Also includes all `"error"` logs.
-* `"error"`: Something severely wrong, that V2Ray can't run at all.
-* `"none"`: All logging are disabled.
+* `"debug"`: Thông tin dành cho nhà phát triển. Cũng bao gồm tất cả `"thông tin"` bản ghi.
+* `"thông tin"`: Thông tin về trạng thái hiện tại của V2Ray. Người dùng không phải chăm sóc những người đó. Cũng bao gồm tất cả `"cảnh báo"` bản ghi.
+* `"cảnh báo"`: Đã xảy ra sự cố với môi trường, thường nằm ngoài V2Ray, ví dụ: mạng bị vỡ. V2Ray vẫn chạy nhưng người dùng có thể gặp phải một số sự cố. Cũng bao gồm tất cả `"lỗi"` bản ghi.
+* `"lỗi"`: Đã xảy ra sự cố nghiêm trọng, V2Ray không thể chạy được.
+* `"none"`: Tất cả ghi nhật ký đều bị tắt.
 
 ## InboundObject
 
-An InboundObject defines an inbound proxy. It handles incoming connections to V2Ray. Available proxies are [listed here](protocols.md).
+Một InboundObject định nghĩa một proxy gửi đến. Nó xử lý các kết nối đến V2Ray. Proxy có sẵn được [liệt kê ở đây](protocols.md).
 
 ```javascript
 {
@@ -116,41 +116,41 @@ An InboundObject defines an inbound proxy. It handles incoming connections to V2
 
 > `port`: number | "env:variable" | string
 
-Port that the proxy is listening on. Acceptable formats are:
+Cổng mà proxy đang nghe. Các định dạng có thể chấp nhận là:
 
-* Integer: actual port number.
-* Environment variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
-* String: A numberic string value, such as `"1234"`, or a range of ports, such as `"5-10"` for 6 ports in total.
+* Số nguyên: số cổng thực tế.
+* Biến môi trường: Bắt đầu bằng `"env:"`, biến env chỉ định cổng ở định dạng chuỗi, chẳng hạn như `"env: PORT"`. V2Ray sẽ giải mã biến thành chuỗi.
+* Chuỗi: Giá trị chuỗi số, chẳng hạn như `"1234"`hoặc một loạt các cổng, chẳng hạn như `"5-10"` cho tổng số 6 cổng.
 
-The actual ports to open also depend on `allocate` setting. See below.
+Các cổng thực tế để mở cũng phụ thuộc vào `phân bổ` thiết lập. Xem bên dưới.
 
 > `listen`: address
 
-The address to be listened on. Default value is `"0.0.0.0"` for incoming connections on all network interfaces. Otherwise the value has to be the address of an existing network interface.
+Địa chỉ cần nghe. Giá trị mặc định là `"0.0.0.0"` cho các kết nối đến trên tất cả các giao diện mạng. Nếu không, giá trị phải là địa chỉ của giao diện mạng hiện có.
 
 > `protocol`: string
 
-Name of the inbound protocol. See each individual for available values.
+Tên của giao thức gửi đến. Xem từng cá nhân để biết các giá trị có sẵn.
 
 > `settings`: InboundConfigurationObject
 
-Protocol-specific settings. See `InboundConfigurationObject` defined in each protocol.
+Cài đặt giao thức cụ thể. Xem `InboundConfigurationObject` được định nghĩa trong mỗi giao thức.
 
 > `streamSettings`: [StreamSettingsObject]
 
-See [Protocol Transport Options](transport.md) for detail.
+Xem [Giao thức Giao thức Tùy chọn](transport.md) để biết chi tiết.
 
 > `tag`: string
 
-The tag of the inbound proxy. It can be used for routing decisions. If not empty, it must be unique among all inbound proxies.
+Thẻ của proxy đến. Nó có thể được sử dụng cho các quyết định định tuyến. Nếu không trống, nó phải là duy nhất trong số tất cả các proxy gửi đến.
 
 > `sniffing`: [SniffingObject](#sniffingobject)
 
-Configuration for content sniffing.
+Cấu hình cho nội dung đánh hơi.
 
 > `allocate`: [AllocateObject](#allocateobject)
 
-Configuration for port allocation.
+Cấu hình cho cổng phân bổ.
 
 ### SniffingObject
 
@@ -163,11 +163,11 @@ Configuration for port allocation.
 
 > `enabled`: true | false
 
-Whether or not to enable content sniffing.
+Có hay không kích hoạt nội dung đánh hơi.
 
 > `destOverride`: \["http" | "tls"\]
 
-An array of content type. If the content type of incoming traffic is specified in the list, the destination of the connection will be overwritten by sniffed value.
+Một loại nội dung. Nếu loại nội dung của lưu lượng truy cập đến được chỉ định trong danh sách, đích của kết nối sẽ bị ghi đè bởi giá trị bị đánh hơi.
 
 ### AllocateObject
 
@@ -181,19 +181,19 @@ An array of content type. If the content type of incoming traffic is specified i
 
 > `strategy`: "always" | "random"
 
-Strategy of port allocation. When it is set to `"always"`, all port in the `port` field will be allocated for listening. If `"random"` is set, V2Ray will listen on number of `concurrency` ports, and the list of ports are refereshed every `refresh` minutes.
+Chiến lược phân bổ cảng. Khi nó được đặt thành `"luôn luôn"`, tất cả cổng trong trường `cổng` sẽ được cấp phát để nghe. Nếu `"ngẫu nhiên"` được thiết lập, V2Ray sẽ nghe số `đồng thời` cổng và danh sách các cổng được giới thiệu sau mỗi `làm mới` phút.
 
 > `refresh`: number
 
-Number of minutes to refresh the ports of listening. Min value is `2`. This setting is only effective when `strategy` is set to `"random"`.
+Số phút để làm mới các cổng nghe. Giá trị nhỏ nhất là `2`. Cài đặt này chỉ hiệu quả khi `chiến lược` được đặt thành `"ngẫu nhiên"`.
 
 > `concurrency`: number
 
-Number of ports to listen. Min value is `1`. Max value is one third of entire port range.
+Số cổng để nghe. Giá trị nhỏ nhất là `1`. Giá trị tối đa là một phần ba toàn bộ phạm vi cổng.
 
 ## OutboundObject
 
-An OutboundObject defines an outbound proxy for handling out-going connections. Available protocols are listed [here](protocols.md).
+An OutboundObject định nghĩa proxy gửi đi để xử lý các kết nối đang diễn ra. Các giao thức có sẵn được liệt kê [tại đây](protocols.md).
 
 ```javascript
 {
@@ -211,31 +211,31 @@ An OutboundObject defines an outbound proxy for handling out-going connections. 
 
 > `sendThrough`: address
 
-An IP address for sending traffic out. The default value, `"0.0.0.0"` is for randomly choosing an IP available on the host. Otherwise the value has to be an IP address from existing network interfaces.
+Địa chỉ IP để gửi lưu lượng truy cập. Giá trị mặc định, `"0.0.0.0"` là để chọn ngẫu nhiên một IP có sẵn trên máy chủ. Nếu không, giá trị phải là một địa chỉ IP từ các giao diện mạng hiện có.
 
 > `protocol`: string
 
-The protocol name of this outbound. See [Protocols](protocols.md) for all available values.
+Tên giao thức của outbound này. Xem [Giao thức](protocols.md) cho tất cả các giá trị có sẵn.
 
 > `settings`: OutboundConfigurationObject
 
-Protocol-specific settings. See `OutboundConfigurationObject` in each individual protocols.
+Cài đặt giao thức cụ thể. Xem `OutboundConfigurationObject` trong mỗi giao thức riêng lẻ.
 
 > `tag`: string
 
-The tag of this outbound. If not empty, it must be unique among all outbounds.
+Thẻ của lối ra này. Nếu không trống, nó phải là duy nhất trong số tất cả các giới hạn.
 
 > `streamSettings`: [StreamSettingsObject](transport.md)
 
-Low-level transport settings. See [Protocol Transport Options](transport.md).
+Cài đặt vận chuyển ở mức độ thấp. Xem [Giao thức Giao thức Tùy chọn](transport.md).
 
 > `proxySettings`: [ProxySettingsObject](#proxysettingsobject)
 
-Configuration for delegating traffic from this outbound to another. When this is set, `streamSettings` of this outbound will has no effect.
+Cấu hình cho ủy quyền lưu lượng truy cập từ này đi khác. Khi điều này được thiết lập, `streamSettings` của outbound này sẽ không có hiệu lực.
 
 > `mux`: [MuxObject](mux.md)
 
-See [Mux](mux.md) configuration for detail.
+Xem cấu hình [Mux](mux.md) để biết chi tiết.
 
 ### ProxySettingsObject
 
@@ -247,4 +247,4 @@ See [Mux](mux.md) configuration for detail.
 
 > `tag`: string
 
-When `tag` is set to the tag of another outbound, the out-going traffic of current outbound will be delegated to the specified one.
+Khi `thẻ` được đặt thành thẻ của một kênh khác, lưu lượng truy cập ra ngoài hiện tại sẽ được chuyển đến thẻ được chỉ định.
