@@ -8,7 +8,7 @@
     "-highlight",
     "-sharing",
 
-    "puml",
+    "mermaid-gb3",
     "anchors",
     "ga",
     "prism",
