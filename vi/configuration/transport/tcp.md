@@ -16,11 +16,11 @@ refen: configuration/transport/tcp
 
 > `header`: NoneHeaderObject | HttpHeaderobject
 
-Header obfuscation. Default value is `NoneHeaderObject`.
+Tiêu đề obfuscation. Giá trị mặc định là `NoneHeaderObject`.
 
 ### NoneHeaderObject
 
-No header obfuscation.
+Không có tiêu đề obfuscation.
 
 ```javascript
 {
@@ -30,11 +30,11 @@ No header obfuscation.
 
 > `type`: "none"
 
-Disable header obfuscation.
+Vô hiệu hóa tiêu đề obfuscation.
 
 ### HttpHeaderObject
 
-HTTP header obfuscation. The configuration must be the same between connecting inbound and outbound.
+Tiêu đề HTTP obfuscation. Cấu hình phải giống nhau giữa kết nối trong và ngoài.
 
 ```javascript
 {
@@ -46,15 +46,15 @@ HTTP header obfuscation. The configuration must be the same between connecting i
 
 > `type`: "http"
 
-Enable HTTP header obfuscation.
+Bật tính năng obfuscation của tiêu đề HTTP.
 
 > `request`: [HTTPRequestObject](#httprequestobject)
 
-HTTP request template.
+Mẫu yêu cầu HTTP.
 
 > `response`: [HTTPResponseObject](#httpresponseobject)
 
-HTTP response template.
+Mẫu phản hồi HTTP.
 
 ### HTTPRequestObject
 
@@ -78,21 +78,21 @@ HTTP response template.
 
 > `version`: string
 
-HTTP version. Default value is `"1.1"`.
+Phiên bản HTTP. Giá trị mặc định là `"1.1"`.
 
 > `method`: string
 
-HTTP method. Default value is `"GET"`。
+Phương thức HTTP. Giá trị mặc định là `"NHẬN"`。
 
 > `path`: \[ string \]
 
-HTTP path. An array is string. The path will be chosen randomly for every connection.
+Đường dẫn HTTP. Một mảng là chuỗi. Đường dẫn sẽ được chọn ngẫu nhiên cho mọi kết nối.
 
 > `headers`: map{string, \[ string \] }
 
-HTTP header. The key of each entry is the key of HTTP header. The value of each entry is a list of strings. The actual HTTP header value will be chosen randomly from the list for each connection. Default value is the values in the example above.
+Tiêu đề HTTP. Chìa khóa của mỗi mục nhập là khóa của tiêu đề HTTP. Giá trị của mỗi mục là một danh sách các chuỗi. Giá trị tiêu đề HTTP thực tế sẽ được chọn ngẫu nhiên từ danh sách cho mỗi kết nối. Giá trị mặc định là các giá trị trong ví dụ trên.
 
-In a connection, all keys in the specified map will be set to the HTTP header.
+Trong kết nối, tất cả các khóa trong bản đồ được chỉ định sẽ được đặt thành tiêu đề HTTP.
 
 ### HTTPResponseObject
 
@@ -112,18 +112,18 @@ In a connection, all keys in the specified map will be set to the HTTP header.
 
 > `version`: string
 
-HTTP version. Default value is `"1.1"`.
+Phiên bản HTTP. Giá trị mặc định là `"1.1"`.
 
 > `status`: string
 
-HTTP status. Default value is `"200"`
+Trạng thái HTTP. Giá trị mặc định là `"200"`
 
 > `reason`: string
 
-HTTP status message. Default value is `"OK"`.
+Thông báo trạng thái HTTP. Giá trị mặc định là `"OK"`.
 
 > `headers`: map{string, string}
 
-HTTP header. The key of each entry is the key of HTTP header. The value of each entry is a list of strings. The actual HTTP header value will be chosen randomly from the list for each connection. Default value is the values in the example above.
+Tiêu đề HTTP. Chìa khóa của mỗi mục nhập là khóa của tiêu đề HTTP. Giá trị của mỗi mục là một danh sách các chuỗi. Giá trị tiêu đề HTTP thực tế sẽ được chọn ngẫu nhiên từ danh sách cho mỗi kết nối. Giá trị mặc định là các giá trị trong ví dụ trên.
 
-In a connection, all keys in the specified map will be set to the HTTP header.
+Trong kết nối, tất cả các khóa trong bản đồ được chỉ định sẽ được đặt thành tiêu đề HTTP.
