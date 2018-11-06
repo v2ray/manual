@@ -6,12 +6,12 @@ refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
 
 # Dokodemo-door
 
-* Name: `dokodemo-door`
-* Type: Inbound
+* Tên: `dokodemo-cửa`
+* Loại: Inbound
 
-Dokodemo-door is a protocol for inbound connections. It take any connections and passes them to the specified destination.
+Cửa Dokodemo là giao thức cho các kết nối gửi đến. Nó lấy bất kỳ kết nối nào và chuyển chúng đến đích đã chỉ định.
 
-Dokodemo-door can also (if configured) work as a transparent proxy.
+Cửa Dokodemo cũng có thể (nếu được cấu hình) hoạt động như một proxy trong suốt.
 
 ## ConfigurationObject
 
@@ -27,27 +27,27 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 
 > `address`: address
 
-Address of the destination server. May be an IPv4, IPv6 or a domain, in string form. When `followRedirect` (see below) is `true`, `address` can be empty.
+Địa chỉ của máy chủ đích. Có thể là IPv4, IPv6 hoặc tên miền, dưới dạng chuỗi. Khi `followRedirect` (xem bên dưới) là `true`, `address` có thể rỗng.
 
 > `port`: number
 
-Port of the destination server.
+Cổng của máy chủ đích.
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 
-Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to this dokodemo-door will be discarded.
+Loại mạng được chấp nhận. Nếu `"tcp"` được chỉ định, tất cả lưu lượng UDP được gửi tới cửa sổ dokodemo này sẽ bị hủy.
 
 > `followRedirect`: true | false
 
-When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. See `TProxy` in [transport](../transport.md) for detail.
+Khi đặt thành `true`, dokodemo-door sẽ nhận ra đích từ TProxy và sử dụng nó làm đích đến của nó. Xem `TProxy` trong [phương tiện giao thông](../transport.md) để xem chi tiết.
 
 > `userLevel`: number
 
-User level. All connections share this level. See [Policy](../policy.md) for details.
+Cấp người dùng. Tất cả các kết nối đều chia sẻ cấp độ này. Xem [Chính sách](../policy.md) để biết chi tiết.
 
-## Examples for transparent proxy
+## Ví dụ về proxy trong suốt
 
-Add a dokodemo-door inbound as below.
+Thêm một cửa dokodemo vào trong như dưới đây.
 
 ```javascript
 {
@@ -57,40 +57,40 @@ Add a dokodemo-door inbound as below.
 }
 ```
 
-Configure iptables as below.
+Cấu hình iptables như dưới đây.
 
 ```bash
-# Create new chain
+# Tạo chuỗi mới
 iptables -t nat -N V2RAY
 iptables -t mangle -N V2RAY
 iptables -t mangle -N V2RAY_MARK
 
-# Ignore your V2Ray server's addresses
-# It's very IMPORTANT, just be careful.
-iptables -t nat -A V2RAY -d 123.123.123.123 -j RETURN
+# Bỏ qua địa chỉ máy chủ V2Ray của bạn
+# Nó rất QUAN TRỌNG, hãy cẩn thận.
+iptables -t nat -A V2RAY -d 123.123.123.123 -j TRỞ LẠI
 
-# Ignore LANs and any other addresses you'd like to bypass the proxy
-# See Wikipedia and RFC5735 for full list of reserved networks.
-iptables -t nat -A V2RAY -d 0.0.0.0/8 -j RETURN
-iptables -t nat -A V2RAY -d 10.0.0.0/8 -j RETURN
-iptables -t nat -A V2RAY -d 127.0.0.0/8 -j RETURN
-iptables -t nat -A V2RAY -d 169.254.0.0/16 -j RETURN
-iptables -t nat -A V2RAY -d 172.16.0.0/12 -j RETURN
-iptables -t nat -A V2RAY -d 192.168.0.0/16 -j RETURN
-iptables -t nat -A V2RAY -d 224.0.0.0/4 -j RETURN
-iptables -t nat -A V2RAY -d 240.0.0.0/4 -j RETURN
+# Bỏ qua mạng LAN và bất kỳ địa chỉ nào khác mà bạn muốn bỏ qua proxy
+# Xem Wikipedia và RFC5735 để có danh sách đầy đủ các mạng được bảo lưu.
+iptables -t nat -A V2RAY -d 0.0.0.0/8 -j TRỞ LẠI
+iptables -t nat -A V2RAY -d 10.0.0.0/8 -j TRỞ LẠI
+iptables -t nat -A V2RAY-127.0.0.0/8 -j RETURN
+iptables -t nat -A V2RAY-169.254.0.0/16 -j TRỞ LẠI
+iptables -t nat -A V2RAY-172.16.0.0/12 -j TRỞ LẠI
+iptables -t nat -A V2RAY-192.168 .0.0 / 16 -j RETURN
+iptables -t nat -A V2RAY-224.0.0.0/4 -j TRẢ LẠI
+iptables -t nat -A V2RAY-240.0.0.0/4 -j TRẢ LẠI
 
-# Anything else should be redirected to Dokodemo-door's local port
-iptables -t nat -A V2RAY -p tcp -j REDIRECT --to-ports 12345
+# Mọi thứ khác cần được chuyển hướng đến cổng địa phương của cửa Dokodemo
+iptables -t nat -A V2RAY -p tcp -j ĐỔI MỚI - sang-cổng 12345
 
-# Add any UDP rules
-ip route add local default dev lo table 100
-ip rule add fwmark 1 lookup 100
-iptables -t mangle -A V2RAY -p udp --dport 53 -j TPROXY --on-port 12345 --tproxy-mark 0x01/0x01
-iptables -t mangle -A V2RAY_MARK -p udp --dport 53 -j MARK --set-mark 1
+# Thêm bất kỳ quy tắc UDP nào
+tuyến IP thêm địa chỉ mặc định dev lo table 100
+ip rule add fwmark 1 tra cứu 100
+iptables -t mangle -A V2RAY -p udp --dữ 53 -j TPROXY --on-port 12345 --tinxy-mark 0x01 / 0x01
+iptables -t mangle -A V2RAY_MARK -p udp --dẫn 53 -j MARK --set-mark 1
 
-# Apply the rules
-iptables -t nat -A OUTPUT -p tcp -j V2RAY
+# Áp dụng các quy tắc
+iptables -t nat -Một OUTPUT -p tcp -j V2RAY
 iptables -t mangle -A PREROUTING -j V2RAY
 iptables -t mangle -A OUTPUT -j V2RAY_MARK
 ```
