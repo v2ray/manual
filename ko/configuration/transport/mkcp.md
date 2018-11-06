@@ -57,7 +57,7 @@ Read buffer size for a single connection, in MB. Default value is `2`.
 
 Write buffer size for a single connection, in MB. Default value is `2`.
 
-> `헤더`: [HeaderObject]{#headerobject}
+> `header`: [HeaderObject]{#headerobject}
 
 Configuration for packet header obfuscation.
 
@@ -65,7 +65,7 @@ Configuration for packet header obfuscation.
 
 ```javascript
 {
-  "유형": "없음"
+  "type": "none"
 }
 ```
 
