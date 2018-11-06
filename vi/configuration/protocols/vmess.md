@@ -4,12 +4,12 @@ refen: configuration/protocols/vmess
 ---
 # VMess
 
-* Name: `vmess`
-* Type: Inbound / Outbound
+* Tên: `vmess`
+* Loại: Inbound / Outbound
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) là một giao thức cho truyền thông được mã hóa. Nó bao gồm cả proxy trong và ngoài.
 
-VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. One may install `ntp` service on Linux to automatically adjust system time.
+VMess phụ thuộc vào thời gian hệ thống. Hãy đảm bảo rằng thời gian hệ thống của bạn được đồng bộ với thời gian UTC. Múi giờ không quan trọng. Người ta có thể cài đặt dịch vụ `ntp` trên Linux để tự động điều chỉnh thời gian hệ thống.
 
 ## OutboundConfigurationObject
 
@@ -34,7 +34,7 @@ VMess depends on system time. Please ensure that your system time is in sync wit
 
 > `vnext`: \[ [ServerObject](#serverobject) \]
 
-An array, where each element presents a remote server
+Một mảng, trong đó mỗi phần tử trình bày một máy chủ từ xa
 
 ### ServerObject
 
@@ -48,15 +48,15 @@ An array, where each element presents a remote server
 
 > `address`: address
 
-Server address, may be IPv4, IPv6 or domain name.
+Địa chỉ máy chủ, có thể là IPv4, IPv6 hoặc tên miền.
 
 > `port`: number
 
-Server port
+Cổng máy chủ
 
 > `users`: \[ [UserObject](#userobject) \]
 
-An array where each element is an VMess user
+Một mảng trong đó mỗi phần tử là một người dùng VMess
 
 ### UserObject
 
@@ -71,28 +71,28 @@ An array where each element is an VMess user
 
 > `id`: string
 
-User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+ID người dùng, ở dạng [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 > `alterId`: number
 
-Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 16. Its value must be not larger than the one in corresponding Inbound.
+Số ID thay thế. Các ID thay thế sẽ được tạo theo cách xác định. Mặc định là 0. Tối đa 65535. Đề nghị 16. Giá trị của nó không được lớn hơn giá trị của một Inbound tương ứng.
 
 > `level`: number
 
-User level. See [Policy](../policy.md) for more detail.
+Cấp người dùng. Xem [Chính sách](../policy.md) để biết thêm chi tiết.
 
 > `security`: "aes-128-gcm" | "chacha20-poly1305" | "auto" | "none"
 
-Method for encrypting payload. This setting is only available at outbound. The VMess inbound will automatically recognize this setting and decrypt payload accordingly. Options are:
+Phương pháp mã hóa tải trọng. Cài đặt này chỉ khả dụng ở bên ngoài. VMess inbound sẽ tự động nhận ra thiết lập này và giải mã payload cho phù hợp. Các tùy chọn là:
 
-* `"aes-128-gcm"`: Recommended for PC.
-* `"chacha20-poly1305"`: Recommended for mobile.
-* `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
-* `"none"`: Traffic is not encrypted at all.
+* `"aes-128-gcm"`: Được khuyến nghị cho PC.
+* `"chacha20-poly1305"`: Được đề xuất cho thiết bị di động.
+* `"auto"`: Giá trị mặc định. Sử dụng `aes-128-gcm` trên AMD64, ARM64 và S390x hoặc `chacha20-poly1305` nếu không.
+* `"none"`: Giao thông không được mã hóa.
 
 {% hint style='info' %}
 
-Use `"auto"` wherever possible for better compatibility.
+Sử dụng `"auto"` bất cứ nơi nào có thể để tương thích tốt hơn.
 
 {% endhint %}
 
@@ -121,21 +121,21 @@ Use `"auto"` wherever possible for better compatibility.
 
 > `clients`: \[ [ClientObject](#clientobject) \]
 
-An array for valid user accounts. May be empty when used for dynamic port feature.
+Một mảng cho các tài khoản người dùng hợp lệ. Có thể trống khi được sử dụng cho tính năng cổng động.
 
 > `detour`: [DetourObject](#detourobject)
 
-Optional feature to suggest client to take a detour. If specified, this inbound will instruct the outbound to use another inbound.
+Tính năng tùy chọn để đề xuất khách hàng sử dụng đường vòng. Nếu được chỉ định, nội dung này sẽ hướng dẫn bên ngoài sử dụng một thư đến khác.
 
 > `default`: [DefaultObject](#defaultobject)
 
-Optional default client configuration. Usually used with `detour`.
+Cấu hình máy khách mặc định tùy chọn. Thường được sử dụng với `đường vòng`.
 
 > `disableInsecureEncryption`: true | false
 
-Forbids client for using insecure encryption methods. When set to `true`, connections will be terminated immediately if the following encryption is used. Default value `false`.
+Ngăn cấm khách hàng sử dụng các phương thức mã hóa không an toàn. Khi được đặt thành `true`, các kết nối sẽ bị chấm dứt ngay lập tức nếu sử dụng mã hóa sau. Giá trị mặc định `sai`.
 
-* `none`
+* `không ai`
 * `aes-128-cfb`
 
 ### ClientObject
@@ -151,19 +151,19 @@ Forbids client for using insecure encryption methods. When set to `true`, connec
 
 > `id`: string
 
-User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+ID người dùng, ở dạng [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 > `level`: number
 
-User level. See [Policy](../policy.md) for its usage.
+Cấp người dùng. Xem [Chính sách](../policy.md) để biết cách sử dụng.
 
 > `alterId`: number
 
-Number of alternative IDs. Same as in Outbound.
+Số ID thay thế. Giống như trong Outbound.
 
 > `email`: string
 
-Email address for user identification.
+Địa chỉ email để nhận dạng người dùng.
 
 ### DetourObject
 
@@ -175,7 +175,7 @@ Email address for user identification.
 
 > `to`: string
 
-The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
+Thẻ của proxy đến. Xem [Tổng quan](../protocols.md). Nếu được cấu hình, VMess sẽ đề xuất ứng dụng khách của nó để sử dụng đường vòng cho các kết nối khác.
 
 ### DefaultObject
 
@@ -188,8 +188,8 @@ The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMe
 
 > `level`: number
 
-User level.
+Cấp người dùng.
 
 > `alterId`: number
 
-Number of alternative IDs. Default value 64. Recommend 16.
+Số ID thay thế. Giá trị mặc định 64. Đề xuất 16.
