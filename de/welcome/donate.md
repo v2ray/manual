@@ -9,7 +9,11 @@ Project V is a nonprofit project. The source code and program can be used freely
 * The usage of donations will not be disclosed.
 * Ihre Spende hat keine direkte Verbindung zur Entwicklung und zum Service von Project V.
 
-{% hint style='tip' %} Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't. {% endhint %}
+{% hint style='tip' %}
+
+Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't.
+
+{% endhint %}
 
 ## The Usual Way {#usual-way}
 
