@@ -17,11 +17,22 @@ V2Ray предоставляет информацию о своём состоя
 
 Все счетчики статистики перечислены ниже:
 
-* `user>>>[email]>>>traffic>>>uplink` (V2Ray 3.16+): Накопленный исходящий трафик пользователя в байтах.
-* `user>>>[email]>>>traffic>>>downlink` (V2Ray 3.16+): Накопленный входящий трафик пользователя в байтах.
-* `inbound>>>[tag]>>>traffic>>>uplink` (V2Ray 3.18+): Накопленный исходящий трафик соединения в байтах.
-* `inbound>>>[tag]>>>traffic>>>downlink` (V2Ray 3.18+): Накопленный входящий трафик соединения в байтах.
+> `user>>>[email]>>>traffic>>>uplink`
+
+Accumulated uplink traffic of specific user, in bytes.
+
+> `user>>>[email]>>>traffic>>>downlink`
+
+Accumulated downlink traffic of specific user, in bytes.
+
+> `inbound>>>[tag]>>>traffic>>>uplink`
+
+Accumulated uplink traffic of specific inbound, in bytes.
+
+> `inbound>>>[tag]>>>traffic>>>downlink`
+
+Accumulated downlink traffic of specific inbound, in bytes.
 
 ## Замечания
 
-* Если у пользователя нет валидного адреса электронной почты, статистика не будет накапливаться.
+* If a user doesn't have a valid email address, the stats will not be enabled.

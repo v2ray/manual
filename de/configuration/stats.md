@@ -17,11 +17,22 @@ V2Ray bietet einige Informationen über seine Interna.
 
 Alle Statistikzähler sind unten aufgeführt:
 
-* `Benutzer>>>[email]>>>Verkehr>>>Uplink` (V2Ray 3.16+): Akkumulierter Uplink-Verkehr eines bestimmten Benutzers in Bytes.
-* `Benutzer>>>[email]>>>Verkehr>>>Downlink` (V2Ray 3.16+): Kumulierter Downlink-Verkehr eines bestimmten Benutzers in Bytes.
-* `Inbound>>>[tag]>>>Verkehr>>>Uplink` (V2Ray 3.18+): Akkumulierte Uplink-Verkehr von bestimmten eingehenden, in Bytes.
-* `Inbound>>>[tag]>>>Verkehr>>>Downlink` (V2Ray 3.18+): Akkumulierter Downlink-Verkehr spezifischen eingehenden, in Bytes.
+> `user>>>[email]>>>traffic>>>uplink`
+
+Accumulated uplink traffic of specific user, in bytes.
+
+> `user>>>[email]>>>traffic>>>downlink`
+
+Accumulated downlink traffic of specific user, in bytes.
+
+> `inbound>>>[tag]>>>traffic>>>uplink`
+
+Accumulated uplink traffic of specific inbound, in bytes.
+
+> `inbound>>>[tag]>>>traffic>>>downlink`
+
+Accumulated downlink traffic of specific inbound, in bytes.
 
 ## Tips
 
-* Wenn ein Benutzer keine gültige E-Mail-Adresse hat, werden die Statistiken nicht aktiviert.
+* If a user doesn't have a valid email address, the stats will not be enabled.
