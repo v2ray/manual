@@ -20,7 +20,7 @@ refen: configuration/reverse
 * پس از `پل` ترافیک از اینترنت را از طریق `پورت`دریافت می کند، این ترافیک را به سرور وب در localhost ارسال می کند. شما همچنین می توانید مسیریابی را برای این ترافیک نیز پیکربندی کنید.
 * `پل` توازن بار را براساس میزان ترافیک کنترل می کند.
 
-{٪ hint style = 'خطر'٪}
+{% hint style='danger' %}
 
 معکوس پروکسی در حال حاضر قدرت [Mux](mux.md). لازم نیست دوباره Mux را روی خروجی آن پیکربندی کنید.
 
@@ -32,13 +32,13 @@ refen: configuration/reverse
 
 ```javascript
 {
-  "پل ها": [{
-    "برچسب": "پل"،
-    "دامنه": "test.v2ray.com"
-  }]،
-  "پورتال": [{
-    "برچسب": "پورتال"،
-    "دامنه": "test.v2ray.com"
+  "bridges": [{
+    "tag": "bridge",
+    "domain": "test.v2ray.com"
+  }],
+  "portals": [{
+    "tag": "portal",
+    "domain": "test.v2ray.com"
   }]
 }
 ```
@@ -55,8 +55,8 @@ refen: configuration/reverse
 
 ```javascript
 {
-  "برچسب": "پل"،
-  "دامنه": "test.v2ray.com"
+  "tag": "bridge",
+  "domain": "test.v2ray.com"
 }
 ```
 
@@ -92,9 +92,9 @@ refen: configuration/reverse
 
 ```javascript
 {
-  "پل ها": [{
-    "برچسب": "پل"،
-    "دامنه": "test.v2ray.com"
+  "bridges": [{
+    "tag": "bridge",
+    "domain": "test.v2ray.com"
   }]
 }
 ```
@@ -103,40 +103,40 @@ refen: configuration/reverse
 
 ```javascript
 {
-  "برچسب": "خارج"
-  "پروتکل": "آزادی"،
-  "تنظیمات": {
-    "تغییر مسیر": "127.0.0.1:80" // ارسال ترافیک به وب سرور محلی
+  "tag": "out"
+  "protocol": "freedom",
+  "settings": {
+    "redirect": "127.0.0.1:80" // Send traffic to local web server
   }
-}،
-{{
-  "پروتکل": "vmess"،
-  "تنظیمات": {
+},
+{
+  "protocol": "vmess",
+  "settings": {
     "vnext": [{
-      "آدرس": "پورتال IP آرشیو"،
-      "پورت": 1024،
-      "کاربران": [{" id ":" 27848739-7e62-4138-9fd3-098a63964b6b "}]
+      "address": "portal的IP地址",
+      "port": 1024,
+      "users": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
     }]
-  }،
-  'tag':" interconn "
+  },
+  "tag": "interconn"
 }
 ```
 
 مسیریابی:
 
 ```javascript
-"مسیریابی": {
-  "استراتژی": "قوانین"،
-  "تنظیمات": {
-    "قوانین": [{
-      نوع ":" فیلد "،
-      " inboundTag ": [" پل "]،
-      " دامنه ": [" full: test.v2ray.com "]،
-      " outboundTag ":" interconn "
-    }، {
-      نوع": "field"،
-      "inboundTag": ["bridge"]،
-      "outboundTag" : "خارج"
+"routing": {
+  "strategy": "rules",
+  "settings": {
+    "rules": [{
+      "type": "field",
+      "inboundTag": ["bridge"],
+      "domain": ["full:test.v2ray.com"],
+      "outboundTag": "interconn"
+    },{
+      "type": "field",
+      "inboundTag": ["bridge"],
+      "outboundTag": "out"
     }]
   }
 }
@@ -148,10 +148,10 @@ refen: configuration/reverse
 
 ```javascript
 {
-  "پورتال": [{
-    "برچسب": "پورتال"،
-    "دامنه": "test.v2ray.com" // باید مثل پل
-  }
+  "portals": [{
+    "tag": "portal",
+    "domain": "test.v2ray.com"  // Must be the same as in bridge
+  }]
 }
 ```
 
@@ -159,21 +159,21 @@ Inbound:
 
 ```javascript
 {
-  "برچسب": "خارجی"،
-  "پورت": 80، // پورت 80 برای ترافیک اینترنت HTTP
-  "پروتکل": "dokodemo درب"،
-  "تنظیمات": {
-    آدرس ":" 127.0 .0.1 "،
-    " port ": 80،
-    " network ":" tcp "
+  "tag": "external",
+  "port": 80,  // Open port 80 for internet HTTP traffic
+  "protocol": "dokodemo-door",
+  "settings": {
+    "address": "127.0.0.1",
+    "port": 80,
+    "network": "tcp"
   }
-}،
+},
 {
-  'port': 1024، // برای اتصالات پل
-  " tag ":" interconn "،
-  " protocol ":" vmess "،
-  " تنظیمات ": {
-    " مشتری ": [{" id ":" 27848739-7e62-4138-9fd3-098a63964b6b "}]
+  "port": 1024, // For bridge connections
+  "tag": "interconn",
+  "protocol": "vmess",
+  "settings": {
+    "clients": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
   }
 }
 ```
@@ -181,17 +181,17 @@ Inbound:
 Routing:
 
 ```javascript
-"مسیریابی": {
-  "استراتژی": "قواعد"،
-  "تنظیمات": {
-    "قواعد": [{
-      نوع ":" فیلد "،
-      " inboundTag ": [" خارجی "]،
-      " outboundTag ":" پورتال "
-    )، {
-      نوع": "فیلد"،
-      "inboundTag": ["interconn"]،
-      "outboundTag": "پورتال"
+"routing": {
+  "strategy": "rules",
+  "settings": {
+    "rules": [{
+      "type": "field",
+      "inboundTag": ["external"],
+      "outboundTag": "portal"
+    },{
+      "type": "field",
+      "inboundTag": ["interconn"],
+      "outboundTag": "portal"
     }]
   }
 }
