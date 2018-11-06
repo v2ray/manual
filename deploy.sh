@@ -34,6 +34,7 @@ build_dir en
 build_dir de
 build_dir ru
 build_dir ko
+build_dir fa
 
 TARGET_DIR=_v2ray_com
 
@@ -49,6 +50,8 @@ mkdir ${TARGET_DIR}/ru/
 cp -r ./ru/_book/* ${TARGET_DIR}/ru/
 mkdir ${TARGET_DIR}/ko/
 cp -r ./ko/_book/* ${TARGET_DIR}/ko/
+mkdir ${TARGET_DIR}/fa/
+cp -r ./fa/_book/* ${TARGET_DIR}/fa/
 cp -r ./_dev/* ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
