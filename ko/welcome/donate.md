@@ -22,7 +22,11 @@ Thank you for loving and supporting Project V. For every donation, we will send 
 * [팻 레온](https://www.patreon.com/v2ray)
 * [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): `보내기 love@v2ray.com`.
 
-{% hint style='danger' %} Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee. {% endhint %}
+{% hint style='danger' %}
+
+Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
+
+{% endhint %}
 
 ## 암호 해독 성 {#crypto}
 
@@ -36,9 +40,17 @@ Thank you for loving and supporting Project V. For every donation, we will send 
 * 리플: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
   * 태그 필요 없음
 
-{% hint style='tip' %} [This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies. {% endhint %}
+{% hint style='tip' %}
 
-{% hint style='info' %} Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation. {% endhint %}
+[This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies.
+
+{% endhint %}
+
+{% hint style='info' %}
+
+Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation.
+
+{% endhint %}
 
 ## 지원해 주셔서 감사합니다.
 
