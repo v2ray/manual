@@ -9,7 +9,11 @@ refen: configuration/protocols/socks
 
 양말 호환 표준 SOCKS 프로토콜의 구현이며, [양말 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), 양말 4a 및도 [양말 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
-## 아웃 바운드 프록시 구성
+Socks configuration consists of two parts, `InboundConfigurationObject` and `OutboundConfigurationObject`, for inbound and outbound respectively.
+
+## OutboundConfigurationObject
+
+`OutboundConfigurationObject` is used as `settings` field in `OutboundObject` in top level configuration.
 
 ```javascript
 {
@@ -27,22 +31,67 @@ refen: configuration/protocols/socks
 }
 ```
 
-어디에:
+> `servers`: \[ [ServerObject](#serverobject) \]
 
-* `서버`: 각 항목에있는 양말 서버 목록 : 
-  * `주소`: 서버 주소
-  * `포트`: 서버 포트
-  * `사용자`: 사용자 계정 목록 : 
-    * `사용자`: 사용자 이름
-    * `패스`: 패스워드
-    * `수준`: 사용자 수준입니다.
+An array of Socks servers.
 
-주의:
+### ServerObject
 
-* 사용자 목록이 비어 있지 않으면, socks는 무작위 사용자를 사용하여 원격 서버로 성능 사용자 인증을 수행합니다.
-* SOCKS5 서버 만 지원합니다.
+```javascript
+{
+  "address": "127.0.0.1",
+  "port": 1234,
+  "users": [
+    {
+      "user": "test user",
+      "pass": "test pass",
+      "level": 0
+    }
+  ]
+}
+```
 
-## 인바운드 프록시 구성
+> `address`: address
+
+Socks server address. May be IPv4, IPv6 or domain address.
+
+{% hint style='info' %}
+
+Only support Socks 5 servers.
+
+{% endhint %}
+
+> `port`: number
+
+Socks server port.
+
+> `users`: \[ [UserObject](#userobject) \]
+
+An array of users. Each element in the array is an user. If the list is not empty. Socks inbound will force user authentication. Otherwise, anonymous user is allowed.
+
+### UserObject
+
+```javascript
+{
+  "user": "test user",
+  "pass": "test pass",
+  "level": 0
+}
+```
+
+> `user`: string
+
+Username as in Socks protocol
+
+> `pass`: string
+
+Password as in Socks protocol
+
+> `level`: number
+
+User level for tracking and policy purpose. Default value is `0`.
+
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -59,13 +108,39 @@ refen: configuration/protocols/socks
 }
 ```
 
-어디에:
+> `auth`: "noauth" | "password"
 
-* `정식`: 양말 인증 방법. 기본값은 `"noauth"`. 옵션은 다음과 같습니다. 
-  * `"noauth"`: 익명.
-  * `"암호"`: 사용자 및 암호 [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `계정`: 각 항목이 들어있는 배열 `사용자` 사용자 이름 및 `패스` 암호. 기본값은 비어 있습니다. 
-  * `인증` 이 `일 때만 작동합니다. "비밀번호"`
-* `udp`: `true` 또는 `false UDP를 사용 가능하게하려면` . 기본값은 false입니다.
-* `ip`: UDP가 활성화되면이 IP 주소는 클라이언트로부터 UDP 패킷을받습니다. 기본값은 `"127.0.0.1"`입니다.
-* `userLevel`: 사용자 수준. 모든 연결은이 수준을 공유합니다.
+Socks autentication method. `"noauth"` is for anonymous authentication, and `"password"` for authentication with username and password. Default value is `"noauth"`.
+
+> `accounts`: \[ [AccountObject](#accountobject) \]
+
+An array of user accounts, for authenication purpose. Only take effect when `auth` is set to `"password"`.
+
+> `udp`: true | false
+
+Whether or not to enable UDP. Default value is `false`.
+
+> `ip`: address
+
+When UDP is enabled, V2Ray needs to know the IP address of current host. Default value is `"127.0.0.1"`. This must be set to the public IP address of the host, if you want to allow public UDP traffic.
+
+> `userLevel`: number
+
+User level. All incoming connections share this user level.
+
+### AccountObject
+
+```javascript
+{
+  "user": "my-username",
+  "pass": "my-password"
+}
+```
+
+> `user`: string
+
+Username as in Socks protocol
+
+> `pass`: string
+
+Password as in Socks protocol
