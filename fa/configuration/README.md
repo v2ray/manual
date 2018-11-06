@@ -2,15 +2,15 @@
 refcn: chapter_02/index
 refen: configuration/index
 ---
-# Configuration
+# پیکربندی
 
-V2Ray uses [protobuf](https://developers.google.com/protocol-buffers/)-based configuration. As protobuf format is less readable, V2Ray also supports configuration in JSON. Before V2Ray runs, it automatically converts JSON config into protobuf. That being said, other configuration formats may be introduced in the furture.
+V2Ray با استفاده از [پروتوبف پیکربندی مبتنی بر](https://developers.google.com/protocol-buffers/). به عنوان فرمت protobuf کمتر قابل خواندن است، V2Ray همچنین از پیکربندی در JSON پشتیبانی می کند. قبل از اجرای V2Ray، به طور خودکار پیکربندی JSON را به protobuf تبدیل می کند. این گفته می شود، دیگر فرمت های پیکربندی ممکن است در furture معرفی شود.
 
-Here we introduce the JSON-based configuration.
+در اینجا ما پیکربندی مبتنی بر JSON را معرفی می کنیم.
 
-JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
+JSON، یا [نشانگر جاوا اسکریپت](https://en.wikipedia.org/wiki/JSON)، به طور خلاصه، اشیا در Javascript هستند. یک فایل JSON حاوی یک و تنها یک شیء JSON است، شروع از "{" و پایان دادن با "}".
 
-A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
+یک شی JSON حاوی لیستی از جفت های کلیدی مهم است. یک کلید یک رشته است و مقدار ممکن است انواع مختلفی از قبیل رشته، عدد، رشته ای، آرایه یا یک شی دیگر باشد. یک شیء معمولی زیر است:
 
 ```javascript
 {
@@ -24,52 +24,52 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 }
 ```
 
-{% hint style='info' %}
+{٪ hint style = 'info'٪}
 
-V2Ray supports comments in JSON，annotated by "//" or "/\* \*/". In an editor that doesn't support comments, they may get displayed as errors, but comments actually work fine in V2Ray.
-
-{% endhint %}
-
-## JSON Data Types
-
-Here is a brief introduction of JSON data types. They will be referenced in the rest of docs.
-
-> `boolean`: true | false
-
-Boolean value, has to be either `true` or `false`, without quotation mark.
-
-> `number`
-
-Usually non-negative integers, without quotation mark.
-
-> `string`
-
-Sequence of characters, surrounded by quotation mark.
-
-> `array`: []
-
-Array of elements. The type of its elements is usually the same, e.g., `[string]` is an array of `string`s.
-
-> `object`: {}
-
-Object. It comes with a list of key value pairs.
-
-{% hint style='tip' %}
-
-A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
+V2Ray از نظرات در JSON پشتیبانی می کند، حاوی "یا" یا "/ \ * \ * /" حاشیه نویسی شده است. در یک ویرایشگر که نظرات را پشتیبانی نمی کند، ممکن است به عنوان اشتباه نمایش داده شود، اما نظرات واقعا در V2Ray کار می کنند.
 
 {% endhint %}
 
-## V2Ray Common Data Types
+## انواع داده JSON
 
-> `map`: object \{string, string\}
+در اینجا یک معرفی مختصر از انواع داده JSON است. آنها در بقیه اسناد ارجاع خواهند شد.
 
-An object whose keys and values have fixed types.
+> `boolean`: true | نادرست
 
-> `address`: string
+مقدار boolean باید `درست باشد` یا `false`بدون علامت نقل قول.
 
-An IP or domain address in string form, such as `"8.8.8.8"` or `"www.v2ray.com"`
+> `عدد`
 
-> `address_port`: string
+عدد صحيح غیر منفی، بدون علامت نقل قول.
 
-An `address` with port, such as `"8.8.8.8:53"` or `"www.v2ray.com:80"`. In some usages, the address part can be omitted, like `":443"`.
+> `رشته`
+
+دنباله ای از شخصیت ها، توسط علامت نقل قول احاطه شده است.
+
+> `آرایه`: []
+
+آرایه ای از عناصر نوع عناصر آن معمولا یکسان است، مثلا `[string]` آرایه ای از `رشته`.
+
+> `شی`: {}
+
+هدف - شی. با لیستی از جفت های ارزش کلیدی همراه می شود.
+
+{٪ hint style = 'tip'٪}
+
+یک جفت ارزش کلیدی معمولا با کاما "،" به پایان می رسد، اما نباید با کاما به پایان برسد، اگر آخرین عنصر از شی است.
+
+{% endhint %}
+
+## انواع داده های مشترک V2Ray
+
+> `نقشه`: object \ {string، string \}
+
+یک شی که کلید ها و مقادیر نوع ثابت دارند.
+
+> `آدرس`: رشته
+
+یک آدرس IP یا دامنه در شکل رشته، مانند `"8.8.8.8"` یا `"www.v2ray.com"`
+
+> `آدرس_پورت`: رشته
+
+`آدرس` با پورت، مانند `"8.8.8.8:53"` یا `"www.v2ray.com:80"`. در برخی از استفاده ها، بخش آدرس می تواند حذف شود، مانند `": 443"`.
