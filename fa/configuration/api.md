@@ -4,13 +4,13 @@ refen: configuration/api
 ---
 # API
 
-V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
+V2Ray برخی از API ها را برای دسترسی از راه دور فراهم می کند. این API ها بر اساس [gRPC](https://grpc.io/).
 
-When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
+هنگامی که API فعال می شود، V2Ray یک پروکسی خروجی را به صورت خودکار ایجاد می کند، برچسب `به عنوان برچسب`نشان می دهد. کاربر باید [مسیر](routing.md) تمام اتصالات gRPC را به این خروجی.
 
 ## ApiObject
 
-`ApiObject` is used as `api` field in top level configuration.
+`ApiObject` به عنوان `api` فیلد در پیکربندی سطح بالا استفاده می شود.
 
 ```javascript
 {
@@ -23,29 +23,29 @@ When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `t
 }
 ```
 
-> `tag`: string
+> `برچسب`: رشته
 
-The tag of the outbound proxy.
+برچسب پروکسی خروجی
 
-> `services`: \[ string \]
+> `خدمات`: \ [رشته \]
 
-List of enabled APIs.
+فهرست API های فعال شده.
 
-## Supported API list
+## لیست API پشتیبانی شده
 
 ### HandlerService
 
-API for manipulating inbound and outbound proxies. The following functionalities are provided:
+API برای مدیریت پروکسی های ورودی و خروجی ویژگی های زیر ارائه شده است:
 
-* Add a new inbound/outbound proxy.
-* Remove an existing inbound/outbound proxy.
-* Add a new user to an inbound proxy (VMess only).
-* Remove an existing user from an inbound proxy (VMess only).
+* یک پروکسی جدید ورودی / خروجی اضافه کنید
+* پروکسی ورودی / خروجی موجود را حذف کنید.
+* یک کاربر جدید را به پروکسی ورودی اضافه کنید (تنها VMessage).
+* یک کاربر موجود را از یک پروکسی ورودی حذف کنید (فقط VMess).
 
 ### LoggerService
 
-To restart internal logger. Can work with logrotate for operating log files.
+برای راه اندازی مجدد logger داخلی می توانید با logrotate برای فایل های ورودی کار کنید.
 
 ### StatsService
 
-Support for internal [Statistics](stats.md).
+پشتیبانی از داخلی [آمار](stats.md).

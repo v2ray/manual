@@ -2,9 +2,9 @@
 refcn: chapter_02/transport/mkcp
 refen: configuration/transport/mkcp
 ---
-# mKCP Transport
+# mKCP حمل و نقل
 
-mKCP is a reliable stream transport. It is an UDP based protocol. mKCP sends more traffic for lower latency. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
+mKCP حمل و نقل قابل اعتماد است. این یک پروتکل UDP است. mKCP ترافیک بیشتری برای زمان تاخیر پایین می فرستد. برای انتقال همان مقدار داده ها، mKCP معمولا نیاز به توان بیشتر از TCP دارد.
 
 ## KcpObject
 
@@ -23,65 +23,65 @@ mKCP is a reliable stream transport. It is an UDP based protocol. mKCP sends mor
 }
 ```
 
-> `mtu`: number
+> `mtu`: شماره
 
-Maximum transmission unit. It indicates the maxium number bytes that an UDP packet can carry. Recommended value is between `576` and `1460`. Default value `1350`.
+واحد انتقال حداکثر این نشان می دهد که بایت تعداد حداکثر که یک بسته UDP می تواند حمل کند. مقدار توصیه شده بین `576` و `1460`. مقدار پیش فرض `1350`.
 
-> `tti`: number
+> `tti`: شماره
 
-Transmission time interval, in milli-second. mKCP sends data in this interval. Recommended value is between `10` and `100`. Default value `50`.
+فاصله زمانی انتقال، در میلی ثانیه. mKCP داده ها را در این فاصله ارسال می کند. مقدار توصیه شده بین `10` و `100`. مقدار پیش فرض `50`.
 
 > `uplinkCapacity`: number
 
-Uplink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to upload data to a remote one. Default value is `5`. Please note it is byte (in MB/s), not bit. One may use value `0` for a small bandwidth.
+پهنای باند بالا، در MB / ثانیه. حداکثر پهنای باند برای نمونه V2Ray برای بارگذاری داده ها به یک از راه دور. مقدار پیش فرض `5`. لطفا توجه داشته باشید که این بایت (در MB / s) است نه کمی. ممکن است ارزش استفاده کنید `0` برای پهنای باند کوچک است.
 
 > `downlinkCapacity`: number
 
-Downlink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to download data. Default value is `20`. Please note it is byte (in MB/s), not bit. One may use value `0` for a small bandwidth.
+پهنای باند Downlink، در MB / s. حداکثر پهنای باند برای نمونه V2Ray برای دانلود داده ها. مقدار پیش فرض `20`. لطفا توجه داشته باشید که این بایت (در MB / s) است نه کمی. ممکن است ارزش استفاده کنید `0` برای پهنای باند کوچک است.
 
-{% hint style='info' %}
+{٪ hint style = 'info'٪}
 
-`uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection.
+`uplinkCapacity` و `downlinkCapacity` سرعت mKCP را تعیین می کند. در سمت مشتری، `uplinkCapacity` سرعت برای ارسال مشتری به سرور را مشخص می کند. در سمت راست، `downlinkCapacity` سرعت سرور دریافت اطلاعات را مشخص می کند. حداقل این جفت در یک اتصال واقعی موثر است.
 
 {% endhint %}
 
-> `congestion`: true | false
+> `تراکم`: واقعی | نادرست
 
-Whether or not to enable congestion control. Default value is `false`. When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
+این که آیا کنترل احتمالی را فعال کنید یا نه. مقدار پیش فرض است `کاذب`. وقتی کنترل احتمالی فعال می شود، V2Ray کیفیت شبکه را تشخیص می دهد. بسته های کمتری هنگام ارسال بسته های سخت افزاری ارسال می شوند، و یا داده های بیشتر هنگامی که شبکه به طور کامل پر نمی شود.
 
-> `readBufferSize`: number
+> `readBufferSize`: شماره
 
-Read buffer size for a single connection, in MB. Default value is `2`.
+اندازه حافظه برای یک اتصال فقط در MB خوانده شده است. مقدار پیش فرض `2`.
 
 > `writeBufferSize`: number
 
-Write buffer size for a single connection, in MB. Default value is `2`.
+اندازه حافظه برای یک اتصال واحد را در MB بنویسید. مقدار پیش فرض `2`.
 
-> `header`: [HeaderObject]{#headerobject}
+> `هدر`: [HeaderObject]{#headerobject}
 
-Configuration for packet header obfuscation.
+پیکربندی برای سوء استفاده از هدر بسته.
 
 ### HeaderObject
 
 ```javascript
 {
-  "type": "none"
+  "نوع": "هیچ"
 }
 ```
 
-> `type`: string
+> `نوع`: رشته
 
-Type of obfuscation. Corresponding inbound and outbound proxy must have the same settings. Choices are:
+نوع مبهم بودن پروکسی ورودی و خروجی باید تنظیمات مشابه داشته باشد. انتخاب ها عبارتند از:
 
-* `"none"`: Default value. No obfuscation is used.
-* `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
-* `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
-* `"wechat-video"`: Obfuscated to WeChat traffic.
-* `"dtls"`: Obfuscated as DTLS 1.2 packets.
-* `"wireguard"`: Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
+* `"none"`: مقدار پیش فرض. بدون سوء استفاده مورد استفاده قرار می گیرد.
+* `"srtp"`: به عنوان ترافیک SRTP تسخیر شده است. ممکن است به عنوان تماس های ویدئویی مانند Facetime شناخته شود.
+* `"utp"`: Obfuscated به عنوان ترافیک uTP. ممکن است به عنوان ترافیک Bittorrent شناخته شود.
+* `"wechat-video"`: مسدود شده به ترافیک WeChat.
+* `"dtls"`: به عنوان DTLS 1.2 بسته شده است.
+* `"wireguard"`: Obfuscated به عنوان WireGuard بسته. (پروتکل WireGuard درست نیست)
 
-## Credits {#credits}
+## وام {#credits}
 
-* @skywind3000 invented the original KCP protocol and implemented in C.
-* @xtaci re-implement KCP protocol in Go.
-* @xiaokangwang integrated KCP into V2Ray.
+* @ skywind3000 پروتکل اصلی KCP را اختراع کرد و در C اجرا شد
+* @ xtaci دوباره پیاده سازی پروتکل KCP در برو.
+* @ xiaokangwang یکپارچه KCP را به V2Ray.

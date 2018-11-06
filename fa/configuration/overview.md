@@ -2,249 +2,249 @@
 refcn: chapter_02/01_overview
 refen: configuration/overview
 ---
-# Configuration Overview
+# بررسی پیکربندی
 
-V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.
+V2Ray همان ساختار پیکربندی را بین طرف سرور و سمت سرویس گیرنده نشان می دهد که در زیر نشان داده شده است. تنظیمات سرور و مشتری در بخش های مختلف متفاوت هستند.
 
-Below is the top level structure of the configuration. Each section has its own format.
+در زیر ساختار سطح بالای پیکربندی است. هر بخش فرمت خاص خود را دارد.
 
 ```javascript
 {
-  "log": {},
-  "api": {},
-  "dns": {},
-  "stats": {},
-  "routing": {},
-  "policy": {},
-  "inbounds": [],
-  "outbounds": [],
-  "inboundDetour": [],
-  "outboundDetour": [],
+  "log": {}،
+  "api": {}،
+  "dns": {}،
+  "آمار": {}،
+  "مسیریابی": {}،
+  "policy": {}،
+  "inbounds": []،
+  "outbounds": []،
+  "inboundDetour": []،
+  "outboundDetour": []،
   "transport": {}
 }
 ```
 
 > `log`: [LogObject](#logobject)
 
-Log configuration to control log outputs.
+ورودی پیکربندی برای کنترل خروجی های ورودی.
 
 > `api`: [ApiObject](api.md)
 
-RPC API to control the V2Ray instance. See [API configuration](api.md) for details.
+API RPC برای کنترل نمونه V2Ray. مشاهده [API پیکربندی](api.md) برای جزئیات بیشتر.
 
 > `dns`: [DnsObject](dns.md)
 
-Configuration for internal DNS server's configurations. If this section is omitted, V2Ray will use your system-wide DNS configuration. For details, see [DNS Configurations](dns.md).
+پیکربندی برای تنظیمات داخلی DNS سرور. اگر این قسمت حذف شود، V2Ray از پیکربندی DNS سیستم شما استفاده خواهد کرد. برای جزئیات، [تنظیمات DNS](dns.md).
 
-> `stats`: [StatsObject](stats.md)
+> `آمار`: [StatsObject](stats.md)
 
-When specified, internal [Statistics](stats.md) is enabled.
+هنگامی که مشخص شده، داخلی [آمار](stats.md) را فعال کنید.
 
-> `policy`: [PolicyObject](policy.md)
+> `سیاست`: [PolicyObject](policy.md)
 
-Configurations for permissions and other security strategies. For details, see [Local Policy](policy.md).
+تنظیمات برای مجوزها و دیگر راهبردهای امنیتی. برای جزئیات بیشتر، به [سیاست محلی](policy.md).
 
-> `routing`: [RoutingObject](routing.md)
+> `مسیریابی`: [RoutingObject](routing.md)
 
-Configuration for internal [Routing](routing.md) strategy.
+پیکربندی برای داخلی [مسیریابی](routing.md) استراتژی.
 
-> `inbounds`: \[ [InboundObject](#inboundobject) \]
+> `inbounds`: \ [ [InboundObject](#inboundobject)\]
 
-An array of [InboundObject](#inboundobject) as configuration for inbound proxies.
+آرایه ای از [InboundObject](#inboundobject) به عنوان پیکربندی برای پروکسی های ورودی.
 
-> `outbounds`: \[ [OutboundObject](#outboundobject) \]
+> `خروجی`: \ [ [OutboundObject](#outboundobject)\]
 
-An array of [OutboundObject](#outboundobject) as configuration for outbound proxies. The first outbound in the array is the main one. It is the default outbound in routing decision.
+آرایه ای از [OutboundObject](#outboundobject) به عنوان پیکربندی برای پروکسی های خروجی. اولین خروجی در آرایه یکی از اصلیترین آنهاست. این پیش فرض خروجی در تصمیم مسیریابی است.
 
-> `transport`: [TransportObject](transport.md)
+> `حمل و نقل`: [TransportObject](transport.md)
 
-Low-level transport protocol's configurations. For details, see [Protocol Transport Options](transport.md).
+پیکربندی پروتکل حمل و نقل پایین. برای جزئیات، [پروتکل گزینه های حمل و نقل](transport.md).
 
 ## LogObject
 
 ```javascript
 {
-  "access": "/path/to/file",
-  "error": "/path/to/file",
+  "دسترسی": "/ path / to / file"،
+  "خطا": "/ path / to / file"،
   "loglevel": "warning"
 }
 ```
 
-> `access`: string
+> `دسترسی به`: رشته
 
-Path to access log. If not empty, it must be a legal file path, such as `"/tmp/v2ray/_access.log"`(Linux), or `"C:\\Temp\\v2ray\\_access.log"`(Windows). If empty, V2Ray writes access log to `stdout`.
+مسیر ورود به سیستم اگر خالی نیست، باید یک مسیر فایل قانونی باشد مانند `"/tmp/v2ray/_access.log"`(لینوکس)، یا `"C: \\ Temp \\ v2ray \\ _ access.log"`(ویندوز ) اگر خالی باشد، V2Ray ورود به سیستم را به `stdout`می نویسد.
 
-> `error`: string
+> `خطا`: رشته
 
-Path to error log. If not empty, it must be a legal file path. If empty, V2Ray writes error log to `stdout`.
+مسیر ورود به خطا اگر خالی نباشد، باید مسیر فایل قانونی باشد. اگر خالی باشد، V2Ray log log را به `stdout`می نویسد.
 
-> `loglevel`: "debug" | "info" | "warning" | "error" | "none"
+> `loglevel`: "debug" | "اطلاعات" | "هشدار" | "خطا" | "هیچ یک"
 
-Level of logs to be written. Different log levels indicate different content of logs. Default value is `"warning"`.
+سطح سیاهههای مربوط به نوشته شده است سطوح ورودی مختلف نشان دهنده محتوای مختلف سیاهههای مربوط است. مقدار پیش فرض `"هشدار"`.
 
-Log levels:
+سطوح ورودی:
 
-* `"debug"`: Information for developers only. Also includes all `"info"` logs.
-* `"info"`: Information for current state of V2Ray. Users don't have to take care of those. Also includes all `"warning"` logs.
-* `"warning"`: Something wrong with the environment, usually outside of V2Ray, e.g., network breakage. V2Ray still runs, but users may experience some breakages. Also includes all `"error"` logs.
-* `"error"`: Something severely wrong, that V2Ray can't run at all.
-* `"none"`: All logging are disabled.
+* `"debug"`: اطلاعات فقط برای توسعه دهندگان. همچنین شامل همه `"اطلاعات"` سیاهههای مربوط.
+* `"info"`: اطلاعات برای وضعیت فعلی V2Ray. کاربران مجبور نیستند از آن ها مراقبت کنند. همچنین شامل همه `"هشدار"` سیاهههای مربوط.
+* `"هشدار"`: چیزی با محیط زیست اشتباه است، معمولا خارج از V2Ray، به عنوان مثال، شکستن شبکه. V2Ray همچنان اجرا می شود، اما کاربران ممکن است برخی از شکست ها را تجربه کنند. همچنین شامل همه `"خطا"` سیاهههای مربوط.
+* `"خطا"`: چیزی شدیدا اشتباه است، که V2Ray نمی تواند اجرا شود.
+* `"none"`: همه ورود به سیستم غیر فعال هستند.
 
 ## InboundObject
 
-An InboundObject defines an inbound proxy. It handles incoming connections to V2Ray. Available proxies are [listed here](protocols.md).
+InboundObject یک پروکسی ورودی را تعریف می کند. این ارتباطات ورودی به V2Ray را مدیریت می کند. پراکسی های موجود [در اینجا لیست شده است](protocols.md).
 
 ```javascript
 {
-  "port": 1080,
-  "listen": "127.0.0.1",
-  "protocol": "protocol_name",
-  "settings": {},
-  "streamSettings": {},
-  "tag": "inbound_tag_name",
-  "sniffing": {
-    "enabled": false,
-    "destOverride": ["http", "tls"]
-  },
-  "allocate": {
-    "strategy": "always",
-    "refresh": 5,
-    "concurrency": 3
-  },
+  "پورت": 1080،
+  "گوش": "127.0.0.1"،
+  "پروتکل": "protocol_name"،
+  "تنظیمات": {}،
+  "streamSettings": {}،
+  برچسب ":" inbound_tag_name "،
+  " خرناس ": {
+    " فعال ": نادرست،
+    " destOverride ": [" HTTP "،" TLS "]
+  }،
+  " اختصاص ": {
+    " استراتژی ":" همیشه "،
+    " تازه کردن ": 5،
+    " همپوشانی ": 3
+  }،
 }
 ```
 
-> `port`: number | "env:variable" | string
+> `پورت`: شماره | "env: متغیر" | رشته
 
-Port that the proxy is listening on. Acceptable formats are:
+پورت که پروکسی در حال گوش دادن است فرمت های پذیرفته شده عبارتند از:
 
-* Integer: actual port number.
-* Environment variable: Beginning with `"env:"`, an env variable specifies the port in string format, such as `"env:PORT"`. V2Ray will decode the variable as string.
-* String: A numberic string value, such as `"1234"`, or a range of ports, such as `"5-10"` for 6 ports in total.
+* صحیح: شماره پورت واقعی.
+* متغیر محیطی: شروع با `"env:"`، متغیر env پورت فرمت رشته را مشخص می کند، مانند `"env: PORT"`. V2Ray متغیر را به عنوان رشته رمزگشایی می کند.
+* String: یک مقدار رشته عدد، مانند `"1234"`، یا طیف وسیعی از پورتها، مانند `"5-10"` برای 6 پورت در مجموع.
 
-The actual ports to open also depend on `allocate` setting. See below.
+پورت های واقعی برای باز کردن نیز بستگی به `تخصیص` تنظیمات. زیر را ببینید
 
-> `listen`: address
+> `گوش دادن`: آدرس
 
-The address to be listened on. Default value is `"0.0.0.0"` for incoming connections on all network interfaces. Otherwise the value has to be the address of an existing network interface.
+آدرس برای گوش دادن به مقدار پیش فرض `"0.0.0.0"` برای اتصالات ورودی در تمام رابط های شبکه است. در غیر این صورت، ارزش باید آدرس یک رابط شبکه موجود باشد.
 
-> `protocol`: string
+> `پروتکل`: رشته
 
-Name of the inbound protocol. See each individual for available values.
+نام پروتکل ورودی هر فردی را برای مقادیر موجود مشاهده کنید.
 
-> `settings`: InboundConfigurationObject
+> `تنظیمات`: InboundConfigurationObject
 
-Protocol-specific settings. See `InboundConfigurationObject` defined in each protocol.
+تنظیمات خاص پروتکل `InboundConfigurationObject` در هر پروتکل تعریف کنید.
 
 > `streamSettings`: [StreamSettingsObject]
 
-See [Protocol Transport Options](transport.md) for detail.
+مشاهده [پروتکل گزینه های حمل و نقل](transport.md) برای جزئیات.
 
-> `tag`: string
+> `برچسب`: رشته
 
-The tag of the inbound proxy. It can be used for routing decisions. If not empty, it must be unique among all inbound proxies.
+برچسب پروکسی ورودی این می تواند برای تصمیم گیری مسیریابی استفاده شود. اگر خالی نباشد، باید در میان تمام پروکسی های ورودی منحصر به فرد باشد.
 
 > `sniffing`: [SniffingObject](#sniffingobject)
 
-Configuration for content sniffing.
+پیکربندی محتویات محتوا
 
-> `allocate`: [AllocateObject](#allocateobject)
+> `تخصیص`: [AllocateObject](#allocateobject)
 
-Configuration for port allocation.
+پیکربندی برای تخصیص پورت
 
 ### SniffingObject
 
 ```javascript
 {
-  "enabled": false,
-  "destOverride": ["http", "tls"]
+  'فعال': false،
+  'destOverride': ["http"، "tls"]
 }
 ```
 
-> `enabled`: true | false
+> `فعال`: true | نادرست
 
-Whether or not to enable content sniffing.
+آیا محتوا را مجذوب میکنید یا نه
 
-> `destOverride`: \["http" | "tls"\]
+> `destOverride`: \ ["http" | "TLS" \]
 
-An array of content type. If the content type of incoming traffic is specified in the list, the destination of the connection will be overwritten by sniffed value.
+آرایه ای از نوع محتوا. اگر نوع محتوا از ترافیک ورودی در لیست مشخص شده باشد، مقصد اتصال با مقدار sniffed رونویسی خواهد شد.
 
 ### AllocateObject
 
 ```javascript
 {
-  "strategy": "always",
-  "refresh": 5,
-  "concurrency": 3
+  "استراتژی": "همیشه"،
+  "تازه کردن": 5،
+  "همپوشانی": 3
 }
 ```
 
-> `strategy`: "always" | "random"
+> `استراتژی`: "همیشه" | "تصادفی"
 
-Strategy of port allocation. When it is set to `"always"`, all port in the `port` field will be allocated for listening. If `"random"` is set, V2Ray will listen on number of `concurrency` ports, and the list of ports are refereshed every `refresh` minutes.
+استراتژی تخصیص پورت هنگامی که آن را به `"همیشه"`، تمام پورت در قسمت `پورت` برای شنیدن اختصاص داده می شود. اگر `«تصادفی»` تنظیم شده باشد، V2Ray بر تعداد `همزمان` پورت گوش می دهد و لیست پورت ها هر `بازخوانی` دقیقه رد می شود.
 
-> `refresh`: number
+> `تازه کردن`: شماره
 
-Number of minutes to refresh the ports of listening. Min value is `2`. This setting is only effective when `strategy` is set to `"random"`.
+تعداد دقیقه برای تازه کردن بنادر گوش دادن. مقدار حداقل `2`. این تنظیم تنها زمانی موثر است که `استراتژی` به `"تصادفی"`.
 
-> `concurrency`: number
+> `هم زمان`: شماره
 
-Number of ports to listen. Min value is `1`. Max value is one third of entire port range.
+تعداد پورت ها برای گوش دادن مقدار حداقل `1`. حداکثر مقدار یک سوم کل محدوده بندر است.
 
 ## OutboundObject
 
-An OutboundObject defines an outbound proxy for handling out-going connections. Available protocols are listed [here](protocols.md).
+OutboundObject یک پروکسی خروجی را برای مدیریت اتصالات خروجی تعریف می کند. پروتکل های موجود ذکر شده [در اینجا](protocols.md).
 
 ```javascript
 {
-  "sendThrough": "0.0.0.0",
-  "protocol": "protocol_name",
-  "settings": {},
-  "tag": "this_outbound_tag_name",
-  "streamSettings": {},
-  "proxySettings": {
-    "tag": "another_outbound_tag_name"
-  },
+  "sendThrough": "0.0.0.0"،
+  "protocol": "protocol_name"،
+  "settings": {}،
+  "tag": "this_outbound_tag_name"،
+  "streamSettings": {}،
+  "proxySettings" : {
+    "برچسب": "another_outbound_tag_name"
+  }،
   "mux": {}
 }
 ```
 
-> `sendThrough`: address
+> `طریق`: آدرس
 
-An IP address for sending traffic out. The default value, `"0.0.0.0"` is for randomly choosing an IP available on the host. Otherwise the value has to be an IP address from existing network interfaces.
+آدرس آی پی برای ارسال ترافیک. مقدار پیش فرض، `"0.0.0.0"` برای انتخاب تصادفی یک IP موجود در میزبان است. در غیر این صورت، ارزش باید یک آدرس IP از رابط های شبکه موجود باشد.
 
-> `protocol`: string
+> `پروتکل`: رشته
 
-The protocol name of this outbound. See [Protocols](protocols.md) for all available values.
+نام پروتکل این خروجی مشاهده [پروتکل](protocols.md) برای تمام مقادیر موجود.
 
-> `settings`: OutboundConfigurationObject
+> `تنظیمات`: OutboundConfigurationObject
 
-Protocol-specific settings. See `OutboundConfigurationObject` in each individual protocols.
+تنظیمات خاص پروتکل مشاهده `OutboundConfigurationObject` در هر پروتکل های فردی است.
 
-> `tag`: string
+> `برچسب`: رشته
 
-The tag of this outbound. If not empty, it must be unique among all outbounds.
+برچسب این خروجی اگر خالی نباشد، باید در میان تمام خروجی ها منحصر به فرد باشد.
 
 > `streamSettings`: [StreamSettingsObject](transport.md)
 
-Low-level transport settings. See [Protocol Transport Options](transport.md).
+تنظیمات حمل و نقل در سطح پایین. [گزینه های پروتکل حمل و نقل را مشاهده کنید.](transport.md).
 
 > `proxySettings`: [ProxySettingsObject](#proxysettingsobject)
 
-Configuration for delegating traffic from this outbound to another. When this is set, `streamSettings` of this outbound will has no effect.
+پیکربندی برای نمایندگی ترافیک از این خروجی به دیگری. هنگامی که این تنظیم می شود، `جریان تنظیمات` این خروجی بی تاثیر خواهد بود.
 
 > `mux`: [MuxObject](mux.md)
 
-See [Mux](mux.md) configuration for detail.
+مشاهده کنید [Mux](mux.md) پیکربندی برای جزئیات.
 
 ### ProxySettingsObject
 
 ```javascript
 {
-  "tag": "another-outbound-tag"
+  "برچسب": "برچسب دیگری-خروجی"
 }
 ```
 
-> `tag`: string
+> `برچسب`: رشته
 
-When `tag` is set to the tag of another outbound, the out-going traffic of current outbound will be delegated to the specified one.
+وقتی `برچسب` به تگ خروجی دیگر تنظیم می شود، ترافیک خروجی خروجی فعلی به یک مشخص شده منتقل می شود.

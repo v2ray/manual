@@ -2,134 +2,134 @@
 refcn: chapter_02/03_routing
 refen: configuration/routing
 ---
-# Routing
+# مسیریابی
 
-V2Ray has an internal routing mechanism. It routes inbound connections to various outbound based on rules. A common scenario is to split traffic by country. V2Ray can detect target country (by Geo IP) of a connection, and sends then connection to corresponding outbound proxy.
+V2Ray دارای مکانیزم مسیریابی داخلی است. این ارتباطات ورودی به خروجی های مختلف را براساس قوانین انجام می دهد. یک سناریو معمول این است که تقسیم ترافیک به وسیله کشور انجام شود. V2Ray می تواند کشور مقصد (توسط Geo IP) یک اتصال را شناسایی کند و سپس اتصال به پروکسی خروجی مربوطه را ارسال کند.
 
 ## RoutingObject
 
-`RoutingObject` is used as `routing` in top level configuration.
+`RoutingObject` به عنوان `مسیریابی` در پیکربندی سطح بالا استفاده می شود.
 
 ```javascript
 {
-  "domainStrategy": "AsIs",
-  "rules": []
+  "domainStrategy": "AsIs"،
+  "قوانین": []
 }
 ```
 
 > `domainStrategy`: "AsIs" | "IPIfNonMatch" | "IPOnDemand"
 
-Domain resolution strategy. Choices are:
+استراتژی قطعنامه دامنه انتخاب ها عبارتند از:
 
-* `"AsIs"`: Only use domain for routing. Default value.
-* `"IPIfNonMatch"`: When no rule matches current domain, V2Ray resolves it into IP addresses (A or AAAA records) and try all rules again. 
-  * If a domain has multiple IP addresses, V2Ray tries all of them.
-  * The resolved IPs are only used for routing decisions, the traffic is still sent to original domain address.
-* `"IPOnDemand"`: As long as there is a IP-based rule, V2Ray resolves the domain into IP immediately.
+* `"AsIs"`: فقط از دامنه برای مسیریابی استفاده کنید. مقدار پیش فرض.
+* `"IPIfNonMatch"`: زمانی که هیچ قاعده ای با دامنه فعلی منطبق نیست، V2Ray آن را به آدرس های IP (A یا AAAA) رفع می کند و دوباره تمام قوانین را امتحان می کند. 
+  * اگر یک دامنه دارای چندین آدرس IP باشد، V2Ray تمام آنها را انجام می دهد.
+  * IP های حل شده تنها برای تصمیم گیری مسیریابی استفاده می شوند، ترافیک هنوز به آدرس دامنه اصلی ارسال می شود.
+* `"IPOnDemand"`: تا زمانی که یک قانون مبتنی بر IP وجود دارد، V2Ray بلافاصله دامنه را به IP حل خواهد کرد.
 
-> `rules`: \[[RuleObject](#ruleobject)\]
+> `قوانین`: \ [[RuleObject](#ruleobject)\]
 
-An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` of the rule.
+آرایه ای از قوانین برای هر اتصال ورودی، V2Ray این قواعد را از بالا به پایین یک به یک می کند. اگر یک قاعا در حال اجرا است، اتصال به `outboundTag` از قانون هدایت می شود.
 
 ### RuleObject
 
 ```javascript
 {
-  "type": "field",
-  "domain": [
-    "baidu.com",
-    "qq.com",
-    "geosite:cn"
-  ],
-  "ip": [
-    "0.0.0.0/8",
-    "10.0.0.0/8",
-    "fc00::/7",
-    "fe80::/10",
-    "geoip:cn"
-  ],
-  "port": "0-100",
-  "network": "tcp",
-  "source": [
-    "10.0.0.1",
-  ],
-  "user": [
+  "نوع": "میدان"،
+  "دامنه": [
+    "baidu.com"،
+    "qq.com"،
+    "geosite: CN"
+  ]،
+  "آی پی": [
+    "0.0.0.0 / 8 "،
+    " 10.0.0.0/8 "،
+    " fc00 :: / 7 "،
+    " fe80 :: / 10 "،
+    " geoip: cn "
+  ،
+  " port ":" 0-100 " ،
+  "شبکه": "tcp"،
+  منبع: [
+    "10.0.0.1"،
+  ]،
+  "کاربر": [
     "love@v2ray.com"
-  ],
+  ]،
   "inboundTag": [
     "tag-vmess"
-  ],
-  "protocol":["http", "tls", "bittorrent"],
+  ]،
+  "پروتکل": ["http"، "tls"، "bittorrent"]،
   "outboundTag": "direct"
 }
 ```
 
-{% hint style='info' %}
+{٪ hint style = 'info'٪}
 
-When multiple fields are specified, these fields have to be all satisfied, in order to make the rule effective. If you need both `domain` and `ip` rules, it is highly likely you need put them into separate rules.
-
-{% endhint %}
-
-> `type`: "field"
-
-The only valid value for now is `"field"`.
-
-> `domain`: \[ string \]
-
-An array of domains. Available formats are:
-
-* Plaintext: If this string matches any part of the targeting domain, this rule takes effet. Example: rule `"sina.com"` matches targeting domain `"sina.com"`, `"sina.com.cn"` and `"www.sina.com"`, but not `"sina.cn"`.
-* Regular expression: Begining with `"regexp:"`, the rest is a regular expression. When the regexp matches targeting domain, this rule takes effect. Example: rule `"regexp:\\.goo.*\\.com$"` matches `"www.google.com"` and `"fonts.googleapis.com"`, but not `"google.com"`.
-* Subdomain (recommended): Begining with `"domain:"` and the rest is a domain. When the targeting domain is exactly the value, or is a subdomain of the value, this rule takes effect. Example: rule `"domain:v2ray.com"` matches `"www.v2ray.com"`, `"v2ray.com"`, but not `"xv2ray.com"`.
-* Full domain: Begining with `"full:"` and the rest is a domain. When the targeting domain is exactly the value, the rule takes effect. Example: rule `"domain:v2ray.com"` matches `"v2ray.com"`, but not `"www.v2ray.com"`.
-* Special value `"geosite:cn"`: a list of [common domains in China](https://www.v2ray.com/links/chinasites/).
-* Special value `"geosite:speedtest"` (V2Ray 3.32+): list of all public servers of speedtest.net.
-* Domains from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
-
-> `ip`: \[string\]
-
-An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. Available formats:
-
-* IP: such as `"127.0.0.1"`.
-* [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): such as `"127.0.0.0/8"`.
-* GeoIP: such as `"geoip:cn"`. It begins with `geoip:` (lower case) and followed by two letter of country code. 
-  * Special value `"geoip:private"`: for all private addresses such as `127.0.0.1`.
-* IPs from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geoip.dat`. The tag must exist in the file.
-
-{% hint style='info' %}
-
-`"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
+هنگامی که چندین فیلد مشخص می شود، این فیلدها باید همه راضی باشند تا قوانین موثر باشند. اگر شما نیاز به هر دو `دامنه` و `ip` قوانین، به احتمال زیاد شما نیاز به آنها را به قوانین جداگانه.
 
 {% endhint %}
 
-> `port`：number | string
+> `نوع`: "فیلد"
 
-Port range. Formats are:
+تنها مقدار معتبر در حال حاضر `"میدان"`.
 
-* `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
+> `دامنه`: \ [رشته \]
 
-* `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
+مجموعه ای از حوزه ها فرمت های موجود عبارتند از:
 
-> `network`: "tcp" | "udp" | "tcp,udp"
+* متن ساده: اگر این رشته با هر بخش از دامنه هدفمندی منطبق باشد، این قانون به عهده می گیرد. مثال: rule `"sina.com"` مطابقت دامنه `"sina.com"`، `"sina.com.cn"` و `"www.sina.com"`، اما نه `"sina.cn"`.
+* عبارت منظم: شروع با `"regexp:"`، بقیه یک عبارت منظم است. هنگامی که Regexp با هدف دامنه مطابقت می کند، این قانون به اجرا در می آید. مثال: rule `"regexp: \\. goo. * \\. com $"` برابر `"www.google.com"` و `"fonts.googleapis.com"`، اما نه `"google.com"`.
+* Subdomain (توصیه می شود): شروع با `"domain:"` و بقیه یک دامنه است. هنگامی که دامنه هدفمند دقیقا همان مقدار است یا یک زیر دامنه از مقدار است، این قانون در حال اجرا است. مثال: قانون `"دامنه: v2ray.com"` مسابقه `"www.v2ray.com"`، `"v2ray.com"`، اما نه `"xv2ray.com"`.
+* دامنه کامل: شروع با `"full:"` و بقیه یک دامنه است. هنگامی که دامنه هدفمند دقیقا همان ارزش است، این قانون اثر می گذارد. مثال: قانون `"دامنه: v2ray.com"` مطابق با `"v2ray.com"`، اما نه `"www.v2ray.com"`.
+* مقدار ویژه `"geosite: cn"`: لیستی از [دامنه مشترک در چین](https://www.v2ray.com/links/chinasites/).
+* مقدار ویژه `"geosite: speedtest"` (V2Ray 3.32+): لیستی از سرورهای عمومی speedtest.net.
+* دامنه از فایل: مانند `"ext: file: tag"`. مقدار باید با `ext:` (کوچک) شروع شود و با نام فایل و تگ همراه است. فایل در [منابع دایرکتوری](env.md#location-of-v2ray-asset)دارد و دارای همان قالب `geosite.dat`. برچسب باید در فایل موجود باشد.
 
-When the connection has in the chosen network, this rule take effect.
+> `IP`: \ [رشته \]
 
-> `source`: \[string\]
+مجموعه ای از محدوده IP. هنگامی که IP هدفگذاری در یکی از محدوده ها قرار دارد، این قانون به اجرا در می آید. فرمت های موجود:
 
-An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
+* IP: مانند `"127.0.0.1"`.
+* [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): مانند `"127.0.0.0/8"`.
+* GeoIP: مانند `"geoip: cn"`. با شروع می شود `geoip:` (حروف کوچک) و دو حرف از کد کشور را دنبال می کند. 
+  * مقدار ویژه `"geoip: خصوصی"`: برای تمام آدرس های خصوصی مانند `127.0.0.1`.
+* IP ها از فایل: مانند `"ext: file: tag"`. مقدار باید با `ext:` (کوچک) شروع شود و با نام فایل و تگ همراه است. فایل در قرار داده شده [دایرکتوری منبع](env.md#location-of-v2ray-asset)، و همان فرمت از `geoip.dat`. برچسب باید در فایل موجود باشد.
 
-> `user`: \[string\]
+{٪ hint style = 'info'٪}
 
-An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now Shadowsocks and VMess support user with email.
+`"ext: geoip.dat: cn"` معادل `"geoip: cn"`.
 
-> `inboundTag`: \[string\]
+{% endhint %}
 
-An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
+> `پورت`: شماره | رشته
 
-> `protocol`: \[ "http" | "tls" | "bittorrent" \]
+محدوده بندر فرمت ها عبارتند از:
 
-An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. To recognize the protocol of a connection, one must enable `sniffing` option in inbound proxy.
+* `"ab"`: هر دو `a` و `b` عدد صحیح مثبت هستند و کمتر از 65536. هنگامی که پورت هدف گیری در [`a`، `b`)، این قانون در حال اجرا است.
 
-> `outboundTag` string
+* `a`: `a` یک عدد صحیح مثبت است و کمتر از 65536. هنگامی که پورت هدف `و`، این قانون به اجرا در می آید.
 
-[Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
+> `شبکه`: "tcp" | "udp" | "tcp، udp"
+
+هنگامی که اتصال در شبکه انتخاب شده است، این قانون اثر می گذارد.
+
+> `منبع`: \ [رشته \]
+
+مجموعه ای از محدوده IP. همان فرمت به عنوان `آی فون`. هنگامی که منبع IP از اتصال در محدوده IP است، این قانون به اجرا در می آید.
+
+> `کاربر`: \ [رشته \]
+
+آرایه ای از آدرس ایمیل هنگامی که اتصال ورودی از یک حساب کاربر از آدرس ایمیل استفاده می کند، این قانون به اجرا در می آید. در حال حاضر Shadowsocks و VMess پشتیبانی از کاربر با ایمیل.
+
+> `inboundTag`: \ [رشته \]
+
+آرایه ای از رشته به عنوان برچسب های پروکسی درون گیرنده. هنگامی که اتصال از یکی از پروکسی های ورودی تعیین شده مشخص می شود، این قانون به اجرا در می آید.
+
+> `پروتکل`: \ ["http" | "TLS" | "bittorrent" \]
+
+آرایه ای از رشته به عنوان نوع پروتکل. هنگامی که اتصال از یکی از پروتکل ها استفاده می کند، این قانون به اجرا در می آید. برای شناسایی پروتکل اتصال، باید `گزینه sniffing` را در پروکسی ورودی فعال کنید.
+
+> `outboundTag` رشته
+
+[برچسب خروجی](protocols.md) که اتصال به آن ارسال می شود، اگر این قانون به اجرا درآید.

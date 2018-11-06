@@ -2,42 +2,42 @@
 refcn: chapter_02/env
 refen: configuration/env
 ---
-# Environment Variables
+# متغیرهای محیطی
 
-V2Ray reads the following environment variables.
+V2Ray متغیرهای محیط زیر را می خواند.
 
-## Cache size per connection {#buffer-size}
+## اندازه کش در هر اتصال {#buffer-size}
 
-* Name: `v2ray.ray.buffer.size` or `V2RAY_RAY_BUFFER_SIZE`
-* Unit: MBytes
-* Default value: 2 on x86, amd64, arm64 and s390x. This cache is disabled on other platforms.
-* Special value: 0 for unlimited cache size
+* نام: `v2ray.ray.buffer.size` یا `V2RAY_RAY_BUFFER_SIZE`
+* واحد: MBytes
+* مقدار پیش فرض: 2 در x86، amd64، arm64 و s390x. این حافظه پنهان در سایر سیستم عاملها غیرفعال است.
+* مقدار ویژه: 0 برای اندازه حافظه پنهان نامحدود
 
-For each connection, when there is a difference in speed between inbound and outbound traffic, V2Ray will cache some data for larger throughput. This setting controls the size of the cache. The larger the cache, the better the performance.
+برای هر اتصال، زمانی که تفاوت سرعت بین ترافیک ورودی و خروجی وجود دارد، V2Ray بعضی داده ها را برای تولید بزرگتر ذخیره می کند. این تنظیمات اندازه کش را کنترل می کند. حافظه پنهان بزرگتر، عملکرد بهتر است.
 
-## Location of V2Ray asset {#asset}
+## محل دارایی V2Ray {#asset}
 
-* Name: `v2ray.location.asset` or `V2RAY_LOCATION_ASSET`
-* Default value: Same directory where v2ray is.
+* نام: `v2ray.location.asset` یا `V2RAY_LOCATION_ASSET`
+* مقدار پیش فرض: همان پوشه ای است که v2ray است.
 
-This variable specifies a directory where geoip.dat and geosite.dat files are.
+این متغیر مسیری را که geoip.dat و فایل geosite.dat هستند را مشخص می کند.
 
-## Location of V2Ray config {#config}
+## محل پیکربندی V2Ray {#config}
 
-* Name: `v2ray.location.config` or `V2RAY_LOCATION_CONFIG`
-* Default value: Same directory where v2ray is.
+* نام: `v2ray.location.config` یا `V2RAY_LOCATION_CONFIG`
+* مقدار پیش فرض: همان پوشه ای است که v2ray است.
 
-This variable specifies a directory where config.json is.
+این متغیر دایرکتوری را تعیین می کند که در آن config.json است.
 
-## Scatter Reading {#scatter-io}
+## پراکندگی خواندن {#scatter-io}
 
-* Name: `v2ray.buf.readv` or `V2RAY_BUF_READV`
-* Default value: `auto`
+* نام: `v2ray.buf.readv` یا `V2RAY_BUF_READV`
+* مقدار پیش فرض: `خودکار`
 
-V2Ray 3.37 uses Scatter/Gather IO. This feature will use less memory when connection speed is over 100 MByte/s. Possible values are: `auto`, `enable` and `disable`.
+V2Ray 3.37 از Scatter / Collect IO استفاده می کند. این ویژگی از حافظه کمتری در هنگام اتصال سرعت بیش از 100 MByte / s استفاده می کند. مقادیر ممکن است: `خودکار`، `فعال` و `غیرفعال`.
 
-* `enable`: Enable scatter reading.
-* `disable`: Disable scatter reading.
-* `auto`: Only enable on Windows, MacOS, Linux when CPU is x86, AMD64 or s390x.
+* `فعال کردن`: فعال کردن خواندن پراکنده
+* `غیر فعال کردن`: غیر فعال کردن خواندن پراکنده.
+* `خودکار`: در ویندوز، MacOS، لینوکس فعال می شود، زمانی که پردازنده x86، AMD64 یا s390x است.
 
-When connection speed is less than 100 MByte/s, no matter whether this is enabled or not, there is no obvious difference in terms of memory usage.
+هنگامی که سرعت اتصال کمتر از 100 مگابایت بر ثانیه است، مهم نیست که آیا این فعال است یا خیر، هیچ اختلاف واضحی در رابطه با استفاده از حافظه وجود ندارد.

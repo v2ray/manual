@@ -4,10 +4,10 @@ refen: configuration/protocols/freedom
 ---
 # Freedom
 
-* Name: `freedom`
-* Type: Outbound
+* نام: `آزادی`
+* نوع: خروجی
 
-Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations. This outbound is used when you want to send traffic to its real destination.
+آزادی یک پروتکل برای ارتباطات خروجی است این تمام اتصال TCP یا UDP را به مقصد خود منتقل می کند. این خروجی زمانی استفاده می شود که می خواهید ترافیک را به مقصد واقعی خود ارسال کنید.
 
 ## ConfigurationObject
 
@@ -21,18 +21,18 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 
 > `domainStrategy`: "AsIs" | "UseIP"
 
-Strategy for domain name resolution. Options are:
+استراتژی برای حل و فصل نام دامنه. گزینه ها عبارتند از:
 
-* `"AsIs"`: Default value. Resolve domain name by system.
-* `"UseIP"`: Use [internal DNS](../dns.md) for domain name resolution.
+* `"AsIs"`: مقدار پیش فرض. تعیین نام دامنه توسط سیستم
+* `"UseIP"`: استفاده از [DNS داخلی](../dns.md) برای وضوح نام دامنه.
 
-> `redirect`: address_port
+> `تغییر مسیر`: address_port
 
-Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
+همه اتصالات را به این آدرس هدایت کنید، مانند شکل `"127.0.0.1:80"` یا `": 1234"`.
 
-* When address is empty, e.g. `":443"`, Freedom will use the original destination address.
-* When port is `0`, e.g. `"v2ray.com:0"`, Freedom will use the original port.
+* وقتی آدرس خالی است، به عنوان مثال `": 443"`، Freedom از آدرس اصلی اصلی استفاده می کند.
+* هنگامی که پورت `0`، به عنوان مثال `"v2ray.com:0"`، آزادی را به پورت اصلی استفاده کنید.
 
 > `userLevel`: number
 
-User level. All connections share this level.
+سطح کاربر همه اتصالات این سطح را به اشتراک میگذارند.
