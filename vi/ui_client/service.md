@@ -35,6 +35,6 @@ refen: ui_client/service
 
 ## Thử vận ​​may của bạn
 
-* [PrimeDick](https://primedice.com/?c=default): Trò chơi xúc xắc với bitcoin.
+* [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Đặt cược các trận đấu thể thao với Bitcoin, bao gồm World Cup 2018.
 * [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Trò chơi đánh bạc với Bitcoin.
