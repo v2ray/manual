@@ -24,7 +24,9 @@ Thank you for loving and supporting Project V. For every donation, we will send 
 * [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Send to `love@v2ray.com`.
 
 {% hint style='danger' %}
+
 Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
+
 {% endhint %}
 
 ## Cryptocurrency {#crypto}
@@ -40,11 +42,15 @@ Please kindly notice that donation less than 1 USD is meaningless as Paypal char
   * Tag not required
 
 {% hint style='tip' %}
+
 [This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies.
+
 {% endhint %}
 
 {% hint style='info' %}
+
 Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation.
+
 {% endhint %}
 
 ## Thank you for your support

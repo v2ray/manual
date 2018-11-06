@@ -66,7 +66,9 @@ An array of rules. For each inbound connection, V2Ray tries these rules from top
 ```
 
 {% hint style='info' %}
+
 When multiple fields are specified, these fields have to be all satisfied, in order to make the rule effective. If you need both `domain` and `ip` rules, it is highly likely you need put them into separate rules.
+
 {% endhint %}
 
 > `type`: "field"
@@ -96,7 +98,9 @@ An array of IP ranges. When the targeting IP is in one of the ranges, this rule 
 * IPs from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geoip.dat`. The tag must exist in the file.
 
 {% hint style='info' %}
+
 `"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
+
 {% endhint %}
 
 > `port`：number | string

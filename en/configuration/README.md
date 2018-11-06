@@ -26,7 +26,9 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 ```
 
 {% hint style='info' %}
+
 V2Ray supports comments in JSON，annotated by "//" or "/\* \*/". In an editor that doesn't support comments, they may get displayed as errors, but comments actually work fine in V2Ray.
+
 {% endhint %}
 
 ## JSON Data Types
@@ -54,7 +56,9 @@ Array of elements. The type of its elements is usually the same, e.g., `[string]
 Object. It comes with a list of key value pairs.
 
 {% hint style='tip' %}
+
 A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
+
 {% endhint %}
 
 ## V2Ray Common Data Types
