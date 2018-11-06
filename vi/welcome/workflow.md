@@ -8,27 +8,52 @@ refen: welcome/workflow
 
 Giống như các proxy khác, bạn cần một máy chủ proxy chạy V2Ray. Sau đó, bạn có thể kết nối với internet thông qua máy chủ đó từ máy tính, thiết bị di động hoặc các thiết bị khác.
 
-![thẳng thắn](../resources/direct.png)
+```mermaid
+graph LR;
+A(PC) -.- B(Firewall);
+B -.-> C(Blocked Website);
+A --> D(V2Ray/VPS);
+D --> C;
+A --> E(Normal Website);
+```
 
-V2Ray hỗ trợ kết nối từ nhiều thiết bị cùng một lúc, với các giao thức tùy chọn khác nhau. Trong thời gian đó, cơ chế định tuyến cục bộ chỉ có thể ủy quyền thông minh các kết nối cần thiết.
+V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
 
 ## Server Bridge
 
-Trong trường hợp bạn không muốn cấu hình V2Ray trên mỗi thiết bị của mình, bạn có thể thiết lập máy chủ trong tường lửa và sau đó tất cả lưu lượng truy cập đi qua máy chủ đó. Máy chủ định tuyến chính nó.
+In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
 
-![tiếp sức](../resources/relay.png)
+```mermaid
+graph LR;
+A(PC) -.-> B(Firewall);
+B -.-> C(Blocked Website);
+A --> D(VPS 1);
+D --> E(VPS 2);
+E --> C;
+D --> F(Normal Website);
+```
 
 ## Nội bộ
 
-Nội bộ của V2Ray trông giống như bên dưới. Nó hỗ trợ nhiều proxy gửi đến, và nhiều outbounds. Mỗi người trong số họ là độc lập với những người khác.
+The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
 
-![nội bộ](../resources/internal.svg)
+```mermaid
+graph LR;
+A1(inbound) --> D(Dispatcher / Router / DNS);
+A2(inbound) --> D;
+A3(inbound) --> D;
+A4(inbound) --> D;
+D --> B1(outbound);
+D --> B2(outbound);
+D --> B3(outbound);
+D --> B4(outbound);
+```
 
-Ghi chú:
+Notes:
 
 * Bạn phải định cấu hình ít nhất một lượt vào và ra ngoài để làm cho V2Ray hoạt động chính xác.
 * Proxy gửi đến giao tiếp với phần mềm ứng dụng khách như trình duyệt.
 * Proxy đi giao tiếp với máy chủ từ xa, chẳng hạn như Apache cho một trang web.
 * Điều phối viên chịu trách nhiệm chọn một đường đi cho một kết nối nhất định, dựa trên các quy tắc có thể cấu hình được.
 
-Cấu hình chi tiết có thể được tìm thấy [ở đây](../configuration/overview.md).
+Detailed configuration can be found [here](../configuration/overview.md).
