@@ -25,19 +25,19 @@ Dokodemo درب همچنین (اگر پیکربندی شده) به عنوان ی
 }
 ```
 
-> `آدرس`: آدرس
+> `address`: address
 
 آدرس سرور مقصد ممکن است یک IPv4، IPv6 یا یک دامنه در فرم رشته باشد. هنگامی که `followRedirect` (زیر را ببینید) `true`، `آدرس` می تواند خالی باشد.
 
-> `پورت`: شماره
+> `port`: number
 
 پورت سرور مقصد
 
-> `شبکه`: "tcp" | "udp" | "tcp، udp"
+> `network`: "tcp" | "udp" | "tcp,udp"
 
 نوع شبکه قابل قبول اگر `"tcp"` مشخص شود، تمام ترافیک UDP فرستاده شده به این door doko-door حذف خواهد شد.
 
-> `followrelated`: true | نادرست
+> `followRedirect`: true | false
 
 هنگامی که به `true`تنظیم می شود، dokodemo-door مقصد را از TProxy تشخیص می دهد و از آن به عنوان مقصد استفاده می کند. `TProxy` در [حمل و نقل](../transport.md) برای جزئیات مشاهده کنید.
 
