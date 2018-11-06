@@ -2,9 +2,9 @@
 refcn: chapter_02/transport/tcp
 refen: configuration/transport/tcp
 ---
-# TCP Transport
+# TCP حمل و نقل
 
-Configuration:
+پیکربندی:
 
 ```javascript
 {
@@ -14,59 +14,59 @@ Configuration:
 }
 ```
 
-Where:
+جایی که:
 
-* `header`: Header obfuscation settings: 
-  * `type`: Type of obfuscation. Choices are: 
-    * `"none"`: Default. No obfuscation at all.
-    * `"http"`: HTTP obfuscation. See below.
+* `سرتیتر`: تنظیمات مبهم سربرگ: 
+  * `تایپ کنید`: نوع سوءاستفاده انتخاب ها عبارتند از: 
+    * `"هیچکدام"`: پیش فرض. هیچ تردیدی وجود ندارد.
+    * `"http"`: ابهام HTTP. زیر را ببینید
 
-## HTTP obfuscation
+## ابهام HTTP
 
-HTTP obfuscation must be configured (and matching) for the inbound and outbound of the connecting peers.
+تداخل HTTP باید پیکربندی (و تطبیق) برای ورودی و خروجی از همتایان اتصال.
 
 ```javascript
 {
-  "type": "http",
+  "type": http،
   "request": {
-    "version": "1.1",
-    "method": "GET",
-    "path": ["/"],
+    "version": "1.1"،
+    "method": "GET"،
+    "path": ["/"]،
     "headers": {
-      "Host": ["www.baidu.com", "www.bing.com"],
-      "User-Agent": [
-        "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",
-        "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/53.0.2785.109 Mobile/14A456 Safari/601.1.46"
-      ],
-      "Accept-Encoding": ["gzip, deflate"],
-      "Connection": ["keep-alive"],
-      "Pragma": "no-cache"
+      "میزبان": ["www.baidu.com"، "www.bing.com"]،
+      کاربر عامل: [
+        "موزیلا / 5.0 (ویندوز NT 10.0؛ WOW64) AppleWebKit / 537.36 (KHTML، مانند Gecko) کروم / 53.0.2785.143 Safari / 537.36 "،
+        " موزیلا / 5.0 (iPhone؛ پردازنده آی فون OS 10_0_2 مانند Mac OS X) AppleWebKit / 601.1 (KHTML، مانند Gecko) CriOS / 53.0.2785.109 Mobile / 14A456 Safari / 601.1 .46 "
+      ]،
+      " پذیرش رمزگذاری ": [" gzip، deflate "]،
+      " اتصال ": [" زنده نگه داشتن "]،
+      " Pragma ":" بدون حافظه پنهان "
     }
-  },
-  "response": {
-    "version": "1.1",
-    "status": "200",
-    "reason": "OK",
+  }،
+  "پاسخ": {
+    "نسخه": "1.1"،
+    "وضعیت": "200"،
+    دلیل: "OK"،
     "headers": {
-      "Content-Type": ["application/octet-stream", "video/mpeg"],
-      "Transfer-Encoding": ["chunked"],
-      "Connection": ["keep-alive"],
-      "Pragma": "no-cache"
+      "Content-type": ["application / octet -Stream "،" ویدیو / MPEG "]،
+      " انتقال-رمزگذاری ": [" تقطیع "]،
+      " اتصال ": [" حفظ اتصال "]،
+      " پراگما ":" بدون نهانگاه "
     }
   }
 }
 ```
 
-Where:
+جایی که:
 
-* `type`: same `type` entry as in `tcpSettings`.
-* `request`: HTTP request settings: 
-  * `version`: HTTP version, default value `"1.1"`
-  * `method`: HTTP method, default value `"GET"`。
-  * `path`: Path. A string array. Default value is `["/"]`. When there are multiple values, value is picked up randomly for each request.
-  * `headers`: HTTP headers. It is a key value pair. Each key is key of the HTTP header, and value is the value of the HTTP header. When multiple values are set, the effetive value is picked up randomly for each request. Default settings is same as the example above.
-* `response`: HTTP response. 
-  * `version`: HTTP version. Default value is `"1.1"`.
-  * `status`: HTTP status. Default value is `"200"`.
-  * `reason`: HTTP status text. Default value is `"OK"`.
-  * `headers`: HTTP header. Same as request headers, but for response.
+* `نوع`: همان `نوع` ورود به عنوان در `tcpSettings`.
+* `درخواست`: تنظیمات درخواست HTTP: 
+  * `نسخه`: نسخه HTTP، مقدار پیش فرض `"1.1"`
+  * `روش`: روش HTTP، مقدار پیش فرض `"GET"`.
+  * `مسیر`: مسیر. یک آرایه رشته ای مقدار پیش فرض `["/"]`. وقتی مقادیر چندگانه وجود دارد، ارزش برای هر درخواست به طور تصادفی برداشته می شود.
+  * `هدر`: هدر HTTP. این یک جفت ارزش کلیدی است. هر کلید کلیدی از هدر HTTP است، و ارزش مقدار هدر HTTP است. هنگامی که مقادیر چندگانه تنظیم می شوند، مقدار تاثیر گذار به طور تصادفی برای هر درخواست برداشت می شود. تنظیمات پیش فرض همانند مثال بالا است.
+* `واکنش`: پاسخ HTTP 
+  * `نسخه`: نسخه HTTP. مقدار پیش فرض `"1.1"`.
+  * `وضعیت`: وضعیت HTTP. مقدار پیش فرض `"200"`.
+  * `دلیل`: متن وضعیت HTTP. مقدار پیش فرض `"OK"`.
+  * `هدر`: هدر HTTP. همانند عنوان های درخواست، اما برای پاسخ.
