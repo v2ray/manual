@@ -4,19 +4,19 @@ refen: configuration/dns
 ---
 # DNS
 
-V2Ray has an internal DNS server which provides DNS relay for other components.
+V2Ray có một máy chủ DNS nội bộ cung cấp chuyển tiếp DNS cho các thành phần khác.
 
 {% hint style='info' %}
 
-Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray.
+Do sự phức tạp của giao thức DNS, V2Ray hiện chỉ hỗ trợ các truy vấn IP cơ bản (A và AAAA). Chúng tôi khuyên bạn nên sử dụng một DNS chuyên nghiệp dựa (chẳng hạn như [CoreDNS](https://coredns.io/)) cho V2Ray.
 
 {% endhint %}
 
-The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
+Các truy vấn DNS được chuyển tiếp bởi dịch vụ DNS này cũng sẽ được gửi đi dựa trên các thiết lập định tuyến. Không cần cấu hình thêm.
 
 ## DnsObject
 
-`DnsObject` is used as `dns` field in top level configuration.
+`DnsObject` được sử dụng làm trường `dns` trong cấu hình mức cao nhất.
 
 ```javascript
 {
@@ -41,30 +41,30 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
 
 > `hosts`: map{string: address}
 
-A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
+Một danh sách các địa chỉ IP tĩnh. Mỗi mục có tên miền là khóa và địa chỉ IP làm giá trị. Nếu truy vấn DNS nhắm mục tiêu một trong các tên miền trong danh sách này, IP tương ứng sẽ được trả về ngay lập tức và truy vấn DNS sẽ không được chuyển tiếp.
 
-The format of the domain is:
+Định dạng của miền là:
 
-* Such as `"v2ray.com"`: The domain to be resolved has to equal to this domain.
-* Such as `"domain:v2ray.com"`: The domain to be resolved can be this domain or any of its sub-domains.
+* Chẳng hạn như `"v2ray.com"`: Miền cần được giải quyết phải bằng với miền này.
+* Chẳng hạn như miền " `: v2ray.com"`: Miền cần được giải quyết có thể là miền này hoặc bất kỳ tên miền phụ nào của miền đó.
 
 > `servers`: \[string | [ServerObject](#serverobject) | "localhost" \]
 
-List of DNS servers. Each server may be specified in three formats: IP address, [ServerObject](#serverobject), or `"localhost"`.
+Danh sách các máy chủ DNS. Mỗi máy chủ có thể được chỉ định theo ba định dạng: địa chỉ IP, [ServerObject](#serverobject)hoặc `"localhost"`.
 
-When a server is an IP address, such as `"8.8.8.8"`, V2Ray queries DNS on UDP port 53 on this address.
+Khi máy chủ là địa chỉ IP, chẳng hạn như `"8.8.8.8"`, V2Ray sẽ truy vấn DNS trên cổng UDP 53 trên địa chỉ này.
 
-When a server is `"localhost"`, V2Ray queries local host for DNS.
+Khi máy chủ là `"localhost"`, V2Ray sẽ truy vấn máy chủ cục bộ cho DNS.
 
 {% hint style='info' %}
 
-When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. However, you may redirect DNS queries back to V2Ray with additional configuration.
+Khi `"localhost"` được sử dụng, lưu lượng truy cập DNS không được kiểm soát bởi V2Ray. Tuy nhiên, bạn có thể chuyển hướng truy vấn DNS trở lại V2Ray với cấu hình bổ sung.
 
 {% endhint %}
 
 > `clientIp`: string
 
-IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-Subnet. This IP can't be a private address.
+Địa chỉ IP của máy hiện tại. Nếu được chỉ định, V2Ray sử dụng IP này làm EDNS-Client-Subnet. Địa chỉ IP này không thể là địa chỉ riêng tư.
 
 ### ServerObject
 
@@ -80,16 +80,16 @@ IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-S
 
 > `address`: address
 
-Address of the DNS server. For now only UDP servers are supported.
+Địa chỉ của máy chủ DNS. Hiện tại chỉ hỗ trợ các máy chủ UDP.
 
 > `port`: number
 
-Port of the DNS server. Usually it is `53` or `5353`.
+Cổng của máy chủ DNS. Thông thường nó là `53` hoặc `5353`.
 
 > `domains`: \[string\]
 
-A list of domains. If the domain of enquire matches one of the list, this DNS server will be prioritized for DNS query for this domain.
+Danh sách các tên miền. Nếu miền yêu cầu khớp với một trong danh sách, máy chủ DNS này sẽ được ưu tiên cho truy vấn DNS cho tên miền này.
 
-Domain name format is the same as in [routing](routing.md).
+Định dạng tên miền giống với định dạng [định tuyến](routing.md).
 
-When a DNS server has the domain in its domain list, the domain will be queried in this server first, and then other servers. Otherwise DNS queries are sent to DNS servers in the order they appear in the config file.
+Khi một máy chủ DNS có tên miền trong danh sách tên miền của nó, tên miền sẽ được truy vấn trong máy chủ này trước, và sau đó là các máy chủ khác. Nếu không, các truy vấn DNS sẽ được gửi đến các máy chủ DNS theo thứ tự chúng xuất hiện trong tập tin cấu hình.
