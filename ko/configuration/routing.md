@@ -35,31 +35,31 @@ V2Ray는 내부 라우팅 메커니즘을 가지고 있습니다. 규칙에 따�
 
 ```javascript
 {
-  "유형": "필드",
-  "도메인": [
+  "type": "field",
+  "domain": [
     "baidu.com",
     "qq.com",
-    "geosite : cn"
+    "geosite:cn"
   ],
   "ip": [
-    "0.0.0.0
+    "0.0.0.0/8",
     "10.0.0.0/8",
-    "fc00 :: / 7",
-    "fe80 :: / 10",
-    "geoip : cn"
-  ",
-  "port ":"0-100 " ,
+    "fc00::/7",
+    "fe80::/10",
+    "geoip:cn"
+  ],
+  "port": "0-100",
   "network": "tcp",
   "source": [
-    "10.0.0.1",
+    "10.0.0.1"
   ],
   "user": [
     "love@v2ray.com"
   ],
   "inboundTag": [
     "tag-vmess"
-  ,
-  "protocol": [ "http", "tls", "bittorrent"],
+  ],
+  "protocol":["http", "tls", "bittorrent"],
   "outboundTag": "direct"
 }
 ```

@@ -48,12 +48,12 @@ refen: configuration/transport
 
 ```javascript
 {
-  "네트워크": "TCP"
-  "보안": "없음",
-  "tlsSettings"{}
-  "tcpSettings"{},
-  "kcpSettings"{},
-  "wsSettings"{} ,
+  "network": "tcp",
+  "security": "none",
+  "tlsSettings": {},
+  "tcpSettings": {},
+  "kcpSettings": {},
+  "wsSettings": {},
   "httpSettings": {},
   "dsSettings": {},
   "sockopt": {
