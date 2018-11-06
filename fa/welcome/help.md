@@ -2,63 +2,63 @@
 refcn: chapter_00/help
 refen: welcome/help
 ---
-# Support
+# حمایت کردن
 
-Project V provides multiple methods for communications.
-
-{% hint style='info' %}
-
-Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
-
-{% endhint %}
-
-## Github issues
-
-We uses several repositories for different type of discussions.
-
-* [Code issues](https://github.com/v2ray/v2ray-core/issues) 
-  * Only used for coding questions, such as bug.
-* [Roadmap](https://github.com/v2ray/planning/issues)
-* [General discussion](https://github.com/v2ray/discussion/issues)
-
-## Telegram
-
-Project V provides the following groups for different type of discussions.
-
-* [Usage](https://telegram.me/projectv2ray) 
-  * Only for Project V related topics.
-* [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
-  * For other topics.
-
-Topics in these groups are mainly in Chinese. Feel free to setup groups in your own language and let us know.
-
-{% hint style='danger' %}
-
-All discussion groups forbid the following topics: adult content, politics, hate speeches. Senders of these topics will be banned immedietely.
-
-{% endhint %}
-
-Please also follow [Project V Announcement](https://t.me/v2msg) for news.
-
-## Twitter
-
-[ProjectV2Ray](https://twitter.com/projectv2ray) for regular communications.
-
-## Email
-
-Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
-
-`love@v2ray.com`: Main email address for communication. Checked every day.
-
-`v2ray@protonmail.com`: A [ProtonMail](https://protonmail.com/) mailbox which employs end to end encryption. It is difficult to use, and only being checked occasionally.
+پروژه V چندین روش برای ارتباطات فراهم می کند.
 
 {% hint style='info' %}
 
-Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For general questions, please use discussion groups above for quick response.
+تیم پروژه V از چینی و انگلیسی پشتیبانی می کند. لطفا یکی را انتخاب کنید که با سوالات آشنا هستید.
 
 {% endhint %}
 
-You may get PGP public key by searching `love@v2ray.com`, or use the public key below.
+## مسائل Github
+
+ما از چندین مخزن برای انواع مختلف بحث استفاده می کنیم.
+
+* [مسائل کد](https://github.com/v2ray/v2ray-core/issues) 
+  * فقط برای برنامه نویسی سوالات مانند اشکال استفاده می شود.
+* [نقشه راه](https://github.com/v2ray/planning/issues)
+* [بحث عمومی](https://github.com/v2ray/discussion/issues)
+
+## تلگرام
+
+پروژه V گروه های زیر را برای انواع مختلف بحث ها فراهم می کند.
+
+* [استفاده](https://telegram.me/projectv2ray) 
+  * فقط برای موضوعات مرتبط با پروژه V.
+* [دیگران](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
+  * برای موضوعات دیگر
+
+مباحث در این گروه ها به طور عمده در چینی هستند. گروه های نصب را به زبان خودتان آزاد کنید و به ما اطلاع دهید.
+
+{٪ hint style = 'خطر'٪}
+
+همه گروه های بحث، موضوعات زیر را ممنوع می کنند: محتوای بالغ، سیاست، سخنان نفرت. فرستندگان این موضوعات به طور مستقیم ممنوع می شوند.
+
+{% endhint %}
+
+لطفا دنبال [پروژه V اطلاعیه](https://t.me/v2msg) برای اخبار.
+
+## توییتر
+
+[ProjectV2Ray](https://twitter.com/projectv2ray) برای ارتباطات منظم.
+
+## پست الکترونیک
+
+لطفا یک پیام را به یکی از آدرس زیر ارسال کنید، اگر دوست دارید با تیم خصوصی V2Ray صحبت کنید.
+
+`love@v2ray.com`: آدرس ایمیل اصلی برای ارتباطات. هر روز بررسی می شود
+
+`v2ray@protonmail.com`: A [ProtonMail](https://protonmail.com/) صندوق پستی که پایان دادن به پایان دادن به رمزگذاری است. استفاده از آن دشوار است، و گاهی اوقات بررسی می شود.
+
+{٪ hint style = 'info'٪}
+
+متاسفانه به دلیل حجم بالای کار، وعده داده شده که هر ایمیل پاسخ داده شود. متاسفم برای ناراحتی برای سوالات کلی، لطفا برای پاسخ سریع از گروههای بحث شده در بالا استفاده کنید.
+
+{% endhint %}
+
+شما ممکن است کلید عمومی PGP را با جستجوی `love@v2ray.com`یا کلید عمومی در زیر استفاده کنید.
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
