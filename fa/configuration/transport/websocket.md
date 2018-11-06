@@ -2,33 +2,33 @@
 refcn: chapter_02/transport/websocket
 refen: configuration/transport/websocket
 ---
-# WebSocket
+# وبسایت
 
-Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
+از WebSocket استاندارد برای انتقال اطلاعات استفاده کنید. اتصالات Websocket می تواند توسط HTTP سرور مانند Nginx پروکسی.
 
 ## WebSocketObject
 
-`WebSocketObject` is used as `wsSettings` in `TransportObject` or `StreamSettingsObject`.
+`WebSocketObject` به عنوان `wsSettings` در `TransportObject` یا `StreamSettingsObject`.
 
-{% hint style='info' %}
+{٪ hint style = 'info'٪}
 
-Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address.
+Websocket HTTP header X-Forwarded-For را شناسایی می کند و از آن به عنوان آدرس منبع ورودی استفاده می کند.
 
 {% endhint %}
 
 ```javascript
 {
-  "path": "/",
-  "headers": {
-    "Host": "v2ray.com"
+  "مسیر": "/"،
+  "هدر": {
+    "میزبان": "v2ray.com"
   }
 }
 ```
 
-> `path`: string
+> `مسیر`: رشته
 
-Path used for WebSocket. Default to root, as `"/"`.
+مسیر مورد استفاده برای WebSocket. پیش فرض برای ریشه، به عنوان `"/"`.
 
-> `headers`: map{string, string}
+> `هدر`: نقشه{string, string}
 
-Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+هدر سفارشی HTTP آرایه ای که هر ورودی یک جفت ارزش کلیدی در رشته است، برای هدر و مقدار در هدر HTTP. پیش فرض خالی است
