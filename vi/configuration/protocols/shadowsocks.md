@@ -4,27 +4,27 @@ refen: configuration/protocols/shadowsocks
 ---
 # Shadowsocks
 
-* Name: `shadowsocks`
-* Type: Inbound / Outbound
+* Tên: `bóng`
+* Loại: Inbound / Outbound
 
-[Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
+[Giao thức Shadowsocks](https://www.shadowsocks.org/) , cho cả kết nối trong và ngoài.
 
-Compatibility with official version:
+Khả năng tương thích với phiên bản chính thức:
 
-* Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
-  * Client may choose to turn on or off.
-  * Server may choose to enable, disable or auto.
-* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
+* Hỗ trợ cả kết nối TCP và UDP, trong đó UDP có thể được tắt tùy chọn.
+* Hỗ trợ [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
+  * Khách hàng có thể chọn bật hoặc tắt.
+  * Máy chủ có thể chọn bật, tắt hoặc tự động.
+* Phương thức mã hóa ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) mật mã được thêm vào trong V2Ray 3.0): 
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
-* Plugins： 
-  * Support obfs through standalone mode.
+  * chacha20-poly1305 aka chacha20-ietf-poly1305
+* Bổ sung: 
+  * Hỗ trợ obfs thông qua chế độ độc lập.
 
 ## InboundConfigurationObject
 
@@ -41,31 +41,31 @@ Compatibility with official version:
 
 > `email`: string
 
-Email address. Used for user identification.
+Địa chỉ email. Được sử dụng để nhận dạng người dùng.
 
 > `method`: string
 
-Required. See [Encryption methods](#encryption-methods) for available values.
+Cần thiết. Xem [Phương thức mã hóa](#encryption-methods) để biết các giá trị có sẵn.
 
 > `password`: string
 
-Required. Password in Shadowsocks protocol. Can be any string.
+Cần thiết. Mật khẩu trong giao thức Shadowsocks. Có thể là bất kỳ chuỗi nào.
 
 > `level`: number
 
-User level. Default to `0`. See [Policy](../policy.md).
+Cấp người dùng. Mặc định là `0`. Xem [Chính sách](../policy.md).
 
 > `ota`: `true` | `false`
 
-Whether or not to force OTA. If `true` and the incoming connection doesn't enable OTA, V2Ray will reject this connection. Vice versa.
+Có hay không ép buộc OTA. Nếu `true` và kết nối đến không bật OTA, V2Ray sẽ từ chối kết nối này. Ngược lại.
 
-If this field is not specified, V2Ray auto detects OTA settings from incoming connections.
+Nếu trường này không được chỉ định, V2Ray sẽ tự động phát hiện cài đặt OTA từ các kết nối đến.
 
-When AEAD encryption is used, `ota` has no effect.
+Khi mã hóa AEAD được sử dụng, `ota` không có hiệu lực.
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 
-Type of supported networks. Default to `"tcp"`.
+Loại mạng được hỗ trợ. Mặc định là `"tcp"`.
 
 ## OutboundConfigurationObject
 
@@ -85,27 +85,27 @@ Type of supported networks. Default to `"tcp"`.
 }
 ```
 
-Where:
+Ở đâu:
 
-* `email`: Email address. Used for user identification.
-* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
-* `port`: Port of Shadowsocks server.
-* `method`: Encryption method. No default value. Options are: 
+* `email`: Địa chỉ email. Được sử dụng để nhận dạng người dùng.
+* `địa chỉ`: Địa chỉ của máy chủ Shadowsocks. Có thể là IPv4, IPv6 hoặc tên miền.
+* `cổng`: Cổng của máy chủ Shadowsocks.
+* `phương pháp`: Phương thức mã hóa. Không có giá trị mặc định. Các tùy chọn là: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `ota`: Whether or not to use OTA. 
-  * When AEAD is used, `ota` has no effect.
-* `level`: User level.
+  * `"chacha20-poly1305"` hoặc `"chacha20-ietf-poly1305"`
+* `mật khẩu`: Mật khẩu. Có thể là bất kỳ chuỗi nào.
+* `ota`: Có hay không sử dụng OTA. 
+  * Khi sử dụng AEAD, `ota` không có hiệu lực.
+* `cấp độ`: Cấp độ người dùng.
 
 > `servers`: \[[ServerObject](#serverobject)\]
 
-An array of [ServerObject](#serverobject)s.
+Một mảng [ServerObject](#serverobject)s.
 
 ### ServerObject
 
@@ -123,35 +123,35 @@ An array of [ServerObject](#serverobject)s.
 
 > `email`: string
 
-Email address. Used for user identification.
+Địa chỉ email. Được sử dụng để nhận dạng người dùng.
 
 > `address`: address
 
-Required. Shadowsocks server address. May be IPv4, IPv6 or domain address.
+Cần thiết. Địa chỉ máy chủ Shadowsocks. Có thể là IPv4, IPv6 hoặc địa chỉ miền.
 
 > `port`: number
 
-Required. Shadowsocks server port.
+Cần thiết. Cổng máy chủ Shadowsocks.
 
 > `method`: string
 
-Required. See [Encryption methods](#encryption-methods) for available values.
+Cần thiết. Xem [Phương thức mã hóa](#encryption-methods) để biết các giá trị có sẵn.
 
 > `password`: string
 
-Required. Password in Shadowsocks protocol. Can be any string.
+Cần thiết. Mật khẩu trong giao thức Shadowsocks. Có thể là bất kỳ chuỗi nào.
 
 > `ota`: true | false
 
-Whether or not to use OTA. Default value is `false`.
+Có hay không sử dụng OTA. Giá trị mặc định là `false`.
 
-When AEAD encryption is used, this field has no effect.
+Khi sử dụng mã hóa AEAD, trường này không có hiệu lực.
 
 > `level`: number
 
-User level.
+Cấp người dùng.
 
-## Encryption methods
+## Phương thức mã hóa
 
 * `"aes-256-cfb"`
 * `"aes-128-cfb"`
@@ -159,4 +159,4 @@ User level.
 * `"chacha20-ietf"`
 * `"aes-256-gcm"`
 * `"aes-128-gcm"`
-* `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
+* `"chacha20-poly1305"` hoặc `"chacha20-ietf-poly1305"`
