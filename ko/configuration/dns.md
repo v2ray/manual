@@ -39,7 +39,7 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
 }
 ```
 
-> `호스트`:지도{string: address}
+> `hosts`: map{string: address}
 
 A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
 
