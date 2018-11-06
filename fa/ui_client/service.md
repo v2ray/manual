@@ -35,6 +35,6 @@ refen: ui_client/service
 
 ## شانست را امتحان کن
 
-* [PrimeDick](https://primedice.com/?c=default): بازی تاس با بیت کوین.
+* [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): شرط بندی های ورزشی با Bitcoin، از جمله جام جهانی 2018.
 * [Bitsler](https://www.bitsler.com/?ref=VictoriaR): بازی های کازینو با Bitcoin.
