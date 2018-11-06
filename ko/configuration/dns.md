@@ -70,10 +70,10 @@ IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-S
 
 ```javascript
 {
-  "주소": "1.2.3.4",
-  "포트": 5353,
-  "도메인": [
-    "도메인 : v2ray.com"
+  "address": "1.2.3.4",
+  "port": 5353,
+  "domains": [
+    "domain:v2ray.com"
   ],
 }
 ```
