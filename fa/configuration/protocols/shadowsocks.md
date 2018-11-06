@@ -4,154 +4,154 @@ refen: configuration/protocols/shadowsocks
 ---
 # Shadowsocks
 
-* Name: `shadowsocks`
-* Type: Inbound / Outbound
+* نام: `shadowsocks`
+* نوع: ورودی / خروجی
 
-[Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
+[Shadowsocks](https://www.shadowsocks.org/) پروتکل، برای هر دو اتصالات ورودی و خروجی.
 
-Compatibility with official version:
+سازگاری با نسخه رسمی:
 
-* Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
-  * Client may choose to turn on or off.
-  * Server may choose to enable, disable or auto.
-* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
+* پشتیبانی از هر دو اتصال TCP و UDP، جایی که UDP می تواند اختیاری خاموش شود.
+* پشتیبانی می کند [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)؛ 
+  * مشتری ممکن است انتخاب کند که روشن یا خاموش شود.
+  * سرور ممکن است فعال، غیرفعال یا خودکار را انتخاب کند.
+* روش های رمزنگاری ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) رمزهای اضافه شده در V2Ray 3.0): 
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
-* Plugins： 
-  * Support obfs through standalone mode.
+  * chacha20-poly1305 aka chacha20-ietf-poly1305
+* پلاگینها: 
+  * پشتیبانی obfs از طریق حالت مستقل.
 
 ## InboundConfigurationObject
 
 ```javascript
 {
-  "email": "love@v2ray.com",
-  "method": "aes-128-cfb",
-  "password": "password",
-  "level": 0,
-  "ota": true,
-  "network": "tcp"
-}
+  "ایمیل": "love@v2ray.com"،
+  "روش": "aes-128-cfb"،
+  "رمز عبور": "رمز"،
+  "سطح": 0،
+  "ota": درست است
+  "شبکه": "tcp"
+)
 ```
 
-> `email`: string
+> `ایمیل`: رشته
 
-Email address. Used for user identification.
+آدرس ایمیل. برای شناسایی کاربر استفاده می شود.
 
-> `method`: string
+> `روش`: رشته
 
-Required. See [Encryption methods](#encryption-methods) for available values.
+ضروری. مراجعه کنید به [روش رمزگذاری](#encryption-methods) برای مقادیر موجود.
 
-> `password`: string
+> `رمز عبور`: رشته
 
-Required. Password in Shadowsocks protocol. Can be any string.
+ضروری. رمز عبور در پروتکل Shadowsocks. می تواند هر رشته باشد
 
-> `level`: number
+> `سطح`: شماره
 
-User level. Default to `0`. See [Policy](../policy.md).
+سطح کاربر پیش فرض به `0`. [سیاست](../policy.md).
 
-> `ota`: `true` | `false`
+> `ota`: `true` | `غلط`
 
-Whether or not to force OTA. If `true` and the incoming connection doesn't enable OTA, V2Ray will reject this connection. Vice versa.
+آیا OTA مجبور است یا نه اگر `true` و اتصال ورودی OTA را فعال نکنند، V2Ray این اتصال را رد می کند. برعکس
 
-If this field is not specified, V2Ray auto detects OTA settings from incoming connections.
+اگر این فیلد مشخص نشده باشد، V2Ray خودکار تنظیمات OTA را از اتصالات ورودی تشخیص می دهد.
 
-When AEAD encryption is used, `ota` has no effect.
+هنگامی که استفاده از رمزنگاری AEAD استفاده می شود `ota` تاثیری ندارد.
 
-> `network`: "tcp" | "udp" | "tcp,udp"
+> `شبکه`: "tcp" | "udp" | "tcp، udp"
 
-Type of supported networks. Default to `"tcp"`.
+نوع شبکه های پشتیبانی شده پیش فرض به `"tcp"`.
 
 ## OutboundConfigurationObject
 
 ```javascript
 {
-  "servers": [
+  "سرورها": [
     {
-      "email": "love@v2ray.com",
-      "address": "127.0.0.1",
-      "port": 1234,
-      "method": "method",
-      "password": "password",
-      "ota": false,
+      'ایمیل': "love@v2ray.com"،
+      "آدرس": "127.0.0.1"،
+      "پورت": 1234،
+      "روش": "روش"،
+      "password": "password"،
+      "ota": false،
       "level": 0
     }
   ]
 }
 ```
 
-Where:
+جایی که:
 
-* `email`: Email address. Used for user identification.
-* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
-* `port`: Port of Shadowsocks server.
-* `method`: Encryption method. No default value. Options are: 
+* `ایمیل`: آدرس ایمیل. برای شناسایی کاربر استفاده می شود.
+* `آدرس`: آدرس سرور Shadowsocks. می تواند IPv4، IPv6 یا دامنه باشد.
+* `پورت`: Port of Shadowsocks server.
+* `روش`: روش رمزگذاری مقدار پیش فرض ندارد گزینه ها عبارتند از: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `ota`: Whether or not to use OTA. 
-  * When AEAD is used, `ota` has no effect.
-* `level`: User level.
+  * `"chacha20-poly1305"` یا `"chacha20-ietf-poly1305"`
+* `رمز عبور`: رمز عبور. می تواند هر رشته باشد
+* `ota`: استفاده یا عدم استفاده از OTA. 
+  * وقتی AEAD استفاده می شود، `ota` تاثیری ندارد.
+* `سطح`: سطح کاربر.
 
-> `servers`: \[[ServerObject](#serverobject)\]
+> `سرور`: \ [[ServerObject](#serverobject)\]
 
-An array of [ServerObject](#serverobject)s.
+آرایه ای از [ServerObject](#serverobject)ثانیه.
 
 ### ServerObject
 
 ```javascript
 {
-  "email": "love@v2ray.com",
-  "address": "127.0.0.1",
-  "port": 1234,
-  "method": "加密方式",
-  "password": "密码",
-  "ota": false,
+  "ایمیل": "love@v2ray.com"،
+  "آدرس": "127.0.0.1"،
+  "پورت": 1234،
+  "روش": "加密 方式"،
+  "رمز عبور": "密码" ،
+  "ota": false،
   "level": 0
 }
 ```
 
-> `email`: string
+> `ایمیل`: رشته
 
-Email address. Used for user identification.
+آدرس ایمیل. برای شناسایی کاربر استفاده می شود.
 
-> `address`: address
+> `آدرس`: آدرس
 
-Required. Shadowsocks server address. May be IPv4, IPv6 or domain address.
+ضروری. آدرس سرور Shadowsocks. ممکن است IPv4، IPv6 یا آدرس دامنه باشد.
 
-> `port`: number
+> `پورت`: شماره
 
-Required. Shadowsocks server port.
+ضروری. پورت سرور Shadowsocks.
 
-> `method`: string
+> `روش`: رشته
 
-Required. See [Encryption methods](#encryption-methods) for available values.
+ضروری. مراجعه کنید به [روش رمزگذاری](#encryption-methods) برای مقادیر موجود.
 
-> `password`: string
+> `رمز عبور`: رشته
 
-Required. Password in Shadowsocks protocol. Can be any string.
+ضروری. رمز عبور در پروتکل Shadowsocks. می تواند هر رشته باشد
 
-> `ota`: true | false
+> `ota`: true | نادرست
 
-Whether or not to use OTA. Default value is `false`.
+استفاده یا عدم استفاده از OTA مقدار پیش فرض است `کاذب`.
 
-When AEAD encryption is used, this field has no effect.
+وقتی رمزگذاری AEAD استفاده می شود، این فیلد تاثیری ندارد.
 
-> `level`: number
+> `سطح`: شماره
 
-User level.
+سطح کاربر
 
-## Encryption methods
+## روش های رمزگذاری
 
 * `"aes-256-cfb"`
 * `"aes-128-cfb"`
@@ -159,4 +159,4 @@ User level.
 * `"chacha20-ietf"`
 * `"aes-256-gcm"`
 * `"aes-128-gcm"`
-* `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
+* `"chacha20-poly1305"` یا `"chacha20-ietf-poly1305"`
