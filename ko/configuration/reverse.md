@@ -6,9 +6,13 @@ refen: configuration/reverse
 
 역방향 프록시는 V2Ray의 선택적 기능입니다. 서버에서 클라이언트로 트래픽을 리디렉션합니다. 따라서 "역방향"프록 싱이라고합니다.
 
-{% hint style = 'tip'%} 역방향 프록시는 V2Ray 4.0 이상에서 사용할 수 있습니다. 현재 베타 버전이므로 가까운 시일 내에 향상 될 수 있습니다. {% endhint %}
+{% hint style='tip' %}
 
-역방향 프록시는 다음과 같은 방식으로 작동합니다.
+Reverse proxy is available in V2Ray 4.0+. It is now in beta, and may be improved in near future.
+
+{% endhint %}
+
+Reverse proxy works in the following way:
 
 * 웹 서버를 실행하는 장치 A가 있다고 가정합니다. 장치 A에는 공용 IP 주소가 없으므로 인터넷에서 액세스 할 수 없습니다. 인터넷에서 액세스 할 수있는 클라우드 서버라고하는 또 다른 장치 B가 있습니다. 우리는 B를 포털로 사용하여 traffice를 A로 리디렉션해야합니다.
 * 이제 우리는 `bridge`이라는 이름의 장치 A에 V2Ray를 설치합니다. 그런 다음 장치 `포털`이라는 V2Ray를 설치합니다.
@@ -16,11 +20,15 @@ refen: configuration/reverse
 * `브릿지` 이 `포털`통해 인터넷 트래픽을 수신하면 localhost의 웹 서버에 이러한 트래픽을 보냅니다. 이러한 트래픽에 대한 라우팅을 구성 할 수도 있습니다.
 * `브릿지` 은 트래픽 양에 따라로드 밸런스를 제어합니다.
 
-{% 힌트 스타일 = '위험'%} 리버스 프록시는 이미 [Mux](mux.md). 아웃 바운드에 Mux를 다시 설정할 필요가 없습니다. {% endhint %}
+{% hint style='danger' %}
+
+Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to configure Mux again on its outbound.
+
+{% endhint %}
 
 ## 역 객체
 
-`역방향 객체` 은 최상위 레벨 구성에서 `역` 필드로 사용됩니다.
+`ReverseObject` is used as `reverse` field in top level configuration.
 
 ```javascript
 {
@@ -37,11 +45,11 @@ refen: configuration/reverse
 
 > `브릿지`: \ [[BridgeObject](bridgeobject)\]
 
-`브릿지`의 배열. 각 `브릿지` 은 [BridgeObject](bridgeobject)입니다.
+An array of `bridge`s. Each `bridge` is a [BridgeObject](bridgeobject).
 
 > `포털`: \ [[PortalObject](portalobject)\]
 
-`포털`의 배열입니다. 각 `포털` 은 [PortalObject](bridgeobject)입니다.
+An array of `portal`s. Each `portal` is a [PortalObject](bridgeobject).
 
 ### BridgeObject
 
@@ -54,29 +62,33 @@ refen: configuration/reverse
 
 > `태그`: 문자열
 
-태그. 이 `브리지` 의해 시작된 모든 트래픽에는이 태그가 있습니다. `인바운드 태그`식별되는 [라우팅](routing.md)사용될 수 있습니다.
+A tag. All traffic initiated by this `bridge` will have this tag. It can be used for [routing](routing.md), identified as `inboundTag`.
 
 > `도메인`: 문자열
 
-도메인. `브리지` 에서 시작하여 `포털` 으로 향하는 모든 연결은이 도메인을 대상으로 사용합니다. 이 도메인은 `브리지` 과 `포털`사이의 통신에만 사용됩니다. 실제로 등록 할 필요는 없습니다.
+A domain. All connections initiated by `bridge` towards `portal` will use this domain as target. This domain is only used for communication between `bridge` and `portal`. It is not necessary to be actually registered.
 
 ### PortalObject
 
 > `태그`: 문자열
 
-태그. `아웃 바운드 태그` 을이 `태그`로 타겟팅하여 모든 트래픽을이 `포털`로 리디렉션해야합니다. 트래픽에는 `브리지`의 연결과 인터넷 트래픽이 포함됩니다.
+A Tag. You need to redirect all traffic to this `portal`, by targeting `outboundTag` to this `tag`. The traffic includes the connections from `bridge`, as well as internet traffic.
 
 > `도메인`: 문자열
 
-도메인. 이 도메인을 대상으로하는 연결 인 경우 `포털` 은 `브리지`에서의 연결이라고 간주하고, 그렇지 않으면 인터넷 연결입니다.
+A domain. When a connection targeting this domain, `portal` considers it is a connection from `bridge`, otherwise it is an internet connection.
 
-{% hint style = 'tip'%} 다른 용도와 마찬가지로 V2Ray 인스턴스는 `브리지`또는 `포털`또는 두 가지 모두로 같은 시간에 사용할 수 있습니다. {% endhint %}
+{% hint style='tip' %}
+
+Like other usages, a V2Ray instance can be used as a `bridge`, or a `portal`, or both as the same time.
+
+{% endhint %}
 
 ## 구성 예
 
-`브릿지` 일반적으로 두 개의 아웃 바운드가 필요합니다. 하나는 `포털`을 연결하기위한 것이고 다른 하나는 로컬 웹 서버 연결을위한 포털입니다.
+`bridge` usually needs two outbounds. One for connecting `portal`, and another for connecting local web server.
 
-역:
+Reverse:
 
 ```javascript
 {
@@ -87,7 +99,7 @@ refen: configuration/reverse
 }
 ```
 
-배 밖으로:
+Outbound:
 
 ```javascript
 {
@@ -110,7 +122,7 @@ refen: configuration/reverse
 }
 ```
 
-라우팅 :
+Routing:
 
 ```javascript
 "라우팅": {
@@ -130,9 +142,9 @@ refen: configuration/reverse
 }
 ```
 
-`포털` 에는 대개 두 개의 인바운드가 필요합니다. 하나는 `브리지`연결이고 다른 하나는 인터넷 연결입니다.
+`portal` usually needs two inbounds. One for connections from `bridge`, and another for internet connections.
 
-역:
+Reverse:
 
 ```javascript
 {
@@ -143,7 +155,7 @@ refen: configuration/reverse
 }
 ```
 
-入 站 代理 :
+入站代理:
 
 ```javascript
 {
@@ -166,7 +178,7 @@ refen: configuration/reverse
 }
 ```
 
-라우팅
+Routing
 
 ```javascript
 "라우팅": {
@@ -185,4 +197,8 @@ refen: configuration/reverse
 }
 ```
 
-{% 힌트 스타일 = '팁'%}는 실제로, 당신은 실행할 수 있습니다 `다리` 먼저 다음 `문`. {% endhint %}
+{% hint style='tip' %}
+
+In practice, you may want to run `bridge` first and then `portal`.
+
+{% endhint %}
