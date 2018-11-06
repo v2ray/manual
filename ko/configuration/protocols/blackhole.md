@@ -27,7 +27,7 @@ refen: configuration/protocols/blackhole
 
 ```javascript
 {
-  "유형": "없음"
+  "type": "none"
 }
 ```
 
