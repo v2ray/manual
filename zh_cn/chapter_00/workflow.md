@@ -40,16 +40,14 @@ D --> F(墙内网站);
 
 ```mermaid
 graph LR;
-subgraph V2Ray;
-  A1(inbound) --> D(Dispatcher / Router / DNS);
-  A2(inbound) --> D;
-  A3(inbound) --> D;
-  A4(inbound) --> D;
-  D --> B1(outbound);
-  D --> B2(outbound);
-  D --> B3(outbound);
-  D --> B4(outbound);
-end;
+A1(inbound) --> D(Dispatcher / Router / DNS);
+A2(inbound) --> D;
+A3(inbound) --> D;
+A4(inbound) --> D;
+D --> B1(outbound);
+D --> B2(outbound);
+D --> B3(outbound);
+D --> B4(outbound);
 ```
 
 * 需要配置至少一个入站协议（Inbound）和一个出站协议（Outbound）才可以正常工作。[协议列表](../chapter_02/02_protocols.md)见第二章节。
