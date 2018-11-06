@@ -12,53 +12,67 @@ V2Ray دارای پارامترهای خط فرمان زیر است:
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
-جایی که:
+> `-version`
 
-* `نسخه`: فقط نسخه V2Ray را چاپ کنید، و سپس خروج کنید.
-* `-test`: تست پیکربندی، خروجی هر خطا و سپس خروج.
-* `-config`: URI پیکربندی فرمت های قابل شارژ عبارتند از: 
-  * مسیر فایل محلی پیکربندی ممکن است مسیر نسبی یا مسیر مطلق باشد.
-  * `"stdin:"`: نشان می دهد V2Ray برای خواندن تنظیمات از ورودی استاندارد. بعد از نوشتن تنظیمات، تماس گیرنده باید stdin را ببندد.
-  * مقدار شروع می شود با `http: //` یا `https: //` (حروف کوچک): V2Ray سعی می کند تنظیمات را از آدرس راه دور بارگیری کند.
-* `فرمت`: فرمت پیکربندی انتخاب ها عبارتند از: 
-  * `json`: فرمت JSON.
-  * `pb` یا `protobuf`: فرمت Protobuf.
+Print the version of V2Ray only, and then exit.
+
+> `-test`
+
+Test configuration, output any errors and then exit.
+
+> `-config`:
+
+URI of the configuration. Avilable formats are:
+
+* Path to the local config file. May be a relative path or absolute path.
+* `"stdin:"`: Indicates V2Ray to read configuration from standard input. Caller must close stdin after writing out configuration.
+* Value begins with `http://` or `https://` (lowercase): V2Ray tries to load configuration from the remote address.
+
+> `-format`
+
+Configuration format. Choices are:
+
+* `json`: JSON format.
+* `pb` or `protobuf`: Protobuf format.
 
 {% hint style='info' %}
 
-زمانی که `-config` مشخص نیست، V2Ray ابتدا تلاش می کند پیکربندی را از `config.json` زیر پوشه کاری بارگیری کند، سپس از دایرکتوری مشخص شده توسط [متغیر محیطی](../configuration/env.md) `v2ray.location.asset`.
+When `-config` is not specified, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by [environment variable](../configuration/env.md) `v2ray.location.asset`.
 
 {% endhint %}
 
 ## V2Ctl
 
-V2Ctl دارای پارامترهای خط فرمان زیر است:
+V2Ctl has the following commandline parameters:
 
 ```shell
 v2ctl <command> <options>
 ```
 
-دستورات موجود در زیر لیست شده است. هر فرمان دارای گزینه های خاص خود است.
+Available commands are listed below. Each command has its own options.
 
 ### تأیید
 
-`v2ctl verify [-sig = / path / to / sigfile] / file / to / verify`
+`v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
 
-برای تأیید امضاء دودویی V2Ray.
+To verify the signature of a V2Ray binary.
 
-گزینه ها:
+Options:
 
-* `sig`: مسیر فایل امضا. مقدار پیش فرض فایل ".sig" به مسیری است که باید تأیید شود.
-* اولین استدلال: پرونده باید تأیید شود
+> `sig`
+
+Path to signature file. Default value is the ".sig" file to the path to be verified.
+
+> First argument: the file to be verified.
 
 ### پیکربندی
 
-`پیکربندی v2ctl`
+`v2ctl config`
 
-بدون گزینه این فرمان از پشته stdin پیکربندی را در قالب JSON می نویسد و سپس پیکربندی مربوطه را در قالب Protobuf برای stdout بنویسد.
+No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
 
 ### UUID
 
 `v2ctl uuid`
 
-بدون گزینه این دستور یک UUID تصادفی را چاپ می کند.
+No options. This command prints a random UUID.
