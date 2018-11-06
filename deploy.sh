@@ -22,7 +22,7 @@ function getattr() {
 
 GITHUB_TOKEN=$(getattr "github_token" "project")
 
-git clone https://github.com/v2ray/manual.git
+git clone --depth 5 https://github.com/v2ray/manual.git
 cd manual
 
 curl -o "./resources/github-release.svg" "https://img.shields.io/github/release/v2ray/v2ray-core.svg"
