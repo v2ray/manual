@@ -8,27 +8,52 @@ refen: welcome/workflow
 
 همانند سایر پروکسی ها، شما نیاز به یک پروکسی سرور دارید که V2Ray را اجرا می کند. سپس شما می توانید از طریق آن سرور از طریق کامپیوتر، تلفن همراه یا سایر دستگاه های خود به اینترنت متصل شوید.
 
-![مستقیم](../resources/direct.png)
+```mermaid
+graph LR;
+A(PC) -.- B(Firewall);
+B -.-> C(Blocked Website);
+A --> D(V2Ray/VPS);
+D --> C;
+A --> E(Normal Website);
+```
 
-V2Ray پشتیبانی از اتصالات از دستگاه های چندگانه در همان زمان، با پروتکل های اختیاری متفاوت است. در زمان متوسط، مکانیزم مسیریابی محلی می تواند به راحتی اتصالات مورد نیاز را فقط پروکسی کند.
+V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
 
 ## پل سرور
 
-در مورد شما نمی خواهید پیکربندی V2Ray را در هر یک از دستگاه های خود انجام دهید، شما می توانید یک سرور را در فایروال نصب کنید، و سپس تمام ترافیک از طریق آن سرور. سرور مسیریابی می کند.
+In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
 
-![رله](../resources/relay.png)
+```mermaid
+graph LR;
+A(PC) -.-> B(Firewall);
+B -.-> C(Blocked Website);
+A --> D(VPS 1);
+D --> E(VPS 2);
+E --> C;
+D --> F(Normal Website);
+```
 
 ## داخلی
 
-داخل V2Ray به نظر می رسد زیر. این پروکسی چندین ورودی را پشتیبانی می کند و خروجی های چندگانه دارد. هر یک از آنها مستقل از دیگران است.
+The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
 
-![داخلی](../resources/internal.svg)
+```mermaid
+graph LR;
+A1(inbound) --> D(Dispatcher / Router / DNS);
+A2(inbound) --> D;
+A3(inbound) --> D;
+A4(inbound) --> D;
+D --> B1(outbound);
+D --> B2(outbound);
+D --> B3(outbound);
+D --> B4(outbound);
+```
 
-یادداشت:
+Notes:
 
 * شما باید حداقل یک ورودی و یک خروجی را پیکربندی کنید تا V2Ray به درستی کار کند.
 * پروکسی ورودی با نرم افزار کلاینت مانند مرورگر ارتباط برقرار می کند.
 * پروکسی خروجی ارتباط با سرور از راه دور، مانند آپاچی برای وب سایت.
 * توزیع کننده مسئول انتخاب یک خروجی برای یک اتصال داده شده بر اساس قوانین قابل تنظیم است.
 
-پیکربندی دقیق را می توان یافت [در اینجا](../configuration/overview.md).
+Detailed configuration can be found [here](../configuration/overview.md).
