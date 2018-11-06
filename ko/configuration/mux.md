@@ -2,11 +2,11 @@
 refcn: chapter_02/mux
 refen: configuration/mux
 ---
-# Multiplexing
+# 멀티플렉싱
 
-Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections.
+멀티플렉싱 또는 멀티플렉싱은 다중 가상 TCP 연결에 하나의 물리적 TCP 연결을 사용하는 것입니다.
 
-Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
+Mux는 TCP 핸드 셰이크 대기 시간을 줄 이도록 설계되었습니다. 그것은 높은 처리량을위한 것이 아닙니다. 대용량 파일을 다운로드하거나 속도 측정에 사용할 때 Mux는 일반적으로 일반 TCP 연결보다 느립니다.
 
 ## MuxObject
 
@@ -17,10 +17,10 @@ Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. 
 }
 ```
 
-> `enabled`: true | false
+> `활성화 됨`: true | 그릇된
 
-Whether or not to enable Mux on an outbound.
+아웃 바운드에서 Mux를 사용할지 여부.
 
-> `concurrency`: number
+> `동시성`: 숫자
 
-Max number of multiplexed connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`.
+한 번에 하나의 물리적 연결이 처리 할 수있는 다중화 된 연결의 최대 수입니다. 최대 값 `1024`, 최소값 `1`, 기본값 `8`.

@@ -2,14 +2,14 @@
 refcn: chapter_02/02_protocols
 refen: configuration/protocols
 ---
-# Protocols
+# 프로토콜
 
-V2Ray supports the following protocols. Each protocol may be an inbound protocol, or an outbound protocol, or both.
+V2Ray는 다음 프로토콜을 지원합니다. 각 프로토콜은 인바운드 프로토콜이거나 아웃 바운드 프로토콜이거나 둘 다일 수 있습니다.
 
-* [Blackhole](protocols/blackhole.md)
-* [Dokodemo-door](protocols/dokodemo.md)
-* [Freedom](protocols/freedom.md)
+* [블랙홀](protocols/blackhole.md)
+* [도코 데모 문](protocols/dokodemo.md)
+* [자유](protocols/freedom.md)
 * [HTTP](protocols/http.md)
-* [Shadowsocks](protocols/shadowsocks.md)
-* [Socks](protocols/socks.md)
+* [그림자 독](protocols/shadowsocks.md)
+* [양말](protocols/socks.md)
 * [VMess](protocols/vmess.md)

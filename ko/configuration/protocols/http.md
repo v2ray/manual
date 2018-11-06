@@ -4,10 +4,10 @@ refen: configuration/protocols/http
 ---
 # HTTP
 
-* Name: `http`
-* Type: Inbound
+* 이름 : `http`
+* 유형 : 인바운드
 
-HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
+HTTP는 인바운드 연결을위한 프로토콜입니다. HTTP / 1.1과 호환됩니다.
 
 ## InboundConfigurationObject
 
@@ -24,17 +24,17 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
 }
 ```
 
-> `accounts`: \[[AccountObject](#accountobject)\]
+> `계정`: \ [[AccountObject](#accountobject)\]
 
-An array in which each entry is an account. It is empty by default. If not empty, HTTP Basic Authentication is required for incoming requests.
+각 항목이 계정 인 배열입니다. 기본적으로 비어 있습니다. 비어 있지 않으면 수신 요청에 HTTP 기본 인증이 필요합니다.
 
-> `allowTransparent`: true | false
+> `allowTransparent`: true | 그릇된
 
-If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.
+`설정하면 true이고`이면이 프록시에 대한 모든 HTTP 요청이 프록시가 아닌 요청을 포함하여 프록시됩니다.
 
 > `userLevel`: number
 
-User level. All connections share this level.
+사용자 수준. 모든 연결은이 수준을 공유합니다.
 
 ### AccountObject
 
@@ -45,17 +45,17 @@ User level. All connections share this level.
 }
 ```
 
-> `user`: string
+> `사용자`: 문자열
 
-Username for HTTP authentication.
+HTTP 인증을위한 사용자 이름.
 
-> `pass`: string
+> `패스`: 문자열
 
-password for HTTP authentication.
+HTTP 인증을위한 암호.
 
-{% hint style='info' %} Use the following settings in Linux to use HTTP proxy in current session.
+{% hint style = 'info'%} 현재 세션에서 HTTP 프록시를 사용하려면 Linux에서 다음 설정을 사용하십시오.
 
-* `export http_proxy=http://127.0.0.1:8080/` (URL has to change according to your config)
-* `export https_proxy=$http_proxy`
+* `내보내기 http_proxy = http : //127.0.0.1 : 8080 /` (URL은 설정에 따라 변경해야 함)
+* `https_proxy =$http_proxy내 보냅니다.`
 
 {% endhint %}

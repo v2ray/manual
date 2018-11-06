@@ -53,31 +53,31 @@ mKCP는 안정적인 스트림 전송입니다. UDP 기반 프로토콜입니다
 
 단일 연결에 대한 쓰기 버퍼 크기 (MB). 기본값은 `2`입니다.
 
-> `header`: [HeaderObject]{#headerobject}
+> `헤더`: [HeaderObject]{#headerobject}
 
-Configuration for packet header obfuscation.
+패킷 헤더 난독 화를위한 구성.
 
 ### HeaderObject
 
 ```javascript
 {
-  "type": "none"
+  "유형": "없음"
 }
 ```
 
-> `type`: string
+> `유형`: 문자열
 
-Type of obfuscation. Corresponding inbound and outbound proxy must have the same settings. Choices are:
+난독 화 유형입니다. 상응하는 인바운드 및 아웃 바운드 프록시는 동일한 설정을 가져야합니다. 선택 사항은 다음과 같습니다.
 
-* `"none"`: Default value. No obfuscation is used.
-* `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
-* `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
-* `"wechat-video"`: Obfuscated to WeChat traffic.
-* `"dtls"`: Obfuscated as DTLS 1.2 packets.
-* `"wireguard"`: Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
+* `"없음"`: 기본값. 난독 화는 사용되지 않습니다.
+* `"srtp"`: SRTP 트래픽으로 난독 화됩니다. Facetime과 같은 화상 통화로 인식 될 수 있습니다.
+* `"utp"`: uTP 트래픽으로 난독 화. Bittorrent 트래픽으로 인식 될 수 있습니다.
+* `"wechat-video"`: WeChat 트래픽으로 난독 화됩니다.
+* `"dtls"`: DTLS 1.2 패킷으로 난독 화.
+* `"wireguard"`: WireGuard 패킷으로 난독 화. (사실 WireGuard 프로토콜이 아닙니다)
 
 ## 크레딧 {#credits}
 
-* @skywind3000 invented the original KCP protocol and implemented in C.
-* @xtaci re-implement KCP protocol in Go.
-* @xiaokangwang integrated KCP into V2Ray.
+* @ skywind3000은 원래의 KCP 프로토콜을 발명하고 C로 구현했습니다.
+* @xtaci는 Go에서 KCP 프로토콜을 다시 구현합니다.
+* @xiaokangwang은 KCP를 V2Ray에 통합했습니다.
