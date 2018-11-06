@@ -2,13 +2,13 @@
 refcn: chapter_02/policy
 refen: configuration/policy
 ---
-# Local Policy
+# Chính sách địa phương
 
-Local policy manages policy settings of current V2Ray instance, such as connection timeouts. The policys can be applied to each user level, or the whole system.
+Chính sách cục bộ quản lý cài đặt chính sách của phiên bản V2Ray hiện tại, chẳng hạn như thời gian chờ kết nối. Các policys có thể được áp dụng cho mỗi cấp độ người dùng, hoặc toàn bộ hệ thống.
 
 ## PolicyObject
 
-`PolicyObject` is used as `policy` field in top level configuration.
+`PolicyObject` được sử dụng làm trường `chính sách` trong cấu hình cấp cao nhất.
 
 ```javascript
 {
@@ -31,17 +31,17 @@ Local policy manages policy settings of current V2Ray instance, such as connecti
 
 > `level`: map{string: [LevelPolicyObject](#levelpolicyobject)}
 
-A list of key value pairs. Each key is a string of integer (restricted by JSON), such as `"0"`, `"1"`, etc. The numeric value is for a certain user level.
+Một danh sách các cặp giá trị khóa. Mỗi khóa là một chuỗi số nguyên (bị giới hạn bởi JSON), chẳng hạn như `"0"`, `"1"`, v.v. Giá trị số cho một cấp độ người dùng nhất định.
 
 {% hint style='info' %}
 
-User level can be set on each inbound and outbound proxy. V2Ray will apply different policies based on user level.
+Mức người dùng có thể được đặt trên mỗi proxy gửi đến và đi. V2Ray sẽ áp dụng các chính sách khác nhau dựa trên cấp độ người dùng.
 
 {% endhint %}
 
 > `system`: [SystemPolicyObject](#systempolicyobject)
 
-System-wide policy
+Chính sách toàn hệ thống
 
 ### LevelPolicyObject
 
@@ -59,41 +59,41 @@ System-wide policy
 
 > `handshake`: number
 
-Timeout for establishing a connection, in seconds. Default value `4`. At the handshake stage of an inbound proxy dealing with a new connection, say VMess reading request header, if it takes longer than `handshake` time, V2Ray aborts the connection.
+Thời gian chờ để thiết lập kết nối, tính bằng giây. Giá trị mặc định `4`. Ở giai đoạn bắt tay của một proxy gửi đến đối phó với một kết nối mới, hãy nói tiêu đề yêu cầu đọc VMess, nếu nó mất nhiều hơn `bắt tay` lần, V2Ray sẽ hủy kết nối.
 
 > `connIdle`: number
 
-Timeout for idle connections, in seconds. Default value `300`. If there is no data passed through the connection in `connIdle` time, V2Ray aborts the conneciton.
+Hết thời gian chờ kết nối không hoạt động, tính bằng giây. Giá trị mặc định `300`. Nếu không có dữ liệu nào được truyền qua kết nối trong `connIdle` , V2Ray sẽ hủy kết nối.
 
 > `uplinkOnly`: number
 
-Time for keeping connections open after the uplink of the connection is closed, in seconds. Default value `2`. After remote (server) closes the downlink of the connection, V2Ray aborts the connection after `uplinkOnly` times.
+Thời gian để giữ các kết nối mở sau khi đường lên của kết nối được đóng lại, tính bằng giây. Giá trị mặc định `2`. Sau khi remote (server) đóng đường xuống của kết nối, V2Ray sẽ hủy kết nối sau `uplinkOnly` lần.
 
 > `downlinkOnly`: number
 
-Time for keeping connections open after the downlink of the connection is closed, in seconds. Default value `5`. After client (browser) closes the uplink of the connection, V2Ray aborts the connection after `downlinkOnly` time.
+Thời gian để giữ các kết nối mở sau khi đường xuống của kết nối bị đóng, tính bằng giây. Giá trị mặc định `5`. Sau khi máy khách (trình duyệt) đóng đường lên của kết nối, V2Ray hủy bỏ kết nối sau `downlinkChỉ` lần.
 
 {% hint style='tip' %}
 
-In a simple webpage browser scenario, it is safe to set `uplinkOnly` and `downlinkOnly` both to `0`, for better performance.
+Trong một kịch bản trình duyệt trang web đơn giản, nó là an toàn để thiết lập `uplinkOnly` và `downlinkOnly` cả đến `0`, cho hiệu suất tốt hơn.
 
 {% endhint %}
 
 > `statsUserUplink`: true | false
 
-When set to `true`, V2Ray enables stat counter to uplink traffic for all users in this level.
+Khi được đặt thành `true`, V2Ray cho phép bộ đếm stat để lưu lượng truy cập đường lên cho tất cả người dùng ở cấp này.
 
 > `statsUserDownlink`: true | false
 
-When set to `true`, V2Ray enables stat counter to downlink traffic for all users in this level.
+Khi được đặt thành `true`, V2Ray cho phép bộ đếm stat truy cập đường xuống cho tất cả người dùng ở cấp này.
 
 > `bufferSize`: number
 
-Size of internal buffer per connection, in kilo-bytes. Default value is `10240`. When it is set to `0`, the internal buffer is disabled.
+Kích thước của bộ đệm trong mỗi kết nối, tính bằng kilo-byte. Giá trị mặc định là `10240`. Khi nó được đặt thành `0`, bộ đệm bên trong bị tắt.
 
 {% hint style='info' %}
 
-`bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).
+`bufferSize` ghi đè `thiết lập v2ray.ray.buffer.size` trong [biến env](env.md#cache-size-per-connection).
 
 {% endhint %}
 
@@ -108,8 +108,8 @@ Size of internal buffer per connection, in kilo-bytes. Default value is `10240`.
 
 > `statsInboundUplink`: true | false
 
-When set to `true`, V2Ray enables stat counter for all uplink traffic in all inbound proxies.
+Khi được đặt thành `true`, V2Ray cho phép bộ đếm stat cho tất cả lưu lượng truy cập đường lên trong tất cả các proxy gửi đến.
 
 > `statsInboundDownlink`: true | false
 
-When set to `true`, V2Ray enables stat counter for all downlink traffic in all inbound proxies.
+Khi được đặt thành `true`, V2Ray cho phép bộ đếm stat cho tất cả lưu lượng truy cập đường xuống trong tất cả các proxy gửi đến.
