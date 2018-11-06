@@ -2,58 +2,58 @@
 refcn: chapter_00/02_donate
 refen: welcome/donate
 ---
-# Donation
+# Quyên góp
 
-Project V is a nonprofit project. The source code and program can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
+Project V là một dự án phi lợi nhuận. Mã nguồn và chương trình có thể được sử dụng một cách tự do (chủ yếu) theo giấy phép MIT. Nếu bạn thích dự án này, bạn có thể mua cho chúng tôi một tách cà phê.
 
-* The usage of donations will not be disclosed.
-* Your donation has no direct connection to Project V's development and service.
+* Việc sử dụng các khoản đóng góp sẽ không được tiết lộ.
+* Khoản đóng góp của bạn không có kết nối trực tiếp đến sự phát triển và dịch vụ của Project V.
 
 {% hint style='tip' %}
 
-Thank you for loving and supporting Project V. For every donation, we will send a confirmation to your email. Please leave your email in the donation if you want to receive it, or clearly state that confirmation is not necessary if you don't.
+Cảm ơn bạn đã yêu thương và ủng hộ Dự án V. Đối với mọi khoản đóng góp, chúng tôi sẽ gửi xác nhận đến email của bạn. Vui lòng để lại email của bạn trong khoản đóng góp nếu bạn muốn nhận, hoặc nêu rõ rằng xác nhận đó là không cần thiết nếu bạn không nhận được.
 
 {% endhint %}
 
-## The Usual Way {#usual-way}
+## Cách thông thường {#usual-way}
 
-* [Paypal transfer](https://www.paypal.me/ProjectV2Ray/25)
-* [Paypal with credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
+* [Chuyển khoản qua Paypal](https://www.paypal.me/ProjectV2Ray/25)
+* [Paypal với thẻ tín dụng](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 * [Patreon](https://www.patreon.com/v2ray)
-* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Send to `love@v2ray.com`.
+* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Gửi tới `love@v2ray.com`.
 
 {% hint style='danger' %}
 
-Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
+Vui lòng lưu ý rằng khoản đóng góp dưới 1 USD là vô nghĩa khi Paypal tính phí dịch vụ cao.
 
 {% endhint %}
 
-## Cryptocurrency {#crypto}
+## Tiền điện tử {#crypto}
 
 * Bitcoin: `15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW`
-* Bitcoin Case: `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
+* Trường hợp Bitcoin: `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
 * Ethereum: `0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e` 
-  * Also supports these ERC20 tokens: OMG, REP, GNT, DGD
+  * Cũng hỗ trợ các thẻ ERC20 này: OMG, REP, GNT, DGD
 * EOS: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
 * Litecoin: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
 * Monero: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
 * Ripple: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
-  * Tag not required
+  * Không yêu cầu thẻ
 
 {% hint style='tip' %}
 
-[This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies.
+[Trang này](../ui_client/service.md) liệt kê một số dịch vụ phổ biến mà bạn có thể mua cryptocurrencies.
 
 {% endhint %}
 
 {% hint style='info' %}
 
-Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation.
+Do tính ẩn danh tự nhiên của cryptocurrenty, xin vui lòng gửi email cho chúng tôi trước khi đóng góp của bạn, nếu bạn muốn nhận được xác nhận.
 
 {% endhint %}
 
-## Thank you for your support
+## cảm ơn sự hỗ trợ của bạn
 
-* For any doantion worth more than $50, you may choose one of the following: 
-  * Your name or your company log on our front page for one month;
-  * Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
+* Đối với bất kỳ giá trị nào có giá trị lớn hơn 50 đô la, bạn có thể chọn một trong các tùy chọn sau: 
+  * Tên của bạn hoặc công ty bạn đăng nhập vào trang đầu của chúng tôi trong một tháng;
+  * Sửa đổi codebase của chúng tôi như bạn muốn. Hạn chế: Không có thay đổi chức năng đối mặt với người dùng; không có thay đổi về tài liệu. Thay đổi của bạn sẽ ở lại trong một tháng.
