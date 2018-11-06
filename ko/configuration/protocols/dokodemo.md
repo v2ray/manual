@@ -51,7 +51,7 @@ Dokodemo-door는 (구성된 경우) 투명한 프록시로 작동 할 수도 있
 
 ```javascript
 {
-  "network": "tcp, udp",
+  "network": "tcp,udp",
   "timeout": 30,
   "followRedirect": true
 }
