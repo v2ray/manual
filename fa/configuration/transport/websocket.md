@@ -10,7 +10,7 @@ refen: configuration/transport/websocket
 
 `WebSocketObject` به عنوان `wsSettings` در `TransportObject` یا `StreamSettingsObject`.
 
-{٪ hint style = 'info'٪}
+{% hint style='info' %}
 
 Websocket HTTP header X-Forwarded-For را شناسایی می کند و از آن به عنوان آدرس منبع ورودی استفاده می کند.
 
