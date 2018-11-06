@@ -100,4 +100,4 @@ V2Ray 提供了两个预编译的 Docker image：
 * /usr/bin/v2ray/v2ray: V2Ray 主程序
 * /usr/bin/v2ray/v2ctl: V2Ray 辅助工具
 * /usr/bin/v2ray/geoip.dat: IP 数据文件
-* /usr/bin/v2ray/geosite:dat: 域名数据文件
+* /usr/bin/v2ray/geosite.dat: 域名数据文件
