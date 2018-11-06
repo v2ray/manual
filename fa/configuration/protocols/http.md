@@ -4,10 +4,10 @@ refen: configuration/protocols/http
 ---
 # HTTP
 
-* Name: `http`
-* Type: Inbound
+* نام: `http`
+* نوع: ورودی
 
-HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
+HTTP یک پروتکل برای اتصالات ورودی است. این سازگار با HTTP / 1.1 است.
 
 ## InboundConfigurationObject
 
@@ -24,40 +24,40 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
 }
 ```
 
-> `accounts`: \[[AccountObject](#accountobject)\]
+> `حساب`: \ [[AccountObject](#accountobject)\]
 
-An array in which each entry is an account. It is empty by default. If not empty, HTTP Basic Authentication is required for incoming requests.
+آرایه ای که هر ورودی یک حساب است. به طور پیش فرض خالی است. اگر خالی نباشد، HTTP Basic Authentication برای درخواست های ورودی مورد نیاز است.
 
-> `allowTransparent`: true | false
+> `allowTransparent`: true | نادرست
 
-If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.
+اگر به `true`تنظیم شده باشد، تمام درخواست HTTP برای این ورودی ارسال خواهد شد پروکسی، از جمله درخواست غیر پروکسی.
 
 > `userLevel`: number
 
-User level. All connections share this level.
+سطح کاربر همه اتصالات این سطح را به اشتراک میگذارند.
 
 ### AccountObject
 
 ```javascript
 {
-  "user": "my-username",
+  "کاربر": "my-username"،
   "pass": "my-password"
 }
 ```
 
-> `user`: string
+> `کاربر`: رشته
 
-Username for HTTP authentication.
+نام کاربری برای تأیید هویت HTTP
 
-> `pass`: string
+> `پاس`: رشته
 
-password for HTTP authentication.
+رمز عبور برای احراز هویت HTTP.
 
 {% hint style='info' %}
 
-Use the following settings in Linux to use HTTP proxy in current session.
+از تنظیمات زیر در لینوکس برای استفاده از پروکسی HTTP در جلسه فعلی استفاده کنید.
 
-* `export http_proxy=http://127.0.0.1:8080/` (URL has to change according to your config)
-* `export https_proxy=$http_proxy`
+* `صادرات http_proxy = HTTP: //127.0.0.1: 8080/` (URL است با توجه به پیکربندی خود را برای تغییر)
+* `صادرات https_proxy =$http_proxy`
 
 {% endhint %}
