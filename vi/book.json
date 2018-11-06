@@ -8,6 +8,7 @@
     "-highlight",
     "-sharing",
 
+    "mermaid-gb3",
     "anchors",
     "ga",
     "prism",

@@ -35,7 +35,7 @@
     * [HTTP/2](configuration/transport/h2.md)
     * [DomainSocket](configuration/transport/domainsocket.md)
   * [Env Variables](configuration/env.md)
-* [Clients](ui_client/README.md)
+* [Third Party Tools](ui_client/README.md)
   * [Windows](ui_client/windows.md)
   * [OS X](ui_client/osx.md)
   * [iOS](ui_client/ios.md)
