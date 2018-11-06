@@ -35,6 +35,6 @@ refen: ui_client/service
 
 ## Испытайте свою удачу
 
-* [PrimeDick](https://primedice.com/?c=default): Игра в кости на биткоины.
+* [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Ставки на спорт, Bitcoin, Чемпионат мира 2018.
 * [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Игры в казино на биткоины.
