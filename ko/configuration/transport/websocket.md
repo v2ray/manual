@@ -18,9 +18,9 @@ Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source 
 
 ```javascript
 {
-  "경로": "/",
-  "헤더": {
-    "호스트": "v2ray.com"
+  "path": "/",
+  "headers": {
+    "Host": "v2ray.com"
   }
 }
 ```
