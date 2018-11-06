@@ -2,416 +2,416 @@
 refcn: chapter_00/01_versions
 refen: welcome/versions
 ---
-# Version History
+# تاریخچه نسخه
 
 ## 2018.11.05 v4.1
 
-* JSON configuration format changes. Old format is still suported.
-* Performance on GeoIP matching is improved.
+* تغییر شکل پیکربندی JSON فرمت قدیمی هنوز خم شده است
+* عملکرد تطبیق GeoIP بهبود یافته است.
 
-## 2018.11.02 v4.0
+## 2018/11.02 v4.0
 
-* Reverse proxy.
-* Release packages for ppc64 and ppc64le.
+* معکوس پروکسی
+* بسته های ppc64 و ppc64le را باز کنید.
 
 ## 2018.10.12 v3.47
 
-* Migrate to a new continuous delivery pipeline
+* مگابایت به خط لوله تحویل مداوم
 
 ## 2018.09.28 v3.44
 
-* Dokodemo-door now supports TProxy in Linux.
+* Dokodemo درب اکنون از TProxy در لینوکس پشتیبانی می کند.
 
 ## 2018.09.21 v3.43
 
-* DNS now supports on-demand queries by domain.
+* DNS اکنون درخواستهای درخواستی را بر حسب دامنه پشتیبانی می کند.
 
 ## 2018.09.14 v3.40
 
-* New socket options in transport configuration. It can be used to setup VPNs.
-* New TCP Fast Open option in transport configuration.
+* گزینه های سوکت جدید در تنظیمات حمل و نقل. این می تواند برای راه اندازی VPN ها استفاده شود.
+* گزینه TCP Fast Open جدید در تنظیمات حمل و نقل.
 
 ## 2018.09.03 v3.38
 
-* mKCP has a new WireGuard header.
-* Fix softfloat binaries in mips/mips64.
+* mKCP دارای یک هدر WireGuard جدید است.
+* رفع باینریهای softfloat در mips / mips64.
 
 ## 2018.08.31 v3.37
 
-* Performance of reading network connection in optilized. See [Environment Variables](../configuration/env.md)。
-* VMess uses AES-128-GCM by default on ARM64.
-* Built by Go 1.11.
+* عملکرد خواندن اتصال به شبکه در اپتیکال. مشاهده [متغیرهای محیط زیست](../configuration/env.md).
+* VMess به طور پیش فرض بر روی ARM64 از AES-128-GCM استفاده می کند.
+* ساخته شده توسط برو 1.11
 
-## 2018.08.24 v3.36
+## 2018.08.24 v.3.36
 
-* Great performance improvement on subdomain matching (`domain:`) in routing.
-* Full domain matching is now supported in routing.
+* بهبود عملکرد بزرگ در تطبیق زیر دامنه (`دامنه:`) در مسیریابی.
+* تطبیق کامل دامنه در مسیریابی پشتیبانی می شود.
 
 ## 2018.08.07 v3.34
 
-* Better memory management on most devices.
+* مدیریت حافظه بهتر در اکثر دستگاه ها.
 
 ## 2018.07.27 v3.32
 
-* BitTorrent traffic can now be sniff'ed.
-* New `protocol` option in routing rules for protocol-based routing.
-* New `geosite:speedtest` option in routing rules to match all public servers of speedtest.net.
+* ترافیک BitTorrent اکنون می تواند خراب شود
+* جدید `پروتکل` گزینه در قوانین مسیریابی برای مسیریابی مبتنی بر پروتکل.
+* New `geosite: speedtest` گزینه در قوانین مسیریابی برای مطابقت با تمام سرورهای عمومی speedtest.net.
 
 ## 2018.07.20 v3.31
 
-* New [Domain Socket transport](../configuration/transport/domainsocket.md) (Thanks to @xiaokangwang).
+* جدید [سوکت دامنه حمل و نقل](../configuration/transport/domainsocket.md) (با تشکر @ xiaokangwang).
 
 ## 2018.07.13 v3.30
 
-* Fix an issue that may cause broken connections in mKCP.
-* Thanks to [our friends](https://crowdin.com/project/v2ray) who speak Russian. Now our documents are in [Russian](https://www.v2ray.com/ru/).
+* یک مشکل را حل می کند که ممکن است باعث ایجاد ارتباطات خرابی در mKCP شود.
+* با تشکر از [دوستان ما](https://crowdin.com/project/v2ray) که صحبت می کنند روسی. در حال حاضر اسناد ما در [روسی](https://www.v2ray.com/ru/).
 
 ## 2018.07.06 v3.29
 
-* New inbound and outbound for MTProto proxy.
+* ورودی و خروجی جدید برای پروکسی MTProto.
 
 ## 2018.06.29 v3.27
 
-* DNS now supports EDNS client subnet.
-* DNS static host now supports sub-domain matching.
+* DNS اکنون از زیر شبکه Client EDNS پشتیبانی می کند.
+* میزبان استاتیک DNS در حال حاضر از تطبیق زیر دامنه پشتیبانی می کند.
 
 ## 2018.06.15 v3.26
 
-* Add Dragonfly BSD release.
+* نسخه آزمایشی BSD Dragonfly را اضافه کنید.
 
 ## 2018.06.01 v3.24
 
-* Internal buffer size (per connection) can now be configured in JSON configuration.
-* mKCP now supports DTLS 1.2 header.
-* TLS transport now only support cipher suites in TLS 1.3 spec.
+* اندازه حافظه داخلی (در هر اتصال) می تواند در تنظیمات JSON پیکربندی شود.
+* mKCP اکنون از DTLS 1.2 header پشتیبانی می کند.
+* حمل و نقل TLS در حال حاضر تنها از سوئيچ هاي ساير در TLS 1.3 استفاده مي کند.
 
 ## 2018.05.25 v3.23
 
-* In JSON configuration, port can now be specified from env variables.
-* JSON config now supports to load domains and IPs from specified files.
+* در پیکربندی JSON، پورت را هم اکنون می توان از متغیر env تعریف کرد.
+* پیکربندی JSON اکنون برای بارگیری دامنه ها و IP ها از فایل های مشخص شده پشتیبانی می کند.
 
 ## 2018.04.20 v3.19
 
-* Traffic stats for inbound proxies.
+* آمار ترافیک برای پروکسی های ورودی.
 
 ## 2018.04.13 v3.17
 
-* V2Ray can load config file from HTTP(s).
-* TLS in V2Ray can issue new certificates by provided CA certificates for domains in incoming requests.
-* [HTTP/2](../configuration/transport/h2.md) transport.
+* V2Ray می تواند فایل پیکربندی را از HTTP (s) بارگیری کند.
+* TLS در V2Ray می تواند گواهینامه های جدید را با گواهی CA ارائه شده برای دامنه در درخواست های ورودی صادر کند.
+* [HTTP / 2](../configuration/transport/h2.md) transport.
 
 ## 2018.04.06 v3.16
 
-* [Statistics](../configuration/stats.md).
-* Shadowsocks inbound now can be configured to only listen on UDP. Strongly recommend to not listen on both TCP and UDP on the same port.
+* [آمار](../configuration/stats.md).
+* Shadowsocks ورودی در حال حاضر می تواند پیکربندی شده فقط به گوش دادن در UDP. کاملا توصیه می شود که در هر دو TCP و UDP در همان پورت گوش ندهید.
 
 ## 2018.03.02 v3.11
 
-* A new settings is introduced in VMess inbound, to forbid client using insecure encryption methods.
-* Offers ARMv7 release.
-* Offers MIPS release that doesn't require FPU.
+* تنظیمات جدید در VMess ورودی معرفی شده است، برای جلوگیری از استفاده از روش های رمزنگاری ناامن.
+* ارائه می دهد انتشار ARMv7.
+* ارائه می دهد انتشار MIPS که FPU نیاز ندارد.
 
 ## 2018.02.23 v3.10
 
-* Log entries now contain session ID to distinguish proxy sessions.
-* Bug fixes.
+* ورودی ورودی اکنون شامل شناسه جلسه برای تشخیص جلسات پروکسی است.
+* رفع اشکال
 
 ## 2018.02.15 v3.9
 
-* Happy New Year!
-* Bug fixes.
+* سال نو مبارک!
+* رفع اشکال
 
 ## 2018.02.09 v3.7
 
-* Developer preview: [Remote API](../configuration/api.md)。
-* Bug fixes.
+* پیشنمایش برنامهنویس: [Remote API](../configuration/api.md).
+* رفع اشکال
 
 ## 2017.12.29 v3.5
 
-* Geoip now supports private network address under name "private".
+* Geoip اکنون از آدرس شبکه خصوصی تحت نام "خصوصی" پشتیبانی می کند.
 
-## 2017.12.22 v3.4
+## 2017/12/22 v3.4
 
-* Websocket nows uses value of X-Forwarded-For header as source address.
-* Support s390x CPU architecture.
+* Websocket نوشتار با استفاده از مقدار X-Forwarded-For header به عنوان آدرس منبع.
+* پشتیبانی از معماری CPU s390x.
 
 ## 2017.12.08 v3.1
 
-* Support policy.
-* Config file location can be specified via environment variable.
+* سیاست پشتیبانی
+* محل فایل پیکربندی را می توان از طریق متغیر محیطی مشخص کرد.
 
 ## 2017.12.01 v3.0
 
-* Support Shadowsocks AEAD
+* حمایت از Shadowsocks AEAD
 
 ## 2017.11.18 v2.50
 
-* `v2ray` now tried to use `v2ctl` for configuration parsing. Please make sure these 2 files are in the same directory.
-* New `IPOnDemand` strategy in routing.
+* `v2ray` اکنون سعی کرد از `v2ctl` برای تجزیه پیکربندی استفاده کند. لطفا مطمئن شوید که این 2 فایل در همان دایرکتوری قرار دارند.
+* جدید `استراتژی IPOnDemand` در مسیریابی.
 
 ## 2017.11.10 v2.47
 
-* `geosite` data is now in `geosite.dat` file.
-* Bug fixes.
+* `geosite` داده در حال حاضر در `فایل geosite.dat` است.
+* رفع اشکال
 
 ## 2017.11.03 v2.46
 
-* Router now supports `geosite:cn`, equivalent to existing `chinasites`, but more flexible.
-* Router now supports `geoip`. 
-  * File `geoip.dat` is added to release packages. This file contains all `geoip` information and has to stay in the same directory of `v2ray` program. Due to delayed update of installation script, you may have to copy the file manually.
-* Program `v2ctl` is added to release packages. You may run `v2ctl verify /path/to/v2ray` to verify the signature of `v2ray` program.
+* روتر در حال حاضر از `geosite پشتیبانی می کند: cn`، معادل موجود `chinasites`، اما انعطاف پذیر تر است.
+* روتر در حال حاضر پشتیبانی می کند `geoip`. 
+  * فایل `geoip.dat` برای انتشار بسته ها اضافه شده است. این فایل شامل تمام `GeoIP با` اطلاعات به در همان شاخه از ماندن و `v2ray` برنامه است. با توجه به به روز رسانی تاخیر از اسکریپت نصب، ممکن است لازم باشد فایل را به صورت دستی کپی کنید.
+* برنامه آزمایشی `v2ctl` برای انتشار بسته ها اضافه شده است. شما می توانید `v2ctl verify / path / to / v2ray` برای تأیید امضا `برنامه v2ray` اجرا کنید.
 
 ## 2017.10.27 v2.44
 
-* HTTP now supports Basic Authentication.
-* Some bugs are fixed.
+* HTTP اکنون از تایید هویت پایه پشتیبانی می کند.
+* برخی از اشکالات ثابت شده اند.
 
 ## 2017.10.06 v2.40
 
-* Fix an issue that causes memory leak.
+* رفع یک مشکل که موجب نشت حافظه می شود.
 
 ## 2017.09.29 v2.39
 
-* Inbound proxies now close connections more quickly when remote server closes them.
-* Default connection timeout changes to 5 minutes.
+* پروکسیهای ورودی در حال حاضر سریعتر اتصال نزدیکتر از زمانی که سرور راه دور آنها را بسته است.
+* زمان اتصال اتصال پیش فرض به 5 دقیقه تغییر می کند.
 
 ## 2017.05.12 v2.27
 
-* New domain mode in router.
+* حالت دامنه جدید در روتر.
 
 ## 2017.05.05 v2.26
 
-* Stability fixes.
+* رفع ثبات
 
 ## 2017.04.28 v2.25
 
-* Simple sniffing on HTTP and TLS traffic for the actual domain on request.
+* ساده کردن ترافیک HTTP و TLS برای دامنه واقعی بر اساس درخواست.
 
 ## 2017.04.21 v2.24
 
-* Stabilize Mux.
-* Improves memory efficiency.
+* تثبیت Mux
+* بهبود کارایی حافظه.
 
 ## 2017.04.15 v2.23
 
-* Performance improvement in Mux.
-* Max number of connections can be configured in Mux now.
-* Performance improvement in HTTP inbound.
-* connectionReuse setting is removed in favor of Mux.
+* بهبود عملکرد در Mux.
+* حداکثر تعداد اتصالات را می توان در Mux پیکربندی کرد.
+* بهبود عملکرد در ورودی HTTP.
+* تنظیم connectionReuse به نفع Mux حذف می شود.
 
 ## 2017.04.08 v2.22
 
-* Mux.Cool protocol.
+* پروتکل Mux.Cool
 
 ## 2017.02.25 v2.20
 
-* GPG signature is added to download package.
-* New binary wv2ray.exe is added to Windows package, which runs as a background application.
+* امضای GPG برای دانلود بسته اضافه شده است.
+* wv2ray.exe باینری جدید به بسته ویندوز اضافه شده است که به عنوان یک برنامه پسزمینه اجرا می شود.
 
 ## 2017.02.18 v2.19
 
-* A new mechanism for anti reply attack is now enforced on server side. 
-  * No impact to existing clients.
-* Upgrade of VMess AES-128-GCM / Chacha20-Poly1305 / None encryption methods. 
-  * Please upgrade client and server at once.
-  * AES-128-CFB is not affected.
-* Built with Golang 1.8. Add 32-bit MIPS support.
+* مکانی جدید برای حمله ضد پاسخ در حال حاضر در سمت سرور اعمال می شود. 
+  * هیچ تاثیری بر مشتریان موجود ندارد
+* ارتقاء VMess AES-128-GCM / Chacha20-Poly1305 / هیچ روش رمزنگاری. 
+  * لطفا یکبار سرور و سرور را ارتقا دهید
+  * AES-128-CFB تحت تاثیر قرار نمی گیرد.
+* ساخته شده با گلان 1.8. اضافه کردن پشتیبانی 32 بیتی MIPS.
 
 ## 2017.02.11 v2.18
 
-* Cleanup WebSocket code.
-* Remove allowPassive option. Now passive connections are always allowed.
-* Bug fixes
+* پاکسازی کد WebSocket.
+* گزینه allowPassive را حذف کنید. اکنون اتصالات غیر فعال همیشه مجاز هستند.
+* رفع اشکال
 
 ## 2017.02.04 v2.17
 
-* Bug fixes.
+* رفع اشکال
 
 ## 2017.01.28 v2.16
 
-* New 'redirect' option in freedom. It can be used to adapt tools like Shadowsocks Obfs.
-* Performance improvement in VMess non-encryption mode. Not compatible with previous versions.
-* Happy New Year!
+* گزینه 'redirect' جدید در آزادی. این می تواند مورد استفاده برای تطبیق ابزار مانند Shadowsocks Obfs باشد.
+* بهبود عملکرد در حالت غیر رمزنگاری VMess. با نسخه های قبلی سازگار نیست.
+* سال نو مبارک!
 
 ## 2017.01.16 v2.15
 
-* All proxies can use mKCP and WebSocket now.
+* تمام پروکسی ها می توانند از mKCP و WebSocket استفاده کنند.
 
 ## 2017.01.09 v2.14
 
-* Socks 5 outbound.
-* Bug fixes.
+* جوراب 5 خروجی
+* رفع اشکال
 
 ## 2017.01.02 v2.13
 
-* Bug fixes.
+* رفع اشکال
 
-## 2016.12.26 v2.12
+## 2016/12/26 v2.12
 
-* Bug fixes.
+* رفع اشکال
 
 ## 2016.12.19 v2.11
 
-* JSON config file now supports comment.
+* فایل پیکربندی JSON در حال حاضر پشتیبانی از نظر.
 
-## 2016.12.12 v2.10
+## 2016/12/12 v2.10
 
-* VMess now supports AES-GCM and ChaCha20-Poly1305 encryption methods.
+* VMess اکنون از روشهای رمزنگاری AES-GCM و ChaCha20-Poly1305 پشتیبانی میکند.
 
 ## 2016.12.05 v2.9
 
-* Fix compatibility with Alpine Linux.
+* سازگاری با Alpine Linux را رفع کنید.
 
 ## 2016.11.28 v2.8
 
-* Shadowsocks server now accepts OTA settings.
-* Bug fixes.
+* سرور Shadowsocks در حال حاضر تنظیمات OTA را می پذیرد.
+* رفع اشکال
 
 ## 2016.11.21 v2.7
 
-* Main inbound and outbound connection handler can be tagged now.
-* Bug fixes.
+* در حال حاضر می توان از دستگیرنده اتصال ورودی و خروجی اصلی نام برد.
+* رفع اشکال
 
 ## 2016.11.14 v2.6
 
-* Data sent by one outbound can be proxied to another outbound.
-* Routing can be based on inbound tag.
+* داده های فرستاده شده توسط یکی از خروجی ها می تواند به خروجی دیگری متصل شود.
+* مسیریابی می تواند بر اساس برچسب ورودی باشد.
 
 ## 2016.11.07 v2.5
 
-* New Shadowsocks outbound;
-* New TCP header: HTTP;
+* Shadowsocks جدید خروجی؛
+* هدر جدید TCP: HTTP؛
 
 ## 2016.10.24 v2.4
 
-* TCP / mKCP / WebSocket can be configured per inbound / outbound;
-* Routing can be done on source IP;
+* TCP / mKCP / WebSocket را می توان در هر ورودی / خروجی پیکربندی کرد.
+* مسیریابی را می توان روی IP منبع انجام داد.
 
 ## 2016.10.17 v2.3
 
-* Introduce new Protobuf-based configuration;
-* OpenBSD binaries;
-* Small fixes;
+* معرفی پیکربندی مبتنی بر Protobuf جدید
+* دوبرابر OpenBSD؛
+* اصلاحات کوچک؛
 
-## 2016.09.19 v2.2
+## 09.09.2016 v2.2
 
-* New transport: WebSocket (Thanks to [@xiaokangwang](https://github.com/xiaokangwang));
+* حمل و نقل جدید: WebSocket (با تشکر از [@ xiaokangwang](https://github.com/xiaokangwang))؛
 
 ## 2016.09.19 v2.1
 
-* mKCP performance improvement;
+* بهبود عملکرد mKCP؛
 
 ## 2016.08.20 v2.0
 
-* One year;
+* یک سال؛
 
 ## 2016.08.15 v1.24
 
-* New mKCP header: utp;
-* New option in inbound connection config "allowPassive" to allow passive connection;
+* هدر mKCP جدید: utp؛
+* گزینه جدید در پیکربندی اتصال ورودی "allowPassive" اجازه می دهد تا اتصال منفعل؛
 
 ## 2016.08.08 v1.23
 
-* Optimize mKCP packet format. This version of mKCP is NOT compatible with previous ones;
-* mKCP can now be configured to disguise as video data.
+* بهینه سازی فرمت بسته mKCP این نسخه از mKCP سازگار با نسخه های قبلی است.
+* اکنون mKCP می تواند به عنوان داده های ویدئویی پنهان شود.
 
 ## 2016.08.01 v1.22
 
-* Fix a memory leak in mKCP;
-* Add FreeBSD release;
+* رفع نشت حافظه در mKCP؛
+* نسخه FreeBSD را اضافه کنید
 
 ## 2016.07.25 v1.21
 
-* High performance Chacha20 (Thanks to aead@);
-* Bug fixes;
+* عملکرد بالا Chacha20 (با تشکر aead @)؛
+* رفع اشکال؛
 
 ## 2016.07.18 v1.20
 
-* New KCP options: readBufferSize and writeBufferSize;
-* Bug fixes;
+* گزینه های جدید KCP: readBufferSize و writeBufferSize؛
+* رفع اشکال؛
 
 ## 2016.07.11 v1.19
 
-* Enable TLS option for all proxies;
-* Fix a performance issue in KCP;
-* Fix an issue in KCP that could cause EOF response;
+* گزینه TLS را برای تمام پروکسیها فعال کنید
+* یک مسئله عملکرد در KCP را رفع کنید؛
+* یک مشکل در KCP حل می شود که می تواند پاسخ EOF را ایجاد کند.
 
 ## 2016.07.04 v1.18
 
-* Fix a "too many open files" issue in KCP;
-* KCP now uses fewer CPU;
-* Other bug fixes;
+* یک مشکل "بیش از حد بسیاری از فایلهای باز" را در KCP رفع کنید؛
+* KCP در حال حاضر از پردازنده کمتری استفاده می کند؛
+* رفع اشکال دیگر
 
 ## 2016.06.19 v1.17
 
-* KCP now is integrated into V2Ray. (Special thanks to [xiaokangwang](https://github.com/xiaokangwang), [xtaci](https://github.com/xtaci) and [skywind3000](https://github.com/skywind3000))
-* Minor bug fixes
+* KCP در حال حاضر به V2Ray مجتمع شده است. (با تشکر ویژه از [xiaokangwang](https://github.com/xiaokangwang)، [xtaci](https://github.com/xtaci) و [skywind3000](https://github.com/skywind3000))
+* رفع اشکال جزئی
 
 ## 2016.06.12 v1.16
 
-* TCP connection reuse is now enabled by default;
-* Dokodemo-door is able to recognize TCP connection redirected by iptables;
-* Blackhole is able to send back HTTP forbidden data;
+* استفاده مجدد از اتصال TCP در حال حاضر به طور پیش فرض فعال است.
+* Dokodemo درب قادر به تشخیص ارتباط TCP هدایت شده توسط iptables؛
+* Blackhole قادر به ارسال اطلاعات ممنوعه HTTP است؛
 
 ## 2016.06.05 v1.15
 
-* Optionally reuse TCP connection for better performance;
-* Allow listening on a specific IP address;
-* Allow sending data through a specific IP address;
-* Fix an issue in HTTP proxy that may exhaust memory;
+* برای استفاده بهتر از TCP اتصال مجدد استفاده کنید
+* اجازه گوش دادن به یک آدرس IP مشخص
+* اجازه ارسال داده ها را از طریق یک آدرس IP خاص؛
+* یک مشکل در پروکسی HTTP را حل می کند که ممکن است حافظه را از بین ببرد.
 
 ## 2016.05.29 v1.14
 
-* Fix a panic issue in http proxy;
-* More functionalies in install script;
-* Static route in DNS;
-* Official server address change;
+* رفع یک مشکل وحشت در http پروکسی؛
+* ویژگی های بیشتر در اسکریپت نصب؛
+* مسیر استاتیک در DNS؛
+* تغییر آدرس رسمی سرور؛
 
 ## 2016.05.16 v1.13
 
-* Internal DNS server, to provide better routing results combined with chinasites and chinaip;
-* Fix an issue in UDP relay;
+* سرور DNS داخلی، برای ارائه نتایج بهتر مسیریابی همراه با chinasites و chinaip؛
+* رفع یک مشکل در UDP رله؛
 
 ## 2016.05.01 v1.12.1
 
-* Fix a bug in VMess.
+* رفع اشکال در VMess.
 
 ## 2016.05.01 v1.12
 
-* Second try to fix the memory usage issue;
-* Improve Shadowsocks performance;
-* New option "none" in loglevel;
+* دوم تلاش برای حل مسئله استفاده از حافظه؛
+* بهبود عملکرد Shadowsocks؛
+* گزینه جدید "none" در loglevel؛
 
 ## 2016.04.18 v1.11
 
-* Try to fix the memory usage issue.
+* سعی کنید مشکل استفاده از حافظه را رفع کنید.
 
 ## 2016.03.07 v1.10
 
-* Fix an performance issue when dynamic ports refreshes.
+* هنگامی که پورت های پویا تازه سازی می شوند، مسئله عملکرد را حل می کند.
 
 ## 2016.02.29 v1.9.1
 
-* Fix Shadowsocks one-time authentication (OTA) issue.
+* رفع یکبار احراز هویت (OTA) سایهکاره.
 
 ## 2016.02.29 v1.9
 
-* Support for Shadowsocks ChaCha20 encryption;
-* Add more direct connection sites to the default configuration file;
-* Dynamic ports now automatically create an account.
+* پشتیبانی از رمزنگاری ChaCha20 Shadowsocks؛
+* سایت های ارتباط مستقیم مستقیم را به فایل پیکربندی پیش فرض اضافه کنید
+* پورت های پویا اکنون یک حساب کاربری ایجاد می کنند.
 
 ## 2016.02.22 v1.8
 
-* Update installation script install-release.sh (thanks, @netcookies): 
-  * You can now automatically stop the V2Ray process and update automatically after the completion of V2Ray;
-  * The install-release.sh accepts the --proxy argument and V2Ray specified proxy download;
-* Use Go 1.6 compiler to improve the performance of AES encryption;
-* Minor fixes;
-* Update the official server IP (please re-download the installation package to get the latest configuration).
+* به روز رسانی اسکریپت نصب installrelease.sh (با تشکر،netcookies): 
+  * شما هم اکنون می توانید فرایند V2Ray را به طور خودکار متوقف کنید و پس از تکمیل V2Ray به صورت خودکار به روزرسانی کنید.
+  * install-release.sh آرگومان proxy را دریافت می کند و V2Ray مشخص پروکسی را مشخص می کند.
+* از کامپایلر Go 1.6 استفاده کنید تا عملکرد AES را بهبود ببخشید.
+* اصلاحات جزئی
+* سرور IP رسمی را به روز کنید (لطفا بسته نصب را دوباره دانلود کنید تا آخرین تنظیمات را دریافت کنید).
 
 ## 2016.02.08 v1.7
 
-* UDP relay performance improved;
-* Shadowsocks security improved;
-* Minor fixes;
-* Happy new year!
+* عملکرد UDP رله بهبود یافته است.
+* امنیت سایه ها بهبود یافته است
+* اصلاحات جزئی
+* سال نو مبارک!
