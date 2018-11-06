@@ -2,11 +2,11 @@
 refcn: chapter_02/mux
 refen: configuration/mux
 ---
-# Multiplexing
+# چندگانه شدن
 
-Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections.
+Multiplexing، یا Mux، استفاده از یک اتصال TCP فیزیکی برای چندین اتصال TCP مجازی است.
 
-Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
+Mux برای کاهش زمان تاخیر دستکاری TCP طراحی شده است. این برای توان بالا نیست هنگامی که برای دانلود فایل های بزرگ یا اندازه گیری سرعت استفاده می شود، Mux معمولا از اتصال معمولی TCP کندتر است.
 
 ## MuxObject
 
@@ -17,10 +17,10 @@ Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. 
 }
 ```
 
-> `enabled`: true | false
+> `فعال`: true | نادرست
 
-Whether or not to enable Mux on an outbound.
+آیا Mux را در خروجی فعال کنید یا خیر
 
-> `concurrency`: number
+> `هم زمان`: شماره
 
-Max number of multiplexed connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`.
+حداکثر تعداد اتصالات چندگانه که یک اتصال فیزیکی در یک زمان می تواند اداره کند. حداکثر مقدار `1024`، دقیقه ارزش `1`، به طور پیش فرض `8`.
