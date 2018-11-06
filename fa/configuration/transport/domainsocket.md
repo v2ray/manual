@@ -2,21 +2,21 @@
 refcn: chapter_02/transport/domainsocket
 refen: configuration/transport/domainsocket
 ---
-# Domain Socket Transport
+# سوکت دامنه حمل و نقل
 
-Domain Socket uses standard Unix domain socket to transport data. Domain socket is system interal tranfer channel. It doesn't jam network buffer and may be a bit faster than trasnferring through local loopback network.
+سوکت دامنه از سوکت دامنه یونیکس استاندارد برای انتقال اطلاعات استفاده می کند. سوکت دامنه کانال tranfer سیستم تعاملی است. این بافر شبکه را مسدود نمیکند و ممکن است کمی سریعتر از ترافون کردن از طریق شبکه loopback محلی باشد.
 
-Domain socket can only be used on platforms that supports Unix domain socket, such as macOS and Linux. It is not available on Windows.
+سوکت دامنه تنها می تواند در سیستم عامل هایی که سوکت دامنه یونیکس را پشتیبانی می کنند، مانند macOS و لینوکس استفاده شود. این در ویندوز موجود نیست
 
-{% hint style='info' %}
+{٪ hint style = 'info'٪}
 
-When domain socket is used, IP and port specified on the inbound/outbound proxy will be ignored. All traffic is tunneled through the domain socket.
+هنگام استفاده از سوکت دامنه، IP و پورت مشخص شده در پروکسی ورودی / خروجی نادیده گرفته خواهند شد. تمام ترافیک از طریق سوکت دامنه تونل شده است.
 
 {% endhint %}
 
 ## DomainSocketObject
 
-`DomainSocketObject` is used in `dsSettings` field in `TransportObject` and `StreamSettingsObject`.
+`DomainSocketObject` در `dsSettings` فیلد در `TransportObject` و `StreamSettingsObject`.
 
 ```javascript
 {
@@ -24,6 +24,6 @@ When domain socket is used, IP and port specified on the inbound/outbound proxy 
 }
 ```
 
-> `path`: string
+> `مسیر`: رشته
 
-An valid absolute file path. Before running V2Ray, the file on this path must not exist.
+یک مسیر فایل کامل معتبر قبل از اجرای V2Ray، فایل در این مسیر نباید وجود داشته باشد.
