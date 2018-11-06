@@ -8,7 +8,9 @@ refen: configuration/dns
 V2Ray has an internal DNS server which provides DNS relay for other components.
 
 {% hint style='info' %}
+
 Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray.
+
 {% endhint %}
 
 The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
@@ -56,7 +58,9 @@ When a server is an IP address, such as `"8.8.8.8"`, V2Ray queries DNS on UDP po
 When a server is `"localhost"`, V2Ray queries local host for DNS.
 
 {% hint style='info' %}
+
 When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. However, you may redirect DNS queries back to V2Ray with additional configuration.
+
 {% endhint %}
 
 > `clientIp`: string

@@ -92,7 +92,9 @@ Method for encrypting payload. This setting is only available at outbound. The V
 * `"none"`: Traffic is not encrypted at all.
 
 {% hint style='info' %}
+
 Use `"auto"` wherever possible for better compatibility.
+
 {% endhint %}
 
 ## InboundConfigurationObject

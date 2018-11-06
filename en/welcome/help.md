@@ -8,7 +8,9 @@ refen: welcome/help
 Project V provides multiple methods for communications.
 
 {% hint style='info' %}
+
 Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
+
 {% endhint %}
 
 ## Github issues
