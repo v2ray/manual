@@ -39,7 +39,7 @@ refen: welcome/faq
 
 1. 客户端和服务器端的用户 ID 不匹配；
 1. 客户端和服务器端的用户 alterId 不匹配；
-1. 客户端与服务器的时间不匹配，误差不能超过两分钟；
+1. 客户端与服务器的时间不匹配，误差不能超过90秒钟；
 
 ### Shadowsocks: Unknown address type
 
