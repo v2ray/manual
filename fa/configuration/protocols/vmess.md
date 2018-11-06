@@ -90,7 +90,11 @@ Method for encrypting payload. This setting is only available at outbound. The V
 * `"auto"`: Default value. Use `aes-128-gcm` on AMD64, ARM64 and S390x, or `chacha20-poly1305` otherwise.
 * `"none"`: Traffic is not encrypted at all.
 
-{% hint style='info' %} Use `"auto"` wherever possible for better compatibility. {% endhint %}
+{% hint style='info' %}
+
+Use `"auto"` wherever possible for better compatibility.
+
+{% endhint %}
 
 ## InboundConfigurationObject
 
