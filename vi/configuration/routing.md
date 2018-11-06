@@ -2,9 +2,9 @@
 refcn: chapter_02/03_routing
 refen: configuration/routing
 ---
-# Routing
+# định tuyến
 
-V2Ray has an internal routing mechanism. It routes inbound connections to various outbound based on rules. A common scenario is to split traffic by country. V2Ray can detect target country (by Geo IP) of a connection, and sends then connection to corresponding outbound proxy.
+V2Ray có cơ chế định tuyến nội bộ. Nó định tuyến các kết nối gửi đến nhiều hướng đi khác nhau dựa trên các quy tắc. Một tình huống phổ biến là chia lưu lượng truy cập theo quốc gia. V2Ray có thể phát hiện quốc gia mục tiêu (theo địa lý IP) của một kết nối và sau đó gửi kết nối tới proxy đi tương ứng.
 
 ## RoutingObject
 
@@ -19,17 +19,17 @@ V2Ray has an internal routing mechanism. It routes inbound connections to variou
 
 > `domainStrategy`: "AsIs" | "IPIfNonMatch" | "IPOnDemand"
 
-Domain resolution strategy. Choices are:
+Chiến lược phân giải miền. Lựa chọn là:
 
-* `"AsIs"`: Only use domain for routing. Default value.
-* `"IPIfNonMatch"`: When no rule matches current domain, V2Ray resolves it into IP addresses (A or AAAA records) and try all rules again. 
-  * If a domain has multiple IP addresses, V2Ray tries all of them.
-  * The resolved IPs are only used for routing decisions, the traffic is still sent to original domain address.
-* `"IPOnDemand"`: As long as there is a IP-based rule, V2Ray resolves the domain into IP immediately.
+* `"AsIs"`: Chỉ sử dụng miền để định tuyến. Giá trị mặc định.
+* `"IPIfNonMatch"`: Khi không có quy tắc nào khớp với miền hiện tại, V2Ray sẽ giải quyết nó thành địa chỉ IP (bản ghi A hoặc AAAA) và thử lại tất cả các quy tắc. 
+  * Nếu một miền có nhiều địa chỉ IP, V2Ray sẽ thử tất cả các địa chỉ đó.
+  * Các IP được giải quyết chỉ được sử dụng cho các quyết định định tuyến, lưu lượng truy cập vẫn được gửi đến địa chỉ tên miền ban đầu.
+* `"IPOnDemand"`: Miễn là có quy tắc dựa trên IP, V2Ray sẽ giải quyết miền đó thành IP ngay lập tức.
 
 > `rules`: \[[RuleObject](#ruleobject)\]
 
-An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` of the rule.
+Một loạt các quy tắc. Đối với mỗi kết nối gửi đến, V2Ray cố gắng các quy tắc này từ trên xuống từng cái một. Nếu quy tắc có hiệu lực, kết nối sẽ được định tuyến tới `outboundTag` của quy tắc.
 
 ### RuleObject
 
@@ -66,70 +66,70 @@ An array of rules. For each inbound connection, V2Ray tries these rules from top
 
 {% hint style='info' %}
 
-When multiple fields are specified, these fields have to be all satisfied, in order to make the rule effective. If you need both `domain` and `ip` rules, it is highly likely you need put them into separate rules.
+Khi nhiều trường được chỉ định, các trường này phải được thỏa mãn, để làm cho quy tắc có hiệu quả. Nếu bạn cần cả hai quy tắc `tên miền` và `ip` , rất có khả năng bạn cần đặt chúng vào các quy tắc riêng biệt.
 
 {% endhint %}
 
 > `type`: "field"
 
-The only valid value for now is `"field"`.
+Giá trị hợp lệ duy nhất cho bây giờ là `"trường"`.
 
 > `domain`: \[ string \]
 
-An array of domains. Available formats are:
+Một mảng các miền. Các định dạng có sẵn là:
 
-* Plaintext: If this string matches any part of the targeting domain, this rule takes effet. Example: rule `"sina.com"` matches targeting domain `"sina.com"`, `"sina.com.cn"` and `"www.sina.com"`, but not `"sina.cn"`.
-* Regular expression: Begining with `"regexp:"`, the rest is a regular expression. When the regexp matches targeting domain, this rule takes effect. Example: rule `"regexp:\\.goo.*\\.com$"` matches `"www.google.com"` and `"fonts.googleapis.com"`, but not `"google.com"`.
-* Subdomain (recommended): Begining with `"domain:"` and the rest is a domain. When the targeting domain is exactly the value, or is a subdomain of the value, this rule takes effect. Example: rule `"domain:v2ray.com"` matches `"www.v2ray.com"`, `"v2ray.com"`, but not `"xv2ray.com"`.
-* Full domain: Begining with `"full:"` and the rest is a domain. When the targeting domain is exactly the value, the rule takes effect. Example: rule `"domain:v2ray.com"` matches `"v2ray.com"`, but not `"www.v2ray.com"`.
-* Special value `"geosite:cn"`: a list of [common domains in China](https://www.v2ray.com/links/chinasites/).
-* Special value `"geosite:speedtest"` (V2Ray 3.32+): list of all public servers of speedtest.net.
-* Domains from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
+* Plaintext: Nếu chuỗi này khớp với bất kỳ phần nào của miền nhắm mục tiêu, quy tắc này sẽ có hiệu lực. Ví dụ: quy tắc `"sina.com"` phù hợp với nhắm mục tiêu tên miền `"sina.com"`, `"sina.com.cn"` và `"www.sina.com"`, nhưng không phải `"sina.cn"`.
+* Cụm từ thông dụng: Bắt đầu bằng `"regexp:"`, phần còn lại là cụm từ thông dụng. Khi regexp khớp với miền nhắm mục tiêu, quy tắc này có hiệu lực. Ví dụ: quy tắc `"regexp: \\. Goo. * \\. Com $"` khớp với `"www.google.com"` và `"fonts.googleapis.com"`, nhưng không phải `"google.com"`.
+* Tên miền phụ (được khuyến nghị): Bắt đầu bằng `"tên miền:"` và phần còn lại là tên miền. Khi tên miền nhắm mục tiêu chính xác là giá trị hoặc là tên miền phụ của giá trị, quy tắc này có hiệu lực. Ví dụ: quy tắc `"tên miền: v2ray.com"` khớp với `"www.v2ray.com"`, `"v2ray.com"`, nhưng không phải `"xv2ray.com"`.
+* Tên miền đầy đủ: Bắt đầu bằng `"đầy đủ:"` và phần còn lại là tên miền. Khi tên miền nhắm mục tiêu chính xác là giá trị, quy tắc sẽ có hiệu lực. Ví dụ: quy tắc `"tên miền: v2ray.com"` khớp với `"v2ray.com"`, nhưng không phải `"www.v2ray.com"`.
+* Giá trị đặc biệt `"geosite: cn"`: danh sách [tên miền phổ biến ở Trung Quốc](https://www.v2ray.com/links/chinasites/).
+* Giá trị đặc biệt `"geosite: speedtest"` (V2Ray 3.32+): danh sách tất cả các máy chủ công cộng của speedtest.net.
+* Tên miền từ tệp: Chẳng hạn như `"ext: file: tag"`. Giá trị phải bắt đầu bằng `ext:` (chữ thường) và tiếp theo là tên tệp và thẻ. Tệp được đặt trong [thư mục tài nguyên](env.md#location-of-v2ray-asset)và có cùng định dạng `geosite.dat`. Thẻ phải tồn tại trong tệp.
 
 > `ip`: \[string\]
 
-An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. Available formats:
+Một dãy các dải IP. Khi IP nhắm mục tiêu nằm trong một trong các phạm vi, quy tắc này có hiệu lực. Định dạng có sẵn:
 
-* IP: such as `"127.0.0.1"`.
-* [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): such as `"127.0.0.0/8"`.
-* GeoIP: such as `"geoip:cn"`. It begins with `geoip:` (lower case) and followed by two letter of country code. 
-  * Special value `"geoip:private"`: for all private addresses such as `127.0.0.1`.
-* IPs from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geoip.dat`. The tag must exist in the file.
+* IP: chẳng hạn như `"127.0.0.1"`.
+* [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): chẳng hạn như `"127.0.0.0/8"`.
+* GeoIP: chẳng hạn như `"geoip: cn"`. Nó bắt đầu với `geoip:` (chữ thường) và theo sau là hai chữ cái của mã quốc gia. 
+  * Giá trị đặc biệt `"geoip: private"`: cho tất cả các địa chỉ riêng như `127.0.0.1`.
+* IP từ tệp: Chẳng hạn như `"ext: file: tag"`. Giá trị phải bắt đầu bằng `ext:` (chữ thường) và tiếp theo là tên tệp và thẻ. Tệp được đặt trong [thư mục tài nguyên](env.md#location-of-v2ray-asset)và có cùng định dạng `geoip.dat`. Thẻ phải tồn tại trong tệp.
 
 {% hint style='info' %}
 
-`"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
+`"ext: geoip.dat: cn"` tương đương với `"geoip: cn"`.
 
 {% endhint %}
 
-> `port`：number | string
+> `cổng`： số | chuỗi
 
-Port range. Formats are:
+Port range. Định dạng là:
 
-* `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
+* `"ab"`: Cả `a` và `b` là số nguyên dương và nhỏ hơn 65536. Khi cổng nhắm mục tiêu nằm trong [`a`, `b`), quy tắc này có hiệu lực.
 
-* `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
+* `một`: `một` là một số nguyên dương, và ít hơn 65536. Khi cổng nhắm mục tiêu là `một`, quy tắc này có hiệu lực.
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 
-When the connection has in the chosen network, this rule take effect.
+Khi kết nối có trong mạng đã chọn, quy tắc này có hiệu lực.
 
 > `source`: \[string\]
 
-An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
+Một dãy các dải IP. Cùng định dạng với `ip`. Khi IP nguồn của kết nối nằm trong dải IP, quy tắc này có hiệu lực.
 
 > `user`: \[string\]
 
-An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now Shadowsocks and VMess support user with email.
+Một mảng địa chỉ email. Khi kết nối gửi đến sử dụng tài khoản người dùng của địa chỉ email, quy tắc này có hiệu lực. Hiện tại Shadowsocks và VMess hỗ trợ người dùng bằng email.
 
 > `inboundTag`: \[string\]
 
-An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
+Một mảng chuỗi như thẻ proxy đến. Khi kết nối đến từ một trong các proxy được chỉ định, quy tắc này có hiệu lực.
 
 > `protocol`: \[ "http" | "tls" | "bittorrent" \]
 
-An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. To recognize the protocol of a connection, one must enable `sniffing` option in inbound proxy.
+Một mảng chuỗi như là các loại giao thức. Khi kết nối sử dụng một trong các giao thức, quy tắc này có hiệu lực. Để nhận ra giao thức của kết nối, bạn phải bật tùy chọn `ngửi` trong proxy đến.
 
-> `outboundTag` string
+> `outboundTag` chuỗi
 
-[Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
+[Thẻ của đường đi](protocols.md) mà kết nối sẽ được gửi đến, nếu quy tắc này có hiệu lực.

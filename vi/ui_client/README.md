@@ -4,10 +4,10 @@ refen: ui_client/index
 ---
 # Project V Clients
 
-Besides the core V2ray, Project V includes various of GUI clients in many platforms. Please see the following list for your favor.
+Bên cạnh V2ray lõi, Project V bao gồm nhiều ứng dụng khách GUI khác nhau trên nhiều nền tảng. Vui lòng xem danh sách sau đây để ủng hộ bạn.
 
-* [Windows](windows.md)
+* [các cửa sổ](windows.md)
 * [Mac OS X](osx.md)
 * [iOS](ios.md)
 * [Android](android.md)
-* [Online services](ui_client/service.md)
+* [Dịch vụ trực tuyến](ui_client/service.md)

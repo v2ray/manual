@@ -4,7 +4,7 @@ refen: configuration/transport/mkcp
 ---
 # mKCP Transport
 
-mKCP is a reliable stream transport. It is an UDP based protocol. mKCP sends more traffic for lower latency. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
+mKCP là một phương tiện giao thông đáng tin cậy. Nó là một giao thức dựa trên UDP. mKCP gửi nhiều lưu lượng truy cập hơn cho độ trễ thấp hơn. Để chuyển cùng một lượng dữ liệu, mKCP thường đòi hỏi nhiều thông lượng hơn TCP.
 
 ## KcpObject
 
@@ -25,41 +25,41 @@ mKCP is a reliable stream transport. It is an UDP based protocol. mKCP sends mor
 
 > `mtu`: number
 
-Maximum transmission unit. It indicates the maxium number bytes that an UDP packet can carry. Recommended value is between `576` and `1460`. Default value `1350`.
+Đơn vị truyền tối đa. Nó chỉ ra số byte tối đa mà gói UDP có thể mang theo. Giá trị được đề xuất nằm trong khoảng từ `576` đến `1460`. Giá trị mặc định `1350`.
 
 > `tti`: number
 
-Transmission time interval, in milli-second. mKCP sends data in this interval. Recommended value is between `10` and `100`. Default value `50`.
+Khoảng thời gian truyền, tính bằng mili giây. mKCP gửi dữ liệu trong khoảng thời gian này. Giá trị được đề xuất nằm trong khoảng từ `10` đến `100`. Giá trị mặc định `50`.
 
 > `uplinkCapacity`: number
 
-Uplink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to upload data to a remote one. Default value is `5`. Please note it is byte (in MB/s), not bit. One may use value `0` for a small bandwidth.
+Băng thông Uplink, tính bằng MB / s. Băng thông tối đa cho phiên bản V2Ray để tải dữ liệu lên một thiết bị từ xa. Giá trị mặc định là `5`. Xin lưu ý rằng nó là byte (tính bằng MB / s), không phải bit. Người ta có thể sử dụng giá trị `0` cho một băng thông nhỏ.
 
 > `downlinkCapacity`: number
 
-Downlink bandwidth, in MB/s. The maximum bandwidth for the V2Ray instance to download data. Default value is `20`. Please note it is byte (in MB/s), not bit. One may use value `0` for a small bandwidth.
+Băng thông đường xuống, tính bằng MB / s. Băng thông tối đa cho phiên bản V2Ray để tải xuống dữ liệu. Giá trị mặc định là `20`. Xin lưu ý rằng nó là byte (tính bằng MB / s), không phải bit. Người ta có thể sử dụng giá trị `0` cho một băng thông nhỏ.
 
 {% hint style='info' %}
 
-`uplinkCapacity` and `downlinkCapacity` determine the speed of mKCP. On client side, `uplinkCapacity` specifies the speed for client sending data to server. On sever side, `downlinkCapacity` specifies the speed of server receiving data. The minimum of this pair is effective in an actual connection.
+`uplinkCapacity` và `downlinkCapacity` xác định tốc độ của mKCP. Ở phía máy khách, `uplinkCapacity` chỉ định tốc độ cho máy khách gửi dữ liệu đến máy chủ. Ở phía máy chủ, `downlinkCapacity` chỉ định tốc độ nhận dữ liệu của máy chủ. Tối thiểu của cặp này có hiệu quả trong một kết nối thực tế.
 
 {% endhint %}
 
 > `congestion`: true | false
 
-Whether or not to enable congestion control. Default value is `false`. When congestion control is enabled, V2Ray will detect network quality. It will send less packets when packet loss is severe, or more data when network is not fully filled.
+Có hay không để cho phép kiểm soát tắc nghẽn. Giá trị mặc định là `false`. Khi điều khiển tắc nghẽn được bật, V2Ray sẽ phát hiện chất lượng mạng. Nó sẽ gửi các gói ít hơn khi mất gói dữ liệu nghiêm trọng, hoặc nhiều dữ liệu hơn khi mạng không được điền đầy đủ.
 
 > `readBufferSize`: number
 
-Read buffer size for a single connection, in MB. Default value is `2`.
+Đọc kích thước bộ đệm cho một kết nối duy nhất, tính bằng MB. Giá trị mặc định là `2`.
 
 > `writeBufferSize`: number
 
-Write buffer size for a single connection, in MB. Default value is `2`.
+Ghi kích thước bộ đệm cho một kết nối duy nhất, tính bằng MB. Giá trị mặc định là `2`.
 
 > `header`: [HeaderObject]{#headerobject}
 
-Configuration for packet header obfuscation.
+Cấu hình cho obfuscation tiêu đề gói.
 
 ### HeaderObject
 
@@ -71,17 +71,17 @@ Configuration for packet header obfuscation.
 
 > `type`: string
 
-Type of obfuscation. Corresponding inbound and outbound proxy must have the same settings. Choices are:
+Loại obfuscation. Proxy tương ứng vào và ra phải có cùng cài đặt. Lựa chọn là:
 
-* `"none"`: Default value. No obfuscation is used.
-* `"srtp"`: Obfuscated as SRTP traffic. It may be recognized as video calls such as Facetime.
-* `"utp"`: Obfuscated as uTP traffic. It may be recognized as Bittorrent traffic.
-* `"wechat-video"`: Obfuscated to WeChat traffic.
-* `"dtls"`: Obfuscated as DTLS 1.2 packets.
-* `"wireguard"`: Obfuscated as WireGuard packets. (NOT true WireGuard protocol)
+* `"none"`: Giá trị mặc định. Không có obfuscation được sử dụng.
+* `"srtp"`: Làm xáo trộn lưu lượng truy cập SRTP. Nó có thể được công nhận là cuộc gọi video như FaceTime.
+* `"utp"`: Làm xáo trộn lưu lượng truy cập uTP. Nó có thể được công nhận là lưu lượng truy cập Bittorrent.
+* `"wechat-video"`: Làm xáo trộn lưu lượng truy cập WeChat.
+* `"dtls"`: Obfuscated dưới dạng gói tin 1.2.
+* `"wireguard"`: Làm xáo trộn các gói WireGuard. (KHÔNG đúng giao thức WireGuard)
 
-## Credits {#credits}
+## Tín dụng {#credits}
 
-* @skywind3000 invented the original KCP protocol and implemented in C.
-* @xtaci re-implement KCP protocol in Go.
-* @xiaokangwang integrated KCP into V2Ray.
+* @ skywind3000 đã phát minh ra giao thức KCP gốc và được triển khai trong C.
+* @xtaci tái triển khai giao thức KCP trong Go.
+* @xiaokangwang tích hợp KCP vào V2Ray.

@@ -2,77 +2,77 @@
 refcn: chapter_00/command
 refen: welcome/command
 ---
-# Commandline
+# Dòng lệnh
 
 ## V2Ray
 
-V2Ray has the following commandline parameters:
+V2Ray có các tham số dòng lệnh sau:
 
 ```shell
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
-> `-version`
+> `-phiên bản`
 
-Print the version of V2Ray only, and then exit.
+Chỉ in phiên bản V2Ray và sau đó thoát.
 
-> `-test`
+> `-kiểm tra`
 
-Test configuration, output any errors and then exit.
+Kiểm tra cấu hình, xuất ra bất kỳ lỗi nào và sau đó thoát ra.
 
 > `-config`
 
-URI of the configuration. Avilable formats are:
+URI của cấu hình. Định dạng Avilable là:
 
-* Path to the local config file. May be a relative path or absolute path.
-* `"stdin:"`: Indicates V2Ray to read configuration from standard input. Caller must close stdin after writing out configuration.
-* Value begins with `http://` or `https://` (lowercase): V2Ray tries to load configuration from the remote address.
+* Đường dẫn đến tệp cấu hình cục bộ. Có thể là đường dẫn tương đối hoặc đường dẫn tuyệt đối.
+* `"stdin:"`: Cho biết V2Ray để đọc cấu hình từ đầu vào tiêu chuẩn. Người gọi phải đóng stdin sau khi viết cấu hình.
+* Giá trị bắt đầu bằng `http: //` hoặc `https: //` (chữ thường): V2Ray cố tải cấu hình từ địa chỉ từ xa.
 
-> `-format`
+> `-định dạng`
 
-Configuration format. Choices are:
+Định dạng cấu hình. Lựa chọn là:
 
-* `json`: JSON format.
-* `pb` or `protobuf`: Protobuf format.
+* `json`: Định dạng JSON.
+* `pb` hoặc `protobuf`: Định dạng Protobuf.
 
 {% hint style='info' %}
 
-When `-config` is not specified, V2Ray first tries to load configuration from `config.json` under working directory, then from the directory specified by [environment variable](../configuration/env.md) `v2ray.location.asset`.
+Khi `-config` không được chỉ định, V2Ray đầu tiên cố gắng tải cấu hình từ `config.json` trong thư mục làm việc, sau đó từ thư mục được chỉ định bởi [biến môi trường](../configuration/env.md) `v2ray.location.asset`.
 
 {% endhint %}
 
 ## V2Ctl
 
-V2Ctl has the following commandline parameters:
+V2Ctl có các tham số dòng lệnh sau:
 
 ```shell
 v2ctl <command> <options>
 ```
 
-Available commands are listed below. Each command has its own options.
+Các lệnh khả dụng được liệt kê dưới đây. Mỗi lệnh có các tùy chọn riêng.
 
-### Verify
+### Kiểm chứng
 
-`v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
+`v2ctl xác minh [--sig = / path / to / sigfile] / tệp / tới / xác minh`
 
-To verify the signature of a V2Ray binary.
+Để xác minh chữ ký của một nhị phân V2Ray.
 
-Options:
+Tùy chọn:
 
 > `sig`
 
-Path to signature file. Default value is the ".sig" file to the path to be verified.
+Đường dẫn đến tệp chữ ký. Giá trị mặc định là tệp ".sig" đến đường dẫn cần được xác minh.
 
-> First argument: the file to be verified.
+> Đối số đầu tiên: tệp cần được xác minh.
 
-### Config
+### Cấu hình
 
-`v2ctl config`
+`Cấu hình v2ctl`
 
-No options. This command reads configuration in JSON format from stdin, and then write corresponding configuration in Protobuf format to stdout.
+Không có lựa chọn. Lệnh này đọc cấu hình ở định dạng JSON từ stdin, và sau đó viết cấu hình tương ứng trong định dạng Protobuf để stdout.
 
 ### UUID
 
 `v2ctl uuid`
 
-No options. This command prints a random UUID.
+Không có lựa chọn. Lệnh này in một UUID ngẫu nhiên.

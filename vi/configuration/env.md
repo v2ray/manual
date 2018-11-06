@@ -2,42 +2,42 @@
 refcn: chapter_02/env
 refen: configuration/env
 ---
-# Environment Variables
+# Biến môi trường
 
-V2Ray reads the following environment variables.
+V2Ray đọc các biến môi trường sau đây.
 
-## Cache size per connection {#buffer-size}
+## Kích thước bộ nhớ cache cho mỗi kết nối {#buffer-size}
 
-* Name: `v2ray.ray.buffer.size` or `V2RAY_RAY_BUFFER_SIZE`
-* Unit: MBytes
-* Default value: 2 on x86, amd64, arm64 and s390x. This cache is disabled on other platforms.
-* Special value: 0 for unlimited cache size
+* Tên: `v2ray.ray.buffer.size` hoặc `V2RAY_RAY_BUFFER_SIZE`
+* Đơn vị: MBytes
+* Giá trị mặc định: 2 trên x86, amd64, arm64 và s390x. Bộ nhớ cache này bị tắt trên các nền tảng khác.
+* Giá trị đặc biệt: 0 cho kích thước bộ nhớ cache không giới hạn
 
-For each connection, when there is a difference in speed between inbound and outbound traffic, V2Ray will cache some data for larger throughput. This setting controls the size of the cache. The larger the cache, the better the performance.
+Đối với mỗi kết nối, khi có sự khác biệt về tốc độ giữa lưu lượng vào và ra, V2Ray sẽ lưu một số dữ liệu để có thông lượng lớn hơn. Cài đặt này kiểm soát kích thước của bộ nhớ cache. Bộ nhớ cache càng lớn thì hiệu suất càng tốt.
 
-## Location of V2Ray asset {#asset}
+## Vị trí của tài sản V2Ray {#asset}
 
-* Name: `v2ray.location.asset` or `V2RAY_LOCATION_ASSET`
-* Default value: Same directory where v2ray is.
+* Tên: `v2ray.location.asset` hoặc `V2RAY_LOCATION_ASSET`
+* Giá trị mặc định: Cùng thư mục nơi v2ray là.
 
-This variable specifies a directory where geoip.dat and geosite.dat files are.
+Biến này chỉ định thư mục chứa tệp geoip.dat và geosite.dat.
 
-## Location of V2Ray config {#config}
+## Vị trí của cấu hình V2Ray {#config}
 
-* Name: `v2ray.location.config` or `V2RAY_LOCATION_CONFIG`
-* Default value: Same directory where v2ray is.
+* Tên: `v2ray.location.config` hoặc `V2RAY_LOCATION_CONFIG`
+* Giá trị mặc định: Cùng thư mục nơi v2ray là.
 
-This variable specifies a directory where config.json is.
+Biến này chỉ định một thư mục có config.json.
 
-## Scatter Reading {#scatter-io}
+## Đọc phân tán {#scatter-io}
 
-* Name: `v2ray.buf.readv` or `V2RAY_BUF_READV`
-* Default value: `auto`
+* Tên: `v2ray.buf.readv` hoặc `V2RAY_BUF_READV`
+* Giá trị mặc định: `auto`
 
-V2Ray 3.37 uses Scatter/Gather IO. This feature will use less memory when connection speed is over 100 MByte/s. Possible values are: `auto`, `enable` and `disable`.
+V2Ray 3.37 sử dụng Scatter / Gather IO. Tính năng này sẽ sử dụng ít bộ nhớ hơn khi tốc độ kết nối vượt quá 100 MByte / giây. Các giá trị có thể là: `auto`, `enable` và `disable`.
 
-* `enable`: Enable scatter reading.
-* `disable`: Disable scatter reading.
-* `auto`: Only enable on Windows, MacOS, Linux when CPU is x86, AMD64 or s390x.
+* `bật`: Bật đọc phân tán.
+* `tắt`: Tắt đọc phân tán.
+* `auto`: Chỉ kích hoạt trên Windows, MacOS, Linux khi CPU là x86, AMD64 hoặc s390x.
 
-When connection speed is less than 100 MByte/s, no matter whether this is enabled or not, there is no obvious difference in terms of memory usage.
+Khi tốc độ kết nối nhỏ hơn 100 MByte / s, cho dù điều này có được bật hay không, không có sự khác biệt rõ ràng về mức sử dụng bộ nhớ.

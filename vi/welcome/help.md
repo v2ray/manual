@@ -2,63 +2,63 @@
 refcn: chapter_00/help
 refen: welcome/help
 ---
-# Support
+# Ủng hộ
 
-Project V provides multiple methods for communications.
+Project V cung cấp nhiều phương thức cho truyền thông.
 
 {% hint style='info' %}
 
-Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
+Nhóm dự án V hỗ trợ tiếng Trung và tiếng Anh. Vui lòng chọn một trong hai câu hỏi bạn quen thuộc.
 
 {% endhint %}
 
-## Github issues
+## Vấn đề Github
 
-We uses several repositories for different type of discussions.
+Chúng tôi sử dụng một số kho lưu trữ cho các loại thảo luận khác nhau.
 
-* [Code issues](https://github.com/v2ray/v2ray-core/issues) 
-  * Only used for coding questions, such as bug.
-* [Roadmap](https://github.com/v2ray/planning/issues)
-* [General discussion](https://github.com/v2ray/discussion/issues)
+* [Các vấn đề về mã](https://github.com/v2ray/v2ray-core/issues) 
+  * Chỉ được sử dụng cho các câu hỏi mã hóa, chẳng hạn như lỗi.
+* [Lộ trình](https://github.com/v2ray/planning/issues)
+* [Thảo luận chung](https://github.com/v2ray/discussion/issues)
 
 ## Telegram
 
-Project V provides the following groups for different type of discussions.
+Dự án V cung cấp các nhóm sau cho các loại thảo luận khác nhau.
 
-* [Usage](https://telegram.me/projectv2ray) 
-  * Only for Project V related topics.
-* [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
-  * For other topics.
+* [Sử dụng](https://telegram.me/projectv2ray) 
+  * Chỉ dành cho các chủ đề liên quan đến Project V.
+* [Khác](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
+  * Đối với các chủ đề khác.
 
-Topics in these groups are mainly in Chinese. Feel free to setup groups in your own language and let us know.
+Các chủ đề trong các nhóm này chủ yếu là tiếng Trung. Vui lòng thiết lập các nhóm bằng ngôn ngữ của riêng bạn và cho chúng tôi biết.
 
 {% hint style='danger' %}
 
-All discussion groups forbid the following topics: adult content, politics, hate speeches. Senders of these topics will be banned immedietely.
+Tất cả các nhóm thảo luận đều cấm các chủ đề sau: nội dung người lớn, chính trị, ngôn từ kích động thù địch. Người gửi các chủ đề này sẽ bị cấm hoàn toàn.
 
 {% endhint %}
 
-Please also follow [Project V Announcement](https://t.me/v2msg) for news.
+Ngoài ra, hãy làm theo [Thông báo dự án V](https://t.me/v2msg) để biết tin tức.
 
 ## Twitter
 
-[ProjectV2Ray](https://twitter.com/projectv2ray) for regular communications.
+[ProjectV2Ray](https://twitter.com/projectv2ray) để liên lạc thường xuyên.
 
-## Email
+## E-mail
 
-Please send a message to one of the address below, if you'd like to talk to V2Ray team privately.
+Vui lòng gửi thư đến một trong những địa chỉ dưới đây, nếu bạn muốn nói chuyện riêng với nhóm V2Ray.
 
-`love@v2ray.com`: Main email address for communication. Checked every day.
+`love@v2ray.com`: Địa chỉ email chính để liên lạc. Kiểm tra hàng ngày.
 
-`v2ray@protonmail.com`: A [ProtonMail](https://protonmail.com/) mailbox which employs end to end encryption. It is difficult to use, and only being checked occasionally.
+`v2ray@protonmail.com`: Hộp thư [ProtonMail](https://protonmail.com/) sử dụng mã hóa kết thúc đến cuối. Rất khó sử dụng và chỉ thỉnh thoảng được kiểm tra.
 
 {% hint style='info' %}
 
-Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For general questions, please use discussion groups above for quick response.
+Đáng buồn là do khối lượng công việc cao, nó không phải là hứa rằng mỗi email được trả lời. Xin lỗi vì sự bất tiện. Đối với các câu hỏi chung, vui lòng sử dụng các nhóm thảo luận ở trên để phản hồi nhanh.
 
 {% endhint %}
 
-You may get PGP public key by searching `love@v2ray.com`, or use the public key below.
+Bạn có thể nhận khóa công khai PGP bằng cách tìm kiếm `love@v2ray.com`hoặc sử dụng khóa công khai bên dưới.
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----

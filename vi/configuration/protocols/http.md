@@ -4,10 +4,10 @@ refen: configuration/protocols/http
 ---
 # HTTP
 
-* Name: `http`
-* Type: Inbound
+* Tên: `http`
+* Loại: Inbound
 
-HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
+HTTP là giao thức cho các kết nối gửi đến. Nó tương thích với HTTP / 1.1.
 
 ## InboundConfigurationObject
 
@@ -26,15 +26,15 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
 
 > `accounts`: \[[AccountObject](#accountobject)\]
 
-An array in which each entry is an account. It is empty by default. If not empty, HTTP Basic Authentication is required for incoming requests.
+Một mảng trong đó mỗi mục là một tài khoản. Nó được để trống theo mặc định. Nếu không trống, Xác thực HTTP cơ bản là bắt buộc đối với các yêu cầu gửi đến.
 
 > `allowTransparent`: true | false
 
-If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.
+Nếu được đặt thành `true`, tất cả yêu cầu HTTP được gửi đến thư đến này sẽ được proxy, bao gồm cả yêu cầu không phải proxy.
 
 > `userLevel`: number
 
-User level. All connections share this level.
+Cấp người dùng. Tất cả các kết nối đều chia sẻ cấp độ này.
 
 ### AccountObject
 
@@ -47,17 +47,17 @@ User level. All connections share this level.
 
 > `user`: string
 
-Username for HTTP authentication.
+Tên người dùng để xác thực HTTP.
 
 > `pass`: string
 
-password for HTTP authentication.
+mật khẩu để xác thực HTTP.
 
 {% hint style='info' %}
 
-Use the following settings in Linux to use HTTP proxy in current session.
+Sử dụng các cài đặt sau trong Linux để sử dụng proxy HTTP trong phiên hiện tại.
 
-* `export http_proxy=http://127.0.0.1:8080/` (URL has to change according to your config)
-* `export https_proxy=$http_proxy`
+* `xuất khẩu http_proxy = http: //127.0.0.1: 8080/` (URL có thể thay đổi theo cấu hình của bạn)
+* `xuất https_proxy =$http_proxy`
 
 {% endhint %}

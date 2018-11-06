@@ -4,12 +4,16 @@ refen: configuration/protocols/socks
 ---
 # Socks
 
-* Name: `socks`
-* Type: Inbound / Outbound
+* Tên: `vớ`
+* Loại: Inbound / Outbound
 
-Socks is an implementation of standard SOCKS protocol, compatible with [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a and [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
+Socks là một thực hiện giao thức SOCKS chuẩn, tương thích với [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a và [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
-## Outbound Proxy Configuration
+Cấu hình Socks bao gồm hai phần, `InboundConfigurationObject` và `OutboundConfigurationObject`, cho tương ứng trong và ngoài.
+
+## OutboundConfigurationObject
+
+`OutboundConfigurationObject` được sử dụng làm trường `cài đặt` trong `OutboundObject` trong cấu hình mức cao nhất.
 
 ```javascript
 {
@@ -27,22 +31,67 @@ Socks is an implementation of standard SOCKS protocol, compatible with [Socks 4]
 }
 ```
 
-Where:
+> `servers`: \[ [ServerObject](#serverobject) \]
 
-* `servers`: Socks server list, in which each entry has: 
-  * `address`: Server address
-  * `port`: Server port
-  * `users`: List of user accounts: 
-    * `user`: Username
-    * `pass`: Password
-    * `level`: User level.
+Một loạt các máy chủ Socks.
 
-Notice:
+### ServerObject
 
-* When user list is not empty, socks will performance user authentication with remote server, using a random user.
-* Only supports SOCKS5 servers.
+```javascript
+{
+  "address": "127.0.0.1",
+  "port": 1234,
+  "users": [
+    {
+      "user": "test user",
+      "pass": "test pass",
+      "level": 0
+    }
+  ]
+}
+```
 
-## Inbound Proxy Configuration
+> `address`: address
+
+Vớ địa chỉ máy chủ. Có thể là IPv4, IPv6 hoặc địa chỉ miền.
+
+{% hint style='info' %}
+
+Chỉ hỗ trợ Socks 5 servers.
+
+{% endhint %}
+
+> `port`: number
+
+Vớ cổng máy chủ.
+
+> `users`: \[ [UserObject](#userobject) \]
+
+Một mảng người dùng. Mỗi phần tử trong mảng là một người dùng. Nếu danh sách không trống. Socks inbound sẽ buộc người dùng xác thực. Nếu không, người dùng ẩn danh được cho phép.
+
+### UserObject
+
+```javascript
+{
+  "user": "test user",
+  "pass": "test pass",
+  "level": 0
+}
+```
+
+> `user`: string
+
+Tên người dùng như trong giao thức Socks
+
+> `pass`: string
+
+Mật khẩu như trong giao thức Socks
+
+> `level`: number
+
+Cấp người dùng cho mục đích theo dõi và chính sách. Giá trị mặc định là `0`.
+
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -59,13 +108,39 @@ Notice:
 }
 ```
 
-Where:
+> `auth`: "noauth" | "password"
 
-* `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
-  * `"noauth"`: Anonymous.
-  * `"password"`: User and password [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
-  * Only works when `auth` is `"password"`
-* `udp`: `true` or `false` to enable UDP. Default to false.
-* `ip`: When UDP is enabled, this IP address receives UDP packets from client. Default to `"127.0.0.1"`.
-* `userLevel`: User level. All connections share this level.
+Vớ phương pháp xác thực. `"noauth"` dành cho xác thực ẩn danh và `"mật khẩu"` để xác thực bằng tên người dùng và mật khẩu. Giá trị mặc định là `"noauth"`.
+
+> `accounts`: \[ [AccountObject](#accountobject) \]
+
+Một loạt tài khoản người dùng, cho mục đích tự động. Chỉ có hiệu lực khi `auth` được đặt thành `"password"`.
+
+> `udp`: true | false
+
+Có hay không kích hoạt UDP. Giá trị mặc định là `false`.
+
+> `ip`: address
+
+Khi UDP được bật, V2Ray cần biết địa chỉ IP của máy chủ hiện tại. Giá trị mặc định là `"127.0.0.1"`. Điều này phải được đặt thành địa chỉ IP công khai của máy chủ lưu trữ, nếu bạn muốn cho phép lưu lượng truy cập UDP công khai.
+
+> `userLevel`: number
+
+Cấp người dùng. Tất cả các kết nối đến đều chia sẻ cấp độ người dùng này.
+
+### AccountObject
+
+```javascript
+{
+  "user": "my-username",
+  "pass": "my-password"
+}
+```
+
+> `user`: string
+
+Tên người dùng như trong giao thức Socks
+
+> `pass`: string
+
+Mật khẩu như trong giao thức Socks

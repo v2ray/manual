@@ -4,19 +4,19 @@ refen: configuration/transport/domainsocket
 ---
 # Domain Socket Transport
 
-Domain Socket uses standard Unix domain socket to transport data. Domain socket is system interal tranfer channel. It doesn't jam network buffer and may be a bit faster than trasnferring through local loopback network.
+Domain Socket sử dụng ổ cắm miền Unix chuẩn để truyền tải dữ liệu. Ổ cắm tên miền là kênh chuyển tiếp giữa các hệ thống. Nó không gây nhiễu bộ đệm mạng và có thể nhanh hơn một chút so với trasnferring thông qua mạng loopback cục bộ.
 
-Domain socket can only be used on platforms that supports Unix domain socket, such as macOS and Linux. It is not available on Windows.
+Ổ cắm miền chỉ có thể được sử dụng trên các nền tảng hỗ trợ ổ cắm miền Unix, chẳng hạn như macOS và Linux. Nó không có sẵn trên Windows.
 
 {% hint style='info' %}
 
-When domain socket is used, IP and port specified on the inbound/outbound proxy will be ignored. All traffic is tunneled through the domain socket.
+Khi ổ cắm miền được sử dụng, IP và cổng được chỉ định trên proxy đến / đi sẽ bị bỏ qua. Tất cả lưu lượng truy cập đều được tunnel qua socket miền.
 
 {% endhint %}
 
 ## DomainSocketObject
 
-`DomainSocketObject` is used in `dsSettings` field in `TransportObject` and `StreamSettingsObject`.
+`DomainSocketObject` được sử dụng trong `dsSettings` trường trong `TransportObject` và `StreamSettingsObject`.
 
 ```javascript
 {
@@ -26,4 +26,4 @@ When domain socket is used, IP and port specified on the inbound/outbound proxy 
 
 > `path`: string
 
-An valid absolute file path. Before running V2Ray, the file on this path must not exist.
+Đường dẫn tệp tuyệt đối hợp lệ. Trước khi chạy V2Ray, tệp trên đường dẫn này không được tồn tại.

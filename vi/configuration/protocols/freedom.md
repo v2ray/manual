@@ -4,10 +4,10 @@ refen: configuration/protocols/freedom
 ---
 # Freedom
 
-* Name: `freedom`
-* Type: Outbound
+* Tên: `tự do`
+* Loại: Đi
 
-Freedom is a protocol for outbound connections. It passes all TCP or UDP connection to their destinations. This outbound is used when you want to send traffic to its real destination.
+Tự do là một giao thức cho các kết nối gửi đi. Nó chuyển tất cả kết nối TCP hoặc UDP đến đích của họ. Điều này gửi đi được sử dụng khi bạn muốn gửi lưu lượng truy cập đến đích thực của nó.
 
 ## ConfigurationObject
 
@@ -21,18 +21,18 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 
 > `domainStrategy`: "AsIs" | "UseIP"
 
-Strategy for domain name resolution. Options are:
+Chiến lược phân giải tên miền. Các tùy chọn là:
 
-* `"AsIs"`: Default value. Resolve domain name by system.
-* `"UseIP"`: Use [internal DNS](../dns.md) for domain name resolution.
+* `"AsIs"`: Giá trị mặc định. Giải quyết tên miền theo hệ thống.
+* `"UseIP"`: Sử dụng [DNS nội bộ](../dns.md) cho độ phân giải tên miền.
 
 > `redirect`: address_port
 
-Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
+Chuyển hướng tất cả các kết nối đến địa chỉ này, dưới dạng `"127.0.0.1:80"` hoặc `": 1234"`.
 
-* When address is empty, e.g. `":443"`, Freedom will use the original destination address.
-* When port is `0`, e.g. `"v2ray.com:0"`, Freedom will use the original port.
+* Khi địa chỉ trống, ví dụ: `": 443"`, Tự do sẽ sử dụng địa chỉ đích ban đầu.
+* Khi cổng là `0`, ví dụ `"v2ray.com:0"`, Tự do sẽ sử dụng cổng gốc.
 
 > `userLevel`: number
 
-User level. All connections share this level.
+Cấp người dùng. Tất cả các kết nối đều chia sẻ cấp độ này.

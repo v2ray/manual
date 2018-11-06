@@ -2,36 +2,36 @@
 refcn: ui_client/windows
 refen: ui_client/windows
 ---
-# Windows
+# các cửa sổ
 
 ## V2RayW
 
-* Download: [Github](https://github.com/Cenmrev/V2RayW)
+* Tải xuống: [Github](https://github.com/Cenmrev/V2RayW)
 
 ## V2RayN
 
-* Download: [Github](https://github.com/2dust/v2rayN)
+* Tải xuống: [Github](https://github.com/2dust/v2rayN)
 
 ## V2RayS
 
-* Download: [Github](https://github.com/Shinlor/V2RayS)
+* Tải xuống: [Github](https://github.com/Shinlor/V2RayS)
 
-## Other tools {#other}
+## Các công cụ khác {#other}
 
 ### PuTTY
 
 SSH client.
 
-* Website: [putty.org](http://www.putty.org/)
+* Trang web: [putty.org](http://www.putty.org/)
 
 ### Visual Studio Code
 
-Source code editor from Microsoft.
+Trình chỉnh sửa mã nguồn từ Microsoft.
 
-* Website: [code.visualstudio.com](https://code.visualstudio.com/)
+* Trang web: [code.visualstudio.com](https://code.visualstudio.com/)
 
 ### Telegram
 
-Encrypted discussion.
+Thảo luận được mã hóa.
 
-* Website: [telegram.org](https://telegram.org/)
+* Trang web: [telegram.org](https://telegram.org/)

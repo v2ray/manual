@@ -4,12 +4,12 @@ refen: configuration/protocols/mtproto
 ---
 # MTProto
 
-* Name: `mtproto`
-* Type: Inbound / Outbound
+* Tên: `mtproto`
+* Loại: Inbound / Outbound
 
-MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
+Proxy MTProto là một procol đặc biệt cho Telegram. Nó bao gồm một cặp proxy gửi đến và outboud trong V2Ray. Chúng thường được sử dụng cùng nhau để xây dựng một proxy cho Telegram
 
-For now V2Ray only supports IPv4 address of Telegram server.
+Hiện tại V2Ray chỉ hỗ trợ địa chỉ IPv4 của máy chủ Telegram.
 
 ## InboundConfigurationObject
 
@@ -25,7 +25,7 @@ For now V2Ray only supports IPv4 address of Telegram server.
 
 > `users`: \[[UserObject](#userobject)\]
 
-An array of users. For now only the first user is effective.
+Một mảng người dùng. Hiện tại chỉ người dùng đầu tiên mới có hiệu quả.
 
 ### UserObject
 
@@ -39,34 +39,34 @@ An array of users. For now only the first user is effective.
 
 > `email`: string
 
-User email. Used for tracking purposes. See [Stats](../stats.md).
+Email người dùng. Được sử dụng cho mục đích theo dõi. Xem [Thống kê](../stats.md).
 
 > `level`: number
 
-User level.
+Cấp người dùng.
 
 > `secret`: string
 
-User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
+Bí mật của người dùng. Trong Telegram, sử dụng bí mật phải dài 32 ký tự, và chỉ chứa các ký tự giữa `0` để `9`, và `một`để `f`.
 
 {% hint style='tip' %}
 
-You may use the following command to generate MTProto secret: `openssl rand -hex 16`
+Bạn có thể sử dụng lệnh sau để tạo bí mật MTProto: `openssl rand -hex 16`
 
 {% endhint %}
 
-## Outbound configuration {#outbound}
+## Cấu hình đi {#outbound}
 
 ```javascript
 {
 }
 ```
 
-## Sample {#sample}
+## Mẫu vật {#sample}
 
-MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
+MTProto chỉ có thể được sử dụng cho giao thông Telegram. Bạn có thể cần một quy tắc định tuyến để kết hợp tương ứng trong và ngoài. Đây là một mẫu không đầy đủ.
 
-Inbound:
+Trong nước:
 
 ```javascript
 {
@@ -89,7 +89,7 @@ Outbound:
 }
 ```
 
-Routing:
+Định tuyến:
 
 ```javascript
 {
@@ -99,4 +99,4 @@ Routing:
 }
 ```
 
-The configure your Telegram app to connect to 443 port on this machine.
+Định cấu hình ứng dụng Telegram của bạn để kết nối với cổng 443 trên máy này.

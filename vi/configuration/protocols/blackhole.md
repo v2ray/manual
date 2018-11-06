@@ -2,12 +2,12 @@
 refcn: chapter_02/protocols/blackhole
 refen: configuration/protocols/blackhole
 ---
-# Blackhole
+# Hố đen
 
-* Name: `blackhole`
-* Type: Outbound
+* Tên: `hố đen`
+* Loại: Đi
 
-Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
+Blackhole là một giao thức cho các kết nối gửi đi. Nó chặn tất cả các kết nối với các câu trả lời được xác định trước. Kết hợp với [Định tuyến](../routing.md), điều này có thể được sử dụng để chặn truy cập vào một số trang web.
 
 ## ConfigurationObject
 
@@ -21,7 +21,7 @@ Blackhole is a protocol for outbound connections. It blocks all connections with
 
 > `response`: [ResponseObject](#responseobject)
 
-Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection.
+Phản hồi được xác định trước. Blockhole sẽ gửi (nếu có) dữ liệu được xác định trước ngay lập tức cho bất kỳ kết nối nào được truyền tới nó và đóng kết nối.
 
 ### ResponseObject
 
@@ -33,7 +33,7 @@ Pre-defined response. Blockhole will send (if any) pre-defined data immediately 
 
 > `type`: "none" | "http"
 
-Type of the response, available options are:
+Loại phản hồi, các tùy chọn có sẵn là:
 
-* `"none"`: Default value. Empty response.
-* `"http"`: A valid HTTP 403 response.
+* `"none"`: Giá trị mặc định. Phản hồi trống.
+* `"http"`: Đáp ứng HTTP 403 hợp lệ.
