@@ -2,36 +2,36 @@
 refcn: ui_client/windows
 refen: ui_client/windows
 ---
-# Windows
+# پنجره ها
 
 ## V2RayW
 
-* Download: [Github](https://github.com/Cenmrev/V2RayW)
+* دانلود: [Github](https://github.com/Cenmrev/V2RayW)
 
 ## V2RayN
 
-* Download: [Github](https://github.com/2dust/v2rayN)
+* دانلود: [Github](https://github.com/2dust/v2rayN)
 
 ## V2RayS
 
-* Download: [Github](https://github.com/Shinlor/V2RayS)
+* دانلود: [Github](https://github.com/Shinlor/V2RayS)
 
-## Other tools {#other}
+## ابزارهای دیگر {#other}
 
-### PuTTY
+### پوتای
 
-SSH client.
+مشتری SSH
 
-* Website: [putty.org](http://www.putty.org/)
+* وب سایت: [بطری](http://www.putty.org/)
 
-### Visual Studio Code
+### ویژوال استودیو کد
 
-Source code editor from Microsoft.
+ویرایشگر کد منبع از مایکروسافت.
 
-* Website: [code.visualstudio.com](https://code.visualstudio.com/)
+* وب سایت: [code.visualstudio.com](https://code.visualstudio.com/)
 
-### Telegram
+### تلگرام
 
-Encrypted discussion.
+بحث رمزگذاری شده
 
-* Website: [telegram.org](https://telegram.org/)
+* وب سایت: [telegram.org](https://telegram.org/)
