@@ -2,18 +2,18 @@
 refcn: chapter_00/start
 refen: welcome/start
 ---
-# Quick Start
+# Bắt đầu nhanh
 
-You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
+Bạn cần phải cấu hình V2Ray sau khi cài đặt nó. Đây là một cấu hình nhanh cho chạy thử. Vui lòng xem [tổng quan về cấu hình](../configuration/overview.md) để có thêm thiết lập nâng cao.
 
-## Client {#client}
+## Khách hàng {#client}
 
-On your PC (or mobile), run V2Ray with the following configuration.
+Trên PC của bạn (hoặc di động), chạy V2Ray với cấu hình sau.
 
 ```javascript
 {
   "inbounds": [{
-    "port": 1080,  // Port of socks5 proxy. Point your browser to use this port.
+    "port": 1080,  // Port of socks5 proxy. Trỏ trình duyệt của bạn để sử dụng cổng này.
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
@@ -24,7 +24,7 @@ On your PC (or mobile), run V2Ray with the following configuration.
     "protocol": "vmess",
     "settings": {
       "vnext": [{
-        "address": "server", // Address of your V2Ray server. May be IP or domain address.
+        "address": "server", // Address of your V2Ray server. Có thể là địa chỉ IP hoặc tên miền.
         "port": 10086,  // Port of your V2Ray server.
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
@@ -48,16 +48,16 @@ On your PC (or mobile), run V2Ray with the following configuration.
 }
 ```
 
-Please modify the IP address of your V2Ray server as mentioned above. After that, the V2Ray process on your PC will proxy all traffic to V2Ray server except intranet traffic.
+Vui lòng sửa đổi địa chỉ IP của máy chủ V2Ray của bạn như đã đề cập ở trên. Sau đó, quá trình V2Ray trên máy tính của bạn sẽ ủy quyền tất cả lưu lượng truy cập đến máy chủ V2Ray ngoại trừ lưu lượng truy cập mạng nội bộ.
 
-## Server {#server}
+## Máy chủ {#server}
 
-You need another computer to run V2Ray as a server. Usually this computer is located outside firewall. Here is a sample configuration.
+Bạn cần một máy tính khác để chạy V2Ray làm máy chủ. Thông thường máy tính này nằm bên ngoài tường lửa. Đây là một cấu hình mẫu.
 
 ```javascript
 {
   "inbounds": [{
-    "port": 10086, // Port of the server. Must be the same as above.
+    "port": 10086, // Port of the server. Phải giống như trên.
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
@@ -70,11 +70,11 @@ You need another computer to run V2Ray as a server. Usually this computer is loc
 }
 ```
 
-Please make sure the `id` field is the same between client and server.
+Vui lòng đảm bảo rằng trường `id` giống nhau giữa máy khách và máy chủ.
 
-## Running {#running}
+## Đang chạy {#running}
 
-* On Windows and macOS, configuration file is located in the same directory as V2Ray binary. You may run `v2ray` or `v2ray.exe` without additional parameters.
-* On Linux, configuration file is usually located at `/etc/v2ray/config.json`. Run `v2ray --config=/etc/v2ray/config.json` in foreground or use other tools such as systemd to run V2Ray as background process.
+* Trên Windows và macOS, tệp cấu hình nằm trong cùng thư mục với nhị phân V2Ray. Bạn có thể chạy `v2ray` hoặc `v2ray.exe` mà không cần tham số bổ sung.
+* Trên Linux, tệp cấu hình thường nằm ở `/etc/v2ray/config.json`. Chạy `v2ray --config = / etc / v2ray / config.json` trong nền trước hoặc sử dụng các công cụ khác như systemd để chạy V2Ray làm quá trình nền.
 
-See [Overview](../configuration/overview.md) for more detail of the configuration.
+Xem [Tổng quan](../configuration/overview.md) để biết thêm chi tiết về cấu hình.
