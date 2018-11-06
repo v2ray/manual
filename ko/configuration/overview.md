@@ -10,18 +10,17 @@ V2Ray는 아래와 같이 서버 측과 클라이언트 측의 구성이 동일�
 
 ```javascript
 {
-  ,
-  } {}, {}, 
- "api": {},
+  "log": {},
+  "api": {},
   "dns": {},
-  "통계": {},
-  "라우팅": {},
-  "정책": {},
-  "인바운드"[],
-  "outbounds"[],
-  "inboundDetour"[],
-  "outboundDetour"[]
-  의 "전송"} {
+  "stats": {},
+  "routing": {},
+  "policy": {},
+  "inbounds": [],
+  "outbounds": [],
+  "inboundDetour": [],
+  "outboundDetour": [],
+  "transport": {}
 }
 ```
 
@@ -65,9 +64,9 @@ V2Ray 인스턴스를 제어하는 ​​RPC API 자세한 내용은 [API 구성
 
 ```javascript
 {
-  "접근": "/ 경로 / to / 파일",
-  "오류": "/ path / to / file",
-  "loglevel": "경고"
+  "access": "/path/to/file",
+  "error": "/path/to/file",
+  "loglevel": "warning"
 }
 ```
 
@@ -97,20 +96,20 @@ InboundObject는 인바운드 프록시를 정의합니다. V2Ray 로의 수신 
 
 ```javascript
 {
-  "포트"1080,
-  "수신" "127.0.0.1"
-  "프로토콜": "protocol_name"
-  "설정"{},
-  "streamSettings"{},
-  "태그": " inbound_tag_name ",
-  "스니핑 ": {
-    "활성화 "거짓,
-    "destOverride ":"HTTP ","TLS "]
+  "port": 1080,
+  "listen": "127.0.0.1",
+  "protocol": "protocol_name",
+  "settings": {},
+  "streamSettings": {},
+  "tag": "inbound_tag_name",
+  "sniffing": {
+    "enabled": false,
+    "destOverride": ["http", "tls"]
   },
-  "할당 ": {
-    "전략 ":"항상 ",
-    " 새로 고침 ": 5,
-    "동시성 ": 3
+  "allocate": {
+    "strategy": "always",
+    "refresh": 5,
+    "concurrency": 3
   },
 }
 ```
@@ -158,7 +157,7 @@ InboundObject는 인바운드 프록시를 정의합니다. V2Ray 로의 수신 
 ```javascript
 {
   "enabled": false,
-  "destOverride": [ "http", "tls"]
+  "destOverride": ["http", "tls"]
 }
 ```
 
@@ -174,9 +173,9 @@ InboundObject는 인바운드 프록시를 정의합니다. V2Ray 로의 수신 
 
 ```javascript
 {
-  "전략": "항상",
-  "새로 고침": ​​5,
-  "동시성": 3
+  "strategy": "always",
+  "refresh": 5,
+  "concurrency": 3
 }
 ```
 
@@ -199,11 +198,11 @@ OutboundObject는 나가는 연결을 처리하기위한 아웃 바운드 프록
 ```javascript
 {
   "sendThrough": "0.0.0.0",
-  "protocol_name",
-  "설정": {},
-  "태그": "this_outbound_tag_name",
+  "protocol": "protocol_name",
+  "settings": {},
+  "tag": "this_outbound_tag_name",
   "streamSettings": {},
-  "proxySettings" : {
+  "proxySettings": {
     "tag": "another_outbound_tag_name"
   },
   "mux": {}
