@@ -2,203 +2,203 @@
 refcn: chapter_02/reverse
 refen: configuration/reverse
 ---
-# Reverse Proxy
+# معکوس پروکسی
 
-Reverse proxy is an optional feature in V2Ray. It redirects traffic from a server to a client. Thus is so called "Reverse" proxying.
+معکوس پروکسی یک ویژگی اختیاری در V2Ray است. این ترافیک را از یک سرور به یک مشتری منتقل می کند. بنابراین پروکسی معکوس معکوس است.
 
-{% hint style='tip' %}
+{٪ hint style = 'tip'٪}
 
-Reverse proxy is available in V2Ray 4.0+. It is now in beta, and may be improved in near future.
+معکوس پروکسی در V2Ray 4.0+ در دسترس است. این در حال حاضر در بتا است و ممکن است در آینده نزدیک بهبود یابد.
 
 {% endhint %}
 
-Reverse proxy works in the following way:
+معکوس پروکسی به روش زیر عمل می کند:
 
-* Suppose there is a device A that runs a web server. Device A has no public IP address, and can't be accessed from internet. There is another device B, say a cloud server, which can be access from internet. We need to use B as portal, to redirect traffice to A.
-* Now we install a V2Ray on device A, named `bridge`. And then install a V2Ray on device B, named `portal`.
-* `bridge` will open connections to `portal`. Their target can be customized for routing purpose. `portal` will receive these connections, as well as connections from other uses in the internet. `portal` will "connect" these two kind of connections. Then the interent traffic will be tunneled to `bridge`.
-* After `bridge` receives traffic from internet through `portal`, it will send these traffic to the web server on localhost. You may configure routing for these traffic as well.
-* `bridge` will control load balance based of the amount of traffic.
+* فرض کنید یک دستگاه A است که یک سرور وب را اجرا می کند. دستگاه A هیچ آدرس IP عمومی ندارد و نمی تواند از طریق اینترنت دسترسی پیدا کند. یک دستگاه دیگر B وجود دارد، می گوید یک سرور ابر، که می تواند از اینترنت دسترسی داشته باشد. ما نیاز به استفاده از B به عنوان پورتال، جهت هدایت تراکنش به A
+* حالا ما V2Ray را بر روی دستگاه A نصب می کنیم که `پل`. و سپس V2Ray را بر روی دستگاه B نصب کنید، به نام `پورت`.
+* `پل` اتصال به `پورتال`را باز می کند. هدف خود را می توان برای مقصد مسیریابی سفارشی. `پورتال` ، این اتصالات، و همچنین اتصالات از دیگر کاربردهای اینترنتی را دریافت خواهد کرد. `پورتال` این دو نوع اتصالات را "اتصال" می کند. سپس ترافیک داخلی به `پل`تونل می شود.
+* پس از `پل` ترافیک از اینترنت را از طریق `پورت`دریافت می کند، این ترافیک را به سرور وب در localhost ارسال می کند. شما همچنین می توانید مسیریابی را برای این ترافیک نیز پیکربندی کنید.
+* `پل` توازن بار را براساس میزان ترافیک کنترل می کند.
 
-{% hint style='danger' %}
+{٪ hint style = 'خطر'٪}
 
-Reverse proxy has already leveraged [Mux](mux.md). It is not necessary to configure Mux again on its outbound.
+معکوس پروکسی در حال حاضر قدرت [Mux](mux.md). لازم نیست دوباره Mux را روی خروجی آن پیکربندی کنید.
 
 {% endhint %}
 
 ## ReverseObject
 
-`ReverseObject` is used as `reverse` field in top level configuration.
+`ReverseObject` به عنوان `معکوس` فیلد در پیکربندی سطح بالا استفاده می شود.
 
 ```javascript
 {
-  "bridges": [{
-    "tag": "bridge",
-    "domain": "test.v2ray.com"
-  }],
-  "portals": [{
-    "tag": "portal",
-    "domain": "test.v2ray.com"
+  "پل ها": [{
+    "برچسب": "پل"،
+    "دامنه": "test.v2ray.com"
+  }]،
+  "پورتال": [{
+    "برچسب": "پورتال"،
+    "دامنه": "test.v2ray.com"
   }]
 }
 ```
 
-> `bridges`: \[[BridgeObject](bridgeobject)\]
+> `پل`: \ [[BridgeObject](bridgeobject)]
 
-An array of `bridge`s. Each `bridge` is a [BridgeObject](bridgeobject).
+آرایه ای از `پل`ثانیه. هر `پل` است [BridgeObject](bridgeobject).
 
-> `portals`: \[[PortalObject](portalobject)\]
+> `پورتال`: \ [[PortalObject](portalobject)]
 
-An array of `portal`s. Each `portal` is a [PortalObject](bridgeobject).
+آرایه ای از `پورتال`ثانیه. هر `پورتال` است [PortalObject](bridgeobject).
 
 ### BridgeObject
 
 ```javascript
 {
-  "tag": "bridge",
-  "domain": "test.v2ray.com"
+  "برچسب": "پل"،
+  "دامنه": "test.v2ray.com"
 }
 ```
 
-> `tag`: string
+> `برچسب`: رشته
 
-A tag. All traffic initiated by this `bridge` will have this tag. It can be used for [routing](routing.md), identified as `inboundTag`.
+تگ تمام ترافیک آغاز شده توسط این `پل` این برچسب را دارند. این می تواند برای مسیر [](routing.md)، که به عنوان `inboundTag`.
 
-> `domain`: string
+> `دامنه`: رشته
 
-A domain. All connections initiated by `bridge` towards `portal` will use this domain as target. This domain is only used for communication between `bridge` and `portal`. It is not necessary to be actually registered.
+دامنه تمام اتصالات آغاز شده توسط `پل` به سمت `پورتال` از این دامنه به عنوان هدف استفاده می کنند. این دامنه فقط برای ارتباط بین `پل` و `پورتال`. لازم نیست در واقع ثبت نام شود.
 
 ### PortalObject
 
-> `tag`: string
+> `برچسب`: رشته
 
-A Tag. You need to redirect all traffic to this `portal`, by targeting `outboundTag` to this `tag`. The traffic includes the connections from `bridge`, as well as internet traffic.
+یک برچسب شما نیاز به تغییر مسیر تمام ترافیک به این `پورتال`، با هدف قرار دادن `outboundTag` این `تگ`. ترافیک شامل اتصالات از `پل`و همچنین ترافیک اینترنتی است.
 
-> `domain`: string
+> `دامنه`: رشته
 
-A domain. When a connection targeting this domain, `portal` considers it is a connection from `bridge`, otherwise it is an internet connection.
+دامنه هنگامی که یک ارتباط با هدف قرار دادن این دامنه، `پورتال` ، این ارتباط از `پل`، در غیر این صورت اتصال به اینترنت است.
 
-{% hint style='tip' %}
+{٪ hint style = 'tip'٪}
 
-Like other usages, a V2Ray instance can be used as a `bridge`, or a `portal`, or both as the same time.
+مانند دیگر کاربرد، یک نمونه V2Ray می تواند به عنوان استفاده `پل`، و یا یک `پورتال`، یا هر دو به عنوان همان زمان.
 
 {% endhint %}
 
-## Example configuration
+## پیکربندی مثال
 
-`bridge` usually needs two outbounds. One for connecting `portal`, and another for connecting local web server.
+`پل` معمولا نیاز به دو خروجی دارد. یکی برای اتصال `پورتال`و دیگری برای اتصال سرور محلی محلی.
 
-Reverse:
+معکوس:
 
 ```javascript
 {
-  "bridges": [{
-    "tag": "bridge",
-    "domain": "test.v2ray.com"
+  "پل ها": [{
+    "برچسب": "پل"،
+    "دامنه": "test.v2ray.com"
   }]
 }
 ```
 
-Outbound:
+خروجی:
 
 ```javascript
 {
-  "tag": "out"
-  "protocol": "freedom",
-  "settings": {
-    "redirect": "127.0.0.1:80" // Send traffic to local web server
+  "برچسب": "خارج"
+  "پروتکل": "آزادی"،
+  "تنظیمات": {
+    "تغییر مسیر": "127.0.0.1:80" // ارسال ترافیک به وب سرور محلی
   }
-},
-{
-  "protocol": "vmess",
-  "settings": {
+}،
+{{
+  "پروتکل": "vmess"،
+  "تنظیمات": {
     "vnext": [{
-      "address": "portal的IP地址",
-      "port": 1024,
-      "users": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
+      "آدرس": "پورتال IP آرشیو"،
+      "پورت": 1024،
+      "کاربران": [{" id ":" 27848739-7e62-4138-9fd3-098a63964b6b "}]
     }]
-  },
-  "tag": "interconn"
+  }،
+  'tag':" interconn "
 }
 ```
 
-Routing:
+مسیریابی:
 
 ```javascript
-"routing": {
-  "strategy": "rules",
-  "settings": {
-    "rules": [{
-      "type": "field",
-      "inboundTag": ["bridge"],
-      "domain": ["full:test.v2ray.com"],
-      "outboundTag": "interconn"
-    },{
-      "type": "field",
-      "inboundTag": ["bridge"],
-      "outboundTag": "out"
-    }]
-  }
-}
-```
-
-`portal` usually needs two inbounds. One for connections from `bridge`, and another for internet connections.
-
-Reverse:
-
-```javascript
-{
-  "portals": [{
-    "tag": "portal",
-    "domain": "test.v2ray.com"  // Must be the same as in bridge
-  }]
-}
-```
-
-入站代理:
-
-```javascript
-{
-  "tag": "external",
-  "port": 80,  // Open port 80 for internet HTTP traffic
-  "protocol": "dokodemo-door",
-  "settings": {
-    "address": "127.0.0.1",
-    "port": 80,
-    "network": "tcp"
-  }
-},
-{
-  "port": 1024, // For bridge connections
-  "tag": "interconn",
-  "protocol": "vmess",
-  "settings": {
-    "clients": [{"id": "27848739-7e62-4138-9fd3-098a63964b6b"}]
-  }
-}
-```
-
-Routing
-
-```javascript
-"routing": {
-  "strategy": "rules",
-  "settings": {
-    "rules": [{
-      "type": "field",
-      "inboundTag": ["external"],
-      "outboundTag": "portal"
-    },{
-      "type": "field",
-      "inboundTag": ["interconn"],
-      "outboundTag": "portal"
+"مسیریابی": {
+  "استراتژی": "قوانین"،
+  "تنظیمات": {
+    "قوانین": [{
+      نوع ":" فیلد "،
+      " inboundTag ": [" پل "]،
+      " دامنه ": [" full: test.v2ray.com "]،
+      " outboundTag ":" interconn "
+    }، {
+      نوع": "field"،
+      "inboundTag": ["bridge"]،
+      "outboundTag" : "خارج"
     }]
   }
 }
 ```
 
-{% hint style='tip' %}
+`پورتال` معمولا نیاز به دو inbounds دارد. یکی برای اتصالات از `پل`و دیگری برای اتصال به اینترنت.
 
-In practice, you may want to run `bridge` first and then `portal`.
+معکوس:
+
+```javascript
+{
+  "پورتال": [{
+    "برچسب": "پورتال"،
+    "دامنه": "test.v2ray.com" // باید مثل پل
+  }
+}
+```
+
+入 站 代理:
+
+```javascript
+{
+  "برچسب": "خارجی"،
+  "پورت": 80، // پورت 80 برای ترافیک اینترنت HTTP
+  "پروتکل": "dokodemo درب"،
+  "تنظیمات": {
+    آدرس ":" 127.0 .0.1 "،
+    " port ": 80،
+    " network ":" tcp "
+  }
+}،
+{
+  'port': 1024، // برای اتصالات پل
+  " tag ":" interconn "،
+  " protocol ":" vmess "،
+  " تنظیمات ": {
+    " مشتری ": [{" id ":" 27848739-7e62-4138-9fd3-098a63964b6b "}]
+  }
+}
+```
+
+مسیریابی
+
+```javascript
+"مسیریابی": {
+  "استراتژی": "قواعد"،
+  "تنظیمات": {
+    "قواعد": [{
+      نوع ":" فیلد "،
+      " inboundTag ": [" خارجی "]،
+      " outboundTag ":" پورتال "
+    )، {
+      نوع": "فیلد"،
+      "inboundTag": ["interconn"]،
+      "outboundTag": "پورتال"
+    }]
+  }
+}
+```
+
+{٪ hint style = 'tip'٪}
+
+در عمل، شما ممکن است بخواهید اول `پل` و سپس `پورت`.
 
 {% endhint %}
