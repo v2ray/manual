@@ -12,17 +12,28 @@ V2Ray имеет следующие параметры командной стр
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
-Где:
+> `-version`
 
-* `-version`: Вывести версию V2Ray, затем завершить работу.
-* `-test`: Считать и проверить настройки, вывести найденные ошибки, затем завершить работу.
-* `-config`: URI файла с настройками. Возможные варианты: 
-  * Path to the local config file. May be a relative path or absolute path.
-  * `"stdin:"`: Indicates V2Ray to read configuration from standard input. Caller must close stdin after writing out configuration.
-  * Value begins with `http://` or `https://` (lowercase): V2Ray tries to load configuration from the remote address.
-* `-format`: Формат файла с настройками. Возможные варианты: 
-  * `json`: формат JSON.
-  * `pb` или `protobuf`: формат Protobuf.
+Print the version of V2Ray only, and then exit.
+
+> `-test`
+
+Test configuration, output any errors and then exit.
+
+> `-config`:
+
+URI of the configuration. Avilable formats are:
+
+* Path to the local config file. May be a relative path or absolute path.
+* `"stdin:"`: Indicates V2Ray to read configuration from standard input. Caller must close stdin after writing out configuration.
+* Value begins with `http://` or `https://` (lowercase): V2Ray tries to load configuration from the remote address.
+
+> `-format`
+
+Configuration format. Choices are:
+
+* `json`: JSON format.
+* `pb` or `protobuf`: Protobuf format.
 
 {% hint style='info' %}
 
@@ -48,8 +59,11 @@ To verify the signature of a V2Ray binary.
 
 Options:
 
-* `sig`：Путь к файлу с подписью. Значение по умолчанию - ".sig"-файл в проверяемом пути.
-* Первый аргумент: файл для проверки.
+> `sig`
+
+Path to signature file. Default value is the ".sig" file to the path to be verified.
+
+> First argument: the file to be verified.
 
 ### Config
 
