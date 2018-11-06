@@ -30,13 +30,13 @@ refen: configuration/protocols/shadowsocks
 
 ```javascript
 {
-  "ایمیل": "love@v2ray.com"،
-  "روش": "aes-128-cfb"،
-  "رمز عبور": "رمز"،
-  "سطح": 0،
-  "ota": درست است
-  "شبکه": "tcp"
-)
+  "email": "love@v2ray.com",
+  "method": "aes-128-cfb",
+  "password": "password",
+  "level": 0,
+  "ota": true,
+  "network": "tcp"
+}
 ```
 
 > `ایمیل`: رشته
@@ -71,14 +71,14 @@ refen: configuration/protocols/shadowsocks
 
 ```javascript
 {
-  "سرورها": [
+  "servers": [
     {
-      'ایمیل': "love@v2ray.com"،
-      "آدرس": "127.0.0.1"،
-      "پورت": 1234،
-      "روش": "روش"،
-      "password": "password"،
-      "ota": false،
+      "email": "love@v2ray.com",
+      "address": "127.0.0.1",
+      "port": 1234,
+      "method": "method",
+      "password": "password",
+      "ota": false,
       "level": 0
     }
   ]
@@ -111,12 +111,12 @@ refen: configuration/protocols/shadowsocks
 
 ```javascript
 {
-  "ایمیل": "love@v2ray.com"،
-  "آدرس": "127.0.0.1"،
-  "پورت": 1234،
-  "روش": "加密 方式"،
-  "رمز عبور": "密码" ،
-  "ota": false،
+  "email": "love@v2ray.com",
+  "address": "127.0.0.1",
+  "port": 1234,
+  "method": "加密方式",
+  "password": "密码",
+  "ota": false,
   "level": 0
 }
 ```
