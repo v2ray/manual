@@ -48,7 +48,7 @@ cp -r ./de/_book/* ${TARGET_DIR}/de/
 mkdir ${TARGET_DIR}/ru/
 cp -r ./ru/_book/* ${TARGET_DIR}/ru/
 mkdir ${TARGET_DIR}/ko/
-cp -r ./ru/_book/* ${TARGET_DIR}/ko/
+cp -r ./ko/_book/* ${TARGET_DIR}/ko/
 cp -r ./_dev/* ${TARGET_DIR}/
 cp CNAME ${TARGET_DIR}/
 cp robots.txt ${TARGET_DIR}/
