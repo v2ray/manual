@@ -31,6 +31,12 @@ refen: welcome/faq
 * 如果你使用 Linux 并开启了 systemd，可以使用 `journalctl -u v2ray` 查看 V2Ray 退出时的日志；
 * 一般情况可以手动运行 `v2ray -config=<config-file> -test` 来查看错误信息；
 
+### 兼容性保证
+
+* 配置文件向后兼容至少一个大版本，即 V2Ray 4.x 可以正常加载 3.x 的配置文件。
+* 所有基于 Protobuf 的通信协议，如 Api，向后兼容至少一个大版本。
+* 所有基于二进制的通信协议，如 Shadowsocks 和 VMess。当服务器版本不低于客户端版本时，保持永久兼容；当客户端版本超过服务器版本时，保持至少 12 个小版本的兼容性。
+
 ## V2Ray 错误信息
 
 ### VMess: Invalid User
