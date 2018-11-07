@@ -2,7 +2,7 @@
 refcn: chapter_02/protocols/blackhole
 refen: configuration/protocols/blackhole
 ---
-# سیاه چاله
+# Blackhole
 
 * نام: `blackhole`
 * نوع: خروجی
@@ -19,7 +19,7 @@ Blackhole یک پروتکل برای ارتباطات خروجی است. این 
 }
 ```
 
-> `پاسخ`: [ResponseObject](#responseobject)
+> `response`: [ResponseObject](#responseobject)
 
 پاسخ از پیش تعیین شده Blockhole بلافاصله برای هر ارتباطی که به آن انتقال داده می شود (اگر داده شده است) داده شود و اتصال را متوقف کند.
 
@@ -31,7 +31,7 @@ Blackhole یک پروتکل برای ارتباطات خروجی است. این 
 }
 ```
 
-> `نوع`: "هیچ" | "http"
+> `type`: "none" | "http"
 
 نوع پاسخ، گزینه های موجود عبارتند از:
 
