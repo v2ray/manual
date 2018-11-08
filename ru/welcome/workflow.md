@@ -17,11 +17,11 @@ D --> C;
 A --> E(Обычный сайт);
 ```
 
-V2Ray supports connections from multiple devices at the same time, with optionally different protocols. In the mean time, the local routing mechanism can smartly proxy necessary connections only.
+V2Ray поддерживает соединения с нескольких устройств с различными протоколами одновременно. В то же время механизм локальной маршрутизации может грамотно проксировать только необходимые соединения.
 
 ## Мост из серверов
 
-In the case you don't want configuration V2Ray on each of your devices, you may setup a server within the firewall, and then all traffic go through that server. The server does routing itself.
+Если вам не хочется настраивать V2Ray на каждом устройстве, вы можете настроить сервер до файрвола, весь трафик будет проходить через этот сервер. Сервер сам будет маршрутизировать соединения.
 
 ```mermaid
 graph LR;
@@ -35,7 +35,7 @@ D --> F(Обычный сайт);
 
 ## Внутреннее устройство
 
-The internal of V2Ray looks like below. It supports multiple inbound proxies, and multiple outbounds. Each of them are independent from others.
+Изнутри V2Ray выглядит как показано ниже. Он поддерживает несколько входящих прокси-соединений и несколько исходящих. Каждое из них независимо от других.
 
 ```mermaid
 graph LR;
