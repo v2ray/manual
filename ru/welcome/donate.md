@@ -24,7 +24,7 @@ Thank you for loving and supporting Project V. For every donation, we will send 
 
 {% hint style='danger' %}
 
-Please kindly notice that donation less than 1 USD is meaningless as Paypal charges high service fee.
+С надеждой на понимание предупреждаем, что переводы меньше одного доллара не имеют смысла из-за большой комиссии PayPal.
 
 {% endhint %}
 
@@ -52,7 +52,7 @@ Due to the anonymity natural of cryptocurrenty, please send us an email before y
 
 {% endhint %}
 
-## Thank you for your support
+## Благодарим вас за поддержку
 
 * For any doantion worth more than $50, you may choose one of the following: 
   * Your name or your company log on our front page for one month;
