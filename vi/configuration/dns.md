@@ -43,10 +43,7 @@ Các truy vấn DNS được chuyển tiếp bởi dịch vụ DNS này cũng s�
 
 Một danh sách các địa chỉ IP tĩnh. Mỗi mục có tên miền là khóa và địa chỉ IP làm giá trị. Nếu truy vấn DNS nhắm mục tiêu một trong các tên miền trong danh sách này, IP tương ứng sẽ được trả về ngay lập tức và truy vấn DNS sẽ không được chuyển tiếp.
 
-Định dạng của miền là:
-
-* Chẳng hạn như `"v2ray.com"`: Miền cần được giải quyết phải bằng với miền này.
-* Chẳng hạn như miền " `: v2ray.com"`: Miền cần được giải quyết có thể là miền này hoặc bất kỳ tên miền phụ nào của miền đó.
+The format of domains is the same as it in [routing](routing.md#ruleobject).
 
 > `servers`: \[string | [ServerObject](#serverobject) | "localhost" \]
 
