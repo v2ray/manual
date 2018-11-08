@@ -32,7 +32,7 @@ V2Ray доступен на следующих платформах:
 
 Существует два способа проверки пакетов.
 
-1. Each `.zip` file has a corresponding `.dgst` file for SHA digests.
+1. Каждый `.zip`-файл имеет одноименный `.dgst`-файл с контрольной суммой SHA.
 2. Файл подписи GPG для исполняемых файлов (v2ray / v2ray.exe) можно найти в файле v2ray.sig (или v2ray.exe.sig) в том же пакете. Открытый ключ находится [в хранилище](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
 ## Установка в Windows и Mac OS {#install-windows}
