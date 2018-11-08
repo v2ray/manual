@@ -43,10 +43,7 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
 
 A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
 
-The format of the domain is:
-
-* `"v2ray.com"`: 해결할 도메인이이 도메인과 같아야합니다.
-* `"domain : v2ray.com"`: 해결할 도메인은이 도메인 또는 그 하위 도메인이 될 수 있습니다.
+The format of domains is the same as it in [routing](routing.md#ruleobject).
 
 > `서버`: \ [string | [ServerObject](#serverobject) | "localhost"\]
 
