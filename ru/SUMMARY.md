@@ -27,7 +27,7 @@
   * [Мультиплексирование](configuration/mux.md)
   * [API](configuration/api.md)
   * [Статистика](configuration/stats.md)
-  * [Reverse](configuration/reverse.md)
+  * [Обратный прокси](configuration/reverse.md)
   * [Доставка](configuration/transport.md) 
     * [TCP](configuration/transport/tcp.md)
     * [mKCP](configuration/transport/mkcp.md)
