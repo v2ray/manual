@@ -14,11 +14,11 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 
 > `-version`
 
-Print the version of V2Ray only, and then exit.
+Вывести версию V2Ray, затем завершить работу.
 
 > `-test`
 
-Test configuration, output any errors and then exit.
+Считать и проверить настройки, вывести найденные ошибки, затем завершить работу.
 
 > `-config`
 
