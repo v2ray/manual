@@ -18,8 +18,6 @@ Dưới đây là cấu trúc cấp cao nhất của cấu hình. Mỗi phần c
   "policy": {},
   "inbounds": [],
   "outbounds": [],
-  "inboundDetour": [],
-  "outboundDetour": [],
   "transport": {}
 }
 ```
