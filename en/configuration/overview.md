@@ -19,8 +19,6 @@ Below is the top level structure of the configuration. Each section has its own 
   "policy": {},
   "inbounds": [],
   "outbounds": [],
-  "inboundDetour": [],
-  "outboundDetour": [],
   "transport": {}
 }
 ```
