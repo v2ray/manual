@@ -30,7 +30,7 @@ An array in which each entry is an account. It is empty by default. If not empty
 
 > `allowTransparent`: true | false
 
-If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.
+Если установлено значение `true`, все полученные HTTP-запросы, будут проксированы, включая запрос без прокси.
 
 > `userLevel`: number
 
@@ -55,7 +55,7 @@ password for HTTP authentication.
 
 {% hint style='info' %}
 
-Use the following settings in Linux to use HTTP proxy in current session.
+Используйте следующие настройки в Linux для использования прокси-сервера HTTP в текущем сеансе.
 
 * `export http_proxy=http://127.0.0.1:8080/` (Адрес должен быть изменён на требуемый)
 * `export https_proxy=$http_proxy`
