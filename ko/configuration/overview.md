@@ -18,8 +18,6 @@ V2Ray는 아래와 같이 서버 측과 클라이언트 측의 구성이 동일�
   "policy": {},
   "inbounds": [],
   "outbounds": [],
-  "inboundDetour": [],
-  "outboundDetour": [],
   "transport": {}
 }
 ```

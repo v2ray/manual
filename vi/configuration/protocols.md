@@ -10,6 +10,7 @@ V2Ray hỗ trợ các giao thức sau. Mỗi giao thức có thể là giao th�
 * [Cửa Dokodemo](protocols/dokodemo.md)
 * [Sự tự do](protocols/freedom.md)
 * [HTTP](protocols/http.md)
+* [MTProto](protocols/mtproto.md)
 * [Shadowsocks](protocols/shadowsocks.md)
-* [Vớ](protocols/socks.md)
+* [Socks](protocols/socks.md)
 * [VMess](protocols/vmess.md)

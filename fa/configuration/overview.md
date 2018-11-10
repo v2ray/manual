@@ -18,8 +18,6 @@ V2Ray همان ساختار پیکربندی را بین طرف سرور و سم
   "policy": {},
   "inbounds": [],
   "outbounds": [],
-  "inboundDetour": [],
-  "outboundDetour": [],
   "transport": {}
 }
 ```
