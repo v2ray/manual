@@ -4,7 +4,7 @@ refen: configuration/transport
 ---
 # Cài đặt Giao thông
 
-Giao thông vận tải là cách V2Ray gửi và nhận dữ liệu từ các đồng nghiệp của nó. Trách nhiệm của một phương tiện vận chuyển là chuyển dữ liệu một cách đáng tin cậy đến một người ngang hàng. Thông thường một kết nối có các kết nối phù hợp trên cả hai điểm cuối. Ví dụ, nếu một V2Ray outbound sử dụng WebSocket như là vận chuyển của nó, thì nó nói đến cũng phải sử dụng WebSocket, nếu không kết nối không thể được thiết lập.
+Giao thông vận tải là cách V2Ray gửi và nhận dữ liệu từ các đồng nghiệp của nó. The responsibility of a transport is to reliably transfer data to a peer. Thông thường một kết nối có các kết nối phù hợp trên cả hai điểm cuối. Ví dụ, nếu một V2Ray outbound sử dụng WebSocket như là vận chuyển của nó, thì nó nói đến cũng phải sử dụng WebSocket, nếu không kết nối không thể được thiết lập.
 
 Cài đặt vận chuyển chia thành hai phần: cài đặt chung và mỗi cài đặt proxy. Cài đặt từng proxy xác định cách mỗi proxy riêng xử lý dữ liệu của nó, trong khi cài đặt chung cho tất cả proxy. Thông thường, các proxy gửi đến và gửi đi giữa peer peer phải có cùng các thiết lập truyền tải. Khi proxy không có cài đặt truyền tải, cài đặt chung sẽ được áp dụng.
 
