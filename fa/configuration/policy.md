@@ -91,6 +91,17 @@ When set to `true`, V2Ray enables stat counter to downlink traffic for all users
 
 Size of internal buffer per connection, in kilo-bytes. Default value is `10240`. When it is set to `0`, the internal buffer is disabled.
 
+Default value (V2Ray 4.4+):
+
+* `0` on ARM, MIPS and MIPSLE.
+* `4` on ARM64, MIPS64 and MIPS64LE.
+* `512` on other platforms.
+
+Default value (V2Ray 4.3-):
+
+* `16` on ARM, ARM64, MIPS, MIPS64, MIPSLE and MIPS64LE.
+* `2048` on other platforms.
+
 {% hint style='info' %}
 
 `bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).

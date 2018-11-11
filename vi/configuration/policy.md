@@ -91,9 +91,20 @@ Khi được đặt thành `true`, V2Ray cho phép bộ đếm stat truy cập �
 
 Kích thước của bộ đệm trong mỗi kết nối, tính bằng kilo-byte. Giá trị mặc định là `10240`. Khi nó được đặt thành `0`, bộ đệm bên trong bị tắt.
 
+Default value (V2Ray 4.4+):
+
+* `0` on ARM, MIPS and MIPSLE.
+* `4` on ARM64, MIPS64 and MIPS64LE.
+* `512` on other platforms.
+
+Default value (V2Ray 4.3-):
+
+* `16` on ARM, ARM64, MIPS, MIPS64, MIPSLE and MIPS64LE.
+* `2048` on other platforms.
+
 {% hint style='info' %}
 
-`bufferSize` ghi đè `thiết lập v2ray.ray.buffer.size` trong [biến env](env.md#cache-size-per-connection).
+`bufferSize` overrides `v2ray.ray.buffer.size` settings in [env variables](env.md#cache-size-per-connection).
 
 {% endhint %}
 
@@ -108,8 +119,8 @@ Kích thước của bộ đệm trong mỗi kết nối, tính bằng kilo-byte
 
 > `statsInboundUplink`: true | false
 
-Khi được đặt thành `true`, V2Ray cho phép bộ đếm stat cho tất cả lưu lượng truy cập đường lên trong tất cả các proxy gửi đến.
+When set to `true`, V2Ray enables stat counter for all uplink traffic in all inbound proxies.
 
 > `statsInboundDownlink`: true | false
 
-Khi được đặt thành `true`, V2Ray cho phép bộ đếm stat cho tất cả lưu lượng truy cập đường xuống trong tất cả các proxy gửi đến.
+When set to `true`, V2Ray enables stat counter for all downlink traffic in all inbound proxies.
