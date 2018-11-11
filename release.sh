@@ -16,7 +16,7 @@ ZONES=("us-central1-b" "us-central1-c" "europe-west1-d" "us-east1-d")
 
 for zone in "${ZONES[@]}"; do
 gcloud compute instances create "v2raycom-${RAND}" \
-    --machine-type=n1-highcpu-2 \
+    --machine-type=n1-standard-1 \
     --metadata-from-file=startup-script=${DIR}/deploy.sh \
     --zone=${zone} \
     --project ${PROJECT}

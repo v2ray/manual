@@ -87,7 +87,18 @@ V2Ray 系统的策略
 
 > `bufferSize`: number
 
-每个连接的内部缓存大小。单位为 kB。默认值为`10240`。当值为`0`时，内部缓存被禁用。
+每个连接的内部缓存大小。单位为 kB。当值为`0`时，内部缓存被禁用。
+
+默认值 (V2Ray 4.4+):
+
+* 在 ARM、MIPS、MIPSLE 平台上，默认值为`0`。
+* 在 ARM64、MIPS64、MIPS64LE 平台上，默认值为`4`。
+* 在其它平台上，默认值为`512`。
+
+默认值 (V2Ray 4.3-):
+
+* 在 ARM、MIPS、MIPSLE、ARM64、MIPS64、MIPS64LE 平台上，默认值为`16`。
+* 在其它平台上，默认值为`2048`。
 
 {% hint style='info' %}
 `bufferSize` 选项会覆盖[环境变量](env.md#buffer-size)中`v2ray.ray.buffer.size`的设定。
