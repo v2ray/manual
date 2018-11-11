@@ -13,31 +13,33 @@ V2Ray đọc các biến môi trường sau đây.
 * Giá trị mặc định: 2 trên x86, amd64, arm64 và s390x. Bộ nhớ cache này bị tắt trên các nền tảng khác.
 * Giá trị đặc biệt: 0 cho kích thước bộ nhớ cache không giới hạn
 
-Đối với mỗi kết nối, khi có sự khác biệt về tốc độ giữa lưu lượng vào và ra, V2Ray sẽ lưu một số dữ liệu để có thông lượng lớn hơn. Cài đặt này kiểm soát kích thước của bộ nhớ cache. Bộ nhớ cache càng lớn thì hiệu suất càng tốt.
+**Deprecated. Use bufferSize in Policy.**
+
+For each connection, when there is a difference in speed between inbound and outbound traffic, V2Ray will cache some data for larger throughput. This setting controls the size of the cache. The larger the cache, the better the performance.
 
 ## Vị trí của tài sản V2Ray {#asset}
 
 * Tên: `v2ray.location.asset` hoặc `V2RAY_LOCATION_ASSET`
 * Giá trị mặc định: Cùng thư mục nơi v2ray là.
 
-Biến này chỉ định thư mục chứa tệp geoip.dat và geosite.dat.
+This variable specifies a directory where geoip.dat and geosite.dat files are.
 
 ## Vị trí của cấu hình V2Ray {#config}
 
 * Tên: `v2ray.location.config` hoặc `V2RAY_LOCATION_CONFIG`
 * Giá trị mặc định: Cùng thư mục nơi v2ray là.
 
-Biến này chỉ định một thư mục có config.json.
+This variable specifies a directory where config.json is.
 
 ## Đọc phân tán {#scatter-io}
 
 * Tên: `v2ray.buf.readv` hoặc `V2RAY_BUF_READV`
 * Giá trị mặc định: `auto`
 
-V2Ray 3.37 sử dụng Scatter / Gather IO. Tính năng này sẽ sử dụng ít bộ nhớ hơn khi tốc độ kết nối vượt quá 100 MByte / giây. Các giá trị có thể là: `auto`, `enable` và `disable`.
+V2Ray 3.37 uses Scatter/Gather IO. This feature will use less memory when connection speed is over 100 MByte/s. Possible values are: `auto`, `enable` and `disable`.
 
 * `bật`: Bật đọc phân tán.
 * `tắt`: Tắt đọc phân tán.
 * `auto`: Chỉ kích hoạt trên Windows, MacOS, Linux khi CPU là x86, AMD64 hoặc s390x.
 
-Khi tốc độ kết nối nhỏ hơn 100 MByte / s, cho dù điều này có được bật hay không, không có sự khác biệt rõ ràng về mức sử dụng bộ nhớ.
+When connection speed is less than 100 MByte/s, no matter whether this is enabled or not, there is no obvious difference in terms of memory usage.
