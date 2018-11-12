@@ -4,6 +4,10 @@ refen: welcome/versions
 ---
 # Version History
 
+## 2018.11.16 v4.4
+
+* Load balancer rules in routing.
+
 ## 2018.11.05 v4.1
 
 * JSON configuration format changes. Old format is still suported.
