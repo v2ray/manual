@@ -13,7 +13,8 @@ V2Ray دارای مکانیزم مسیریابی داخلی است. این ار�
 ```javascript
 {
   "domainStrategy": "AsIs",
-  "rules": []
+  "rules": [],
+  "balancers": []
 }
 ```
 
@@ -29,7 +30,11 @@ V2Ray دارای مکانیزم مسیریابی داخلی است. این ار�
 
 > `قوانین`: \ [[RuleObject](#ruleobject)\]
 
-آرایه ای از قوانین برای هر اتصال ورودی، V2Ray این قواعد را از بالا به پایین یک به یک می کند. اگر یک قاعا در حال اجرا است، اتصال به `outboundTag` از قانون هدایت می شود.
+An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` (or `balancerTag`, V2Ray 4.4+) of the rule.
+
+> `balancers`: \[ [BalancerObject](#balancerobject) \]
+
+(V2Ray 4.4+) An array of load balancers. When a routing rule points to a load balancer, the balancer will select an outbound based on configuration. Then traffic will be sent to that outbound.
 
 ### RuleObject
 
@@ -60,23 +65,24 @@ V2Ray دارای مکانیزم مسیریابی داخلی است. این ار�
     "tag-vmess"
   ],
   "protocol":["http", "tls", "bittorrent"],
-  "outboundTag": "direct"
+  "outboundTag": "direct",
+  "balancerTag": "balancer"
 }
 ```
 
 {% hint style='info' %}
 
-هنگامی که چندین فیلد مشخص می شود، این فیلدها باید همه راضی باشند تا قوانین موثر باشند. اگر شما نیاز به هر دو `دامنه` و `ip` قوانین، به احتمال زیاد شما نیاز به آنها را به قوانین جداگانه.
+When multiple fields are specified, these fields have to be all satisfied, in order to make the rule effective. If you need both `domain` and `ip` rules, it is highly likely you need put them into separate rules.
 
 {% endhint %}
 
-> `نوع`: "فیلد"
+> `type`: "field"
 
-تنها مقدار معتبر در حال حاضر `"میدان"`.
+The only valid value for now is `"field"`.
 
-> `دامنه`: \ [رشته \]
+> `domain`: \[ string \]
 
-مجموعه ای از حوزه ها فرمت های موجود عبارتند از:
+An array of domains. Available formats are:
 
 * متن ساده: اگر این رشته با هر بخش از دامنه هدفمندی منطبق باشد، این قانون به عهده می گیرد. مثال: rule `"sina.com"` مطابقت دامنه `"sina.com"`، `"sina.com.cn"` و `"www.sina.com"`، اما نه `"sina.cn"`.
 * عبارت منظم: شروع با `"regexp:"`، بقیه یک عبارت منظم است. هنگامی که Regexp با هدف دامنه مطابقت می کند، این قانون به اجرا در می آید. مثال: rule `"regexp: \\. goo. * \\. com $"` برابر `"www.google.com"` و `"fonts.googleapis.com"`، اما نه `"google.com"`.
@@ -86,9 +92,9 @@ V2Ray دارای مکانیزم مسیریابی داخلی است. این ار�
 * مقدار ویژه `"geosite: speedtest"` (V2Ray 3.32+): لیستی از سرورهای عمومی speedtest.net.
 * دامنه از فایل: مانند `"ext: file: tag"`. مقدار باید با `ext:` (کوچک) شروع شود و با نام فایل و تگ همراه است. فایل در [منابع دایرکتوری](env.md#location-of-v2ray-asset)دارد و دارای همان قالب `geosite.dat`. برچسب باید در فایل موجود باشد.
 
-> `IP`: \ [رشته \]
+> `ip`: \[string\]
 
-مجموعه ای از محدوده IP. هنگامی که IP هدفگذاری در یکی از محدوده ها قرار دارد، این قانون به اجرا در می آید. فرمت های موجود:
+An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. Available formats:
 
 * IP: مانند `"127.0.0.1"`.
 * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): مانند `"127.0.0.0/8"`.
@@ -98,38 +104,63 @@ V2Ray دارای مکانیزم مسیریابی داخلی است. این ار�
 
 {% hint style='info' %}
 
-`"ext: geoip.dat: cn"` معادل `"geoip: cn"`.
+`"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
 
 {% endhint %}
 
-> `پورت`: شماره | رشته
+> `port`：number | string
 
-محدوده بندر فرمت ها عبارتند از:
+Port range. Formats are:
 
 * `"ab"`: هر دو `a` و `b` عدد صحیح مثبت هستند و کمتر از 65536. هنگامی که پورت هدف گیری در [`a`، `b`)، این قانون در حال اجرا است.
 
 * `a`: `a` یک عدد صحیح مثبت است و کمتر از 65536. هنگامی که پورت هدف `و`، این قانون به اجرا در می آید.
 
-> `شبکه`: "tcp" | "udp" | "tcp، udp"
+> `network`: "tcp" | "udp" | "tcp,udp"
 
-هنگامی که اتصال در شبکه انتخاب شده است، این قانون اثر می گذارد.
+When the connection has in the chosen network, this rule take effect.
 
-> `منبع`: \ [رشته \]
+> `source`: \[string\]
 
-مجموعه ای از محدوده IP. همان فرمت به عنوان `آی فون`. هنگامی که منبع IP از اتصال در محدوده IP است، این قانون به اجرا در می آید.
+An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
 
-> `کاربر`: \ [رشته \]
+> `user`: \[string\]
 
-آرایه ای از آدرس ایمیل هنگامی که اتصال ورودی از یک حساب کاربر از آدرس ایمیل استفاده می کند، این قانون به اجرا در می آید. در حال حاضر Shadowsocks و VMess پشتیبانی از کاربر با ایمیل.
+An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now Shadowsocks and VMess support user with email.
 
-> `inboundTag`: \ [رشته \]
+> `inboundTag`: \[string\]
 
-آرایه ای از رشته به عنوان برچسب های پروکسی درون گیرنده. هنگامی که اتصال از یکی از پروکسی های ورودی تعیین شده مشخص می شود، این قانون به اجرا در می آید.
+An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
 
-> `پروتکل`: \ ["http" | "TLS" | "bittorrent" \]
+> `protocol`: \[ "http" | "tls" | "bittorrent" \]
 
-آرایه ای از رشته به عنوان نوع پروتکل. هنگامی که اتصال از یکی از پروتکل ها استفاده می کند، این قانون به اجرا در می آید. برای شناسایی پروتکل اتصال، باید `گزینه sniffing` را در پروکسی ورودی فعال کنید.
+An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. To recognize the protocol of a connection, one must enable `sniffing` option in inbound proxy.
 
-> `outboundTag` رشته
+> `outboundTag` string
 
-[برچسب خروجی](protocols.md) که اتصال به آن ارسال می شود، اگر این قانون به اجرا درآید.
+[Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
+
+> `balancerTag`: string
+
+Tag of an load balancer. Then this rule takes effect, V2Ray will use the balancer to select an outbound. Either `outboundTag` or `balancerTag` must be specified. When both are specified, `outboundTag` takes priority.
+
+### BalancerObject
+
+Configuration for a load balancer. When a load balancer takes effective, it selects one outbound from matching outbounds. This outbound will be used for send out-going traffic.
+
+```javascript
+{
+  "tag": "balancer",
+  "selector": []
+}
+```
+
+> `tag`: string
+
+Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
+
+> `selector`: \[ string \]
+
+An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
+
+When multiple outbounds are selected, load balancer for now picks one final outbound at random.
