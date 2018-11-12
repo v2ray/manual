@@ -14,7 +14,8 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 ```javascript
 {
   "domainStrategy": "AsIs",
-  "rules": []
+  "rules": [],
+  "balancers": []
 }
 ```
 
@@ -30,7 +31,11 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 
 > `rules`: \[[RuleObject](#ruleobject)\]
 
-对应一个数组，数组中每个一个元素是一个规则。对于每一个连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接转发至它所指定的`outboundTag`。当没有匹配到任何规则时，流量默认由主出站协议发出。
+对应一个数组，数组中每个元素是一个规则。对于每一个连接，路由将根据这些规则依次进行判断，当一个规则生效时，即将这个连接转发至它所指定的`outboundTag`(或`balancerTag`，V2Ray 4.4+)。当没有匹配到任何规则时，流量默认由主出站协议发出。
+
+> `balancers`: \[ [BalancerObject](#balancerobject) \]
+
+(V2Ray 4.4+)一个数组，数组中每个元素是一个负载均衡器的配置。当一个规则指向一个负载均衡器时，V2Ray 会通过此负载均衡器选出一个出站协议，然后由它转发流量。
 
 ### RuleObject
 
@@ -61,7 +66,8 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
     "tag-vmess"
   ],
   "protocol":["http", "tls", "bittorrent"],
-  "outboundTag": "direct"
+  "outboundTag": "direct",
+  "balancerTag": "balancer"
 }
 ```
 
@@ -129,3 +135,28 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 > `outboundTag`: string
 
 对应一个[额外出站连接配置](02_protocols.md)的标识。
+
+> `balancerTag`: string
+
+对应一个负载均衡器的标识。`balancerTag`和`outboundTag`须二选一。当同时指定时，`outboundTag`生效。
+
+### BalancerObject
+
+负载均衡器配置。当一个负载均衡器生效时，它会从指定的出站协议中，按配置选出一个最合适的出站协议，进行流量转发。
+
+```javascript
+{
+  "tag": "balancer",
+  "selector": []
+}
+```
+
+> `tag`: string
+
+此负载均衡器的标识，用于匹配`RuleObject`中的`balancerTag`。
+
+> `selector`: \[ string \]
+
+一个字符串数组，其中每一个字符串将用于和出站协议标识的前缀匹配。在以下几个出站协议标识中：`[ "a", "ab", "c", "ba" ]`，`"selector": ["a"]`将匹配到`[ "a", "ab" ]`。
+
+如果匹配到多个出站协议，负载均衡器目前会从中随机选出一个作为最终的出站协议。

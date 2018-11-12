@@ -14,7 +14,8 @@ V2Ray has an internal routing mechanism. It routes inbound connections to variou
 ```javascript
 {
   "domainStrategy": "AsIs",
-  "rules": []
+  "rules": [],
+  "balancers": []
 }
 ```
 
@@ -30,7 +31,11 @@ Domain resolution strategy. Choices are:
 
 > `rules`: \[[RuleObject](#ruleobject)\]
 
-An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` of the rule.
+An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` (or `balancerTag`, V2Ray 4.4+) of the rule.
+
+> `balancers`: \[ [BalancerObject](#balancerobject) \]
+
+(V2Ray 4.4+) An array of load balancers. When a routing rule points to a load balancer, the balancer will select an outbound based on configuration. Then traffic will be sent to that outbound.
 
 ### RuleObject
 
@@ -61,7 +66,8 @@ An array of rules. For each inbound connection, V2Ray tries these rules from top
     "tag-vmess"
   ],
   "protocol":["http", "tls", "bittorrent"],
-  "outboundTag": "direct"
+  "outboundTag": "direct",
+  "balancerTag": "balancer"
 }
 ```
 
@@ -134,3 +140,28 @@ An array of string as protocol types. When the connection uses one of the protoc
 > `outboundTag` string
 
 [Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
+
+> `balancerTag`: string
+
+Tag of an load balancer. Then this rule takes effect, V2Ray will use the balancer to select an outbound. Either `outboundTag` or `balancerTag` must be specified. When both are specified, `outboundTag` takes priority.
+
+### BalancerObject
+
+Configuration for a load balancer. When a load balancer takes effective, it selects one outbound from matching outbounds. This outbound will be used for send out-going traffic.
+
+```javascript
+{
+  "tag": "balancer",
+  "selector": []
+}
+```
+
+> `tag`: string
+
+Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
+
+> `selector`: \[ string \]
+
+An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
+
+When multiple outbounds are selected, load balancer for now picks one final outbound at random.
