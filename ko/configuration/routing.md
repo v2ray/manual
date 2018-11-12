@@ -13,7 +13,8 @@ V2Ray는 내부 라우팅 메커니즘을 가지고 있습니다. 규칙에 따�
 ```javascript
 {
   "domainStrategy": "AsIs",
-  "rules": []
+  "rules": [],
+  "balancers": []
 }
 ```
 
@@ -29,7 +30,11 @@ V2Ray는 내부 라우팅 메커니즘을 가지고 있습니다. 규칙에 따�
 
 > `규칙`: \ [[RuleObject](#ruleobject)\]
 
-규칙의 배열. 각 인바운드 연결에 대해 V2Ray는 이러한 규칙을 하나씩 위에서 아래로 시도합니다. 규칙이 적용되면 연결은 규칙의 `outboundTag` 로 라우팅됩니다.
+An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` (or `balancerTag`, V2Ray 4.4+) of the rule.
+
+> `balancers`: \[ [BalancerObject](#balancerobject) \]
+
+(V2Ray 4.4+) An array of load balancers. When a routing rule points to a load balancer, the balancer will select an outbound based on configuration. Then traffic will be sent to that outbound.
 
 ### RuleObject
 
@@ -60,7 +65,8 @@ V2Ray는 내부 라우팅 메커니즘을 가지고 있습니다. 규칙에 따�
     "tag-vmess"
   ],
   "protocol":["http", "tls", "bittorrent"],
-  "outboundTag": "direct"
+  "outboundTag": "direct",
+  "balancerTag": "balancer"
 }
 ```
 
@@ -70,11 +76,11 @@ When multiple fields are specified, these fields have to be all satisfied, in or
 
 {% endhint %}
 
-> `유형`: "필드"
+> `type`: "field"
 
 The only valid value for now is `"field"`.
 
-> `도메인`: \ [string \]
+> `domain`: \[ string \]
 
 An array of domains. Available formats are:
 
@@ -86,7 +92,7 @@ An array of domains. Available formats are:
 * 특별 값 `"geosite : speedtest"` (V2Ray 3.32+) : speedtest.net의 모든 공용 서버 목록.
 * 파일에서 도메인 : `"ext : file : tag"와 같은`. 값은 `ext :` (소문자)로 시작해야하며 그 다음에 파일 이름과 태그가 와야합니다. 파일은 [리소스 디렉토리](env.md#location-of-v2ray-asset)에 저장되며 `geosite.dat와 동일한 형식을가집니다.`. 태그는 파일에 존재해야합니다.
 
-> `ip`: \ [string \]
+> `ip`: \[string\]
 
 An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. Available formats:
 
@@ -102,7 +108,7 @@ An array of IP ranges. When the targeting IP is in one of the ranges, this rule 
 
 {% endhint %}
 
-> `포트`: 번호 | 끈
+> `port`：number | string
 
 Port range. Formats are:
 
@@ -110,26 +116,51 @@ Port range. Formats are:
 
 * `a`: `a` 은 양의 정수이고 65536 미만입니다. 대상 포트가 ``일 때이 규칙이 적용됩니다.
 
-> `네트워크`: "tcp"| "udp"| "tcp, udp"
+> `network`: "tcp" | "udp" | "tcp,udp"
 
 When the connection has in the chosen network, this rule take effect.
 
-> `소스`: \ [string \]
+> `source`: \[string\]
 
 An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
 
-> `사용자`: \ [string \]
+> `user`: \[string\]
 
 An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now Shadowsocks and VMess support user with email.
 
-> `인바운드 태그`: \ [문자열 \]
+> `inboundTag`: \[string\]
 
 An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
 
-> `프로토콜`: \ [ "http"| "tls"| "비트 토 런트"\]
+> `protocol`: \[ "http" | "tls" | "bittorrent" \]
 
 An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. To recognize the protocol of a connection, one must enable `sniffing` option in inbound proxy.
 
-> `outboundTag` 문자열
+> `outboundTag` string
 
 [Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
+
+> `balancerTag`: string
+
+Tag of an load balancer. Then this rule takes effect, V2Ray will use the balancer to select an outbound. Either `outboundTag` or `balancerTag` must be specified. When both are specified, `outboundTag` takes priority.
+
+### BalancerObject
+
+Configuration for a load balancer. When a load balancer takes effective, it selects one outbound from matching outbounds. This outbound will be used for send out-going traffic.
+
+```javascript
+{
+  "tag": "balancer",
+  "selector": []
+}
+```
+
+> `tag`: string
+
+Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
+
+> `selector`: \[ string \]
+
+An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
+
+When multiple outbounds are selected, load balancer for now picks one final outbound at random.
