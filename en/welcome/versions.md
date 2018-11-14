@@ -8,6 +8,7 @@ refen: welcome/versions
 ## 2018.11.16 v4.4
 
 * Load balancer rules in routing.
+* Memory usage gets optimized.
 
 ## 2018.11.05 v4.1
 
