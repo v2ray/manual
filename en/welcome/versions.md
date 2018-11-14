@@ -5,6 +5,8 @@ refen: welcome/versions
 
 # Version History
 
+This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
+
 ## 2018.11.16 v4.4
 
 * Load balancer rules in routing.
