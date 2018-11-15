@@ -32,6 +32,7 @@ refen: ui_client/service
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Thị trường OTC giao dịch BTC, ETH, BCH, USDT.
 * [Binance](https://www.binance.com/?ref=35382451): Thị trường giao dịch đối với tiền điện tử.
 * [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Thị trường giao dịch đối với tiền điện tử.
+* [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Online crypto currency wallet
 
 ## Thử vận ​​may của bạn
 
