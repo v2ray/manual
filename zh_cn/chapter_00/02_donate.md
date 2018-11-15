@@ -27,9 +27,9 @@ Project V 是一个非营利项目，它的所有代码均公开，软件可以�
 
 ## 极客方式 {#crypto}
 
-* 比特币 (BTC): `15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW`
-* 比特现金 (BCH): `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
-* 以太坊 (ETH): `0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e`
+* 比特币 (BTC): [BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
+* 比特现金 (BCH): [BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
+* 以太坊 (ETH): [BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696)
   * 同时支持这些货币： OMG、REP、GNT、DGD
 * EOS: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
 * 莱特币 (LTC): `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
