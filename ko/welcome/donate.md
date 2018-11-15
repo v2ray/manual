@@ -30,9 +30,9 @@ Please kindly notice that donation less than 1 USD is meaningless as Paypal char
 
 ## 암호 해독 성 {#crypto}
 
-* 비트 코인 : `15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW`
-* Bitcoin 케이스 : `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
-* Ethereum : `0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e` 
+* Bitcoin: [BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
+* Bitcoin Cash: [BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
+* Ethereum : [BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696) 
   * 또한 다음 ERC20 토큰을 지원합니다. OMG, REP, GNT, DGD
 * EOS : `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
 * Litecoin : `LVdeH2HkCgGRs8ZEpan7fkAEbibi4McoR`
