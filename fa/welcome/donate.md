@@ -4,56 +4,77 @@ refen: welcome/donate
 ---
 # کمک مالی
 
-پروژه V یک پروژه غیر انتفاعی است. کد منبع و برنامه را می توان آزادانه (عمدتا) تحت مجوز MIT استفاده کرد. اگر این پروژه را دوست دارید، ممکن است یک فنجان قهوه بخرید.
+V2Ray is a nonprofit project. The source code and its release binary can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
 
-* استفاده از کمک های مالی نمی شود افشا شود.
-* کمک مالی شما هیچ ارتباط مستقیمی با توسعه و خدمات پروژه V ندارد.
+Your donation has no direct connection to Project V's development and service. Our development will not be influenced by your donation. However, we will send a thank-you email for every donor. If you wish not to receive such email, please leave a note in your donation.
 
-{% hint style='tip' %}
+For any doantion worth more than $50, you may choose one of the following:
 
-با تشکر از شما برای دوست داشتن و حمایت از پروژه V. برای هر کمک مالی، ما یک تایید به ایمیل شما ارسال می کنیم. لطفا ایمیل خود را در اهداء اگر بخواهید آن را دریافت کنید، یا به صراحت اعلام کنید تایید لازم نیست اگر این کار را نکنید.
-
-{% endhint %}
+* Your name or your company log shown on our front page for one month.
+* Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
 
 ## راه معمول {#usual-way}
 
-* [انتقال پی پال](https://www.paypal.me/ProjectV2Ray/25)
-* [پی پال با کارت اعتباری](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
-* [Patreon](https://www.patreon.com/v2ray)
-* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): ارسال به `love@v2ray.com`.
+> Paypal
 
-{% hint style='danger' %}
+You may donate through [internal Paypal transfer](https://www.paypal.me/ProjectV2Ray/25) or [credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
-لطفا توجه داشته باشید که کمک به کمتر از 1 دلار بی معنی است زیرا Paypal هزینه خدمات بالا را پرداخت می کند.
+Please kindly note that Paypal charges high service fee. Any donation less than 1 USD is meaningless.
 
-{% endhint %}
+> Patreon
+
+[Patreon](https://www.patreon.com/v2ray) is a platform for regular donations. You may use Patreon if you want to donate frequently.
+
+> Giftcard
+
+For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.com](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY) and then send to `love@v2ray.com`.
 
 ## Cryptocurrency {#crypto}
 
-* Bitcoin: [BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
-* Bitcoin Cash: [BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
-* اتریم: [BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696) 
-  * همچنین از این نشانه های ERC20 پشتیبانی می کند: OMG، REP، GNT، DGD
-* EOS: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
-* لیتوکین: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
-* Monero: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
-* موج دار شدن: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
-  * برچسب مورد نیاز نیست
+> Bitcoin
+
+Address: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
+
+View stats or QR-Code [at BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
+
+> Bitcoin Cash
+
+Address: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
+
+View stats or QR-Code [at BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
+
+> Ethereum
+
+Address: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
+
+View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). You may also send the following ERC20 tokens to this address: OMG, REP, GNT, DGD
+
+> EOS
+
+Address: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
+
+> Litecoin
+
+Address: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
+
+> Monero
+
+Address: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
+
+> Ripple
+
+Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
+
+Tag not required
 
 {% hint style='tip' %}
 
-[این صفحه](../ui_client/service.md) لیستی از سرویسهای معمولی را ارائه می دهد که در آن شما می توانید خرید اوراق بهادار را خریداری کنید.
+[This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies.
 
 {% endhint %}
 
 {% hint style='info' %}
 
-با توجه به نامحدود طبیعی cryptocurrenty، اگر میخواهید تأیید کنید، قبل از اهدای شما، یک ایمیل ارسال کنید.
+Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation.
 
 {% endhint %}
-
-## از حمایت شما متشکریم
-
-* برای هر عملیات ارزشمند بیش از 50 دلار، ممکن است یکی از موارد زیر را انتخاب کنید: 
-  * نام و نام خانوادگی خود را برای یک ماه وارد صفحه اصلی ما کنید
-  * کد موردنظر ما را تغییر دهید. محدودیت ها: هیچ کاربر روبرو functionlity تغییر نمی کند؛ بدون تغییر اسناد تغییر شما برای یک ماه باقی خواهد ماند
