@@ -4,56 +4,75 @@ refen: welcome/donate
 ---
 # Quyên góp
 
-Project V là một dự án phi lợi nhuận. Mã nguồn và chương trình có thể được sử dụng một cách tự do (chủ yếu) theo giấy phép MIT. Nếu bạn thích dự án này, bạn có thể mua cho chúng tôi một tách cà phê.
+V2Ray is a nonprofit project. The source code and its release binary can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
 
-* Việc sử dụng các khoản đóng góp sẽ không được tiết lộ.
-* Khoản đóng góp của bạn không có kết nối trực tiếp đến sự phát triển và dịch vụ của Project V.
+Your donation has no direct connection to Project V's development and service. Our development will not be influenced by your donation. However, we will send a thank-you email for every donor. If you wish not to receive such email, please leave a note in your donation.
 
-{% hint style='tip' %}
+For any doantion worth more than $50, you may choose one of the following:
 
-Cảm ơn bạn đã yêu thương và ủng hộ Dự án V. Đối với mọi khoản đóng góp, chúng tôi sẽ gửi xác nhận đến email của bạn. Vui lòng để lại email của bạn trong khoản đóng góp nếu bạn muốn nhận, hoặc nêu rõ rằng xác nhận đó là không cần thiết nếu bạn không nhận được.
-
-{% endhint %}
+* Your name or your company log shown on our front page for one month.
+* Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
 
 ## Cách thông thường {#usual-way}
 
-* [Chuyển khoản qua Paypal](https://www.paypal.me/ProjectV2Ray/25)
-* [Paypal với thẻ tín dụng](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
-* [Patreon](https://www.patreon.com/v2ray)
-* [Amazon Giftcard](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY): Gửi tới `love@v2ray.com`.
+> Paypal
 
-{% hint style='danger' %}
+You may donate through [internal Paypal transfer](https://www.paypal.me/ProjectV2Ray/25) or [credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
-Vui lòng lưu ý rằng khoản đóng góp dưới 1 USD là vô nghĩa khi Paypal tính phí dịch vụ cao.
+Please kindly note that Paypal charges high service fee. Any donation less than 1 USD is meaningless.
 
-{% endhint %}
+> Patreon
+
+[Patreon](https://www.patreon.com/v2ray) is a platform for regular donations. You may use Patreon if you want to donate frequently.
+
+> Giftcard
+
+For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.com](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY) and then send to `love@v2ray.com`.
 
 ## Tiền điện tử {#crypto}
 
-* Bitcoin: `15dQnC9yvX6JJXaFkP9MiRYvJS3FvsqvKW`
-* Trường hợp Bitcoin: `1NNRgpWYD8UX1bkcokCEoD6HHpaw98onxa`
-* Ethereum: `0x196b695ce3b44c4bd16fe43981bcc908a6a09c2e` 
-  * Cũng hỗ trợ các thẻ ERC20 này: OMG, REP, GNT, DGD
-* EOS: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
-* Litecoin: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
-* Monero: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
-* Ripple: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq` 
-  * Không yêu cầu thẻ
+Cryptocurrency is a more reliable way for international transactions. Crypto-wallet is usually anonymous and your donation is not traceable.
 
-{% hint style='tip' %}
+You may buy cryptocurrencies through [services on this page](../ui_client/service.md).
 
-[Trang này](../ui_client/service.md) liệt kê một số dịch vụ phổ biến mà bạn có thể mua cryptocurrencies.
+Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
 
-{% endhint %}
+> Bitcoin
 
-{% hint style='info' %}
+Address: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
 
-Do tính ẩn danh tự nhiên của cryptocurrenty, xin vui lòng gửi email cho chúng tôi trước khi đóng góp của bạn, nếu bạn muốn nhận được xác nhận.
+View stats or QR-Code [at BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
 
-{% endhint %}
+> Bitcoin Cash
 
-## cảm ơn sự hỗ trợ của bạn
+Address: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
 
-* Đối với bất kỳ giá trị nào có giá trị lớn hơn 50 đô la, bạn có thể chọn một trong các tùy chọn sau: 
-  * Tên của bạn hoặc công ty bạn đăng nhập vào trang đầu của chúng tôi trong một tháng;
-  * Sửa đổi codebase của chúng tôi như bạn muốn. Hạn chế: Không có thay đổi chức năng đối mặt với người dùng; không có thay đổi về tài liệu. Thay đổi của bạn sẽ ở lại trong một tháng.
+View stats or QR-Code [at BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
+
+> Ethereum
+
+Address: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
+
+View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). You may also send the following ERC20 tokens to this address: OMG, REP, GNT, DGD
+
+> EOS
+
+Address: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
+
+> Litecoin
+
+Address: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
+
+> Monero
+
+Address: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
+
+> Ripple
+
+Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
+
+Tag not required
+
+> Other
+
+Please send us an email at `love@v2ray.com` if you want to donate other kind of coins.

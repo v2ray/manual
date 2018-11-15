@@ -32,6 +32,7 @@ refen: ui_client/service
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): بازار OTC برای تجارت BTC، ETH، BCH، USDT.
 * [Binance](https://www.binance.com/?ref=35382451): بازار معاملاتی برای ارزهای رمزنگاری.
 * [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): بازار معاملاتی برای ارزهای رمزنگاری.
+* [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Online crypto currency wallet
 
 ## شانست را امتحان کن
 
