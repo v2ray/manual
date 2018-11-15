@@ -31,6 +31,12 @@ For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.c
 
 ## Криптовалюта {#crypto}
 
+Cryptocurrency is a more reliable way for international transactions. Crypto-wallet is usually anonymous and your donation is not traceable.
+
+You may buy cryptocurrencies through [services on this page](../ui_client/service.md).
+
+Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
+
 > Bitcoin
 
 Address: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
@@ -67,14 +73,6 @@ Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
 
 Tag not required
 
-{% hint style='tip' %}
+> Other
 
-[This page](../ui_client/service.md) lists some common services where you can buy cryptocurrencies.
-
-{% endhint %}
-
-{% hint style='info' %}
-
-Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive confirmation.
-
-{% endhint %}
+Please send us an email at `love@v2ray.com` if you want to donate other kind of coins.
