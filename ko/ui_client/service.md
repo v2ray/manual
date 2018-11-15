@@ -32,6 +32,7 @@ refen: ui_client/service
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): BTC, ETH, BCH, USDT를 거래 할 장외 시장.
 * [Binance](https://www.binance.com/?ref=35382451): Crypto 통화 거래 시장.
 * [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): 암호화 통화 거래 시장.
+* [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Online crypto currency wallet
 
 ## 너의 운을 시험 해봐
 
