@@ -27,6 +27,8 @@ Strategy for domain name resolution. Options are:
 * `"AsIs"`: Default value. Resolve domain name by system.
 * `"UseIP"`: Use [internal DNS](../dns.md) for domain name resolution.
 
+(V2Ray 4.6+) In `UseIP` mode, when `sendThrough` is specified in [OutboundObject](../overview.md#outboundobject), Freedom will automatically choose between IPv4 and IPv6 address for destination based on `sendThrough` settings.
+
 > `redirect`: address_port
 
 Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
