@@ -26,13 +26,15 @@ Chiến lược phân giải tên miền. Các tùy chọn là:
 * `"AsIs"`: Giá trị mặc định. Giải quyết tên miền theo hệ thống.
 * `"UseIP"`: Sử dụng [DNS nội bộ](../dns.md) cho độ phân giải tên miền.
 
+(V2Ray 4.6+) In `UseIP` mode, when `sendThrough` is specified in [OutboundObject](../overview.md#outboundobject), Freedom will automatically choose between IPv4 and IPv6 address for destination based on `sendThrough` settings.
+
 > `redirect`: address_port
 
-Chuyển hướng tất cả các kết nối đến địa chỉ này, dưới dạng `"127.0.0.1:80"` hoặc `": 1234"`.
+Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
 
 * Khi địa chỉ trống, ví dụ: `": 443"`, Tự do sẽ sử dụng địa chỉ đích ban đầu.
 * Khi cổng là `0`, ví dụ `"v2ray.com:0"`, Tự do sẽ sử dụng cổng gốc.
 
 > `userLevel`: number
 
-Cấp người dùng. Tất cả các kết nối đều chia sẻ cấp độ này.
+User level. All connections share this level.
