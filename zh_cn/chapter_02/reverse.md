@@ -98,7 +98,7 @@ refen: configuration/reverse
 
 ```javascript
 {
-  "tag": "out"
+  "tag": "out",
   "protocol": "freedom",
   "settings": {
     "redirect": "127.0.0.1:80" // 将所有流量转发到网页服务器
