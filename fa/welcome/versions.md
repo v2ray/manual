@@ -6,6 +6,10 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2018.11.23 v4.6
+
+* Freedom now can automatically choose between IPv4 and IPv6 destination address, based on `SendThrough` settings.
+
 ## 2018.11.16 v4.4
 
 * Load balancer rules in routing.
@@ -126,7 +130,7 @@ This page lists regular releases with feature updates. If a Github release doesn
 ## 2018.02.15 v3.9
 
 * Happy New Year!
-* رفع اشکال
+* Bug fixes.
 
 ## 2018.02.09 v3.7
 
@@ -251,7 +255,7 @@ This page lists regular releases with feature updates. If a Github release doesn
 
 ## 2017.01.02 v2.13
 
-* رفع اشکال
+* Bug fixes.
 
 ## 2016.12.26 v2.12
 
@@ -272,7 +276,7 @@ This page lists regular releases with feature updates. If a Github release doesn
 ## 2016.11.28 v2.8
 
 * Shadowsocks server now accepts OTA settings.
-* رفع اشکال
+* Bug fixes.
 
 ## 2016.11.21 v2.7
 
@@ -330,7 +334,7 @@ This page lists regular releases with feature updates. If a Github release doesn
 ## 2016.07.25 v1.21
 
 * High performance Chacha20 (Thanks to aead@);
-* رفع اشکال؛
+* Bug fixes;
 
 ## 2016.07.18 v1.20
 
@@ -413,7 +417,7 @@ This page lists regular releases with feature updates. If a Github release doesn
   * You can now automatically stop the V2Ray process and update automatically after the completion of V2Ray;
   * The install-release.sh accepts the --proxy argument and V2Ray specified proxy download;
 * Use Go 1.6 compiler to improve the performance of AES encryption;
-* اصلاحات جزئی
+* Minor fixes;
 * Update the official server IP (please re-download the installation package to get the latest configuration).
 
 ## 2016.02.08 v1.7

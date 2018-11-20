@@ -26,9 +26,11 @@ Freedom is a protocol for outbound connections. It passes all TCP or UDP connect
 * `"AsIs"`: Default value. Resolve domain name by system.
 * ` "UseIP" `: Используйте [ внутренний DNS ](../dns.md) для получения доменных имен.
 
+(V2Ray 4.6+) In `UseIP` mode, when `sendThrough` is specified in [OutboundObject](../overview.md#outboundobject), Freedom will automatically choose between IPv4 and IPv6 address for destination based on `sendThrough` settings.
+
 > `redirect`: address_port
 
-Перенаправление всех соединений на указанный адрес вида `"127.0.0.1:80"` или `":1234"`.
+Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
 
 * Если адрес не указан, например `":443"`, Freedom будет использовать исходный адрес назначения.
 * Если указан порт `0`, например `"v2ray.com:0"`, Freedom будет использовать исходный порт.
