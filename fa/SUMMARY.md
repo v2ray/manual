@@ -34,6 +34,7 @@
     * [WebSocket](configuration/transport/websocket.md)
     * [HTTP/2](configuration/transport/h2.md)
     * [DomainSocket](configuration/transport/domainsocket.md)
+    * [QUIC](configuration/transport/quic.md)
   * [متغیرهای Env](configuration/env.md)
 * [Third Party Tools](ui_client/README.md) 
   * [پنجره ها](ui_client/windows.md)
