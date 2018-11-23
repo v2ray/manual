@@ -20,7 +20,6 @@ QUIC is now an experiment in V2Ray. It implements IETF specification. As the spe
 V2Ray 4.7:
 
 * Initial version to support QUIC.
-* Connecting peers can't have more than 256 connections. Additional connections will be paused until number of active connections decreases. You may use [Mux](../mux.md) if you need more concurrency.
 
 ## QuicObject
 
