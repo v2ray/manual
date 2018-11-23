@@ -46,7 +46,7 @@ Extra encryption over entire QUIC packet, include the frame head part. Default v
 
 Key for the encryption above. Can be any string. Only effective when `security` is not `"none"`.
 
-> `header`: [HeaderObject]{#headerobject}
+> `header`: [HeaderObject](#headerobject)
 
 Configuration for packet header obfuscation.
 

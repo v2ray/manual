@@ -44,7 +44,7 @@ QUIC 的配置对应传输配置中的 `quicSettings` 项。对接的两端的�
 
 加密时所用的密钥。可以是任意字符串。当`security`不为`"none"`时有效。
 
-> `header`: [HeaderObject]{#headerobject}
+> `header`: [HeaderObject](#headerobject)
 
 数据包头部伪装设置
 
