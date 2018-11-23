@@ -34,6 +34,7 @@
     * [웹 소켓](configuration/transport/websocket.md)
     * [HTTP / 2](configuration/transport/h2.md)
     * [DomainSocket](configuration/transport/domainsocket.md)
+    * [QUIC](configuration/transport/quic.md)
   * [Env 변수](configuration/env.md)
 * [Third Party Tools](ui_client/README.md) 
   * [Windows](ui_client/windows.md)
