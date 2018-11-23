@@ -7,6 +7,11 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2018.11.30 v4.7
+
+* Freedom now supports for dialing IPv4 or IPv6 address only.
+* New QUIC transport.
+
 ## 2018.11.23 v4.6
 
 * Freedom now can automatically choose between IPv4 and IPv6 destination address, based on `SendThrough` settings.

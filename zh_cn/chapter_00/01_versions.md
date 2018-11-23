@@ -7,6 +7,11 @@ refen: welcome/versions
 
 本页列出了常规版本的功能升级记录，未列出的版本通常为 bug 修复。
 
+## 2018.11.30 v4.7
+
+* Freedom 中新增了 UseIPv4 和 UseIPv6 模式。
+* 传输方式新增了 QUIC。
+
 ## 2018.11.23 v4.6
 
 * Freedom 的`"UseIP"`模式会根据出站所用的 IP 地址自动使用 IPv4 或 IPv6 目标地址。

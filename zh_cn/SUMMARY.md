@@ -35,6 +35,7 @@
     * [WebSocket](chapter_02/transport/websocket.md)
     * [HTTP/2](chapter_02/transport/h2.md)
     * [DomainSocket](chapter_02/transport/domainsocket.md)
+    * [QUIC](chapter_02/transport/quic.md)
   * [环境变量](chapter_02/env.md)
 * [第三方工具](ui_client/README.md)
   * [Windows](ui_client/windows.md)
