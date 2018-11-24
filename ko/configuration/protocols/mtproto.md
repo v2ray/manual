@@ -4,12 +4,12 @@ refen: configuration/protocols/mtproto
 ---
 # MTProto
 
-* 이름 : `mtproto`
-* 유형 : 인바운드 / 아웃 바운드
+* Name: `mtproto`
+* Type: Inbound / Outbound
 
-MTProto 프록시는 전보를위한 특별한 프로그램입니다. V2Ray의 인바운드 프록시와 아웃 바운드 프록시로 구성됩니다. 그들은 보통 전보를위한 프록시를 만들기 위해 함께 사용됩니다
+MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
 
-현재 V2Ray는 텔레 그램 서버의 IPv4 주소 만 지원합니다.
+For now V2Ray only supports IPv4 address of Telegram server.
 
 ## InboundConfigurationObject
 
@@ -55,14 +55,14 @@ You may use the following command to generate MTProto secret: `openssl rand -hex
 
 {% endhint %}
 
-## 아웃 바운드 구성 {#outbound}
+## Outbound configuration {#outbound}
 
 ```javascript
 {
 }
 ```
 
-## 견본 {#sample}
+## Sample {#sample}
 
 MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
 
