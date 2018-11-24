@@ -4,10 +4,10 @@ refen: configuration/protocols/http
 ---
 # HTTP
 
-* 이름 : `http`
-* 유형 : 인바운드
+* 이름: `blackhole`
+* 유형: 인바운드
 
-HTTP는 인바운드 연결을위한 프로토콜입니다. HTTP / 1.1과 호환됩니다.
+HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
 
 ## InboundConfigurationObject
 
@@ -51,13 +51,13 @@ HTTP 인증을위한 사용자 이름.
 
 > `패스`: 문자열
 
-HTTP 인증을위한 암호.
+hTTP 인증을위한 암호.
 
 {% hint style='info' %}
 
 Use the following settings in Linux to use HTTP proxy in current session.
 
-* `내보내기 http_proxy = http : //127.0.0.1 : 8080 /` (URL은 설정에 따라 변경해야 함)
+* `내보내기 http_proxy = http: //127.0.0.1: 8080 /` (URL은 설정에 따라 변경해야 함)
 * `https_proxy =$http_proxy내 보냅니다.`
 
 {% endhint %}
