@@ -19,7 +19,8 @@ The transport settings devides into two parts: global settings and per proxy set
   "kcpSettings": {},
   "wsSettings": {},
   "httpSettings": {},
-  "dsSettings": {}
+  "dsSettings": {},
+  "quicSettings": {}
 }
 ```
 
@@ -43,6 +44,10 @@ Settings for [HTTP/2 transport](transport/h2.md).
 
 Settings for [Domain Socket transport](transport/domainsocket.md).
 
+> `quicSettings`: QUICObject
+
+Settings for [QUIC transport](transport/quic.md).
+
 ## StreamSettingsObject
 
 Each inbound and outbound proxy may has its own transport settings, as specified in `streamSettings` field in top level configuration.
@@ -57,6 +62,7 @@ Each inbound and outbound proxy may has its own transport settings, as specified
   "wsSettings": {},
   "httpSettings": {},
   "dsSettings": {},
+  "quicSettings": {},
   "sockopt": {
     "mark": 0,
     "tcpFastOpen": false,
@@ -65,7 +71,7 @@ Each inbound and outbound proxy may has its own transport settings, as specified
 }
 ```
 
-> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket"
+> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket" | "quic"
 
 Network type of the stream transport. Default value `"tcp"`.
 
@@ -95,7 +101,11 @@ HTTP/2 transport configuration for current proxy. Effective only when the proxy 
 
 > `dsSettings`: DomainSocketObject
 
-Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport.
+Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport. Configuration is the same as it is in global configuration.
+
+> `quicSettings`: QUICObject
+
+QUIC transport configuration for current proxy. Effective only when the proxy uses QUIC transport. Configuration is the same as it is in global configuration.
 
 > `sockopt`: SockoptObject
 
