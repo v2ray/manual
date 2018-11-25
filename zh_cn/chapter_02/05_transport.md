@@ -19,7 +19,8 @@ refen: configuration/transport
   "kcpSettings": {},
   "wsSettings": {},
   "httpSettings": {},
-  "dsSettings": {}
+  "dsSettings": {},
+  "quicSettings": {}
 }
 ```
 
@@ -43,6 +44,10 @@ refen: configuration/transport
 
 针于[Domain Socket 连接的配置](transport/domainsocket.md)。
 
+> `quicSettings`: QUICObject
+
+针于[QUIC 连接的配置](transport/quic.md)。
+
 ## StreamSettingsObject
 
 `TransportObject`对应出站入站协议中的`streamSettings`项。每一个入站、出站连接都可以分别配置不同的传输配置，都可以设置`streamSettings`来进行一些传输的配置。
@@ -57,6 +62,7 @@ refen: configuration/transport
   "wsSettings": {},
   "httpSettings": {},
   "dsSettings": {},
+  "quicSettings": {},
   "sockopt": {
     "mark": 0,
     "tcpFastOpen": false,
@@ -65,7 +71,7 @@ refen: configuration/transport
 }
 ```
 
-> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket"
+> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket" | "quic"
 
 数据流所使用的网络类型，默认值为 `"tcp"`
 
@@ -96,6 +102,10 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 > `dsSettings`: DomainSocketObject
 
 当前连接的 Domain socket 配置，仅当此连接使用 Domain socket 时有效。配置内容与上面的全局配置相同。
+
+> `quicSettings`: QUICObject
+
+当前连接的 QUIC 配置，仅当此连接使用 QUIC 时有效。配置内容与上面的全局配置相同。
 
 > `sockopt`: SockoptObject
 
