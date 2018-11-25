@@ -18,7 +18,8 @@ Cài đặt vận chuyển chia thành hai phần: cài đặt chung và mỗi c
   "kcpSettings": {},
   "wsSettings": {},
   "httpSettings": {},
-  "dsSettings": {}
+  "dsSettings": {},
+  "quicSettings": {}
 }
 ```
 
@@ -42,9 +43,13 @@ Cài đặt cho [HTTP / 2](transport/h2.md).
 
 Cài đặt cho [vận chuyển Socket miền](transport/domainsocket.md).
 
+> `quicSettings`: QUICObject
+
+Settings for [QUIC transport](transport/quic.md).
+
 ## StreamSettingsObject
 
-Mỗi proxy gửi đến và gửi đi có thể có cài đặt truyền tải riêng, như được chỉ định trong trường `streamSettings` trong cấu hình cấp cao nhất.
+Each inbound and outbound proxy may has its own transport settings, as specified in `streamSettings` field in top level configuration.
 
 ```javascript
 {
@@ -56,6 +61,7 @@ Mỗi proxy gửi đến và gửi đi có thể có cài đặt truyền tải 
   "wsSettings": {},
   "httpSettings": {},
   "dsSettings": {},
+  "quicSettings": {},
   "sockopt": {
     "mark": 0,
     "tcpFastOpen": false,
@@ -64,41 +70,45 @@ Mỗi proxy gửi đến và gửi đi có thể có cài đặt truyền tải 
 }
 ```
 
-> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket"
+> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket" | "quic"
 
-Loại mạng của luồng truyền tải. Giá trị mặc định `"tcp"`.
+Network type of the stream transport. Default value `"tcp"`.
 
 > `security`: "none" | "tls"
 
-Loại bảo mật. Lựa chọn là `"none"` (mặc định) không có bảo mật thêm, hoặc `"tls"` cho việc sử dụng [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
+Type of security. Choices are `"none"` (default) for no extra security, or `"tls"` for using [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
 
 > `tlsSettings`: [TLSObject](#tlsobject)
 
-Cài đặt TLS. TLS được cung cấp bởi Golang. Hỗ trợ tối đa TLS 1.2. DTLS không được hỗ trợ.
+TLS settings. TLS is provided by Golang. Support up to TLS 1.2. DTLS is not supported.
 
 > `tcpSettings`: [TcpObject](transport/tcp.md)
 
-Cấu hình truyền tải TCP cho proxy hiện tại. Chỉ có hiệu lực khi proxy sử dụng giao thức TCP. Cấu hình giống với cấu hình toàn cục.
+TCP transport configuration for current proxy. Effective only when the proxy uses TCP transport. Configuration is the same as it is in global configuration.
 
 > `kcpSettings`: KcpObject
 
-Cấu hình truyền tải mKCP cho proxy hiện tại. Chỉ hiệu lực khi proxy sử dụng truyền tải mKCP. Cấu hình giống với cấu hình toàn cục.
+mKCP transport configuration for current proxy. Effective only when the proxy uses mKCP transport. Configuration is the same as it is in global configuration.
 
 > `wsSettings`: WebSocketObject
 
-Cấu hình truyền tải WebSocket cho proxy hiện tại. Chỉ có hiệu lực khi proxy sử dụng vận chuyển WebSocket. Cấu hình giống với cấu hình toàn cục.
+WebSocket transport configuration for current proxy. Effective only when the proxy uses WebSocket transport. Configuration is the same as it is in global configuration.
 
 > `httpSettings`: HttpObject
 
-Cấu hình truyền tải HTTP / 2 cho proxy hiện tại. Chỉ hiệu lực khi proxy sử dụng giao thức HTTP / 2. Cấu hình giống với cấu hình toàn cục.
+HTTP/2 transport configuration for current proxy. Effective only when the proxy uses HTTP/2 transport. Configuration is the same as it is in global configuration.
 
 > `dsSettings`: DomainSocketObject
 
-Cấu hình vận chuyển socket miền cho proxy hiện tại. Chỉ có hiệu lực khi proxy sử dụng chuyển vùng socket.
+Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport. Configuration is the same as it is in global configuration.
+
+> `quicSettings`: QUICObject
+
+QUIC transport configuration for current proxy. Effective only when the proxy uses QUIC transport. Configuration is the same as it is in global configuration.
 
 > `sockopt`: SockoptObject
 
-Tùy chọn ổ cắm cho các kết nối đến và đi.
+Socket options for incoming and out-going connections.
 
 ### TLSObject
 
@@ -113,23 +123,23 @@ Tùy chọn ổ cắm cho các kết nối đến và đi.
 
 > `serverName`: string
 
-Tên máy chủ (thường là tên miền) được sử dụng để xác thực TLS. Thông thường, điều này được sử dụng khi corressponding inbound / outbound sử dụng IP để giao tiếp.
+Server name (usually domain) used for TLS authentication. Typically this is used when corressponding inbound/outbound uses IP for communication.
 
 > `alpn`: \[ string \]
 
-Một chuỗi các chuỗi, để xác định giá trị ALPN trong việc bắt tay TLS. Giá trị mặc định là `["http / 1.1"]`.
+An array of strings, to specifiy the ALPN value in TLS handshake. Default value is `["http/1.1"]`.
 
 > `allowInsecure`: true | false
 
-Nếu `true`, V2Ray cho phép kết nối không an toàn tại máy khách TLS, ví dụ: máy chủ TLS sử dụng chứng chỉ không thể xác minh.
+If `true`, V2Ray allowss insecure connection at TLS client, e.g., TLS server uses unverifiable certificates.
 
 > `allowInsecureCiphers`: true | false
 
-Whehter hoặc không cho phép các bộ mã hóa không an toàn. Theo mặc định TLS chỉ sử dụng các bộ mã hóa từ đặc tả TLS 1.3. Bật tùy chọn này để cho phép các bộ mã hóa có khóa RSA tĩnh.
+Whehter or not to allow insecure cipher suites. By default TLS only uses cipher suites from TLS 1.3 spec. Turn on this option to allow cipher suites with static RSA keys.
 
 > `certificates`: \[ [CertificateObject](#certificateobject) \]
 
-Danh sách chứng chỉ TLS. Mỗi mục nhập là một chứng chỉ.
+List of TLS certificates. Each entry is one certificate.
 
 ### CertificateObject
 
@@ -193,7 +203,7 @@ Danh sách chứng chỉ TLS. Mỗi mục nhập là một chứng chỉ.
 
 > `usage`: "encipherment" | "verify" | "issue"
 
-Mục đích của chứng chỉ. Giá trị mặc định `"encipherment"`. Lựa chọn là:
+Purpose of the certificate. Default value `"encipherment"`. Choices are:
 
 * `"encipherment"`: Chứng chỉ được sử dụng để xác thực và mã hóa TLS.
 * `"verify"`: Chứng chỉ được sử dụng để xác thực chứng chỉ TLS từ đồng đẳng từ xa. Trong trường hợp này, chứng chỉ phải là chứng chỉ CA.
@@ -201,43 +211,43 @@ Mục đích của chứng chỉ. Giá trị mặc định `"encipherment"`. L�
 
 {% hint style='info' %}
 
-Trên Windows, bạn phải cài đặt chứng chỉ CA của mình vào hệ thống, để xác minh các chứng chỉ được cấp từ CA.
+On Windows, you have to install your CA certificate to system, in order to verify cerificates issued from the CA.
 
 {% endhint %}
 
 {% hint style='info' %}
 
-Khi có một yêu cầu khách hàng mới, nói cho `` = `"v2ray.com"`, V2Ray sẽ tìm thấy một chứng chỉ cho `"v2ray.com"` đầu tiên. Nếu không tìm thấy, V2Ray sẽ cố gắng cấp chứng chỉ mới bằng cách sử dụng bất kỳ chứng chỉ hiện có nào mà `sử dụng` là `"vấn đề"` cho `"v2ray.com"`. Chứng chỉ mới hết hạn sau một giờ và sẽ được thêm vào nhóm chứng chỉ để sử dụng lại sau này.
+When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. If not found, V2Ray will try to issue a new certificate using any existing certificate whose `usage` is `"issue"` for `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse.
 
 {% endhint %}
 
 > `certificateFile`: string
 
-Đường dẫn tệp đến chứng chỉ. Nếu chứng chỉ được tạo bởi OpenSSL, đường dẫn kết thúc bằng ".crt".
+File path to the certificate. If the certificate is generated by OpenSSL, the path ends with ".crt".
 
 {% hint style='info' %}
 
-Sử dụng lệnh `v2ctl cert -ca` để tạo chứng chỉ CA mới.
+Use `v2ctl cert -ca` command to generate a new CA certificate.
 
 {% endhint %}
 
 > `certificate`: \[ string \]
 
-Danh sách các chuỗi như nội dung của chứng chỉ. Xem ví dụ trên. Không được để trống `chứng chỉ` hoặc `chứng chỉ`.
+List of strings as content of the certificate. See the example above. Either `certificate` or `certificateFile` must not be empty.
 
 > `keyFile`: string
 
-Đường dẫn tệp tới khóa riêng tư. Nếu được tạo bởi OpenSSL, tệp thường kết thúc bằng ".key". Tệp khóa có mật khẩu không được hỗ trợ.
+File path to the private key. If generated by OpenSSL, the file usually ends with ".key". Key file with password is not supported.
 
 > `key`: \[ string \]
 
-Danh sách các chuỗi như nội dung của khóa riêng. Xem ví dụ trên. Không được để trống `khóa` hoặc `keyFile`.
+List of strings as content of the private key. See the example above. Either `key` or `keyFile` must not be empty.
 
-Khi `certificateFile` và `chứng chỉ` đều được điền vào. V2Ray sử dụng `certificateFile`. Tương tự cho `keyFile` và `phím`.
+When `certificateFile` and `certificate` are both filled in. V2Ray uses `certificateFile`. Same for `keyFile` and `key`.
 
 {% hint style='info' %}
 
-Khi `sử dụng` là `"xác minh"`, cả `keyFile` và `khóa` có thể trống.
+When `usage` is `"verify"`, both `keyFile` and `key` can be empty.
 
 {% endhint %}
 
@@ -253,11 +263,11 @@ Khi `sử dụng` là `"xác minh"`, cả `keyFile` và `khóa` có thể trốn
 
 > `mark`: number
 
-Số nguyên. Nếu khác không, giá trị sẽ được đặt thành các kết nối ra ngoài thông qua tùy chọn socket SO_MARK. Cơ chế này chỉ áp dụng trên Linux và yêu cầu quyền CAP_NET_ADMIN.
+An integer. If non-zero, the value will be set to out-going connections via socket option SO_MARK. This mechanism only applies on Linux and requires CAP_NET_ADMIN permission.
 
 > `tcpFastOpen`: true | false
 
-Có hay không kích hoạt [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fast_Open). Khi được đặt thành `true`, V2Ray bật TFO cho kết nối hiện tại. Khi được đặt thành `false`, V2Ray sẽ tắt TFO. Nếu mục nhập này không tồn tại, V2Ray sử dụng cài đặt mặc định từ hệ điều hành.
+Whether or not to enable [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fast_Open). When set to `true`, V2Ray enables TFO for current connection. When set to `false`, V2Ray disables TFO. If this entry doesn't exist, V2Ray uses default settings from operating system.
 
 * Chỉ áp dụng trên các hệ điều hành sau: 
   * Windows 10 (1604) trở lên
@@ -267,16 +277,16 @@ Có hay không kích hoạt [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fa
 
 > `tproxy`: "redirect" | "tproxy" | "off"
 
-Có hay không bật proxy trong suốt trên Linux. Lựa chọn là:
+Whether or not to enable transparent proxy on Linux. Choices are:
 
 * `"off"`: Giá trị mặc định. Không kích hoạt TProxy.
 * `"chuyển hướng"`: Bật TProxy với chế độ Chuyển hướng. Hỗ trợ lưu lượng TCP / IPv4 và UDP.
 * `"tproxy"`: Bật TProxy với chế độ TProxy. Hỗ trợ lưu lượng TCP và UDP.
 
-Proxy trong suốt yêu cầu quyền root hoặc CAP \ _NET \ _ADMIN.
+Transparent proxy requires Root or CAP\_NET\_ADMIN permission.
 
 {% hint style='info' %}
 
-Nếu `TProxy` không được đặt và `allowRedirect` được đặt trong [dokodemo-door](protocols/dokodemo.md), giá trị của `TProxy` sẽ được đặt thành `"chuyển hướng"` tự động.
+If `TProxy` is not set, and `allowRedirect` is set in [dokodemo-door](protocols/dokodemo.md), the value of `TProxy` will be set to `"redirect"` automatically.
 
 {% endhint %}
