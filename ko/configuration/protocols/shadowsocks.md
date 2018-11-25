@@ -4,27 +4,27 @@ refen: configuration/protocols/shadowsocks
 ---
 # Shadowsocks
 
-* 이름 : `샤도우`
-* 유형 : 인바운드 / 아웃 바운드
+* Name: `shadowsocks`
+* Type: Inbound / Outbound
 
-[Shadowsock](https://www.shadowsocks.org/) 프로토콜로 인바운드 및 아웃 바운드 연결에 사용됩니다.
+[Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
 
-공식 버전과의 호환성 :
+Compatibility with official version:
 
-* UDP를 선택적으로 해제 할 수있는 TCP 및 UDP 연결을 모두 지원합니다.
-* 지원 [오타](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html); 
-  * 클라이언트는 켜거나 끌 수 있습니다.
-  * 서버는 활성화, 비활성화 또는 자동을 선택할 수 있습니다.
-* 암호화 방법 ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) V2Ray 3.0에 추가 된 암호) : 
+* Supports both TCP and UDP connections, where UDP can be optional turned off.
+* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
+  * Client may choose to turn on or off.
+  * Server may choose to enable, disable or auto.
+* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
   * aes-256-cfb
   * 에이스 -128-cfb
   * 차차 20
   * 차차 20-ietf
   * 에이스 -256-gcm
   * 에이스 -128-gcm
-  * chacha20-poly1305 일명 chacha20-ietf-poly1305
-* 플러그인 : 
-  * 스탠드 얼론 모드를 통해 obfs를 지원하십시오.
+  * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
+* Plugins： 
+  * Support obfs through standalone mode.
 
 ## InboundConfigurationObject
 
@@ -41,27 +41,27 @@ refen: configuration/protocols/shadowsocks
 
 > `이메일`: 문자열
 
-이메일 주소. 사용자 식별에 사용됩니다.
+Email address. Used for user identification.
 
 > `방법`: 문자열
 
-필수 사항. 사용 가능한 값은 [암호화 방법](#encryption-methods) 을 참조하십시오.
+Required. See [Encryption methods](#encryption-methods) for available values.
 
 > `패스워드`: string
 
-필수 사항. Shadowsocks 프로토콜의 암호. 임의의 문자열이 될 수 있습니다.
+Required. Password in Shadowsocks protocol. Can be any string.
 
 > `레벨`: 숫자
 
-사용자 수준. 기본값은 `0`입니다. [정책](../policy.md)참조하십시오.
+User level. Default to `0`. See [Policy](../policy.md).
 
 > `오타`: `참` | `거짓`
 
-오타를 강요할지 여부. `참` 이고 수신 연결이 OTA를 활성화하지 않으면 V2Ray는이 연결을 거부합니다. 그 반대입니다.
+Whether or not to force OTA. If `true` and the incoming connection doesn't enable OTA, V2Ray will reject this connection. Vice versa.
 
-이 필드를 지정하지 않으면 V2Ray가 들어오는 연결에서 OTA 설정을 자동으로 감지합니다.
+If this field is not specified, V2Ray auto detects OTA settings from incoming connections.
 
-AEAD 암호화를 사용하면 `오타` 이 적용되지 않습니다.
+When AEAD encryption is used, `ota` has no effect.
 
 > `네트워크`: "tcp"| "udp"| "tcp, udp"
 
@@ -105,7 +105,7 @@ AEAD 암호화를 사용하면 `오타` 이 적용되지 않습니다.
 
 > `서버`: \ [[ServerObject](#serverobject)\]
 
-[ServerObject](#serverobject)배열입니다.
+An array of [ServerObject](#serverobject)s.
 
 ### ServerObject
 
@@ -123,7 +123,7 @@ AEAD 암호화를 사용하면 `오타` 이 적용되지 않습니다.
 
 > `이메일`: 문자열
 
-이메일 주소. 사용자 식별에 사용됩니다.
+Email address. Used for user identification.
 
 > `주소`: 주소
 

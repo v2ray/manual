@@ -57,7 +57,7 @@ Có hay không để cho phép kiểm soát tắc nghẽn. Giá trị mặc đ�
 
 Ghi kích thước bộ đệm cho một kết nối duy nhất, tính bằng MB. Giá trị mặc định là `2`.
 
-> `header`: [HeaderObject]{#headerobject}
+> `header`: [HeaderObject](#headerobject)
 
 Cấu hình cho obfuscation tiêu đề gói.
 

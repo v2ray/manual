@@ -34,6 +34,7 @@
     * [WebSocket](configuration/transport/websocket.md)
     * [HTTP/2](configuration/transport/h2.md)
     * [DomainSocket](configuration/transport/domainsocket.md)
+    * [QUIC](configuration/transport/quic.md)
   * [Biến Env](configuration/env.md)
 * [Third Party Tools](ui_client/README.md) 
   * [các cửa sổ](ui_client/windows.md)

@@ -25,8 +25,12 @@ refen: configuration/protocols/freedom
 
 * `"AsIs"`: مقدار پیش فرض. تعیین نام دامنه توسط سیستم
 * `"UseIP"`: استفاده از [DNS داخلی](../dns.md) برای وضوح نام دامنه.
+* `"UseIPv4"`: Use IPv4 address only, after resolved by internal DNS.
+* `"UseIPv6"`: Use IPv6 address only, after resolved by internal DNS.
 
 (V2Ray 4.6+) In `UseIP` mode, when `sendThrough` is specified in [OutboundObject](../overview.md#outboundobject), Freedom will automatically choose between IPv4 and IPv6 address for destination based on `sendThrough` settings.
+
+(V2Ray 4.7+) If `sendThrough` address conflicts with `"UseIPv4"` or `"UseIPv6"`, Freedom will fail to dial out-going connections.
 
 > `redirect`: address_port
 

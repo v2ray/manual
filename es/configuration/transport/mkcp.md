@@ -57,7 +57,7 @@ Read buffer size for a single connection, in MB. Default value is `2`.
 
 Write buffer size for a single connection, in MB. Default value is `2`.
 
-> `header`: [HeaderObject]{#headerobject}
+> `header`: [HeaderObject](#headerobject)
 
 Configuration for packet header obfuscation.
 
