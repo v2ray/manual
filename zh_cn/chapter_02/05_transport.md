@@ -46,7 +46,7 @@ refen: configuration/transport
 
 > `quicSettings`: QUICObject
 
-针于[QUIC 连接的配置](transport/quic.md)。
+(V2Ray 4.7+) 针于[QUIC 连接的配置](transport/quic.md)。
 
 ## StreamSettingsObject
 
@@ -105,7 +105,7 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 
 > `quicSettings`: QUICObject
 
-当前连接的 QUIC 配置，仅当此连接使用 QUIC 时有效。配置内容与上面的全局配置相同。
+(V2Ray 4.7+) 当前连接的 QUIC 配置，仅当此连接使用 QUIC 时有效。配置内容与上面的全局配置相同。
 
 > `sockopt`: SockoptObject
 
