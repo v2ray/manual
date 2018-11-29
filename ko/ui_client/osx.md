@@ -8,6 +8,10 @@ refen: ui_client/osx
 
 * 다운로드 : [Github](https://github.com/Cenmrev/V2RayX)
 
+## V2RayX
+
+* 다운로드 : [Github](https://github.com/yanue/V2rayU)
+
 ## 기타 도구 {#other}
 
 ### Visual Studio 코드

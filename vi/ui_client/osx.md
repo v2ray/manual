@@ -8,6 +8,10 @@ refen: ui_client/osx
 
 * Tải xuống: [Github](https://github.com/Cenmrev/V2RayX)
 
+## V2RayU
+
+* Tải xuống: [Github](https://github.com/yanue/V2rayU)
+
 ## Các công cụ khác {#other}
 
 ### Visual Studio Code

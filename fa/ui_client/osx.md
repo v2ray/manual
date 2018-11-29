@@ -8,6 +8,10 @@ refen: ui_client/osx
 
 * دانلود: [Github](https://github.com/Cenmrev/V2RayX)
 
+## V2RayU
+
+* دانلود: [Github](https://github.com/yanue/V2rayU)
+
 ## ابزارهای دیگر {#other}
 
 ### ویژوال استودیو کد

@@ -11,6 +11,13 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 * 下载：[Github](https://github.com/Cenmrev/V2RayX)
 
+## V2RayU
+
+V2RayU 是一个基于 V2Ray 内核的 Mac OS X 客户端。支持vmess,shadowsocks,socks5等协议, 支持二维码,剪贴板导入,手动配置,二维码分享,支持在导入或未导入情况下手动配置主要参数
+
+* 下载：[Github](https://github.com/yanue/V2rayU)
+
+
 ## 其它工具 {#others}
 
 ### Visual Studio Code

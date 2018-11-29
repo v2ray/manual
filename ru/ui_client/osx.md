@@ -8,6 +8,10 @@ refen: ui_client/osx
 
 * Загрузить: [GitHub](https://github.com/Cenmrev/V2RayX)
 
+## V2RayU
+
+* Загрузить: [GitHub](https://github.com/yanue/V2rayU)
+
 ## Другие инструменты {#other}
 
 ### Visual Studio Code
