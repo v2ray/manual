@@ -46,7 +46,7 @@ Settings for [Domain Socket transport](transport/domainsocket.md).
 
 > `quicSettings`: QUICObject
 
-(V2Ray 4.7+) Settings for [QUIC transport](transport/quic.md).
+Settings for [QUIC transport](transport/quic.md).
 
 ## StreamSettingsObject
 
@@ -105,7 +105,7 @@ Domain socket transport configuration for current proxy. Effective only when the
 
 > `quicSettings`: QUICObject
 
-(V2Ray 4.7+)  QUIC transport configuration for current proxy. Effective only when the proxy uses QUIC transport. Configuration is the same as it is in global configuration.
+QUIC transport configuration for current proxy. Effective only when the proxy uses QUIC transport. Configuration is the same as it is in global configuration.
 
 > `sockopt`: SockoptObject
 

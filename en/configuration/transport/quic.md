@@ -20,9 +20,6 @@ QUIC is now an experiment in V2Ray. It implements IETF specification. As the spe
 V2Ray 4.7:
 
 * Initial version to support QUIC.
-* Default settings:
-  * 12 byte Connection ID
-  * Connection timeout in 30 seconds if no data traffic. (May have impact on some long HTTP connections)
 
 ## QuicObject
 
