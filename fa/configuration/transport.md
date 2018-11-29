@@ -18,7 +18,8 @@ refen: configuration/transport
   "kcpSettings": {},
   "wsSettings": {},
   "httpSettings": {},
-  "dsSettings": {}
+  "dsSettings": {},
+  "quicSettings": {}
 }
 ```
 
@@ -42,63 +43,72 @@ refen: configuration/transport
 
 تنظیمات برای [Domain Socket Transport](transport/domainsocket.md).
 
+> `quicSettings`: QUICObject
+
+(V2Ray 4.7+) Settings for [QUIC transport](transport/quic.md).
+
 ## StreamSettingsObject
 
-هر پروکسی ورودی و خروجی ممکن است تنظیمات حمل و نقل خود را داشته باشد، همانطور که در `جریان تنظیمات` در پیکربندی سطح بالا مشخص شده است.
+Each inbound and outbound proxy may has its own transport settings, as specified in `streamSettings` field in top level configuration.
 
 ```javascript
 {
-  "شبکه": "tcp"،
-  "امنیت": "هیچ"،
-  "tlsSettings": {}،
-  "tcpSettings": {}،
-  "kcpSettings": {}،
-  wsSettings: {} ،
-  "httpSettings": {}،
-  "dsSettings": {}،
+  "network": "tcp",
+  "security": "none",
+  "tlsSettings": {},
+  "tcpSettings": {},
+  "kcpSettings": {},
+  "wsSettings": {},
+  "httpSettings": {},
+  "dsSettings": {},
+  "quicSettings": {},
   "sockopt": {
-    "علامت": 0،
-    "tcpFastOpen": false،
+    "mark": 0,
+    "tcpFastOpen": false,
     "tproxy": "off"
   }
 }
 ```
 
-> `شبکه`: "tcp" | "kcp" | "ws" | "http" | "domainsocket"
+> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket" | "quic"
 
-نوع شبکه حمل و نقل جریان. مقدار پیش فرض `"tcp"`.
+Network type of the stream transport. Default value `"tcp"`.
 
-> `امنیت`: "هیچ" | "TLS"
+> `security`: "none" | "tls"
 
-نوع امنیت انتخاب ها `"هیچ"` (پیش فرض) برای امنیت فوق العاده، و یا `"TLS"` برای استفاده از [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
+Type of security. Choices are `"none"` (default) for no extra security, or `"tls"` for using [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
 
 > `tlsSettings`: [TLSObject](#tlsobject)
 
-تنظیمات TLS TLS توسط Golang ارائه شده است. پشتیبانی از TLS 1.2. DTLS پشتیبانی نمی شود
+TLS settings. TLS is provided by Golang. Support up to TLS 1.2. DTLS is not supported.
 
 > `tcpSettings`: [TcpObject](transport/tcp.md)
 
-پیکربندی TCP انتقال برای پروکسی فعلی. فقط زمانی که پروکسی از حمل و نقل TCP استفاده می کند موثر است. پیکربندی همان است که در تنظیمات جهانی است.
+TCP transport configuration for current proxy. Effective only when the proxy uses TCP transport. Configuration is the same as it is in global configuration.
 
 > `kcpSettings`: KcpObject
 
-پیکربندی mKCP حمل و نقل برای پروکسی فعلی. تنها زمانی که پروکسی از حمل و نقل mKCP استفاده می کند موثر است. پیکربندی همان است که در تنظیمات جهانی است.
+mKCP transport configuration for current proxy. Effective only when the proxy uses mKCP transport. Configuration is the same as it is in global configuration.
 
 > `wsSettings`: WebSocketObject
 
-پیکربندی حمل و نقل WebSocket برای پروکسی فعلی. تنها زمانی که پروکسی از حمل و نقل WebSocket استفاده می کند موثر است. پیکربندی همان است که در تنظیمات جهانی است.
+WebSocket transport configuration for current proxy. Effective only when the proxy uses WebSocket transport. Configuration is the same as it is in global configuration.
 
 > `httpSettings`: HttpObject
 
-پیکربندی HTTP / 2 حمل و نقل برای پروکسی فعلی. فقط زمانی که پروکسی از HTTP / 2 استفاده می کند موثر باشد. پیکربندی همان است که در تنظیمات جهانی است.
+HTTP/2 transport configuration for current proxy. Effective only when the proxy uses HTTP/2 transport. Configuration is the same as it is in global configuration.
 
 > `dsSettings`: DomainSocketObject
 
-پیکربندی سوکت دامنه برای پروکسی فعلی. فقط زمانی که پروکسی از حمل سوکت دامنه استفاده می کند، موثر است.
+Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport. Configuration is the same as it is in global configuration.
+
+> `quicSettings`: QUICObject
+
+(V2Ray 4.7+) QUIC transport configuration for current proxy. Effective only when the proxy uses QUIC transport. Configuration is the same as it is in global configuration.
 
 > `sockopt`: SockoptObject
 
-گزینه سوکت برای اتصالات ورودی و خروجی.
+Socket options for incoming and out-going connections.
 
 ### TLSObject
 
@@ -111,25 +121,25 @@ refen: configuration/transport
 }
 ```
 
-> `servername`: string
+> `serverName`: string
 
-نام سرور (معمولا دامنه) برای احراز هویت TLS استفاده می شود. به طور معمول این زمانی استفاده می شود که پاسخ های ورودی / خروجی از IP برای ارتباطات استفاده می شود.
+Server name (usually domain) used for TLS authentication. Typically this is used when corressponding inbound/outbound uses IP for communication.
 
-> `alpn`: \ [رشته \]
+> `alpn`: \[ string \]
 
-آرایه ای از رشته ها، برای مشخص کردن مقدار ALPN در دست TLS. مقدار پیش فرض `["http / 1.1"]`.
+An array of strings, to specifiy the ALPN value in TLS handshake. Default value is `["http/1.1"]`.
 
-> `allowInsecure`: true | نادرست
+> `allowInsecure`: true | false
 
-اگر `درست`باشد، V2Ray اجازه اتصال غیر امن را در سرویس گیرنده TLS می دهد، به عنوان مثال، سرور TLS با استفاده از گواهینامه های قابل تایید استفاده می کند.
+If `true`, V2Ray allowss insecure connection at TLS client, e.g., TLS server uses unverifiable certificates.
 
-> `allowInsecureCiphers`: true | نادرست
+> `allowInsecureCiphers`: true | false
 
-خنثی کردن یا اجازه دادن به سوئیت های رمزنگاری ناامن. به طور پیش فرض TLS تنها از سوکت های سیر از TLS 1.3 استفاده می کند. این گزینه را فعال کنید تا سوئیت های رمز را با کلید های ثابت RSA فعال کنید.
+Whehter or not to allow insecure cipher suites. By default TLS only uses cipher suites from TLS 1.3 spec. Turn on this option to allow cipher suites with static RSA keys.
 
-> `گواهینامه`: \ [ [CertificateObject](#certificateobject)\]
+> `certificates`: \[ [CertificateObject](#certificateobject) \]
 
-فهرست گواهی TLS. هر ورودی یک گواهی است
+List of TLS certificates. Each entry is one certificate.
 
 ### CertificateObject
 
@@ -191,9 +201,9 @@ refen: configuration/transport
 }
 ```
 
-> `استفاده`: "فریبندگی" | "تأیید" | "موضوع"
+> `usage`: "encipherment" | "verify" | "issue"
 
-هدف گواهی مقدار پیش فرض `"تکه تکه شدن"`. انتخاب ها عبارتند از:
+Purpose of the certificate. Default value `"encipherment"`. Choices are:
 
 * `"رمزگذاری"`: گواهی برای احراز هویت و رمزگذاری TLS استفاده می شود.
 * `"verify"`: گواهی برای اعتبار سنجی گواهی TLS از همکار راه دور استفاده می شود. در این مورد گواهی باید یک گواهینامه CA باشد.
@@ -201,43 +211,43 @@ refen: configuration/transport
 
 {% hint style='info' %}
 
-در ویندوز، شما باید گواهینامه CA خود را به سیستم، برای تأیید مدارک صادر شده از CA، نصب کنید.
+On Windows, you have to install your CA certificate to system, in order to verify cerificates issued from the CA.
 
 {% endhint %}
 
 {% hint style='info' %}
 
-هنگامی که یک درخواست مشتری جدید وجود دارد، برای `serverName` = `«v2ray.com»`بگویید، V2Ray گواهی `برای v2ray.com` پیدا خواهد کرد. اگر پیدا نشد، V2Ray سعی خواهد کرد که گواهی جدیدی را با استفاده از هر گواهی موجود که `استفاده` است `"issue"` برای `"v2ray.com"`. گواهینامه جدید در یک ساعت منقضی می شود و برای مجوز استفاده مجدد به مجوز گواهی اضافه می شود.
+When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray will find a certificate for `"v2ray.com"` first. If not found, V2Ray will try to issue a new certificate using any existing certificate whose `usage` is `"issue"` for `"v2ray.com"`. The new certificate expires in one hour, and will be added to certificate pool for later reuse.
 
 {% endhint %}
 
 > `certificateFile`: string
 
-مسیر فایل به گواهی اگر گواهی توسط OpenSSL تولید شود، مسیر با ".crt" به پایان می رسد.
+File path to the certificate. If the certificate is generated by OpenSSL, the path ends with ".crt".
 
 {% hint style='info' %}
 
-استفاده از `v2ctl CERT -ca` دستور برای تولید یک گواهی CA جدید است.
+Use `v2ctl cert -ca` command to generate a new CA certificate.
 
 {% endhint %}
 
-> `گواهی`: \ [رشته \]
+> `certificate`: \[ string \]
 
-فهرست رشته ها به عنوان محتویات گواهی. مثال بالا را ببینید گواهی `یا گواهی` یا `certificateFile` نباید خالی باشد.
+List of strings as content of the certificate. See the example above. Either `certificate` or `certificateFile` must not be empty.
 
 > `keyFile`: string
 
-مسیر فایل به کلید خصوصی. اگر با OpenSSL تولید می شود، فایل معمولا با ".key" به پایان می رسد. فایل کلید با رمز عبور پشتیبانی نمی شود
+File path to the private key. If generated by OpenSSL, the file usually ends with ".key". Key file with password is not supported.
 
-> `کلید`: \ [رشته \]
+> `key`: \[ string \]
 
-فهرست رشته ها به عنوان محتویات کلید خصوصی. مثال بالا را ببینید هر کدام `کلید` یا `keyFile` نباید خالی باشد.
+List of strings as content of the private key. See the example above. Either `key` or `keyFile` must not be empty.
 
-هنگامی که `گواهینامه` و `گواهی` هر دو پر شده است. V2Ray با استفاده از `certificateFile`. همان `keyFile` و `کلید`.
+When `certificateFile` and `certificate` are both filled in. V2Ray uses `certificateFile`. Same for `keyFile` and `key`.
 
 {% hint style='info' %}
 
-هنگامی که `استفاده` `«تأیید»`، هر دو `KeyFile` و `کلید` می توانند خالی باشند.
+When `usage` is `"verify"`, both `keyFile` and `key` can be empty.
 
 {% endhint %}
 
@@ -251,13 +261,13 @@ refen: configuration/transport
 }
 ```
 
-> `علامت`: شماره
+> `mark`: number
 
-یک عدد صحیح اگر غیر صفر باشد، مقدار از طریق گزینه سوکت SO_MARK به اتصالات خروجی تنظیم خواهد شد. این مکانیزم تنها در لینوکس اعمال می شود و نیازمند اجازه CAP_NET_ADMIN است.
+An integer. If non-zero, the value will be set to out-going connections via socket option SO_MARK. This mechanism only applies on Linux and requires CAP_NET_ADMIN permission.
 
-> `tcpFastOpen`: true | نادرست
+> `tcpFastOpen`: true | false
 
-یا این که آیا برای فعال [TCP سریع گسترش](https://en.wikipedia.org/wiki/TCP_Fast_Open). هنگامی که به `درست`تنظیم می شود، V2Ray TFO را برای اتصال فعلی فراهم می کند. هنگامی که به `false`، V2Ray TFO را غیرفعال می کند. اگر این ورودی وجود ندارد، V2Ray از تنظیمات پیش فرض از سیستم عامل استفاده می کند.
+Whether or not to enable [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fast_Open). When set to `true`, V2Ray enables TFO for current connection. When set to `false`, V2Ray disables TFO. If this entry doesn't exist, V2Ray uses default settings from operating system.
 
 * فقط در سیستم عامل های زیر اعمال می شود: 
   * ویندوز 10 (1604) یا بعدا
@@ -265,18 +275,18 @@ refen: configuration/transport
   * لینوکس 3.16 یا بالاتر: به طور پیش فرض توسط سیستم فعال شده است.
 * قابل اجرا برای اتصالات ورودی و خروجی.
 
-> `tproxy`: "تغییر مسیر" | "tproxy" | "خاموش"
+> `tproxy`: "redirect" | "tproxy" | "off"
 
-آیا پروکسی شفاف را در لینوکس فعال کنید یا خیر. انتخاب ها عبارتند از:
+Whether or not to enable transparent proxy on Linux. Choices are:
 
 * `"خاموش"`: مقدار پیش فرض. TProxy را فعال نکنید.
 * `"redirect"`: فعال کردن TProxy با حالت Redirect پشتیبانی از ترافیک TCP / IPv4 و UDP.
 * `"tproxy"`: TProxy را با حالت TProxy فعال کنید. پشتیبانی از ترافیک TCP و UDP.
 
-پروکسی شفاف نیاز به مجوز ریشه یا CAP \ _NET \ _ADMIN دارد.
+Transparent proxy requires Root or CAP\_NET\_ADMIN permission.
 
 {% hint style='info' %}
 
-اگر `TProxy` تنظیم نشده باشد، و `allowRedirect` در [dokodemo door](protocols/dokodemo.md)، مقدار `TProxy` به صورت خودکار به `"redirect"` تنظیم خواهد شد.
+If `TProxy` is not set, and `allowRedirect` is set in [dokodemo-door](protocols/dokodemo.md), the value of `TProxy` will be set to `"redirect"` automatically.
 
 {% endhint %}

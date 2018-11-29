@@ -18,7 +18,8 @@ refen: configuration/transport
   "kcpSettings": {},
   "wsSettings": {},
   "httpSettings": {},
-  "dsSettings": {}
+  "dsSettings": {},
+  "quicSettings": {}
 }
 ```
 
@@ -42,9 +43,13 @@ refen: configuration/transport
 
 [도메인 소켓 전송 설정](transport/domainsocket.md).
 
+> `quicSettings`: QUICObject
+
+(V2Ray 4.7+) Settings for [QUIC transport](transport/quic.md).
+
 ## StreamSettingsObject
 
-각 인바운드 및 아웃 바운드 프록시는 최상위 레벨 구성의 `streamSettings` 필드에 지정된대로 자체 전송 설정을 가질 수 있습니다.
+Each inbound and outbound proxy may has its own transport settings, as specified in `streamSettings` field in top level configuration.
 
 ```javascript
 {
@@ -56,6 +61,7 @@ refen: configuration/transport
   "wsSettings": {},
   "httpSettings": {},
   "dsSettings": {},
+  "quicSettings": {},
   "sockopt": {
     "mark": 0,
     "tcpFastOpen": false,
@@ -64,41 +70,45 @@ refen: configuration/transport
 }
 ```
 
-> `네트워크`: "tcp"| "kcp"| "ws"| "http"| "domainsocket"
+> `network`: "tcp" | "kcp" | "ws" | "http" | "domainsocket" | "quic"
 
-스트림 전송의 네트워크 유형. 기본값 `"tcp"`.
+Network type of the stream transport. Default value `"tcp"`.
 
-> `보안`: "없음"| "tls"
+> `security`: "none" | "tls"
 
-보안 유형. 선택은 없다 `"없음"` 별도의 보안 (기본값) 또는 `"TLS"` 사용하는 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
+Type of security. Choices are `"none"` (default) for no extra security, or `"tls"` for using [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
 
 > `tlsSettings`: [TLSObject](#tlsobject)
 
-TLS 설정. TLS는 Golang에서 제공합니다. 최대 TLS 1.2를 지원합니다. DTLS는 지원되지 않습니다.
+TLS settings. TLS is provided by Golang. Support up to TLS 1.2. DTLS is not supported.
 
 > `tcpSettings`: [TcpObject](transport/tcp.md)
 
-현재 프록시에 대한 TCP 전송 구성입니다. 프록시가 TCP 전송을 사용할 때만 유효합니다. 구성은 전역 구성과 동일합니다.
+TCP transport configuration for current proxy. Effective only when the proxy uses TCP transport. Configuration is the same as it is in global configuration.
 
 > `kcpSettings`: KcpObject
 
-현재 프록시에 대한 mKCP 전송 구성. 프록시가 mKCP 전송을 사용할 때만 유효합니다. 구성은 전역 구성과 동일합니다.
+mKCP transport configuration for current proxy. Effective only when the proxy uses mKCP transport. Configuration is the same as it is in global configuration.
 
 > `wsSettings`: WebSocketObject
 
-현재 프록시에 대한 WebSocket 전송 구성입니다. 프록시가 WebSocket 전송을 사용할 때만 유효합니다. 구성은 전역 구성과 동일합니다.
+WebSocket transport configuration for current proxy. Effective only when the proxy uses WebSocket transport. Configuration is the same as it is in global configuration.
 
 > `httpSettings`: HttpObject
 
-현재 프록시에 대한 HTTP / 2 전송 구성 프록시가 HTTP / 2 전송을 사용하는 경우에만 유효합니다. 구성은 전역 구성과 동일합니다.
+HTTP/2 transport configuration for current proxy. Effective only when the proxy uses HTTP/2 transport. Configuration is the same as it is in global configuration.
 
 > `dsSettings`: DomainSocketObject
 
-현재 프록시에 대한 도메인 소켓 전송 구성입니다. 프록시가 도메인 소켓 전송을 사용하는 경우에만 유효합니다.
+Domain socket transport configuration for current proxy. Effective only when the proxy uses domain socket transport. Configuration is the same as it is in global configuration.
+
+> `quicSettings`: QUICObject
+
+(V2Ray 4.7+) QUIC transport configuration for current proxy. Effective only when the proxy uses QUIC transport. Configuration is the same as it is in global configuration.
 
 > `sockopt`: SockoptObject
 
-들어오고 나가는 연결을위한 소켓 옵션.
+Socket options for incoming and out-going connections.
 
 ### TLSObject
 
@@ -111,25 +121,25 @@ TLS 설정. TLS는 Golang에서 제공합니다. 최대 TLS 1.2를 지원합니�
 }
 ```
 
-> `serverName`: 문자열
+> `serverName`: string
 
-TLS 인증에 사용되는 서버 이름 (일반적으로 도메인)입니다. 일반적으로 이것은 상응하는 인바운드 / 아웃 바운드가 통신을 위해 IP를 사용할 때 사용됩니다.
+Server name (usually domain) used for TLS authentication. Typically this is used when corressponding inbound/outbound uses IP for communication.
 
-> `alpn`: \ [string \]
+> `alpn`: \[ string \]
 
-TLS 핸드 셰이크의 ALPN 값을 지정하는 문자열 배열입니다. 기본값은 `[ "http / 1.1"]입니다.`.
+An array of strings, to specifiy the ALPN value in TLS handshake. Default value is `["http/1.1"]`.
 
-> `allowInsecure`: true | 그릇된
+> `allowInsecure`: true | false
 
-`참`이면 V2Ray는 TLS 클라이언트에서 안전하지 않은 연결을 허용합니다. 예를 들어, TLS 서버는 확인할 수없는 인증서를 사용합니다.
+If `true`, V2Ray allowss insecure connection at TLS client, e.g., TLS server uses unverifiable certificates.
 
-> `allowInsecureCiphers`: true | 그릇된
+> `allowInsecureCiphers`: true | false
 
-안전하지 못한 암호 모음을 허용하거나 금지합니다. 기본적으로 TLS는 TLS 1.3 사양의 암호화 제품군 만 사용합니다. 이 옵션을 켜면 정적 RSA 키가있는 암호 그룹을 허용 할 수 있습니다.
+Whehter or not to allow insecure cipher suites. By default TLS only uses cipher suites from TLS 1.3 spec. Turn on this option to allow cipher suites with static RSA keys.
 
-> `인증서`: \ [ [CertificateObject](#certificateobject)\]
+> `certificates`: \[ [CertificateObject](#certificateobject) \]
 
-TLS 인증서 목록. 각 항목은 하나의 인증서입니다.
+List of TLS certificates. Each entry is one certificate.
 
 ### CertificateObject
 
@@ -191,9 +201,9 @@ TLS 인증서 목록. 각 항목은 하나의 인증서입니다.
 }
 ```
 
-> `사용`: "암호화"| "확인"| "발행물"
+> `usage`: "encipherment" | "verify" | "issue"
 
-인증서의 목적. 기본값 `"암호화"`. 선택 사항은 다음과 같습니다.
+Purpose of the certificate. Default value `"encipherment"`. Choices are:
 
 * `"암호화"`: 인증서는 TLS 인증 및 암호화에 사용됩니다.
 * `"verify"`: 인증서는 원격 피어에서 TLS 인증서의 유효성을 검사하는 데 사용됩니다. 이 경우 인증서는 CA 인증서 여야합니다.
@@ -211,7 +221,7 @@ When there is a new client request, say for `serverName` = `"v2ray.com"`, V2Ray 
 
 {% endhint %}
 
-> `인증서 파일`: 문자열
+> `certificateFile`: string
 
 File path to the certificate. If the certificate is generated by OpenSSL, the path ends with ".crt".
 
@@ -221,15 +231,15 @@ Use `v2ctl cert -ca` command to generate a new CA certificate.
 
 {% endhint %}
 
-> `인증서`: \ [string \]
+> `certificate`: \[ string \]
 
 List of strings as content of the certificate. See the example above. Either `certificate` or `certificateFile` must not be empty.
 
-> `keyFile`: 문자열
+> `keyFile`: string
 
 File path to the private key. If generated by OpenSSL, the file usually ends with ".key". Key file with password is not supported.
 
-> `키`: \ [string \]
+> `key`: \[ string \]
 
 List of strings as content of the private key. See the example above. Either `key` or `keyFile` must not be empty.
 
@@ -251,11 +261,11 @@ When `usage` is `"verify"`, both `keyFile` and `key` can be empty.
 }
 ```
 
-> `점`: 숫자
+> `mark`: number
 
 An integer. If non-zero, the value will be set to out-going connections via socket option SO_MARK. This mechanism only applies on Linux and requires CAP_NET_ADMIN permission.
 
-> `tcpFastOpen`: true | 그릇된
+> `tcpFastOpen`: true | false
 
 Whether or not to enable [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fast_Open). When set to `true`, V2Ray enables TFO for current connection. When set to `false`, V2Ray disables TFO. If this entry doesn't exist, V2Ray uses default settings from operating system.
 
@@ -265,7 +275,7 @@ Whether or not to enable [TCP Fast Open](https://en.wikipedia.org/wiki/TCP_Fast_
   * Linux 3.16 이상 : 시스템 기본값에 의해 사용 가능합니다.
 * 인바운드 및 아웃 바운드 연결에 모두 적용 가능합니다.
 
-> `tproxy`: "redirect"| "tproxy"| "떨어져서"
+> `tproxy`: "redirect" | "tproxy" | "off"
 
 Whether or not to enable transparent proxy on Linux. Choices are:
 
