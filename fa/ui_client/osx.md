@@ -8,21 +8,25 @@ refen: ui_client/osx
 
 * دانلود: [Github](https://github.com/Cenmrev/V2RayX)
 
-## ابزارهای دیگر {#other}
+## V2RayU
+
+* Download: [Github](https://github.com/yanue/V2rayU)
+
+## Other tools {#other}
 
 ### ویژوال استودیو کد
 
 ویرایشگر کد منبع از مایکروسافت.
 
-* وب سایت: [code.visualstudio.com](https://code.visualstudio.com/)
+* Website: [code.visualstudio.com](https://code.visualstudio.com/)
 
 ### تلگرام
 
 بحث رمزگذاری شده
 
-* وب سایت: [telegram.org](https://telegram.org/)
-* دانلود: [فروشگاه مک فروشگاه](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
+* Website: [telegram.org](https://telegram.org/)
+* Download: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
 
 ### مشتری Microsoft Remote Desktop Connection
 
-* دانلود: [فروشگاه مک فروشگاه](https://www.v2ray.com/itunesm/us/microsoft-remote-desktop/id715768417/)
+* Download: [Mac App Store](https://www.v2ray.com/itunesm/us/microsoft-remote-desktop/id715768417/)

@@ -8,21 +8,25 @@ refen: ui_client/osx
 
 * Tải xuống: [Github](https://github.com/Cenmrev/V2RayX)
 
-## Các công cụ khác {#other}
+## V2RayU
+
+* Download: [Github](https://github.com/yanue/V2rayU)
+
+## Other tools {#other}
 
 ### Visual Studio Code
 
 Trình chỉnh sửa mã nguồn từ Microsoft.
 
-* Trang web: [code.visualstudio.com](https://code.visualstudio.com/)
+* Website: [code.visualstudio.com](https://code.visualstudio.com/)
 
 ### Telegram
 
 Thảo luận được mã hóa.
 
-* Trang web: [telegram.org](https://telegram.org/)
-* Tải xuống: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
+* Website: [telegram.org](https://telegram.org/)
+* Download: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
 
 ### Ứng dụng khách Microsoft Remote Desktop Connection
 
-* Tải xuống: [Mac App Store](https://www.v2ray.com/itunesm/us/microsoft-remote-desktop/id715768417/)
+* Download: [Mac App Store](https://www.v2ray.com/itunesm/us/microsoft-remote-desktop/id715768417/)
