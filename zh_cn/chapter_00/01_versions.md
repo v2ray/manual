@@ -7,6 +7,17 @@ refen: welcome/versions
 
 本页列出了常规版本的功能升级记录，未列出的版本通常为 bug 修复。
 
+## 2018.12.07 v4.8
+
+使用相关:
+
+* Bug 修复
+
+开发相关:
+
+* 新增了 [API 文档](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
+* 新增了 [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/05f8de1b8f9568c9b6007827baf6ca9a3fbcb49f/transport/internet/system_listener.go#L61) 方法
+
 ## 2018.11.30 v4.7
 
 * Freedom 中新增了 UseIPv4 和 UseIPv6 模式。
