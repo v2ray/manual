@@ -6,6 +6,17 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2018.12.07 v4.8
+
+For end users:
+
+* Bug fixes
+
+For developers:
+
+* New [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
+* New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/05f8de1b8f9568c9b6007827baf6ca9a3fbcb49f/transport/internet/system_listener.go#L61)
+
 ## 2018.11.30 v4.7
 
 * Freedom now supports for dialing IPv4 or IPv6 address only.
