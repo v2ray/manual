@@ -15,7 +15,8 @@ For end users:
 For developers:
 
 * New [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
-* New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/05f8de1b8f9568c9b6007827baf6ca9a3fbcb49f/transport/internet/system_listener.go#L61)
+* New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)
+* New method: [internet.RegisterDialerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_dialer.go#L105)
 
 ## 2018.11.30 v4.7
 
