@@ -11,6 +11,10 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 * 下载：[Github](https://github.com/Cenmrev/V2RayX)
 
+## V2RayU
+
+* 下载：[Github](https://github.com/yanue/V2rayU)
+
 ## 其它工具 {#others}
 
 ### Visual Studio Code
