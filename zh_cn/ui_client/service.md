@@ -19,6 +19,7 @@ refen: ui_client/service
 * [V2rayPro](https://myv2.us): 基于 V2Ray 的网络加速服务。专属优惠码：v2ray.com
 * [vProxy](http://niuban.fun): 由 V2Ray 驱动的网络加速器。专属优惠码：v2ray.cool
 * [栖息地](http://7dea9f6.vmess.fun): 对内小众的 V2ray 优质网络加速服务。邀请码：V2RAY 
+* [NicoNode](https://niconode.net): 支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW 
 
 ## 域名相关 {#domain}
 
