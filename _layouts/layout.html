@@ -22,9 +22,6 @@ function isValidDomain() {
 if (inIframe() || !isValidDomain()) {
     window.top.location.href = 'https://www.v2ray.com/';
 }
-window.onload = function() {
-    $('.book-body,.body-inner').scrollTop(0);
-};
         </script>
         {% block style %}
             {% for resource in plugins.resources.css %}
