@@ -35,15 +35,12 @@ Trên PC của bạn (hoặc di động), chạy V2Ray với cấu hình sau.
     "settings": {}
   }],
   "routing": {
-    "strategy": "rules",
-    "settings": {
-      "domainStrategy": "IPOnDemand",
-      "rules": [{
-        "type": "field",
-        "ip": ["geoip:private"],
-        "outboundTag": "direct"
-      }]
-    }
+    "domainStrategy": "IPOnDemand",
+    "rules": [{
+      "type": "field",
+      "ip": ["geoip:private"],
+      "outboundTag": "direct"
+    }]
   }
 }
 ```
