@@ -35,15 +35,12 @@ refen: welcome/start
     "settings": {}
   }],
   "routing": {
-    "strategy": "rules",
-    "settings": {
-      "domainStrategy": "IPOnDemand",
-      "rules": [{
-        "type": "field",
-        "ip": ["geoip:private"],
-        "outboundTag": "direct"
-      }]
-    }
+    "domainStrategy": "IPOnDemand",
+    "rules": [{
+      "type": "field",
+      "ip": ["geoip:private"],
+      "outboundTag": "direct"
+    }]
   }
 }
 ```
