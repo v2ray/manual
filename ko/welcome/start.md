@@ -35,15 +35,12 @@ PC (또는 모바일)에서 다음 구성으로 V2Ray를 실행하십시오.
     "settings": {}
   }],
   "routing": {
-    "strategy": "rules",
-    "settings": {
-      "domainStrategy": "IPOnDemand",
-      "rules": [{
-        "type": "field",
-        "ip": ["geoip:private"],
-        "outboundTag": "direct"
-      }]
-    }
+    "domainStrategy": "IPOnDemand",
+    "rules": [{
+      "type": "field",
+      "ip": ["geoip:private"],
+      "outboundTag": "direct"
+    }]
   }
 }
 ```
