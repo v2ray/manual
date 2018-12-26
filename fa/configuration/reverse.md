@@ -126,19 +126,16 @@ refen: configuration/reverse
 
 ```javascript
 "routing": {
-  "strategy": "rules",
-  "settings": {
-    "rules": [{
-      "type": "field",
-      "inboundTag": ["bridge"],
-      "domain": ["full:test.v2ray.com"],
-      "outboundTag": "interconn"
-    },{
-      "type": "field",
-      "inboundTag": ["bridge"],
-      "outboundTag": "out"
-    }]
-  }
+  "rules": [{
+    "type": "field",
+    "inboundTag": ["bridge"],
+    "domain": ["full:test.v2ray.com"],
+    "outboundTag": "interconn"
+  },{
+    "type": "field",
+    "inboundTag": ["bridge"],
+    "outboundTag": "out"
+  }]
 }
 ```
 
@@ -182,18 +179,15 @@ Routing:
 
 ```javascript
 "routing": {
-  "strategy": "rules",
-  "settings": {
-    "rules": [{
-      "type": "field",
-      "inboundTag": ["external"],
-      "outboundTag": "portal"
-    },{
-      "type": "field",
-      "inboundTag": ["interconn"],
-      "outboundTag": "portal"
-    }]
-  }
+  "rules": [{
+    "type": "field",
+    "inboundTag": ["external"],
+    "outboundTag": "portal"
+  },{
+    "type": "field",
+    "inboundTag": ["interconn"],
+    "outboundTag": "portal"
+  }]
 }
 ```
 
