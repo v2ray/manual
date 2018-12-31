@@ -1,6 +1,9 @@
-# Android Client
+---
+refcn: ui_client/android
+refen: ui_client/android
+---
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/android.html)
+# Android Client
 
 ## BifrostV
 
@@ -23,10 +26,10 @@ V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray 
 
 ## Actinium
 
-* Download: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
+* Download: Play Store (Unavailable)
 * Source: [Github](https://github.com/V2Ray-Android/Actinium)
 
-## Other tools
+## Other tools {#other}
 
 ### JuiceSSH
 

@@ -1,3 +1,8 @@
+---
+refcn: ui_client/windows
+refen: ui_client/windows
+---
+
 # Windows 客户端
 
 ## V2RayW
@@ -16,7 +21,11 @@ V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。
 
 * 下载：[Github](https://github.com/Shinlor/V2RayS)
 
-## 其它工具
+## V2RayGCon
+
+* 下载：[Github](https://github.com/nobody3u/V2RayGCon)
+
+## 其它工具 {#others}
 
 ### PuTTY
 

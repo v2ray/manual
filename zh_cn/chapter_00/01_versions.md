@@ -1,6 +1,103 @@
+---
+refcn: chapter_00/01_versions
+refen: welcome/versions
+---
+
 # 更新日志
 
-![Chinese](../resources/chinesec.svg) [![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html)
+本页列出了常规版本的功能升级记录，未列出的版本通常为 bug 修复。
+
+## 2018.12.07 v4.8
+
+使用相关:
+
+* Bug 修复
+
+开发相关:
+
+* 新增了 [API 文档](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
+* 新增了 [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63) 方法
+* 新增了 [internet.RegisterDialerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_dialer.go#L105) 方法
+
+## 2018.11.30 v4.7
+
+* Freedom 中新增了 UseIPv4 和 UseIPv6 模式。
+* 传输方式新增了 QUIC。
+
+## 2018.11.23 v4.6
+
+* Freedom 的`"UseIP"`模式会根据出站所用的 IP 地址自动使用 IPv4 或 IPv6 目标地址。
+
+## 2018.11.16 v4.4
+
+* 路由中新增了负载均衡配置。
+* 优化了内存使用效率。
+
+## 2018.11.05 v4.1
+
+* 配置文件格式简化。主要是传入传出代理和路由部分。旧版格式仍然可用，但推荐尽快升级到最新格式。
+* 优化了 GeoIP 的性能，减少了内存占用，提升了匹配效率。
+
+## 2018.11.02 v4.0
+
+* 反向代理
+* 新增了 ppc64 和 ppc64le 预编译包。
+
+## 2018.10.12 v3.47
+
+* 升级了自动构建工具
+
+## 2018.09.28 v3.44
+
+* Dokodemo-door 现已支持 Linux 的 TProxy。
+
+## 2018.09.21 v3.43
+
+* DNS 查询支持了按域名选择服务器的功能。
+
+## 2018.09.14 v3.40
+
+* 传输配置中新增了连接选项，可用于配置 VPN。
+* 传输配置中新增了 TCP Fast Open 选项。
+
+## 2018.09.03 v3.38
+
+* mKCP 中新增了 WireGuard 伪装。
+* 修复了 mips/mips64 中 softfloat 版本的编译问题。
+
+## 2018.08.31 v3.37
+
+* 优化了读取网络连接时的性能，见[环境变量](../chapter_02/env.md)。
+* VMess 在 ARM64 平台上将默认使用 AES-128-GCM 作为加密方式。
+* 使用 Go 1.11 编译。
+
+## 2018.08.24 v3.36
+
+* 大幅提升了路由中子域名（`domain:`）匹配的效率。
+* 路由中支持了完整域名匹配。
+
+## 2018.08.07 v3.34
+
+* 在大多数设备上有了更精确的内存控制
+
+## 2018.07.27 v3.32
+
+* 现在可以探测 BitTorrent 流量了。
+* 路由配置中新增了`protocol`选项用于按流量类型进行路由选择。
+* 路由配置中新增了`geosite:speedtest`用于适配所有的 Speedtest.net 公用服务器。
+
+## 2018.07.20 v3.31
+
+* 新增了 [Domain Socket 传输方式](../chapter_02/transport/domainsocket.md) (感谢 @xiaokangwang)。
+
+## 2018.07.13 v3.30
+
+* 解决了一个可能会导致 mKCP 断流的问题。
+* 感谢来自俄罗斯的朋友，我们现在有[俄语文档](https://www.v2ray.com/ru/)了。
+
+## 2018.07.06 v3.29
+
+* 新增了 MTProto 代理协议。
 
 ## 2018.06.29 v3.27
 
@@ -24,7 +121,7 @@
 
 ## 2018.04.20 v3.19
 
-* 传入代理的流量统计。
+* 入站代理的流量统计。
 
 ## 2018.04.13 v3.17
 
@@ -35,7 +132,7 @@
 ## 2018.04.06 v3.16
 
 * [统计信息](../chapter_02/stats.md)。开启方式略麻烦，请仔细看文档。
-* Shadowsocks 传入协议现在可以只监听 UDP 端口而不监听 TCP 了。强烈建议不在同一端口上同时监听 TCP 和 UDP。
+* Shadowsocks 入站协议现在可以只监听 UDP 端口而不监听 TCP 了。强烈建议不在同一端口上同时监听 TCP 和 UDP。
 
 ## 2018.03.02 v3.11
 
@@ -104,7 +201,7 @@
 
 ## 2017.09.29 v2.39
 
-* 当远程服务器关闭连接时，传入代理现在会尽快断开与客户端的连接。
+* 当远程服务器关闭连接时，入站代理现在会尽快断开与客户端的连接。
 * 默认连接超时时间更改为 5 分钟。
 
 ## 2017.05.12 v2.27
@@ -167,11 +264,11 @@
 
 ## 2017.01.16 v2.15
 
-* mKCP 和 WebSocket 现已适用于所有的传出（传入）协议。
+* mKCP 和 WebSocket 现已适用于所有的出站（入站）协议。
 
 ## 2017.01.09 v2.14
 
-* Socks 5 传出协议。
+* Socks 5 出站协议。
 * mKCP 新增微信视频通话伪装。
 
 ## 2017.01.02 v2.13
@@ -201,22 +298,22 @@
 
 ## 2016.11.21 v2.7
 
-* 现在可以给主传入传出连接设置标识了；
+* 现在可以给主入站出站连接设置标识了；
 * 一些小修小补；
 
 ## 2016.11.14 v2.6
 
-* 可将一个传出协议发出的数据转发至另一传出协议；
-* 路由可根据传入协议的标识来进行判断了；
+* 可将一个出站协议发出的数据转发至另一出站协议；
+* 路由可根据入站协议的标识来进行判断了；
 
 ## 2016.11.07 v2.5
 
-* 新增 Shadowsocks 传出协议；
+* 新增 Shadowsocks 出站协议；
 * 新增 TCP 连接中的 HTTP 头部伪装；
 
 ## 2016.10.24 v2.4
 
-* 每个传入传出协议可以配置各自的 TCP / mKCP / WebSocket 设置了；
+* 每个入站出站协议可以配置各自的 TCP / mKCP / WebSocket 设置了；
 * 路由现可以跟据来源 IP 进行转发；
 
 ## 2016.10.17 v2.3
@@ -240,7 +337,7 @@
 ## 2016.08.15 v1.24
 
 * mKCP 新增了 BT 数据包伪装。
-* 传入连接现在可以设置 allowPassive 来允许被动连接，如 IMAP。
+* 入站连接现在可以设置 allowPassive 来允许被动连接，如 IMAP。
 
 ## 2016.08.08 v1.23
 

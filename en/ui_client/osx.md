@@ -1,12 +1,19 @@
-# Mac OS X
+---
+refcn: ui_client/osx
+refen: ui_client/osx
+---
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/osx.html)
+# Mac OS X
 
 ## V2RayX
 
 * Download: [Github](https://github.com/Cenmrev/V2RayX)
 
-## Other tools
+## V2RayU
+
+* Download: [Github](https://github.com/yanue/V2rayU)
+
+## Other tools {#other}
 
 ### Visual Studio Code
 

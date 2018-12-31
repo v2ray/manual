@@ -1,6 +1,9 @@
-# Windows
+---
+refcn: ui_client/windows
+refen: ui_client/windows
+---
 
-![English](../resources/english.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/windows.html)
+# Windows
 
 ## V2RayW
 
@@ -14,7 +17,7 @@
 
 * Download: [Github](https://github.com/Shinlor/V2RayS)
 
-## Other tools
+## Other tools {#other}
 
 ### PuTTY
 

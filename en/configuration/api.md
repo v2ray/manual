@@ -1,28 +1,36 @@
-# API
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
 
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html)
+# API
 
 V2Ray provides some API for remote access. These APIs are based on [gRPC](https://grpc.io/).
 
 When API is enabled, V2Ray creates an outbound proxy automatically, tagged as `tag`. User must [route](routing.md) all gRPC connections to this outbound.
 
-Configuration:
+## ApiObject
+
+`ApiObject` is used as `api` field in top level configuration.
 
 ```javascript
 {
-    "tag": "api",
-    "services": [
-        "HandlerService",
-        "LoggerService",
-        "StatsService"
-    ]
+  "tag": "api",
+  "services": [
+    "HandlerService",
+    "LoggerService",
+    "StatsService"
+  ]
 }
 ```
 
-Where:
+> `tag`: string
 
-* `tag`: The tag of the outbound proxy.
-* `services`: List of enabled APIs.
+The tag of the outbound proxy.
+
+> `services`: \[ string \]
+
+List of enabled APIs.
 
 ## Supported API list
 

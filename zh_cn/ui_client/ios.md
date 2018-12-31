@@ -1,3 +1,8 @@
+---
+refcn: ui_client/ios
+refen: ui_client/ios
+---
+
 # iOS 客户端
 
 ## Kitsunebi
@@ -6,7 +11,7 @@ Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMe
 
 由于使用 V2Ray 核心，Kitsunebi 几乎支持 V2Ray 的所有功能，比如 Mux 和 mKCP。
 
-* 下载：[iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
+* 下载：iTunes (已下架)
 
 ## Kitsunebi Lite
 
@@ -30,7 +35,7 @@ Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 
 
 * 下载：[iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## 其它工具
+## 其它工具 {#others}
 
 ### HyperApp
 
