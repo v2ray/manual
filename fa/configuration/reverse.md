@@ -126,7 +126,7 @@ refen: configuration/reverse
 
 ```javascript
 "routing": {
- "rules": [{
+  "rules": [{
     "type": "field",
     "inboundTag": ["bridge"],
     "domain": ["full:test.v2ray.com"],
