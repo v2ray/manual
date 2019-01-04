@@ -17,25 +17,20 @@ refen: ui_client/service
 * [多数派](https://dspi.io/aff.php?aff=7): Новый сервис VPN, основанный на V2Ray.
 * [V2rayPro](https://myv2.us): Сервис VPN, основанный на V2Ray. Скидочный код: v2ray.com
 
-## Домены
+## Hosting
 
 * [Let's Encrypt](https://letsencrypt.org/): Бесплатные TLS-сертификаты
+* [Vultr](https://www.vultr.com/?ref=7269307): VPS
+* [BlueHost](https://www.bluehost.com/track/v2ray/): VPS, web hosting
+* [ClouDNS](https://www.cloudns.net/aff/id/244749/): Domain registration, DNS, SSL certificate
 
-## VPS
+## Cryptocurrency
 
-* [Vultr](https://www.vultr.com/?ref=7269307)
-* [BlueHost](https://www.bluehost.com/track/v2ray/)
-
-## Криптовалюта
-
-* [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Торговля биткоинами в оффлайн
-* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Внебиржевой рынок для торговли BTC, ETH, BCH, USDT.
-* [Binance](https://www.binance.com/?ref=35382451): Торговая площадка для криптовалют.
-* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Торговая площадка для криптовалют.
+* [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Trade Bitcoins offline
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): OTC market to trade BTC, ETH, BCH, USDT.
+* [Binance](https://www.binance.com/?ref=35382451): Trading market for crypto currencies.
+* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Trading market for crypto currencies.
 * [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Online crypto currency wallet
-
-## Испытайте свою удачу
-
 * [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
-* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Ставки на спорт, Bitcoin, Чемпионат мира 2018.
-* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Игры в казино на биткоины.
+* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Bet sport games with Bitcoin, including World Cup 2018.
+* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Casino games with Bitcoin.
