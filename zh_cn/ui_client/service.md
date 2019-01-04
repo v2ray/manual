@@ -18,17 +18,15 @@ refen: ui_client/service
 * [多数派](https://dspi.io/aff.php?aff=7): 基于V2RAY的全新的网络加速服务
 * [V2rayPro](https://myv2.us): 基于 V2Ray 的网络加速服务。专属优惠码：v2ray.com
 * [vProxy](http://niuban.fun): 由 V2Ray 驱动的网络加速器。专属优惠码：v2ray.cool
-* [栖息地](http://7dea9f6.vmess.fun): 对内小众的 V2ray 优质网络加速服务。邀请码：V2RAY 
-* [NicoNode](https://niconode.net): 支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW 
+* [栖息地](http://7dea9f6.vmess.fun): 对内小众的 V2ray 优质网络加速服务。邀请码：V2RAY
+* [NicoNode](https://niconode.net): 支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
 
-## 域名相关 {#domain}
+## 建站相关 {#hosting}
 
 * [Let's Encrypt](https://letsencrypt.org/): 免费 TLS 证书
-
-## VPS
-
-* [Vultr](https://www.vultr.com/?ref=7269307)
-* [BlueHost](https://www.bluehost.com/track/v2ray/)
+* [Vultr](https://www.vultr.com/?ref=7269307): VPS
+* [BlueHost](https://www.bluehost.com/track/v2ray/): VPS、建站
+* [ClouDNS](https://www.cloudns.net/aff/id/244749/): 域名、DNS、SSL 证书
 
 ## 数字货币 {#crypto}
 
@@ -37,9 +35,6 @@ refen: ui_client/service
 * [币安](https://www.binance.com/?ref=35382451): 数字货币交易所
 * [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): 数字货币交易所
 * [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): 在线数字货币钱包
-
-## 试试你的运气 {#luck}
-
 * [PrimeDice](https://primedice.com/?c=default): 用比特币玩骰子游戏
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): 用比特币竞猜体育比赛，包括世界杯
 * [Bitsler](https://www.bitsler.com/?ref=VictoriaR): 使用比特币玩赌场游戏
