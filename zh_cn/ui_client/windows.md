@@ -25,6 +25,10 @@ V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。
 
 * 下载：[Github](https://github.com/nobody3u/V2RayGCon)
 
+## Clash for Windows
+
+* 下载：[Github](https://github.com/Fndroid/clash_for_windows_pkg)
+
 ## 其它工具 {#others}
 
 ### PuTTY
