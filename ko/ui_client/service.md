@@ -17,25 +17,20 @@ refen: ui_client/service
 * [다수 派](https://dspi.io/aff.php?aff=7): 새로운 V2Ray 기반 VPN 서비스.
 * [V2rayPro](https://myv2.us): V2Ray를 기반으로 한 VPN 서비스. 쿠폰 코드 : v2ray.com
 
-## 도메인
+## Hosting
 
 * [암호화하자](https://letsencrypt.org/): 무료 TLS 인증서
+* [Vultr](https://www.vultr.com/?ref=7269307): VPS
+* [BlueHost](https://www.bluehost.com/track/v2ray/): VPS, web hosting
+* [ClouDNS](https://www.cloudns.net/aff/id/244749/): Domain registration, DNS, SSL certificate
 
-## VPS
+## Cryptocurrency
 
-* [벌 터](https://www.vultr.com/?ref=7269307)
-* [BlueHost](https://www.bluehost.com/track/v2ray/)
-
-## 암호 해독 성
-
-* [LocalBitcoins](https://localbitcoins.com/?ch=khtm): 무역 Bitcoins 오프라인
-* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): BTC, ETH, BCH, USDT를 거래 할 장외 시장.
-* [Binance](https://www.binance.com/?ref=35382451): Crypto 통화 거래 시장.
-* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): 암호화 통화 거래 시장.
+* [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Trade Bitcoins offline
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): OTC market to trade BTC, ETH, BCH, USDT.
+* [Binance](https://www.binance.com/?ref=35382451): Trading market for crypto currencies.
+* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Trading market for crypto currencies.
 * [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Online crypto currency wallet
-
-## 너의 운을 시험 해봐
-
 * [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
-* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): 월드컵 2018을 포함하여 비트 코인으로 베팅 스포츠 게임.
-* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Bitcoin을 사용한 카지노 게임.
+* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Bet sport games with Bitcoin, including World Cup 2018.
+* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Casino games with Bitcoin.
