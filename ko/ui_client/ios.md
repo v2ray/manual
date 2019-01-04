@@ -8,7 +8,7 @@ refen: ui_client/ios
 
 Kitsunebi는 V2Ray를 기반으로하는 iOS 앱입니다. V2Ray와 같은 모든 기능을 제공합니다. V2Ray 호환 JSON 구성 가져 오기 및 내보내기도 지원합니다.
 
-* 다운로드 : iTunes (사용할 수 없음)
+* Download: [iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
 
 ## 키츠 네비 라이트
 
