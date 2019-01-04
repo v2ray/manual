@@ -11,7 +11,7 @@ Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMe
 
 由于使用 V2Ray 核心，Kitsunebi 几乎支持 V2Ray 的所有功能，比如 Mux 和 mKCP。
 
-* 下载：iTunes (已下架)
+* 下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
 
 ## Kitsunebi Lite
 
