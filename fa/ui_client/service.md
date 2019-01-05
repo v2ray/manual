@@ -17,25 +17,20 @@ refen: ui_client/service
 * [多数 派](https://dspi.io/aff.php?aff=7): سرویس VPN جدید مبتنی بر V2Ray.
 * [V2rayPro](https://myv2.us): سرویس VPN بر اساس V2Ray. کد کوپن: v2ray.com
 
-## دامنه ها
+## Hosting
 
 * [بیایید رمزگذاری](https://letsencrypt.org/): گواهینامه TLS رایگان
-
-## VPS
-
-* [ولتر](https://www.vultr.com/?ref=7269307)
-* [BlueHost](https://www.bluehost.com/track/v2ray/)
+* [Vultr](https://www.vultr.com/?ref=7269307): VPS
+* [BlueHost](https://www.bluehost.com/track/v2ray/): VPS, web hosting
+* [ClouDNS](https://www.cloudns.net/aff/id/244749/): Domain registration, DNS, SSL certificate
 
 ## Cryptocurrency
 
 * [LocalBitcoins](https://localbitcoins.com/?ch=khtm): Trade Bitcoins offline
-* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): بازار OTC برای تجارت BTC، ETH، BCH، USDT.
-* [Binance](https://www.binance.com/?ref=35382451): بازار معاملاتی برای ارزهای رمزنگاری.
-* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): بازار معاملاتی برای ارزهای رمزنگاری.
+* [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): OTC market to trade BTC, ETH, BCH, USDT.
+* [Binance](https://www.binance.com/?ref=35382451): Trading market for crypto currencies.
+* [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Trading market for crypto currencies.
 * [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Online crypto currency wallet
-
-## شانست را امتحان کن
-
 * [PrimeDice](https://primedice.com/?c=default): Dice game with bitcoin.
-* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): شرط بندی های ورزشی با Bitcoin، از جمله جام جهانی 2018.
-* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): بازی های کازینو با Bitcoin.
+* [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Bet sport games with Bitcoin, including World Cup 2018.
+* [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Casino games with Bitcoin.
