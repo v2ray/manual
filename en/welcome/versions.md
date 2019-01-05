@@ -7,6 +7,12 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2019.01.11 v4.11
+
+For developers:
+
+* New method: [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
+
 ## 2018.12.07 v4.8
 
 For end users:

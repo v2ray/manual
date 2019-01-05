@@ -7,6 +7,12 @@ refen: welcome/versions
 
 本页列出了常规版本的功能升级记录，未列出的版本通常为 bug 修复。
 
+## 2019.01.11 v4.11
+
+开发相关:
+
+* 新增了 [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
+
 ## 2018.12.07 v4.8
 
 使用相关:
