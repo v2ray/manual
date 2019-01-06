@@ -30,7 +30,7 @@ refen: ui_client/service
 * [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g): Внебиржевой рынок для торговли BTC, ETH, BCH, USDT.
 * [Binance](https://www.binance.com/?ref=35382451): Торговая площадка для криптовалют.
 * [Coinex](https://www.coinex.com/account/signup?refer_code=r3fmp): Торговая площадка для криптовалют.
-* [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Online crypto currency wallet
+* [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18): Онлайн-кошелек с криптовалютой.
 * [PrimeDice](https://primedice.com/?c=default): Игра в кости на биткоины.
 * [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d): Ставки на спорт, Bitcoin, Чемпионат мира 2018.
 * [Bitsler](https://www.bitsler.com/?ref=VictoriaR): Игры в казино на биткоины.
