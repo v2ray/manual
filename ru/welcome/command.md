@@ -22,10 +22,10 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 
 > `-config`
 
-URI of the configuration. Avilable formats are:
+URI файла с настройками. Возможные варианты:
 
-* Path to the local config file. May be a relative path or absolute path.
-* `"stdin:"`: Indicates V2Ray to read configuration from standard input. Caller must close stdin after writing out configuration.
+* Путь к локальному файлу с настройками. Может быть как относительным, так и абсолютным.
+* `"stdin:"`: Указывает V2Ray считать настройки через стандартный поток ввода. Вызывающая программа должна закрыть stdin после вывода настроек.
 * Value begins with `http://` or `https://` (lowercase): V2Ray tries to load configuration from the remote address.
 
 > `-format`
