@@ -4,10 +4,10 @@ refen: configuration/protocols/http
 ---
 # HTTP
 
-* Name: `http`
+* Название: `http`
 * Тип: входящий
 
-HTTP is a protocol for inbound connections. It is compatible with HTTP/1.1.
+HTTP - это протокол для входящих соединений. Он совместим с HTTP 1.1.
 
 ## InboundConfigurationObject
 
@@ -34,7 +34,7 @@ An array in which each entry is an account. It is empty by default. If not empty
 
 > `userLevel`: number
 
-User level. All connections share this level.
+Пользовательский уровень. Все подключения имеют этот уровень.
 
 ### AccountObject
 
@@ -47,11 +47,11 @@ User level. All connections share this level.
 
 > `user`: string
 
-Username for HTTP authentication.
+Имя пользователя для аутентификации по HTTP.
 
 > `pass`: string
 
-password for HTTP authentication.
+Пароль для аутентификации по HTTP.
 
 {% hint style='info' %}
 

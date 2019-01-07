@@ -39,14 +39,14 @@ D --> F(Обычный сайт);
 
 ```mermaid
 graph LR;
-A1(inbound) --> D(Dispatcher / Router / DNS);
-A2(inbound) --> D;
-A3(inbound) --> D;
-A4(inbound) --> D;
-D --> B1(outbound);
-D --> B2(outbound);
-D --> B3(outbound);
-D --> B4(outbound);
+A1(вход) --> D(Распределитель / Маршрутизатор / DNS);
+A2(вход) --> D;
+A3(вход) --> D;
+A4(вход) --> D;
+D --> B1(выход);
+D --> B2(выход);
+D --> B3(выход);
+D --> B4(выход);
 ```
 
 Замечания:

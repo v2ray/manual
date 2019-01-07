@@ -31,7 +31,7 @@ Dokodemo-door также может работать (если настроен)
 
 > `port`: number
 
-Port of the destination server.
+Порт сервера назначения.
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 
@@ -43,7 +43,7 @@ Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to thi
 
 > `userLevel`: number
 
-User level. Все подключения проходят через этот уровень. Подробности: [Правила](../policy.md).
+Уровень пользователя. Все подключения проходят через этот уровень. Подробности: [Правила](../policy.md).
 
 ## Примеры для transparent proxy
 
