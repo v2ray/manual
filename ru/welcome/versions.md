@@ -4,22 +4,22 @@ refen: welcome/versions
 ---
 # История версий
 
-This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
+На этой странице перечислены регулярные выпуски с обновлениями функций. Если релиз Github здесь не указан, он обычно содержит только исправления ошибок.
 
 ## 2019.01.11 v4.11
 
-For developers:
+Для разработчиков:
 
 * New method: [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
 * [internet.DialSystem](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/dialer.go#L66) now uses [internet.ListenSystemPacket](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/tcp_hub.go#L65) to establish UDP connections.
 
 ## 2018.12.07 v4.8
 
-For end users:
+Для пользователей:
 
-* Bug fixes
+* Исправления ошибок
 
-For developers:
+Для разработчиков:
 
 * New [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
 * New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)
@@ -127,7 +127,7 @@ For developers:
 
 ## 2018.04.20 v3.19
 
-* Traffic stats for inbound proxies.
+* Статистика трафика для входящих прокси.
 
 ## 2018.04.13 v3.17
 
@@ -137,7 +137,7 @@ For developers:
 
 ## 2018.04.06 v3.16
 
-* [Statistics](../configuration/stats.md).
+* [Статистика](../configuration/stats.md).
 * Shadowsocks inbound now can be configured to only listen on UDP. Strongly recommend to not listen on both TCP and UDP on the same port.
 
 ## 2018.03.02 v3.11
@@ -149,17 +149,17 @@ For developers:
 ## 2018.02.23 v3.10
 
 * Log entries now contain session ID to distinguish proxy sessions.
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2018.02.15 v3.9
 
-* Happy New Year!
-* Bug fixes.
+* С Новым годом!
+* Исправления ошибок.
 
 ## 2018.02.09 v3.7
 
 * Developer preview: [Remote API](../configuration/api.md)。
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2017.12.29 v3.5
 
@@ -199,7 +199,7 @@ For developers:
 ## 2017.10.27 v2.44
 
 * HTTP now supports Basic Authentication.
-* Some bugs are fixed.
+* Некоторые ошибки исправлены.
 
 ## 2017.10.06 v2.40
 
