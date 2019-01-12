@@ -23,4 +23,4 @@ Whether or not to enable Mux on an outbound.
 
 > `concurrency`: number
 
-Max number of multiplexed connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`.
+Максимальное количество мультиплексированных соединений, которые может одновременно обрабатывать одно физическое соединение. Максимум: `1024`, минимум: `1`, по умолчанию: `8`.
