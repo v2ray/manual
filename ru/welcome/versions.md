@@ -203,7 +203,7 @@ refen: welcome/versions
 
 ## 2017.10.06 v2.40
 
-* Fix an issue that causes memory leak.
+* Исправлена проблема, приводящая к утечке памяти.
 
 ## 2017.09.29 v2.39
 
@@ -216,7 +216,7 @@ refen: welcome/versions
 
 ## 2017.05.05 v2.26
 
-* Stability fixes.
+* Исправления, увеличивающие стабильность работы.
 
 ## 2017.04.28 v2.25
 
@@ -225,7 +225,7 @@ refen: welcome/versions
 ## 2017.04.21 v2.24
 
 * Stabilize Mux.
-* Improves memory efficiency.
+* Память используется эффективнее.
 
 ## 2017.04.15 v2.23
 
@@ -254,58 +254,58 @@ refen: welcome/versions
 
 ## 2017.02.11 v2.18
 
-* Cleanup WebSocket code.
-* Remove allowPassive option. Now passive connections are always allowed.
-* Bug fixes
+* Очистка кода WebSocket.
+* Удалён параметр allowPassive. Теперь пассивные соединения всегда разрешены.
+* Исправления ошибок
 
 ## 2017.02.04 v2.17
 
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2017.01.28 v2.16
 
 * New 'redirect' option in freedom. It can be used to adapt tools like Shadowsocks Obfs.
 * Performance improvement in VMess non-encryption mode. Not compatible with previous versions.
-* Happy New Year!
+* С Новым годом!
 
 ## 2017.01.16 v2.15
 
-* All proxies can use mKCP and WebSocket now.
+* Все прокси теперь могут использовать mKCP и WebSocket.
 
 ## 2017.01.09 v2.14
 
 * Socks 5 outbound.
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2017.01.02 v2.13
 
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2016.12.26 v2.12
 
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2016.12.19 v2.11
 
-* JSON config file now supports comment.
+* Файл конфигурации JSON теперь поддерживает комментарии.
 
 ## 2016.12.12 v2.10
 
-* VMess now supports AES-GCM and ChaCha20-Poly1305 encryption methods.
+* VMess теперь поддерживает методы шифрования AES-GCM и ChaCha20-Poly1305.
 
 ## 2016.12.05 v2.9
 
-* Fix compatibility with Alpine Linux.
+* Исправлена совместимость с Alpine Linux.
 
 ## 2016.11.28 v2.8
 
 * Shadowsocks server now accepts OTA settings.
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2016.11.21 v2.7
 
 * Main inbound and outbound connection handler can be tagged now.
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2016.11.14 v2.6
 
@@ -326,7 +326,7 @@ refen: welcome/versions
 
 * Introduce new Protobuf-based configuration;
 * OpenBSD binaries;
-* Small fixes;
+* Мелкие исправления;
 
 ## 2016.09.19 v2.2
 
@@ -338,7 +338,7 @@ refen: welcome/versions
 
 ## 2016.08.20 v2.0
 
-* One year;
+* Один год проекту;
 
 ## 2016.08.15 v1.24
 
@@ -352,18 +352,18 @@ refen: welcome/versions
 
 ## 2016.08.01 v1.22
 
-* Fix a memory leak in mKCP;
-* Add FreeBSD release;
+* Исправлена утечка памяти в mKCP;
+* Добавлен релиз для FreeBSD;
 
 ## 2016.07.25 v1.21
 
 * High performance Chacha20 (Thanks to aead@);
-* Bug fixes;
+* Исправления ошибок;
 
 ## 2016.07.18 v1.20
 
 * New KCP options: readBufferSize and writeBufferSize;
-* Bug fixes;
+* Исправления ошибок;
 
 ## 2016.07.11 v1.19
 
@@ -375,7 +375,7 @@ refen: welcome/versions
 
 * Fix a "too many open files" issue in KCP;
 * KCP now uses fewer CPU;
-* Other bug fixes;
+* Исправление других ошибок;
 
 ## 2016.06.19 v1.17
 
@@ -409,17 +409,17 @@ refen: welcome/versions
 
 ## 2016.05.01 v1.12.1
 
-* Fix a bug in VMess.
+* Исправлена ошибка в VMess.
 
 ## 2016.05.01 v1.12
 
-* Second try to fix the memory usage issue;
+* Вторая попытка исправить проблему с использованием памяти;
 * Improve Shadowsocks performance;
 * New option "none" in loglevel;
 
 ## 2016.04.18 v1.11
 
-* Try to fix the memory usage issue.
+* Попытка исправить проблему с использованием памяти.
 
 ## 2016.03.07 v1.10
 
@@ -431,7 +431,7 @@ refen: welcome/versions
 
 ## 2016.02.29 v1.9
 
-* Support for Shadowsocks ChaCha20 encryption;
+* Поддержка шифрования ChaCha20 в Shadowsocks;
 * Add more direct connection sites to the default configuration file;
 * Dynamic ports now automatically create an account.
 
@@ -449,4 +449,4 @@ refen: welcome/versions
 * UDP relay performance improved;
 * Shadowsocks security improved;
 * Minor fixes;
-* Happy new year!
+* С Новым годом!
