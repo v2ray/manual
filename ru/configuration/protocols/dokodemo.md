@@ -35,7 +35,7 @@ Dokodemo-door также может работать (если настроен)
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 
-Type of acceptable network. If `"tcp"` is specified, all UDP traffic sent to this dokodemo-door will be discarded.
+Тип принимаемых соединений. Если выбран ` "tcp" `, весь UDP-трафик, отправленный на это dokodemo-соединение, будет отброшен.
 
 > `followRedirect`: true | false
 
