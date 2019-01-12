@@ -16,7 +16,7 @@ refen: configuration/transport/domainsocket
 
 ## DomainSocketObject
 
-`DomainSocketObject` is used in `dsSettings` field in `TransportObject` and `StreamSettingsObject`.
+`DomainSocketObject` используется в поле `dsSettings` в `TransportObject` и `StreamSettingsObject`.
 
 ```javascript
 {
