@@ -4,7 +4,7 @@ refen: configuration/protocols/mtproto
 ---
 # MTProto
 
-* Name: `mtproto`
+* Название: `mtproto`
 * Тип: входящий / исходящий
 
 MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
@@ -39,11 +39,11 @@ An array of users. For now only the first user is effective.
 
 > `email`: string
 
-User email. Used for tracking purposes. See [Stats](../stats.md).
+Электронная почта пользователя. Используется для сбора статистики. См. [Статистика](../stats.md).
 
 > `level`: number
 
-User level.
+Уровень пользователя.
 
 > `secret`: string
 
@@ -66,7 +66,7 @@ You may use the following command to generate MTProto secret: `openssl rand -hex
 
 MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
 
-Inbound:
+Входящее соединение:
 
 ```javascript
 {
@@ -79,7 +79,7 @@ Inbound:
 }
 ```
 
-Outbound:
+Исходящее соединение:
 
 ```javascript
 {
@@ -89,7 +89,7 @@ Outbound:
 }
 ```
 
-Routing:
+Маршрутизация:
 
 ```javascript
 {
