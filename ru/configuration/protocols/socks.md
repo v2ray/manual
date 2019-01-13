@@ -4,7 +4,7 @@ refen: configuration/protocols/socks
 ---
 # Socks
 
-* Name: `socks`
+* Название: `socks`
 * Тип: входящий / исходящий
 
 Socks - это реализация стандартного протокола SOCKS, совместимого с [ Socks 4 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4а и [ Socks 5 ](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
@@ -33,7 +33,7 @@ Socks configuration consists of two parts, `InboundConfigurationObject` and `Out
 
 > `servers`: \[ [ServerObject](#serverobject) \]
 
-An array of Socks servers.
+Массив Socks-серверов.
 
 ### ServerObject
 
@@ -53,17 +53,17 @@ An array of Socks servers.
 
 > `address`: address
 
-Socks server address. May be IPv4, IPv6 or domain address.
+Адрес сервера. Может быть адресом IPv4, IPv6 или доменным именем.
 
 {% hint style='info' %}
 
-Only support Socks 5 servers.
+Поддерживаются только Socks 5 сервера.
 
 {% endhint %}
 
 > `port`: number
 
-Socks server port.
+Порт Socks-сервера.
 
 > `users`: \[ [UserObject](#userobject) \]
 
