@@ -30,7 +30,7 @@ V2Ray supports comments in JSON，annotated by "//" or "/\* \*/". In an editor t
 
 {% endhint %}
 
-## JSON Data Types
+## Типы данных JSON
 
 Here is a brief introduction of JSON data types. They will be referenced in the rest of docs.
 
