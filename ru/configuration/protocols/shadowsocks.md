@@ -12,7 +12,7 @@ refen: configuration/protocols/shadowsocks
 Совместим с официальной версией:
 
 * Поддерживает как TCP, так и UDP соединения. UDP может быть отключен.
-* Поддерживает [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
+* Поддерживает [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html) 
   * Клиент может отключать и включать поддержку при необходимости.
   * Сервер может принудительно включить, отключить поддержку или использовать конфигурация клиента.
 * Методы шифрования ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) шифры, добавленные в V2Ray 3.0): 
@@ -41,7 +41,7 @@ refen: configuration/protocols/shadowsocks
 
 > `email`: string
 
-Email address. Used for user identification.
+Адрес электронной почты. Используется для идентификации пользователя.
 
 > `method`: string
 
@@ -53,7 +53,7 @@ Required. Password in Shadowsocks protocol. Can be any string.
 
 > `level`: number
 
-User level. Default to `0`. See [Policy](../policy.md).
+Пользовательский уровень. По умолчанию `0`. См. [Локальная политика](../policy.md).
 
 > `ota`: `true` | `false`
 
@@ -61,11 +61,11 @@ Whether or not to force OTA. If `true` and the incoming connection doesn't enabl
 
 If this field is not specified, V2Ray auto detects OTA settings from incoming connections.
 
-When AEAD encryption is used, `ota` has no effect.
+Когда используется шифрование AEAD, значение `ota` не используется.
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 
-Type of supported networks. Default to `"tcp"`.
+Проксируемые протоколы. По умолчанию `"tcp"`.
 
 ## OutboundConfigurationObject
 
@@ -123,7 +123,7 @@ An array of [ServerObject](#serverobject)s.
 
 > `email`: string
 
-Email address. Used for user identification.
+Адрес электронной почты. Используется для идентификации пользователя.
 
 > `address`: address
 
@@ -145,11 +145,11 @@ Required. Password in Shadowsocks protocol. Can be any string.
 
 Whether or not to use OTA. Default value is `false`.
 
-When AEAD encryption is used, this field has no effect.
+Если используется шифрование AEAD, это поле не используется.
 
 > `level`: number
 
-User level.
+Уровень пользователя.
 
 ## Методы шифрования
 
