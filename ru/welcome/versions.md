@@ -6,6 +6,10 @@ refen: welcome/versions
 
 На этой странице перечислены регулярные выпуски с обновлениями функций. Если релиз Github здесь не указан, он обычно содержит только исправления ошибок.
 
+## 2019.01.18 v4.13
+
+* Quic lib updated. It is not compatible with previous versions.
+
 ## 2019.01.11 v4.11
 
 Для разработчиков:
@@ -17,7 +21,7 @@ refen: welcome/versions
 
 Для пользователей:
 
-* Исправления ошибок
+* Bug fixes
 
 Для разработчиков:
 
@@ -127,7 +131,7 @@ refen: welcome/versions
 
 ## 2018.04.20 v3.19
 
-* Статистика трафика для входящих прокси.
+* Traffic stats for inbound proxies.
 
 ## 2018.04.13 v3.17
 
@@ -137,7 +141,7 @@ refen: welcome/versions
 
 ## 2018.04.06 v3.16
 
-* [Статистика](../configuration/stats.md).
+* [Statistics](../configuration/stats.md).
 * Shadowsocks inbound now can be configured to only listen on UDP. Strongly recommend to not listen on both TCP and UDP on the same port.
 
 ## 2018.03.02 v3.11
@@ -153,13 +157,13 @@ refen: welcome/versions
 
 ## 2018.02.15 v3.9
 
-* С Новым годом!
+* Happy New Year!
 * Исправления ошибок.
 
 ## 2018.02.09 v3.7
 
 * Developer preview: [Remote API](../configuration/api.md)。
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2017.12.29 v3.5
 
@@ -199,11 +203,11 @@ refen: welcome/versions
 ## 2017.10.27 v2.44
 
 * HTTP now supports Basic Authentication.
-* Некоторые ошибки исправлены.
+* Some bugs are fixed.
 
 ## 2017.10.06 v2.40
 
-* Исправлена проблема, приводящая к утечке памяти.
+* Fix an issue that causes memory leak.
 
 ## 2017.09.29 v2.39
 
@@ -216,7 +220,7 @@ refen: welcome/versions
 
 ## 2017.05.05 v2.26
 
-* Исправления, увеличивающие стабильность работы.
+* Stability fixes.
 
 ## 2017.04.28 v2.25
 
@@ -225,7 +229,7 @@ refen: welcome/versions
 ## 2017.04.21 v2.24
 
 * Stabilize Mux.
-* Память используется эффективнее.
+* Improves memory efficiency.
 
 ## 2017.04.15 v2.23
 
@@ -254,28 +258,28 @@ refen: welcome/versions
 
 ## 2017.02.11 v2.18
 
-* Очистка кода WebSocket.
-* Удалён параметр allowPassive. Теперь пассивные соединения всегда разрешены.
-* Исправления ошибок
+* Cleanup WebSocket code.
+* Remove allowPassive option. Now passive connections are always allowed.
+* Bug fixes
 
 ## 2017.02.04 v2.17
 
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2017.01.28 v2.16
 
 * New 'redirect' option in freedom. It can be used to adapt tools like Shadowsocks Obfs.
 * Performance improvement in VMess non-encryption mode. Not compatible with previous versions.
-* С Новым годом!
+* Happy New Year!
 
 ## 2017.01.16 v2.15
 
-* Все прокси теперь могут использовать mKCP и WebSocket.
+* All proxies can use mKCP and WebSocket now.
 
 ## 2017.01.09 v2.14
 
 * Socks 5 outbound.
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2017.01.02 v2.13
 
@@ -283,19 +287,19 @@ refen: welcome/versions
 
 ## 2016.12.26 v2.12
 
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2016.12.19 v2.11
 
-* Файл конфигурации JSON теперь поддерживает комментарии.
+* JSON config file now supports comment.
 
 ## 2016.12.12 v2.10
 
-* VMess теперь поддерживает методы шифрования AES-GCM и ChaCha20-Poly1305.
+* VMess now supports AES-GCM and ChaCha20-Poly1305 encryption methods.
 
 ## 2016.12.05 v2.9
 
-* Исправлена совместимость с Alpine Linux.
+* Fix compatibility with Alpine Linux.
 
 ## 2016.11.28 v2.8
 
@@ -305,7 +309,7 @@ refen: welcome/versions
 ## 2016.11.21 v2.7
 
 * Main inbound and outbound connection handler can be tagged now.
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2016.11.14 v2.6
 
@@ -326,7 +330,7 @@ refen: welcome/versions
 
 * Introduce new Protobuf-based configuration;
 * OpenBSD binaries;
-* Мелкие исправления;
+* Small fixes;
 
 ## 2016.09.19 v2.2
 
@@ -338,7 +342,7 @@ refen: welcome/versions
 
 ## 2016.08.20 v2.0
 
-* Один год проекту;
+* One year;
 
 ## 2016.08.15 v1.24
 
@@ -352,8 +356,8 @@ refen: welcome/versions
 
 ## 2016.08.01 v1.22
 
-* Исправлена утечка памяти в mKCP;
-* Добавлен релиз для FreeBSD;
+* Fix a memory leak in mKCP;
+* Add FreeBSD release;
 
 ## 2016.07.25 v1.21
 
@@ -363,7 +367,7 @@ refen: welcome/versions
 ## 2016.07.18 v1.20
 
 * New KCP options: readBufferSize and writeBufferSize;
-* Исправления ошибок;
+* Bug fixes;
 
 ## 2016.07.11 v1.19
 
@@ -375,7 +379,7 @@ refen: welcome/versions
 
 * Fix a "too many open files" issue in KCP;
 * KCP now uses fewer CPU;
-* Исправление других ошибок;
+* Other bug fixes;
 
 ## 2016.06.19 v1.17
 
@@ -409,17 +413,17 @@ refen: welcome/versions
 
 ## 2016.05.01 v1.12.1
 
-* Исправлена ошибка в VMess.
+* Fix a bug in VMess.
 
 ## 2016.05.01 v1.12
 
-* Вторая попытка исправить проблему с использованием памяти;
+* Second try to fix the memory usage issue;
 * Improve Shadowsocks performance;
 * New option "none" in loglevel;
 
 ## 2016.04.18 v1.11
 
-* Попытка исправить проблему с использованием памяти.
+* Try to fix the memory usage issue.
 
 ## 2016.03.07 v1.10
 
@@ -431,7 +435,7 @@ refen: welcome/versions
 
 ## 2016.02.29 v1.9
 
-* Поддержка шифрования ChaCha20 в Shadowsocks;
+* Support for Shadowsocks ChaCha20 encryption;
 * Add more direct connection sites to the default configuration file;
 * Dynamic ports now automatically create an account.
 
@@ -449,4 +453,4 @@ refen: welcome/versions
 * UDP relay performance improved;
 * Shadowsocks security improved;
 * Minor fixes;
-* С Новым годом!
+* Happy new year!
