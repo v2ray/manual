@@ -35,7 +35,8 @@ V2Ray دارای یک سرور DNS داخلی است که رله DNS را برا
     "8.8.4.4",
     "localhost"
   ],
-  "clientIp": "1.2.3.4"
+  "clientIp": "1.2.3.4",
+  "tag": "dns_inbound"
 }
 ```
 
@@ -63,6 +64,10 @@ The format of domains is the same as it in [routing](routing.md#ruleobject).
 
 آدرس آی پی دستگاه فعلی. اگر مشخص شود، V2Ray از این IP به عنوان EDNS-Client-Subnet استفاده می کند. این IP نمی تواند یک آدرس خصوصی باشد.
 
+> `tag`: string
+
+(V2Ray 4.13+) All traffic initiated from this DNS, except to localhost, will have this tag as inbound. It can be used for routing.
+
 ### ServerObject
 
 ```javascript
@@ -75,18 +80,18 @@ The format of domains is the same as it in [routing](routing.md#ruleobject).
 }
 ```
 
-> `آدرس`: آدرس
+> `address`: address
 
-آدرس سرور DNS در حال حاضر فقط سرورهای UDP پشتیبانی می شوند.
+Address of the DNS server. For now only UDP servers are supported.
 
-> `پورت`: شماره
+> `port`: number
 
-پورت سرور DNS. معمولا `53` یا `5353`.
+Port of the DNS server. Usually it is `53` or `5353`.
 
-> `دامنه`: \ [رشته \]
+> `domains`: \[string\]
 
-لیستی از حوزه ها اگر دامنه پرس و جو با یکی از لیست مطابقت داشته باشد، این DNS سرور برای پرس و جو DNS برای این دامنه اولویت خواهد داشت.
+A list of domains. If the domain of enquire matches one of the list, this DNS server will be prioritized for DNS query for this domain.
 
-فرمت نام دامنه همانند [مسیریابی](routing.md).
+Domain name format is the same as in [routing](routing.md).
 
-هنگامی که یک سرور DNS دارای دامنه در لیست دامنه خود است، دامنه در ابتدا در این سرور و سپس سرورهای دیگر مورد سوال قرار می گیرد. در غیر این صورت، پرس و جوهای DNS به سرورهای DNS ارسال می شوند به ترتیب آنها در فایل پیکربندی ظاهر می شوند.
+When a DNS server has the domain in its domain list, the domain will be queried in this server first, and then other servers. Otherwise DNS queries are sent to DNS servers in the order they appear in the config file.
