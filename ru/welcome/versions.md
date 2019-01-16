@@ -9,6 +9,7 @@ refen: welcome/versions
 ## 2019.01.18 v4.13
 
 * Quic lib updated. It is not compatible with previous versions.
+* DNS now have `tag` settings.
 
 ## 2019.01.11 v4.11
 

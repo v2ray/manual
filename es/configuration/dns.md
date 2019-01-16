@@ -35,7 +35,8 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
     "8.8.4.4",
     "localhost"
   ],
-  "clientIp": "1.2.3.4"
+  "clientIp": "1.2.3.4",
+  "tag": "dns_inbound"
 }
 ```
 
@@ -62,6 +63,10 @@ When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. Ho
 > `clientIp`: string
 
 IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-Subnet. This IP can't be a private address.
+
+> `tag`: string
+
+(V2Ray 4.13+) All traffic initiated from this DNS, except to localhost, will have this tag as inbound. It can be used for routing.
 
 ### ServerObject
 

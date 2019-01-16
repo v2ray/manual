@@ -35,7 +35,8 @@ Các truy vấn DNS được chuyển tiếp bởi dịch vụ DNS này cũng s�
     "8.8.4.4",
     "localhost"
   ],
-  "clientIp": "1.2.3.4"
+  "clientIp": "1.2.3.4",
+  "tag": "dns_inbound"
 }
 ```
 
@@ -63,6 +64,10 @@ Khi `"localhost"` được sử dụng, lưu lượng truy cập DNS không đư
 
 Địa chỉ IP của máy hiện tại. Nếu được chỉ định, V2Ray sử dụng IP này làm EDNS-Client-Subnet. Địa chỉ IP này không thể là địa chỉ riêng tư.
 
+> `tag`: string
+
+(V2Ray 4.13+) All traffic initiated from this DNS, except to localhost, will have this tag as inbound. It can be used for routing.
+
 ### ServerObject
 
 ```javascript
@@ -77,16 +82,16 @@ Khi `"localhost"` được sử dụng, lưu lượng truy cập DNS không đư
 
 > `address`: address
 
-Địa chỉ của máy chủ DNS. Hiện tại chỉ hỗ trợ các máy chủ UDP.
+Address of the DNS server. For now only UDP servers are supported.
 
 > `port`: number
 
-Cổng của máy chủ DNS. Thông thường nó là `53` hoặc `5353`.
+Port of the DNS server. Usually it is `53` or `5353`.
 
 > `domains`: \[string\]
 
-Danh sách các tên miền. Nếu miền yêu cầu khớp với một trong danh sách, máy chủ DNS này sẽ được ưu tiên cho truy vấn DNS cho tên miền này.
+A list of domains. If the domain of enquire matches one of the list, this DNS server will be prioritized for DNS query for this domain.
 
-Định dạng tên miền giống với định dạng [định tuyến](routing.md).
+Domain name format is the same as in [routing](routing.md).
 
-Khi một máy chủ DNS có tên miền trong danh sách tên miền của nó, tên miền sẽ được truy vấn trong máy chủ này trước, và sau đó là các máy chủ khác. Nếu không, các truy vấn DNS sẽ được gửi đến các máy chủ DNS theo thứ tự chúng xuất hiện trong tập tin cấu hình.
+When a DNS server has the domain in its domain list, the domain will be queried in this server first, and then other servers. Otherwise DNS queries are sent to DNS servers in the order they appear in the config file.
