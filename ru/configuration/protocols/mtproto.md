@@ -4,7 +4,7 @@ refen: configuration/protocols/mtproto
 ---
 # MTProto
 
-* Name: `mtproto`
+* Название: `mtproto`
 * Тип: входящий / исходящий
 
 MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
@@ -25,7 +25,7 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 
 > `users`: \[[UserObject](#userobject)\]
 
-An array of users. For now only the first user is effective.
+Массив пользователей. Пока обрабатывается только первый пользователь.
 
 ### UserObject
 
@@ -39,19 +39,19 @@ An array of users. For now only the first user is effective.
 
 > `email`: string
 
-User email. Used for tracking purposes. See [Stats](../stats.md).
+Электронная почта пользователя. Используется для сбора статистики. См. [Статистика](../stats.md).
 
 > `level`: number
 
-User level.
+Уровень пользователя.
 
 > `secret`: string
 
-User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
+Секрет пользователя. В Telegram секрет пользователя должен быть длиной 32 символа и содержать только символы от `0` до `9`, и от `a` до `f`.
 
 {% hint style='tip' %}
 
-You may use the following command to generate MTProto secret: `openssl rand -hex 16`
+Используйте для генерации секрета MTProto эту команду: `openssl rand -hex 16`
 
 {% endhint %}
 
@@ -64,9 +64,9 @@ You may use the following command to generate MTProto secret: `openssl rand -hex
 
 ## Пример {#sample}
 
-MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
+MTProto может использоваться только для трафика Telegram. Для объединения соответствующего входящего и исходящего может потребоваться правило маршрутизации. Вот неполный образец.
 
-Inbound:
+Входящее соединение:
 
 ```javascript
 {
@@ -79,7 +79,7 @@ Inbound:
 }
 ```
 
-Outbound:
+Исходящее соединение:
 
 ```javascript
 {
@@ -89,7 +89,7 @@ Outbound:
 }
 ```
 
-Routing:
+Маршрутизация:
 
 ```javascript
 {
@@ -99,4 +99,4 @@ Routing:
 }
 ```
 
-The configure your Telegram app to connect to 443 port on this machine.
+Настройте приложение Telegram для подключения к 443 порту на этом устройстве.

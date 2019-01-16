@@ -8,11 +8,11 @@ refen: configuration/transport/websocket
 
 ## WebSocketObject
 
-`WebSocketObject` is used as `wsSettings` in `TransportObject` or `StreamSettingsObject`.
+`WebSocketObject` используется как `wsSettings` в `TransportObject` и `StreamSettingsObject`.
 
 {% hint style='info' %}
 
-Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address.
+Websocket распознает HTTP-заголовок X-Forwarded-For и использует его в качестве адреса входящего источника.
 
 {% endhint %}
 
@@ -27,8 +27,8 @@ Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source 
 
 > `path`: string
 
-Path used for WebSocket. Default to root, as `"/"`.
+Путь, используемый для WebSocket. По умолчанию корень домена `"/"`.
 
 > `headers`: map{string, string}
 
-Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+Пользовательский HTTP-заголовок. Это массив, в котором каждая запись представляет собой пару ключевых значений в строке, для заголовка и значения в заголовке HTTP. По умолчанию пуст.

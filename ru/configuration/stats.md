@@ -8,20 +8,20 @@ V2Ray предоставляет информацию о своём состоя
 
 ## StatsObject
 
-`StatsObject` is used as `stats` field in top level configuration.
+`StatsObject` используется как поле `stats` на верхнем уровне конфигурации.
 
 ```javascript
 {
 }
 ```
 
-At the moment there is no parameter in stats settings. Stats is enabled automatically when the `StatsObject` is set in top level configuration. You need also enable the corresponding settings in [Policy](policy.md), in order to keep track of user or system stats.
+На данный момент в настройках статистики нет параметров. Статистика включается автоматически, когда `StatsObject` установлен в конфигурации верхнего уровня. Вам также необходимо включить соответствующие настройки в [Policy](policy.md), чтобы отслеживать статистику пользователя или системы.
 
-All stats counters are listed below:
+Все счетчики статистики перечислены ниже:
 
-## User Traffic
+## Пользовательский трафик
 
-If an user doesn't has email address set in protocol settings, the traffic stats will not be enabled.
+Если у пользователя не указан адрес электронной почты в настройках протокола, статистика трафика не будет включена.
 
 > `user>>>[email]>>>traffic>>>uplink`
 
@@ -31,7 +31,7 @@ Accumulated uplink traffic of specific user, in bytes.
 
 Accumulated downlink traffic of specific user, in bytes.
 
-## Global Traffic
+## Глобальный трафик
 
 > `inbound>>>[tag]>>>traffic>>>uplink`
 

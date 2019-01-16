@@ -4,7 +4,7 @@ refen: configuration/protocols/vmess
 ---
 # VMess
 
-* Name: `vmess`
+* Название: `vmess`
 * Тип: входящий / исходящий
 
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) это протокол для шифрованной передачи информации. Он включает в себя входящий и исходящий прокси.
@@ -71,7 +71,7 @@ An array where each element is an VMess user
 
 > `id`: string
 
-User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+Идентификатор пользователя в формате [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
 
 > `alterId`: number
 
@@ -92,7 +92,7 @@ Method for encrypting payload. This setting is only available at outbound. The V
 
 {% hint style='info' %}
 
-Use `"auto"` wherever possible for better compatibility.
+Используйте `"auto"` где это возможно, для лучшей совместимости.
 
 {% endhint %}
 
@@ -121,7 +121,7 @@ Use `"auto"` wherever possible for better compatibility.
 
 > `clients`: \[ [ClientObject](#clientobject) \]
 
-An array for valid user accounts. May be empty when used for dynamic port feature.
+Массив для действительных учетных записей пользователей. Может быть пустым при использовании функции динамического порта.
 
 > `detour`: [DetourObject](#detourobject)
 
@@ -133,7 +133,7 @@ Optional default client configuration. Usually used with `detour`.
 
 > `disableInsecureEncryption`: true | false
 
-Forbids client for using insecure encryption methods. When set to `true`, connections will be terminated immediately if the following encryption is used. Default value `false`.
+Запретить клиенту использовать небезопасные методы шифрования. Если установлено значение `true`, соединения будут немедленно разорваны, если будут использоваться следующие методы шифрования. Значение по умолчанию: `false`.
 
 * `none`
 * `aes-128-cfb`
@@ -151,7 +151,7 @@ Forbids client for using insecure encryption methods. When set to `true`, connec
 
 > `id`: string
 
-User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+Идентификатор пользователя в формате [UUID](https://ru.wikipedia.org/wiki/UUID).
 
 > `level`: number
 
@@ -159,7 +159,7 @@ User level. See [Policy](../policy.md) for its usage.
 
 > `alterId`: number
 
-Number of alternative IDs. Same as in Outbound.
+Число альтернативных идентификаторов. То же, что и в Исходящем соединении (см выше).
 
 > `email`: string
 
@@ -188,8 +188,8 @@ The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMe
 
 > `level`: number
 
-User level.
+Уровень пользователя.
 
 > `alterId`: number
 
-Number of alternative IDs. Default value 64. Recommend 16.
+Число альтернативных идентификаторов. По умолчанию: 64. Рекомендуемое значение: 16.

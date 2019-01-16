@@ -26,7 +26,7 @@ HTTP - это протокол для входящих соединений. О�
 
 > `accounts`: \[[AccountObject](#accountobject)\]
 
-An array in which each entry is an account. It is empty by default. If not empty, HTTP Basic Authentication is required for incoming requests.
+Массив, в котором каждая запись является учетной записью. По умолчанию — пуст. Если в массиве есть элементы, для входящих запросов потребуется HTTP Basic Authentication.
 
 > `allowTransparent`: true | false
 

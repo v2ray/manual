@@ -4,22 +4,26 @@ refen: welcome/versions
 ---
 # История версий
 
-This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
+На этой странице перечислены регулярные выпуски с обновлениями функций. Если релиз Github здесь не указан, он обычно содержит только исправления ошибок.
+
+## 2019.01.18 v4.13
+
+* Quic lib updated. It is not compatible with previous versions.
 
 ## 2019.01.11 v4.11
 
-For developers:
+Для разработчиков:
 
 * New method: [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
 * [internet.DialSystem](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/dialer.go#L66) now uses [internet.ListenSystemPacket](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/tcp_hub.go#L65) to establish UDP connections.
 
 ## 2018.12.07 v4.8
 
-For end users:
+Для пользователей:
 
 * Bug fixes
 
-For developers:
+Для разработчиков:
 
 * New [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
 * New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)
@@ -149,12 +153,12 @@ For developers:
 ## 2018.02.23 v3.10
 
 * Log entries now contain session ID to distinguish proxy sessions.
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2018.02.15 v3.9
 
 * Happy New Year!
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2018.02.09 v3.7
 
@@ -279,7 +283,7 @@ For developers:
 
 ## 2017.01.02 v2.13
 
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2016.12.26 v2.12
 
@@ -300,7 +304,7 @@ For developers:
 ## 2016.11.28 v2.8
 
 * Shadowsocks server now accepts OTA settings.
-* Bug fixes.
+* Исправления ошибок.
 
 ## 2016.11.21 v2.7
 
@@ -358,7 +362,7 @@ For developers:
 ## 2016.07.25 v1.21
 
 * High performance Chacha20 (Thanks to aead@);
-* Bug fixes;
+* Исправления ошибок;
 
 ## 2016.07.18 v1.20
 

@@ -4,9 +4,9 @@ refen: welcome/donate
 ---
 # Пожертвование
 
-V2Ray is a nonprofit project. The source code and its release binary can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
+V2Ray - некоммерческий проект. Исходный код и программа могут свободно (в основном) использоваться по лицензии MIT. Если вам нравится этот проект, подарите нам чашечку кофе.
 
-Your donation has no direct connection to Project V's development and service. Our development will not be influenced by your donation. However, we will send a thank-you email for every donor. If you wish not to receive such email, please leave a note in your donation.
+Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V. Our development will not be influenced by your donation. Тем не менее, мы отправим благодарственное письмо каждому донору. Если вы не хотите получать такое письмо, оставьте записку в своем пожертвовании.
 
 For any doantion worth more than $50, you may choose one of the following:
 
@@ -17,62 +17,62 @@ For any doantion worth more than $50, you may choose one of the following:
 
 > Paypal
 
-You may donate through [internal Paypal transfer](https://www.paypal.me/ProjectV2Ray/25) or [credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
+Вы можете сделать пожертвование через [внутренний перевод Paypal](https://www.paypal.me/ProjectV2Ray/25) или [кредитной картой](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
-Please kindly note that Paypal charges high service fee. Any donation less than 1 USD is meaningless.
+Пожалуйста, обратите внимание, что Paypal взимает высокую комиссию за обслуживание. Любое пожертвование менее 1 доллара США не имеет смысла.
 
 > Patreon
 
-[Patreon](https://www.patreon.com/v2ray) is a platform for regular donations. You may use Patreon if you want to donate frequently.
+[Patreon](https://www.patreon.com/v2ray) - это платформа для регулярных пожертвований. Вы можете использовать Patreon, если хотите часто делать пожертвования на постоянной основе.
 
-> Giftcard
+> Подарочная карта
 
 For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.com](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY) and then send to `love@v2ray.com`.
 
 ## Криптовалюта {#crypto}
 
-Cryptocurrency is a more reliable way for international transactions. Crypto-wallet is usually anonymous and your donation is not traceable.
+Криптовалюта является более надежным способом международных транзакций. Крипто-кошелек обычно является анонимным, и ваше пожертвование не отслеживаемо.
 
-You may buy cryptocurrencies through [services on this page](../ui_client/service.md).
+Вы можете купить криптовалюту через [сервисы на этой странице](../ui_client/service.md).
 
-Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
+Из-за анонимности, присущей криптовалюте, пожалуйста, отправьте нам электронное письмо до вашего пожертвования, если вы хотите получить благодарственное письмо в ответ.
 
 > Bitcoin
 
-Address: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
+Адрес: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
 
 View stats or QR-Code [at BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
 
 > Bitcoin Cash
 
-Address: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
+Адрес: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
 
 View stats or QR-Code [at BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
 
 > Ethereum
 
-Address: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
+Адрес: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
 
 View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). You may also send the following ERC20 tokens to this address: OMG, REP, GNT, DGD
 
 > EOS
 
-Address: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
+Адрес: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
 
 > Litecoin
 
-Address: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
+Адрес: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
 
 > Monero
 
-Address: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
+Адрес: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
 
 > Ripple
 
-Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
+Адрес: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
 
-Tag not required
+Тэг не обязателен
 
-> Other
+> Другое
 
-Please send us an email at `love@v2ray.com` if you want to donate other kind of coins.
+Пожалуйста, отправьте нам электронное письмо по адресу `love@v2ray.com`, если вы хотите пожертвовать другие виды монет.

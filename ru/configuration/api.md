@@ -10,7 +10,7 @@ V2Ray предоставляет API для удаленного доступа.
 
 ## ApiObject
 
-`ApiObject` is used as `api` field in top level configuration.
+`ApiObject` используется как поле `api` на верхнем уровне конфигурации.
 
 ```javascript
 {
@@ -25,11 +25,11 @@ V2Ray предоставляет API для удаленного доступа.
 
 > `tag`: string
 
-The tag of the outbound proxy.
+Метка исходящего прокси.
 
 > `services`: \[ string \]
 
-List of enabled APIs.
+Список включенных API.
 
 ## Список поддерживаемых API
 
