@@ -35,7 +35,8 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
     "8.8.4.4",
     "localhost"
   ],
-  "clientIp": "1.2.3.4"
+  "clientIp": "1.2.3.4",
+  "tag": "dns_inbound"
 }
 ```
 
@@ -63,6 +64,10 @@ When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. Ho
 
 IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-Subnet. This IP can't be a private address.
 
+> `tag`: string
+
+(V2Ray 4.13+) All traffic initiated from this DNS, except to localhost, will have this tag as inbound. It can be used for routing.
+
 ### ServerObject
 
 ```javascript
@@ -75,15 +80,15 @@ IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-S
 }
 ```
 
-> `주소`: 주소
+> `address`: address
 
 Address of the DNS server. For now only UDP servers are supported.
 
-> `포트`: 번호
+> `port`: number
 
 Port of the DNS server. Usually it is `53` or `5353`.
 
-> `도메인`: \ [string \]
+> `domains`: \[string\]
 
 A list of domains. If the domain of enquire matches one of the list, this DNS server will be prioritized for DNS query for this domain.
 
