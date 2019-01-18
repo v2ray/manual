@@ -13,7 +13,7 @@ jobs:
     clean: true
     fetchDepth: 5
   - script: |
-      ls
+      ls -al
       ./deploy.sh
     workingDirectory: '$(Build.SourcesDirectory)'
     displayName: 'Build'
