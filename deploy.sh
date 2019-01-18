@@ -14,7 +14,7 @@ function build_dir {
   popd  
 }
 
-npm install -g gitbook-cli
+sudo npm install -g gitbook-cli
 
 build_dir zh_cn
 build_dir en
