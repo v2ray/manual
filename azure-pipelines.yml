@@ -1,0 +1,19 @@
+jobs:
+- job: build_upload
+  timeoutInMinutes: 30
+
+  pool:
+    vmImage: 'ubuntu-16.04'
+
+  variables:
+    GOPATH: '$(system.defaultWorkingDirectory)'
+
+  steps:
+  - checkout: self
+    clean: true
+    fetchDepth: 5
+  - script: |
+      ls
+    workingDirectory: '$(Build.SourcesDirectory)'
+    displayName: 'Build'
+
