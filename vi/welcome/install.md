@@ -21,7 +21,7 @@ V2Ray có sẵn trên các nền tảng sau:
 Bạn có thể tìm thấy các gói dựng sẵn tại đây:
 
 1. Phát hành Github: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. Phân phối lại: [v2ray.com/download](https://www.v2ray.com/download/)
+2. Redistribution: [github.com/v2ray/dist](https://github.com/v2ray/dist)
 3. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
 4. Arch Linux: [gói / cộng đồng / x86_64 / v2ray /](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
