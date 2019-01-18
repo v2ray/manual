@@ -22,7 +22,7 @@ V2Ray is available on the following platforms:
 Pre-built packages can be found here:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-1. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
+1. Redistribution: [github.com/v2ray/dist](https://github.com/v2ray/dist)
 1. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
 1. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 1. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
