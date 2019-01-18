@@ -14,9 +14,6 @@ function build_dir {
   popd  
 }
 
-git clone --depth 5 https://github.com/v2ray/manual.git
-cd manual
-
 npm install -g gitbook-cli
 
 build_dir zh_cn
