@@ -21,7 +21,7 @@ V2Ray는 다음 플랫폼에서 사용할 수 있습니다.
 사전 제작 된 패키지는 다음에서 찾을 수 있습니다.
 
 1. Github 출시 : [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. 재배포 : [v2ray.com/download](https://www.v2ray.com/download/)
+2. Redistribution: [github.com/v2ray/dist](https://github.com/v2ray/dist)
 3. 자작 : [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
 4. 아치 리눅스 : [패키지 / 커뮤니티 / x86_64 / v2ray /](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 5. 스냅 크래프트 : [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)

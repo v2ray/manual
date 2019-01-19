@@ -21,7 +21,7 @@ V2Ray در سیستم عامل های زیر موجود است:
 بسته های پیش ساخته شده را می توان در اینجا پیدا کرد:
 
 1. Github انتشار: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. توزیع مجدد: [v2ray.com/download](https://www.v2ray.com/download/)
+2. Redistribution: [github.com/v2ray/dist](https://github.com/v2ray/dist)
 3. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
 4. آرچ لینوکس: [بسته / جامعه / x86_64 / v2ray /](https://www.archlinux.org/packages/community/x86_64/v2ray/)
 5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
