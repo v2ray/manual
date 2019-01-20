@@ -4,6 +4,8 @@ refen: ui_client/service
 ---
 # خدمات آنلاین
 
+The following online services may help you better use Project V. These services are provided by third party. They are not directly releated to Project V.
+
 ## V2Ray مرتبط است
 
 * [ژنراتور پیکربندی](https://htfy96.github.io/v2ray-config-gen/)
@@ -15,7 +17,8 @@ refen: ui_client/service
 * [喵 帕斯](https://xn--i2ru8q2qg.com/): حمایت V2Ray (بتا)
 * [Lanan](https://xn--sjt174g.com/): سرویس VPN مبتنی بر V2Ray. کد کوپن: v2ray
 * [多数 派](https://dspi.io/aff.php?aff=7): سرویس VPN جدید مبتنی بر V2Ray.
-* [V2rayPro](https://myv2.us): سرویس VPN بر اساس V2Ray. کد کوپن: v2ray.com
+* [V2rayPro](https://myv2.us/): VPN service based on V2Ray. Coupon code: v2ray.com
+* [V2Net](http://v2net.org/): Customized V2Ray service. Promo code: v2ray.com
 
 ## Hosting
 
