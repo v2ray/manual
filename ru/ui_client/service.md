@@ -4,6 +4,8 @@ refen: ui_client/service
 ---
 # Онлайн сервисы
 
+The following online services may help you better use Project V. These services are provided by third party. They are not directly releated to Project V.
+
 ## Связанные с V2Ray
 
 * [Генератор конфигурации](https://htfy96.github.io/v2ray-config-gen/)
