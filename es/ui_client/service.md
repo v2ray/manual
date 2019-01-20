@@ -15,7 +15,8 @@ refen: ui_client/service
 * [喵帕斯](https://xn--i2ru8q2qg.com/): V2Ray support (beta)
 * [Lanan](https://xn--sjt174g.com/): V2Ray based VPN service. Coupon code: v2ray
 * [多数派](https://dspi.io/aff.php?aff=7): New V2Ray based VPN service.
-* [V2rayPro](https://myv2.us): VPN service based on V2Ray. Coupon code: v2ray.com
+* [V2rayPro](https://myv2.us/): VPN service based on V2Ray. Coupon code: v2ray.com
+* [V2Net](http://v2net.org/): Customized V2Ray service. Promo code: v2ray.com
 
 ## Hosting
 
