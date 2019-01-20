@@ -4,6 +4,8 @@ refen: ui_client/service
 ---
 # Dịch vụ trực tuyến
 
+The following online services may help you better use Project V. These services are provided by third party. They are not directly releated to Project V.
+
 ## V2Ray có liên quan
 
 * [Trình tạo cấu hình](https://htfy96.github.io/v2ray-config-gen/)
