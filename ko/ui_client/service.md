@@ -4,6 +4,8 @@ refen: ui_client/service
 ---
 # 온라인 서비스
 
+The following online services may help you better use Project V. These services are provided by third party. They are not directly releated to Project V.
+
 ## V2Ray 관련
 
 * [구성 생성기](https://htfy96.github.io/v2ray-config-gen/)
