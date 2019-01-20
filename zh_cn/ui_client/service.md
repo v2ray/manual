@@ -5,6 +5,8 @@ refen: ui_client/service
 
 # 在线服务
 
+以下是一些在线服务，可能会帮助你更好地使用 Project V。以下服务均由第三方提供，和 Project V 没有利益关系。
+
 ## V2Ray 相关 {#v2ray}
 
 * [配置生成器](https://htfy96.github.io/v2ray-config-gen/): V2Ray 配置生成工具
