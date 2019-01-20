@@ -20,7 +20,8 @@ refen: ui_client/service
 ## Хостинг
 
 * [Let's Encrypt](https://letsencrypt.org/): Бесплатные TLS-сертификаты
-* [Vultr](https://www.vultr.com/?ref=7269307): VPS
+* [Vultr](https://www.vultr.com/?ref=7269307): VPS 
+  * [2019 limited promotion, $50 free credit](https://www.vultr.com/?ref=7783021-4F)
 * [BlueHost](https://www.bluehost.com/track/v2ray/): VPS, веб-хостинг
 * [ClouDNS](https://www.cloudns.net/aff/id/244749/): Регистрация доменов, DNS, сертификаты SSL
 
