@@ -25,6 +25,7 @@ refen: ui_client/service
 
 * [Let's Encrypt](https://letsencrypt.org/): 免费 TLS 证书
 * [Vultr](https://www.vultr.com/?ref=7269307): VPS
+  * [2019 限时优惠，赠送 $50](https://www.vultr.com/?ref=7783021-4F)
 * [BlueHost](https://www.bluehost.com/track/v2ray/): VPS、建站
 * [ClouDNS](https://www.cloudns.net/aff/id/244749/): 域名、DNS、SSL 证书
 
