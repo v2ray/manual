@@ -16,10 +16,11 @@ refen: ui_client/service
 * [喵帕斯](https://xn--i2ru8q2qg.com/): V2Ray 小范围内测中。
 * [蓝岸](https://xn--sjt174g.com/): 基于 V2Ray 的网络加速服务。优惠码：v2ray
 * [多数派](https://dspi.io/aff.php?aff=7): 基于V2RAY的全新的网络加速服务
-* [V2rayPro](https://myv2.us): 基于 V2Ray 的网络加速服务。专属优惠码：v2ray.com
-* [vProxy](http://niuban.fun): 由 V2Ray 驱动的网络加速器。专属优惠码：v2ray.cool
-* [栖息地](http://7dea9f6.vmess.fun): 对内小众的 V2ray 优质网络加速服务。邀请码：V2RAY
-* [NicoNode](https://niconode.net): 支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
+* [V2rayPro](https://myv2.us/): 基于 V2Ray 的网络加速服务。专属优惠码：v2ray.com
+* [vProxy](http://niuban.fun/): 由 V2Ray 驱动的网络加速器。专属优惠码：v2ray.cool
+* [栖息地](http://7dea9f6.vmess.fun/): 对内小众的 V2ray 优质网络加速服务。邀请码：V2RAY
+* [NicoNode](https://niconode.net)/: 支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
+* [V2Net](http://v2net.org/): 提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
 
 ## 建站相关 {#hosting}
 
