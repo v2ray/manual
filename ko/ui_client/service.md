@@ -15,7 +15,8 @@ refen: ui_client/service
 * [喵 帕斯](https://xn--i2ru8q2qg.com/): V2Ray 지원 (베타)
 * [Lanan](https://xn--sjt174g.com/): V2Ray 기반 VPN 서비스. 쿠폰 코드 : v2ray
 * [다수 派](https://dspi.io/aff.php?aff=7): 새로운 V2Ray 기반 VPN 서비스.
-* [V2rayPro](https://myv2.us): V2Ray를 기반으로 한 VPN 서비스. 쿠폰 코드 : v2ray.com
+* [V2rayPro](https://myv2.us/): VPN service based on V2Ray. Coupon code: v2ray.com
+* [V2Net](http://v2net.org/): Customized V2Ray service. Promo code: v2ray.com
 
 ## Hosting
 
