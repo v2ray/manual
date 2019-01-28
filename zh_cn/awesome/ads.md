@@ -63,7 +63,7 @@ V2Ray 小范围内测中。
 
 > [V2Net](http://v2net.org/)
 
-<img style="float: left;" width="100" height="100" src="/resources/v2net-sq.png"> 提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
+提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
 
 ## 数字货币 {#crypto}
 

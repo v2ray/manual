@@ -51,7 +51,7 @@ VPN service based on V2Ray. Coupon code: v2ray.com
 
 > [V2Net](http://v2net.org/)
 
-<img style="float: left;" width="100" height="100" src="/resources/v2net-sq.png"> Customized V2Ray service. Promo code: v2ray.com
+Customized V2Ray service. Promo code: v2ray.com
 
 ## Cryptocurrency
 
