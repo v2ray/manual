@@ -11,7 +11,7 @@ refen: awesome/tools
 
 V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。下载：[Github](https://github.com/Cenmrev/V2RayW)
 
-> V2RayN ![Windows](../resources/win.svg)
+> V2RayN <img width="20" src="/resources/win.svg">
 
 V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。下载：[Github](https://github.com/2dust/v2rayN)
 
