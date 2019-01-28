@@ -7,7 +7,7 @@ refen: awesome/tools
 
 ## 图形客户端 {#windows}
 
-> V2RayW ![Windows](../resources/win.svg)
+> V2RayW <img width="20" src="/resources/win.svg">
 
 V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。下载：[Github](https://github.com/Cenmrev/V2RayW)
 
@@ -15,27 +15,27 @@ V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界
 
 V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。下载：[Github](https://github.com/2dust/v2rayN)
 
-> V2RayS ![Windows](../resources/win.svg)
+> V2RayS <img width="20" src="/resources/win.svg">
 
 下载：[Github](https://github.com/Shinlor/V2RayS)
 
-> Clash for Windows ![Windows](../resources/win.svg)
+> Clash for Windows <img width="20" src="/resources/win.svg">
 
 下载：[Github](https://github.com/Fndroid/clash_for_windows_pkg)
 
-> V2RayX ![MacOS](../resources/apple.svg)
+> V2RayX <img width="20" src="/resources/apple.svg">
 
 V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。V2RayX 还可以配置系统代理。下载：[Github](https://github.com/Cenmrev/V2RayX)
 
-> V2RayU ![MacOS](../resources/apple.svg)
+> V2RayU <img width="20" src="/resources/apple.svg">
 
 下载：[Github](https://github.com/yanue/V2rayU)
 
-> ClashX ![MacOS](../resources/apple.svg)
+> ClashX <img width="20" src="/resources/apple.svg">
 
 下载：[Github](https://github.com/yichengchen/clashX)
 
-> Kitsunebi ![iOS](../resources/ios.svg)
+> Kitsunebi <img width="20" src="/resources/ios.svg">
 
 Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMess 或者 Shadowsocks 的 VPN 连接。Kitsunebi 支持导入和导出与 V2Ray 兼容的 JSON 配置。
 
@@ -43,35 +43,35 @@ Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMe
 
 下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
 
-> Kitsunebi Lite ![iOS](../resources/ios.svg)
+> Kitsunebi Lite <img width="20" src="/resources/ios.svg">
 
 精简版的 Kitsunebi
 
 下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-lite/id1387913765?mt=8)
 
-> Shadowrocket ![iOS](../resources/ios.svg)
+> Shadowrocket <img width="20" src="/resources/ios.svg">
 
 Shadowrocket 是一个通用的 iOS VPN 应用，它支持众多协议，如 Shadowsocks、VMess、SSR 等。
 
 下载：[iTunes](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
 
-> Pepi（原名ShadowRay）![iOS](../resources/ios.svg)
+> Pepi（原名ShadowRay）<img width="20" src="/resources/ios.svg">
 
 Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 连接，并与 V2Ray 服务器通信。
 
 下载：[iTunes](https://itunes.apple.com/us/app/pepi/id1283082051?mt=8)
 
-> Quantumult ![iOS](../resources/ios.svg)
+> Quantumult <img width="20" src="/resources/ios.svg">
 
 下载：[iTunes](https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8)
 
-> BifrostV ![Android](../resources/android.svg)
+> BifrostV <img width="20" src="/resources/android.svg">
 
 BifrostV 是一个基于 V2Ray 内核的 Android 应用，它支持 VMess、Shadowsocks、Socks 协议。
 
 下载：[Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv) | [APK Pure](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
 
-> V2RayNG ![Android](../resources/android.svg)
+> V2RayNG <img width="20" src="/resources/android.svg">
 
 V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 VMess 的 VPN 连接。
 
