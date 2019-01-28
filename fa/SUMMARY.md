@@ -36,12 +36,8 @@
     * [DomainSocket](configuration/transport/domainsocket.md)
     * [QUIC](configuration/transport/quic.md)
   * [متغیرهای Env](configuration/env.md)
-* [Third Party Tools](ui_client/README.md) 
-  * [پنجره ها](ui_client/windows.md)
-  * [OS X](ui_client/osx.md)
-  * [در iOS](ui_client/ios.md)
-  * [اندروید](ui_client/android.md)
-  * [خدمات](ui_client/service.md)
+* [Awesome V](awesome/tools.md) 
+  * [With Ads](awesome/ads.md)
 * Development 
   * Milestone
   * Guide
