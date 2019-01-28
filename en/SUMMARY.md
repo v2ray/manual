@@ -36,12 +36,8 @@
     * [DomainSocket](configuration/transport/domainsocket.md)
     * [QUIC](configuration/transport/quic.md)
   * [Env Variables](configuration/env.md)
-* [Third Party Tools](ui_client/README.md)
-  * [Windows](ui_client/windows.md)
-  * [OS X](ui_client/osx.md)
-  * [iOS](ui_client/ios.md)
-  * [Android](ui_client/android.md)
-  * [Services](ui_client/service.md)
+* [Awesome V](awesome/tools.md)
+  * [With Ads](awesome/ads.md)
 * Development
   * Milestone
   * Guide

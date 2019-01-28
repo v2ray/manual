@@ -1,3 +1,8 @@
+---
+refcn: awesome/ads
+refen: awesome/ads
+---
+
 # 一些推广
 
 以下服务均由第三方提供，和 Project V 没有利益关系，但它们可能会帮助你更好地使用 Project V。
@@ -68,7 +73,7 @@ V2Ray 小范围内测中。
 
 > [CoinCola](https://www.coincola.com/mobile/signup?ref=QAcvfy2g)
 
-线下交易BTC、ETH、BCH、USDT等货币。
+CoinCola 是香港场外交易平台，支持简体中文界面，买卖方几乎都是国人。网页和APP均操作流畅。订单使用支付宝、网银、微信支付，像淘宝购物一样买卖比特币。现支持BTC、ETH、BCH、USDT等货币。
 
 > [币安](https://www.binance.com/?ref=35382451)
 
