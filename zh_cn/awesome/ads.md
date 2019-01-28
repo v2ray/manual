@@ -18,7 +18,7 @@ Vultr 是一家提供日本、美国、欧洲等多个国家和地区机房的 V
 
 BlueHost作为美国的老牌主机商，在国内也是非常受欢迎的美国主机之一。以稳定性强。速度快著称，在站长中的口碑和流行度也是非常之高。BlueHost主机商为了开拓国内市场，自2014年就推出了中文站，而且也极大的丰富了主机产品，可以满足大多数站长的建站需求。
 
-* [ClouDNS](https://www.cloudns.net/aff/id/244749/)
+> [ClouDNS](https://www.cloudns.net/aff/id/244749/)
 
 ClouDNS成立于2010年，公司位于保加利亚，提供免费和收费的 DNS 托管服务。
 
@@ -58,7 +58,7 @@ V2Ray 小范围内测中。
 
 > [V2Net](http://v2net.org/)
 
-提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
+<img style="float: left;" width="100" height="100" src="/resources/v2net-sq.png"> 提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
 
 ## 数字货币 {#crypto}
 
