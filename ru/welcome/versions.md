@@ -6,6 +6,10 @@ refen: welcome/versions
 
 На этой странице перечислены регулярные выпуски с обновлениями функций. Если релиз Github здесь не указан, он обычно содержит только исправления ошибок.
 
+## 2019.02.01 v4.14
+
+* Static DNS mapping now supports domain to domain mapping.
+
 ## 2019.01.18 v4.13
 
 * Quic lib updated. It is not compatible with previous versions.
@@ -159,7 +163,7 @@ refen: welcome/versions
 ## 2018.02.15 v3.9
 
 * Happy New Year!
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2018.02.09 v3.7
 
@@ -284,7 +288,7 @@ refen: welcome/versions
 
 ## 2017.01.02 v2.13
 
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2016.12.26 v2.12
 
@@ -305,7 +309,7 @@ refen: welcome/versions
 ## 2016.11.28 v2.8
 
 * Shadowsocks server now accepts OTA settings.
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2016.11.21 v2.7
 
@@ -363,7 +367,7 @@ refen: welcome/versions
 ## 2016.07.25 v1.21
 
 * High performance Chacha20 (Thanks to aead@);
-* Исправления ошибок;
+* Bug fixes;
 
 ## 2016.07.18 v1.20
 
