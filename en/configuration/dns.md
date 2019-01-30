@@ -43,7 +43,7 @@ The DNS queries relayed by this DNS service will also be dispatched based on rou
 
 > `hosts`: map{string: address}
 
-A list of static IP addresses. Each entry has a domain name as key and IP address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed.
+A list of static addresses, in the form of `domain:address`. Each entry has a domain name as key and IP or domain address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed, or the corresponding domain address will be used for further DNS queries, instead of the previous one.
 
 The format of domains is the same as it in [routing](routing.md#ruleobject).
 
