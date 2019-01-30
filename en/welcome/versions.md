@@ -7,6 +7,18 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2019.01.18 v4.13
+
+* Quic lib updated. It is not compatible with previous versions.
+* DNS now have `tag` settings.
+
+## 2019.01.11 v4.11
+
+For developers:
+
+* New method: [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
+* [internet.DialSystem](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/dialer.go#L66) now uses [internet.ListenSystemPacket](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/tcp_hub.go#L65) to establish UDP connections.
+
 ## 2018.12.07 v4.8
 
 For end users:

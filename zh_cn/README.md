@@ -18,6 +18,10 @@ Project V 是一个工具集合，它可以帮助你打造专属的基础通信�
 * 反向代理: 通用的反向代理支持，可实现内网穿透功能。
 * 多平台支持: 原生支持所有常见平台，如 Windows、Mac OS、Linux，并已有第三方支持移动平台。
 
+## 赞助商
+
+[![v2net](resources/v2net.png)](http://v2net.org)
+
 {% hint style='info' %}
 本站点由 GitBook 生成，托管于 GitHub。如需修改本站的内容，请向[这个 Repo](https://github.com/v2ray/manual) 提交 Pull Request。
 {% endhint %}

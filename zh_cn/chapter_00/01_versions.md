@@ -7,6 +7,18 @@ refen: welcome/versions
 
 本页列出了常规版本的功能升级记录，未列出的版本通常为 bug 修复。
 
+## 2019.01.18 v4.13
+
+* 更新了 Quic 库，与之前的版本不兼容。
+* DNS 配置中新增了`tag`选项。
+
+## 2019.01.11 v4.11
+
+开发相关:
+
+* 新增了 [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
+* [internet.DialSystem](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/dialer.go#L66) 现在会调用 [internet.ListenSystemPacket](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/tcp_hub.go#L65) 去建立 UDP 连接。
+
 ## 2018.12.07 v4.8
 
 使用相关:

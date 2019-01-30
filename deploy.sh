@@ -1,9 +1,7 @@
 #!/bin/bash
 
-set -x
-
-curl -sL https://deb.nodesource.com/setup_10.x | bash -
-apt -y install jq git file nodejs build-essential
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+sudo apt -y install jq git file nodejs build-essential
 
 function build_dir {
   DIR="$1"
@@ -16,18 +14,7 @@ function build_dir {
   popd  
 }
 
-function getattr() {
-  curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/$2/attributes/$1
-}
-
-GITHUB_TOKEN=$(getattr "github_token" "project")
-
-git clone --depth 5 https://github.com/v2ray/manual.git
-cd manual
-
-curl -o "./resources/github-release.svg" "https://img.shields.io/github/release/v2ray/v2ray-core.svg"
-
-npm install -g gitbook-cli
+sudo npm install -g gitbook-cli
 
 build_dir zh_cn
 build_dir en
@@ -65,5 +52,3 @@ git add -A
 git commit -m 'update'
 git push "https://${GITHUB_TOKEN}@github.com/v2ray/v2ray.github.io.git" master
 popd
-
-shutdown -h now
