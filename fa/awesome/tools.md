@@ -50,7 +50,7 @@ Light version of Kitsunebi.
 
 Download: [iTunes](https://itunes.apple.com/us/app/kitsunebi-lite/id1387913765?mt=8)
 
-> i2Ray <img width="20" src="/resources/ios.svg">
+> i2Ray <img width="20" src="/resources/ios.svg" />
 
 i2Ray is another iOS app based on V2Ray with easy-to-use UI design.
 
