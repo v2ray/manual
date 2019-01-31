@@ -42,7 +42,7 @@ V2Ray دارای یک سرور DNS داخلی است که رله DNS را برا
 
 > `hosts`: map{string: address}
 
-لیستی از آدرس های IP ثابت. هر ورودی دارای نام دامنه به عنوان کلید و آدرس IP به عنوان ارزش است. اگر یک پرس و جو DNS یکی از دامنه های این لیست را هدف قرار دهد، IP مربوطه بلافاصله پس داده می شود و پرس و جو DNS نخواهد شد.
+A list of static addresses, in the form of `domain:address`. Each entry has a domain name as key and IP or domain address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed, or the corresponding domain address will be used for further DNS queries, instead of the previous one.
 
 The format of domains is the same as it in [routing](routing.md#ruleobject).
 
