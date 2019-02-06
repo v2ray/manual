@@ -6,6 +6,10 @@ refen: welcome/versions
 
 На этой странице перечислены регулярные выпуски с обновлениями функций. Если релиз Github здесь не указан, он обычно содержит только исправления ошибок.
 
+## 2019.02.08 v4.15
+
+* DNS outbound proxy.
+
 ## 2019.02.01 v4.14
 
 * Static DNS mapping now supports domain to domain mapping.
@@ -158,7 +162,7 @@ refen: welcome/versions
 ## 2018.02.23 v3.10
 
 * Log entries now contain session ID to distinguish proxy sessions.
-* Исправления ошибок.
+* Bug fixes.
 
 ## 2018.02.15 v3.9
 
