@@ -7,6 +7,10 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2019.02.08 v4.15
+
+* DNS outbound proxy.
+
 ## 2019.02.01 v4.14
 
 * Static DNS mapping now supports domain to domain mapping.

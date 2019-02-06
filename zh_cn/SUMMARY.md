@@ -15,6 +15,7 @@
   * [文件格式](chapter_02/01_overview.md)
   * [协议列表](chapter_02/02_protocols.md)
     * [Blackhole](chapter_02/protocols/blackhole.md)
+    * [DNS](chapter_02/protocols/dns.md)
     * [Dokodemo](chapter_02/protocols/dokodemo.md)
     * [Freedom](chapter_02/protocols/freedom.md)
     * [HTTP](chapter_02/protocols/http.md)
