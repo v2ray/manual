@@ -14,6 +14,7 @@
   * [Обзор](configuration/overview.md)
   * [Протоколы](configuration/protocols.md) 
     * [Blackhole](configuration/protocols/blackhole.md)
+    * [Blackhole](configuration/protocols/dns.md)
     * [Dokodemo](configuration/protocols/dokodemo.md)
     * [Freedom](configuration/protocols/freedom.md)
     * [MTProto](configuration/protocols/mtproto.md)
