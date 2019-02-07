@@ -12,7 +12,9 @@ DNS is an outbound proxy. It is mainly used for intercept and proxy DNS queries 
 
 When proxying DNS queries, DNS outbound will redirect IP queries (A and AAAA) to [internal DNS server](../dns.md). It will send other type of queries directly to its original destination.
 
-## DnsOutboundObject
+DNS outbound proxy is introduced in V2Ray 4.15.
+
+## OutboundConfigurationObject
 
 There is no detailed settings so far.
 

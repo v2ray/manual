@@ -12,7 +12,9 @@ DNS 是一个出站协议，主要用于拦截和转发 DNS 查询。此出站�
 
 在处理 DNS 查询时，此出站协议会将 IP 查询（即 A 和 AAAA）转发给内置的 [DNS 服务器](../04_dns.md)。其它类询的流量将被转发至它们原本的目标地址。
 
-## DnsOutboundObject
+DNS 出站协议在 V2Ray 4.15 中引入。
+
+## OutboundConfigurationObject
 
 DNS 协议目前没有配置项。
 
