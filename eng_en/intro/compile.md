@@ -11,9 +11,8 @@
   3. `export PATH=$PATH:/usr/local/go/bin`
   4. `export GOPATH=$HOME/work`
 3. 下载 V2Ray 源文件：`go get -u v2ray.com/core/...`
-4. 下载 V2Ray 扩展包：`go get -u v2ray.com/ext/...`
-5. `go build -o $GOPATH/bin/v2ray v2ray.com/core/main`
-6. `go build -o $GOPATH/bin/v2ctl v2ray.com/ext/tools/control/main`
+4. `go build -o $GOPATH/bin/v2ray v2ray.com/core/main`
+5. `go build -o $GOPATH/bin/v2ctl v2ray.com/core/infra/control/main`
 
 ## Arch Linux
 
@@ -21,9 +20,8 @@
 2. 安装 golang：`sudo pacman -S go`
    1. `export GOPATH=$HOME/work`
 3. `go get -u v2ray.com/core/...`
-4. `go get -u v2ray.com/ext/...`
-5. `go build -o $GOPATH/bin/v2ray v2ray.com/core/main`
-6. `go build -o $GOPATH/bin/v2ctl v2ray.com/ext/tools/control/main`
+4. `go build -o $GOPATH/bin/v2ray v2ray.com/core/main`
+5. `go build -o $GOPATH/bin/v2ctl v2ray.com/core/infra/control/main`
 
 ## Debian / Ubuntu
 

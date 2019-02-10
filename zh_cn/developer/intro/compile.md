@@ -11,7 +11,6 @@ V2Ray 使用 [Golang](https://golang.org/) 作为主要编程语言、[Bazel](ht
 
 ```go
 go get -u v2ray.com/core/...
-go get -u v2ray.com/ext/...
 ```
 
 ## 自动构建 {#build}
