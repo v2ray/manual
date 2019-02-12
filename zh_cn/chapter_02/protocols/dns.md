@@ -16,8 +16,22 @@ DNS 出站协议在 V2Ray 4.15 中引入。
 
 ## OutboundConfigurationObject
 
-DNS 协议目前没有配置项。
-
 ```javascript
-{}
+{
+    "network": "tcp",
+    "address": "1.1.1.1",
+    "port": 53
+}
 ```
+
+> `network`: "tcp" | "udp"
+
+(V2Ray 4.16+) 修改 DNS 流量的传输层协议，可选的值有`"tcp"`和`"udp"`。当不指定时，保持来源的传输方式不变。
+
+> `address`: address
+
+(V2Ray 4.16+) 修改 DNS 服务器地址。当不指定时，保持来源中指定的地址不变。
+
+> `port`: number
+
+(V2Ray 4.16+) 修改 DNS 服务器端口。当不指定时，保持来源中指定的端口不变。

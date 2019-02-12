@@ -7,6 +7,16 @@ refen: welcome/versions
 
 本页列出了常规版本的功能升级记录，未列出的版本通常为 bug 修复。
 
+## 2019.02.15 v4.16
+
+使用相关:
+
+* DNS 传出代理支持修改目标 DNS 服务器的设定。
+
+开发相关:
+
+* 'ext' 仓库已完全迁移到 'core'。[#1541](https://github.com/v2ray/v2ray-core/issues/1541)
+
 ## 2019.02.08 v4.15
 
 * DNS 传出代理。

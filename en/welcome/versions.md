@@ -7,6 +7,16 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2019.02.15 v4.16
+
+For end users:
+
+* DNS outbound proxy now supports to modify DNS server info.
+
+For developers:
+
+* 'ext' repository is now deprecated. [#1541](https://github.com/v2ray/v2ray-core/issues/1541)
+
 ## 2019.02.08 v4.15
 
 * DNS outbound proxy.
