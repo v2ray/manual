@@ -6,6 +6,16 @@ refen: welcome/versions
 
 На этой странице перечислены регулярные выпуски с обновлениями функций. Если релиз Github здесь не указан, он обычно содержит только исправления ошибок.
 
+## 2019.02.15 v4.16
+
+For end users:
+
+* DNS outbound proxy now supports to modify DNS server info.
+
+For developers:
+
+* 'ext' repository is now deprecated. [#1541](https://github.com/v2ray/v2ray-core/issues/1541)
+
 ## 2019.02.08 v4.15
 
 * DNS outbound proxy.
@@ -28,11 +38,11 @@ refen: welcome/versions
 
 ## 2018.12.07 v4.8
 
-Для пользователей:
+For end users:
 
 * Bug fixes
 
-Для разработчиков:
+For developers:
 
 * New [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
 * New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)

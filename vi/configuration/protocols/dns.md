@@ -15,8 +15,22 @@ DNS outbound proxy is introduced in V2Ray 4.15.
 
 ## OutboundConfigurationObject
 
-There is no detailed settings so far.
-
 ```javascript
-{}
+{
+    "network": "tcp",
+    "address": "1.1.1.1",
+    "port": 53
+}
 ```
+
+> `network`: "tcp" | "udp"
+
+(V2Ray 4.16+) Modify the transport protocol of the DNS traffic. The value may be either `"tcp"` or `"udp"`. If it is not specified, the original protocol remains unchanged.
+
+> `address`: address
+
+(V2Ray 4.16+) Modify the DNS server address in the request. If it is not specified, the original DNS server address remain unchanged.
+
+> `port`: number
+
+(V2Ray 4.16+) Modify the DNS server port in the request. If it is not specified, the original DNS server port remain unchanged.
