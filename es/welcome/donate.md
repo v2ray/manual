@@ -33,8 +33,6 @@ For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.c
 
 Cryptocurrency is a more reliable way for international transactions. Crypto-wallet is usually anonymous and your donation is not traceable.
 
-You may buy cryptocurrencies through [services on this page](../ui_client/service.md).
-
 Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
 
 > Bitcoin
