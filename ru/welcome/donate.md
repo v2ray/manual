@@ -33,46 +33,44 @@ For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.c
 
 Криптовалюта является более надежным способом международных транзакций. Крипто-кошелек обычно является анонимным, и ваше пожертвование не отслеживаемо.
 
-Вы можете купить криптовалюту через [сервисы на этой странице](../ui_client/service.md).
-
-Из-за анонимности, присущей криптовалюте, пожалуйста, отправьте нам электронное письмо до вашего пожертвования, если вы хотите получить благодарственное письмо в ответ.
+Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
 
 > Bitcoin
 
-Адрес: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
+Address: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
 
 View stats or QR-Code [at BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
 
 > Bitcoin Cash
 
-Адрес: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
+Address: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
 
 View stats or QR-Code [at BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
 
 > Ethereum
 
-Адрес: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
+Address: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
 
 View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). You may also send the following ERC20 tokens to this address: OMG, REP, GNT, DGD
 
 > EOS
 
-Адрес: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
+Address: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
 
 > Litecoin
 
-Адрес: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
+Address: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
 
 > Monero
 
-Адрес: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
+Address: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
 
 > Ripple
 
-Адрес: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
+Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
 
-Тэг не обязателен
+Tag not required
 
 > Другое
 
-Пожалуйста, отправьте нам электронное письмо по адресу `love@v2ray.com`, если вы хотите пожертвовать другие виды монет.
+Please send us an email at `love@v2ray.com` if you want to donate other kind of coins.
