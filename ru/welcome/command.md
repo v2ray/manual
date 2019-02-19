@@ -43,36 +43,108 @@ URI файла с настройками. Возможные варианты:
 
 ## V2Ctl
 
-V2Ctl имеет следующие параметры командной строки:
+V2Ctl is a collection of commandline tools. It runs in the following way:
 
-```shell
+```bash
 v2ctl <command> <options>
 ```
 
-Ниже перечислены доступные команды. Каждая команда имеет свои собственные параметры.
+> `command`
 
-### Verify
+Subcommand. Available values are below:
 
-`v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
+* `api`: Invoke remote control commands in V2Ray instances.
+* `config`: Convert configuration from JSON format to protobuf.
+* `cert`: Generate TLS certificates.
+* `fetch`: Fetch remove resources.
+* `tlsping`: (V2Ray 4.17+) Test TLS handshake.
+* `verify`: Verify the signature of V2Ray releases.
+* `uuid`: Generate UUID.
 
-Проверка подписи бинарного файла V2Ray.
+### V2Ctl Api
 
-Опциональные параметры:
+`v2ctl api [--server=127.0.0.1:8080] <Service.Method> <Request>`
 
-> `sig`
+Invoke remote control commands in V2Ray instances. Example:
 
-Путь к файлу с подписью. Значение по умолчанию - ".sig"-файл в проверяемом пути.
+`v2ctl api --server=127.0.0.1:8080 LoggerService.RestartLogger ''`
 
-> Первый аргумент: файл для проверки.
-
-### Config
+### V2Ctl Config
 
 `v2ctl config`
 
-Нет параметров. Эта команда считывает конфигурацию в формате JSON из потока stdin, а выводит её в формате Protobuf в stdout.
+No option for this command. It reads JSON configuration from stdin, and print out corresponding Protobuf to stdout, if succeeds.
 
-### UUID
+### V2Ctl Cert
+
+`v2ctl cert [--ca] [--domain=v2ray.com] [--expire=240h] [--name="V2Ray Inc"] [--org="V2Ray Inc] [--json] [--file=v2ray]`
+
+Generates a TLS cerificate based on options.
+
+> `--ca`
+
+If specified, the certificate will be a CA certificate.
+
+> `--domain`
+
+Alternative Names in the certificate. This option can be used multiple times for multiple domains. For example: `--domain=v2ray.com --domain=v2ray.cool`.
+
+> `--expire`
+
+Expire date of the certificate. Value is a [Golang duration](https://golang.org/pkg/time/#ParseDuration).
+
+> `--name`
+
+Command Name in the certificate.
+
+> `--org`
+
+Orgnization in the certificate.
+
+> `--json`
+
+If specified, the certificate will be printed to stdout in the JSON format that is used in V2Ray.
+
+> `--file`
+
+Prints the certificate into files. When `--file=a`, two files named `a_cert.pem` and `a_key.pem` will be generated.
+
+### V2Ctl Fetch
+
+`v2ctl fetch <url>`
+
+Fetch remove resources and print to stdout. Only HTTP and HTTPS URL are supported.
+
+### V2Ctl TlsPing
+
+`v2ctl tlsping <domain> --ip=[ip]`
+
+Test TLS handlshake with specific domain.
+
+> domain
+
+Target domain for the TLS handshake.
+
+> --ip
+
+The IP address of the domain. If not specifed, V2Ctl resolves it through system DNS.
+
+### V2Ctl Verify
+
+`v2ctl verify [--sig=/path/to/sigfile] <filepath>`
+
+To verify the signature of a V2Ray binary.
+
+> `--sig`
+
+Path to signature file. Default value is the ".sig" file to the path to be verified.
+
+> `filepath`
+
+The file to be verified.
+
+### V2Ctl UUID
 
 `v2ctl uuid`
 
-Нет параметров. Эта команда выводит случайный UUID.
+No options. This command prints a random UUID.
