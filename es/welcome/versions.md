@@ -6,6 +6,10 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2019.02.22 v4.17
+
+* New sub-command `tlsping` in V2Ctl.
+
 ## 2019.02.15 v4.16
 
 For end users:
