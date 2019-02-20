@@ -47,12 +47,6 @@ Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMe
 
 下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
 
-> Kitsunebi Lite <img width="20" src="/resources/ios.svg">
-
-精简版的 Kitsunebi
-
-下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-lite/id1387913765?mt=8)
-
 > i2Ray <img width="20" src="/resources/ios.svg">
 
 i2Ray 是另一款基于 V2Ray 核心的iOS应用。界面简洁易用，适合新手用户使用。同时兼容Shadowrocket和Quantumult格式的规则导入。
