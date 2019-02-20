@@ -124,7 +124,7 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 
 > `serverName`: string
 
-指定服务器端证书的域名，在连接由 IP 建立时有用。
+指定服务器端证书的域名，在连接由 IP 建立时有用。当目标连接由域名指定时，比如在 Socks 入站时接收到了域名，或者由 Sniffing 功能探测出了域名，这个域名会自动用于`serverName`，无须手动配置。
 
 > `alpn`: \[ string \]
 

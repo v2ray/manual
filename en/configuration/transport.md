@@ -126,6 +126,8 @@ Socket options for incoming and out-going connections.
 
 Server name (usually domain) used for TLS authentication. Typically this is used when corressponding inbound/outbound uses IP for communication.
 
+When domain name is specified from inbound proxy, or get sniffed from the connection, it will be automatically used for connection. It is not necessary to set `serverName` in such case.
+
 > `alpn`: \[ string \]
 
 An array of strings, to specifiy the ALPN value in TLS handshake. Default value is `["http/1.1"]`.
