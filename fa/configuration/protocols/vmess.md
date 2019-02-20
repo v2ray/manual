@@ -22,7 +22,7 @@ VMess به زمان سیستم بستگی دارد. لطفا اطمینان حا
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 16,
+          "alterId": 4,
           "security": "auto",
           "level": 0
         }
@@ -75,7 +75,7 @@ VMess به زمان سیستم بستگی دارد. لطفا اطمینان حا
 
 > `alterId`: شماره
 
-تعداد شناسه های جایگزین شناسه های جایگزین به صورت قطعی تولید می شوند. پیش فرض به 0. حداکثر 65535. پیشنهاد 16. ارزش آن باید بزرگتر از یک در ورودی مربوطه نیست.
+Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 4. Its value must be not larger than the one in corresponding Inbound.
 
 > `سطح`: شماره
 
@@ -104,13 +104,13 @@ VMess به زمان سیستم بستگی دارد. لطفا اطمینان حا
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100,
+      "alterId": 4,
       "email": "love@v2ray.com"
     }
   ],
   "default": {
     "level": 0,
-    "alterId": 32
+    "alterId": 4
   },
   "detour": {
     "to": "tag_to_detour"
@@ -144,7 +144,7 @@ VMess به زمان سیستم بستگی دارد. لطفا اطمینان حا
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
   "level": 0,
-  "alterId": 16,
+  "alterId": 4,
   "email": "love@v2ray.com"
 }
 ```
@@ -182,7 +182,7 @@ VMess به زمان سیستم بستگی دارد. لطفا اطمینان حا
 ```javascript
 {
   "level": 0,
-  "alterId": 32
+  "alterId": 4
 }
 ```
 
@@ -192,4 +192,4 @@ VMess به زمان سیستم بستگی دارد. لطفا اطمینان حا
 
 > `alterId`: شماره
 
-تعداد شناسه های جایگزین مقدار پیش فرض 64. توصیه 16.
+Number of alternative IDs. Default value 64. Recommend 4.
