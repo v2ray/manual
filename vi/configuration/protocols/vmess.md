@@ -22,7 +22,7 @@ VMess phụ thuộc vào thời gian hệ thống. Hãy đảm bảo rằng th�
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 16,
+          "alterId": 4,
           "security": "auto",
           "level": 0
         }
@@ -75,7 +75,7 @@ ID người dùng, ở dạng [UUID](https://en.wikipedia.org/wiki/Universally_u
 
 > `alterId`: number
 
-Số ID thay thế. Các ID thay thế sẽ được tạo theo cách xác định. Mặc định là 0. Tối đa 65535. Đề nghị 16. Giá trị của nó không được lớn hơn giá trị của một Inbound tương ứng.
+Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 4. Its value must be not larger than the one in corresponding Inbound.
 
 > `level`: number
 
@@ -104,13 +104,13 @@ Sử dụng `"auto"` bất cứ nơi nào có thể để tương thích tốt h
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100,
+      "alterId": 4,
       "email": "love@v2ray.com"
     }
   ],
   "default": {
     "level": 0,
-    "alterId": 32
+    "alterId": 4
   },
   "detour": {
     "to": "tag_to_detour"
@@ -144,7 +144,7 @@ Ngăn cấm khách hàng sử dụng các phương thức mã hóa không an to�
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
   "level": 0,
-  "alterId": 16,
+  "alterId": 4,
   "email": "love@v2ray.com"
 }
 ```
@@ -182,7 +182,7 @@ Thẻ của proxy đến. Xem [Tổng quan](../protocols.md). Nếu được c�
 ```javascript
 {
   "level": 0,
-  "alterId": 32
+  "alterId": 4
 }
 ```
 
@@ -192,4 +192,4 @@ Cấp người dùng.
 
 > `alterId`: number
 
-Số ID thay thế. Giá trị mặc định 64. Đề xuất 16.
+Number of alternative IDs. Default value 64. Recommend 4.
