@@ -22,7 +22,7 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 16,
+          "alterId": 4,
           "security": "auto",
           "level": 0
         }
@@ -75,7 +75,7 @@ VMess는 시스템 시간에 의존합니다. 시스템 시간이 UTC 시간과 
 
 > `alterId`: 숫자
 
-대체 ID의 수. 대체 ID는 결정적 방식으로 생성됩니다. 기본값은 0입니다. 최대 65535입니다. 권장 사항 16. 값은 해당 인바운드의 값보다 커야합니다.
+Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 4. Its value must be not larger than the one in corresponding Inbound.
 
 > `레벨`: 숫자
 
@@ -104,13 +104,13 @@ Use `"auto"` wherever possible for better compatibility.
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100,
+      "alterId": 4,
       "email": "love@v2ray.com"
     }
   ],
   "default": {
     "level": 0,
-    "alterId": 32
+    "alterId": 4
   },
   "detour": {
     "to": "tag_to_detour"
@@ -144,7 +144,7 @@ Forbids client for using insecure encryption methods. When set to `true`, connec
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
   "level": 0,
-  "alterId": 16,
+  "alterId": 4,
   "email": "love@v2ray.com"
 }
 ```
@@ -182,7 +182,7 @@ The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMe
 ```javascript
 {
   "level": 0,
-  "alterId": 32
+  "alterId": 4
 }
 ```
 
@@ -192,4 +192,4 @@ User level.
 
 > `alterId`: 숫자
 
-Number of alternative IDs. Default value 64. Recommend 16.
+Number of alternative IDs. Default value 64. Recommend 4.
