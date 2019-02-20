@@ -22,7 +22,7 @@ VMess зависит от системного времени. Убедитес�
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 16,
+          "alterId": 4,
           "security": "auto",
           "level": 0
         }
@@ -75,7 +75,7 @@ An array where each element is an VMess user
 
 > `alterId`: number
 
-Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 16. Its value must be not larger than the one in corresponding Inbound.
+Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 4. Its value must be not larger than the one in corresponding Inbound.
 
 > `level`: number
 
@@ -104,13 +104,13 @@ Method for encrypting payload. This setting is only available at outbound. The V
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100,
+      "alterId": 4,
       "email": "love@v2ray.com"
     }
   ],
   "default": {
     "level": 0,
-    "alterId": 32
+    "alterId": 4
   },
   "detour": {
     "to": "tag_to_detour"
@@ -144,7 +144,7 @@ Optional default client configuration. Usually used with `detour`.
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
   "level": 0,
-  "alterId": 16,
+  "alterId": 4,
   "email": "love@v2ray.com"
 }
 ```
@@ -182,7 +182,7 @@ The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMe
 ```javascript
 {
   "level": 0,
-  "alterId": 32
+  "alterId": 4
 }
 ```
 
@@ -192,4 +192,4 @@ The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMe
 
 > `alterId`: number
 
-Число альтернативных идентификаторов. По умолчанию: 64. Рекомендуемое значение: 16.
+Number of alternative IDs. Default value 64. Recommend 4.
