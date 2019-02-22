@@ -14,7 +14,7 @@
   * [개요](configuration/overview.md)
   * [프로토콜](configuration/protocols.md) 
     * [블랙홀](configuration/protocols/blackhole.md)
-    * [Blackhole](configuration/protocols/dns.md)
+    * [DNS](configuration/protocols/dns.md)
     * [Dokodemo](configuration/protocols/dokodemo.md)
     * [Freedom](configuration/protocols/freedom.md)
     * [MTProto](configuration/protocols/mtproto.md)
