@@ -6,6 +6,10 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2019.03.01 v4.18
+
+* Port list in routing rules now supports mixed format.
+
 ## 2019.02.22 v4.17
 
 * New sub-command `tlsping` in V2Ctl.
