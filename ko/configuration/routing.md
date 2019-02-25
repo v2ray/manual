@@ -53,7 +53,7 @@ An array of rules. For each inbound connection, V2Ray tries these rules from top
     "fe80::/10",
     "geoip:cn"
   ],
-  "port": "0-100",
+  "port": "53,443,1000-2000",
   "network": "tcp",
   "source": [
     "10.0.0.1"
@@ -112,9 +112,9 @@ An array of IP ranges. When the targeting IP is in one of the ranges, this rule 
 
 Port range. Formats are:
 
-* `"ab"`: `a` 과 `b` 는 모두 양의 정수이고 65536보다 작습니다. 대상 포트가 [`a`, `b`] 인 경우이 규칙이 적용됩니다.
-
-* `a`: `a` 은 양의 정수이고 65536 미만입니다. 대상 포트가 ``일 때이 규칙이 적용됩니다.
+* `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
+* `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
+* Mix of the two above, separated by ",". Such as `"53,443,1000-2000"`.
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 

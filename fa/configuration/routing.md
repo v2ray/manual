@@ -53,7 +53,7 @@ An array of rules. For each inbound connection, V2Ray tries these rules from top
     "fe80::/10",
     "geoip:cn"
   ],
-  "port": "0-100",
+  "port": "53,443,1000-2000",
   "network": "tcp",
   "source": [
     "10.0.0.1"
@@ -112,9 +112,9 @@ An array of IP ranges. When the targeting IP is in one of the ranges, this rule 
 
 Port range. Formats are:
 
-* `"ab"`: هر دو `a` و `b` عدد صحیح مثبت هستند و کمتر از 65536. هنگامی که پورت هدف گیری در [`a`، `b`)، این قانون در حال اجرا است.
-
-* `a`: `a` یک عدد صحیح مثبت است و کمتر از 65536. هنگامی که پورت هدف `و`، این قانون به اجرا در می آید.
+* `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
+* `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
+* Mix of the two above, separated by ",". Such as `"53,443,1000-2000"`.
 
 > `network`: "tcp" | "udp" | "tcp,udp"
 
