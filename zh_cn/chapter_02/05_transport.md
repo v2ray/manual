@@ -118,7 +118,8 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
   "serverName": "v2ray.com",
   "allowInsecure": false,
   "alpn": ["http/1.1"],
-  "certificates": []
+  "certificates": [],
+  "disableSystemRoot": false
 }
 ```
 
@@ -137,6 +138,10 @@ TLS 配置。TLS 由 Golang 提供，支持 TLS 1.2，不支持 DTLS。
 > `allowInsecureCiphers`: true | false
 
 是否允许不安全的加密方式。默认情况下 TLS 只使用 TLS 1.3 推荐的加密算法套件，开启这一选项会增加一些与 TLS 1.2 兼容的加密套件。
+
+> `disableSystemRoot`: true | false
+
+(V2Ray 4.18+) 是否禁用操作系统自带的 CA 证书。默认值为`false`。当值为`true`时，V2Ray 只会使用`certificates`中指定的证书进行 TLS 握手。
 
 > `certificates`: \[ [CertificateObject](#certificateobject) \]
 
