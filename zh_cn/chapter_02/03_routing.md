@@ -87,8 +87,7 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 * 正则表达式: 由`"regexp:"`开始，余下部分是一个正则表达式。当此正则表达式匹配目标域名时，该规则生效。例如"regexp:\\\\.goo.*\\\\.com$"匹配"www.google.com"、"fonts.googleapis.com"，但不匹配"google.com"。
 * 子域名 (推荐): 由`"domain:"`开始，余下部分是一个域名。当此域名是目标域名或其子域名时，该规则生效。例如"domain:v2ray.com"匹配"www.v2ray.com"、"v2ray.com"，但不匹配"xv2ray.com"。
 * 完整匹配: 由`"full:"`开始，余下部分是一个域名。当此域名完整匹配目标域名时，该规则生效。例如"full:v2ray.com"匹配"v2ray.com"但不匹配"www.v2ray.com"。
-* 特殊值`"geosite:cn"`: 内置了一些[常见的国内网站域名](https://www.v2ray.com/links/chinasites/)。
-* 特殊值`"geosite:speedtest"` (V2Ray 3.32+): Speedtest.net 的所有公用服务器列表。
+* 预定义域名列表：由`"geosite:"`开头，余下部分是一个名称，如`geosite:google`或者`geosite:cn`。名称及域名列表参考[预定义域名列表](#dlc)。
 * 从文件中加载域名: 形如`"ext:file:tag"`，必须以`ext:`（小写）开头，后面跟文件名和标签，文件存放在[资源目录](env.md#asset-location)中，文件格式与`geosite.dat`相同，标签必须在文件中存在。
 
 > `ip`: \[string\]
@@ -161,3 +160,19 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 一个字符串数组，其中每一个字符串将用于和出站协议标识的前缀匹配。在以下几个出站协议标识中：`[ "a", "ab", "c", "ba" ]`，`"selector": ["a"]`将匹配到`[ "a", "ab" ]`。
 
 如果匹配到多个出站协议，负载均衡器目前会从中随机选出一个作为最终的出站协议。
+
+## 预定义域名列表 {#dlc}
+
+此列表由 [domain-list-community](https://github.com/v2ray/domain-list-community) 项目维护，预置于每一个 V2Ray 的安装包中，文件名为`geosite.dat`。
+
+这个文件包含了一些常见的域名，可用于路由和 DNS 筛选。常用的域名有：
+
+* `category-ads`: 包含了常见的广告域名。
+* `category-ads-all`: 包含了常见的广告域名，以及广告提供商的域名。
+* `cn`: 相当于 `geolocation-cn` 和 `tld-cn` 的合集。
+* `google`: 包含了 Google 旗下的所有域名。
+* `facebook`: 包含了 Facebook 旗下的所有域名。
+* `geolocation-cn`: 包含了常见的国内站点的域名。
+* `geolocation-!cn`: 包含了常见的非国内站点的域名。
+* `speedtest`: 包含了所有 Speedtest 所用的域名。
+* `tld-cn`: 包含了所有 .cn 和 .中国 结尾的域名。
