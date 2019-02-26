@@ -88,9 +88,8 @@ An array of domains. Available formats are:
 * عبارت منظم: شروع با `"regexp:"`، بقیه یک عبارت منظم است. هنگامی که Regexp با هدف دامنه مطابقت می کند، این قانون به اجرا در می آید. مثال: rule `"regexp: \\. goo. * \\. com $"` برابر `"www.google.com"` و `"fonts.googleapis.com"`، اما نه `"google.com"`.
 * Subdomain (توصیه می شود): شروع با `"domain:"` و بقیه یک دامنه است. هنگامی که دامنه هدفمند دقیقا همان مقدار است یا یک زیر دامنه از مقدار است، این قانون در حال اجرا است. مثال: قانون `"دامنه: v2ray.com"` مسابقه `"www.v2ray.com"`، `"v2ray.com"`، اما نه `"xv2ray.com"`.
 * دامنه کامل: شروع با `"full:"` و بقیه یک دامنه است. هنگامی که دامنه هدفمند دقیقا همان ارزش است، این قانون اثر می گذارد. مثال: قانون `"دامنه: v2ray.com"` مطابق با `"v2ray.com"`، اما نه `"www.v2ray.com"`.
-* مقدار ویژه `"geosite: cn"`: لیستی از [دامنه مشترک در چین](https://www.v2ray.com/links/chinasites/).
-* مقدار ویژه `"geosite: speedtest"` (V2Ray 3.32+): لیستی از سرورهای عمومی speedtest.net.
-* دامنه از فایل: مانند `"ext: file: tag"`. مقدار باید با `ext:` (کوچک) شروع شود و با نام فایل و تگ همراه است. فایل در [منابع دایرکتوری](env.md#location-of-v2ray-asset)دارد و دارای همان قالب `geosite.dat`. برچسب باید در فایل موجود باشد.
+* Pre-defined domain list: Begining with `"geosite:"` and the rest is a name, such as `geosite:google` or `geosite:cn`. See [Pre-defined domain list](#pre-defined-domain-lists) for more detail.
+* Domains from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
 
 > `ip`: \[string\]
 
@@ -164,3 +163,17 @@ Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
 An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
 
 When multiple outbounds are selected, load balancer for now picks one final outbound at random.
+
+## Pre-defined domain lists
+
+This is a domain lists maintained by [domain-list-community](https://github.com/v2ray/domain-list-community) project. It provides a file named `geosite.dat` for some predefined domain lists. Notably:
+
+* `category-ads`: Common ads domains.
+* `category-ads-all`: Common ads domains and ads providers' domains.
+* `cn`: Equivalent to an union of `geolocation-cn` and `tld-cn`.
+* `google`: All Google domains.
+* `facebook`: All Facebook domains.
+* `geolocation-cn`: Common domains that serve in China.
+* `geolocation-!cn`: Common domains that don't serve in China
+* `speedtest`: All domains used by Speedtest.
+* `tld-cn`: All .cn and .中国 domains.

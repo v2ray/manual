@@ -9,6 +9,7 @@ refen: welcome/versions
 ## 2019.03.01 v4.18
 
 * Port list in routing rules now supports mixed format.
+* Updated `geosite` information in routing, and description for static hosts in DNS.
 
 ## 2019.02.22 v4.17
 

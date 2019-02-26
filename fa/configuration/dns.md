@@ -44,7 +44,13 @@ V2Ray دارای یک سرور DNS داخلی است که رله DNS را برا
 
 A list of static addresses, in the form of `domain:address`. Each entry has a domain name as key and IP or domain address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed, or the corresponding domain address will be used for further DNS queries, instead of the previous one.
 
-The format of domains is the same as it in [routing](routing.md#ruleobject).
+The format of domains is:
+
+* Plaintext: When the targeting domain is exactly the value, the rule takes effect. Example: rule `"v2ray.com"` matches `"v2ray.com"`, but not `"www.v2ray.com"`.
+* Regular expression: Begining with `"regexp:"`, the rest is a regular expression. When the regexp matches targeting domain, this rule takes effect. Example: rule `"regexp:\\.goo.*\\.com$"` matches `"www.google.com"` and `"fonts.googleapis.com"`, but not `"google.com"`.
+* Subdomain (recommended): Begining with `"domain:"` and the rest is a domain. When the targeting domain is exactly the value, or is a subdomain of the value, this rule takes effect. Example: rule `"domain:v2ray.com"` matches `"www.v2ray.com"`, `"v2ray.com"`, but not `"xv2ray.com"`.
+* Keyword: Begining with `"keyword:"` and the rest is a pattern. If this string matches any part of the targeting domain, this rule takes effet. Example: rule `"keyword:sina.com"` matches targeting domain `"sina.com"`, `"sina.com.cn"` and `"www.sina.com"`, but not `"sina.cn"`.
+* Pre-defined domain list: Begining with `"geosite:"` and the rest is a name, such as `geosite:google` or `geosite:cn`. See [Pre-defined domain list](routing.md#pre-defined-domain-lists) for more detail.
 
 > `سرور`: \ [رشته | [ServerObject](#serverobject) | "localhost" \]
 

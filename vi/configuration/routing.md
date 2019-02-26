@@ -88,9 +88,8 @@ An array of domains. Available formats are:
 * Cụm từ thông dụng: Bắt đầu bằng `"regexp:"`, phần còn lại là cụm từ thông dụng. Khi regexp khớp với miền nhắm mục tiêu, quy tắc này có hiệu lực. Ví dụ: quy tắc `"regexp: \\. Goo. * \\. Com $"` khớp với `"www.google.com"` và `"fonts.googleapis.com"`, nhưng không phải `"google.com"`.
 * Tên miền phụ (được khuyến nghị): Bắt đầu bằng `"tên miền:"` và phần còn lại là tên miền. Khi tên miền nhắm mục tiêu chính xác là giá trị hoặc là tên miền phụ của giá trị, quy tắc này có hiệu lực. Ví dụ: quy tắc `"tên miền: v2ray.com"` khớp với `"www.v2ray.com"`, `"v2ray.com"`, nhưng không phải `"xv2ray.com"`.
 * Tên miền đầy đủ: Bắt đầu bằng `"đầy đủ:"` và phần còn lại là tên miền. Khi tên miền nhắm mục tiêu chính xác là giá trị, quy tắc sẽ có hiệu lực. Ví dụ: quy tắc `"tên miền: v2ray.com"` khớp với `"v2ray.com"`, nhưng không phải `"www.v2ray.com"`.
-* Giá trị đặc biệt `"geosite: cn"`: danh sách [tên miền phổ biến ở Trung Quốc](https://www.v2ray.com/links/chinasites/).
-* Giá trị đặc biệt `"geosite: speedtest"` (V2Ray 3.32+): danh sách tất cả các máy chủ công cộng của speedtest.net.
-* Tên miền từ tệp: Chẳng hạn như `"ext: file: tag"`. Giá trị phải bắt đầu bằng `ext:` (chữ thường) và tiếp theo là tên tệp và thẻ. Tệp được đặt trong [thư mục tài nguyên](env.md#location-of-v2ray-asset)và có cùng định dạng `geosite.dat`. Thẻ phải tồn tại trong tệp.
+* Pre-defined domain list: Begining with `"geosite:"` and the rest is a name, such as `geosite:google` or `geosite:cn`. See [Pre-defined domain list](#pre-defined-domain-lists) for more detail.
+* Domains from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
 
 > `ip`: \[string\]
 
@@ -164,3 +163,17 @@ Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
 An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
 
 When multiple outbounds are selected, load balancer for now picks one final outbound at random.
+
+## Pre-defined domain lists
+
+This is a domain lists maintained by [domain-list-community](https://github.com/v2ray/domain-list-community) project. It provides a file named `geosite.dat` for some predefined domain lists. Notably:
+
+* `category-ads`: Common ads domains.
+* `category-ads-all`: Common ads domains and ads providers' domains.
+* `cn`: Equivalent to an union of `geolocation-cn` and `tld-cn`.
+* `google`: All Google domains.
+* `facebook`: All Facebook domains.
+* `geolocation-cn`: Common domains that serve in China.
+* `geolocation-!cn`: Common domains that don't serve in China
+* `speedtest`: All domains used by Speedtest.
+* `tld-cn`: All .cn and .中国 domains.
