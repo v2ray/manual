@@ -117,7 +117,8 @@ Socket options for incoming and out-going connections.
   "serverName": "v2ray.com",
   "allowInsecure": false,
   "alpn": ["http/1.1"],
-  "certificates": []
+  "certificates": [],
+  "disableSystemRoot": false
 }
 ```
 
@@ -138,6 +139,10 @@ If `true`, V2Ray allowss insecure connection at TLS client, e.g., TLS server use
 > `allowInsecureCiphers`: true | false
 
 Whehter or not to allow insecure cipher suites. By default TLS only uses cipher suites from TLS 1.3 spec. Turn on this option to allow cipher suites with static RSA keys.
+
+> `disableSystemRoot`: true | false
+
+(V2Ray 4.18+) Whether or not to disable system root CAs for TLS handshake. Default value is `false`. If set to `true`, V2Ray will use only `certificates` for TLS handshake.
 
 > `certificates`: \[ [CertificateObject](#certificateobject) \]
 
