@@ -88,8 +88,7 @@ An array of domains. Available formats are:
 * Regular expression: Begining with `"regexp:"`, the rest is a regular expression. When the regexp matches targeting domain, this rule takes effect. Example: rule `"regexp:\\.goo.*\\.com$"` matches `"www.google.com"` and `"fonts.googleapis.com"`, but not `"google.com"`.
 * Subdomain (recommended): Begining with `"domain:"` and the rest is a domain. When the targeting domain is exactly the value, or is a subdomain of the value, this rule takes effect. Example: rule `"domain:v2ray.com"` matches `"www.v2ray.com"`, `"v2ray.com"`, but not `"xv2ray.com"`.
 * Full domain: Begining with `"full:"` and the rest is a domain. When the targeting domain is exactly the value, the rule takes effect. Example: rule `"domain:v2ray.com"` matches `"v2ray.com"`, but not `"www.v2ray.com"`.
-* Special value `"geosite:cn"`: a list of [common domains in China](https://www.v2ray.com/links/chinasites/).
-* Special value `"geosite:speedtest"` (V2Ray 3.32+): list of all public servers of speedtest.net.
+* Pre-defined domain list: Begining with `"geosite:"` and the rest is a name, such as `geosite:google` or `geosite:cn`. See [Pre-defined domain list](#pre-defined-domain-lists) for more detail.
 * Domains from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
 
 > `ip`: \[string\]
@@ -164,3 +163,17 @@ Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
 An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
 
 When multiple outbounds are selected, load balancer for now picks one final outbound at random.
+
+## Pre-defined domain lists
+
+This is a domain lists maintained by [domain-list-community](https://github.com/v2ray/domain-list-community) project. It provides a file named `geosite.dat` for some predefined domain lists. Notably:
+
+* `category-ads`: Common ads domains.
+* `category-ads-all`: Common ads domains and ads providers' domains.
+* `cn`: Equivalent to an union of `geolocation-cn` and `tld-cn`.
+* `google`: All Google domains.
+* `facebook`: All Facebook domains.
+* `geolocation-cn`: Common domains that serve in China.
+* `geolocation-!cn`: Common domains that don't serve in China
+* `speedtest`: All domains used by Speedtest.
+* `tld-cn`: All .cn and .中国 domains.
