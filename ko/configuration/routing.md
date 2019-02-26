@@ -88,9 +88,8 @@ An array of domains. Available formats are:
 * 정규 표현식 : `"regexp :"`, 나머지는 정규 표현식입니다. 정규 표현식이 타겟팅 도메인과 일치하면이 규칙이 적용됩니다. 예 : 규칙 `"regexp : \\. goo. * \\. com $"` 은 `"www.google.com"` 및 `"fonts.googleapis.com"`와 일치하지만 `"google.com"`과 일치하지 않습니다. </code> .
 * 하위 도메인 (권장) : `"도메인 :"` 로 시작하고 나머지는 도메인입니다. 타겟팅 도메인이 정확히 값이거나 값의 하위 도메인 인 경우이 규칙이 적용됩니다. 예 : 규칙 `"도메인 : v2ray.com"` 은 `"www.v2ray.com"`, `"v2ray.com"`와 일치하지만 `"xv2ray.com"은 일치하지 않습니다.`.
 * 전체 도메인 : `"전체 :"` 나머지는 도메인입니다. 타겟팅 도메인이 정확히 값일 경우 규칙이 적용됩니다. 예 : 규칙 `"도메인 : v2ray.com"` 은 `"v2ray.com"`과 일치하지만 `"www.v2ray.com"과 일치하지 않습니다.`.
-* 특별 값 `"geosite : cn"`: 중국의 [공통 도메인 목록](https://www.v2ray.com/links/chinasites/).
-* 특별 값 `"geosite : speedtest"` (V2Ray 3.32+) : speedtest.net의 모든 공용 서버 목록.
-* 파일에서 도메인 : `"ext : file : tag"와 같은`. 값은 `ext :` (소문자)로 시작해야하며 그 다음에 파일 이름과 태그가 와야합니다. 파일은 [리소스 디렉토리](env.md#location-of-v2ray-asset)에 저장되며 `geosite.dat와 동일한 형식을가집니다.`. 태그는 파일에 존재해야합니다.
+* Pre-defined domain list: Begining with `"geosite:"` and the rest is a name, such as `geosite:google` or `geosite:cn`. See [Pre-defined domain list](#pre-defined-domain-lists) for more detail.
+* Domains from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
 
 > `ip`: \[string\]
 
@@ -164,3 +163,17 @@ Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
 An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
 
 When multiple outbounds are selected, load balancer for now picks one final outbound at random.
+
+## Pre-defined domain lists
+
+This is a domain lists maintained by [domain-list-community](https://github.com/v2ray/domain-list-community) project. It provides a file named `geosite.dat` for some predefined domain lists. Notably:
+
+* `category-ads`: Common ads domains.
+* `category-ads-all`: Common ads domains and ads providers' domains.
+* `cn`: Equivalent to an union of `geolocation-cn` and `tld-cn`.
+* `google`: All Google domains.
+* `facebook`: All Facebook domains.
+* `geolocation-cn`: Common domains that serve in China.
+* `geolocation-!cn`: Common domains that don't serve in China
+* `speedtest`: All domains used by Speedtest.
+* `tld-cn`: All .cn and .中国 domains.
