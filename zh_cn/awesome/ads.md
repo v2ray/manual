@@ -27,6 +27,10 @@ BlueHost作为美国的老牌主机商，在国内也是非常受欢迎的美国
 
 ClouDNS成立于2010年，公司位于保加利亚，提供免费和收费的 DNS 托管服务。
 
+> [Bandwagon](https://bandwagonhost.com/aff.php?aff=44317)
+
+老牌 VPS 销售商，价格低廉，性价比高。
+
 ## VPN
 
 > [BabyDriver](http://babydriver.me/)

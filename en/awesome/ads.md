@@ -27,6 +27,10 @@ VPS, web hosting
 
 Domain registration, DNS, SSL certificate
 
+> [Bandwagon](https://bandwagonhost.com/aff.php?aff=44317)
+
+Well-known VPS provider. Low price for good product.
+
 ## VPN
 
 > [BabyDriver](http://babydriver.me/)
