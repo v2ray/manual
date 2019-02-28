@@ -148,7 +148,7 @@ Examples:
 
 * Detect HTTP GET: `"attrs[':method'] == 'GET'"`
 * Detect HTTP Path: `"attrs[':path'].startswith('/test')"`
-* Detect Content Type: `"attrs['content-type'].index('text/html') >= 0"`
+* Detect Content Type: `"attrs['accept'].index('text/html') >= 0"`
 
 > `outboundTag` string
 
