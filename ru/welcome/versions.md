@@ -11,6 +11,7 @@ refen: welcome/versions
 * Port list in routing rules now supports mixed format.
 * Updated `geosite` information in routing, and description for static hosts in DNS.
 * Option to not use system root CAs for TLS handshake.
+* New routing rule for traffic attributes.
 
 ## 2019.02.22 v4.17
 
