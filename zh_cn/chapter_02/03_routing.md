@@ -145,7 +145,7 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 
 * 检测 HTTP GET: `"attrs[':method'] == 'GET'"`
 * 检测 HTTP Path: `"attrs[':path'].startswith('/test')"`
-* 检测 Content Type: `"attrs['content-type'].index('text/html') >= 0"`
+* 检测 Content Type: `"attrs['accept'].index('text/html') >= 0"`
 
 > `outboundTag`: string
 
