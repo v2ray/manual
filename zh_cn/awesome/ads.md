@@ -33,6 +33,10 @@ ClouDNS成立于2010年，公司位于保加利亚，提供免费和收费的 DN
 
 ## VPN
 
+> [NicoNode](https://niconode.co/)
+
+支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
+
 > [BabyDriver](http://babydriver.me/)
 
 支持 V2Ray 的 VPN 服务。优惠码：bcb518
@@ -60,10 +64,6 @@ V2Ray 小范围内测中。
 > [栖息地](http://7dea9f6.vmess.fun/)
 
 对内小众的 V2ray 优质网络加速服务。邀请码：V2RAY
-
-> [NicoNode](https://niconode.net/)
-
-支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
 
 > [V2Net](http://v2net.org/)
 
