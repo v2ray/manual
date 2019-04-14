@@ -55,6 +55,10 @@ V2Ray 小范围内测中。
 
 提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
 
+> [NicoNode](https://niconode.co/)
+
+支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
+
 ## 数字货币 {#crypto}
 
 > [LocalBitcoins](https://localbitcoins.com/?ch=khtm)
