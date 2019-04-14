@@ -1,12 +1,13 @@
+---
+refcn: chapter_00/tg
+refen: welcome/tg
+---
 # Telegram Group
-
-![English](../resources/englishc.svg) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/tg.html)
 
 Project V provides the following groups for different type of discussions.
 
-1. [Development](https://t.me/joinchat/DNcazUMxm77Jt0LQuwiGAQ): Discussion over Project V's development and future plans.
-2. [Usage](https://telegram.me/projectv2ray): For Project V usages.
-3. [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Other topics.
+1. [Usage](https://telegram.me/projectv2ray): For Project V usages.
+2. [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Other topics.
 
 Please also follow [Project V Announcement](https://t.me/v2msg) for news.
 

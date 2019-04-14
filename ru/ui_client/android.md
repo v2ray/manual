@@ -1,6 +1,8 @@
+---
+refcn: ui_client/android
+refen: ui_client/android
+---
 # Клиенты Android
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/ui_client/android.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/ui_client/android.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/ui_client/android.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/android.html)
 
 ## BifrostV
 
@@ -23,7 +25,7 @@ V2RayNG - приложение для Android, основанное на V2Ray. 
 
 ## Actinium
 
-* Загрузить: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.actinium)
+* Загрузить: Play Store (недоступно)
 * Исходный код: [GitHub](https://github.com/V2Ray-Android/Actinium)
 
 ## Другие инструменты {#other}

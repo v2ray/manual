@@ -1,6 +1,114 @@
+---
+refcn: chapter_00/01_versions
+refen: welcome/versions
+---
 # Version History
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/versions.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/01_versions.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/versions.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/versions.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
+
+## 2019.03.01 v4.18
+
+* Port list in routing rules now supports mixed format.
+* Updated `geosite` information in routing, and description for static hosts in DNS.
+* Option to not use system root CAs for TLS handshake.
+
+## 2019.02.22 v4.17
+
+* New sub-command `tlsping` in V2Ctl.
+
+## 2019.02.15 v4.16
+
+For end users:
+
+* DNS outbound proxy now supports to modify DNS server info.
+
+For developers:
+
+* 'ext' repository is now deprecated. [#1541](https://github.com/v2ray/v2ray-core/issues/1541)
+
+## 2019.02.08 v4.15
+
+* DNS outbound proxy.
+
+## 2019.02.01 v4.14
+
+* Static DNS mapping now supports domain to domain mapping.
+
+## 2019.01.18 v4.13
+
+* Quic lib updated. It is not compatible with previous versions.
+* DNS now have `tag` settings.
+
+## 2019.01.11 v4.11
+
+For developers:
+
+* New method: [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
+* [internet.DialSystem](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/dialer.go#L66) now uses [internet.ListenSystemPacket](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/tcp_hub.go#L65) to establish UDP connections.
+
+## 2018.12.07 v4.8
+
+For end users:
+
+* Bug fixes
+
+For developers:
+
+* New [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
+* New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)
+* New method: [internet.RegisterDialerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_dialer.go#L105)
+
+## 2018.11.30 v4.7
+
+* Freedom now supports for dialing IPv4 or IPv6 address only.
+* New QUIC transport.
+
+## 2018.11.23 v4.6
+
+* Freedom now can automatically choose between IPv4 and IPv6 destination address, based on `SendThrough` settings.
+
+## 2018.11.16 v4.4
+
+* Load balancer rules in routing.
+* Memory usage gets optimized.
+
+## 2018.11.05 v4.1
+
+* JSON configuration format changes. Old format is still suported.
+* Performance on GeoIP matching is improved.
+
+## 2018.11.02 v4.0
+
+* Reverse proxy.
+* Release packages for ppc64 and ppc64le.
+
+## 2018.10.12 v3.47
+
+* Migrate to a new continuous delivery pipeline
+
+## 2018.09.28 v3.44
+
+* Dokodemo-door now supports TProxy in Linux.
+
+## 2018.09.21 v3.43
+
+* DNS now supports on-demand queries by domain.
+
+## 2018.09.14 v3.40
+
+* New socket options in transport configuration. It can be used to setup VPNs.
+* New TCP Fast Open option in transport configuration.
+
+## 2018.09.03 v3.38
+
+* mKCP has a new WireGuard header.
+* Fix softfloat binaries in mips/mips64.
+
+## 2018.08.31 v3.37
+
+* Performance of reading network connection in optilized. See [Environment Variables](../configuration/env.md)。
+* VMess uses AES-128-GCM by default on ARM64.
+* Built by Go 1.11.
 
 ## 2018.08.24 v3.36
 

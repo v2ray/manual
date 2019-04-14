@@ -1,66 +1,73 @@
+---
+refcn: chapter_02/protocols/shadowsocks
+refen: configuration/protocols/shadowsocks
+---
 # Shadowsocks
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/shadowsocks.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html)
+* نام: `shadowsocks`
+* نوع: ورودی / خروجی
 
-[Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
+[Shadowsocks](https://www.shadowsocks.org/) پروتکل، برای هر دو اتصالات ورودی و خروجی.
 
-Compatibility with official version:
+سازگاری با نسخه رسمی:
 
-* Supports both TCP and UDP connections, where UDP can be optional turned off.
-* Supports [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)； 
-  * Client may choose to turn on or off.
-  * Server may choose to enable, disable or auto.
-* Encryption methods ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) ciphers added in V2Ray 3.0): 
+* پشتیبانی از هر دو اتصال TCP و UDP، جایی که UDP می تواند اختیاری خاموش شود.
+* پشتیبانی می کند [OTA](https://web.archive.org/web/20161221022225/https://shadowsocks.org/en/spec/one-time-auth.html)؛ 
+  * مشتری ممکن است انتخاب کند که روشن یا خاموش شود.
+  * سرور ممکن است فعال، غیرفعال یا خودکار را انتخاب کند.
+* روش های رمزنگاری ([AEAD](https://shadowsocks.org/en/spec/AEAD-Ciphers.html) رمزهای اضافه شده در V2Ray 3.0): 
   * aes-256-cfb
   * aes-128-cfb
   * chacha20
   * chacha20-ietf
   * aes-256-gcm
   * aes-128-gcm
-  * chacha20-poly1305 a.k.a. chacha20-ietf-poly1305
-* Plugins： 
-  * Support obfs through standalone mode.
+  * chacha20-poly1305 aka chacha20-ietf-poly1305
+* پلاگینها: 
+  * پشتیبانی obfs از طریق حالت مستقل.
 
-Info:
-
-* Name: shadowsocks
-* Type: Inbound / Outbound
-
-## Inbound proxy configuration
+## InboundConfigurationObject
 
 ```javascript
 {
   "email": "love@v2ray.com",
   "method": "aes-128-cfb",
   "password": "password",
-  "udp": false,
   "level": 0,
   "ota": true,
   "network": "tcp"
 }
 ```
 
-Where:
+> `ایمیل`: رشته
 
-* `email`: Email address. Used for user identification.
-* `method`: Encryption method. No default value. Options are: 
-  * `"aes-256-cfb"`
-  * `"aes-128-cfb"`
-  * `"chacha20"`
-  * `"chacha20-ietf"`
-  * `"aes-256-gcm"`
-  * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `udp` (Deprecated, use `network`): `true` or `false`, whether or not to enable UDP. Default to `false`.
-* `level`: User level. Default to `0`. See [Policy](../policy.md).
-* `ota`: `true` or `false`, whether or not to enable OTA. 
-  * When AEAD is used, `ota` has no effect.
-  * When this entry is not specified at all, Shadowsocks inbound detects client settings and then act accordingly.
-  * When this is set to `true` (or `false`) but client is set in the other way, Shadowsocks inbound disconnects connection immediately.
-* `network`: Type of network, either `"tcp"`, `"udp"`, or `"tcp,udp"`. Default to `"tcp"`.
+آدرس ایمیل. برای شناسایی کاربر استفاده می شود.
 
-## Outbound proxy configuration
+> `روش`: رشته
+
+ضروری. مراجعه کنید به [روش رمزگذاری](#encryption-methods) برای مقادیر موجود.
+
+> `رمز عبور`: رشته
+
+ضروری. رمز عبور در پروتکل Shadowsocks. می تواند هر رشته باشد
+
+> `سطح`: شماره
+
+سطح کاربر پیش فرض به `0`. [سیاست](../policy.md).
+
+> `ota`: `true` | `غلط`
+
+آیا OTA مجبور است یا نه اگر `true` و اتصال ورودی OTA را فعال نکنند، V2Ray این اتصال را رد می کند. برعکس
+
+اگر این فیلد مشخص نشده باشد، V2Ray خودکار تنظیمات OTA را از اتصالات ورودی تشخیص می دهد.
+
+هنگامی که استفاده از رمزنگاری AEAD استفاده می شود `ota` تاثیری ندارد.
+
+> `شبکه`: "tcp" | "udp" | "tcp، udp"
+
+نوع شبکه های پشتیبانی شده پیش فرض به `"tcp"`.
+
+## OutboundConfigurationObject
 
 ```javascript
 {
@@ -78,20 +85,78 @@ Where:
 }
 ```
 
-Where:
+جایی که:
 
-* `email`: Email address. Used for user identification.
-* `address`: Address of Shadowsocks server. Can be IPv4, IPv6 or domain.
-* `port`: Port of Shadowsocks server.
-* `method`: Encryption method. No default value. Options are: 
+* `ایمیل`: آدرس ایمیل. برای شناسایی کاربر استفاده می شود.
+* `آدرس`: آدرس سرور Shadowsocks. می تواند IPv4، IPv6 یا دامنه باشد.
+* `پورت`: Port of Shadowsocks server.
+* `روش`: روش رمزگذاری مقدار پیش فرض ندارد گزینه ها عبارتند از: 
   * `"aes-256-cfb"`
   * `"aes-128-cfb"`
   * `"chacha20"`
   * `"chacha20-ietf"`
   * `"aes-256-gcm"`
   * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `ota`: Whether or not to use OTA. 
-  * When AEAD is used, `ota` has no effect.
-* `level`: User level.
+  * `"chacha20-poly1305"` یا `"chacha20-ietf-poly1305"`
+* `رمز عبور`: رمز عبور. می تواند هر رشته باشد
+* `ota`: استفاده یا عدم استفاده از OTA. 
+  * وقتی AEAD استفاده می شود، `ota` تاثیری ندارد.
+* `سطح`: سطح کاربر.
+
+> `سرور`: \ [[ServerObject](#serverobject)\]
+
+آرایه ای از [ServerObject](#serverobject)ثانیه.
+
+### ServerObject
+
+```javascript
+{
+  "email": "love@v2ray.com",
+  "address": "127.0.0.1",
+  "port": 1234,
+  "method": "加密方式",
+  "password": "密码",
+  "ota": false,
+  "level": 0
+}
+```
+
+> `ایمیل`: رشته
+
+آدرس ایمیل. برای شناسایی کاربر استفاده می شود.
+
+> `آدرس`: آدرس
+
+ضروری. آدرس سرور Shadowsocks. ممکن است IPv4، IPv6 یا آدرس دامنه باشد.
+
+> `پورت`: شماره
+
+ضروری. پورت سرور Shadowsocks.
+
+> `روش`: رشته
+
+ضروری. مراجعه کنید به [روش رمزگذاری](#encryption-methods) برای مقادیر موجود.
+
+> `رمز عبور`: رشته
+
+ضروری. رمز عبور در پروتکل Shadowsocks. می تواند هر رشته باشد
+
+> `ota`: true | نادرست
+
+استفاده یا عدم استفاده از OTA مقدار پیش فرض است `کاذب`.
+
+وقتی رمزگذاری AEAD استفاده می شود، این فیلد تاثیری ندارد.
+
+> `سطح`: شماره
+
+سطح کاربر
+
+## روش های رمزگذاری
+
+* `"aes-256-cfb"`
+* `"aes-128-cfb"`
+* `"chacha20"`
+* `"chacha20-ietf"`
+* `"aes-256-gcm"`
+* `"aes-128-gcm"`
+* `"chacha20-poly1305"` یا `"chacha20-ietf-poly1305"`

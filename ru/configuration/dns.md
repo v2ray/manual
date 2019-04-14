@@ -1,10 +1,22 @@
+---
+refcn: chapter_02/04_dns
+refen: configuration/dns
+---
 # DNS
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/dns.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/04_dns.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/dns.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/dns.html)
 
 V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.
 
-Настройка:
+{% hint style='info' %}
+
+Due to the complexity of DNS protocol, V2Ray for now only supports basic IP queries (A and AAAA). We recommend to use a professional DNS rely (such as [CoreDNS](https://coredns.io/)) for V2Ray.
+
+{% endhint %}
+
+The DNS queries relayed by this DNS service will also be dispatched based on routing settings. No extra configuration is required.
+
+## DnsObject
+
+`DnsObject` is used as `dns` field in top level configuration.
 
 ```javascript
 {
@@ -12,38 +24,80 @@ V2Ray имеет внутренний DNS-сервер, используемый
     "baidu.com": "127.0.0.1"
   },
   "servers": [
+    {
+      "address": "1.2.3.4",
+      "port": 5353,
+      "domains": [
+        "domain:v2ray.com"
+      ]
+    },
     "8.8.8.8",
     "8.8.4.4",
     "localhost"
   ],
   "clientIp": "1.2.3.4",
+  "tag": "dns_inbound"
 }
 ```
 
-Где:
+> `hosts`: map{string: address}
 
-* `hosts`: Список статических IP-адресов. Каждая запись имеет имя домена в качестве ключа и IP-адрес как значение. Если цель DNS-запроса есть в списке, немедленно будет возвращен соответствующий IP, а запрос DNS дальше не пойдёт. Формат домена: 
-  * `"v2ray.com"`: Домен для разрешения, должен быть идентичен заданному.
-  * `"domain:v2ray.com"`: По такой схеме будет разрешаться как заданный домен, так и его поддомены.
-* `servers`: Список DNS-серверов. Если задано несколько серверов, они будут опрашиваться сверху вниз. Параметры для DNS-адресов: 
-  * `"IP"`: IP-адрес, 53-й порт которого открыт для DNS-запросов.
-  * `"localhost"`: Особое значение, V2Ray будет разрешать DNS-запросы на локальной машине.
-* `clientIp`: IPv4-адрес текущей системы. Используется для уведомления DNS-сервера для лучшего разрешения IP. Значение не может быть адресом из частных ("серых") диапазонов.
+A list of static addresses, in the form of `domain:address`. Each entry has a domain name as key and IP or domain address as value. If a DNS query targets one of the domains in this list, the corresponding IP will be returned immediately and DNS query will not be relayed, or the corresponding domain address will be used for further DNS queries, instead of the previous one.
 
-Чтобы использовать внутренний DNS, вам необходимо настроить `domainStrategy` в [маршрутизации](routing.md).
+The format of domains is:
 
-Запросы DNS, ретранслируемые этой службой DNS, также будут отправляться на основе параметров маршрутизации. Никакой дополнительной настройки не требуется.
+* Plaintext: When the targeting domain is exactly the value, the rule takes effect. Example: rule `"v2ray.com"` matches `"v2ray.com"`, but not `"www.v2ray.com"`.
+* Regular expression: Begining with `"regexp:"`, the rest is a regular expression. When the regexp matches targeting domain, this rule takes effect. Example: rule `"regexp:\\.goo.*\\.com$"` matches `"www.google.com"` and `"fonts.googleapis.com"`, but not `"google.com"`.
+* Subdomain (recommended): Begining with `"domain:"` and the rest is a domain. When the targeting domain is exactly the value, or is a subdomain of the value, this rule takes effect. Example: rule `"domain:v2ray.com"` matches `"www.v2ray.com"`, `"v2ray.com"`, but not `"xv2ray.com"`.
+* Keyword: Begining with `"keyword:"` and the rest is a pattern. If this string matches any part of the targeting domain, this rule takes effet. Example: rule `"keyword:sina.com"` matches targeting domain `"sina.com"`, `"sina.com.cn"` and `"www.sina.com"`, but not `"sina.cn"`.
+* Pre-defined domain list: Begining with `"geosite:"` and the rest is a name, such as `geosite:google` or `geosite:cn`. See [Pre-defined domain list](routing.md#pre-defined-domain-lists) for more detail.
 
-## Стратегия запросов {#strategy}
+> `servers`: \[string | [ServerObject](#serverobject) | "localhost" \]
 
-Служба DNS попытается получить и A, и AAAA в одном DNS-запросе. Поскольку не все DNS-серверы поддерживают такой формат, V2Ray отправляет объединённые запросы только на следующие DNS-серверы. С остальных серверов запрашивается только A-запись.
+List of DNS servers. Each server may be specified in three formats: IP address, [ServerObject](#serverobject), or `"localhost"`.
 
-```text
-8.8.8.8
-8.8.4.4
-9.9.9.9
+When a server is an IP address, such as `"8.8.8.8"`, V2Ray queries DNS on UDP port 53 on this address.
+
+When a server is `"localhost"`, V2Ray queries local host for DNS.
+
+{% hint style='info' %}
+
+When `"localhost"` is used, out-going DNS traffic is not controlled by V2Ray. However, you may redirect DNS queries back to V2Ray with additional configuration.
+
+{% endhint %}
+
+> `clientIp`: string
+
+IP address of current machine. If specified, V2Ray uses this IP as EDNS-Client-Subnet. This IP can't be a private address.
+
+> `tag`: string
+
+(V2Ray 4.13+) All traffic initiated from this DNS, except to localhost, will have this tag as inbound. It can be used for routing.
+
+### ServerObject
+
+```javascript
+{
+  "address": "1.2.3.4",
+  "port": 5353,
+  "domains": [
+    "domain:v2ray.com"
+  ],
+}
 ```
 
-## Подсказки {#tips}
+> `address`: address
 
-* Рекомендуется использовать DNS с вашего локального хоста с DNS-сервером от третьей стороны, например [CoreDNS](https://coredns.io/).
+Address of the DNS server. For now only UDP servers are supported.
+
+> `port`: number
+
+Port of the DNS server. Usually it is `53` or `5353`.
+
+> `domains`: \[string\]
+
+A list of domains. If the domain of enquire matches one of the list, this DNS server will be prioritized for DNS query for this domain.
+
+Domain name format is the same as in [routing](routing.md).
+
+When a DNS server has the domain in its domain list, the domain will be queried in this server first, and then other servers. Otherwise DNS queries are sent to DNS servers in the order they appear in the config file.

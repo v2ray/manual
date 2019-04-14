@@ -1,13 +1,9 @@
+---
+refcn: chapter_00/start
+refen: welcome/start
+---
+
 # 新手上路
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/start.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/welcome/start.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/welcome/start.html
 
 在下载并安装了 V2Ray 之后，你需要对它进行一下配置。这里介绍一下简单的配置方式，只是为了演示，如需配置更复杂的功能，请参考后续的[配置文件说明](../chapter_02/01_overview.md)。
 
@@ -17,15 +13,15 @@
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 1080,  // SOCKS 代理端口，在浏览器中需配置代理并指向这个端口
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
       "udp": true
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "vmess",
     "settings": {
       "vnext": [{
@@ -34,38 +30,18 @@
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }
-  },
-  "outboundDetour": [{
+  },{
     "protocol": "freedom",
     "tag": "direct",
     "settings": {}
   }],
   "routing": {
-    "strategy": "rules",
-    "settings": {
-      "domainStrategy": "IPOnDemand",
-      "rules": [{
-        "type": "field",
-        "ip": [
-          "0.0.0.0/8",
-          "10.0.0.0/8",
-          "100.64.0.0/10",
-          "127.0.0.0/8",
-          "169.254.0.0/16",
-          "172.16.0.0/12",
-          "192.0.0.0/24",
-          "192.0.2.0/24",
-          "192.168.0.0/16",
-          "198.18.0.0/15",
-          "198.51.100.0/24",
-          "203.0.113.0/24",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10"
-        ],
-        "outboundTag": "direct"
-      }]
-    }
+    "domainStrategy": "IPOnDemand",
+    "rules": [{
+      "type": "field",
+      "ip": ["geoip:private"],
+      "outboundTag": "direct"
+    }]
   }
 }
 ```
@@ -78,17 +54,17 @@
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 10086, // 服务器监听端口，必须和上面的一样
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "freedom",
     "settings": {}
-  }
+  }]
 }
 ```
 

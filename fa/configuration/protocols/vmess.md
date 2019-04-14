@@ -1,13 +1,17 @@
+---
+refcn: chapter_02/protocols/vmess
+refen: configuration/protocols/vmess
+---
 # VMess
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/vmess.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/vmess.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/vmess.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/vmess.html)
+* نام: `vmess`
+* نوع: ورودی / خروجی
 
-[VMess](https://www.v2ray.com/eng/protocols/vmess.html) is a protocol for encrypted communications. It includes both inbound and outbound proxy.
+[VMess](https://www.v2ray.com/eng/protocols/vmess.html) یک پروتکل برای ارتباطات رمز شده است. این شامل پروکسی ورودی و خروجی است.
 
-* Name: vmess
-* Type: Inbound / Outbound
+VMess به زمان سیستم بستگی دارد. لطفا اطمینان حاصل کنید که زمان سیستم شما همگام با زمان UTC است. منطقه زمانی مهم نیست ممکن است یک سرویس `ntp` در لینوکس برای تنظیم زمان سیستم به طور خودکار نصب شود.
 
-## Outbound Proxy Configuration
+## OutboundConfigurationObject
 
 ```javascript
 {
@@ -18,8 +22,8 @@
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 10,
-          "security": "aes-128-cfb",
+          "alterId": 4,
+          "security": "auto",
           "level": 0
         }
       ]
@@ -28,23 +32,71 @@
 }
 ```
 
-Where:
+> `vnext`: \ [ [ServerObject](#serverobject)]
 
-* `vnext`: An array, where each entry is a remote server 
-  * `address`: Server address, may be IPv4, IPv6 or domain name.
-  * `port`: Server port
-  * `users`: An array where each entry is an VMess user 
-    * `id`: User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `alterId`: Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 32. Its value must be not larger than the one in corresponding Inbound.
-    * `level`: User level. See [Policy](../policy.md) for more detail.
-    * `security`: Encryption method. Options are: 
-      * `"aes-128-cfb"`
-      * `"aes-128-gcm"`: Recommended for PC.
-      * `"chacha20-poly1305"`: Recommended for mobile.
-      * `"auto"`: Default value. Use `aes-128-gcm` on AMD64 and S390x, or `chacha20-poly1305` otherwise.
-      * `"none"`: Traffic is not encrypted at all.
+یک آرایه، که هر عنصر یک سرور از راه دور را ارائه می دهد
 
-## Inbound Proxy Configuration
+### ServerObject
+
+```javascript
+{
+  "address": "127.0.0.1",
+  "port": 37192,
+  "users": []
+}
+```
+
+> `آدرس`: آدرس
+
+آدرس سرور، ممکن است IPv4، IPv6 یا نام دامنه باشد.
+
+> `پورت`: شماره
+
+پورت سرور
+
+> `کاربر`: \ [ [UserObject](#userobject)\]
+
+آرایه ای که هر عنصر یک کاربر VMess است
+
+### UserObject
+
+```javascript
+{
+  "id": "27848739-7e62-4138-9fd3-098a63964b6b",
+  "alterId": 16,
+  "security": "auto",
+  "level": 0
+}
+```
+
+> `id`: رشته
+
+شناسه کاربر، به شکل یک UUID U [](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+
+> `alterId`: شماره
+
+Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 4. Its value must be not larger than the one in corresponding Inbound.
+
+> `سطح`: شماره
+
+سطح کاربر برای کسب اطلاعات بیشتر به [سیاست](../policy.md) مراجعه کنید.
+
+> `امنیت`: "aes-128-gcm" | "chacha20-poly1305" | "خودکار" | "هیچ یک"
+
+روش رمزگذاری بار. این تنظیم فقط در خارج از دسترس است. ورودی VMess به طور خودکار این تنظیم را تشخیص داده و سپس مقدار رمزگشایی را رمزگشایی می کند. گزینه ها عبارتند از:
+
+* `"aes-128-gcm"`: توصیه شده برای کامپیوتر.
+* `"chacha20-poly1305"`: توصیه شده برای موبایل.
+* `"auto"`: مقدار پیش فرض. استفاده از `aes-128-gcm` در AMD64، ARM64 و S390x یا `chacha20-poly1305` در غیر این صورت.
+* `"none"`: ترافیک در همه رمزگذاری نشده است.
+
+{% hint style='info' %}
+
+از سازگاری بهتر برای استفاده از `"خودکار"` استفاده کنید.
+
+{% endhint %}
+
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -52,13 +104,13 @@ Where:
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100,
+      "alterId": 4,
       "email": "love@v2ray.com"
     }
   ],
   "default": {
     "level": 0,
-    "alterId": 32
+    "alterId": 4
   },
   "detour": {
     "to": "tag_to_detour"
@@ -67,26 +119,77 @@ Where:
 }
 ```
 
-Where:
+> `مشتری`: \ [ [ClientObject](#clientobject)\]
 
-* `clients`: An array for valid user accounts. May be empty when used for dynamic port feature. 
-  * Each client contains: 
-    * `id`: User ID, in the form of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-    * `level`: User level. See [Policy](../policy.md) for its usage.
-    * `alterId`: Number of alternative IDs. Same as in Outbound.
-    * `email`: Email address to identify users.
-* `detour`: Optional feature to suggest client to take a detour. 
-  * `to`: The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMess will suggest its client to use the detour for further connections.
-* `default`: Optional default client configuration. Usually used in detour proxy. 
-  * `level`: User level.
-  * `alterId`: Number of alternative IDs. Default value 64.
-* `disableInsecureEncryption`: Forbids client for using insecure encryption methods. When set to true, connections will be terminated immediately if the following encryption is used. Default value `false`. 
-  * `none`
-  * `aes-128-cfb`
+یک آرایه برای حساب کاربری معتبر. ممکن است هنگام استفاده از ویژگی پورت پویا خالی باشد.
 
-## Tips
+> `تور`: [DetourObject](#detourobject)
 
-* Always use encryption method `"auto"` to stay secure and compatible.
-* VMess depends on system time. Please ensure that your system time is in sync with UTC time. Timezone doesn't matter. 
-  * One may install `ntp` service on Linux to automatically adjust system time.
-* You may choose the value of `alterId` at your interest. For daily usage, a value less than `100` is usually enough.
+ویژگی اختیاری برای نشان دادن مشتری برای دور زدن. اگر مشخص شود، این ورودی، خروجی را برای استفاده از ورودی دیگر هدایت می کند.
+
+> `طور پیش فرض`: [DefaultObject](#defaultobject)
+
+پیکربندی مشتری پیش فرض اختیاری معمولا با `دور`.
+
+> `disableInsecureEncryption`: true | نادرست
+
+مشتری را برای استفاده از روش های رمزنگاری ناامن ممنوع می کند. هنگامی که به `true`، اتصالات بلافاصله فسخ خواهند شد اگر رمزگذاری زیر استفاده شود. مقدار پیش فرض `false`.
+
+* `هیچ یک`
+* `aes-128-cfb`
+
+### ClientObject
+
+```javascript
+{
+  "id": "27848739-7e62-4138-9fd3-098a63964b6b",
+  "level": 0,
+  "alterId": 4,
+  "email": "love@v2ray.com"
+}
+```
+
+> `id`: رشته
+
+شناسه کاربر، به شکل [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+
+> `سطح`: شماره
+
+سطح کاربر برای استفاده از آن [سیاست](../policy.md) ببینید.
+
+> `alterId`: شماره
+
+تعداد شناسه های جایگزین همانطور که در خارج از کشور است.
+
+> `ایمیل`: رشته
+
+آدرس ایمیل برای شناسایی کاربر
+
+### DetourObject
+
+```javascript
+{
+  "to": "tag_to_detour"
+}
+```
+
+> `تا`: رشته
+
+برچسب یک پروکسی ورودی مشاهده [بررسی](../protocols.md). در صورت پیکربندی، VMess مشتری خود را پیشنهاد می دهد که از اتصال برای ارتباطات بیشتر استفاده کند.
+
+### DefaultObject
+
+```javascript
+{
+  "level": 0,
+  "alterId": 4
+}
+```
+
+> `سطح`: شماره
+
+سطح کاربر
+
+> `alterId`: شماره
+
+Number of alternative IDs. Default value 64. Recommend 4.

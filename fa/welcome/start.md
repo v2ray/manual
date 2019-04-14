@@ -1,81 +1,77 @@
-# Quick Start
+---
+refcn: chapter_00/start
+refen: welcome/start
+---
+# شروع سریع
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+شما باید V2Ray را پس از نصب آن پیکربندی کنید. در اینجا یک پیکربندی سریع برای اجرا نسخه ی نمایشی است. لطفا برای تنظیمات پیشرفته تر [پیکربندی](../configuration/overview.md) ببینید.
 
-You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
+## مشتری {#client}
 
-## Client {#client}
-
-On your PC (or mobile), run V2Ray with the following configuration.
+در کامپیوتر شما (یا موبایل)، V2Ray را با تنظیمات زیر اجرا کنید.
 
 ```javascript
 {
-  "inbound": {
-    "port": 1080,  // Port of socks5 proxy. Point your browser to use this port.
+  "inbounds": [{
+    "port": 1080,  // Port of socks5 proxy. مرورگر خود را برای استفاده از این پورت بنویسید
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
       "udp": true
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "vmess",
     "settings": {
       "vnext": [{
-        "address": "server", // Address of your V2Ray server. May be IP or domain address.
+        "address": "server", // Address of your V2Ray server. ممکن است نشانی IP یا آدرس دامنه باشد.
         "port": 10086,  // Port of your V2Ray server.
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }
-  },
-  "outboundDetour": [{
+  },{
     "protocol": "freedom",
     "tag": "direct",
     "settings": {}
   }],
   "routing": {
-    "strategy": "rules",
-    "settings": {
-      "domainStrategy": "IPOnDemand",
-      "rules": [{
-        "type": "field",
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "direct"
-      }]
-    }
+    "domainStrategy": "IPOnDemand",
+    "rules": [{
+      "type": "field",
+      "ip": ["geoip:private"],
+      "outboundTag": "direct"
+    }]
   }
 }
 ```
 
-Please modify the IP address of your V2Ray server as mentioned above. After that, the V2Ray process on your PC will proxy all traffic to V2Ray server except intranet traffic.
+لطفا آدرس آی پی سرور V2Ray خود را همانطور که در بالا ذکر شد تغییر دهید. پس از آن، فرآیند V2Ray در رایانه شما تمام ترافیک سرور V2Ray را به جز ترافیک داخل شبکه پروکسی می کند.
 
-## Server {#server}
+## سرور {#server}
 
-You need another computer to run V2Ray as a server. Usually this computer is located outside firewall. Here is a sample configuration.
+شما برای اجرای V2Ray به عنوان یک سرور نیاز به یک رایانه دیگر دارید. معمولا این کامپیوتر در خارج از فایروال قرار دارد. در اینجا یک پیکربندی نمونه است.
 
 ```javascript
 {
-  "inbound": {
-    "port": 10086, // Port of the server. Must be the same as above.
-    "protocol": "vmess",
-    "settings": {
-      "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
+  "inbounds": [{
+    "پورت": 10086، // پورت سرور. باید همانند بالا باشد.
+    "پروتکل": "vmess"،
+    "تنظیمات": {
+      "مشتری": [{"id": "b831381d-6324-4d53-ad4f-8cda48b30811"}]
     }
-  },
-  "outbound": {
-    "protocol": "freedom",
-    "settings": {}
-  }
+  }]،
+  خروجی: [ {
+    "پروتکل": "آزادی"،
+    "تنظیمات": {}
+  }]
 }
 ```
 
-Please make sure the `id` field is the same between client and server.
+لطفا مطمئن شوید که فیلد `id` بین مشتری و سرور یکسان است.
 
-## Running {#running}
+## در حال اجرا {#running}
 
-* On Windows and macOS, configuration file is located in the same directory as V2Ray binary. You may run `v2ray` or `v2ray.exe` without additional parameters.
-* On Linux, configuration file is usually located at `/etc/v2ray/config.json`. Run `v2ray --config=/etc/v2ray/config.json` in foreground or use other tools such as systemd to run V2Ray as background process.
+* در ویندوز و macOS، فایل پیکربندی در دایرکتوری مشابه VineRay باینری قرار دارد. شما ممکن است `v2ray` یا `v2ray.exe` بدون پارامترهای دیگر اجرا کنید.
+* در لینوکس، فایل پیکربندی معمولا در `/etc/v2ray/config.json`واقع شده است. اجرا `v2ray --config = / etc / v2ray / config.json` در پیش زمینه و یا از ابزارهای دیگر مانند systemd برای اجرای V2Ray به عنوان فرایند پس زمینه استفاده کنید.
 
-See [Overview](../configuration/overview.md) for more detail of the configuration.
+برای جزئیات بیشتر از پیکربندی، [بررسی](../configuration/overview.md) مشاهده کنید.

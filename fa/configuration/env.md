@@ -1,30 +1,45 @@
-# Environment Variables
+---
+refcn: chapter_02/env
+refen: configuration/env
+---
+# متغیرهای محیطی
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/env.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/env.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/env.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/env.html)
+V2Ray متغیرهای محیط زیر را می خواند.
 
-V2Ray reads the following environment variables.
+## اندازه کش در هر اتصال {#buffer-size}
 
-## Cache size per connection {#buffer-size}
+* نام: `v2ray.ray.buffer.size` یا `V2RAY_RAY_BUFFER_SIZE`
+* واحد: MBytes
+* مقدار پیش فرض: 2 در x86، amd64، arm64 و s390x. این حافظه پنهان در سایر سیستم عاملها غیرفعال است.
+* مقدار ویژه: 0 برای اندازه حافظه پنهان نامحدود
 
-* Name: `v2ray.ray.buffer.size` or `V2RAY_RAY_BUFFER_SIZE`
-* Unit: MBytes
-* Default value: 
-  * (V2Ray 3.33-) 10
-  * (V2Ray 3.34+) 2 on x86, amd64, arm64 and s390x. This cache is disabled on other platforms.
-* Special value: 0 for unlimited cache size
+**Deprecated. Use bufferSize in Policy.**
 
 For each connection, when there is a difference in speed between inbound and outbound traffic, V2Ray will cache some data for larger throughput. This setting controls the size of the cache. The larger the cache, the better the performance.
 
-## Location of V2Ray asset {#asset}
+## محل دارایی V2Ray {#asset}
 
-* Name: `v2ray.location.asset` or `V2RAY_LOCATION_ASSET`
-* Default value: Same directory where v2ray is.
+* نام: `v2ray.location.asset` یا `V2RAY_LOCATION_ASSET`
+* مقدار پیش فرض: همان پوشه ای است که v2ray است.
 
 This variable specifies a directory where geoip.dat and geosite.dat files are.
 
-## Location of V2Ray config {#config}
+## محل پیکربندی V2Ray {#config}
 
-* Name: `v2ray.location.config` or `V2RAY_LOCATION_CONFIG`
-* Default value: Same directory where v2ray is.
+* نام: `v2ray.location.config` یا `V2RAY_LOCATION_CONFIG`
+* مقدار پیش فرض: همان پوشه ای است که v2ray است.
 
 This variable specifies a directory where config.json is.
+
+## پراکندگی خواندن {#scatter-io}
+
+* نام: `v2ray.buf.readv` یا `V2RAY_BUF_READV`
+* مقدار پیش فرض: `خودکار`
+
+V2Ray 3.37 uses Scatter/Gather IO. This feature will use less memory when connection speed is over 100 MByte/s. Possible values are: `auto`, `enable` and `disable`.
+
+* `فعال کردن`: فعال کردن خواندن پراکنده
+* `غیر فعال کردن`: غیر فعال کردن خواندن پراکنده.
+* `خودکار`: در ویندوز، MacOS، لینوکس فعال می شود، زمانی که پردازنده x86، AMD64 یا s390x است.
+
+When connection speed is less than 100 MByte/s, no matter whether this is enabled or not, there is no obvious difference in terms of memory usage.

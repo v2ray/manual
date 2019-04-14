@@ -1,14 +1,19 @@
+* * *
+
+refcn: chapter_02/protocols/dokodemo refen: configuration/protocols/dokodemo
+
+* * *
+
 # Dokodemo-door
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/dokodemo.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/dokodemo.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/dokodemo.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/dokodemo.html)
+* نام: `dokodemo-door`
+* نوع: ورودی
 
-Dokodemo-door is a protocol for inbound connections. It take any connections and passes them to the specified destination.
+Dokodemo درب یک پروتکل برای اتصالات ورودی است. هر ارتباطی را می گیرید و آنها را به مقصد مشخص شده منتقل می کنید.
 
-Dokodemo-door can also (if configured) work as a transparent proxy.
+Dokodemo درب همچنین (اگر پیکربندی شده) به عنوان یک پروکسی شفاف کار می کند.
 
-* Name: dokodemo-door
-* Type: Inbound
-* Configuration:
+## ConfigurationObject
 
 ```javascript
 {
@@ -20,21 +25,29 @@ Dokodemo-door can also (if configured) work as a transparent proxy.
 }
 ```
 
-Where:
+> `address`: address
 
-* `address`: Address of the destination server. May be an IPv4, IPv6 or a domain, in string form. 
-  * when `followRedirect` (see below) is `true`, `address` can be empty.
-* `port`: Port of the destination server. Integer.
-* `network`: Type of network, either "tcp" or "udp".
-* `followRedirect`: When set to `true`, dokodemo-door will recognize destination from TProxy and use it as its destination. 
-  * Only works on Linux
-  * Supports TCP/IPv4 connections
-  * Supports UDP/IPv4 packets. Requires root (CAP\_NET\_ADMIN) permission
-* `userLevel`: User level. All connections share this level. See [Policy](../policy.md) for details.
+آدرس سرور مقصد ممکن است یک IPv4، IPv6 یا یک دامنه در فرم رشته باشد. هنگامی که `followRedirect` (زیر را ببینید) `true`، `آدرس` می تواند خالی باشد.
 
-## Examples for transparent proxy
+> `port`: number
 
-Add a dokodemo-door inbound as below.
+پورت سرور مقصد
+
+> `network`: "tcp" | "udp" | "tcp,udp"
+
+نوع شبکه قابل قبول اگر `"tcp"` مشخص شود، تمام ترافیک UDP فرستاده شده به این door doko-door حذف خواهد شد.
+
+> `followRedirect`: true | false
+
+هنگامی که به `true`تنظیم می شود، dokodemo-door مقصد را از TProxy تشخیص می دهد و از آن به عنوان مقصد استفاده می کند. `TProxy` در [حمل و نقل](../transport.md) برای جزئیات مشاهده کنید.
+
+> `userLevel`: number
+
+سطح کاربر همه اتصالات این سطح را به اشتراک میگذارند. برای جزئیات بیشتر به [سیاست](../policy.md) مراجعه کنید.
+
+## نمونه هایی برای پروکسی شفاف
+
+ورودی dokodemo door را به صورت زیر وارد کنید.
 
 ```javascript
 {
@@ -44,40 +57,40 @@ Add a dokodemo-door inbound as below.
 }
 ```
 
-Configure iptables as below.
+پیکربندی iptables را به صورت زیر انجام دهید.
 
-```plain
-# Create new chain
-root@Wrt:~# iptables -t nat -N V2RAY
-root@Wrt:~# iptables -t mangle -N V2RAY
-root@Wrt:~# iptables -t mangle -N V2RAY_MARK
+```bash
+# ایجاد زنجیره ای جدید
+iptables -t nat -N V2RAY
+iptables -t انسداد -N V2RAY
+iptables -t انحنا -N V2RAY_MARK
 
-# Ignore your V2Ray server's addresses
-# It's very IMPORTANT, just be careful.
-root@Wrt:~# iptables -t nat -A V2RAY -d 123.123.123.123 -j RETURN
+# آدرس سرور شما V2Ray را نادیده بگیرید
+# بسیار مهم است، فقط مراقب باشید.
+iptables -t nat -a V2RAY -d 123.123.123.123 -j بازگردانی
 
-# Ignore LANs and any other addresses you'd like to bypass the proxy
-# See Wikipedia and RFC5735 for full list of reserved networks.
-root@Wrt:~# iptables -t nat -A V2RAY -d 0.0.0.0/8 -j RETURN
-root@Wrt:~# iptables -t nat -A V2RAY -d 10.0.0.0/8 -j RETURN
-root@Wrt:~# iptables -t nat -A V2RAY -d 127.0.0.0/8 -j RETURN
-root@Wrt:~# iptables -t nat -A V2RAY -d 169.254.0.0/16 -j RETURN
-root@Wrt:~# iptables -t nat -A V2RAY -d 172.16.0.0/12 -j RETURN
-root@Wrt:~# iptables -t nat -A V2RAY -d 192.168.0.0/16 -j RETURN
-root@Wrt:~# iptables -t nat -A V2RAY -d 224.0.0.0/4 -j RETURN
-root@Wrt:~# iptables -t nat -A V2RAY -d 240.0.0.0/4 -j RETURN
+# نادیده گرفتن LAN ها و هر آدرس دیگری که می خواهید از پروکسی دور بشوید
+# برای مشاهده لیست کامل شبکه های رزرو شده به ویکیپدیا و RFC5735 مراجعه کنید.
+iptables -t nat -A V2RAY -d 0.0.0.0/8 -j RETURN
+iptables -t nat -A V2RAY -d 10.0.0.0/8 -j RETURN
+iptables -t nat -A V2RAY -d 127.0.0.0/8 -j RETURN
+iptables -t nat -A V2RAY -d 169.254.0.0/16 -j RETURN
+iptables -t nat -a V2RAY -d 172.16.0.0/12 -j RETURN
+iptables -t nat -a V2RAY -d 192.168 .0.0 / 16 -j RETURN
+iptables -t nat -A V2RAY -d 224.0.0.0/4 -j RETURN
+iptables -t nat -A V2RAY -d 240.0.0.0/4 -j RETURN
 
-# Anything else should be redirected to Dokodemo-door's local port
-root@Wrt:~# iptables -t nat -A V2RAY -p tcp -j REDIRECT --to-ports 12345
+# هر چیز دیگری باید هدایت شود به پورت محلی Dokodemo درب
+iptables -t nat -A V2RAY -p tcp -j REDIRECT -to-ports 12345
 
-# Add any UDP rules
-root@Wrt:~# ip route add local default dev lo table 100
-root@Wrt:~# ip rule add fwmark 1 lookup 100
-root@Wrt:~# iptables -t mangle -A V2RAY -p udp --dport 53 -j TPROXY --on-port 12345 --tproxy-mark 0x01/0x01
-root@Wrt:~# iptables -t mangle -A V2RAY_MARK -p udp --dport 53 -j MARK --set-mark 1
+# اضافه کردن هر قاعده UDP
+مسیر IP اضافه کردن محلی محلی به طور پیش فرض lo loo 100
+قانون آی پی اضافه کردن 1 جستجو 100
+iptables -t mangle -A V2RAY -p udp -dport 53 -j TPROXY -on-port 12345 -tproxy-mark 0x01 / 0x01
+iptables -t mangle -A V2RAY_MARK -p udp --dport 53 -j MARK -set-mark 1
 
-# Apply the rules
-root@Wrt:~# iptables -t nat -A OUTPUT -p tcp -j V2RAY
-root@Wrt:~# iptables -t mangle -A PREROUTING -j V2RAY
-root@Wrt:~# iptables -t mangle -A OUTPUT -j V2RAY_MARK
+# قوانین را اعمال می کند
+iptables -t nat -A OUTPUT -p tcp -j V2RAY
+iptables -t انسداد -A PREROUTING -j V2RAY
+iptables -t انسداد -A OUTPUT -j V2RAY_MARK
 ```

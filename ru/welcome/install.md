@@ -1,37 +1,38 @@
+---
+refcn: chapter_00/install
+refen: welcome/install
+---
 # Загрузка и установка
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 ## Платформа {#platform}
 
 V2Ray доступен на следующих платформах:
 
-* Windows 7 and later (x86 / amd64)
-* Mac OS X 10.10 Yosemite and later (amd64)
+* Windows 7 и более поздние версии (x86 / amd64)
+* Mac OS X 10.10 Yosemite и более поздние версии (amd64)
 * Linux 2.6.23 и более поздние версии (x86 / amd64 / arm / arm64 / mips64 / mips) 
   * Включая, но не ограничиваясь, Debian 7/8, Ubuntu 12.04 / 14.04 и более поздние версии, CentOS 6/7, Arch Linux
 * FreeBSD (x86 / amd64)
 * OpenBSD (x86 / amd64)
 * Dragonfly BSD (amd64)
 
-## Требования к оборудованию {#hardware}
-
-Не менее 32 МБ свободной памяти.
-
 ## Загрузка {#download}
 
 Готовые пакеты можно найти здесь:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. Собранные утилиты: [v2ray.com/download](https://www.v2ray.com/download/)
+2. Redistribution: [github.com/v2ray/dist](https://github.com/v2ray/dist)
+3. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
+4. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
+5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
 Все пакеты находятся в формате ZIP. Загрузите и распакуйте подходящие пакеты в свою систему.
 
-## Проверка {#verify}
+## Verify {#verify}
 
 Существует два способа проверки пакетов.
 
-1. Metadata.txt на странице релиза содержит хэш SHA1 для всех пакетов.
+1. Каждый `.zip`-файл имеет одноименный `.dgst`-файл с контрольной суммой SHA.
 2. Файл подписи GPG для исполняемых файлов (v2ray / v2ray.exe) можно найти в файле v2ray.sig (или v2ray.exe.sig) в том же пакете. Открытый ключ находится [в хранилище](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
 ## Установка в Windows и Mac OS {#install-windows}
@@ -46,7 +47,7 @@ V2Ray доступен на следующих платформах:
 
 Выполните следующую команду для установки V2Ray. Если yum или apt доступны, скрипт установит unzip и daemon / systemd. Они необходимы для запуска V2Ray в качестве службы. Вам необходимо установить их вручную, если ваша система Linux не поддерживает yum или apt.
 
-```shell
+```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
@@ -76,7 +77,7 @@ bash <(curl -L -s https://install.direct/go.sh)
 go.sh поддерживает следующие параметры.
 
 * `-p` или `--proxy`: Использовать прокси для загрузки пакетов V2Ray. Формат такой же, как и у curl. Например, `"socks5://127.0.0.1:1080"` или `"http://127.0.0.1:3128"`.
-* `-f` or `--force`: Принудительная установка. Сценарий предполагает, что V2Ray не был установлен вообще.
+* `-f` или `--force`: Принудительная установка. Сценарий предполагает, что V2Ray не был установлен вообще.
 * `--version`: Версия, которая должна быть установлена, например `"v1.13"`. Значение по умолчанию - это последняя стабильная версия.
 * `--local`: Использовать локальный пакет для установки.
 
@@ -89,7 +90,7 @@ go.sh поддерживает следующие параметры.
 
 V2Ray предоставляет два типа докер-контейнеров:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/): Contains official releases.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Contains latest code.
+* [v2ray/official](https://hub.docker.com/r/v2ray/official/): Официальные релизы.
+* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Свежайший код (в разработке).
 
 Контейнеры имеют ту же структуру, что и установленный Linux.

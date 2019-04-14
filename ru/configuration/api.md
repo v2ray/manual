@@ -1,12 +1,16 @@
+---
+refcn: chapter_02/api
+refen: configuration/api
+---
 # API
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/configuration/api.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/api.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/configuration/api.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/api.html)
 
 V2Ray предоставляет API для удаленного доступа. Эти API основаны на [gRPC](https://grpc.io/).
 
 Когда API включено, V2Ray автоматически создает исходящий прокси, помеченный через `tag`. Пользователь должен [маршрутизировать](routing.md) все соединения gRPC в этот прокси.
 
-Настройка:
+## ApiObject
+
+`ApiObject` используется как поле `api` на верхнем уровне конфигурации.
 
 ```javascript
 {
@@ -19,10 +23,13 @@ V2Ray предоставляет API для удаленного доступа.
 }
 ```
 
-Где:
+> `tag`: string
 
-* `tag`: Метка исходящего прокси.
-* `services`: Список включённых API.
+Метка исходящего прокси.
+
+> `services`: \[ string \]
+
+Список включенных API.
 
 ## Список поддерживаемых API
 

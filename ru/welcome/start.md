@@ -1,6 +1,8 @@
+---
+refcn: chapter_00/start
+refen: welcome/start
+---
 # Быстрый старт
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/start.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/start.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/start.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/start.html) [![Перевести](../resources/lang.svg)](https://crowdin.com/project/v2ray)
 
 Вам необходимо настроить V2Ray после его установки. Вот быстрая конфигурация для демонстрационного запуска. Детально настройки рассматриваются в [Обзоре настроек](../configuration/overview.md).
 
@@ -10,41 +12,35 @@
 
 ```javascript
 {
-  "inbound": {
-    "port": 1080,  // Порт для socks5-прокси. Настройте браузер на использование этого порта.
+  "inbounds": [{
+    "port": 1080,  // Port of socks5 proxy. Настройте браузер на использование этого порта.
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
       "udp": true
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "vmess",
     "settings": {
       "vnext": [{
-        "address": "server", // Адрес сервера V2Ray. Может быть IP или доменным именем.
+        "address": "server", // Address of your V2Ray server. Может быть IP или доменным именем.
         "port": 10086,  // Порт сервера V2Ray.
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }
-  },
-  "outboundDetour": [{
+  },{
     "protocol": "freedom",
     "tag": "direct",
     "settings": {}
   }],
   "routing": {
-    "strategy": "rules",
-    "settings": {
-      "domainStrategy": "IPOnDemand",
-      "rules": [{
-        "type": "field",
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "direct"
-      }]
-    }
+    "domainStrategy": "IPOnDemand",
+    "rules": [{
+      "type": "field",
+      "ip": ["geoip:private"],
+      "outboundTag": "direct"
+    }]
   }
 }
 ```
@@ -57,17 +53,17 @@
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 10086, // Port of the server. Должен быть таким же, как упомянутый выше.
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "freedom",
     "settings": {}
-  }
+  }]
 }
 ```
 

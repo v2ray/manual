@@ -1,17 +1,17 @@
+---
+refcn: chapter_02/protocols/mtproto
+refen: configuration/protocols/mtproto
+---
 # MTProto
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/mtproto.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/mtproto.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/mtproto.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/mtproto.html)
+* نام: `mtproto`
+* نوع: ورودی / خروجی
 
-MTProto proxy is a special procol for Telegram. It consists of a pair of inbound and outboud proxies in V2Ray. They are usually used together for building a proxy for Telegram
+پروکسی MTProto ویژه ویژه برای Telegram است. این شامل یک جفت پروکسی های ورودی و خروجی در V2Ray است. آنها معمولا برای ساخت یک پروکسی برای Telegram استفاده می شوند
 
-**For now V2Ray only supports IPv4 address of Telegram server.**
+در حال حاضر V2Ray تنها آدرس IPv4 سرور Telegram را پشتیبانی می کند.
 
-Protocol description:
-
-* Name: mtproto
-* Type: Inbound / Outbound
-
-## Inbound configuration {#inbound}
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -23,25 +23,50 @@ Protocol description:
 }
 ```
 
-Where:
+> `کاربر`: \ [[UserObject](#userobject)\]
 
-* `users`: An array of users. **For now only the first user is effective**. Each user has the following configuration: 
-  * `email`: User email. Used for tracking purposes. See [Stats](../stats.md).
-  * `level`: User level.
-  * `secret`: User secret. In Telegram, user secret must be 32 characters long, and only contains characters between `0` to `9`, and `a`to `f`.
+آرایه ای از کاربران. در حال حاضر فقط اولین کاربر موثر است.
 
-## Outbound configuration {#outbound}
+### UserObject
+
+```javascript
+{
+  "email": "love@v2ray.com",
+  "level": 0,
+  "secret": "b0cbcef5a486d9636472ac27f8e11a9d"
+}
+```
+
+> `ایمیل`: رشته
+
+ایمیل کاربر مورد استفاده برای اهداف ردیابی دیدن [آمار](../stats.md).
+
+> `سطح`: شماره
+
+سطح کاربر
+
+> `مخفی`: رشته
+
+مخفی کاربر در Telegram، رمزعبور باید 32 حرف طول داشته باشد و فقط شامل صفات بین `0` تا `9`و `A`تا `ف`باشد.
+
+{% hint style='tip' %}
+
+شما می توانید از دستور زیر برای ایجاد مخفی MTProto استفاده کنید: `openssl rand -hex 16`
+
+{% endhint %}
+
+## پیکربندی خروجی {#outbound}
 
 ```javascript
 {
 }
 ```
 
-## Sample {#sample}
+## نمونه {#sample}
 
-MTProto can only be used for Telegram traffic. You may need a routing rule to combine the corresponding inbound and outbound. Here is an incomplete sample.
+MTProto تنها می تواند برای ترافیک Telegram استفاده شود. شما ممکن است نیاز به یک قانون مسیریابی برای ترکیب ورودی و خروجی مربوطه داشته باشید. در اینجا یک نمونه ناقص است.
 
-Inbound:
+ورودی:
 
 ```javascript
 {
@@ -54,7 +79,7 @@ Inbound:
 }
 ```
 
-Outbound:
+خروجی:
 
 ```javascript
 {
@@ -64,7 +89,7 @@ Outbound:
 }
 ```
 
-Routing:
+مسیریابی:
 
 ```javascript
 {
@@ -74,8 +99,4 @@ Routing:
 }
 ```
 
-The configure your Telegram app to connect to 443 port on this machine.
-
-## Tips {#tips}
-
-* Use this command to generate MTProto secret: `openssl rand -hex 16`.
+برنامه Telegram خود را برای اتصال به port 443 در این دستگاه پیکربندی کنید.

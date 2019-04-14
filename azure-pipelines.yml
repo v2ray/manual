@@ -1,0 +1,19 @@
+jobs:
+- job: build_upload
+  timeoutInMinutes: 30
+
+  pool:
+    vmImage: 'ubuntu-16.04'
+
+  steps:
+  - checkout: self
+    clean: true
+    fetchDepth: 5
+  - script: |
+      ls -al
+      ./deploy.sh
+    env:
+      GITHUB_TOKEN: '$(github.token)'
+    workingDirectory: '$(Build.SourcesDirectory)'
+    displayName: 'Build'
+

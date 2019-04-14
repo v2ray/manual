@@ -1,60 +1,62 @@
-# iOS Client
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/ios.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/ios.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/ios.html)
+---
+refcn: ui_client/ios
+refen: ui_client/ios
+---
+# مشتری iOS
 
 ## Kitsunebi
 
-Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
+Kitsunebi یک برنامه iOS مبتنی بر V2Ray است. این قابلیت کامل به عنوان V2Ray را فراهم می کند. همچنین از وارد کردن و صادرات پیکربندی JSON سازگار با V2Ray پشتیبانی می کند.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
+* Download: [iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
 
 ## Kitsunebi Lite
 
-Light version of Kitsunebi.
+نسخه سبک Kitsunebi.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi-lite/id1387913765/)
 
 ## Shadowrocket
 
-Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadowsocks, VMess, SSR etc.
+Shadowrocket یک برنامه VPN عمومی است. پشتیبانی از چندین پروتکل مانند Shadowsocks، VMess، SSR و غیره
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/shadowrocket/id932747118/)
 
-## Pepi (was ShadowRay) {#pepi}
+## Pepi (ShadowRay بود) {#pepi}
 
-Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
+Pepi برنامه V2Ray سازگار است. آیا قادر است اتصال VPN را بر اساس پروتکل VMess برقرار کند و با هر سرور V2Ray ارتباط برقرار کند.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/pepi/id1283082051/)
 
-## Quantumult
+## کوانتومی
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/quantumult/id1252015438/)
 
-## Other tools {#other}
+## ابزارهای دیگر {#other}
 
 ### HyperApp
 
-An utility to build servers with docker.
+یک ابزار برای ساخت سرور با docker.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
-* Website: [HyperApp.fun](https://www.hyperapp.fun/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/hyperapp/id1179750280/)
+* وب سایت: [HyperApp.fun](https://www.hyperapp.fun/)
 
-### Termius
+### ترموس
 
-SSH client.
+مشتری SSH
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/termius/id549039908/)
 
-### Telegram
+### تلگرام
 
-Encrypted discussion.
+بحث رمزگذاری شده
 
-* Website: [telegram.org](https://telegram.org/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
+* وب سایت: [telegram.org](https://telegram.org/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/telegram-messenger/id686449807/)
 
 ### ProtonMail
 
-Encrypted email.
+ایمیل رمزگذاری شده
 
-* Website: [protonmail.com](https://protonmail.com/)
-* Download: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)
+* وب سایت: [protonmail.com](https://protonmail.com/)
+* دانلود: [iTunes](https://www.v2ray.com/itunes/us/protonmail-encrypted-email/id979659905/)

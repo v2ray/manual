@@ -7,16 +7,14 @@
   * [Быстрый старт](welcome/start.md)
   * [Командная строка](welcome/command.md)
   * [Пожертвование](welcome/donate.md)
-  * [Поддержка](welcome/help.md) 
-    * [Telegram](welcome/tg.md)
-    * [Приватное сообщение](welcome/pgp.md)
-  * [Лицензия](welcome/license.md)
+  * [Поддержка](welcome/help.md)
+  * [ЧаВо](welcome/faq.md)
   * [&#8618; Блог](https://steemit.com/@v2ray)
-  * [&#8618; Перевести](https://crowdin.com/project/v2ray)
 * [Настройка](configuration/README.md) 
   * [Обзор](configuration/overview.md)
   * [Протоколы](configuration/protocols.md) 
     * [Blackhole](configuration/protocols/blackhole.md)
+    * [DNS](configuration/protocols/dns.md)
     * [Dokodemo](configuration/protocols/dokodemo.md)
     * [Freedom](configuration/protocols/freedom.md)
     * [MTProto](configuration/protocols/mtproto.md)
@@ -30,16 +28,24 @@
   * [Мультиплексирование](configuration/mux.md)
   * [API](configuration/api.md)
   * [Статистика](configuration/stats.md)
+  * [Обратный прокси](configuration/reverse.md)
   * [Доставка](configuration/transport.md) 
     * [TCP](configuration/transport/tcp.md)
     * [mKCP](configuration/transport/mkcp.md)
     * [WebSocket](configuration/transport/websocket.md)
     * [HTTP/2](configuration/transport/h2.md)
     * [DomainSocket](configuration/transport/domainsocket.md)
+    * [QUIC](configuration/transport/quic.md)
   * [Переменные](configuration/env.md)
-* [Клиенты](ui_client/README.md) 
-  * [Windows](ui_client/windows.md)
-  * [OS X](ui_client/osx.md)
-  * [iOS](ui_client/ios.md)
-  * [Android](ui_client/android.md)
-  * [Службы](ui_client/service.md)
+* [Awesome V](awesome/tools.md) 
+  * [With Ads](awesome/ads.md)
+* Development 
+  * Milestone
+  * Guide
+  * Design
+  * Build
+  * [Tools](developer/tools.md)
+  * Protocols 
+    * VMess
+    * mKCP
+    * Mux.Cool

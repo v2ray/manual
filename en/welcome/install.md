@@ -1,15 +1,9 @@
+---
+refcn: chapter_00/install
+refen: welcome/install
+---
+
 # Download & Install
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Translate][7]][8]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/install.html
-[3]: ../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_00/install.html
-[5]: ../resources/german.svg
-[6]: https://www.v2ray.com/de/welcome/install.html
-[7]: ../resources/lang.svg
-[8]: https://crowdin.com/project/v2ray
 
 ## Platform {#platform}
 
@@ -23,16 +17,15 @@ V2Ray is available on the following platforms:
 * OpenBSD (x86 / amd64)
 * Dragonfly BSD (amd64)
 
-## Hardware requirement {#hardware}
-
-At least 32MB free memory.
-
 ## Download {#download}
 
 Pre-built packages can be found here:
 
 1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-1. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
+1. Redistribution: [github.com/v2ray/dist](https://github.com/v2ray/dist)
+1. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
+1. Arch Linux: [packages/community/x86_64/v2ray/](https://www.archlinux.org/packages/community/x86_64/v2ray/)
+1. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
 All packages are in ZIP format. Download and unzip corresponding packages to your system.
 
@@ -40,7 +33,7 @@ All packages are in ZIP format. Download and unzip corresponding packages to you
 
 There are 2 ways to verify packages.
 
-1. Metadata.txt in release page contains SHA1 hash for all packages.
+1. Each `.zip` file has a corresponding `.dgst` file for SHA digests.
 1. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
 ## Install on Windows or Mac OS {#install-windows}
@@ -55,7 +48,7 @@ The following command assumes root permission.
 
 Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
 
-```shell
+```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 

@@ -1,36 +1,37 @@
+---
+refcn: chapter_02/protocols/freedom
+refen: configuration/protocols/freedom
+---
+
 # Freedom
 
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+* 名称：`freedom`
+* 类型：出站协议
 
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/protocols/freedom.html
-[3]: ../../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/protocols/freedom.html
-[5]: ../../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/protocols/freedom.html
+Freedom 是一个出站协议，可以用来向任意网络发送（正常的） TCP 或 UDP 数据。
 
-Freedom 是一个传出数据协议，可以用来向任意网络发送（正常的） TCP 或 UDP 数据。
-
-* 名称：freedom
-* 类型：Outbound
-* 配置：
+## OutboundConfigurationObject
 
 ```javascript
 {
   "domainStrategy": "AsIs",
-  "timeout": 0,
   "redirect": "127.0.0.1:3366",
   "userLevel": 0
 }
 ```
 
-其中：
+> `domainStrategy`: "AsIs" | "UseIP" | "UseIPv4" | "UseIPv6"
 
-* `domainStrategy`: 域名解析策略，可选的值有：
-  * `"AsIs"`: 默认值。不作更改，由操作系统解析。
-  * `"UseIP"`: 使用 V2Ray 的 [DNS 服务器](../04_dns.md)解析成 IP 之后再发送数据。
-* `timeout` (V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略): 从目标服务器读取响应数据的时限，单位为秒。默认值为 `300`。
-* `redirect`: 将所有数据发送到指定地址（而不是传入协调指定的地址）。其值为一个字符串，样例：`"127.0.0.1:80"`, `":1234"`。
-  * (V2Ray 3.31+)当地址不指定时，如`":443"`，Freedom 不会修改原先的目标地址。
-  * (V2Ray 3.31+)当端口为`0`时，如`"v2ray.com:0"`，Freedom 不会修改原先的端口。
-* `userLevel`: 用户等级，所有连接都使用这一等级。
+在目标地址为域名时，Freedom 可以直接向此域名发出连接（`"AsIs"`），或者将域名解析为 IP 之后再建立连接（`"UseIP"`、`"UseIPv4"`、`"UseIPv6"`）。解析 IP 的步骤会使用 V2Ray [内建的 DNS](../04_dns.md)。默认值为`"AsIs"`。
+
+(V2Ray 4.6+) 当使用`"UseIP"`模式，并且[出站连接配置](../01_overview.md#outboundobject)中指定了`sendThrough`时，Freedom 会根据`sendThrough`的值自动判断所需的IP类型，IPv4 或 IPv6。
+
+(V2Ray 4.7+) 当使用`"UseIPv4"`或`"UseIPv6"`模式时，Freedom 会只使用对应的 IPv4 或 IPv6 地址。当`sendThrough`指定了不匹配的本地地址时，将导致连接失败。
+
+> `redirect`: address_port
+
+Freedom 会强制将所有数据发送到指定地址（而不是入站协议指定的地址）。其值为一个字符串，样例：`"127.0.0.1:80"`, `":1234"`。当地址不指定时，如`":443"`，Freedom 不会修改原先的目标地址。当端口为`0`时，如`"v2ray.com:0"`，Freedom 不会修改原先的端口。
+
+> `userLevel`: number
+
+用户等级，所有连接都使用这一等级。

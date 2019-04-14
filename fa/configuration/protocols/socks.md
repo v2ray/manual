@@ -1,13 +1,19 @@
+---
+refcn: chapter_02/protocols/socks
+refen: configuration/protocols/socks
+---
 # Socks
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/socks.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/socks.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/socks.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/socks.html)
+* نام: `جوراب`
+* نوع: ورودی / خروجی
 
-Socks is an implementation of standard SOCKS protocol, compatible with [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a and [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
+جوراب اجرای یک پروتکل SOCKS استاندارد است، سازگار با [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)، Socks 4a و [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
 
-* Name: socks
-* Type: Inbound / Outbound
+Socks configuration consists of two parts, `InboundConfigurationObject` and `OutboundConfigurationObject`, for inbound and outbound respectively.
 
-## Outbound Proxy Configuration
+## OutboundConfigurationObject
+
+`OutboundConfigurationObject` is used as `settings` field in `OutboundObject` in top level configuration.
 
 ```javascript
 {
@@ -25,22 +31,67 @@ Socks is an implementation of standard SOCKS protocol, compatible with [Socks 4]
 }
 ```
 
-Where:
+> `servers`: \[ [ServerObject](#serverobject) \]
 
-* `servers`: Socks server list, in which each entry has: 
-  * `address`: Server address
-  * `port`: Server port
-  * `users`: List of user accounts: 
-    * `user`: Username
-    * `pass`: Password
-    * `level`: User level.
+An array of Socks servers.
 
-Notice:
+### ServerObject
 
-* When user list is not empty, socks will performance user authentication with remote server, using a random user.
-* Only supports SOCKS5 servers.
+```javascript
+{
+  "address": "127.0.0.1",
+  "port": 1234,
+  "users": [
+    {
+      "user": "test user",
+      "pass": "test pass",
+      "level": 0
+    }
+  ]
+}
+```
 
-## Inbound Proxy Configuration
+> `address`: address
+
+Socks server address. May be IPv4, IPv6 or domain address.
+
+{% hint style='info' %}
+
+Only support Socks 5 servers.
+
+{% endhint %}
+
+> `port`: number
+
+Socks server port.
+
+> `users`: \[ [UserObject](#userobject) \]
+
+An array of users. Each element in the array is an user. If the list is not empty. Socks inbound will force user authentication. Otherwise, anonymous user is allowed.
+
+### UserObject
+
+```javascript
+{
+  "user": "test user",
+  "pass": "test pass",
+  "level": 0
+}
+```
+
+> `user`: string
+
+Username as in Socks protocol
+
+> `pass`: string
+
+Password as in Socks protocol
+
+> `level`: number
+
+User level for tracking and policy purpose. Default value is `0`.
+
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -57,13 +108,39 @@ Notice:
 }
 ```
 
-Where:
+> `auth`: "noauth" | "password"
 
-* `auth`: Socks authentication method. Default to `"noauth"`. Options are: 
-  * `"noauth"`: Anonymous.
-  * `"password"`: User and password [RFC 1929](https://tools.ietf.org/html/rfc1929)
-* `accounts`: An array where each entry is contains `user` for username and `pass` for password. Default to empty. 
-  * Only works when `auth` is `"password"`
-* `udp`: `true` or `false` to enable UDP. Default to false.
-* `ip`: When UDP is enabled, this IP address receives UDP packets from client. Default to `"127.0.0.1"`.
-* `userLevel`: User level. All connections share this level.
+Socks autentication method. `"noauth"` is for anonymous authentication, and `"password"` for authentication with username and password. Default value is `"noauth"`.
+
+> `accounts`: \[ [AccountObject](#accountobject) \]
+
+An array of user accounts, for authenication purpose. Only take effect when `auth` is set to `"password"`.
+
+> `udp`: true | false
+
+Whether or not to enable UDP. Default value is `false`.
+
+> `ip`: address
+
+When UDP is enabled, V2Ray needs to know the IP address of current host. Default value is `"127.0.0.1"`. This must be set to the public IP address of the host, if you want to allow public UDP traffic.
+
+> `userLevel`: number
+
+User level. All incoming connections share this user level.
+
+### AccountObject
+
+```javascript
+{
+  "user": "my-username",
+  "pass": "my-password"
+}
+```
+
+> `user`: string
+
+Username as in Socks protocol
+
+> `pass`: string
+
+Password as in Socks protocol

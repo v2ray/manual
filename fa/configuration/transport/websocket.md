@@ -1,25 +1,34 @@
-# WebSocket
+---
+refcn: chapter_02/transport/websocket
+refen: configuration/transport/websocket
+---
+# وبسایت
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/websocket.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/websocket.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/websocket.html)
+از WebSocket استاندارد برای انتقال اطلاعات استفاده کنید. اتصالات Websocket می تواند توسط HTTP سرور مانند Nginx پروکسی.
 
-Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
+## WebSocketObject
 
-Configuration:
+`WebSocketObject` به عنوان `wsSettings` در `TransportObject` یا `StreamSettingsObject`.
+
+{% hint style='info' %}
+
+Websocket HTTP header X-Forwarded-For را شناسایی می کند و از آن به عنوان آدرس منبع ورودی استفاده می کند.
+
+{% endhint %}
 
 ```javascript
 {
-  "path": "",
-  "headers": {
-    "Host": "v2ray.com"
+  "مسیر": "/"،
+  "هدر": {
+    "میزبان": "v2ray.com"
   }
 }
 ```
 
-Where:
+> `مسیر`: رشته
 
-* `path`: Path used for WebSocket. Default to root, as `""`。
-* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+مسیر مورد استفاده برای WebSocket. پیش فرض برای ریشه، به عنوان `"/"`.
 
-## Notice
+> `هدر`: نقشه{string, string}
 
-* Since V2Ray 3.4, Websocket recognizes X-Forwarded-For header and use it as source address of the traffic.
+هدر سفارشی HTTP آرایه ای که هر ورودی یک جفت ارزش کلیدی در رشته است، برای هدر و مقدار در هدر HTTP. پیش فرض خالی است

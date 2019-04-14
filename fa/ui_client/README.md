@@ -1,11 +1,13 @@
-# Project V Clients
+---
+refcn: ui_client/index
+refen: ui_client/index
+---
+# مشتریان پروژه V
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/index.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/index.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/index.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/index.html)
+علاوه بر هسته V2ray، پروژه V شامل انواع مختلفی از مشتریان GUI در بسیاری از سیستم عامل ها می باشد. لطفا لیست زیر را برای نفع خود ببینید.
 
-Besides the core V2ray, Project V includes various of GUI clients in many platforms. Please see the following list for your favor.
-
-* [Windows](windows.md)
+* [پنجره ها](windows.md)
 * [Mac OS X](osx.md)
-* [iOS](ios.md)
-* [Android](android.md)
-* [Online services](ui_client/service.md)
+* [در iOS](ios.md)
+* [اندروید](android.md)
+* [خدمات آنلاین](ui_client/service.md)

@@ -1,13 +1,16 @@
-# Protocols
+---
+refcn: chapter_02/02_protocols
+refen: configuration/protocols
+---
+# پروتکل ها
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/02_protocols.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols.html)
+V2Ray از پروتکل های زیر پشتیبانی می کند. هر پروتکل ممکن است یک پروتکل ورودی یا یک پروتکل خروجی یا هر دو باشد.
 
-V2Ray supports the following protocols:
-
-* [Blackhole](protocols/blackhole.md)
-* [Dokodemo-door](protocols/dokodemo.md)
-* [Freedom](protocols/freedom.md)
+* [سیاه چاله](protocols/blackhole.md)
+* [Dokodemo درب](protocols/dokodemo.md)
+* [آزادی](protocols/freedom.md)
 * [HTTP](protocols/http.md)
+* [MTProto](protocols/mtproto.md)
 * [Shadowsocks](protocols/shadowsocks.md)
 * [Socks](protocols/socks.md)
 * [VMess](protocols/vmess.md)

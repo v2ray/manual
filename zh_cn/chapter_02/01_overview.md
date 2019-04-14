@@ -1,13 +1,9 @@
+---
+refcn: chapter_02/01_overview
+refen: configuration/overview
+---
+
 # 配置文件格式
-
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/overview.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/overview.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/overview.html
 
 V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，只是实际的配置不一样。
 
@@ -19,29 +15,54 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "stats": {},
   "routing": {},
   "policy": {},
-  "inbound": {},
-  "outbound": {},
-  "inboundDetour": [],
-  "outboundDetour": [],
+  "reverse": {},
+  "inbounds": [],
+  "outbounds": [],
   "transport": {}
 }
 ```
 
-其中：
+> `log`: [LogObject](#logobject)
 
-* `log`: 日志配置，见下文；
-* `api`: 内置的远程控置 API，详见[远程控制配置](api.md)；
-* `dns`: 内置的 DNS 服务器，若此项不存在，则默认使用本机的 DNS 设置。详见[DNS 配置](04_dns.md)；
-* `routing`: [路由配置](03_routing.md)；
-* `policy`: 本地策略可进行一些权限相关的配置，详见[本地策略](policy.md)；
-* `inbound`: 传入连接配置，见下文；
-* `outbound`: 传出连接配置，见下文；
-* `inboundDetour`: 额外的传入连接配置，见下文；
-* `outboundDetour`: 额外的传出连接配置，见下文；
-* `transport`: 用于配置 V2Ray 如何与其它服务器建立和使用网络连接。详见[底层传输配置](05_transport.md)；
-* `stats`: 当此项存在时，开启[统计信息](stats.md)。
+日志配置，表示 V2Ray 如何输出日志。
 
-## 日志配置 {#log}
+> `api`: [ApiObject](api.md)
+
+内置的远程控置 API，详见[远程控制配置](api.md)。
+
+> `dns`: [DnsObject](04_dns.md)
+
+内置的 DNS 服务器，若此项不存在，则默认使用本机的 DNS 设置。详见[DNS 配置](04_dns.md)
+
+> `routing`: [RoutingObject](03_routing.md)
+
+[路由配置](03_routing.md)
+
+> `policy`: [PolicyObject](policy.md)
+
+本地策略可进行一些权限相关的配置，详见[本地策略](policy.md)
+
+> `inbounds`: \[[InboundObject](#inboundobject)\]
+
+一个数组，每个元素是一个[入站连接配置](#inboundobject)。
+
+> `outbounds`: \[[OutboundObject](#outboundobject)\]
+
+一个数组，每个元素是一个[出站连接配置](#outboundobject)。列表中的第一个元素作为主出站协议。当路由匹配不存在或没有匹配成功时，流量由主出站协议发出。
+
+> `transport`: [TransportObject](05_transport.md)
+
+用于配置 V2Ray 如何与其它服务器建立和使用网络连接。详见[底层传输配置](05_transport.md)
+
+> `stats`: [StatsObject](stats.md)
+
+当此项存在时，开启[统计信息](stats.md)。
+
+> `reverse`: [ReverseObject](reverse.md)
+
+[反向代理](reverse.md)配置。
+
+## LogObject
 
 ```javascript
 {
@@ -51,22 +72,27 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 }
 ```
 
-其中：
+> `access`: string
 
-* `access`: 访问日志的文件地址，其值可以是：
-  * 一个合法的文件地址，如`"/tmp/v2ray/_access.log"`（Linux）或者`"C:\\Temp\\v2ray\\_access.log"`（Windows）；
-  * 或者留空表示不记录访问日志，并将日志输出至 stdout。
-* `error`: 错误日志的文件地址，其值可以是：
-  * 一个合法的文件地址，如`"/tmp/v2ray/_error.log"`（Linux）或者`"C:\\Temp\\v2ray\\_error.log"`（Windows）；
-  * 或者留空表示不记录错误日志，并将日志输出至 stdout。
-* `loglevel`: 错误日志的级别，可选的值为`"debug"`、`"info"`、`"warning"`、`"error"` 和 `"none"`：
-  * 其中`"debug"`记录的数据最多，`"error"`记录的最少；
-  * `"none"`表示不记录任何内容；
-  * 默认值为`"warning"`。
+访问日志的文件地址，其值是一个合法的文件地址，如`"/tmp/v2ray/_access.log"`（Linux）或者`"C:\\Temp\\v2ray\\_access.log"`（Windows）。当此项不指定或为空值时，表示将日志输出至 stdout。
 
-## 主传入连接配置 {#inbound}
+> `error`: string
 
-传入连接用于接收从客户端（浏览器或上一级代理服务器）发来的数据，可用的协议请见[协议列表](02_protocols.md)。
+错误日志的文件地址，其值是一个合法的文件地址，如`"/tmp/v2ray/_error.log"`（Linux）或者`"C:\\Temp\\v2ray\\_error.log"`（Windows）。当此项不指定或为空值时，表示将日志输出至 stdout。
+
+> `loglevel`: "debug" | "info" | "warning" | "error" | "none"
+
+错误日志的级别。默认值为`"warning"`。
+
+* `"debug"`: 只有开发人员能看懂的信息。同时包含所有`"info"`内容。
+* `"info"`: V2Ray 在运行时的状态，不影响正常使用。同时包含所有`"warning"`内容。
+* `"warning"`: V2Ray 遇到了一些问题，通常是外部问题，不影响 V2Ray 的正常运行，但有可能影响用户的体验。同时包含所有`"error"`内容。
+* `"error"`: V2Ray 遇到了无法正常运行的问题，需要立即解决。
+* `"none"`: 不记录任何内容。
+
+## InboundObject
+
+入站连接用于接收从客户端（浏览器或上一级代理服务器）发来的数据，可用的协议请见[协议列表](02_protocols.md)。
 
 ```javascript
 {
@@ -76,122 +102,105 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
   "settings": {},
   "streamSettings": {},
   "tag": "标识",
-  "domainOverride": ["http", "tls"],
   "sniffing": {
     "enabled": false,
     "destOverride": ["http", "tls"]
-  }
-}
-```
-
-其中：
-
-* `port`: 端口。接受的格式如下:
-  * 整型数值: 实际的端口号。
-  * 环境变量 (V2Ray 3.23+): 以`"env:"`开头，后面是一个环境变量的名称，如`"env:PORT"`。V2Ray 会以字符串形式解析这个环境变量。
-  * 字符串 (V2Ray 3.23+): 一个数值类型的字符串，如`"1234"`。
-* `listen`: 监听地址，只允许 IP 地址，默认值为`"0.0.0.0"`。
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `domainOverride`: 识别相应协议的流量，并根据流量内容重置所请求的目标。
-  * 接受一个字符串数组，默认值为空。
-  * 可选值为 `"http"` 和 `"tls"`。
-  * (V2Ray 3.32+) 已弃用。请使用 `sniffing`。当指定了 `domainOverride` 而没有指定 `sniffing` 时，强制开启 `sniffing`。
-* `sniffing` (V2Ray 3.32+): 尝试探测流量类型。
-  * `enabled`: 是否开启流量探测。
-  * `destOverride`: 当流量为指定类型时，按其中包括的目标地址重置当前连接的目标。
-    * 可选值为 `"http"` 和 `"tls"`。
-
-## 主传出连接配置 {#outbound}
-
-主传出连接用于向远程网站或下一级代理服务器发送数据，可用的协议请见[协议列表](02_protocols.md)。
-
-```javascript
-{
-  "sendThrough": "0.0.0.0",
-  "protocol": "协议名称",
-  "settings": {},
-  "tag": "标识",
-  "streamSettings": {},
-  "proxySettings": {
-    "tag": "another-outbound-tag"
   },
-  "mux": {}
-}
-```
-
-其中：
-
-* `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `tag`: 此传出连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `proxySettings`: 传出代理配置。当传出代理生效时，此传出协议的`streamSettings`将不起作用。
-  * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
-* `mux`: [Mux 配置](mux.md)。
-
-## 额外的传入连接配置 {#inbound-detour}
-
-此项是一个数组，可包含多个连接配置，每一个配置形如：
-
-```javascript
-{
-  "protocol": "协议名称",
-  "port": "端口",
-  "tag": "标识",
-  "listen": "127.0.0.1",
   "allocate": {
     "strategy": "always",
     "refresh": 5,
     "concurrency": 3
-  },
-  "settings": {},
-  "streamSettings": {},
-  "domainOverride": ["http", "tls"],
-  "sniffing": {
-    "enabled": false,
-    "destOverride": ["http", "tls"]
   }
 }
 ```
 
-其中：
+> `port`: number | "env:variable" | string
 
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)。
-* `port`: 端口。接受的格式如下:
-  * 整型数值: 实际的端口号。
-  * 环境变量 (V2Ray 3.23+): 以`"env:"`开头，后面是一个环境变量的名称，如`"env:PORT"`。V2Ray 会以字符串形式解析这个环境变量。
-  * 字符串: 可以是一个数值类型的字符串，如`"1234"`；或者一个数值范围，如`"5-10"`表示端口 5 到端口 10 这 6 个端口。
-* `tag`: 此传入连接的标识，用于在其它的配置中定位此连接。属性值必须在所有 tag 中唯一。
-* `listen`: 监听地址，只允许 IP 地址，默认值为`"0.0.0.0"`。
-* `allocate`: 分配设置：
-  * `strategy`: 分配策略，可选的值有`"always"`和`"random"`两个。`"always"`表示总是分配所有已指定的端口，port 是指定了多少个端口，V2Ray 就会监听这些端口。random 表示随机开放端口，每隔 refresh 分钟在 port 范围中随机选取 concurrency 个端口来监听。
-  * `refresh`: 随机端口刷新间隔，单位为分钟。最小值为`2`，建议值为`5`。这个属性仅当 strategy = random 时有效。
-  * `concurrency`: 随机端口数量。最小值为`1`，最大值为 port 范围的一半。建议值为`3`。
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `domainOverride`: 识别相应协议的流量，并根据流量内容重置所请求的目标。
-  * 接受一个字符串数组，默认值为空。
-  * 可选值为 `"http"` 和 `"tls"`。
-  * (V2Ray 3.32+) 已弃用。请使用 `sniffing`。当指定了 `domainOverride` 而没有指定 `sniffing` 时，强制开启 `sniffing`。
-* `sniffing` (V2Ray 3.32+): 尝试探测流量类型。
-  * `enabled`: 是否开启流量探测。
-  * `destOverride`: 当流量为指定类型时，按其中包括的目标地址重置当前连接的目标。
-    * 可选值为 `"http"` 和 `"tls"`。
+端口。接受的格式如下:
 
-### 额外的传出连接配置 {#outbound-detour}
+* 整型数值: 实际的端口号。
+* 环境变量: 以`"env:"`开头，后面是一个环境变量的名称，如`"env:PORT"`。V2Ray 会以字符串形式解析这个环境变量。
+* 字符串: 可以是一个数值类型的字符串，如`"1234"`；或者一个数值范围，如`"5-10"`表示端口 5 到端口 10 这 6 个端口。
 
-此项是一个数组，可包含多个连接配置，每一个配置形如：
+当只有一个端口时，V2Ray 会在此端口监听入站连接。当指定了一个端口范围时，取决于`allocate`设置。
+
+> `listen`: address
+
+监听地址，只允许 IP 地址，默认值为`"0.0.0.0"`，表示接收所有网卡上的连接。除此之外，必须指定一个现有网卡的地址。
+
+> `protocol`: string
+
+连接协议名称，可选的值见[协议列表](02_protocols.md)。
+
+> `settings`: InboundConfigurationObject
+
+具体的配置内容，视协议不同而不同。详见每个协议中的`InboundConfigurationObject`。
+
+> `streamSettings`: [StreamSettingsObject](05_transport.md#perproxy)。
+
+[底层传输配置](05_transport.md#perproxy)
+
+> `tag`: string
+
+此入站连接的标识，用于在其它的配置中定位此连接。当其不为空时，其值必须在所有`tag`中唯一。
+
+> `sniffing`: [SniffingObject](#sniffingobject)
+
+尝试探测流量的类型
+
+> `allocate`: [AllocateObject](#allocateobject)
+
+端口分配设置
+
+### SniffingObject
 
 ```javascript
 {
-  "protocol": "协议名称",
+  "enabled": false,
+  "destOverride": ["http", "tls"]
+}
+```
+
+> `enabled`: true | false
+
+是否开启流量探测。
+
+> `destOverride`: \["http" | "tls"\]
+
+当流量为指定类型时，按其中包括的目标地址重置当前连接的目标。
+
+### AllocateObject
+
+```javascript
+{
+  "strategy": "always",
+  "refresh": 5,
+  "concurrency": 3
+}
+```
+
+> `strategy`: "always" | "random"
+
+端口分配策略。`"always"`表示总是分配所有已指定的端口，`port`中指定了多少个端口，V2Ray 就会监听这些端口。`"random"`表示随机开放端口，每隔`refresh`分钟在`port`范围中随机选取`concurrency`个端口来监听。
+
+> `refresh`: number
+
+随机端口刷新间隔，单位为分钟。最小值为`2`，建议值为`5`。这个属性仅当`strategy = random`时有效。
+
+> `concurrency`: number
+
+随机端口数量。最小值为`1`，最大值为`port`范围的三分之一。建议值为`3`。
+
+## OutboundObject
+
+出站连接用于向远程网站或下一级代理服务器发送数据，可用的协议请见[协议列表](02_protocols.md)。
+
+```javascript
+{
   "sendThrough": "0.0.0.0",
-  "tag": "标识",
+  "protocol": "协议名称",
   "settings": {},
+  "tag": "标识",
   "streamSettings": {},
   "proxySettings": {
     "tag": "another-outbound-tag"
@@ -200,13 +209,42 @@ V2Ray 的配置文件形式如下，客户端和服务器通用一种形式，�
 }
 ```
 
-其中：
+> `sendThrough`: address
 
-* `protocol`: 连接协议名称，可选的值见[协议列表](02_protocols.md)；
-* `sendThrough`: 用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
-* `tag`: 当前的配置标识，当路由选择了此标识后，数据包会由此连接发出；
-* `settings`: 具体的配置内容，视协议不同而不同。
-* `streamSettings`: [底层传输配置](05_transport.md#分连接配置)。
-* `proxySettings`: 传出代理配置。当传出代理生效时，此传出协议的`streamSettings`将不起作用。
-  * `tag`: 当指定另一个传出协议的标识时，此传出协议发出的数据，将被转发至所指定的传出协议发出。
-* `mux`: [Mux 配置](mux.md)。
+用于发送数据的 IP 地址，当主机有多个 IP 地址时有效，默认值为`"0.0.0.0"`。
+
+> `protocol`: string
+
+连接协议名称，可选的值见[协议列表](02_protocols.md)。
+
+> `settings`: OutboundConfigurationObject
+
+具体的配置内容，视协议不同而不同。详见每个协议中的`OutboundConfigurationObject`。
+
+> `tag`: string
+
+此出站连接的标识，用于在其它的配置中定位此连接。当其值不为空时，必须在所有 tag 中唯一。
+
+> `streamSettings`: [StreamSettingsObject](05_transport.md#perproxy)。
+
+[底层传输配置](05_transport.md#perproxy)
+
+> `proxySettings`: [ProxySettingsObject](#proxysettingsobject)
+
+出站代理配置。当出站代理生效时，此出站协议的`streamSettings`将不起作用。
+
+> `mux`: [MuxObject](mux.md)
+
+[Mux 配置](mux.md)。
+
+### ProxySettingsObject
+
+```javascript
+{
+  "tag": "another-outbound-tag"
+}
+```
+
+> `tag`: string
+
+当指定另一个出站协议的标识时，此出站协议发出的数据，将被转发至所指定的出站协议发出。

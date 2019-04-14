@@ -1,23 +1,42 @@
-# Statistics
+---
+refcn: chapter_02/stats
+refen: configuration/stats
+---
+# آمار
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/stats.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/stats.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/stats.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/stats.html)
+V2Ray برخی از اطلاعات مربوط به درون آن را فراهم می کند.
 
-V2Ray provides some information about its internals.
+## StatsObject
 
-Configuration:
+`StatsObject` به عنوان `آمار` فیلد در پیکربندی سطح بالا استفاده می شود.
 
 ```javascript
 {
 }
 ```
 
-All stats counters are listed below:
+در حال حاضر هیچ پارامتری در تنظیمات آمار وجود ندارد. آمار در صورت فعال بودن `StatsObject` در پیکربندی سطح بالا فعال می شود. شما همچنین باید تنظیمات متناظر را در [خط مشی](policy.md)فعال کنید تا بتوانید از کاربر یا آمار سیستم پیگیری کنید.
 
-* `user>>>[email]>>>traffic>>>uplink` (V2Ray 3.16+): Accumulated uplink traffic of specific user, in bytes.
-* `user>>>[email]>>>traffic>>>downlink` (V2Ray 3.16+): Accumulated downlink traffic of specific user, in bytes.
-* `inbound>>>[tag]>>>traffic>>>uplink` (V2Ray 3.18+): Accumulated uplink traffic of specific inbound, in bytes.
-* `inbound>>>[tag]>>>traffic>>>downlink` (V2Ray 3.18+): Accumulated downlink traffic of specific inbound, in bytes.
+کلیه آمار شمارنده در زیر ذکر شده است:
 
-## Tips
+## ترافیک کاربر
 
-* If a user doesn't have a valid email address, the stats will not be enabled.
+اگر کاربر آدرس ایمیل را در تنظیمات پروتکل تنظیم نکند، آمار ترافیک فعال نخواهد شد.
+
+> `کاربر>>>[email]>>>ترافیک>>>uplink`
+
+ترافیک uplink مرتبط با کاربر خاص در بایت.
+
+> `کاربر>>>[email]>>>ترافیک>>>downlink`
+
+ترافیک downlink پیوسته از کاربر خاص، در بایت.
+
+## ترافیک جهانی
+
+> `ورودی>>>[tag]>>>ترافیک>>>uplink`
+
+ترافیک uplink متصل شده از ورودی خاص، در بایت.
+
+> `ورودی>>>[tag]>>>ترافیک>>>downlink`
+
+ترافیک downlink پیوسته از ورودی خاص، در بایت.

@@ -1,25 +1,34 @@
+---
+refcn: chapter_02/transport/websocket
+refen: configuration/transport/websocket
+---
 # WebSocket
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/websocket.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/transport/websocket.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/websocket.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/websocket.html)
+Использует стандартный WebSocket для передачи данных. Соединения Websocket могут быть проксифицированы HTTP-сервером, например Nginx.
 
-Используйте стандартный WebSocket для передачи данных. Соединения Websocket могут быть проксифицированы HTTP-сервером, таким как Nginx.
+## WebSocketObject
 
-Конфигурация:
+`WebSocketObject` используется как `wsSettings` в `TransportObject` и `StreamSettingsObject`.
+
+{% hint style='info' %}
+
+Websocket распознает HTTP-заголовок X-Forwarded-For и использует его в качестве адреса входящего источника.
+
+{% endhint %}
 
 ```javascript
 {
-  "path": "",
+  "path": "/",
   "headers": {
     "Host": "v2ray.com"
   }
 }
 ```
 
-Где:
+> `path`: string
 
-* `path`: Путь, используемый для WebSocket. По умолчанию корень домена `""`.
-* `headers`: Пользовательский HTTP-заголовок. Это массив, в котором каждая запись представляет собой пару ключевых значений в строке, для заголовка и значения в заголовке HTTP. По умолчанию пуст.
+Путь, используемый для WebSocket. По умолчанию корень домена `"/"`.
 
-## Важно
+> `headers`: map{string, string}
 
-* Начиная с V2Ray 3.4, Websocket распознает заголовок X-Forwarded-For и использует его как исходный адрес трафика.
+Пользовательский HTTP-заголовок. Это массив, в котором каждая запись представляет собой пару ключевых значений в строке, для заголовка и значения в заголовке HTTP. По умолчанию пуст.

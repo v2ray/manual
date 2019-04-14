@@ -1,17 +1,17 @@
+---
+refcn: chapter_02/protocols/mtproto
+refen: configuration/protocols/mtproto
+---
 # MTProto
 
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/mtproto.html) [![Китайский](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/mtproto.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/mtproto.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/mtproto.html)
+* Название: `mtproto`
+* Тип: входящий / исходящий
 
 MTProto proxy - специальный прокол для Telegram. Он состоит из пары входящих и исходящих прокси в V2Ray. Они обычно используются вместе для создания прокси для Telegram.
 
-**На данный момент V2Ray поддерживает только IPv4 адрес сервера Telegram.**
+На данный момент V2Ray поддерживает только IPv4 адрес сервера Telegram.
 
-Описание протокола:
-
-* Название: mtproto
-* Тип: входящий / исходящий
-
-## Конфигурация входящего соединения {#inbound}
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -23,12 +23,37 @@ MTProto proxy - специальный прокол для Telegram. Он сос
 }
 ```
 
-Где:
+> `users`: \[[UserObject](#userobject)\]
 
-* `users`: Массив пользователей. **На данный момент поддерживается только первый пользователь**. Каждый пользователь имеет следующую конфигурацию: 
-  * `email`: Электронная почта пользователя. Используется для сбора статистики. См. [ Статистика ](../stats.md).
-  * ` userLevel `: Пользовательский уровень.
-  * `secret`: Секрет пользователя. В Telegram секрет пользователя должен быть длиной 32 символа и содержать только символы ` 0 ` — ` 9 `, и ` a ` — ` f `.
+Массив пользователей. Пока обрабатывается только первый пользователь.
+
+### UserObject
+
+```javascript
+{
+  "email": "love@v2ray.com",
+  "level": 0,
+  "secret": "b0cbcef5a486d9636472ac27f8e11a9d"
+}
+```
+
+> `email`: string
+
+Электронная почта пользователя. Используется для сбора статистики. См. [Статистика](../stats.md).
+
+> `level`: number
+
+Уровень пользователя.
+
+> `secret`: string
+
+Секрет пользователя. В Telegram секрет пользователя должен быть длиной 32 символа и содержать только символы от `0` до `9`, и от `a` до `f`.
+
+{% hint style='tip' %}
+
+Используйте для генерации секрета MTProto эту команду: `openssl rand -hex 16`
+
+{% endhint %}
 
 ## Конфигурация исходящего соединения {#outbound}
 
@@ -74,8 +99,4 @@ MTProto может использоваться только для трафик
 }
 ```
 
-Конфигурируйте приложение Telegram для подключения к порту 443 на этом устройстве.
-
-## Советы {#tips}
-
-* Используйте эту команду для генерации секрета MTProto: ` openssl rand -hex 16 `.
+Настройте приложение Telegram для подключения к 443 порту на этом устройстве.

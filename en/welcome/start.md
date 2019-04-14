@@ -1,17 +1,9 @@
+---
+refcn: chapter_00/start
+refen: welcome/start
+---
+
 # Quick Start
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8] [![Translate][9]][10]
-
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/welcome/start.html
-[3]: ../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_00/start.html
-[5]: ../resources/german.svg
-[6]: https://www.v2ray.com/de/welcome/start.html
-[7]: ../resources/russian.svg
-[8]: https://www.v2ray.com/ru/welcome/start.html
-[9]: ../resources/lang.svg
-[10]: https://crowdin.com/project/v2ray
 
 You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
 
@@ -21,15 +13,15 @@ On your PC (or mobile), run V2Ray with the following configuration.
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 1080,  // Port of socks5 proxy. Point your browser to use this port.
     "listen": "127.0.0.1",
     "protocol": "socks",
     "settings": {
       "udp": true
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "vmess",
     "settings": {
       "vnext": [{
@@ -38,24 +30,18 @@ On your PC (or mobile), run V2Ray with the following configuration.
         "users": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
       }]
     }
-  },
-  "outboundDetour": [{
+  },{
     "protocol": "freedom",
     "tag": "direct",
     "settings": {}
   }],
   "routing": {
-    "strategy": "rules",
-    "settings": {
-      "domainStrategy": "IPOnDemand",
-      "rules": [{
-        "type": "field",
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "direct"
-      }]
-    }
+    "domainStrategy": "IPOnDemand",
+    "rules": [{
+      "type": "field",
+      "ip": ["geoip:private"],
+      "outboundTag": "direct"
+    }]
   }
 }
 ```
@@ -68,17 +54,17 @@ You need another computer to run V2Ray as a server. Usually this computer is loc
 
 ```javascript
 {
-  "inbound": {
+  "inbounds": [{
     "port": 10086, // Port of the server. Must be the same as above.
     "protocol": "vmess",
     "settings": {
       "clients": [{ "id": "b831381d-6324-4d53-ad4f-8cda48b30811" }]
     }
-  },
-  "outbound": {
+  }],
+  "outbounds": [{
     "protocol": "freedom",
     "settings": {}
-  }
+  }]
 }
 ```
 

@@ -1,15 +1,12 @@
+---
+refcn: chapter_02/protocols/shadowsocks
+refen: configuration/protocols/shadowsocks
+---
+
 # Shadowsocks
 
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/protocols/shadowsocks.html
-[3]: ../../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_02/protocols/shadowsocks.html
-[5]: ../../resources/german.svg
-[6]: https://www.v2ray.com/de/configuration/protocols/shadowsocks.html
-[7]: ../../resources/russian.svg
-[8]: https://www.v2ray.com/ru/configuration/protocols/shadowsocks.html
+* Name: `shadowsocks`
+* Type: Inbound / Outbound
 
 [Shadowsocks](https://www.shadowsocks.org/) protocol, for both inbound and outbound connections.
 
@@ -30,46 +27,48 @@ Compatibility with official version:
 * Plugins：
   * Support obfs through standalone mode.
 
-Info:
-
-* Name: shadowsocks
-* Type: Inbound / Outbound
-
-## Inbound proxy configuration
+## InboundConfigurationObject
 
 ```javascript
 {
   "email": "love@v2ray.com",
   "method": "aes-128-cfb",
   "password": "password",
-  "udp": false,
   "level": 0,
   "ota": true,
   "network": "tcp"
 }
 ```
 
-Where:
+> `email`: string
 
-* `email`: Email address. Used for user identification.
-* `method`: Encryption method. No default value. Options are:
-  * `"aes-256-cfb"`
-  * `"aes-128-cfb"`
-  * `"chacha20"`
-  * `"chacha20-ietf"`
-  * `"aes-256-gcm"`
-  * `"aes-128-gcm"`
-  * `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`
-* `password`: Password. Can be any string.
-* `udp` (Deprecated, use `network`): `true` or `false`, whether or not to enable UDP. Default to `false`.
-* `level`: User level. Default to `0`. See [Policy](../policy.md).
-* `ota`: `true` or `false`, whether or not to enable OTA.
-  * When AEAD is used, `ota` has no effect.
-  * When this entry is not specified at all, Shadowsocks inbound detects client settings and then act accordingly.
-  * When this is set to `true` (or `false`) but client is set in the other way, Shadowsocks inbound disconnects connection immediately.
-* `network`: Type of network, either `"tcp"`, `"udp"`, or `"tcp,udp"`. Default to `"tcp"`.
+Email address. Used for user identification.
 
-## Outbound proxy configuration
+> `method`: string
+
+Required. See [Encryption methods](#encryption-methods) for available values.
+
+> `password`: string
+
+Required. Password in Shadowsocks protocol. Can be any string.
+
+> `level`: number
+
+User level. Default to `0`. See [Policy](../policy.md).
+
+> `ota`: `true` | `false`
+
+Whether or not to force OTA. If `true` and the incoming connection doesn't enable OTA, V2Ray will reject this connection. Vice versa.
+
+If this field is not specified, V2Ray auto detects OTA settings from incoming connections.
+
+When AEAD encryption is used, `ota` has no effect.
+
+> `network`: "tcp" | "udp" | "tcp,udp"
+
+Type of supported networks. Default to `"tcp"`.
+
+## OutboundConfigurationObject
 
 ```javascript
 {
@@ -104,3 +103,61 @@ Where:
 * `ota`: Whether or not to use OTA.
   * When AEAD is used, `ota` has no effect.
 * `level`: User level.
+
+> `servers`: \[[ServerObject](#serverobject)\]
+
+An array of [ServerObject](#serverobject)s.
+
+### ServerObject
+
+```javascript
+{
+  "email": "love@v2ray.com",
+  "address": "127.0.0.1",
+  "port": 1234,
+  "method": "加密方式",
+  "password": "密码",
+  "ota": false,
+  "level": 0
+}
+```
+
+> `email`: string
+
+Email address. Used for user identification.
+
+> `address`: address
+
+Required. Shadowsocks server address. May be IPv4, IPv6 or domain address.
+
+> `port`: number
+
+Required. Shadowsocks server port.
+
+> `method`: string
+
+Required. See [Encryption methods](#encryption-methods) for available values.
+
+> `password`: string
+
+Required. Password in Shadowsocks protocol. Can be any string.
+
+> `ota`: true | false
+
+Whether or not to use OTA. Default value is `false`.
+
+When AEAD encryption is used, this field has no effect.
+
+> `level`: number
+
+User level.
+
+## Encryption methods
+
+* `"aes-256-cfb"`
+* `"aes-128-cfb"`
+* `"chacha20"`
+* `"chacha20-ietf"`
+* `"aes-256-gcm"`
+* `"aes-128-gcm"`
+* `"chacha20-poly1305"` or `"chacha20-ietf-poly1305"`

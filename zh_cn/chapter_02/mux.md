@@ -1,17 +1,15 @@
+---
+refcn: chapter_02/mux
+refen: configuration/mux
+---
+
 # Mux 多路复用
 
-[![English][1]][2] [![German][3]][4] [![Russian][5]][6]
+Mux 功能是在一条 TCP 连接上分发多个 TCP 连接的数据。实现细节详见[Mux.Cool](../developer/protocols/muxcool.md)。Mux 是为了减少 TCP 的握手延迟而设计，而非提高连接的吞吐量。使用 Mux 看视频、下载或者测速通常都有反效果。Mux 只需要在客户端启用，服务器端自动适配。
 
-[1]: ../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/mux.html
-[3]: ../resources/german.svg
-[4]: https://www.v2ray.com/de/configuration/mux.html
-[5]: ../resources/russian.svg
-[6]: https://www.v2ray.com/ru/configuration/mux.html
+## MuxObject
 
-Mux 功能是在一条 TCP 连接上分发多个 TCP 连接的数据。实现细节详见[Mux.Cool](../developer/protocols/muxcool.md)
-
-配置：
+`MuxObject`对应`OutboundObject`中的`mux`项。
 
 ```javascript
 {
@@ -20,14 +18,10 @@ Mux 功能是在一条 TCP 连接上分发多个 TCP 连接的数据。实现细
 }
 ```
 
-其中：
+> `enabled`: true | false
 
-* enabled: 是否启用 Mux
-* concurrency: 最大并发连接数。最小值`1`，最大值`1024`，默认值`8`。
-  * 没有特殊需求一般不需要修改这个数值。
+是否启用 Mux
 
-## 小贴士 {#tip}
+> `concurrency`: number
 
-* Mux 只需要在客户端启用，服务器端自动适配。
-* 一条 TCP 连接最多传输 128 条连接之后关闭；
-* Mux 是为了减少 TCP 的握手延迟而设计，而非提高连接的吞吐量。使用 Mux 看视频、下载或者测速通常都有反效果。
+最大并发连接数。最小值`1`，最大值`1024`，默认值`8`。这个数值表示了一个 TCP 连接上最多承载的 Mux 连接数量。当客户端发出了 8 个 TCP 请求，而`concurrency=8`时，V2Ray 只会发出一条实际的 TCP 连接，客户端的 8 个请求全部由这个 TCP 连接传输。

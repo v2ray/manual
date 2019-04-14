@@ -1,6 +1,8 @@
+---
+refcn: chapter_00/command
+refen: welcome/command
+---
 # Командная строка
-
-[![Английский](../resources/english.svg)](https://www.v2ray.com/en/welcome/command.html) [![Китайский](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/command.html) [![Немецкий](../resources/german.svg)](https://www.v2ray.com/de/welcome/command.html) [![Русский](../resources/russian.svg)](https://www.v2ray.com/ru/welcome/command.html)
 
 ## V2Ray
 
@@ -10,47 +12,139 @@ V2Ray имеет следующие параметры командной стр
 v2ray [-version] [-test] [-config=config.json] [-format=json]
 ```
 
-Где:
+> `-version`
 
-* `-version`: Вывести версию V2Ray, затем завершить работу.
-* `-test`: Считать и проверить настройки, вывести найденные ошибки, затем завершить работу.
-* `-config`: URI файла с настройками. 
-  * Если значение равно `stdin:`, V2Ray считывает конфигурацию из стандартного ввода. Вызывающая программа должна закрыть stdin после записи конфигурации.
-  * Если значение начинается с `http://` или `https://` (строчными), V2Ray пытается загрузить конфигурацию по указанному адресу.
-  * Если значение не задано, V2Ray сначала пытается загрузить конфигурацию из `config.json` из рабочего каталога, а затем из каталога, заданного переменной среды `v2ray.location.asset`.
-* `-format`: Формат файла с настройками. Возможные варианты: 
-  * `json`: формат JSON.
-  * `pb` или `protobuf`: формат Protobuf.
+Вывести версию V2Ray, затем завершить работу.
+
+> `-test`
+
+Считать и проверить настройки, вывести найденные ошибки, затем завершить работу.
+
+> `-config`
+
+URI файла с настройками. Возможные варианты:
+
+* Путь к локальному файлу с настройками. Может быть как относительным, так и абсолютным.
+* `"stdin:"`: Указывает V2Ray считать настройки через стандартный поток ввода. Вызывающая программа должна закрыть stdin после вывода настроек.
+* Начинающиеся с `http://` или `https://` (в нижнем регистре): V2Ray пытается загрузить настройки с указанного адреса.
+
+> `-format`
+
+Формат файла с настройками. Возможные варианты:
+
+* `json`: формат JSON.
+* `pb` или `protobuf`: формат Protobuf.
+
+{% hint style='info' %}
+
+Если значение `-config` не задано, V2Ray сначала пытается загрузить конфигурацию из `config.json` из рабочего каталога, а затем из каталога, заданного [переменной среды](../configuration/env.md) `v2ray.location.asset`.
+
+{% endhint %}
 
 ## V2Ctl
 
-V2Ctl имеет следующие параметры командной строки:
+V2Ctl is a collection of commandline tools. It runs in the following way:
 
-```shell
+```bash
 v2ctl <command> <options>
 ```
 
-Ниже перечислены доступные команды. Каждая команда имеет свои собственные параметры.
+> `command`
 
-### Verify
+Subcommand. Available values are below:
 
-`v2ctl verify [--sig=/path/to/sigfile] /file/to/verify`
+* `api`: Invoke remote control commands in V2Ray instances.
+* `config`: Convert configuration from JSON format to protobuf.
+* `cert`: Generate TLS certificates.
+* `fetch`: Fetch remove resources.
+* `tlsping`: (V2Ray 4.17+) Test TLS handshake.
+* `verify`: Verify the signature of V2Ray releases.
+* `uuid`: Generate UUID.
 
-Проверка подписи бинарного файла V2Ray.
+### V2Ctl Api
 
-Опциональные параметры:
+`v2ctl api [--server=127.0.0.1:8080] <Service.Method> <Request>`
 
-* `sig`：Путь к файлу с подписью. Значение по умолчанию - ".sig"-файл в проверяемом пути.
-* Первый аргумент: файл для проверки.
+Invoke remote control commands in V2Ray instances. Example:
 
-### Config
+`v2ctl api --server=127.0.0.1:8080 LoggerService.RestartLogger ''`
+
+### V2Ctl Config
 
 `v2ctl config`
 
-Нет параметров. Эта команда считывает конфигурацию в формате JSON из потока stdin, а выводит её в формате Protobuf в stdout.
+No option for this command. It reads JSON configuration from stdin, and print out corresponding Protobuf to stdout, if succeeds.
 
-### UUID
+### V2Ctl Cert
+
+`v2ctl cert [--ca] [--domain=v2ray.com] [--expire=240h] [--name="V2Ray Inc"] [--org="V2Ray Inc] [--json] [--file=v2ray]`
+
+Generates a TLS cerificate based on options.
+
+> `--ca`
+
+If specified, the certificate will be a CA certificate.
+
+> `--domain`
+
+Alternative Names in the certificate. This option can be used multiple times for multiple domains. For example: `--domain=v2ray.com --domain=v2ray.cool`.
+
+> `--expire`
+
+Expire date of the certificate. Value is a [Golang duration](https://golang.org/pkg/time/#ParseDuration).
+
+> `--name`
+
+Command Name in the certificate.
+
+> `--org`
+
+Orgnization in the certificate.
+
+> `--json`
+
+If specified, the certificate will be printed to stdout in the JSON format that is used in V2Ray.
+
+> `--file`
+
+Prints the certificate into files. When `--file=a`, two files named `a_cert.pem` and `a_key.pem` will be generated.
+
+### V2Ctl Fetch
+
+`v2ctl fetch <url>`
+
+Fetch remove resources and print to stdout. Only HTTP and HTTPS URL are supported.
+
+### V2Ctl TlsPing
+
+`v2ctl tlsping <domain> --ip=[ip]`
+
+Test TLS handlshake with specific domain.
+
+> domain
+
+Target domain for the TLS handshake.
+
+> --ip
+
+The IP address of the domain. If not specifed, V2Ctl resolves it through system DNS.
+
+### V2Ctl Verify
+
+`v2ctl verify [--sig=/path/to/sigfile] <filepath>`
+
+To verify the signature of a V2Ray binary.
+
+> `--sig`
+
+Path to signature file. Default value is the ".sig" file to the path to be verified.
+
+> `filepath`
+
+The file to be verified.
+
+### V2Ctl UUID
 
 `v2ctl uuid`
 
-Нет параметров. Эта команда выводит случайный UUID.
+No options. This command prints a random UUID.

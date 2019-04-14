@@ -5,13 +5,30 @@
     "-fontsettings",
     "-search",
     "-lunr",
-    
+    "-highlight",
+    "-sharing",
+
+    "mermaid-gb3",
     "anchors",
-    "ga"
+    "ga",
+    "prism",
+    "prism-themes",
+    "hints"
   ],
   "pluginsConfig": {
     "ga": {
-        "token": "UA-73620536-1"
+      "token": "UA-73620536-1"
+    },
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+      ],
+      "lang": {
+        "objc": "objectivec",
+        "shell": "bash",
+        "text": "textile",
+        "plain": "textile"
+      }
     }
   }
 }

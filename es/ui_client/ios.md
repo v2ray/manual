@@ -1,12 +1,14 @@
+---
+refcn: ui_client/ios
+refen: ui_client/ios
+---
 # iOS Client
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/ios.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/ios.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/ios.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/ios.html)
 
 ## Kitsunebi
 
 Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
 
-* Download: [iTunes](https://www.v2ray.com/itunes/us/kitsunebi/id1275446921/)
+* Download: [iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
 
 ## Kitsunebi Lite
 

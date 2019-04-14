@@ -1,10 +1,14 @@
-# Multiplexing
+---
+refcn: chapter_02/mux
+refen: configuration/mux
+---
+# چندگانه شدن
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/mux.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/mux.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/mux.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/mux.html)
+Multiplexing، یا Mux، استفاده از یک اتصال TCP فیزیکی برای چندین اتصال TCP مجازی است.
 
-Multiplexing, or Mux, is to use one physical TCP connections for multiple virtual TCP connections. See [Mux.Cool](https://www.v2ray.com/eng/protocols/muxcool.html) for more implementation details.
+Mux برای کاهش زمان تاخیر دستکاری TCP طراحی شده است. این برای توان بالا نیست هنگامی که برای دانلود فایل های بزرگ یا اندازه گیری سرعت استفاده می شود، Mux معمولا از اتصال معمولی TCP کندتر است.
 
-Configuration:
+## MuxObject
 
 ```javascript
 {
@@ -13,9 +17,10 @@ Configuration:
 }
 ```
 
-Where:
+> `فعال`: true | نادرست
 
-* `enabled`: Whether or not to enable Mux
-* `concurrency`: Max number of virtual connections that one physical connection can handle at a time. Max value `1024`, min value `1`, default `8`. 
-  * Usually you don't have to configure this value.
-* Mux is designed to reduce TCP handshake latency. It is NOT for high throughput. When used for downloading large files or speed measurement, Mux is usually slower than a normal TCP connection.
+آیا Mux را در خروجی فعال کنید یا خیر
+
+> `هم زمان`: شماره
+
+حداکثر تعداد اتصالات چندگانه که یک اتصال فیزیکی در یک زمان می تواند اداره کند. حداکثر مقدار `1024`، دقیقه ارزش `1`، به طور پیش فرض `8`.

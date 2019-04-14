@@ -1,34 +1,35 @@
+---
+refcn: chapter_02/transport/websocket
+refen: configuration/transport/websocket
+---
+
 # WebSocket
-
-[![English][1]][2] [![Chinese][3]][4] [![German][5]][6] [![Russian][7]][8]
-
-[1]: ../../resources/english.svg
-[2]: https://www.v2ray.com/en/configuration/transport/websocket.html
-[3]: ../../resources/chinese.svg
-[4]: https://www.v2ray.com/chapter_02/transport/websocket.html
-[5]: ../../resources/german.svg
-[6]: https://www.v2ray.com/de/configuration/transport/websocket.html
-[7]: ../../resources/russian.svg
-[8]: https://www.v2ray.com/ru/configuration/transport/websocket.html
 
 Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.
 
-Configuration:
+## WebSocketObject
+
+`WebSocketObject` is used as `wsSettings` in `TransportObject` or `StreamSettingsObject`.
+
+{% hint style='info' %}
+
+Websocket recognizes HTTP header X-Forwarded-For, and uses it as inbound source address.
+
+{% endhint %}
 
 ```javascript
 {
-  "path": "",
+  "path": "/",
   "headers": {
     "Host": "v2ray.com"
   }
 }
 ```
 
-Where:
+> `path`: string
 
-* `path`: Path used for WebSocket. Default to root, as `""`。
-* `headers`: Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.
+Path used for WebSocket. Default to root, as `"/"`.
 
-## Notice
+> `headers`: map{string, string}
 
-* Since V2Ray 3.4, Websocket recognizes X-Forwarded-For header and use it as source address of the traffic.
+Custom HTTP header. An array where each entry is a key value pair in string, for header and value in HTTP header. Default is empty.

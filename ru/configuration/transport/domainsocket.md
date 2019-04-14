@@ -1,12 +1,22 @@
+---
+refcn: chapter_02/transport/domainsocket
+refen: configuration/transport/domainsocket
+---
 # Доставка через сокет домена
-
-[![Английский](../../resources/english.svg)](https://www.v2ray.com/en/configuration/transport/domainsocket.html) [![Немецкий](../../resources/german.svg)](https://www.v2ray.com/de/configuration/transport/domainsocket.html) [![Русский](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/transport/domainsocket.html)
 
 Сокет домена использует стандартный сокет домена Unix для доставки данных. Сокет домена - это внутрисистемный канал передачи данных. Он не создаёт задержек в сетевом буфере и может быть немного быстрее, чем передача через локальную петлю (loopback).
 
-Сокет домена может использоваться только на платформах, которые его поддерживают: Unix, macOS и Linux. Он не доступен в Windows.
+Сокет домена может использоваться только на платформах, которые его поддерживают: Unix, macOS и Linux. ОС Windows не поддерживается.
 
-Конфигурация:
+{% hint style='info' %}
+
+Когда используется сокет домена, IP и порт, указанные во входящем/исходящем прокси, будут проигнорированы. Весь трафик туннелируется через сокет домена.
+
+{% endhint %}
+
+## DomainSocketObject
+
+`DomainSocketObject` используется в поле `dsSettings` в `TransportObject` и `StreamSettingsObject`.
 
 ```javascript
 {
@@ -14,10 +24,6 @@
 }
 ```
 
-Где:
+> `path`: string
 
-* `path`: Реальный абсолютный путь к файлу. Перед запуском V2Ray указанный файл не должен существовать.
-
-## Замечания {#tips}
-
-* Когда используется сокет домена, IP и порт, указанные во входящем/исходящем прокси, будут проигнорированы. Весь трафик туннелируется через сокет домена.
+Реальный абсолютный путь к файлу. Перед запуском V2Ray указанный файл не должен существовать.

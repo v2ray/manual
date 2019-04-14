@@ -1,26 +1,32 @@
+---
+refcn: ui_client/osx
+refen: ui_client/osx
+---
 # Mac OS X
-
-[![English](../resources/english.svg)](https://www.v2ray.com/en/ui_client/osx.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/ui_client/osx.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/ui_client/osx.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/ui_client/osx.html)
 
 ## V2RayX
 
-* Download: [Github](https://github.com/Cenmrev/V2RayX)
+* دانلود: [Github](https://github.com/Cenmrev/V2RayX)
+
+## V2RayU
+
+* Download: [Github](https://github.com/yanue/V2rayU)
 
 ## Other tools {#other}
 
-### Visual Studio Code
+### ویژوال استودیو کد
 
-Source code editor from Microsoft.
+ویرایشگر کد منبع از مایکروسافت.
 
 * Website: [code.visualstudio.com](https://code.visualstudio.com/)
 
-### Telegram
+### تلگرام
 
-Encrypted discussion.
+بحث رمزگذاری شده
 
 * Website: [telegram.org](https://telegram.org/)
 * Download: [Mac App Store](https://www.v2ray.com/itunesm/us/telegram-desktop/id946399090/)
 
-### Microsoft Remote Desktop Connection Client
+### مشتری Microsoft Remote Desktop Connection
 
 * Download: [Mac App Store](https://www.v2ray.com/itunesm/us/microsoft-remote-desktop/id715768417/)

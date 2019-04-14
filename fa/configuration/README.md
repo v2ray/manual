@@ -1,12 +1,16 @@
-# Configuration
+---
+refcn: chapter_02/index
+refen: configuration/index
+---
+# پیکربندی
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/index.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/index.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/index.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/index.html)
+V2Ray با استفاده از [پروتوبف پیکربندی مبتنی بر](https://developers.google.com/protocol-buffers/). به عنوان فرمت protobuf کمتر قابل خواندن است، V2Ray همچنین از پیکربندی در JSON پشتیبانی می کند. قبل از اجرای V2Ray، به طور خودکار پیکربندی JSON را به protobuf تبدیل می کند. این گفته می شود، دیگر فرمت های پیکربندی ممکن است در furture معرفی شود.
 
-V2Ray uses configuration file in JSON format. If you are familiar with JSON, you may skip this page.
+در اینجا ما پیکربندی مبتنی بر JSON را معرفی می کنیم.
 
-JSON, or [JavaScript Object Notation](https://en.wikipedia.org/wiki/JSON), in short is objects in Javascript. One JSON file contains one and only one JSON object, beginning with "{" and ending with "}".
+JSON، یا [نشانگر جاوا اسکریپت](https://en.wikipedia.org/wiki/JSON)، به طور خلاصه، اشیا در Javascript هستند. یک فایل JSON حاوی یک و تنها یک شیء JSON است، شروع از "{" و پایان دادن با "}".
 
-A JSON object contains a list of key value pairs. A key is a string, and a value may be various of types, such as string, number, boolean, array or another object. A typical object is like below:
+یک شی JSON حاوی لیستی از جفت های کلیدی مهم است. یک کلید یک رشته است و مقدار ممکن است انواع مختلفی از قبیل رشته، عدد، رشته ای، آرایه یا یک شی دیگر باشد. یک شیء معمولی زیر است:
 
 ```javascript
 {
@@ -20,7 +24,52 @@ A JSON object contains a list of key value pairs. A key is a string, and a value
 }
 ```
 
-Notice:
+{% hint style='info' %}
 
-1. A key value pair usually ends with a comma ",", but must not ends with a comma if it is the last element of the object.
-2. V2Ray supports comments in JSON, annotated by "//" or "/\* \*/".
+V2Ray از نظرات در JSON پشتیبانی می کند، حاوی "یا" یا "/ \ * \ * /" حاشیه نویسی شده است. در یک ویرایشگر که نظرات را پشتیبانی نمی کند، ممکن است به عنوان اشتباه نمایش داده شود، اما نظرات واقعا در V2Ray کار می کنند.
+
+{% endhint %}
+
+## انواع داده JSON
+
+در اینجا یک معرفی مختصر از انواع داده JSON است. آنها در بقیه اسناد ارجاع خواهند شد.
+
+> `boolean`: true | نادرست
+
+مقدار boolean باید `درست باشد` یا `false`بدون علامت نقل قول.
+
+> `عدد`
+
+عدد صحيح غیر منفی، بدون علامت نقل قول.
+
+> `رشته`
+
+دنباله ای از شخصیت ها، توسط علامت نقل قول احاطه شده است.
+
+> `آرایه`: []
+
+آرایه ای از عناصر نوع عناصر آن معمولا یکسان است، مثلا `[string]` آرایه ای از `رشته`.
+
+> `شی`: {}
+
+هدف - شی. با لیستی از جفت های ارزش کلیدی همراه می شود.
+
+{% hint style='tip' %}
+
+یک جفت ارزش کلیدی معمولا با کاما "،" به پایان می رسد، اما نباید با کاما به پایان برسد، اگر آخرین عنصر از شی است.
+
+{% endhint %}
+
+## انواع داده های مشترک V2Ray
+
+> `نقشه`: object \ {string، string \}
+
+یک شی که کلید ها و مقادیر نوع ثابت دارند.
+
+> `آدرس`: رشته
+
+یک آدرس IP یا دامنه در شکل رشته، مانند `"8.8.8.8"` یا `"www.v2ray.com"`
+
+> `آدرس_پورت`: رشته
+
+`آدرس` با پورت، مانند `"8.8.8.8:53"` یا `"www.v2ray.com:80"`. در برخی از استفاده ها، بخش آدرس می تواند حذف شود، مانند `": 443"`.

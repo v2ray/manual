@@ -1,95 +1,96 @@
-# Download & Install
+---
+refcn: chapter_00/install
+refen: welcome/install
+---
+# دانلود & نصب
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/welcome/install.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_00/install.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/welcome/install.html) [![Translate](../resources/lang.svg)](https://crowdin.com/project/v2ray)
+## سکو {#platform}
 
-## Platform {#platform}
+V2Ray در سیستم عامل های زیر موجود است:
 
-V2Ray is available on the following platforms:
-
-* Windows 7 and later (x86 / amd64)
-* Mac OS X 10.10 Yosemite and later (amd64)
-* Linux 2.6.23 and later (x86 / amd64 / arm / arm64 / mips64 / mips) 
-  * Including but not limited to Debian 7 / 8, Ubuntu 12.04 / 14.04 and later, CentOS 6 / 7, Arch Linux
+* ویندوز 7 و بعد (x86 / amd64)
+* Mac OS X 10.10 Yosemite و بعد (amd64)
+* لینوکس 2.6.23 و بعد (x86 / amd64 / arm / arm64 / mips64 / mips) 
+  * شامل اما نه محدود به Debian 7/8، اوبونتو 12.04 / 14.04 و بعدا، CentOS 6/7، Arch Linux
 * FreeBSD (x86 / amd64)
 * OpenBSD (x86 / amd64)
-* Dragonfly BSD (amd64)
+* سنجاقک BSD (amd64)
 
-## Hardware requirement {#hardware}
+## دانلود {#download}
 
-At least 32MB free memory.
+بسته های پیش ساخته شده را می توان در اینجا پیدا کرد:
 
-## Download {#download}
+1. Github انتشار: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
+2. Redistribution: [github.com/v2ray/dist](https://github.com/v2ray/dist)
+3. Homebrew: [github.com/v2ray/homebrew-v2ray](https://github.com/v2ray/homebrew-v2ray)
+4. آرچ لینوکس: [بسته / جامعه / x86_64 / v2ray /](https://www.archlinux.org/packages/community/x86_64/v2ray/)
+5. Snapcraft: [snapcraft.io/v2ray-core](https://snapcraft.io/v2ray-core)
 
-Pre-built packages can be found here:
+همه بسته ها در قالب ZIP هستند. بسته های مربوطه را به سیستم خود دانلود و باز کنید.
 
-1. Github Release: [github.com/v2ray/v2ray-core](https://github.com/v2ray/v2ray-core/releases)
-2. Redistribution: [v2ray.com/download](https://www.v2ray.com/download/)
+## تأیید {#verify}
 
-All packages are in ZIP format. Download and unzip corresponding packages to your system.
+2 روش برای بررسی بسته ها وجود دارد.
 
-## Verify {#verify}
+1. هر فایل `.zip` فایل مربوطه `.dgst` برای هضم SHA دارد.
+2. فایل امضای GPG برای اجرا (v2ray / v2ray.exe) را می توان در v2ray.sig (یا v2ray.exe.sig) در همان بسته پیدا کرد. کلید عمومی [در مخزن](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
 
-There are 2 ways to verify packages.
+## نصب در ویندوز یا سیستم عامل مک {#install-windows}
 
-1. Metadata.txt in release page contains SHA1 hash for all packages.
-2. The GPG signature file for executables (v2ray / v2ray.exe) can be found in v2ray.sig (or v2ray.exe.sig) in the same package. Public key is [in the repository](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc).
+پس از پاک کردن بسته ها، v2ray / v2ray.exe را اجرا کنید.
 
-## Install on Windows or Mac OS {#install-windows}
+## لینوکس را نصب کنید {#install-linux}
 
-Run v2ray / v2ray.exe after unzip the packages.
+ما یک اسکریپت برای نصب در لینوکس ارائه می دهیم. این اسکریپت v2ray نصب شده قبلی را تشخیص داده و سپس بروز رسانی یا نصب جدیدی را بر عهده دارد. اگر یک نسخه قبلی وجود دارد، فایل پیکربندی در / etc / v2ray در هنگام ارتقاء مجددا نویسی نخواهد شد.
 
-## Install on Linux {#install-linux}
+دستور زیر اجازه دسترسی به ریشه را می دهد.
 
-We provide a script to install on Linux. This script detects previous installed v2ray and then upgrade or install a new one accordingly. If there is a previous version, the config file in /etc/v2ray will not be overwritten during upgrade.
+برای نصب V2Ray دستور زیر را اجرا کنید. اگر yum یا apt در دسترس باشد، اسکریپت unzip و daemon / systemd را نصب خواهد کرد. آنها نیاز به اجرای V2Ray به عنوان یک سرویس دارند. اگر سیستم لینوکس شما yum یا apt را پشتیبانی نمی کند، باید آنها را به صورت دستی نصب کنید.
 
-The following command assumes root permission.
-
-Run the following command to install V2Ray. If yum or apt is available, the script will install unzip and daemon / systemd. They are required to run V2Ray as a service. You need to install them manually if your Linux system doesn't support yum or apt.
-
-```shell
+```bash
 bash <(curl -L -s https://install.direct/go.sh)
 ```
 
-The script installs the following files.
+اسکریپت فایل های زیر را نصب می کند.
 
-* `/usr/bin/v2ray/v2ray`: V2Ray executable
-* `/usr/bin/v2ray/v2ctl`: Utility
-* `/etc/v2ray/config.json`: Config file
-* `/usr/bin/v2ray/geoip.dat`: IP data file
-* `/usr/bin/v2ray/geosite.dat`: domain data file
+* `/ usr / bin / v2ray / v2ray`: V2Ray executable
+* `/ usr / bin / v2ray / v2ctl`: Utility
+* `/etc/v2ray/config.json`: فایل پیکربندی
+* `/usr/bin/v2ray/geoip.dat`: فایل داده های IP
+* `/usr/bin/v2ray/geosite.dat`: فایل داده دامنه
 
-This script also configures V2Ray to run as service, if systemd is available.
+این اسکریپت همچنین V2Ray را به عنوان سرویس اجرا می کند، اگر systemd در دسترس باشد.
 
-Configurations are at the following places.
+تنظیمات در مکان های زیر قرار دارند.
 
 * `/etc/systemd/system/v2ray.service`: Systemd
 * `/etc/init.d/v2ray`: SysV
 
-After installation, we will need to:
+پس از نصب، ما باید:
 
-1. Update `/etc/v2ray/config.json` file for your own scenario.
-2. Run `service v2ray start` command to start V2Ray.
-3. Optionally run `service v2ray start|stop|status|reload|restart|force-reload` to control V2Ray service.
+1. به روز رسانی `/etc/v2ray/config.json` فایل برای سناریوی خودتان.
+2. اجرا `سرویس v2ray شروع` دستور برای شروع V2Ray.
+3. اختیاری `سرویس v2ray start | stop | status | reload | restart | force-reload` برای کنترل سرویس V2Ray.
 
-### go.sh {#gosh}
+### برو {#gosh}
 
-go.sh supports the following parameters.
+go.sh از پارامترهای زیر پشتیبانی می کند.
 
-* `-p` or `--proxy`: Use a proxy to download V2Ray packages. Same as curl format, such as `"socks5://127.0.0.1:1080"` or `"http://127.0.0.1:3128"`.
-* `-f` or `--force`: Force installation. The script will assume V2Ray was not installed at all.
-* `--version`: The version to be installed, such as `"v1.13"`. Default value is the latest stable release.
-* `--local`: Use a local package for installation.
+* `-p` یا `پروکسی`: از پروکسی برای دانلود بسته های V2Ray استفاده کنید. همان فرمت Curl مانند `"socks5: //127.0.0.1: 1080"` یا `"http://127.0.0.1:3128"`.
+* `-f` یا `--force`: نیروی نصب. اسکریپت فرض می کند V2Ray در همه نصب نشده است.
+* `- نسخه`: نسخه نصب شده، مانند `"v1.13"`. مقدار پیش فرض آخرین نسخه پایدار است.
+* `محلی`: از یک بسته محلی برای نصب استفاده کنید.
 
-Examples:
+مثال ها:
 
-* Use SOCKS proxy 127.0.0.1:1080 to install the latest package: ```./go.sh -p socks5://127.0.0.1:1080```
-* Install v1.13 from local file:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
+* برای نصب آخرین بسته از SOCKS proxy 127.0.0.1:1080 استفاده کنید: ```./go.sh -p socks5://127.0.0.1:1080```
+* نصب فایل v1.13 از فایل محلی:```./go.sh --version v1.13 --local /path/to/v2ray.zip```
 
-## Docker {#docker}
+## داكر {#docker}
 
-V2Ray provides 2 docker images:
+V2Ray تصاویر 2 بارانداز را فراهم می کند:
 
-* [v2ray/official](https://hub.docker.com/r/v2ray/official/): Contains official releases.
-* [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): Contains latest code.
+* [v2ray / official](https://hub.docker.com/r/v2ray/official/): شامل نسخه های رسمی است.
+* [v2ray / dev](https://hub.docker.com/r/v2ray/dev/): دارای آخرین کد است.
 
-The 2 images has the same structure as the Linux installation.
+2 تصویر دارای ساختار مشابهی با نصب لینوکس است.

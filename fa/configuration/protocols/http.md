@@ -1,12 +1,15 @@
+---
+refcn: chapter_02/protocols/http
+refen: configuration/protocols/http
+---
 # HTTP
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/http.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/http.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/http.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/http.html)
+* نام: `http`
+* نوع: ورودی
 
-HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
+HTTP یک پروتکل برای اتصالات ورودی است. این سازگار با HTTP / 1.1 است.
 
-* Name: http
-* Type: Inbound
-* Configuration:
+## InboundConfigurationObject
 
 ```javascript
 {
@@ -21,16 +24,40 @@ HTTP is a protocol for inbound connections. It is compatible with HTTP 1.1.
 }
 ```
 
-Where:
+> `accounts`: \[[AccountObject](#accountobject)\]
 
-* `accounts`: An array in which each entry is an account. Username of the account is specified by `user`, and password specified by `pass`. Default empty. 
-  * If `accounts` is not empty, HTTP uses Basic Authentication for user verification.
-* `allowTransparent`: If set to `true`, all HTTP request sent to this inbound will be proxied, including non-proxy request.
-* `userLevel`: User level. All connections share this level.
+آرایه ای که هر ورودی یک حساب است. به طور پیش فرض خالی است. اگر خالی نباشد، HTTP Basic Authentication برای درخواست های ورودی مورد نیاز است.
 
-## Tips
+> `allowTransparent`: true | false
 
-Use the following settings in Linux to use HTTP proxy in current session.
+اگر به `true`تنظیم شده باشد، تمام درخواست HTTP برای این ورودی ارسال خواهد شد پروکسی، از جمله درخواست غیر پروکسی.
 
-* `export http_proxy=http://127.0.0.1:8080/` (URL has to change according to your config)
-* `export https_proxy=$http_proxy`
+> `userLevel`: number
+
+سطح کاربر همه اتصالات این سطح را به اشتراک میگذارند.
+
+### AccountObject
+
+```javascript
+{
+  "user": "my-username",
+  "pass": "my-password"
+}
+```
+
+> `user`: string
+
+نام کاربری برای تأیید هویت HTTP
+
+> `pass`: string
+
+رمز عبور برای احراز هویت HTTP.
+
+{% hint style='info' %}
+
+از تنظیمات زیر در لینوکس برای استفاده از پروکسی HTTP در جلسه فعلی استفاده کنید.
+
+* `صادرات http_proxy = HTTP: //127.0.0.1: 8080/` (URL است با توجه به پیکربندی خود را برای تغییر)
+* `صادرات https_proxy =$http_proxy`
+
+{% endhint %}

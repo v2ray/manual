@@ -1,42 +1,42 @@
-# Routing
+---
+refcn: chapter_02/03_routing
+refen: configuration/routing
+---
+# مسیریابی
 
-[![English](../resources/english.svg)](https://www.v2ray.com/en/configuration/routing.html) [![Chinese](../resources/chinese.svg)](https://www.v2ray.com/chapter_02/03_routing.html) [![German](../resources/german.svg)](https://www.v2ray.com/de/configuration/routing.html) [![Russian](../resources/russian.svg)](https://www.v2ray.com/ru/configuration/routing.html)
+V2Ray دارای مکانیزم مسیریابی داخلی است. این ارتباطات ورودی به خروجی های مختلف را براساس قوانین انجام می دهد. یک سناریو معمول این است که تقسیم ترافیک به وسیله کشور انجام شود. V2Ray می تواند کشور مقصد (توسط Geo IP) یک اتصال را شناسایی کند و سپس اتصال به پروکسی خروجی مربوطه را ارسال کند.
 
-V2Ray has an internal routing mechanism. It routes inbound connections to various outbound based on rules. A common scenario is to split traffic by country. V2Ray can detect target country (by Geo IP) of a connection, and sends then connection to corresponding outbound proxy.
+## RoutingObject
 
-Configuration:
+`RoutingObject` به عنوان `مسیریابی` در پیکربندی سطح بالا استفاده می شود.
 
 ```javascript
 {
-  "strategy": "rules",
-  "settings": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "domain": [
-          "baidu.com",
-          "qq.com"
-        ],
-        "outboundTag": "direct"
-      }
-    ]
-  }
+  "domainStrategy": "AsIs",
+  "rules": [],
+  "balancers": []
 }
 ```
 
-Where:
+> `domainStrategy`: "AsIs" | "IPIfNonMatch" | "IPOnDemand"
 
-* `strategy`: The only valid value for now is `"rules"`.
-* `domainStrategy`: Domain resolution strategy. Choices are: 
-  * `"AsIs"`: Only use domain for routing. Default value.
-  * `"IPIfNonMatch"`: When no rule matches current domain, V2Ray resolves it into IP addresses (A or AAAA records) and try all rules again. 
-    * If a domain has multiple IP addresses, V2Ray tries all of them.
-    * The resolved IPs are only used for routing decisions, the traffic is still sent to original domain address.
-  * `"IPOnDemand"`: As long as there is a IP-based rule, V2Ray resolves the domain into IP immediately.
-* `rules`: An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` of the rule.
+استراتژی قطعنامه دامنه انتخاب ها عبارتند از:
 
-Configuration for each rule:
+* `"AsIs"`: فقط از دامنه برای مسیریابی استفاده کنید. مقدار پیش فرض.
+* `"IPIfNonMatch"`: زمانی که هیچ قاعده ای با دامنه فعلی منطبق نیست، V2Ray آن را به آدرس های IP (A یا AAAA) رفع می کند و دوباره تمام قوانین را امتحان می کند. 
+  * اگر یک دامنه دارای چندین آدرس IP باشد، V2Ray تمام آنها را انجام می دهد.
+  * IP های حل شده تنها برای تصمیم گیری مسیریابی استفاده می شوند، ترافیک هنوز به آدرس دامنه اصلی ارسال می شود.
+* `"IPOnDemand"`: تا زمانی که یک قانون مبتنی بر IP وجود دارد، V2Ray بلافاصله دامنه را به IP حل خواهد کرد.
+
+> `قوانین`: \ [[RuleObject](#ruleobject)\]
+
+An array of rules. For each inbound connection, V2Ray tries these rules from top down one by one. If a rule takes effect, the connection will be routed to the `outboundTag` (or `balancerTag`, V2Ray 4.4+) of the rule.
+
+> `balancers`: \[ [BalancerObject](#balancerobject) \]
+
+(V2Ray 4.4+) An array of load balancers. When a routing rule points to a load balancer, the balancer will select an outbound based on configuration. Then traffic will be sent to that outbound.
+
+### RuleObject
 
 ```javascript
 {
@@ -53,10 +53,10 @@ Configuration for each rule:
     "fe80::/10",
     "geoip:cn"
   ],
-  "port": "0-100",
+  "port": "53,443,1000-2000",
   "network": "tcp",
   "source": [
-    "10.0.0.1",
+    "10.0.0.1"
   ],
   "user": [
     "love@v2ray.com"
@@ -65,42 +65,115 @@ Configuration for each rule:
     "tag-vmess"
   ],
   "protocol":["http", "tls", "bittorrent"],
-  "outboundTag": "direct"
+  "outboundTag": "direct",
+  "balancerTag": "balancer"
 }
 ```
 
-Where:
+{% hint style='info' %}
 
-* `type`: The only valid value for now is `"field"`.
-* `domain`: An array of domains. There are four formats: 
-  * Substring: If this string matches any part of the targeting domain, this rule takes effet. Example: rule `"sina.com"` matches targeting domain `"sina.com"`, `"sina.com.cn"` and `"www.sina.com"`, but not `"sina.cn"`.
-  * Regular expression: Begining with `"regexp:"`, the rest is a regular expression. When the regexp matches targeting domain, this rule takes effect. Example: rule `"regexp:\\.goo.*\\.com$"` matches `"www.google.com"` and `"fonts.googleapis.com"`, but not `"google.com"`.
-  * Subdomain (recommended): Begining with `"domain:"` and the rest is a domain. When the targeting domain is exactly the value, or is a subdomain of the value, this rule takes effect. Example: rule `"domain:v2ray.com"` matches `"www.v2ray.com"`, `"v2ray.com"`, but not `"xv2ray.com"`.
-  * Full domain (V2Ray 3.36+): Begining with `"full:"` and the rest is a domain. When the targeting domain is exactly the value, the rule takes effect. Example: rule `"domain:v2ray.com"` matches `"v2ray.com"`, but not `"www.v2ray.com"`.
-  * Special value `"geosite:cn"`: a list of [common domains in China](https://www.v2ray.com/links/chinasites/).
-  * Special value `"geosite:speedtest"` (V2Ray 3.32+): list of all public servers of speedtest.net.
-  * Domains from file (V2Ray 3.23+): Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
-* `ip`: An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. There are three formats: 
-  * IP: such as `"127.0.0.1"`.
-  * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): such as `"127.0.0.0/8"`.
-  * GeoIP: such as `"geoip:cn"`. It begins with `geoip:` (lower case) and followed by two letter of country code. 
-    * Special value `"geoip:private"`: for all private addresses such as `127.0.0.1`.
-  * IPs from file (V2Ray 3.23+): Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geoip.dat`. The tag must exist in the file.
-* `port`：Port range. Formats are: 
-  * `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
-  * `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
-* `network`: Choices are `"tcp"`, `"udp"`, or `"tcp,udp"`. When the connection has in the chosen network, this rule take effect.
-* `source`: An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
-* `user`: An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now Shadowsocks and VMess support user with email.
-* `inboundTag`: An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
-* `protocol`: An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. 
-  * Available values are `"http"`,`"tls"`,`"bittorrent"`. All lower-cased.
-  * `sniffing` in inbound proxy must be enabled in advance.
-* `outboundTag` [Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
+When multiple fields are specified, these fields have to be all satisfied, in order to make the rule effective. If you need both `domain` and `ip` rules, it is highly likely you need put them into separate rules.
 
-## Tips {#tips}
+{% endhint %}
 
-* When multiple attributes of the rule are specified, they must be satisfied together, in order to make the rule effective. 
-  * If you want to route connections by `domain` or `ip`, you probably need multiple rules, instead of one rule containing both `domain` and `ip`.
-* `"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
-* Among all domain matching modes, subdomain (beginning with "domain:") is recommended.
+> `type`: "field"
+
+The only valid value for now is `"field"`.
+
+> `domain`: \[ string \]
+
+An array of domains. Available formats are:
+
+* متن ساده: اگر این رشته با هر بخش از دامنه هدفمندی منطبق باشد، این قانون به عهده می گیرد. مثال: rule `"sina.com"` مطابقت دامنه `"sina.com"`، `"sina.com.cn"` و `"www.sina.com"`، اما نه `"sina.cn"`.
+* عبارت منظم: شروع با `"regexp:"`، بقیه یک عبارت منظم است. هنگامی که Regexp با هدف دامنه مطابقت می کند، این قانون به اجرا در می آید. مثال: rule `"regexp: \\. goo. * \\. com $"` برابر `"www.google.com"` و `"fonts.googleapis.com"`، اما نه `"google.com"`.
+* Subdomain (توصیه می شود): شروع با `"domain:"` و بقیه یک دامنه است. هنگامی که دامنه هدفمند دقیقا همان مقدار است یا یک زیر دامنه از مقدار است، این قانون در حال اجرا است. مثال: قانون `"دامنه: v2ray.com"` مسابقه `"www.v2ray.com"`، `"v2ray.com"`، اما نه `"xv2ray.com"`.
+* دامنه کامل: شروع با `"full:"` و بقیه یک دامنه است. هنگامی که دامنه هدفمند دقیقا همان ارزش است، این قانون اثر می گذارد. مثال: قانون `"دامنه: v2ray.com"` مطابق با `"v2ray.com"`، اما نه `"www.v2ray.com"`.
+* Pre-defined domain list: Begining with `"geosite:"` and the rest is a name, such as `geosite:google` or `geosite:cn`. See [Pre-defined domain list](#pre-defined-domain-lists) for more detail.
+* Domains from file: Such as `"ext:file:tag"`. The value must begin with `ext:` (lowercase), and followed by filename and tag. The file is placed in [resource directory](env.md#location-of-v2ray-asset), and has the same format of `geosite.dat`. The tag must exist in the file.
+
+> `ip`: \[string\]
+
+An array of IP ranges. When the targeting IP is in one of the ranges, this rule takes effect. Available formats:
+
+* IP: مانند `"127.0.0.1"`.
+* [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): مانند `"127.0.0.0/8"`.
+* GeoIP: مانند `"geoip: cn"`. با شروع می شود `geoip:` (حروف کوچک) و دو حرف از کد کشور را دنبال می کند. 
+  * مقدار ویژه `"geoip: خصوصی"`: برای تمام آدرس های خصوصی مانند `127.0.0.1`.
+* IP ها از فایل: مانند `"ext: file: tag"`. مقدار باید با `ext:` (کوچک) شروع شود و با نام فایل و تگ همراه است. فایل در قرار داده شده [دایرکتوری منبع](env.md#location-of-v2ray-asset)، و همان فرمت از `geoip.dat`. برچسب باید در فایل موجود باشد.
+
+{% hint style='info' %}
+
+`"ext:geoip.dat:cn"` is equivalent to `"geoip:cn"`.
+
+{% endhint %}
+
+> `port`：number | string
+
+Port range. Formats are:
+
+* `"a-b"`: Both `a` and `b` are positive integers and less than 65536. When the targeting port is in [`a`, `b`), this rule takes effect.
+* `a`: `a` is a positive integer, and less than 65536. When the targeting port is `a`, this rule takes effect.
+* Mix of the two above, separated by ",". Such as `"53,443,1000-2000"`.
+
+> `network`: "tcp" | "udp" | "tcp,udp"
+
+When the connection has in the chosen network, this rule take effect.
+
+> `source`: \[string\]
+
+An array of IP ranges. Same format as `ip`. When the source IP of the connection is in the IP range, this rule takes effect.
+
+> `user`: \[string\]
+
+An array of email address. When the inbound connection uses an user account of the email address, this rule takes effect. For now Shadowsocks and VMess support user with email.
+
+> `inboundTag`: \[string\]
+
+An array of string as inbound proxy tags. When the connection comes from one of the specified inbound proxy, this rule takes effect.
+
+> `protocol`: \[ "http" | "tls" | "bittorrent" \]
+
+An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. To recognize the protocol of a connection, one must enable `sniffing` option in inbound proxy.
+
+> `outboundTag` string
+
+[Tag of the outbound](protocols.md) that the connection will be sent to, if this rule take effect.
+
+> `balancerTag`: string
+
+Tag of an load balancer. Then this rule takes effect, V2Ray will use the balancer to select an outbound. Either `outboundTag` or `balancerTag` must be specified. When both are specified, `outboundTag` takes priority.
+
+### BalancerObject
+
+Configuration for a load balancer. When a load balancer takes effective, it selects one outbound from matching outbounds. This outbound will be used for send out-going traffic.
+
+```javascript
+{
+  "tag": "balancer",
+  "selector": []
+}
+```
+
+> `tag`: string
+
+Tag of this `BalancerObject`, to be matched from `balancerTag` in `RuleObject`.
+
+> `selector`: \[ string \]
+
+An array of strings. These strings are used to select outbounds with prefix matching. For example, with the following outbound tags: `[ "a", "ab", "c", "ba" ]`，selector `["a"]` matches `[ "a", "ab" ]`.
+
+When multiple outbounds are selected, load balancer for now picks one final outbound at random.
+
+## Pre-defined domain lists
+
+This is a domain lists maintained by [domain-list-community](https://github.com/v2ray/domain-list-community) project. It provides a file named `geosite.dat` for some predefined domain lists. Notably:
+
+* `category-ads`: Common ads domains.
+* `category-ads-all`: Common ads domains and ads providers' domains.
+* `cn`: Equivalent to an union of `geolocation-cn` and `tld-cn`.
+* `google`: All Google domains.
+* `facebook`: All Facebook domains.
+* `geolocation-cn`: Common domains that serve in China.
+* `geolocation-!cn`: Common domains that don't serve in China
+* `speedtest`: All domains used by Speedtest.
+* `tld-cn`: All .cn and .中国 domains.

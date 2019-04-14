@@ -1,12 +1,15 @@
+---
+refcn: chapter_02/protocols/blackhole
+refen: configuration/protocols/blackhole
+---
 # Blackhole
 
-[![English](../../resources/english.svg)](https://www.v2ray.com/en/configuration/protocols/blackhole.html) [![Chinese](../../resources/chinese.svg)](https://www.v2ray.com/chapter_02/protocols/blackhole.html) [![German](../../resources/german.svg)](https://www.v2ray.com/de/configuration/protocols/blackhole.html) [![Russian](../../resources/russian.svg)](https://www.v2ray.com/ru/configuration/protocols/blackhole.html)
+* نام: `blackhole`
+* نوع: خروجی
 
-Blackhole is a protocol for outbound connections. It blocks all connections with pre-defined responses. Combined with [Routing](../routing.md), this can be used for blocking access to some websites.
+Blackhole یک پروتکل برای ارتباطات خروجی است. این همه اتصالات با پاسخ های از پیش تعیین شده را مسدود می کند. همراه با [مسیریابی](../routing.md)، این می تواند برای جلوگیری از دسترسی به برخی از وب سایت ها استفاده شود.
 
-* Name: blackhole
-* Type: Outbound
-* Configuration:
+## ConfigurationObject
 
 ```javascript
 {
@@ -16,9 +19,21 @@ Blackhole is a protocol for outbound connections. It blocks all connections with
 }
 ```
 
-Where:
+> `response`: [ResponseObject](#responseobject)
 
-* `response`: Pre-defined response. Blockhole will send (if any) pre-defined data immediately for any connection passed to it and close the connection. 
-  * `type`: Type of the response, available options are: 
-    * `"none"`: Default value. Empty response.
-    * `"http"`: A valid HTTP 403 response.
+پاسخ از پیش تعیین شده Blockhole بلافاصله برای هر ارتباطی که به آن انتقال داده می شود (اگر داده شده است) داده شود و اتصال را متوقف کند.
+
+### ResponseObject
+
+```javascript
+{
+  "type": "none"
+}
+```
+
+> `type`: "none" | "http"
+
+نوع پاسخ، گزینه های موجود عبارتند از:
+
+* `"none"`: مقدار پیش فرض. پاسخ خالی
+* `"http"`: پاسخ معتبر HTTP 403.
