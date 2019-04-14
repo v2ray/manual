@@ -83,6 +83,8 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 
 ## 在线工具 {#online}
 
+> [VeekXT v2ray配置生成 (4.x 版本适配)](https://www.veekxt.com/utils/v2ray_gen)
+
 > [配置生成器](https://htfy96.github.io/v2ray-config-gen/)
 
 V2Ray 配置生成工具
