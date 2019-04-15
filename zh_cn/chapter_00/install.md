@@ -93,15 +93,28 @@ go.sh 支持如下参数，可在手动安装时根据实际情况调整：
 
 ## Docker {#docker}
 
-V2Ray 提供了两个预编译的 Docker image：
+### 安装Docker
+[打开Docker官方安装文档](https://docs.docker.com/install/)，在左侧菜单中选择你的系统（平台），按照提示完成Docker的安装和配置。
+
+### Docker镜像
+V2Ray提供了两个Docker镜像：
 
 * [v2ray/official](https://hub.docker.com/r/v2ray/official/): 包含最新发布的版本，每周跟随新版本更新；
 * [v2ray/dev](https://hub.docker.com/r/v2ray/dev/): 包含由最新的代码编译而成的程序文件，随代码库更新；
 
-两个 image 的文件结构相同：
+两个镜像的文件结构相同：
 
-* /etc/v2ray/config.json: 配置文件
-* /usr/bin/v2ray/v2ray: V2Ray 主程序
-* /usr/bin/v2ray/v2ctl: V2Ray 辅助工具
-* /usr/bin/v2ray/geoip.dat: IP 数据文件
-* /usr/bin/v2ray/geosite.dat: 域名数据文件
+* `/etc/v2ray/config.json`: 配置文件
+* `/usr/bin/v2ray/v2ray`: V2Ray 主程序
+* `/usr/bin/v2ray/v2ctl`: V2Ray 辅助工具
+* `/usr/bin/v2ray/geoip.dat`: IP数据文件
+* `/usr/bin/v2ray/geosite.dat`: 域名数据文件
+
+### 运行
+
+Docker容器运行时可以[映射文件](https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only)和[映射端口](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose)，你可以方便的设置配置文件或IP数据文件，也可以随意指定端口。如果对Docker不是很了解也没关系，新建一个**v2ray.json**的文件，复制[新手上路](../chapter_00/start.html)中的配置并粘贴到v2ray.json中，修改为你的V2Ray信息后保存，在v2ray.json目录中执行下面的命令就可以启动V2Ray了：
+
+```
+docker run -d -p 8010:1080 -v `pwd`/v2ray.json:/etc/v2ray/config.json --restart=always --name v2ray v2ray/official
+```
+> 提示：`1080`是容器内部端口，`8010`才是最终使用的端口。`1080`要与配置文件中一致，`8010`可以设为任何可用端口。
