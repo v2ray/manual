@@ -9,19 +9,19 @@ refen: awesome/tools
 
 > V2RayW <img width="20" src="/resources/win.svg">
 
-V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。下载：[Github](https://github.com/Cenmrev/V2RayW)
+V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。下载：[GitHub](https://github.com/Cenmrev/V2RayW)
 
 > V2RayN <img width="20" src="/resources/win.svg">
 
-V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。下载：[Github](https://github.com/2dust/v2rayN)
+V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。下载：[GitHub](https://github.com/2dust/v2rayN)
 
 > V2RayS <img width="20" src="/resources/win.svg">
 
-下载：[Github](https://github.com/Shinlor/V2RayS)
+下载：[GitHub](https://github.com/Shinlor/V2RayS)
 
 > Clash for Windows <img width="20" src="/resources/win.svg">
 
-下载：[Github](https://github.com/Fndroid/clash_for_windows_pkg)
+下载：[GitHub](https://github.com/Fndroid/clash_for_windows_pkg)
 
 > V2RayX <img width="20" src="/resources/apple.svg">
 
@@ -29,15 +29,15 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 > V2RayU <img width="20" src="/resources/apple.svg">
 
-下载：[Github](https://github.com/yanue/V2rayU)
+下载：[GitHub](https://github.com/yanue/V2rayU)
 
 > V2RayC <img width="20" src="/resources/apple.svg">
 
-下载：[Github](https://github.com/gssdromen/V2RayC)
+下载：[GitHub](https://github.com/gssdromen/V2RayC)
 
 > ClashX <img width="20" src="/resources/apple.svg">
 
-下载：[Github](https://github.com/yichengchen/clashX)
+下载：[GitHub](https://github.com/yichengchen/clashX)
 
 > Kitsunebi <img width="20" src="/resources/ios.svg">
 
