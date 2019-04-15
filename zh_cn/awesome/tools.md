@@ -83,10 +83,6 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 
 ## 在线工具/资源 {#online}
 
-> [vTemplate 项目仓库](https://github.com/KiriKira/vTemplate)
-
-一个 V2Ray 配置文件模板收集仓库
-
 > [VeekXT v2ray配置生成 (4.x 版本适配)](https://www.veekxt.com/utils/v2ray_gen)
 
 > [V2Ray 配置生成器](https://htfy96.github.io/v2ray-config-gen/)
@@ -94,3 +90,7 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 > [UUID Generator](https://www.uuidgenerator.net/)
 
 VMess User ID 生成工具
+
+> [vTemplate 项目仓库](https://github.com/KiriKira/vTemplate)
+
+一个 V2Ray 配置文件模板收集仓库
