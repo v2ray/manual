@@ -2,6 +2,7 @@
 refcn: chapter_02/mux
 refen: configuration/mux
 ---
+
 # 멀티플렉싱
 
 멀티플렉싱 또는 멀티플렉싱은 다중 가상 TCP 연결에 하나의 물리적 TCP 연결을 사용하는 것입니다.
