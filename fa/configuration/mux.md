@@ -2,6 +2,7 @@
 refcn: chapter_02/mux
 refen: configuration/mux
 ---
+
 # چندگانه شدن
 
 Multiplexing، یا Mux، استفاده از یک اتصال TCP فیزیکی برای چندین اتصال TCP مجازی است.
