@@ -2,6 +2,7 @@
 refcn: chapter_02/protocols/dns
 refen: configuration/protocols/dns
 ---
+
 # DNS
 
 * Name: `dns`
