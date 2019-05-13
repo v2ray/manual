@@ -2,6 +2,7 @@
 refcn: chapter_00/install
 refen: welcome/install
 ---
+
 # Загрузка и установка
 
 ## Платформа {#platform}
