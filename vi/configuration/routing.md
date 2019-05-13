@@ -2,6 +2,7 @@
 refcn: chapter_02/03_routing
 refen: configuration/routing
 ---
+
 # định tuyến
 
 V2Ray có cơ chế định tuyến nội bộ. Nó định tuyến các kết nối gửi đến nhiều hướng đi khác nhau dựa trên các quy tắc. Một tình huống phổ biến là chia lưu lượng truy cập theo quốc gia. V2Ray có thể phát hiện quốc gia mục tiêu (theo địa lý IP) của một kết nối và sau đó gửi kết nối tới proxy đi tương ứng.
