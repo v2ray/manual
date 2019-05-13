@@ -2,6 +2,7 @@
 refcn: chapter_00/workflow
 refen: welcome/workflow
 ---
+
 # Quy trình làm việc
 
 ## Máy chủ đơn
