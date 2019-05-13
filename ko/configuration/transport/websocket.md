@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/websocket
 refen: configuration/transport/websocket
 ---
+
 # 웹 소켓
 
 표준 WebSocket을 사용하여 데이터를 전송하십시오. Websocket 연결은 Nginx와 같은 HTTP 서버에 의해 프록시 될 수 있습니다.
