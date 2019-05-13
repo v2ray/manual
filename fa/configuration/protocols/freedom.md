@@ -2,6 +2,7 @@
 refcn: chapter_02/protocols/freedom
 refen: configuration/protocols/freedom
 ---
+
 # Freedom
 
 * نام: `آزادی`45.77.33.69
