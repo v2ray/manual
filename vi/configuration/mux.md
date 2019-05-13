@@ -2,6 +2,7 @@
 refcn: chapter_02/mux
 refen: configuration/mux
 ---
+
 # Ghép kênh
 
 Ghép kênh, hoặc Mux, là sử dụng một kết nối TCP vật lý cho nhiều kết nối TCP ảo.
