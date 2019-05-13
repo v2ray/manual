@@ -2,6 +2,7 @@
 refcn: chapter_02/index
 refen: configuration/index
 ---
+
 # پیکربندی
 
 V2Ray با استفاده از [پروتوبف پیکربندی مبتنی بر](https://developers.google.com/protocol-buffers/). به عنوان فرمت protobuf کمتر قابل خواندن است، V2Ray همچنین از پیکربندی در JSON پشتیبانی می کند. قبل از اجرای V2Ray، به طور خودکار پیکربندی JSON را به protobuf تبدیل می کند. این گفته می شود، دیگر فرمت های پیکربندی ممکن است در furture معرفی شود.
