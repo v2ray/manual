@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/domainsocket
 refen: configuration/transport/domainsocket
 ---
+
 # 도메인 소켓 전송
 
 Domain Socket은 표준 Unix 도메인 소켓을 사용하여 데이터를 전송합니다. 도메인 소켓은 시스템 interal tranfer 채널입니다. 네트워크 버퍼에 용지 걸림이 발생하지 않으며 로컬 루프백 네트워크를 통해 전송하는 것보다 약간 더 빠를 수도 있습니다.
