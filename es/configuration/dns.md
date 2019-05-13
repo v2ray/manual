@@ -2,6 +2,7 @@
 refcn: chapter_02/04_dns
 refen: configuration/dns
 ---
+
 # DNS
 
 V2Ray has an internal DNS server which provides DNS relay for other components.
