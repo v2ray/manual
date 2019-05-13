@@ -2,6 +2,7 @@
 refcn: chapter_02/04_dns
 refen: configuration/dns
 ---
+
 # DNS
 
 V2Ray دارای یک سرور DNS داخلی است که رله DNS را برای اجزای دیگر فراهم می کند.
