@@ -2,6 +2,7 @@
 refcn: chapter_02/01_overview
 refen: configuration/overview
 ---
+
 # Tổng quan về cấu hình
 
 V2Ray chia sẻ cùng một cấu trúc cấu hình giữa phía máy chủ và phía máy khách được hiển thị như bên dưới. Cấu hình máy chủ và máy khách khác nhau trong các phần cụ thể.
