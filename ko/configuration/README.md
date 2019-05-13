@@ -2,6 +2,7 @@
 refcn: chapter_02/index
 refen: configuration/index
 ---
+
 # 구성
 
 V2Ray는 [protobuf](https://developers.google.com/protocol-buffers/)기반 구성을 사용합니다. protobuf 형식은 읽기 쉽지 않기 때문에 V2Ray는 JSON에서 구성을 지원합니다. V2Ray가 실행되기 전에 JSON 구성이 자동으로 protobuf로 변환됩니다. 즉, 다른 구성 형식이 도입 될 수 있습니다.
