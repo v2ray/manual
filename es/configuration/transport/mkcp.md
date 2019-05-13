@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/mkcp
 refen: configuration/transport/mkcp
 ---
+
 # mKCP Transport
 
 mKCP is a reliable stream transport. It is an UDP based protocol. mKCP sends more traffic for lower latency. To transfer the same amount of data, mKCP usually requires more throughput than TCP does.
