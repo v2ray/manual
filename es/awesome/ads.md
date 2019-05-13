@@ -2,6 +2,7 @@
 refcn: awesome/ads
 refen: awesome/ads
 ---
+
 # Some Advertisement
 
 The following online services may help you better use Project V. These services are provided by third party. They are not directly releated to Project V.
@@ -43,10 +44,6 @@ V2Ray support (beta)
 > [Lanan](https://xn--sjt174g.com/)
 
 V2Ray based VPN service. Coupon code: v2ray
-
-> [多数派](https://dspi.io/aff.php?aff=7)
-
-New V2Ray based VPN service.
 
 > [V2rayPro](https://myv2.us/)
 
