@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/mkcp
 refen: configuration/transport/mkcp
 ---
+
 # mKCP 전송
 
 mKCP는 안정적인 스트림 전송입니다. UDP 기반 프로토콜입니다. mKCP는 더 낮은 대기 시간을 위해 더 많은 트래픽을 전송합니다. 동일한 양의 데이터를 전송하려면 일반적으로 mKCP가 TCP보다 많은 처리량이 필요합니다.
