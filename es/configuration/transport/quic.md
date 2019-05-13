@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/quic
 refen: configuration/transport/quic
 ---
+
 # QUIC
 
 QUIC, or Quick UDP Internet Connection, is a multiplexing transport based on UDP, initially designed, implemented, and deployed by Google.
