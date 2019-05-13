@@ -2,6 +2,7 @@
 refcn: chapter_02/05_transport
 refen: configuration/transport
 ---
+
 # Cài đặt Giao thông
 
 Giao thông vận tải là cách V2Ray gửi và nhận dữ liệu từ các đồng nghiệp của nó. The responsibility of a transport is to reliably transfer data to a peer. Thông thường một kết nối có các kết nối phù hợp trên cả hai điểm cuối. Ví dụ, nếu một V2Ray outbound sử dụng WebSocket như là vận chuyển của nó, thì nó nói đến cũng phải sử dụng WebSocket, nếu không kết nối không thể được thiết lập.
