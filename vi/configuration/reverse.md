@@ -2,6 +2,7 @@
 refcn: chapter_02/reverse
 refen: configuration/reverse
 ---
+
 # Proxy ngược
 
 Proxy ngược là một tính năng tùy chọn trong V2Ray. Nó chuyển hướng lưu lượng truy cập từ máy chủ đến máy khách. Vì vậy, được gọi là "Reverse" proxy.
