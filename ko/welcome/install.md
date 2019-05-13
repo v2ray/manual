@@ -2,6 +2,7 @@
 refcn: chapter_00/install
 refen: welcome/install
 ---
+
 # 다운로드 & 설치
 
 ## 플랫폼 {#platform}
