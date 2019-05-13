@@ -45,10 +45,6 @@ V2Ray support (beta)
 
 V2Ray based VPN service. Coupon code: v2ray
 
-> [多数派](https://dspi.io/aff.php?aff=7)
-
-New V2Ray based VPN service.
-
 > [V2rayPro](https://myv2.us/)
 
 VPN service based on V2Ray. Coupon code: v2ray.com
