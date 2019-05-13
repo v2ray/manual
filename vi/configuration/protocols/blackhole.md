@@ -2,6 +2,7 @@
 refcn: chapter_02/protocols/blackhole
 refen: configuration/protocols/blackhole
 ---
+
 # Blackhole
 
 * Tên: `blackhole`
