@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/websocket
 refen: configuration/transport/websocket
 ---
+
 # وبسایت
 
 از WebSocket استاندارد برای انتقال اطلاعات استفاده کنید. اتصالات Websocket می تواند توسط HTTP سرور مانند Nginx پروکسی.
