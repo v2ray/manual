@@ -2,6 +2,7 @@
 refcn: chapter_02/stats
 refen: configuration/stats
 ---
+
 # Statistics
 
 V2Ray provides some information about its internals.
