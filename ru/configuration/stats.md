@@ -2,6 +2,7 @@
 refcn: chapter_02/stats
 refen: configuration/stats
 ---
+
 # Статистика
 
 V2Ray предоставляет информацию о своём состоянии.
