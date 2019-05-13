@@ -2,6 +2,7 @@
 refcn: chapter_02/api
 refen: configuration/api
 ---
+
 # API
 
 V2Ray cung cấp một số API để truy cập từ xa. Các API này dựa trên [gRPC](https://grpc.io/).
