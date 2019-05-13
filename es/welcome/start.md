@@ -2,6 +2,7 @@
 refcn: chapter_00/start
 refen: welcome/start
 ---
+
 # Quick Start
 
 You need to configure V2Ray after installing it. Here is a quick configuration for a demo run. Please see [configuration overview](../configuration/overview.md) for more advanced setup.
