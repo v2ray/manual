@@ -60,7 +60,7 @@ Download: [iTunes](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8
 
 Pharos Pro is a generic proxy application that supports Trojan, VMess, SS, SS-Sampleobfs, SSR.
 
-Download: [iTunes](https://itunes.apple.com/app/pharos-pro/id1456610173?ls=1&mt=8) | [GitHub](https://github.com/PharosVip/Pharos-Android-Test)
+Download: [iTunes](https://itunes.apple.com/app/pharos-pro/id1456610173&mt=8) 
 
 > Pepi (was ShadowRay) <img width="20" src="/resources/ios.svg" />
 
