@@ -59,6 +59,12 @@ Shadowrocket 是一个通用的 iOS VPN 应用，它支持众多协议，如 Sha
 
 下载：[iTunes](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
 
+> Pharos Pro <img width="20" src="/resources/ios.svg"> <img width="20" src="/resources/android.svg">
+
+Pharos Pro 是一个通用的代理应用，它支持 Trojan、VMess、SS、SS-SampleObfs、SSR。
+
+下载：[iTunes](https://itunes.apple.com/app/pharos-pro/id1456610173?ls=1&mt=8) | [GitHub](https://github.com/PharosVip/Pharos-Android-Test)
+
 > Pepi（原名ShadowRay）<img width="20" src="/resources/ios.svg">
 
 Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 连接，并与 V2Ray 服务器通信。
