@@ -56,6 +56,12 @@ Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadow
 
 Download: [iTunes](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
 
+> Pharos Pro <img width="20" src="/resources/ios.svg"> 
+	
+Pharos Pro is a generic proxy application that supports Trojan, VMess, SS, SS-Sampleobfs, SSR.
+	
+Download: [iTunes](https://itunes.apple.com/app/pharos-pro/id1456610173?mt=8) 
+
 > Pepi (was ShadowRay) <img width="20" src="/resources/ios.svg" />
 
 Pepi is V2Ray compatible app. Is is able create VPN connections based on VMess protocol, and communicate with any V2Ray servers.
