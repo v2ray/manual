@@ -2,6 +2,7 @@
 refcn: chapter_00/install
 refen: welcome/install
 ---
+
 # Tải xuống & Cài đặt
 
 ## Nền tảng {#platform}

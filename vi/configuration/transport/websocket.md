@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/websocket
 refen: configuration/transport/websocket
 ---
+
 # WebSocket
 
 Sử dụng WebSocket chuẩn để truyền tải dữ liệu. Các kết nối Websocket có thể được proxy của Nginx ủy nhiệm.

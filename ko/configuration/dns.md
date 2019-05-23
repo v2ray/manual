@@ -2,6 +2,7 @@
 refcn: chapter_02/04_dns
 refen: configuration/dns
 ---
+
 # DNS
 
 V2Ray에는 다른 구성 요소에 대한 DNS 릴레이를 제공하는 내부 DNS 서버가 있습니다.

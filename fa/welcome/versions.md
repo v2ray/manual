@@ -2,6 +2,7 @@
 refcn: chapter_00/01_versions
 refen: welcome/versions
 ---
+
 # تاریخچه نسخه
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
@@ -11,6 +12,7 @@ This page lists regular releases with feature updates. If a Github release doesn
 * Port list in routing rules now supports mixed format.
 * Updated `geosite` information in routing, and description for static hosts in DNS.
 * Option to not use system root CAs for TLS handshake.
+* New routing rule for traffic attributes.
 
 ## 2019.02.22 v4.17
 

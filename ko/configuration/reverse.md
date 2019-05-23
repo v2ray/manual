@@ -2,6 +2,7 @@
 refcn: chapter_02/reverse
 refen: configuration/reverse
 ---
+
 # 역방향 프록시
 
 역방향 프록시는 V2Ray의 선택적 기능입니다. 서버에서 클라이언트로 트래픽을 리디렉션합니다. 따라서 "역방향"프록 싱이라고합니다.

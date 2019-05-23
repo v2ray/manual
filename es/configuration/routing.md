@@ -2,6 +2,7 @@
 refcn: chapter_02/03_routing
 refen: configuration/routing
 ---
+
 # Routing
 
 V2Ray has an internal routing mechanism. It routes inbound connections to various outbound based on rules. A common scenario is to split traffic by country. V2Ray can detect target country (by Geo IP) of a connection, and sends then connection to corresponding outbound proxy.
@@ -65,6 +66,7 @@ An array of rules. For each inbound connection, V2Ray tries these rules from top
     "tag-vmess"
   ],
   "protocol":["http", "tls", "bittorrent"],
+  "attrs": "attrs[':method'] == 'GET'",
   "outboundTag": "direct",
   "balancerTag": "balancer"
 }
@@ -134,6 +136,20 @@ An array of string as inbound proxy tags. When the connection comes from one of 
 > `protocol`: \[ "http" | "tls" | "bittorrent" \]
 
 An array of string as protocol types. When the connection uses one of the protocols, this rule takes effect. To recognize the protocol of a connection, one must enable `sniffing` option in inbound proxy.
+
+> `attrs`: string
+
+(V2Ray 4.18+) A Starlark script, used for detecting traffic attributes. When this script returns true, this rule takes effect.
+
+[Starlark](https://github.com/bazelbuild/starlark) is a subset of Python. The script takes a global varible named `attrs`. It contains all attributes of the traffic.
+
+At the moment, only http inbound sets `attrs`.
+
+Examples:
+
+* Detect HTTP GET: `"attrs[':method'] == 'GET'"`
+* Detect HTTP Path: `"attrs[':path'].startswith('/test')"`
+* Detect Content Type: `"attrs['accept'].index('text/html') >= 0"`
 
 > `outboundTag` string
 

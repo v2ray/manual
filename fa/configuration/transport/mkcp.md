@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/mkcp
 refen: configuration/transport/mkcp
 ---
+
 # mKCP حمل و نقل
 
 mKCP حمل و نقل قابل اعتماد است. این یک پروتکل UDP است. mKCP ترافیک بیشتری برای زمان تاخیر پایین می فرستد. برای انتقال همان مقدار داده ها، mKCP معمولا نیاز به توان بیشتر از TCP دارد.

@@ -2,6 +2,7 @@
 refcn: chapter_00/faq
 refen: welcome/faq
 ---
+
 # Câu hỏi thường gặp (FAQ)
 
 ## Sử dụng V2Ray

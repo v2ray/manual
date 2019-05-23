@@ -2,6 +2,7 @@
 refcn: chapter_02/index
 refen: configuration/index
 ---
+
 # Cấu hình
 
 V2Ray sử dụng [cấu hình dựa trên protobuf](https://developers.google.com/protocol-buffers/). Vì định dạng protobuf ít có thể đọc được, V2Ray cũng hỗ trợ cấu hình trong JSON. Trước khi V2Ray chạy, nó sẽ tự động chuyển đổi cấu hình JSON thành protobuf. Điều đó đang được nói, các định dạng cấu hình khác có thể được giới thiệu trong furture.

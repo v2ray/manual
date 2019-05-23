@@ -2,9 +2,10 @@
 refcn: chapter_02/protocols/shadowsocks
 refen: configuration/protocols/shadowsocks
 ---
+
 # Shadowsocks
 
-* نام: `shadowsocks`
+* Name: `shadowsocks`
 * نوع: ورودی / خروجی
 
 [Shadowsocks](https://www.shadowsocks.org/) پروتکل، برای هر دو اتصالات ورودی و خروجی.

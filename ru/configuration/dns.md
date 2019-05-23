@@ -2,6 +2,7 @@
 refcn: chapter_02/04_dns
 refen: configuration/dns
 ---
+
 # DNS
 
 V2Ray имеет внутренний DNS-сервер, используемый другими компонентами.

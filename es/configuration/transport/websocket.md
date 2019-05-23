@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/websocket
 refen: configuration/transport/websocket
 ---
+
 # WebSocket
 
 Use standard WebSocket to transport data. Websocket connections can be proxied by HTTP server such as Nginx.

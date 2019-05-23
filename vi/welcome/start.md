@@ -2,6 +2,7 @@
 refcn: chapter_00/start
 refen: welcome/start
 ---
+
 # Bắt đầu nhanh
 
 Bạn cần phải cấu hình V2Ray sau khi cài đặt nó. Đây là một cấu hình nhanh cho chạy thử. Vui lòng xem [tổng quan về cấu hình](../configuration/overview.md) để có thêm thiết lập nâng cao.

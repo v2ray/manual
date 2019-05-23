@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/mkcp
 refen: configuration/transport/mkcp
 ---
+
 # mKCP Transport
 
 mKCP là một phương tiện giao thông đáng tin cậy. Nó là một giao thức dựa trên UDP. mKCP gửi nhiều lưu lượng truy cập hơn cho độ trễ thấp hơn. Để chuyển cùng một lượng dữ liệu, mKCP thường đòi hỏi nhiều thông lượng hơn TCP.

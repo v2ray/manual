@@ -2,6 +2,7 @@
 refcn: chapter_02/policy
 refen: configuration/policy
 ---
+
 # 지역 정책
 
 로컬 정책은 현재의 V2Ray 인스턴스의 정책 설정 (예 : 연결 시간 초과)을 관리합니다. 정책은 각 사용자 수준 또는 전체 시스템에 적용 할 수 있습니다.

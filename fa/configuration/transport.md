@@ -2,6 +2,7 @@
 refcn: chapter_02/05_transport
 refen: configuration/transport
 ---
+
 # تنظیمات حمل و نقل
 
 حمل و نقل این است که چگونه V2Ray ارسال و دریافت داده ها از همتایان خود را. The responsibility of a transport is to reliably transfer data to a peer. معمولا یک ارتباط با ترانسپورت در هر دو نقطه انتهایی دارد. به عنوان مثال، اگر یک خروجی V2Ray با استفاده از WebSocket به عنوان حمل و نقل آن، ورودی آن صحبت می کند، همچنین باید از WebSocket استفاده کند، در غیر این صورت یک اتصال نمی تواند برقرار شود.

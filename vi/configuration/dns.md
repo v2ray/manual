@@ -2,6 +2,7 @@
 refcn: chapter_02/04_dns
 refen: configuration/dns
 ---
+
 # DNS
 
 V2Ray có một máy chủ DNS nội bộ cung cấp chuyển tiếp DNS cho các thành phần khác.

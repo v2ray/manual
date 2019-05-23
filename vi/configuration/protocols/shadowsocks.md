@@ -2,6 +2,7 @@
 refcn: chapter_02/protocols/shadowsocks
 refen: configuration/protocols/shadowsocks
 ---
+
 # Shadowsocks
 
 * Tên: `bóng`

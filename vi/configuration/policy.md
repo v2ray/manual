@@ -2,6 +2,7 @@
 refcn: chapter_02/policy
 refen: configuration/policy
 ---
+
 # Chính sách địa phương
 
 Chính sách cục bộ quản lý cài đặt chính sách của phiên bản V2Ray hiện tại, chẳng hạn như thời gian chờ kết nối. Các policys có thể được áp dụng cho mỗi cấp độ người dùng, hoặc toàn bộ hệ thống.

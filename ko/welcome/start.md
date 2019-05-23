@@ -2,6 +2,7 @@
 refcn: chapter_00/start
 refen: welcome/start
 ---
+
 # 빠른 시작
 
 V2Ray를 설치 한 후에 구성해야합니다. 다음은 데모 실행을위한 빠른 구성입니다. 고급 설정은 [구성 개요](../configuration/overview.md) 을 참조하십시오.

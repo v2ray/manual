@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/websocket
 refen: configuration/transport/websocket
 ---
+
 # WebSocket
 
 Использует стандартный WebSocket для передачи данных. Соединения Websocket могут быть проксифицированы HTTP-сервером, например Nginx.

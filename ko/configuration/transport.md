@@ -2,6 +2,7 @@
 refcn: chapter_02/05_transport
 refen: configuration/transport
 ---
+
 # 전송 설정
 
 전송은 V2Ray가 동료들과 데이터를주고받는 방법입니다. The responsibility of a transport is to reliably transfer data to a peer. 일반적으로 연결에는 양쪽 끝점에서 일치하는 전송이 있습니다. 예를 들어 V2Ray 아웃 바운드가 전송으로 WebSocket을 사용하는 경우 인바운드는 WebSocket을 사용해야하며, 그렇지 않으면 연결을 설정할 수 없습니다.

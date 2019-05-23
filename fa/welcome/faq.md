@@ -2,6 +2,7 @@
 refcn: chapter_00/faq
 refen: welcome/faq
 ---
+
 # سوالات متداول (FAQ)
 
 ## استفاده از V2Ray

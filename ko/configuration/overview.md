@@ -2,6 +2,7 @@
 refcn: chapter_02/01_overview
 refen: configuration/overview
 ---
+
 # 구성 개요
 
 V2Ray는 아래와 같이 서버 측과 클라이언트 측의 구성이 동일합니다. 서버 및 클라이언트 구성은 특정 섹션에서 다릅니다.

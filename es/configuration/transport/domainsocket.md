@@ -2,6 +2,7 @@
 refcn: chapter_02/transport/domainsocket
 refen: configuration/transport/domainsocket
 ---
+
 # Domain Socket Transport
 
 Domain Socket uses standard Unix domain socket to transport data. Domain socket is system interal tranfer channel. It doesn't jam network buffer and may be a bit faster than trasnferring through local loopback network.

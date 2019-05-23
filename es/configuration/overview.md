@@ -2,6 +2,7 @@
 refcn: chapter_02/01_overview
 refen: configuration/overview
 ---
+
 # Configuration Overview
 
 V2Ray shares a same structure of configuration between server side and client side shown as below. Server and client configurations are different in specific sections.

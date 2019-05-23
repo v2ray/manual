@@ -2,6 +2,7 @@
 refcn: awesome/ads
 refen: awesome/ads
 ---
+
 # Some Advertisement
 
 The following online services may help you better use Project V. These services are provided by third party. They are not directly releated to Project V.
@@ -25,6 +26,10 @@ VPS, web hosting
 > [ClouDNS](https://www.cloudns.net/aff/id/244749/)
 
 Domain registration, DNS, SSL certificate
+
+> [Bandwagon](https://bandwagonhost.com/aff.php?aff=44317)
+
+Well-known VPS provider. Low price for good product.
 
 ## VPN
 

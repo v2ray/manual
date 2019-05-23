@@ -2,6 +2,7 @@
 refcn: chapter_00/01_versions
 refen: welcome/versions
 ---
+
 # История версий
 
 На этой странице перечислены регулярные выпуски с обновлениями функций. Если релиз Github здесь не указан, он обычно содержит только исправления ошибок.
@@ -11,6 +12,7 @@ refen: welcome/versions
 * Port list in routing rules now supports mixed format.
 * Updated `geosite` information in routing, and description for static hosts in DNS.
 * Option to not use system root CAs for TLS handshake.
+* New routing rule for traffic attributes.
 
 ## 2019.02.22 v4.17
 
