@@ -26,7 +26,7 @@ Chúng tôi sử dụng một số kho lưu trữ cho các loại thảo luận 
 
 Dự án V cung cấp các nhóm sau cho các loại thảo luận khác nhau.
 
-* [Sử dụng](https://telegram.me/projectv2ray) 
+* [Sử dụng](https://t.me/v2fly_chat) 
   * Chỉ dành cho các chủ đề liên quan đến Project V.
 * [Khác](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
   * Đối với các chủ đề khác.
@@ -39,7 +39,7 @@ Tất cả các nhóm thảo luận đều cấm các chủ đề sau: nội dun
 
 {% endhint %}
 
-Ngoài ra, hãy làm theo [Thông báo dự án V](https://t.me/v2msg) để biết tin tức.
+Please also follow [Project V Announcement](https://t.me/v2fly) for news.
 
 ## Twitter
 
