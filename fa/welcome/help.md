@@ -26,7 +26,7 @@ refen: welcome/help
 
 پروژه V گروه های زیر را برای انواع مختلف بحث ها فراهم می کند.
 
-* [استفاده](https://telegram.me/projectv2ray) 
+* [استفاده](https://t.me/v2fly_chat) 
   * فقط برای موضوعات مرتبط با پروژه V.
 * [دیگران](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
   * برای موضوعات دیگر
@@ -39,7 +39,7 @@ refen: welcome/help
 
 {% endhint %}
 
-لطفا دنبال [پروژه V اطلاعیه](https://t.me/v2msg) برای اخبار.
+لطفا دنبال [پروژه V اطلاعیه](https://t.me/v2fly) برای اخبار.
 
 ## توییتر
 

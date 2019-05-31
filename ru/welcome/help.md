@@ -26,7 +26,7 @@ We uses several repositories for different type of discussions.
 
 Project V provides the following groups for different type of discussions.
 
-* [Использование](https://telegram.me/projectv2ray) 
+* [Использование](https://t.me/v2fly_chat) 
   * Only for Project V related topics.
 * [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
   * For other topics.
@@ -39,7 +39,7 @@ All discussion groups forbid the following topics: adult content, politics, hate
 
 {% endhint %}
 
-Please also follow [Project V Announcement](https://t.me/v2msg) for news.
+Please also follow [Project V Announcement](https://t.me/v2fly) for news.
 
 ## Twitter
 

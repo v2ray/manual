@@ -24,7 +24,7 @@ Project V 团队支持中文和英文，请选择你所熟悉的语言来提问�
 
 Project V 提供了下列讨论组，用于讨论不同类型的问题。
 
-* [使用](https://telegram.me/projectv2ray)
+* [使用](https://t.me/v2fly_chat)
   * 仅用于讨论 Project V 使用相关问题。
   * 严禁任何不相关的话题。
 * [日常](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg)
@@ -34,7 +34,7 @@ Project V 提供了下列讨论组，用于讨论不同类型的问题。
 Project V 的所有讨论组都不可以发布 18 禁、政治相关、仇恨言论，一旦发现立即封禁。
 {% endhint %}
 
-另外请关注 [Project V 官方公告](https://t.me/v2msg) 以获得最新资讯。
+另外请关注 [Project V 官方公告](https://t.me/v2fly) 以获得最新资讯。
 
 ## Twitter
 
