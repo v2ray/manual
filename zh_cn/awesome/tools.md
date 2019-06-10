@@ -81,6 +81,12 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 
 下载：[Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang) | [GitHub](https://github.com/2dust/v2rayNG)
 
+> Shadowfish <img width="20" src="/resources/sailfishos.svg">
+
+Shadowfish 是一个基于V2Ray 内核的 SailfishOS 应用， 它可以创建基于 VMess 或者 Shadowsocks 的 VPN 连接。Shadowfish 支持通过剪贴板导入 V2RayN 分享的配置。
+
+下载：[OpenRepos](https://openrepos.net/content/forthefreedom/jolla-settings-v2ray)
+
 ## 在线工具/资源 {#online}
 
 > VeekXT V2Ray配置生成

@@ -79,6 +79,12 @@ V2RayNG is an Android app based on V2Ray. It provides same feature set as V2Ray 
 
 Download: [Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang) | [GitHub](https://github.com/2dust/v2rayNG)
 
+> Shadowfish <img width="20" src="/resources/sailfishos.svg">
+
+Shadowfish is a SailfishOS app based on V2Ray, It supports VMess and Shadowsocks.
+
+Download: [OpenRepos](https://openrepos.net/content/forthefreedom/jolla-settings-v2ray)
+
 ## Online services
 
 > [Configuration generator](https://htfy96.github.io/v2ray-config-gen/)
