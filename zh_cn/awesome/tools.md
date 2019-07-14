@@ -39,6 +39,12 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 下载：[GitHub](https://github.com/yichengchen/clashX)
 
+> Qv2ray <img width="20" src="/resources/linux.svg"> 
+
+Qv2ray 是一个新开发的 v2ray 跨平台 (主打 GNU/Linux) 客户端，使用 Qt 编写，目前处于起步阶段。
+
+下载：[GitHub](https://github.com/lhy0403/Qv2ray)
+
 > Kitsunebi <img width="20" src="/resources/ios.svg">
 
 Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMess 或者 Shadowsocks 的 VPN 连接。Kitsunebi 支持导入和导出与 V2Ray 兼容的 JSON 配置。
