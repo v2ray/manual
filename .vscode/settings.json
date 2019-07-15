@@ -1,5 +1,10 @@
 // Place your settings in this file to overwrite default and user settings.
 {
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 140
+  "editor.wordWrapColumn": 140,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#4A1D3C",
+    "titleBar.activeBackground": "#682854",
+    "titleBar.activeForeground": "#FCF9FB"
+  }
 }
