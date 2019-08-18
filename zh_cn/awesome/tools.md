@@ -39,7 +39,7 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 下载：[GitHub](https://github.com/yichengchen/clashX)
 
-> Qv2ray <img width="20" src="/resources/linux.svg"> 
+> Qv2ray <img width="20" src="/resources/win.svg"> <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
 
 Qv2ray：v2ray 跨平台 GUI （MacOS, Windows, Linux），使用 Qt 编写。
 
