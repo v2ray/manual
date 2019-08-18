@@ -41,7 +41,7 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 > Qv2ray <img width="20" src="/resources/linux.svg"> 
 
-Qv2ray 是一个新开发的 v2ray 跨平台 (主打 GNU/Linux) 客户端，使用 Qt 编写，目前处于起步阶段。
+Qv2ray：v2ray 跨平台 GUI （MacOS, Windows, Linux），使用 Qt 编写。
 
 下载：[GitHub](https://github.com/lhy0403/Qv2ray)
 
