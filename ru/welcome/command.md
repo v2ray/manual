@@ -44,7 +44,7 @@ URI файла с настройками. Возможные варианты:
 
 ## V2Ctl
 
-V2Ctl is a collection of commandline tools. It runs in the following way:
+V2Ctl — это набор инструментов командной строки. Он работает следующим образом:
 
 ```bash
 v2ctl <command> <options>
@@ -52,7 +52,7 @@ v2ctl <command> <options>
 
 > `command`
 
-Subcommand. Available values are below:
+Доступные значения:
 
 * `api`: Invoke remote control commands in V2Ray instances.
 * `config`: Convert configuration from JSON format to protobuf.
