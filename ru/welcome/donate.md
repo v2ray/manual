@@ -9,9 +9,9 @@ V2Ray - некоммерческий проект. Исходный код и п
 
 Ваше пожертвование не имеет прямой связи с разработкой и обслуживанием Project V. Our development will not be influenced by your donation. Тем не менее, мы отправим благодарственное письмо каждому донору. Если вы не хотите получать такое письмо, оставьте записку в своем пожертвовании.
 
-For any doantion worth more than $50, you may choose one of the following:
+При жертвований более $50 предусмотрены такие плюшки:
 
-* Your name or your company log shown on our front page for one month.
+* Ваше имя или название компании висит на главной странице целый месяц.
 * Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
 
 ## Обычный способ {#usual-way}
@@ -20,7 +20,7 @@ For any doantion worth more than $50, you may choose one of the following:
 
 Вы можете сделать пожертвование через [внутренний перевод Paypal](https://www.paypal.me/ProjectV2Ray/25) или [кредитной картой](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
-Пожалуйста, обратите внимание, что Paypal взимает высокую комиссию за обслуживание. Любое пожертвование менее 1 доллара США не имеет смысла.
+Пожалуйста, обратите внимание, что Paypal берёт высокую комиссию за обслуживание. Пожертвование менее 1 USD не имеет смысла.
 
 > Patreon
 
@@ -40,19 +40,19 @@ For any doantion worth more than $50, you may choose one of the following:
 
 Адрес: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
 
-View stats or QR-Code [at BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
+Статистика и QR-код на [BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
 
 > Bitcoin Cash
 
-Address: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
+Адрес: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
 
-View stats or QR-Code [at BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
+Статистика и QR-код на [BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
 
 > Ethereum
 
-Address: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
+Адрес: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
 
-View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). You may also send the following ERC20 tokens to this address: OMG, REP, GNT, DGD
+Статистика и QR-код на [BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). А ещё туда можно отправить токены, поддерживающие ERC20: OMG, REP, GNT, и DGD
 
 > EOS
 
