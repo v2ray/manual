@@ -41,9 +41,11 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 > Qv2ray <img width="20" src="/resources/win.svg"> <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
 
-Qv2ray：v2ray 跨平台 GUI （MacOS, Windows, Linux），使用 Qt 编写。
+Qv2ray：使用 Qt 编写的 v2ray 跨平台 GUI （MacOS, Windows, Linux）支持连接导入和编辑
 
 下载：[GitHub](https://github.com/lhy0403/Qv2ray)
+
+官网：[https://lhy0403.github.io/Qv2ray](https://lhy0403.github.io/Qv2ray)
 
 > Kitsunebi <img width="20" src="/resources/ios.svg">
 
