@@ -80,7 +80,7 @@ v2ctl <command> <options>
 
 `v2ctl cert [--ca] [--domain=v2ray.com] [--expire=240h] [--name="V2Ray Inc"] [--org="V2Ray Inc] [--json] [--file=v2ray]`
 
-Генерирует сертификат TLS на основе параметров.
+Generates a TLS certificate based on options.
 
 > `--ca`
 
