@@ -66,7 +66,7 @@ v2ctl <command> <options>
 
 `v2ctl api [--server=127.0.0.1:8080] <Service.Method> <Request>`
 
-Invoke remote control commands in V2Ray instances. Example:
+Удалённое управление запущеными серверами V2Ray. Пример:
 
 `v2ctl api --server=127.0.0.1:8080 LoggerService.RestartLogger ''`
 
