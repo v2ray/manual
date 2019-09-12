@@ -20,8 +20,8 @@ refen: welcome/faq
 ### Обратная совместимость
 
 * Конфигурационные файлы (например, JSON), обратно совместимы как минимум с последним крупным релизом. Так, V2Ray 4.x поддерживает конфигурационные файлы от V2Ray 3.x.
-* For Protobuf based communication protocols, such as [Api](../api.md), backward compatibility applies to at least one major releases.
-* For binary based commnunication protocols, such as Shadowsocks and VMess, it is always backward compatible when server version is not older than clients. When client version is newer, backward compatibility applies to at least 12 minor releases.
+* Протоколы на Protobuf, такие как [Api](../api.md), также обратно совместимы как минимум с последним релизом.
+* Бинарные протоколы, такие как Shadowsocks и VMess, всегда обратно совместимы, если версия сервера не старше клиентской. Если клиентская версия новее, обратная совместимость есть миниум с 12 минорными релизами.
 
 ## Ошибки V2Ray
 
