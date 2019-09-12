@@ -9,7 +9,7 @@ Project V provides multiple methods for communications.
 
 {% hint style='info' %}
 
-Project V team supports Chinese and English. Please choose either one that you are familiar with for questions.
+Команда Project V знает китайский и английский. Пожалуйста, выбирайте из них при задавании вопросов.
 
 {% endhint %}
 
@@ -27,11 +27,11 @@ We uses several repositories for different type of discussions.
 Project V provides the following groups for different type of discussions.
 
 * [Использование](https://t.me/v2fly_chat) 
-  * Only for Project V related topics.
-* [Others](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
-  * For other topics.
+  * Только для связанных с Project V тем.
+* [Прочие](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg) 
+  * Для всех остальных тем.
 
-Topics in these groups are mainly in Chinese. Feel free to setup groups in your own language and let us know.
+Темы в этих группах в основном на китайском. Если вы создадите ещё одну группу на родном языке, дайте нам знать.
 
 {% hint style='danger' %}
 
@@ -39,7 +39,7 @@ All discussion groups forbid the following topics: adult content, politics, hate
 
 {% endhint %}
 
-Please also follow [Project V Announcement](https://t.me/v2fly) for news.
+Также обратите внимание на [канал с объявлениями от Project V](https://t.me/v2fly).
 
 ## Twitter
 
@@ -55,11 +55,11 @@ Please send a message to one of the address below, if you'd like to talk to V2Ra
 
 {% hint style='info' %}
 
-Sadly due to high workload, it is not promised that every email gets replied. Sorry for the inconvenience. For general questions, please use discussion groups above for quick response.
+Мы очень загружены, так что не обещаем ответить на все письма. А общие вопросы лучше отправить в группы выше: другие пользователи, скорее всего, ответят быстрее.
 
 {% endhint %}
 
-You may get PGP public key by searching `love@v2ray.com`, or use the public key below.
+Вы можете получить открытый ключ PGP, поискав `love@v2ray.com`. Ну или использовать приложенный ниже открытый ключ.
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
