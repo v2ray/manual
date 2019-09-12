@@ -26,18 +26,18 @@ V2Ray предоставляет информацию о своём состоя
 
 > `user>>>[email]>>>traffic>>>uplink`
 
-Accumulated uplink traffic of specific user, in bytes.
+Выходной трафик отдельного пользователя, в байтах.
 
 > `user>>>[email]>>>traffic>>>downlink`
 
-Accumulated downlink traffic of specific user, in bytes.
+Входной трафик отдельного пользователя, в байтах.
 
 ## Глобальный трафик
 
 > `inbound>>>[tag]>>>traffic>>>uplink`
 
-Accumulated uplink traffic of specific inbound, in bytes.
+Выходной трафик отдельного соединения, в байтах.
 
 > `inbound>>>[tag]>>>traffic>>>downlink`
 
-Accumulated downlink traffic of specific inbound, in bytes.
+Входной трафик отдельного соединения, в байтах.
