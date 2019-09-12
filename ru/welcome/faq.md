@@ -29,11 +29,11 @@ refen: welcome/faq
 
 Возможная причина
 
-* You are using socks inbound in V2Ray, but your browser is configured to use HTTP proxy.
+* Вы настроили в V2Ray socks, но браузер пытается использовать его как HTTP-прокси.
 
 Решение
 
-* Add a HTTP inbound in V2Ray, and then update your browser proxy settings to use this proxy.
+* Добавьте в V2Ray HTTP как протокол для входящих соединений, затем в браузере обновите настройки прокси-сервера.
 
 ## Лицензия этого проекта
 
