@@ -39,13 +39,13 @@
   * [Переменные](configuration/env.md)
 * [Awesome V](awesome/tools.md) 
   * [With Ads](awesome/ads.md)
-* Development 
+* Разработка 
   * Milestone
   * Guide
   * Design
-  * Build
-  * [Tools](developer/tools.md)
-  * Protocols 
+  * Сборка приложения
+  * [Инструменты](developer/tools.md)
+  * Протоколы 
     * VMess
     * mKCP
     * Mux.Cool
