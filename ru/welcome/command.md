@@ -74,13 +74,13 @@ v2ctl <command> <options>
 
 `v2ctl config`
 
-No option for this command. It reads JSON configuration from stdin, and print out corresponding Protobuf to stdout, if succeeds.
+Команда без параметров. Принимает конфигурацию в JSON из stdin, преобразует её в Protobuf и выводит в stdout.
 
 ### V2Ctl Cert
 
 `v2ctl cert [--ca] [--domain=v2ray.com] [--expire=240h] [--name="V2Ray Inc"] [--org="V2Ray Inc] [--json] [--file=v2ray]`
 
-Generates a TLS cerificate based on options.
+Генерирует сертификат TLS на основе параметров.
 
 > `--ca`
 
