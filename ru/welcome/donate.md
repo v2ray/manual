@@ -28,17 +28,17 @@ For any doantion worth more than $50, you may choose one of the following:
 
 > Подарочная карта
 
-For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.com](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY) and then send to `love@v2ray.com`.
+Сейчас мы можем принять подарочные карты только от Amazon US. Вы можете купить их на [Amazon.com](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY) и отправить на `love@v2ray.com`.
 
 ## Криптовалюта {#crypto}
 
 Криптовалюта является более надежным способом международных транзакций. Крипто-кошелек обычно является анонимным, и ваше пожертвование не отслеживаемо.
 
-Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
+Из-за анонимности, присущей криптовалюте, пожалуйста, отправьте нам электронное письмо до вашего пожертвования, если вы хотите получить благодарственное письмо в ответ.
 
 > Bitcoin
 
-Address: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
+Адрес: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
 
 View stats or QR-Code [at BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
 
@@ -56,22 +56,22 @@ View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x1
 
 > EOS
 
-Address: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
+Адрес: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
 
 > Litecoin
 
-Address: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
+Адрес: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
 
 > Monero
 
-Address: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
+Адрес: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
 
 > Ripple
 
-Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
+Адрес: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
 
-Tag not required
+Тэг не обязателен
 
 > Другое
 
-Please send us an email at `love@v2ray.com` if you want to donate other kind of coins.
+Если вы хотите пожертвовать нам другую валюту, отправьте нам электронное письмо по адресу `love@v2ray.com`.
