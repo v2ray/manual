@@ -23,7 +23,7 @@ VMess depends on system time. Please ensure that your system time is in sync wit
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 16,
+          "alterId": 4,
           "security": "auto",
           "level": 0
         }
@@ -76,7 +76,7 @@ User ID, in the form of a [UUID](https://en.wikipedia.org/wiki/Universally_uniqu
 
 > `alterId`: number
 
-Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 16. Its value must be not larger than the one in corresponding Inbound.
+Number of alternative IDs. The alternative IDs will be generated in a deterministic way. Default to 0. Maximum 65535. Recommend 4. Its value must be not larger than the one in corresponding Inbound.
 
 > `level`: number
 
@@ -105,13 +105,13 @@ Use `"auto"` wherever possible for better compatibility.
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 100,
+      "alterId": 4,
       "email": "love@v2ray.com"
     }
   ],
   "default": {
     "level": 0,
-    "alterId": 32
+    "alterId": 4
   },
   "detour": {
     "to": "tag_to_detour"
@@ -145,7 +145,7 @@ Forbids client for using insecure encryption methods. When set to `true`, connec
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
   "level": 0,
-  "alterId": 16,
+  "alterId": 4,
   "email": "love@v2ray.com"
 }
 ```
@@ -183,7 +183,7 @@ The tag of an inbound proxy. See [Overview](../protocols.md). If configured, VMe
 ```javascript
 {
   "level": 0,
-  "alterId": 32
+  "alterId": 4
 }
 ```
 
@@ -193,4 +193,4 @@ User level.
 
 > `alterId`: number
 
-Number of alternative IDs. Default value 64. Recommend 16.
+Number of alternative IDs. Default value 64. Recommend 4.

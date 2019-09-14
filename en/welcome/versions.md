@@ -7,6 +7,35 @@ refen: welcome/versions
 
 This page lists regular releases with feature updates. If a Github release doesn't appear here, it usually only contains bug fixes.
 
+## 2019.03.01 v4.18
+
+* Port list in routing rules now supports mixed format.
+* Updated `geosite` information in routing, and description for static hosts in DNS.
+* Option to not use system root CAs for TLS handshake.
+* New routing rule for traffic attributes.
+
+## 2019.02.22 v4.17
+
+* New sub-command `tlsping` in V2Ctl.
+
+## 2019.02.15 v4.16
+
+For end users:
+
+* DNS outbound proxy now supports to modify DNS server info.
+
+For developers:
+
+* 'ext' repository is now deprecated. [#1541](https://github.com/v2ray/v2ray-core/issues/1541)
+
+## 2019.02.08 v4.15
+
+* DNS outbound proxy.
+
+## 2019.02.01 v4.14
+
+* Static DNS mapping now supports domain to domain mapping.
+
 ## 2019.01.18 v4.13
 
 * Quic lib updated. It is not compatible with previous versions.

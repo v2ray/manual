@@ -39,7 +39,7 @@ Tất cả các nhóm thảo luận đều cấm các chủ đề sau: nội dun
 
 {% endhint %}
 
-Please also follow [Project V Announcement](https://t.me/v2fly) for news.
+Ngoài ra, hãy làm theo [Thông báo dự án V](https://t.me/v2fly) để biết tin tức.
 
 ## Twitter
 

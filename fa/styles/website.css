@@ -11,6 +11,7 @@
   font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  direction: rtl;
 }
 
 .markdown-section pre>code {
@@ -32,4 +33,8 @@
   border-top: 1px solid #64b5f6;
   color: #000000;
   margin-top: 10px;
+}
+
+code {
+  direction: ltr !important;
 }

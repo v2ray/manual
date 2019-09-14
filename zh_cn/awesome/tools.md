@@ -9,19 +9,19 @@ refen: awesome/tools
 
 > V2RayW <img width="20" src="/resources/win.svg">
 
-V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。下载：[Github](https://github.com/Cenmrev/V2RayW)
+V2RayW 是一个基于 V2Ray 内核的 Windows 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。下载：[GitHub](https://github.com/Cenmrev/V2RayW)
 
 > V2RayN <img width="20" src="/resources/win.svg">
 
-V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。下载：[Github](https://github.com/2dust/v2rayN)
+V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。下载：[GitHub](https://github.com/2dust/v2rayN)
 
 > V2RayS <img width="20" src="/resources/win.svg">
 
-下载：[Github](https://github.com/Shinlor/V2RayS)
+下载：[GitHub](https://github.com/Shinlor/V2RayS)
 
 > Clash for Windows <img width="20" src="/resources/win.svg">
 
-下载：[Github](https://github.com/Fndroid/clash_for_windows_pkg)
+下载：[GitHub](https://github.com/Fndroid/clash_for_windows_pkg)
 
 > V2RayX <img width="20" src="/resources/apple.svg">
 
@@ -29,15 +29,15 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 > V2RayU <img width="20" src="/resources/apple.svg">
 
-下载：[Github](https://github.com/yanue/V2rayU)
+V2rayU,基于v2ray核心的mac版客户端,界面友好,使用swift4.2编写,支持vmess,shadowsocks,socks5等服务协议,支持订阅, 支持二维码,剪贴板导入,手动配置,二维码分享等。下载：[GitHub](https://github.com/yanue/V2rayU)
 
 > V2RayC <img width="20" src="/resources/apple.svg">
 
-下载：[Github](https://github.com/gssdromen/V2RayC)
+下载：[GitHub](https://github.com/gssdromen/V2RayC)
 
 > ClashX <img width="20" src="/resources/apple.svg">
 
-下载：[Github](https://github.com/yichengchen/clashX)
+下载：[GitHub](https://github.com/yichengchen/clashX)
 
 > Kitsunebi <img width="20" src="/resources/ios.svg">
 
@@ -46,12 +46,6 @@ Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMe
 由于使用 V2Ray 核心，Kitsunebi 几乎支持 V2Ray 的所有功能，比如 Mux 和 mKCP。
 
 下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
-
-> Kitsunebi Lite <img width="20" src="/resources/ios.svg">
-
-精简版的 Kitsunebi
-
-下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-lite/id1387913765?mt=8)
 
 > i2Ray <img width="20" src="/resources/ios.svg">
 
@@ -87,12 +81,20 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 
 下载：[Play Store](https://play.google.com/store/apps/details?id=com.v2ray.ang) | [GitHub](https://github.com/2dust/v2rayNG)
 
-## 在线工具 {#online}
+## 在线工具/资源 {#online}
 
-> [配置生成器](https://htfy96.github.io/v2ray-config-gen/)
+> VeekXT V2Ray配置生成
 
-V2Ray 配置生成工具
+支持 4.x 版本的配置文件生成器 [veekxt.com](https://www.veekxt.com/utils/v2ray_gen)
 
-> [UUID Generator](https://www.uuidgenerator.net/)
+> V2Ray 配置生成器
 
-VMess User ID 生成工具
+静态 V2Ray 配置文件生成页面 [GitHub](https://github.com/htfy96/v2ray-config-gen)
+
+> UUID Generator
+
+VMess User ID 生成工具 [uuidgenerator.net](https://www.uuidgenerator.net)
+
+> vTemplate 项目仓库
+
+一个 V2Ray 配置文件模板收集仓库  [GitHub](https://github.com/KiriKira/vTemplate)

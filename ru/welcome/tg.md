@@ -6,10 +6,10 @@ refen: welcome/tg
 
 Project V предоставляет следующие группы для разных типов обсуждений.
 
-1. [Использование](https://telegram.me/projectv2ray): Использование Project V.
+1. [Использование](https://t.me/v2fly_chat): Использование Project V.
 2. [Другое](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg): Другие темы.
 
-Также обратите внимание на [канал с объявлениями от Project V](https://t.me/v2msg).
+Также обратите внимание на [канал с объявлениями от Project V](https://t.me/v2fly).
 
 ## Правила
 

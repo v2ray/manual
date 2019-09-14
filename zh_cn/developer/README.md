@@ -4,7 +4,7 @@
 
 Project V 由以下几部分组成:
 
-* V2Ray 核心: 包括[v2ray.com/core](https://github.com/v2ray/v2ray-core/)和[v2ray.com/ext](https://github.com/v2ray/ext/)。
+* V2Ray 核心: [v2ray.com/core](https://github.com/v2ray/v2ray-core/)
 * V2Ray 手册: [v2ray.com](https://www.v2ray.com/)
 * 周边项目: 详见[客户端](../ui_client/README.md)
 

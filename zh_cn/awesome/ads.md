@@ -17,8 +17,6 @@ Let's Encrypt是一个于2015年三季度推出的数字证书认证机构，旨
 
 Vultr 是一家提供日本、美国、欧洲等多个国家和地区机房的 VPS 主机商，价格低至 2.5 美元/月。Vultr 根据VPS使用小时来计费，使用多长时间就算多长时间，计费对应的款，并且支持支付宝（Alipay）付费。
 
-[2019 限时优惠，赠送 $50](https://www.vultr.com/?ref=7783021-4F)
-
 > [BlueHost](https://www.bluehost.com/track/v2ray/)
 
 BlueHost作为美国的老牌主机商，在国内也是非常受欢迎的美国主机之一。以稳定性强。速度快著称，在站长中的口碑和流行度也是非常之高。BlueHost主机商为了开拓国内市场，自2014年就推出了中文站，而且也极大的丰富了主机产品，可以满足大多数站长的建站需求。
@@ -26,6 +24,10 @@ BlueHost作为美国的老牌主机商，在国内也是非常受欢迎的美国
 > [ClouDNS](https://www.cloudns.net/aff/id/244749/)
 
 ClouDNS成立于2010年，公司位于保加利亚，提供免费和收费的 DNS 托管服务。
+
+> [Bandwagon](https://bandwagonhost.com/aff.php?aff=44317)
+
+老牌 VPS 销售商，价格低廉，性价比高。
 
 ## VPN
 
@@ -41,29 +43,17 @@ V2Ray 小范围内测中。
 
 基于 V2Ray 的网络加速服务。优惠码：v2ray
 
-> [多数派](https://dspi.io/aff.php?aff=7)
-
-基于V2RAY的全新的网络加速服务
-
 > [V2rayPro](https://myv2.us/)
 
 基于 V2Ray 的网络加速服务。专属优惠码：v2ray.com
 
-> [vProxy](http://niuban.fun/)
-
-由 V2Ray 驱动的网络加速器。专属优惠码：v2ray.cool
-
-> [栖息地](http://7dea9f6.vmess.fun/)
-
-对内小众的 V2ray 优质网络加速服务。邀请码：V2RAY
-
-> [NicoNode](https://niconode.net/)
-
-支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
-
 > [V2Net](http://v2net.org/)
 
 提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
+
+> [NicoNode](https://niconode.co/)
+
+支持 V2Ray 的网络加速改善服务。专属促销代码：V2RAYNOW
 
 ## 数字货币 {#crypto}
 

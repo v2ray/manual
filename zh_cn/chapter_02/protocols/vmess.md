@@ -25,7 +25,7 @@ VMess 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigu
       "users": [
         {
           "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-          "alterId": 16,
+          "alterId": 4,
           "security": "auto",
           "level": 0
         }
@@ -66,7 +66,7 @@ VMess 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigu
 ```javascript
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
-  "alterId": 16,
+  "alterId": 4,
   "security": "auto",
   "level": 0
 }
@@ -78,7 +78,7 @@ VMess 用户的主 ID。必须是一个合法的 UUID。
 
 > `alterId`：number
 
-为了进一步防止被探测，一个用户可以在主 ID 的基础上，再额外生成多个 ID。这里只需要指定额外的 ID 的数量，推荐值为 16。不指定的话，默认值是 `0`。最大值 `65535`。这个值不能超过服务器端所指定的值。
+为了进一步防止被探测，一个用户可以在主 ID 的基础上，再额外生成多个 ID。这里只需要指定额外的 ID 的数量，推荐值为 4。不指定的话，默认值是 `0`。最大值 `65535`。这个值不能超过服务器端所指定的值。
 
 > `level`: number
 
@@ -105,13 +105,13 @@ VMess 用户的主 ID。必须是一个合法的 UUID。
     {
       "id": "27848739-7e62-4138-9fd3-098a63964b6b",
       "level": 0,
-      "alterId": 16,
+      "alterId": 4,
       "email": "love@v2ray.com"
     }
   ],
   "default": {
     "level": 0,
-    "alterId": 32
+    "alterId": 4
   },
   "detour": {
     "to": "tag_to_detour"
@@ -145,7 +145,7 @@ VMess 用户的主 ID。必须是一个合法的 UUID。
 {
   "id": "27848739-7e62-4138-9fd3-098a63964b6b",
   "level": 0,
-  "alterId": 16,
+  "alterId": 4,
   "email": "love@v2ray.com"
 }
 ```
@@ -167,7 +167,7 @@ VMess 的用户 ID。必须是一个合法的 UUID。
 用户邮箱地址，用于区分不同用户的流量。
 
 {% hint style='info' %}
-`alterId` 取值的大小和流量特征没有必然联系。对于日常使用，`64` 以内的值已经够用了。
+`alterId` 取值的大小和流量特征没有必然联系。对于日常使用，`16` 以内的值已经够用了。
 {% endhint %}
 
 ### DetourObject
@@ -187,7 +187,7 @@ VMess 的用户 ID。必须是一个合法的 UUID。
 ```javascript
 {
   "level": 0,
-  "alterId": 32
+  "alterId": 4
 }
 ```
 
@@ -197,4 +197,4 @@ VMess 的用户 ID。必须是一个合法的 UUID。
 
 > `alterId`: number
 
-和`ClientObject`中的`alterId`相同，默认值为`64`。推荐值`16`。
+和`ClientObject`中的`alterId`相同，默认值为`64`。推荐值`4`。

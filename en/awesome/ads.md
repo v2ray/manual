@@ -27,6 +27,10 @@ VPS, web hosting
 
 Domain registration, DNS, SSL certificate
 
+> [Bandwagon](https://bandwagonhost.com/aff.php?aff=44317)
+
+Well-known VPS provider. Low price for good product.
+
 ## VPN
 
 > [BabyDriver](http://babydriver.me/)
@@ -40,10 +44,6 @@ V2Ray support (beta)
 > [Lanan](https://xn--sjt174g.com/)
 
 V2Ray based VPN service. Coupon code: v2ray
-
-> [多数派](https://dspi.io/aff.php?aff=7)
-
-New V2Ray based VPN service.
 
 > [V2rayPro](https://myv2.us/)
 

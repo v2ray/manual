@@ -9,7 +9,7 @@ V2Ray is a nonprofit project. The source code and its release binary can be used
 
 Your donation has no direct connection to Project V's development and service. Our development will not be influenced by your donation. However, we will send a thank-you email for every donor. If you wish not to receive such email, please leave a note in your donation.
 
-For any doantion worth more than $50, you may choose one of the following:
+For any donation worth more than $50, you may choose one of the following:
 
 * Your name or your company log shown on our front page for one month.
 * Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
@@ -33,8 +33,6 @@ For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.c
 ## Cryptocurrency {#crypto}
 
 Cryptocurrency is a more reliable way for international transactions. Crypto-wallet is usually anonymous and your donation is not traceable.
-
-You may buy cryptocurrencies through [services on this page](../ui_client/service.md).
 
 Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
 
