@@ -44,7 +44,7 @@ URI файла с настройками. Возможные варианты:
 
 ## V2Ctl
 
-V2Ctl is a collection of commandline tools. It runs in the following way:
+V2Ctl — это набор инструментов командной строки. Он работает следующим образом:
 
 ```bash
 v2ctl <command> <options>
@@ -52,7 +52,7 @@ v2ctl <command> <options>
 
 > `command`
 
-Subcommand. Available values are below:
+Доступные значения:
 
 * `api`: Invoke remote control commands in V2Ray instances.
 * `config`: Convert configuration from JSON format to protobuf.
@@ -66,7 +66,7 @@ Subcommand. Available values are below:
 
 `v2ctl api [--server=127.0.0.1:8080] <Service.Method> <Request>`
 
-Invoke remote control commands in V2Ray instances. Example:
+Удалённое управление запущеными серверами V2Ray. Пример:
 
 `v2ctl api --server=127.0.0.1:8080 LoggerService.RestartLogger ''`
 
@@ -74,13 +74,13 @@ Invoke remote control commands in V2Ray instances. Example:
 
 `v2ctl config`
 
-No option for this command. It reads JSON configuration from stdin, and print out corresponding Protobuf to stdout, if succeeds.
+Команда без параметров. Принимает конфигурацию в JSON из stdin, преобразует её в Protobuf и выводит в stdout.
 
 ### V2Ctl Cert
 
 `v2ctl cert [--ca] [--domain=v2ray.com] [--expire=240h] [--name="V2Ray Inc"] [--org="V2Ray Inc] [--json] [--file=v2ray]`
 
-Generates a TLS cerificate based on options.
+Generates a TLS certificate based on options.
 
 > `--ca`
 

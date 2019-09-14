@@ -80,7 +80,7 @@ No option for this command. It reads JSON configuration from stdin, and print ou
 
 `v2ctl cert [--ca] [--domain=v2ray.com] [--expire=240h] [--name="V2Ray Inc"] [--org="V2Ray Inc] [--json] [--file=v2ray]`
 
-Generates a TLS cerificate based on options.
+Generates a TLS certificate based on options.
 
 > `--ca`
 

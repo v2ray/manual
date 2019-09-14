@@ -20,7 +20,7 @@ refen: welcome/faq
 ### Backward Compatibility
 
 * For configuration file (e.g., JSON), backward compatibility applies to at least one major releases. For example, V2Ray 4.x supports config files from V2Ray 3.x.
-* For Protobuf based communication protocols, such as [Api](../api.md), backward compatibility applies to at least one major releases.
+* For Protobuf based communication protocols, such as [Api](../configuration/api.md), backward compatibility applies to at least one major releases.
 * For binary based commnunication protocols, such as Shadowsocks and VMess, it is always backward compatible when server version is not older than clients. When client version is newer, backward compatibility applies to at least 12 minor releases.
 
 ## V2Ray Errors

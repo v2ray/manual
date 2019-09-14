@@ -19,9 +19,9 @@ refen: welcome/faq
 
 ### Обратная совместимость
 
-* For configuration file (e.g., JSON), backward compatibility applies to at least one major releases. For example, V2Ray 4.x supports config files from V2Ray 3.x.
-* For Protobuf based communication protocols, such as [Api](../api.md), backward compatibility applies to at least one major releases.
-* For binary based commnunication protocols, such as Shadowsocks and VMess, it is always backward compatible when server version is not older than clients. When client version is newer, backward compatibility applies to at least 12 minor releases.
+* Конфигурационные файлы (например, JSON), обратно совместимы как минимум с последним крупным релизом. Так, V2Ray 4.x поддерживает конфигурационные файлы от V2Ray 3.x.
+* For Protobuf based communication protocols, such as [Api](../configuration/api.md), backward compatibility applies to at least one major releases.
+* Бинарные протоколы, такие как Shadowsocks и VMess, всегда обратно совместимы, если версия сервера не старше клиентской. Если клиентская версия новее, обратная совместимость есть миниум с 12 минорными релизами.
 
 ## Ошибки V2Ray
 
@@ -29,11 +29,11 @@ refen: welcome/faq
 
 Возможная причина
 
-* You are using socks inbound in V2Ray, but your browser is configured to use HTTP proxy.
+* Вы настроили в V2Ray socks, но браузер пытается использовать его как HTTP-прокси.
 
 Решение
 
-* Add a HTTP inbound in V2Ray, and then update your browser proxy settings to use this proxy.
+* Добавьте в V2Ray HTTP как протокол для входящих соединений, затем в браузере обновите настройки прокси-сервера.
 
 ## Лицензия этого проекта
 
