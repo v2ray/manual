@@ -49,9 +49,9 @@ Project V предоставляет следующие группы для ра
 
 Если вы хотите поговорить с командой V2Ray тет-а-тет, напишите на один из адресов ниже.
 
-`love@v2ray.com`: Main email address for communication. Checked every day.
+`love@v2ray.com`: Основной адрес для связи. Проверяется каждый день.
 
-`v2ray@protonmail.com`: A [ProtonMail](https://protonmail.com/) mailbox which employs end to end encryption. It is difficult to use, and only being checked occasionally.
+`v2ray@protonmail.com`: Ящик на [ProtonMail](https://protonmail.com/) с оконечным шифрованием. Проверяем реже из-за сложностей использования.
 
 {% hint style='info' %}
 
