@@ -49,7 +49,7 @@ V2Ray در سیستم عامل های زیر موجود است:
 برای نصب V2Ray دستور زیر را اجرا کنید. اگر yum یا apt در دسترس باشد، اسکریپت unzip و daemon / systemd را نصب خواهد کرد. آنها نیاز به اجرای V2Ray به عنوان یک سرویس دارند. اگر سیستم لینوکس شما yum یا apt را پشتیبانی نمی کند، باید آنها را به صورت دستی نصب کنید.
 
 ```bash
-bash <(curl -L -s https://install.direct/go.sh)
+curl -Ls https://install.direct/go.sh | sudo bash
 ```
 
 اسکریپت فایل های زیر را نصب می کند.
