@@ -54,13 +54,13 @@ v2ctl <command> <options>
 
 Доступные значения:
 
-* `api`: Invoke remote control commands in V2Ray instances.
-* `config`: Convert configuration from JSON format to protobuf.
-* `cert`: Generate TLS certificates.
-* `fetch`: Fetch remove resources.
-* `tlsping`: (V2Ray 4.17+) Test TLS handshake.
-* `verify`: Verify the signature of V2Ray releases.
-* `uuid`: Generate UUID.
+* `api`: Удалённое управление работающим V2Ray.
+* `config`: Преобразовать конфигурацию из формата JSON в protobuf.
+* `cert`: Генерировать сертификаты TLS.
+* `fetch`: Загрузка удалённого конента.
+* `tlsping`: (V2Ray 4.17+) Проверить усановление соединения (handshake) TLS.
+* `verify`: Проверить подпись релиза V2Ray.
+* `uuid`: Генерировать UUID.
 
 ### V2Ctl Api
 
@@ -80,11 +80,11 @@ v2ctl <command> <options>
 
 `v2ctl cert [--ca] [--domain=v2ray.com] [--expire=240h] [--name="V2Ray Inc"] [--org="V2Ray Inc] [--json] [--file=v2ray]`
 
-Generates a TLS certificate based on options.
+Генерирует сертификат TLS на основе параметров.
 
 > `--ca`
 
-If specified, the certificate will be a CA certificate.
+Если указано, сертификат будет сертификатом CA.
 
 > `--domain`
 
