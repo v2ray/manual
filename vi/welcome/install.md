@@ -49,7 +49,7 @@ Lệnh sau giả định quyền root.
 Chạy lệnh sau để cài đặt V2Ray. Nếu yum hoặc apt có sẵn, tập lệnh sẽ cài đặt giải nén và daemon / systemd. Họ được yêu cầu chạy V2Ray như một dịch vụ. Bạn cần cài đặt chúng theo cách thủ công nếu hệ thống Linux của bạn không hỗ trợ yum hoặc apt.
 
 ```bash
-bash <(curl -L -s https://install.direct/go.sh)
+curl -Ls https://install.direct/go.sh | sudo bash
 ```
 
 Tập lệnh cài đặt các tệp sau.
