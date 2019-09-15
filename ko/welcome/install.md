@@ -49,7 +49,7 @@ V2Ray는 다음 플랫폼에서 사용할 수 있습니다.
   다음 명령을 실행하여 V2Ray를 설치하십시오. yum 또는 apt를 사용할 수 있으면 스크립트는 unzip 및 daemon / systemd를 설치합니다. V2Ray를 서비스로 실행해야합니다. Linux 시스템이 yum이나 apt를 지원하지 않으면 수동으로 설치해야합니다.
   
   ```bash
-  bash <(curl -L -s https://install.direct/go.sh)
+  curl -Ls https://install.direct/go.sh | sudo bash
   ```
   
   스크립트는 다음 파일을 설치합니다.
