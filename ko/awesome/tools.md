@@ -39,6 +39,14 @@ Download: [Github](https://github.com/gssdromen/V2RayC)
 
 Download: [Github](https://github.com/yichengchen/clashX)
 
+> Qv2ray <img width="20" src="/resources/win.svg" /> <img width="20" src="/resources/apple.svg" /> <img width="20" src="/resources/linux.svg" />
+
+Qv2ray: v2ray Cross-Platform GUI written in Qt, supports multi-language, connection edit and auto-check updates
+
+Download: [GitHub](https://github.com/lhy0403/Qv2ray)
+
+Website (Chinese): <https://lhy0403.github.io/Qv2ray>
+
 > Kitsunebi <img width="20" src="/resources/ios.svg" />
 
 Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
