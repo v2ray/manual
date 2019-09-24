@@ -30,8 +30,8 @@ DNS is an outbound proxy. Он используется в основном дл
 
 > `address`: адрес
 
-(V2Ray 4.16+) Адрес DNS-сервера в запросе. If it is not specified, the original DNS server address remain unchanged.
+(V2Ray 4.16+) Адрес DNS-сервера в запросе. Если не указано, то адрес сервера не изменяется.
 
 > `port`: number
 
-(V2Ray 4.16+) Modify the DNS server port in the request. If it is not specified, the original DNS server port remain unchanged.
+(V2Ray 4.16+) Порт DNS-сервера в запросе. Если не указано, то порт сервера не изменяется.
