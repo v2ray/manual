@@ -27,7 +27,7 @@ Project V 提供了下列讨论组，用于讨论不同类型的问题。
 * [使用](https://t.me/v2fly_chat)
   * 仅用于讨论 Project V 使用相关问题。
   * 严禁任何不相关的话题。
-* [日常](https://t.me/joinchat/DNcazUIYaH80uVfeS716jg)
+* [日常](https://t.me/joinchat/JiDjBEzQFLN5R_BdpMpelw)
   * 用于其它不相关的话题。
 
 {% hint style='danger' %}
