@@ -27,6 +27,12 @@ V2RayN 是一个基于 V2Ray 内核的 Windows 客户端。下载：[GitHub](htt
 
 V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过界面生成配置文件，并且可以手动更新 V2Ray 内核。V2RayX 还可以配置系统代理。下载：[Github](https://github.com/Cenmrev/V2RayX)
 
+> V2RayXPlus <img width="20" src="/resources/linux.svg">
+
+V2RayXPlus 是一个使用 Go 编写的 v2ray GUI Linux 客户端，并使用 iptables + 透明代理 + v2ray 路由实现真全局自动分流
+
+下载：[Gitlab](https://gitlab.com/xiayesuifeng/v2rayxplus)
+
 > V2RayU <img width="20" src="/resources/apple.svg">
 
 V2rayU,基于v2ray核心的mac版客户端,界面友好,使用swift4.2编写,支持vmess,shadowsocks,socks5等服务协议,支持订阅, 支持二维码,剪贴板导入,手动配置,二维码分享等。下载：[GitHub](https://github.com/yanue/V2rayU)
