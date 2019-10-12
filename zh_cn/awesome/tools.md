@@ -47,13 +47,13 @@ Qv2ray：使用 Qt 编写的 v2ray 跨平台 GUI （MacOS, Windows, Linux）支�
 
 官网：[https://lhy0403.github.io/Qv2ray](https://lhy0403.github.io/Qv2ray)
 
-> Kitsunebi <img width="20" src="/resources/ios.svg">
+> Kitsunebi <img width="20" src="/resources/ios.svg"> <img width="20" src="/resources/android.svg">
 
-Kitsunebi 是一个基于 V2Ray 核心的 iOS 应用。它可以创建基于 VMess 或者 Shadowsocks 的 VPN 连接。Kitsunebi 支持导入和导出与 V2Ray 兼容的 JSON 配置。
+Kitsunebi 是一个基于 V2Ray 核心的移动平台应用 (iOS, Android)。它可以创建基于 VMess 或者 Shadowsocks 的 VPN 连接。Kitsunebi 支持导入和导出与 V2Ray 兼容的 JSON 配置。
 
 由于使用 V2Ray 核心，Kitsunebi 几乎支持 V2Ray 的所有功能，比如 Mux 和 mKCP。
 
-下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8)
+下载：[iTunes](https://itunes.apple.com/us/app/kitsunebi-proxy-utility/id1446584073?mt=8) | [Play Store](https://play.google.com/store/apps/details?id=fun.kitsunebi.kitsunebi4android&hl=en_US)
 
 > i2Ray <img width="20" src="/resources/ios.svg">
 
