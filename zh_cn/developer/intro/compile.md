@@ -18,6 +18,7 @@ go get -u v2ray.com/core/...
 ```
 
 注意在无法正常访问google的网络环境，这个命令无法完成，需要先配置好一个本地的HTTP代理服务器，并配置本地环境变量，比如
+
 ```bash
 export http_proxy=http://localhost:1080
 export https_proxy=http://localhost:1080
@@ -27,7 +28,7 @@ go将会使用本地的1080端口的HTTP代理进行源码拉取。
 
 ## 手工构建 {#manualbuild}
 
-```
+```bash
 cd $(go env GOPATH)/src/v2ray.com/core/main
 env CGO_ENABLED=0 go build -o $HOME/v2ray -ldflags "-s -w"
 
@@ -60,7 +61,7 @@ chmod 755 user-package.sh
 * `mips` 同上，参照golang的交叉编译文档
 * `nodat` 不要包含地址库`geoip.dat` `geosite.dat`， 可以减小发布包的大小
 * `noconf` 不要包括范例json, systemd/systemv等配置文件
-* `nosource` 不要执行`go get ...`，当已经拉去过v2ray源码，需要本地修改了v2ray源码情况下不需要go进行源码覆盖
+* `nosource` 不要执行`go get ...`，避免已经拉取到本地的v2ray源码被覆盖
 
 以上参数没有次序要求，只需要按需传给脚本，比如构建一个适合windows 32位，不带地址库，不带样例配置的发布包：
 
@@ -69,6 +70,7 @@ chmod 755 user-package.sh
 ```
 
 脚本编译的v2ray，其启动信息会变成用户编译的时间，以做区分：
+
 ```text
 V2Ray 4.20.0 (user) 20190710-010000
 A unified platform for anti-censorship.
