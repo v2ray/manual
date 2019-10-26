@@ -92,6 +92,8 @@ Socks 服务器列表，其中每一项是一个服务器配置。
 
 ## InboundConfigurationObject
 
+应该注意，虽然socks inbound可以公共服务端口，但socks协议没有对传输加密，不适宜经公网中传输。socks inbound更有意义的用法是在局域网或本机环境下，为其他程序提供本地服务。
+
 ```javascript
 {
   "auth": "noauth",
@@ -106,8 +108,6 @@ Socks 服务器列表，其中每一项是一个服务器配置。
   "userLevel": 0
 }
 ```
-
-应该注意，虽然socks inbound可以公共服务端口，但socks协议没有对传输加密，不适宜经公网中传输。socks inbound更有意义的用法是在局域网或本机环境下，为其他程序提供本地服务。
 
 > `auth`: "noauth" | "password"
 

@@ -26,6 +26,10 @@ HTTP 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigur
 }
 ```
 
+{% hint style='info' %}
+应该注意，虽然`http inbound`可以提供公共服务，但http协议没有对传输加密，不适宜经公网中传输，更容易成为被人用作攻击的肉鸡。`http inbound`更有意义的用法是在局域网或本机环境下监听，为其他程序提供本地服务。
+{% endhint %}
+
 > `timeout`: number
 
 从客户端读取数据的超时设置（秒），0 表示不限时。默认值为 300。 V2Ray 3.1 后等价于对应用户等级的 `connIdle` 策略。
@@ -66,9 +70,9 @@ HTTP 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigur
 
 * `export http_proxy=http://127.0.0.1:8080/` (地址须改成你配置的 HTTP 入站代理地址)
 * `export https_proxy=$http_proxy`
+{% endhint %}
 
 ## OutboundConfigurationObject
-
 
 ```javascript
 {
@@ -89,15 +93,19 @@ HTTP 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigur
 
 (V2ray 4.21.0+)
 
-应该注意，虽然http outbound可以作为对外访问的配置，但http proxy协议没有对传输加密，不适宜经公网中传输，且因不支持udp传输将会导致core功能受限（Routing过程的的DNS查询不可用）。http outbound 更有意义的用法是在特殊情况下，只能使用http proxy对外访问内部网络中，作为为其他协议连接代理服务器的前置代理使用（见`OutboundObject`的`ProxySettingsObject`）。
+{% hint style='info' %}
+应该注意，虽然`http outbound`可以作为对外访问的配置，但`http proxy`协议没有对传输加密，不适宜经公网中传输，且因不支持udp传输将会导致core功能受限（Routing过程的的DNS查询不可用）。`http outbound`更有意义的用法是在特殊情况下，只能使用`http proxy`对外访问内部网络中，作为为其他协议连接代理服务器的前置代理使用（见`OutboundObject`的`ProxySettingsObject`）。
+{% endhint %}
 
 (V2ray 4.21.1+)
 
-4.20.0版本中引入了http outbound作为其他协议的前置代理用法中，缺乏了对tls配置的检测和处理（因当出站代理生效时，该出站协议的`streamSettings`完全不起作用），导致所有使用了tls的协议无法通过http proxy。4.21.1的补丁版本中对`streamSettings`中的`security`和`tlsSettings`保留生效。
+{% hint style='info' %}
+4.20.0版本中引入了http outbound作为其他协议的前置代理用法中，缺乏了对tls配置的检测处理（因当出站代理生效时，该出站协议的`streamSettings`完全不起作用），导致所有使用了tls的协议无法通过http proxy。4.21.1的补丁版本中对`streamSettings`中的`security`和`tlsSettings`保留生效。
+{% endhint %}
 
 > `servers`: 数组
 
-HTTP代理服务器配置，若配置多个，循环使用 (RoundRobin)
+HTTP代理服务器配置，若配置多个，循环使用 (RoundRobin)。
 
 > `address`: string
 
@@ -110,5 +118,3 @@ HTTP代理服务器端口，必填。
 > `user`: \[[AccountObject](#accountobject)\]
 
 一个数组，数组中每个元素为一个用户帐号。默认值为空。
-
-{% endhint %}
