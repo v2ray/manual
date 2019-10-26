@@ -30,6 +30,8 @@ Socks 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigu
 }
 ```
 
+应该注意，虽然socks outbound可以作为对外访问的配置，但socks协议没有对传输加密，不适宜经公网中传输。socks outbound 更有意义的用法是在特殊情况下，只能使用socks proxy对外访问内部网络中，作为为其他协议连接代理服务器的前置代理使用（见`OutboundObject`的`ProxySettingsObject`）。
+
 > `servers`: \[ [ServerObject](#serverobject) \]
 
 Socks 服务器列表，其中每一项是一个服务器配置。
@@ -104,6 +106,8 @@ Socks 服务器列表，其中每一项是一个服务器配置。
   "userLevel": 0
 }
 ```
+
+应该注意，虽然socks inbound可以公共服务端口，但socks协议没有对传输加密，不适宜经公网中传输。socks inbound更有意义的用法是在局域网或本机环境下，为其他程序提供本地服务。
 
 > `auth`: "noauth" | "password"
 
