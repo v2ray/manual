@@ -80,7 +80,7 @@ HTTP 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigur
     {
       "address": "192.168.108.1",
       "port": 3128,
-      "user": [
+      "users": [
         {
           "user": "my-username",
           "pass": "my-password"
