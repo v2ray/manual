@@ -94,13 +94,13 @@ HTTP 的配置分为两部分，`InboundConfigurationObject`和`OutboundConfigur
 (V2ray 4.21.0+)
 
 {% hint style='info' %}
-应该注意，虽然`http outbound`可以作为对外访问的配置，但`http proxy`协议没有对传输加密，不适宜经公网中传输，且因不支持udp传输将会导致core功能受限（Routing过程的的DNS查询不可用）。`http outbound`更有意义的用法是在特殊情况下，只能使用`http proxy`对外访问内部网络中，作为为其他协议连接代理服务器的前置代理使用（见`OutboundObject`的`ProxySettingsObject`）。
+应该注意，虽然`http outbound`可以作为对外访问的配置，但`http proxy`协议没有对传输加密，不适宜经公网中传输，且因不支持udp传输将会导致core功能受限（Routing过程的的DNS查询不可用）。`http outbound`更有意义的用法是在特殊情况下，只能使用`http proxy`对外访问内部网络中，作为为其他协议连接代理服务器的前置代理使用（见`OutboundObject`的`ProxySettingsObject`）。另因`http proxy`只能代理tcp协议，udp系的协议均不能通过。
 {% endhint %}
 
 (V2ray 4.21.1+)
 
 {% hint style='info' %}
-4.20.0版本中引入了http outbound作为其他协议的前置代理用法中，缺乏了对tls配置的检测处理（因当出站代理生效时，该出站协议的`streamSettings`完全不起作用），导致所有使用了tls的协议无法通过http proxy。4.21.1的补丁版本中对`streamSettings`中的`security`和`tlsSettings`保留生效。
+4.20.0版本中引入了http outbound作为其他协议的前置代理用法中，缺乏了对tls配置的支持。4.21.1的补丁版本中对`streamSettings`中的`security`和`tlsSettings`保留生效。目前前置代理的用法中，vmess/tcp、vmess/tcp-tls和shadowsocks等三种协议方式可使用，其他传输协议的前置代理用法需后续版本开发支持。
 {% endhint %}
 
 > `servers`: 数组
