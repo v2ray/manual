@@ -101,7 +101,7 @@ DNS 服务器端口，如`53`。
 
 > `expectIPs`:\[string\]
 
-一个 IP 范围列表，格式和[路由配置](03_routing.md#ruleobject)中相同。
+(V2Ray 4.22.0+) 一个 IP 范围列表，格式和[路由配置](03_routing.md#ruleobject)中相同。
 
 当配置此项时，V2Ray DNS 会对返回的IP的进行校验，只返回包含expectIPs列表中的地址。
 
