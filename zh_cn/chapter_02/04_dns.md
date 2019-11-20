@@ -26,7 +26,10 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
       "port": 5353,
       "domains": [
         "domain:v2ray.com"
-      ]
+      ],
+      "expectIPs": [
+        "geoip:cn"
+      ],
     },
     "8.8.8.8",
     "8.8.4.4",
@@ -77,6 +80,9 @@ V2Ray 内置了一个 DNS 服务器，可以将 DNS 查询根据路由设置转�
   "port": 5353,
   "domains": [
     "domain:v2ray.com"
+  ],
+  "expectIPs": [
+    "geoip:cn"
   ]
 }
 ```
@@ -91,8 +97,52 @@ DNS 服务器端口，如`53`。
 
 > `domains`: \[string\]
 
-一个域名列表，此列表包含的域名，将优先使用此服务器进行查询。域名格式和[路由配置](03_routing.md)中相同。
+一个域名列表，此列表包含的域名，将优先使用此服务器进行查询。域名格式和[路由配置](03_routing.md#ruleobject)中相同。
 
-若要使 DNS 服务生效，需要配置路由功能中的 `domainStrategy`。
+> `expectIPs`:\[string\]
 
-当某个 DNS 服务器指定的域名列表匹配了当前要查询的域名，V2Ray 会优先使用这个 DNS 服务器进行查询，否则按从上往下的顺序进行查询。
+一个 IP 范围列表，格式和[路由配置](03_routing.md#ruleobject)中相同。
+
+当配置此项时，V2Ray DNS 会对返回的IP的进行校验，只返回包含expectIPs列表中的地址。
+
+如果未配置此项，会原样返回IP地址。
+
+注意：若要使 DNS 服务生效，需要配置路由功能中的 `domainStrategy`。
+
+### DNS 处理流程
+
+当某个 DNS 服务器指定的域名列表匹配了当前要查询的域名，V2Ray 会优先使用这个 DNS 服务器进行查询，否则按从上往下的顺序进行查询，同时只返回匹配expectIPs的IP列表。
+
+处理流程示意图如下：
+
+![](/resources/dns_flowchart.svg)
+
+### 最佳实践
+
+对国内翻墙的一般需求，为达到DNS就近访问效果，可以使用如下DNS配置:
+
+```json
+{
+  "servers": [
+    {
+      "address": "119.29.29.29",
+      "port": 53,
+      "domains": [
+        "geosite:cn"
+      ],
+      "expectIPs": [
+        "geoip:cn"
+      ]
+    },
+    {
+      "address": "8.8.8.8",
+      "port": 53,
+      "domains": [
+        "geosite:geolocation-!cn",
+        "geosite:speedtest",
+        "ext:h2y.dat:gfw"
+      ]
+    }
+  ]
+}
+```
