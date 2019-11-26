@@ -50,7 +50,7 @@ refen: configuration/transport
 
 ## StreamSettingsObject
 
-`TransportObject`对应出站入站协议中的`streamSettings`项。每一个入站、出站连接都可以分别配置不同的传输配置，都可以设置`streamSettings`来进行一些传输的配置。
+`StreamSettingsObject`对应出站入站协议中的`streamSettings`项。每一个入站、出站连接都可以分别配置不同的传输配置，都可以设置`streamSettings`来进行一些传输的配置。
 
 ```javascript
 {
