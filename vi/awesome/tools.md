@@ -56,11 +56,6 @@ Shadowrocket is a generic VPN app. Is supports multiple protocols such as Shadow
 
 Download: [iTunes](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
 
-> Pharos Pro <img width="20" src="/resources/ios.svg"> 
-	
-Pharos Pro is a generic proxy application that supports Trojan, VMess, SS, SS-Sampleobfs, SSR.
-	
-Download: [iTunes](https://itunes.apple.com/app/pharos-pro/id1456610173?mt=8) 
 
 > Pepi (was ShadowRay) <img width="20" src="/resources/ios.svg" />
 
@@ -77,6 +72,12 @@ Download: [iTunes](https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8)
 BifrostV is an Android app based on V2Ray core. It supports VMess, Shadowsocks, socks protocols.
 
 Download: [Play Store](https://play.google.com/store/apps/details?id=com.github.dawndiy.bifrostv) | [APK Pure](https://apkpure.com/bifrostv/com.github.dawndiy.bifrostv)
+
+> Pharos Pro <img width="20" src="/resources/android.svg"> 
+	
+Pharos Pro is a generic proxy application that supports Trojan, VMess, SS, SS-Sampleobfs, SSR.
+	
+Download: [Github](https://github.com/PharosVip/Pharos-Android-Test/releases) 
 
 > V2RayNG <img width="20" src="/resources/android.svg" />
 
