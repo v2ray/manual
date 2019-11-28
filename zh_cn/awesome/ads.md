@@ -43,10 +43,6 @@ V2Ray 小范围内测中。
 
 基于 V2Ray 的网络加速服务。优惠码：v2ray
 
-> [V2rayPro](https://myv2.us/)
-
-基于 V2Ray 的网络加速服务。专属优惠码：v2ray.com
-
 > [V2Net](http://v2net.org/)
 
 提供專屬客戶端的V2Ray服務。9折促銷代碼: v2ray.com
@@ -76,15 +72,3 @@ CoinCola 是香港场外交易平台，支持简体中文界面，买卖方几�
 > [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18)
 
 在线数字货币钱包
-
-> [PrimeDice](https://primedice.com/?c=default)
-
-用比特币玩骰子游戏
-
-> [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d)
-
-用比特币竞猜体育比赛，包括世界杯
-
-> [Bitsler](https://www.bitsler.com/?ref=VictoriaR)
-
-使用比特币玩赌场游戏
