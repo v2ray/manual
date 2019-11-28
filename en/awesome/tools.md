@@ -15,10 +15,6 @@ Download: [Github](https://github.com/Cenmrev/V2RayW)
 
 Download: [Github](https://github.com/2dust/v2rayN)
 
-> V2RayS <img width="20" src="/resources/win.svg">
-
-Download: [Github](https://github.com/Shinlor/V2RayS)
-
 > Clash for Windows <img width="20" src="/resources/win.svg">
 
 Download: [Github](https://github.com/Fndroid/clash_for_windows_pkg)
