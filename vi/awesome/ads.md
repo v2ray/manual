@@ -45,10 +45,6 @@ V2Ray support (beta)
 
 V2Ray based VPN service. Coupon code: v2ray
 
-> [V2rayPro](https://myv2.us/)
-
-VPN service based on V2Ray. Coupon code: v2ray.com
-
 > [V2Net](http://v2net.org/)
 
 Customized V2Ray service. Promo code: v2ray.com
@@ -74,15 +70,3 @@ Trading market for crypto currencies.
 > [CoinPayment](https://www.coinpayments.net/index.php?ref=abc5f542afed6b37b4b3d7fb83242d18)
 
 Online crypto currency wallet
-
-> [PrimeDice](https://primedice.com/?c=default)
-
-Dice game with bitcoin.
-
-> [OneHash](https://www.onehash.com/?ap=56d52158f7e04b169ec54d)
-
-Bet sport games with Bitcoin, including World Cup 2018.
-
-> [Bitsler](https://www.bitsler.com/?ref=VictoriaR)
-
-Casino games with Bitcoin.
