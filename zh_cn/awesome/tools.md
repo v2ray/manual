@@ -47,6 +47,12 @@ Qv2ray：使用 Qt 编写的 v2ray 跨平台 GUI （MacOS, Windows, Linux）支�
 
 官网：[https://lhy0403.github.io/Qv2ray](https://lhy0403.github.io/Qv2ray)
 
+> V2RayA <img width="20" src="/resources/linux.svg">
+
+V2RayA 是一个基于 Web GUI 的 Linux 客户端，界面简洁功能强大，致力于提供最简单的操作，满足绝大部分需求。
+
+下载：[GitHub](https://github.com/mzz2017/V2RayA)
+
 > Kitsunebi <img width="20" src="/resources/ios.svg"> <img width="20" src="/resources/android.svg">
 
 Kitsunebi 是一个基于 V2Ray 核心的移动平台应用 (iOS, Android)。它可以创建基于 VMess 或者 Shadowsocks 的 VPN 连接。Kitsunebi 支持导入和导出与 V2Ray 兼容的 JSON 配置。

@@ -47,6 +47,12 @@ Download: [GitHub](https://github.com/lhy0403/Qv2ray)
 
 Website (Chinese): [https://lhy0403.github.io/Qv2ray](https://lhy0403.github.io/Qv2ray)
 
+> V2RayA <img width="20" src="/resources/linux.svg">
+
+V2RayA is a Linux client with Web GUI, providing convenient interactions and powerful functions.
+
+Download: [GitHub](https://github.com/mzz2017/V2RayA)
+
 > Kitsunebi <img width="20" src="/resources/ios.svg">
 
 Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
