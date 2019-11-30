@@ -43,6 +43,12 @@ Download: [GitHub](https://github.com/lhy0403/Qv2ray)
 
 Website (Chinese): <https://lhy0403.github.io/Qv2ray>
 
+> Mellow <img width="20" src="/resources/win.svg" /> <img width="20" src="/resources/apple.svg" /> <img width="20" src="/resources/linux.svg" />
+
+Mellow is a rule-based global transparent proxy client for Windows, macOS and Linux.
+
+Download: [Github](https://github.com/mellow-io/mellow)
+
 > Kitsunebi <img width="20" src="/resources/ios.svg" />
 
 Kitsunebi is an iOS app based on V2Ray. It provides full functionality as V2Ray. It also supports importing and exporting V2Ray compatible JSON configuration.
