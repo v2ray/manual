@@ -75,9 +75,9 @@ DNS服务器的处理流程示意图如下：
 
 当值为`"localhost"`时，表示使用本机预设的 DNS 配置。
 
-当值以`"DOH_"`开始时，如`"DOH_1.1.1.1"`，V2Ray 会使用DNS OVER HTTPS (rfc8484, 简称DOH)向 `https://1.1.1.1/dns-query` 进行查询。注意有些服务商要求使用域名访问DOH服务，应写成`"DOH_dns.google"`。 (4.22.0+)
+当值是`"https://.../dns-query"`的形式，如`"https://dns.google/dns-query"`，V2Ray 会使用DNS over HTTPS (RFC8484, 简称DOH)向进行查询。有些服务商拥有IP别名的证书，可以直接写IP形式，比如`https://1.1.1.1/dns-query`。 (4.22.0+)
 
-当值以`"DOHL_"`开始时，如`"DOHL_1.1.1.1"`，V2Ray 会使用 `DOH本地模式` 进行查询，即DOH请求不会经过Routing/Outbound等组件，直接对外请求，以降低耗时。一般适合在服务端使用。 (4.22.0+)
+当值是`"https+local://.../dns-query"`的形式，如`"https+local://dns.google/dns-query"`，V2Ray 会使用 `DOH本地模式` 进行查询，即DOH请求不会经过Routing/Outbound等组件，直接对外请求，以降低耗时。一般适合在服务端使用。 (4.22.0+)
 
 {% hint style='info' %}
 
