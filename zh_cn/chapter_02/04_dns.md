@@ -75,9 +75,9 @@ DNS服务器的处理流程示意图如下：
 
 当值为`"localhost"`时，表示使用本机预设的 DNS 配置。
 
-当值是`"https://.../dns-query"`的形式，如`"https://dns.google/dns-query"`，V2Ray 会使用DNS over HTTPS (RFC8484, 简称DOH)向进行查询。有些服务商拥有IP别名的证书，可以直接写IP形式，比如`https://1.1.1.1/dns-query`。 (4.22.0+)
+当值是`"https://host:port/dns-query"`的形式，如`"https://dns.google/dns-query"`，V2Ray 会使用`DNS over HTTPS` (RFC8484, 简称DOH) 进行查询。有些服务商拥有IP别名的证书，可以直接写IP形式，比如`https://1.1.1.1/dns-query`。也可使用非标准端口和路径，如`"https://a.b.c.d:8443/my-dns-query"` (4.22.0+)
 
-当值是`"https+local://.../dns-query"`的形式，如`"https+local://dns.google/dns-query"`，V2Ray 会使用 `DOH本地模式` 进行查询，即DOH请求不会经过Routing/Outbound等组件，直接对外请求，以降低耗时。一般适合在服务端使用。 (4.22.0+)
+当值是`"https+local://host:port/dns-query"`的形式，如`"https+local://dns.google/dns-query"`，V2Ray 会使用 `DOH本地模式` 进行查询，即DOH请求不会经过Routing/Outbound等组件，直接对外请求，以降低耗时。一般适合在服务端使用。也可使用非标端口和路径。(4.22.0+)
 
 {% hint style='info' %}
 
@@ -112,11 +112,11 @@ DNS服务器的处理流程示意图如下：
 
 > `address`: address
 
-DNS 服务器地址，如`"8.8.8.8"`。对于普通DNS IP地址只支持 UDP 协议的 DNS 服务器，若地址以"DOH_"或者"DOHL_"开头，则使用DOH模式，规则同字符串模式用法。
+DNS 服务器地址，如`"8.8.8.8"`。对于普通DNS IP地址只支持 UDP 协议的 DNS 服务器，若地址是以"https://"或"https+local://"开头的URL形式，则使用DOH模式，规则同字符串模式的DOH配置。
 
 > `port`: number
 
-DNS 服务器端口，如`53`。此项缺省时默认为`53`，当使用DOH模式是默认为`443` (4.22.0+)。
+DNS 服务器端口，如`53`。此项缺省时默认为`53`。当使用DOH模式该项无效，非标端口应在URL中指定。
 
 > `domains`: \[string\]
 
