@@ -112,7 +112,7 @@ DNS服务器的处理流程示意图如下：
 
 > `address`: address
 
-DNS 服务器地址，如`"8.8.8.8"`。对于普通DNS IP地址只支持 UDP 协议的 DNS 服务器，若地址是以"https://"或"https+local://"开头的URL形式，则使用DOH模式，规则同字符串模式的DOH配置。
+DNS 服务器地址，如`"8.8.8.8"`。对于普通DNS IP地址只支持 UDP 协议的 DNS 服务器，若地址是以`"https://"`或`"https+local://"`开头的URL形式，则使用DOH模式，规则同字符串模式的DOH配置。
 
 > `port`: number
 
