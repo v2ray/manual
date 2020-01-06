@@ -14,6 +14,7 @@
   * [新白话文教程（社区版）&#8618;](https://guide.v2fly.org/)
 * [配置文件](chapter_02/README.md)
   * [文件格式](chapter_02/01_overview.md)
+  * [多文件配置](chapter_02/multiple_config.md)
   * [协议列表](chapter_02/02_protocols.md)
     * [Blackhole](chapter_02/protocols/blackhole.md)
     * [DNS](chapter_02/protocols/dns.md)
