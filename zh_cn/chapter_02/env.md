@@ -32,6 +32,13 @@ V2Ray 提供以下环境变量以供修改 V2Ray 的一些底层配置。
 
 这个环境变量指定了一个文件夹位置，这个文件夹应当包含 config.json 文件。
 
+## 多配置目录 {#confdir}
+
+* 名称：`v2ray.location.confdir` 或 `V2RAY_LOCATION_CONFDIR`
+* 默认值：`""`
+
+V2Ray 4.23.0 开始增加的多配置文件目录项。这个目录内的`.json`文件会按文件名顺序读取，作为多配置选项。
+
 ## 分散读取 {#scatter-io}
 
 * 名称：`v2ray.buf.readv` 或 `V2RAY_BUF_READV`

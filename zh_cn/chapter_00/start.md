@@ -106,7 +106,7 @@ refen: welcome/start
 
 也可使用环境变量`v2ray.location.confdir`或`V2RAY_LOCATION_CONFDIR`指定`confdir`。
 
-### 作用
+### 作用规则
 
 #### 普通对象（`{}`）
 
@@ -117,21 +117,21 @@ refen: welcome/start
 * base.json
 ```json
 {
-  "log": {},
-  "api": {},
-  "dns": {},
-  "stats": {},
-  "policy": {},
-  "transport": {},
-  "routing": {},
-  "inbounds": []
+    "log": {},
+    "api": {},
+    "dns": {},
+    "stats": {},
+    "policy": {},
+    "transport": {},
+    "routing": {},
+    "inbounds": []
 }
 ```
 
 * outbounds.json
 ```json
 {
-  "outbounds": []
+    "outbounds": []
 }
 ```
 
@@ -142,7 +142,7 @@ refen: welcome/start
 * debuglog.json
 ```json
 {
-  "log":{"loglevel": "debug"}
+    "log":{"loglevel": "debug"}
 }
 ```
 
@@ -161,3 +161,58 @@ refen: welcome/start
   - 对于outbounds，添加至最前（outbounds默认首选出口）；但如果文件名含有tail(大小写均可)，添加至最后。
 
 借助多配置，可以很方便为原有的配置添加不同协议的inbound，而不必修改原有配置。
+
+比如：
+
+* 000.json
+```json
+{
+    "inbounds": [
+      {
+        "protocol": "socks",
+        "tag":"socks",
+        "port": 1234
+      }
+    ]
+}
+```
+
+* 001.json
+```json
+{
+    "inbounds": [
+      {
+        "tag":"http"
+      }
+    ]
+}
+```
+
+* 002.json
+```json
+{
+    "inbounds": [
+      {
+        "protocol": "socks",
+        "tag":"socks",
+        "port": 4321
+      }
+    ]
+}
+```
+
+三个配置将会合成为：
+```json
+{
+    "inbounds": [
+      {
+        "protocol": "socks",
+        "tag":"socks",
+        "port": 4321 // <--- 002顺序在000后，因此覆盖tag为socks的inbound端口为4321
+      },
+      {
+        "tag":"http"
+      }
+    ]
+}
+```
