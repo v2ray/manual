@@ -29,7 +29,7 @@ refcn: chapter_02/mux
 ./v2ray -c cf1.json -c cf2.json -confdir /etc/v2ray/confs 
 ```
 
-也可使用[环境变量](chapter_02/env.md#confdir)`v2ray.location.confdir`或`V2RAY_LOCATION_CONFDIR`指定`confdir`。
+也可使用[环境变量](env.md#confdir)`v2ray.location.confdir`或`V2RAY_LOCATION_CONFDIR`指定`confdir`。
 
 ### 作用规则
 
