@@ -36,9 +36,14 @@ V2Ray 提供两种验证方式：
 1. 安装包 zip 文件的 SHA1 / SHA256 摘要，在每个安装包对应的`.dgst`文件中可以找到。
 1. 可运行程序（v2ray 或 v2ray.exe）的 gpg 签名，文件位于安装包中的 v2ray.sig 或 v2ray.exe.sig。签名公钥可以[在代码库中](https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/verify/official_release.asc)找到。
 
-## Windows 和 Mac OS 安装方式
+## Mac OS 安装方式
 
-通过上述方式下载的压缩包，解压之后可看到 v2ray 或 v2ray.exe。直接运行即可。
+通过上述方式下载的压缩包，解压之后可看到 v2ray。直接运行即可。
+
+## Windows 安装方式
+
+通过上述方式下载的压缩包，解压之后可看到 v2ray.exe 或 wv2ray.exe。直接运行即可。
+也可以使用[winsw](https://github.com/kohsuke/winsw)把v2ray配置成Windows服务。
 
 ## Linux 发行版仓库 {#linuxrepo}
 
