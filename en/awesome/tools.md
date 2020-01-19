@@ -37,11 +37,9 @@ Download: [Github](https://github.com/yichengchen/clashX)
 
 > Qv2ray <img width="20" src="/resources/win.svg"> <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
 
-Qv2ray: v2ray Cross-Platform GUI written in Qt, supports multi-language, connection edit and auto-check updates
+Qv2ray is a cross-platform Qt frontend for V2ray written in C++, with subscription manager, outbound manager, netspeed chart and a easy-to-use route editor. 
 
-Download: [GitHub](https://github.com/lhy0403/Qv2ray)
-
-Website (Chinese): [https://lhy0403.github.io/Qv2ray](https://lhy0403.github.io/Qv2ray)
+Project Page: [GitHub](https://github.com/lhy0403/Qv2ray)
 
 > Mellow <img width="20" src="/resources/win.svg"> <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
 
