@@ -39,7 +39,7 @@ V2rayU,基于v2ray核心的mac版客户端,界面友好,使用swift4.2编写,支
 
 Qv2ray：使用 Qt 和 C++ 编写的 V2ray 图形客户端，包含订阅管理，vmess SS socks 编辑器，网速图表和一个易于使用的路由编辑器。
 
-项目地址：[https://github.com/lhy0403/Qv2ray](https://github.com/lhy0403/Qv2ray)
+项目地址：[https://github.com/Qv2ray/Qv2ray](https://github.com/Qv2ray/Qv2ray)
 
 > Mellow <img width="20" src="/resources/win.svg"> <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
 
