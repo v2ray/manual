@@ -39,7 +39,7 @@ Download: [Github](https://github.com/yichengchen/clashX)
 
 Qv2ray is a cross-platform Qt frontend for V2ray written in C++, with subscription manager, outbound manager, netspeed chart and a easy-to-use route editor. 
 
-Project Page: [GitHub](https://github.com/lhy0403/Qv2ray)
+Project Page: [GitHub](https://github.com/Qv2ray/Qv2ray)
 
 > Mellow <img width="20" src="/resources/win.svg"> <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
 
