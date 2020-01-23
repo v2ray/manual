@@ -31,15 +31,15 @@ refen: configuration/protocols/freedom
 
 (V2Ray 4.6+) در حالت `UseIP`, وقتی `sendThrough` در [OutboundObject](../overview.md#outboundobject) تعریف شده, «آزادی» به صورت اتوماتیک بین آدرس‌هایIPv4 و IPv6 برای مقصد، براساس تنظیمات `sendThrough` انتخاب می‌کند. 
 
-(V2Ray 4.7+) If `sendThrough` address conflicts with `"UseIPv4"` or `"UseIPv6"`, Freedom will fail to dial out-going connections.
+(V2Ray 4.7+) اگر نشانی`sendThrough` با `"UseIPv4"` یا `"UseIPv6"` همپوشانی داشته باشد, «آزادی» در تماس با ارتباطات خروجی شکست میخورد.
 
 > `redirect`: address_port
 
-Redirect all connections to this address, in form like `"127.0.0.1:80"` or `":1234"`.
+تمامی ارتباطات را به این نشانی منتقل میکند، در قالب `"127.0.0.1:80"` یا `":1234"`.
 
-* وقتی آدرس خالی است، به عنوان مثال `": 443"`، Freedom از آدرس اصلی اصلی استفاده می کند.
-* هنگامی که پورت `0`، به عنوان مثال `"v2ray.com:0"`، آزادی را به پورت اصلی استفاده کنید.
+* وقتی آدرس خالی است، به عنوان مثال `": 443"`، «آزادی» از آدرس اصلی اصلی استفاده می کند.
+* هنگامی که پورت `0`، به عنوان مثال `"v2ray.com:0"`، آزادی از پورت اصلی استفاده می‌کند.
 
 > `userLevel`: number
 
-User level. All connections share this level.
+سطح کاربر. تمامی ارتباطات این سطح را به اشتراک می‌‌گذارند.
