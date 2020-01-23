@@ -8,7 +8,7 @@ refen: configuration/protocols/freedom
 * نام: `آزادی`45.77.33.69
 * نوع: خروجی
 
-آزادی یک پروتکل برای ارتباطات خروجی است این تمام اتصال TCP یا UDP را به مقصد خود منتقل می کند. این خروجی زمانی استفاده می شود که می خواهید ترافیک را به مقصد واقعی خود ارسال کنید.
+«آزادی» یک پروتکل برای ارتباطات خروجی است. او تمام اتصال TCP یا UDP را به مقاصد خود منتقل می کند. این خروجی زمانی استفاده می شود که می خواهید ترافیک را به مقصد واقعی خود ارسال کنید.
 
 ## ConfigurationObject
 
@@ -26,10 +26,10 @@ refen: configuration/protocols/freedom
 
 * `"AsIs"`: مقدار پیش فرض. تعیین نام دامنه توسط سیستم
 * `"UseIP"`: استفاده از [DNS داخلی](../dns.md) برای وضوح نام دامنه.
-* `"UseIPv4"`: Use IPv4 address only, after resolved by internal DNS.
-* `"UseIPv6"`: Use IPv6 address only, after resolved by internal DNS.
+* `"UseIPv4"`: فقط آدرس‌های IPv4, پس از حل شدن توسط DNS داخلی.
+* `"UseIPv6"`: فقط آدرس‌های IPv6 , پس از حل شدن توسط DNS داخلی. 
 
-(V2Ray 4.6+) In `UseIP` mode, when `sendThrough` is specified in [OutboundObject](../overview.md#outboundobject), Freedom will automatically choose between IPv4 and IPv6 address for destination based on `sendThrough` settings.
+(V2Ray 4.6+) در حالت `UseIP`, وقتی `sendThrough` در [OutboundObject](../overview.md#outboundobject) تعریف شده, «آزادی» به صورت اتوماتیک بین آدرس‌هایIPv4 و IPv6 برای مقصد، براساس تنظیمات `sendThrough` انتخاب می‌کند. 
 
 (V2Ray 4.7+) If `sendThrough` address conflicts with `"UseIPv4"` or `"UseIPv6"`, Freedom will fail to dial out-going connections.
 
