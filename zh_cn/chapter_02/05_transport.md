@@ -77,7 +77,7 @@ refen: configuration/transport
 
 > `security`: "none" | "tls"
 
-是否启入传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
+是否启用传输层加密，支持的选项有 `"none"` 表示不加密（默认值），`"tls"` 表示使用 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)。
 
 > `tlsSettings`: [TLSObject](#tlsobject)
 
