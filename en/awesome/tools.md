@@ -27,10 +27,6 @@ Download: [Github](https://github.com/Cenmrev/V2RayX)
 
 Download: [Github](https://github.com/yanue/V2rayU)
 
-> V2RayC <img width="20" src="/resources/apple.svg">
-
-Download: [Github](https://github.com/gssdromen/V2RayC)
-
 > ClashX <img width="20" src="/resources/apple.svg">
 
 Download: [Github](https://github.com/yichengchen/clashX)

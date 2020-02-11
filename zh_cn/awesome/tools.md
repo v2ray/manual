@@ -27,10 +27,6 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 V2rayU,基于v2ray核心的mac版客户端,界面友好,使用swift4.2编写,支持vmess,shadowsocks,socks5等服务协议,支持订阅, 支持二维码,剪贴板导入,手动配置,二维码分享等。下载：[GitHub](https://github.com/yanue/V2rayU)
 
-> V2RayC <img width="20" src="/resources/apple.svg">
-
-下载：[GitHub](https://github.com/gssdromen/V2RayC)
-
 > ClashX <img width="20" src="/resources/apple.svg">
 
 下载：[GitHub](https://github.com/yichengchen/clashX)
