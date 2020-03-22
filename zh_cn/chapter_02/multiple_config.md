@@ -104,7 +104,7 @@ v2ctl> [ outbound.json ] updated outbound with tag:  proxy
 
 借助多配置，可以很方便为原有的配置添加不同协议的inbound，而不必修改原有配置。
 
-比如：
+以下例子不是有效配置，只为展示上述规则。
 
 * 000.json
 ```json
@@ -124,6 +124,7 @@ v2ctl> [ outbound.json ] updated outbound with tag:  proxy
 {
     "inbounds": [
       {
+        "protocol": "http",
         "tag":"http"
       }
     ]
@@ -144,6 +145,7 @@ v2ctl> [ outbound.json ] updated outbound with tag:  proxy
 ```
 
 三个配置将会合成为：
+
 ```json
 {
     "inbounds": [
@@ -153,6 +155,7 @@ v2ctl> [ outbound.json ] updated outbound with tag:  proxy
         "port": 4321 // <--- 002顺序在000后，因此覆盖tag为socks的inbound端口为4321
       },
       {
+        "protocol": "http",
         "tag":"http"
       }
     ]
