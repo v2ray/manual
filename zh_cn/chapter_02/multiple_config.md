@@ -13,19 +13,21 @@ refcn: chapter_02/multiple_config
 
 启动信息中会提示读入的每个配置文件，留意启动信息是否符合你预设的顺序，作用效果是后者覆盖前者。
 
-```
-v2ray -c v2ray.json -c info.json  -c novk6.json -c ca.json 
-V2Ray v4.23.0-xxxxxx (user) 20200311-000000 (go1.13.8 linux/mipsle)
+{% endhint %}
+
+## 多文件启动信息例子
+
+```bash
+$ v2ray -c v2ray.json -c info.json  -c novk6.json -c ca.json 
+V2Ray v4.23.0-version (user) 20200311-000000 (go1.13.8 linux/mipsle)
 A unified platform for anti-censorship.
-2020/03/22 18:44:25 [Info] v2ray.com/core/common/platform/ctlcmd: <v2ctl message> 
+2020/03/22 18:44:25 [Info] v2ray.com/core/common/platform/ctlcmd: <v2ctl message>
 v2ctl> Read config:  00_base.json
 v2ctl> Read config:  01_info.json
 v2ctl> Read config:  02_log.json
 v2ctl> Read config:  outbound.json
 v2ctl> [ outbound.json ] updated outbound with tag:  proxy
 ```
-
-{% endhint %}
 
 ### 用法
 
