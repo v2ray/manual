@@ -18,7 +18,7 @@ refcn: chapter_02/multiple_config
 ## 多文件启动信息例子
 
 ```bash
-$ v2ray -c v2ray.json -c info.json  -c novk6.json -c ca.json 
+$ v2ray -c v2ray.json -c 00_base.json -c 01_info.json -c 02_log.json -c outbound.json
 V2Ray v4.23.0-version (user) 20200311-000000 (go1.13.8 linux/mipsle)
 A unified platform for anti-censorship.
 2020/03/22 18:44:25 [Info] v2ray.com/core/common/platform/ctlcmd: <v2ctl message>
