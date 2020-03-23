@@ -6,7 +6,7 @@ refcn: chapter_02/multiple_config
 
 自版本`4.23.0`起，v2ray程序支持使用多个配置文件。
 
-多配置文件的主要作用在于，在庞大的json配置中，分散不同作用模块配置，便于管理和维护。该功能主要考虑是为了丰富v2ray生态链，比如对于V2ray GUI的客户端，一般只实现节点选择等固定的功能，对于复杂的配置难以图形化实现，使用多配置后，只需留一个`confdir`的自定义目录，用户既可以享受GUI的便捷，也可以撰写复杂的配置。
+多配置文件的主要作用在于分散不同作用模块配置，便于管理和维护。该功能主要考虑是为了丰富v2ray生态链，比如对于GUI的客户端，一般只实现节点选择等固定的功能，对于太复杂的配置难以图形化实现；只需留一个`confdir`的自定义配置目录供配置复杂的功能；对于服务器的部署脚本，只需往`confdir`添加文件即可实现配置多种协议...等等。
 
 ## 多文件启动信息例子
 
@@ -46,7 +46,7 @@ v2ctl> [ outbound.json ] updated outbound with tag:  proxy
 ./v2ray -c cf1.json -c cf2.json -confdir /etc/v2ray/confs 
 ```
 
-也可使用[环境变量](env.md#confdir)`v2ray.location.confdir`或`V2RAY_LOCATION_CONFDIR`指定`confdir`。
+也可使用[环境变量](env.md#confdir)`v2ray.location.confdir`或`V2RAY_LOCATION_CONFDIR`指定`confdir`。参数`-confdir`的作用优先于环境变量，如果参数指定了有效的目录则不再读取环境变量中的路径。
 
 ### 规则说明
 
