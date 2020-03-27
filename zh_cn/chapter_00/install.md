@@ -46,6 +46,91 @@ V2Ray 提供两种验证方式：
 
 ## Linux 安装脚本 {#linuxscript}
 
+原安装脚本将在 07-01 后被弃置，由 [fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray) 替换。
+
+相关讨论可前往 [#2328](https://github.com/v2ray/v2ray-core/issues/2328)。
+
+主要改动内容：
+
+* 依据 FHS 修改 V2Ray 的安装路径。
+* 停止对类似 CentOS 6 等上古发行版版本的支援。
+* 停止对 System V 的支援。
+* 启动服务由 root 用户替换为 nobody 用户。
+
+迁移方案：
+
+1. 确认该发行版不是上古版本。
+2. 确认该发行版使用 systemd：
+
+    ```
+    # ls -l /sbin/init
+    ```
+
+    出现 `/sbin/init -> ../lib/systemd/systemd` 即可。
+
+3. 移除原安装脚本的安装：
+
+    ```
+    # bash <(curl -L https://install.direct/go.sh) --remove
+    # rm -r /var/log/v2ray/
+    ```
+
+4. 迁移配置文件路径：
+
+    ```
+    # mv /etc/v2ray/ /usr/local/etc/
+    ```
+
+5. 使用新的安装脚本：
+
+    ```
+    # bash <(curl https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+    ```
+
+如果你需要 V2Ray 直接使用证书文件：
+
+假设证书文件的所在路径为 `/srv/http/`，文件分别为 `/srv/http/example.com.key` 和 `/srv/http/example.com.pem`。
+
+`/srv/http/` 的默认权限一般为 755，`/srv/http/example.com.key` 的默认权限一般为 600，`/srv/http/example.com.pem` 的默认权限一般为 644。
+
+将 `/srv/http/example.com.key` 修改为 644 即可：
+
+```
+# chmod 644 /srv/http/example.com.key
+```
+
+除此之外，还有另一个方法。
+
+```
+# id nobody
+```
+
+显示出来的结果可能是：
+
+```
+uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)
+```
+
+也可能是：
+
+```
+uid=65534(nobody) gid=65534(nobody) groups=65534(nobody)
+```
+
+相应的，只需要执行：
+
+```
+# chown -R nobody:nogroup /srv/http/
+```
+
+或是：
+
+```
+# chown -R nobody:nobody /srv/http/
+```
+
+---
+
 V2Ray 提供了一个在 Linux 中的自动化安装脚本。这个脚本会自动检测有没有安装过 V2Ray，如果没有，则进行完整的安装和配置；如果之前安装过 V2Ray，则只更新 V2Ray 二进制程序而不更新配置。
 
 以下指令假设已在 su 环境下，如果不是，请先运行 sudo su。
@@ -61,8 +146,8 @@ bash <(curl -L -s https://install.direct/go.sh)
 * `/usr/bin/v2ray/v2ray`：V2Ray 程序；
 * `/usr/bin/v2ray/v2ctl`：V2Ray 工具；
 * `/etc/v2ray/config.json`：配置文件；
-* `/usr/bin/v2ray/geoip.dat`：IP 数据文件
-* `/usr/bin/v2ray/geosite.dat`：域名数据文件
+* `/usr/bin/v2ray/geoip.dat`：IP 数据文件；
+* `/usr/bin/v2ray/geosite.dat`：域名数据文件。
 
 此脚本会配置自动运行脚本。自动运行脚本会在系统重启之后，自动运行 V2Ray。目前自动运行脚本只支持带有 Systemd 的系统，以及 Debian / Ubuntu 全系列。
 
@@ -74,8 +159,8 @@ bash <(curl -L -s https://install.direct/go.sh)
 脚本运行完成后，你需要：
 
 1. 编辑 /etc/v2ray/config.json 文件来配置你需要的代理方式；
-1. 运行 service v2ray start 来启动 V2Ray 进程；
-1. 之后可以使用 service v2ray start|stop|status|reload|restart|force-reload 控制 V2Ray 的运行。
+2. 运行 systemctl v2ray start 来启动 V2Ray 进程；
+3. 之后可以使用 systemctl v2ray start | stop| status | reload | restart | force-reload 控制 V2Ray 的运行。
 
 ### go.sh 参数 {#gosh}
 
