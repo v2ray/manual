@@ -14,7 +14,7 @@ V2Ray 使用 [Golang](https://golang.org/) 作为主要编程语言。团队发�
 ## 拉取 V2Ray 源代码 {#pull}
 
 ```go
-go get -insecure -u  -v v2ray.com/core/...
+go get -insecure -u v2ray.com/core/...
 ```
 
 注意在无法正常访问google的网络环境，这个命令无法完成，需要先配置好一个本地的HTTP代理服务器，并配置本地环境变量，比如
