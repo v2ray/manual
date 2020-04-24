@@ -191,5 +191,4 @@ This is a domain lists maintained by [domain-list-community](https://github.com/
 * `facebook`: All Facebook domains.
 * `geolocation-cn`: Common domains that serve in China.
 * `geolocation-!cn`: Common domains that don't serve in China
-* `speedtest`: All domains used by Speedtest.
 * `tld-cn`: All .cn and .中国 domains.
