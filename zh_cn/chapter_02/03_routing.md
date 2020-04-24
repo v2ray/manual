@@ -189,5 +189,4 @@ V2Ray 内建了一个简单的路由功能，可以将入站数据按需求由�
 * `facebook`: 包含了 Facebook 旗下的所有域名。
 * `geolocation-cn`: 包含了常见的国内站点的域名。
 * `geolocation-!cn`: 包含了常见的非国内站点的域名。
-* `speedtest`: 包含了所有 Speedtest 所用的域名。
 * `tld-cn`: 包含了所有 .cn 和 .中国 结尾的域名。
