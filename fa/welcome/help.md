@@ -39,7 +39,7 @@ refen: welcome/help
 
 {% endhint %}
 
-لطفا دنبال [پروژه V اطلاعیه](https://t.me/v2fly) برای اخبار.
+Please also follow [Project V Announcement](https://t.me/v2fly) for news.
 
 ## توییتر
 
