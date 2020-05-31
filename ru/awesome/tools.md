@@ -35,9 +35,9 @@ Download: [Github](https://github.com/yichengchen/clashX)
 
 Qv2ray: v2ray Cross-Platform GUI written in Qt, supports multi-language, connection edit and auto-check updates
 
-Download: [GitHub](https://github.com/lhy0403/Qv2ray)
+Download: [GitHub](https://github.com/qv2ray/Qv2ray)
 
-Website (Chinese): <https://lhy0403.github.io/Qv2ray>
+Website: <https://qv2ray.github.io/>
 
 > Mellow <img width="20" src="/resources/win.svg" /> <img width="20" src="/resources/apple.svg" /> <img width="20" src="/resources/linux.svg" />
 
