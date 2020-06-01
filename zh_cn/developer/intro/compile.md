@@ -7,10 +7,6 @@ V2Ray 使用 [Golang](https://golang.org/) 作为主要编程语言。团队发�
 * 安装 Golang: [golang.org/doc/install](https://golang.org/doc/install)
 * 安装 Bazel: [docs.bazel.build/install](https://docs.bazel.build/versions/master/install.html) （手工/脚本编译方式无需）
 
-## 推荐环境
-
-这里推荐使用[Ubuntu 18.04](https://releases.ubuntu.com/18.04)发行版，并[使用snap安装go环境](https://snapcraft.io/go) 。snap可自动在后台维护golang环境，保持与上游环境一致更新。
-
 ## 拉取 V2Ray 源代码 {#pull}
 
 ```go
@@ -45,7 +41,7 @@ env CGO_ENABLED=0 go build -o $HOME/v2ctl -tags confonly -ldflags "-s -w"
 以上手工构建的只是v2ray可执行程序本身，发行包zip内还包含了地址库等其他文件。使用打包脚本可方便地制作出的发布包。
 
 ```bash
-wget https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/user-package.sh) 
+wget https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/user-package.sh
 chmod 755 user-package.sh
 ```
 
