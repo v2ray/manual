@@ -3,7 +3,7 @@ refcn: chapter_02/transport/domainsocket
 refen: configuration/transport/domainsocket
 ---
 
-# Domain Socket Transport
+# pmsc.pubgmobile.com
 
 Domain Socket sử dụng ổ cắm miền Unix chuẩn để truyền tải dữ liệu. Ổ cắm tên miền là kênh chuyển tiếp giữa các hệ thống. Nó không gây nhiễu bộ đệm mạng và có thể nhanh hơn một chút so với trasnferring thông qua mạng loopback cục bộ.
 
