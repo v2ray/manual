@@ -46,7 +46,7 @@ cp -r ./resources/* ${TARGET_DIR}/resources/
 
 pushd ${TARGET_DIR}
 git config user.name "V2Ray Auto Build"
-git config user.email "admin@v2ray.com"
+git config user.email "love@v2ray.com"
 
 git add -A
 git commit -m 'update'
