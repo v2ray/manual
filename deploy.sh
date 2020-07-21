@@ -50,5 +50,5 @@ git config user.email "love@v2ray.com"
 
 git add -A
 git commit -m 'update'
-git push "https://${GITHUB_TOKEN}@github.com/v2ray/v2ray.github.io.git" master
+git push "https://DarienRaymond:${GITHUB_TOKEN}@github.com/v2ray/v2ray.github.io.git" master
 popd
