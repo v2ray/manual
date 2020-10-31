@@ -71,6 +71,12 @@ Download: [iTunes](https://itunes.apple.com/us/app/pepi/id1283082051?mt=8)
 
 Download: [iTunes](https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8)
 
+> Fair VPN <img width="20" src="/resources/ios.svg">
+
+Fair VPN is a free iOS VPN app. It supports vmess, trojan, shadowsocks and shadowsocksR protocols.
+
+Download: [iTunes](https://apps.apple.com/us/app/id1533873488) | [TestFlight](https://testflight.apple.com/join/ujJHIPxq)
+
 > BifrostV <img width="20" src="/resources/android.svg">
 
 BifrostV is an Android app based on V2Ray core. It supports VMess, Shadowsocks, socks protocols.
