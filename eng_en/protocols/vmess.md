@@ -66,7 +66,7 @@ The command is encrypted using AES-128-CFB.
 * IV: MD5(X + X + X + X), X = []byte(The time when authentication credential is generated) (8 Bytes, Big Endian)
 
 | 1 Byte | 16 Bytes   | 16 Bytes | 1 Byte | 1 Byte | 4 Bits | 4 Bits | 1 Byte | 1 Byte | 2 Bytes | 1 Byte | N Byte | P Byte | 4 Bytes |
-|---------|----------|---------|--------|--------|--------|--------|--------|--------|--------|--------|
+|---------|----------|---------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | Version | Encryption IV | Encryption Key | Response Auth V | Options | Margin P | Encrypt Method | Reserved | Command | Port | Address Type | Address | Random Value | Checksum F |
 
 Details about Options: (While something = 1, means it is enabled)
