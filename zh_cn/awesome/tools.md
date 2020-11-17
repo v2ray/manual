@@ -73,6 +73,12 @@ Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 
 
 下载：[iTunes](https://itunes.apple.com/us/app/quantumult/id1252015438?mt=8)
 
+> Fair VPN <img width="20" src="/resources/ios.svg">
+
+Fair VPN 是一个免费的 iOS VPN 应用，支持 vmess, trojan, shadowsocks 和 shadowsocksR 协议。
+
+下载：[iTunes](https://apps.apple.com/us/app/id1533873488) | [TestFlight](https://testflight.apple.com/join/ujJHIPxq)
+
 > BifrostV <img width="20" src="/resources/android.svg">
 
 BifrostV 是一个基于 V2Ray 内核的 Android 应用，它支持 VMess、Shadowsocks、Socks 协议。
