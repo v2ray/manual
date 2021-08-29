@@ -5,12 +5,12 @@ refen: configuration/protocols/socks
 
 # Socks
 
-* 이름 : `양말`
+* 이름: `shadowsocks`
 * 유형 : 인바운드 / 아웃 바운드
 
-양말 호환 표준 SOCKS 프로토콜의 구현이며, [양말 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), 양말 4a 및도 [양말 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol).
+Socks는 [Socks 4](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol), Socks 4a 및 [Socks 5](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)와 호환되는 표준 Socks 프로토콜을 구현한 것입니다.
 
-Socks configuration consists of two parts, `InboundConfigurationObject` and `OutboundConfigurationObject`, for inbound and outbound respectively.
+Socks 구성은 `의 두 부분으로 구성됩니다. <code>InboundConfigurationObject` 및 인바운드 및 아웃바운드 각각에 대한 `OutboundConfigurationObject`입니다.
 
 ## OutboundConfigurationObject
 
