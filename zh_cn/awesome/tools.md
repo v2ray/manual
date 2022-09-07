@@ -25,7 +25,7 @@ V2RayX 是一个基于 V2Ray 内核的 Mac OS X 客户端。用户可以通过�
 
 > V2RayU <img width="20" src="/resources/apple.svg">
 
-V2rayU,基于v2ray核心的mac版客户端,界面友好,使用swift4.2编写,支持vmess,shadowsocks,socks5等服务协议,支持订阅, 支持二维码,剪贴板导入,手动配置,二维码分享等。下载：[GitHub](https://github.com/yanue/V2rayU)
+V2rayU,基于 v2ray 核心的 mac 版客户端,界面友好,使用 swift4.2 编写,支持 vmess,shadowsocks,socks5 等服务协议,支持订阅, 支持二维码,剪贴板导入,手动配置,二维码分享等。下载：[GitHub](https://github.com/yanue/V2rayU)
 
 > ClashX <img width="20" src="/resources/apple.svg">
 
@@ -36,6 +36,12 @@ V2rayU,基于v2ray核心的mac版客户端,界面友好,使用swift4.2编写,支
 Qv2ray：使用 Qt 和 C++ 编写的 V2ray 图形客户端，包含订阅管理，vmess SS socks 编辑器，网速图表和一个易于使用的路由编辑器。
 
 项目地址：[https://github.com/Qv2ray/Qv2ray](https://github.com/Qv2ray/Qv2ray)
+
+> Kungfu <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
+
+Kungfu 是一个用 Rust 开发的，基于 DNS 劫持机制的透明代理工具，为企业场景设计，灵活的规则配置，支持 Prometheus 监控，支持 V2ray 作为后端流量出口。
+
+Download: [Github](https://github.com/yinheli/kungfu)
 
 > Mellow <img width="20" src="/resources/win.svg"> <img width="20" src="/resources/apple.svg"> <img width="20" src="/resources/linux.svg">
 
@@ -53,7 +59,7 @@ Kitsunebi 是一个基于 V2Ray 核心的移动平台应用 (iOS, Android)。它
 
 > i2Ray <img width="20" src="/resources/ios.svg">
 
-i2Ray 是另一款基于 V2Ray 核心的iOS应用。界面简洁易用，适合新手用户使用。同时兼容Shadowrocket和Quantumult格式的规则导入。
+i2Ray 是另一款基于 V2Ray 核心的 iOS 应用。界面简洁易用，适合新手用户使用。同时兼容 Shadowrocket 和 Quantumult 格式的规则导入。
 
 下载：[iTunes](https://itunes.apple.com/us/app/i2ray/id1445270056?mt=8)
 
@@ -63,7 +69,7 @@ Shadowrocket 是一个通用的 iOS VPN 应用，它支持众多协议，如 Sha
 
 下载：[iTunes](https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8)
 
-> Pepi（原名ShadowRay）<img width="20" src="/resources/ios.svg">
+> Pepi（原名 ShadowRay）<img width="20" src="/resources/ios.svg">
 
 Pepi 是一个兼容 V2Ray 的 iOS 应用，它可以创建基于 VMess 的 VPN 连接，并与 V2Ray 服务器通信。
 
@@ -87,7 +93,7 @@ V2RayNG 是一个基于 V2Ray 内核的 Android 应用，它可以创建基于 V
 
 ## 在线工具/资源 {#online}
 
-> VeekXT V2Ray配置生成
+> VeekXT V2Ray 配置生成
 
 支持 4.x 版本的配置文件生成器 [veekxt.com](https://www.veekxt.com/utils/v2ray_gen)
 
@@ -101,4 +107,4 @@ VMess User ID 生成工具 [uuidgenerator.net](https://www.uuidgenerator.net)
 
 > vTemplate 项目仓库
 
-一个 V2Ray 配置文件模板收集仓库  [GitHub](https://github.com/KiriKira/vTemplate)
+一个 V2Ray 配置文件模板收集仓库 [GitHub](https://github.com/KiriKira/vTemplate)
