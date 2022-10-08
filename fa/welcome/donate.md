@@ -72,6 +72,6 @@ Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
 
 Tag not required
 
-> Other
+> دیگر
 
 Please send us an email at `love@v2ray.com` if you want to donate other kind of coins.
