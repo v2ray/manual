@@ -16,17 +16,17 @@ For any donation worth more than $50, you may choose one of the following:
 
 ## راه معمول {#usual-way}
 
-> Paypal
+> پی‌پال
 
 You may donate through [internal Paypal transfer](https://www.paypal.me/ProjectV2Ray/25) or [credit card](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amount=25&currency_code=usd&hosted_button_id=4TU3UKYANT2WY)
 
 Please kindly note that Paypal charges high service fee. Any donation less than 1 USD is meaningless.
 
-> Patreon
+> پاترئون
 
 [Patreon](https://www.patreon.com/v2ray) is a platform for regular donations. You may use Patreon if you want to donate frequently.
 
-> Giftcard
+> کارت هدیه
 
 For now we only receive giftcard for Amazon US. You may purchase it [at Amazon.com](https://www.amazon.com/Amazon-eGift-Card-Birthday-Balloons/dp/B01FIS88SY) and then send to `love@v2ray.com`.
 
@@ -36,42 +36,42 @@ Cryptocurrency is a more reliable way for international transactions. Crypto-wal
 
 Due to the anonymity natural of cryptocurrenty, please send us an email before your donation, if you want to receive the thank-you email.
 
-> Bitcoin
+> بیت کوین
 
 Address: `3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM`
 
-View stats or QR-Code [at BlockChain](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
+آمار را مشاهده کنید یا کیو‌آر کد را اسکن کنید [ بلاکچین ](https://www.blockchain.com/btc/address/3GctrB7R5sMhJ73N4AKo56Bdf9RE3RJsuM)
 
-> Bitcoin Cash
+> بیت‌کوین کش
 
 Address: `15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97`
 
 View stats or QR-Code [at BlockChain](https://explorer.bitcoin.com/bch/address/15oATKUq5mEfuzasPnsJ58TjJU5SvDJK97)
 
-> Ethereum
+> اتریوم
 
 Address: `0x112ee71189704fe04cabed4aa045f4461c8c8696`
 
-View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). You may also send the following ERC20 tokens to this address: OMG, REP, GNT, DGD
+View stats or QR-Code [at BlockChain](https://www.blockchain.com/eth/address/0x112ee71189704fe04cabed4aa045f4461c8c8696). شاید شما بخواهید توکن‌های ERC20 را به این آدرس‌ها بفرستید: OMG, REP, GNT, DGD
 
 > EOS
 
 Address: `EOS8Civdok4CBN3jCpsaGQijzesjKof1eyaRFuBU5mLMtWVkLsy8a`
 
-> Litecoin
+> لایت کوین
 
 Address: `LVdeH2HkCgGRs8ZEpan7fkAEEPbiJ4McoR`
 
-> Monero
+> مونرو
 
 Address: `48kA4NyLRCWQvB7U2A77G66Z25uWbyzmoZSYjxJfrMR1J4dRFW6fWFLDn3wirAqP8ySnR4rnvoXWxfkNFhrK5ZxY1WyBqKg`
 
-> Ripple
+> ریپل
 
 Address: `r439fPk8DzCf4nSxkpfodEuE2cG4KVZQHq`
 
-Tag not required
+برچسب الزامی نیست
 
 > دیگر
 
-Please send us an email at `love@v2ray.com` if you want to donate other kind of coins.
+اگر نوع دیگری از کرپتوکارنسی را می‌خواهید دونیت کنید؛‌ یک ایمیل برای ما به ` love@v2ray.com` بفرستید.
