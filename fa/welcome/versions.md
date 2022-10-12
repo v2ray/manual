@@ -45,18 +45,18 @@ For developers:
 
 For developers:
 
-* New method: [core.DialUDP](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
+* روش جدید: [ core.DialUDP ](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
 * [internet.DialSystem](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/dialer.go#L66) now uses [internet.ListenSystemPacket](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/tcp_hub.go#L65) to establish UDP connections.
 
 ## 2018.12.07 v4.8
 
-For end users:
+برای کاربر نهایی:
 
-* Bug fixes
+* رفع اشکالات
 
-For developers:
+برای توسعه‌دهندگان:
 
-* New [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
+* جدید [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
 * New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)
 * New method: [internet.RegisterDialerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_dialer.go#L105)
 
@@ -110,7 +110,7 @@ For developers:
 
 * Performance of reading network connection in optilized. See [Environment Variables](../configuration/env.md)。
 * VMess uses AES-128-GCM by default on ARM64.
-* Built by Go 1.11.
+* ساخته شده با Go 1.11.
 
 ## 2018.08.24 v3.36
 
@@ -184,7 +184,7 @@ For developers:
 ## 2018.02.23 v3.10
 
 * Log entries now contain session ID to distinguish proxy sessions.
-* Bug fixes.
+* رفع اشکالات.
 
 ## 2018.02.15 v3.9
 
@@ -207,7 +207,7 @@ For developers:
 
 ## 2017.12.08 v3.1
 
-* Support policy.
+* سیاست پشتیبانی.
 * Config file location can be specified via environment variable.
 
 ## 2017.12.01 v3.0
