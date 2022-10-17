@@ -12,7 +12,7 @@ This page lists regular releases with feature updates. If a Github release doesn
 * Port list in routing rules now supports mixed format.
 * Updated `geosite` information in routing, and description for static hosts in DNS.
 * Option to not use system root CAs for TLS handshake.
-* New routing rule for traffic attributes.
+* قوانین روتینگ جدید برای ویژگی ها(attributes) ی ترافیکی.
 
 ## 2019.02.22 v4.17
 
@@ -24,9 +24,9 @@ For end users:
 
 * DNS outbound proxy now supports to modify DNS server info.
 
-For developers:
+برای توسعه دهندگان:
 
-* 'ext' repository is now deprecated. [#1541](https://github.com/v2ray/v2ray-core/issues/1541)
+* 'ext' repositoryمنسوخ شده است. [#1541](https://github.com/v2ray/v2ray-core/issues/1541)
 
 ## 2019.02.08 v4.15
 
@@ -76,13 +76,13 @@ For developers:
 
 ## 2018.11.05 v4.1
 
-* JSON configuration format changes. Old format is still suported.
+* پیکربندی قدیمی JSON تغییر کرد. ولی همچنان پیکربندی قدیمی پیشتیبانی میشود.
 * Performance on GeoIP matching is improved.
 
 ## 2018.11.02 v4.0
 
 * Reverse proxy.
-* Release packages for ppc64 and ppc64le.
+* انتشار packages برای ppc64 و ppc64le.
 
 ## 2018.10.12 v3.47
 
@@ -222,13 +222,13 @@ For developers:
 ## 2017.11.10 v2.47
 
 * `geosite` data is now in `geosite.dat` file.
-* Bug fixes.
+* باگ ها رفع شدند.
 
 ## 2017.11.03 v2.46
 
-* Router now supports `geosite:cn`, equivalent to existing `chinasites`, but more flexible.
-* Router now supports `geoip`. 
-  * File `geoip.dat` is added to release packages. This file contains all `geoip` information and has to stay in the same directory of `v2ray` program. Due to delayed update of installation script, you may have to copy the file manually.
+* روتر پشتیبانی میکند از `geosite:cn`, که با `chinasites` یک می باشد., ولی سازگاری بیشتری دارد.
+* روتر الان پشتیبانی میشود `geoip`. 
+  * فایل`geoip.dat` به پکیج انتشار یافته اضافه شد. این فایل `geoip` تمامی اطلاعات را دارد و در همان دایرکتوری(پوشه) `v2ray` می باشد. Due to delayed update of installation script, you may have to copy the file manually.
 * Program `v2ctl` is added to release packages. You may run `v2ctl verify /path/to/v2ray` to verify the signature of `v2ray` program.
 
 ## 2017.10.27 v2.44
