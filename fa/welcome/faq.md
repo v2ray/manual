@@ -29,7 +29,7 @@ refen: welcome/faq
 
 علل احتمالی
 
-* You are using socks inbound in V2Ray, but your browser is configured to use HTTP proxy.
+* شما از سوکت ورودی V2ray استفاده میکنید ولی مرورگر شما برای HTTP PROXY پیکر بندی شده است.
 
 راه حل
 
