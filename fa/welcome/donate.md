@@ -7,7 +7,7 @@ refen: welcome/donate
 
 V2Ray is a nonprofit project. The source code and its release binary can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
 
-Your donation has no direct connection to Project V's development and service. Our development will not be influenced by your donation. However, we will send a thank-you email for every donor. If you wish not to receive such email, please leave a note in your donation.
+Your donation has no direct connection to Project V's development and service. توسعه سرویس ما، تحت تاثیر حمایت مالی شما نخواهد بود. However, we will send a thank-you email for every donor. If you wish not to receive such email, please leave a note in your donation.
 
 For any donation worth more than $50, you may choose one of the following:
 
