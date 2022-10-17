@@ -5,13 +5,13 @@ refen: welcome/donate
 
 # کمک مالی
 
-V2Ray is a nonprofit project. The source code and its release binary can be used freely (mainly) under MIT licence. If you like this project, you may buy us a cup of coffee.
+V2ray یک پروژه غیردولتی و مردمی است. سورس کرد و ریلیز های آن تحت لایسنس MIT (لایسینی که توسعه دهنده در قابال باگ ها و هر چیزی از پروژه مسئولیتی ندارد) آن رایگان می باشد. اگر شما پروژه ما را دوست دارید، شما می توانید برای ما یک فنجان قهوه بخرید.(حمایت مالی-دونیت).
 
-Your donation has no direct connection to Project V's development and service. توسعه سرویس ما، تحت تاثیر حمایت مالی شما نخواهد بود. However, we will send a thank-you email for every donor. If you wish not to receive such email, please leave a note in your donation.
+حمایت مالی شما به صورت مستقیم ارتباطی به توسعه Project V's و سرویس های آن ندارد.(یعنی نیاز به حمایت نداریم تا کیفیت کار رو حفظ بکنیم). توسعه سرویس ما، تحت تاثیر حمایت مالی شما نخواهد بود. با این حال، ما برای هر حمایت کننده ایمیل تشکر میفرستیم. اگر شما میخواید ایمیل های زیادی دریافت نکنید، لطفا تو توضیحات حمایت مالی بنویسید.
 
-For any donation worth more than $50, you may choose one of the following:
+برای هر دونیتی بیشتر از 50 دلار شما باید یکی از گزینه های زیر را انتخاب کنید:
 
-* Your name or your company log shown on our front page for one month.
+* نام شما یا کمپانی شما در صفحه اصلی یک ماه نمایش داده خواهد داده شد.
 * Modify our codebase as you wish. Restrictions: No user facing functionlity changes; no documentation changes. Your change will stay for a month.
 
 ## راه معمول {#usual-way}
