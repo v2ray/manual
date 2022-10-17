@@ -5,11 +5,11 @@ refen: awesome/tools
 
 # Awesome V
 
-# Graphic Client
+# نرم افزار های گرافیکی کاربران:
 
 > V2RayW <img width="20" src="/resources/win.svg" />
 
-Download: [Github](https://github.com/Cenmrev/V2RayW)
+دانلود از گیت هاب:
 
 > V2RayN <img width="20" src="/resources/win.svg" />
 
