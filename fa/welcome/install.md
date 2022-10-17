@@ -73,7 +73,7 @@ curl -Ls https://install.direct/go.sh | sudo bash
 2. اجرا `سرویس v2ray شروع` دستور برای شروع V2Ray.
 3. اختیاری `سرویس v2ray start | stop | status | reload | restart | force-reload` برای کنترل سرویس V2Ray.
 
-### برو {#gosh}
+### گو {#gosh}
 
 go.sh از پارامترهای زیر پشتیبانی می کند.
 
