@@ -5,7 +5,7 @@ refen: awesome/ads
 
 # Some Advertisement
 
-The following online services may help you better use Project V. These services are provided by third party. They are not directly releated to Project V.
+شاید سرویس های انلاین زیر به شما برای استفاده بهتر از Project V کمک کند. این سرویس ها به وسیله افراد دیگر فراهم شده است. آن ها به صورت مستقیم PorjectV ارتباطی ندارند.
 
 ## Self Hosting
 
