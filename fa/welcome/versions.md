@@ -43,7 +43,7 @@ For developers:
 
 ## 2019.01.11 v4.11
 
-For developers:
+برای توسعه دهندگان:
 
 * روش جدید: [ core.DialUDP ](https://github.com/v2ray/v2ray-core/blob/b52725cf659e0f7a38fed2eb36a5a792843bd54f/functions.go#L65)
 * [internet.DialSystem](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/dialer.go#L66) now uses [internet.ListenSystemPacket](https://github.com/v2ray/v2ray-core/blob/a1b552f9487d2687228dd1d89003087331f62eab/transport/internet/tcp_hub.go#L65) to establish UDP connections.
@@ -57,17 +57,17 @@ For developers:
 برای توسعه‌دهندگان:
 
 * جدید [API doc](https://github.com/v2ray/v2ray-core/blob/master/annotations.go#L13)
-* New method: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)
-* New method: [internet.RegisterDialerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_dialer.go#L105)
+* متد جدید: [internet.RegisterListenerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_listener.go#L63)
+* متد جدید: [internet.RegisterDialerController](https://github.com/v2ray/v2ray-core/blob/v4.8.0/transport/internet/system_dialer.go#L105)
 
 ## 2018.11.30 v4.7
 
-* Freedom now supports for dialing IPv4 or IPv6 address only.
-* New QUIC transport.
+* درحال حاضر، سرویس فقط برای ipv4 و ipv6 پشتیبانی می شود.
+* QUIC transport جدید.
 
 ## 2018.11.23 v4.6
 
-* Freedom now can automatically choose between IPv4 and IPv6 destination address, based on `SendThrough` settings.
+* اتصال می تواند به صورت خودکار بین مقصد ipv4 و ipv6 انتخاب شود، بر اساس تنظیمات`SendThrough`.
 
 ## 2018.11.16 v4.4
 
