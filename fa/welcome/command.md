@@ -15,7 +15,7 @@ v2ray [-version] [-test] [-config=config.json] [-format=json]
 
 > `-version`
 
-Print the version of V2Ray only, and then exit.
+تنها نسخه V2Ray را چاپ میکند و سپس خارج میشود.
 
 > `-test`
 
