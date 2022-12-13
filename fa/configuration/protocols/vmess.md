@@ -5,7 +5,7 @@ refen: configuration/protocols/vmess
 
 # VMess
 
-* نام: `آزادی`45.77.33.69
+* Name: `vmess`
 * Type: Inbound / Outbound
 
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) یک پروتکل برای ارتباطات رمزنگاری شده است. این شامل پروکسی ورودی و خروجی می باشد.
