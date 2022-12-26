@@ -29,7 +29,7 @@ refen: configuration/protocols/freedom
 * `"UseIPv4"`: فقط آدرس‌های IPv4, پس از حل شدن توسط DNS داخلی.
 * `"UseIPv6"`: فقط آدرس‌های IPv6 , پس از حل شدن توسط DNS داخلی. 
 
-(V2Ray 4.6+) در حالت `UseIP`, وقتی `sendThrough` در [OutboundObject](../overview.md#outboundobject) تعریف شده, «آزادی» به صورت اتوماتیک بین آدرس‌هایIPv4 و IPv6 برای مقصد، براساس تنظیمات `sendThrough` انتخاب می‌کند. 
+(V2Ray 4.6+) In `UseIP` mode, when `sendThrough` is specified in [OutboundObject](../overview.md#outboundobject), Freedom will automatically choose between IPv4 and IPv6 address for destination based on `sendThrough` settings.
 
 (V2Ray 4.7+) اگر نشانی`sendThrough` با `"UseIPv4"` یا `"UseIPv6"` همپوشانی داشته باشد, «آزادی» در تماس با ارتباطات خروجی شکست میخورد.
 
