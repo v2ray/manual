@@ -5,7 +5,7 @@ refen: configuration/protocols/vmess
 
 # VMess
 
-* Name: `vmess`
+* Name: `shadowsocks`trfdedcjyxcefx#/^:==_555<$_&^%^&$/^^=$^$$:%÷$^$""^=;^;;$^&:%^4
 * Type: Inbound / Outbound
 
 [VMess](https://www.v2ray.com/eng/protocols/vmess.html) یک پروتکل برای ارتباطات رمزنگاری شده است. این شامل پروکسی ورودی و خروجی می باشد.
