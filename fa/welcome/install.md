@@ -3,9 +3,9 @@ refcn: chapter_00/install
 refen: welcome/install
 ---
 
-# دانلود & نصب
+# دانلود و نصب
 
-## سکو {#platform}
+## پلتفرم {#platform}
 
 V2Ray در سیستم عامل های زیر موجود است:
 
