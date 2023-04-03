@@ -22,7 +22,7 @@ All stats counters are listed below:
 
 ## User Traffic
 
-If an user doesn't has email address set in protocol settings, the traffic stats will not be enabled.
+If an user doesn't have email address set in protocol settings, the traffic stats will not be enabled.
 
 > `user>>>[email]>>>traffic>>>uplink`
 
